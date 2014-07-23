@@ -1355,6 +1355,9 @@
     <Content Include="robots.txt" />
     <Content Include="RSS.aspx" />
     <Content Include="packages.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>

@@ -5,12 +5,14 @@ using System.Linq;
 using ScrewTurn.Wiki.PluginFramework;
 using System.IO;
 
-namespace ScrewTurn.Wiki {
+namespace ScrewTurn.Wiki
+{
 
 	/// <summary>
 	/// Manages files, directories and attachments.
 	/// </summary>
-	public static class FilesAndAttachments {
+	public static class FilesAndAttachments
+	{
 
 		#region Files
 
@@ -19,15 +21,17 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="fullName">The full name of the file.</param>
 		/// <returns>The provider that has the file, or <c>null</c> if the file could not be found.</returns>
-		public static IFilesStorageProviderV30 FindFileProvider(string fullName) {
-			if(fullName == null) throw new ArgumentNullException("fullName");
-			if(string.IsNullOrEmpty(fullName)) throw new ArgumentException("Full Name cannot be empty", "fullName");
+		public static IFilesStorageProviderV30 FindFileProvider( string fullName )
+		{
+			if ( fullName == null ) throw new ArgumentNullException( "fullName" );
+			if ( string.IsNullOrEmpty( fullName ) ) throw new ArgumentException( "Full Name cannot be empty", "fullName" );
 
-			fullName = NormalizeFullName(fullName);
+			fullName = NormalizeFullName( fullName );
 
-			foreach(IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders) {
-				FileDetails details = provider.GetFileDetails(fullName);
-				if(details != null) return provider;
+			foreach ( IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders )
+			{
+				FileDetails details = provider.GetFileDetails( fullName );
+				if ( details != null ) return provider;
 			}
 
 			return null;
@@ -38,15 +42,17 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="fullName">The full name of the file.</param>
 		/// <returns>The details of the file, or <c>null</c> if no file is found.</returns>
-		public static FileDetails GetFileDetails(string fullName) {
-			if(fullName == null) throw new ArgumentNullException("fullName");
-			if(string.IsNullOrEmpty(fullName)) throw new ArgumentException("Full Name cannot be empty", "fullName");
+		public static FileDetails GetFileDetails( string fullName )
+		{
+			if ( fullName == null ) throw new ArgumentNullException( "fullName" );
+			if ( string.IsNullOrEmpty( fullName ) ) throw new ArgumentException( "Full Name cannot be empty", "fullName" );
 
-			fullName = NormalizeFullName(fullName);
+			fullName = NormalizeFullName( fullName );
 
-			foreach(IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders) {
-				FileDetails details = provider.GetFileDetails(fullName);
-				if(details != null) return details;
+			foreach ( IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders )
+			{
+				FileDetails details = provider.GetFileDetails( fullName );
+				if ( details != null ) return details;
 			}
 
 			return null;
@@ -59,18 +65,23 @@ namespace ScrewTurn.Wiki {
 		/// <param name="output">The output stream.</param>
 		/// <param name="countHit">A value indicating whether or not to count this retrieval in the statistics.</param>
 		/// <returns><c>true</c> if the file is retrieved, <c>false</c> otherwise.</returns>
-		public static bool RetrieveFile(string fullName, Stream output, bool countHit) {
-			if(fullName == null) throw new ArgumentNullException("fullName");
-			if(fullName.Length == 0) throw new ArgumentException("Full Name cannot be empty", "fullName");
-			if(output == null) throw new ArgumentNullException("destinationStream");
-			if(!output.CanWrite) throw new ArgumentException("Cannot write into Destination Stream", "destinationStream");
+		public static bool RetrieveFile( string fullName, Stream output, bool countHit )
+		{
+			if ( fullName == null )
+				throw new ArgumentNullException( "fullName" );
+			if ( fullName.Length == 0 )
+				throw new ArgumentException( "Full Name cannot be empty", "fullName" );
+			if ( output == null )
+				throw new ArgumentNullException( "output" );
+			if ( !output.CanWrite )
+				throw new ArgumentException( "Cannot write into Destination Stream", "output" );
 
-			fullName = NormalizeFullName(fullName);
+			fullName = NormalizeFullName( fullName );
 
-			IFilesStorageProviderV30 provider = FindFileProvider(fullName);
+			IFilesStorageProviderV30 provider = FindFileProvider( fullName );
 
-			if(provider == null) return false;
-			return provider.RetrieveFile(fullName, output, countHit);
+			if ( provider == null ) return false;
+			return provider.RetrieveFile( fullName, output, countHit );
 		}
 
 		#endregion
@@ -82,11 +93,12 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="fullPath">The full path of the directory.</param>
 		/// <returns>The provider that has the directory, or <c>null</c> if no directory is found.</returns>
-		public static IFilesStorageProviderV30 FindDirectoryProvider(string fullPath) {
-			if(fullPath == null) throw new ArgumentNullException("fullPath");
-			if(fullPath.Length == 0) throw new ArgumentException("Full Path cannot be empty");
+		public static IFilesStorageProviderV30 FindDirectoryProvider( string fullPath )
+		{
+			if ( fullPath == null ) throw new ArgumentNullException( "fullPath" );
+			if ( fullPath.Length == 0 ) throw new ArgumentException( "Full Path cannot be empty" );
 
-			fullPath = NormalizeFullPath(fullPath);
+			fullPath = NormalizeFullPath( fullPath );
 
 			// In order to verify that the full path exists, it is necessary to navigate 
 			// from the root down to the specified directory level
@@ -105,31 +117,34 @@ namespace ScrewTurn.Wiki {
 
 			string oneLevelUp = fullPath;
 
-			List<string> allLevels = new List<string>(10);
-			allLevels.Add(fullPath.ToLowerInvariant());
-			while(oneLevelUp != "/") {
-				oneLevelUp = UpOneLevel(oneLevelUp);
-				allLevels.Add(oneLevelUp.ToLowerInvariant());
+			List<string> allLevels = new List<string>( 10 ) { fullPath.ToLowerInvariant( ) };
+			while ( oneLevelUp != "/" )
+			{
+				oneLevelUp = UpOneLevel( oneLevelUp );
+				allLevels.Add( oneLevelUp.ToLowerInvariant( ) );
 			}
 
-			foreach(IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders) {
+			foreach ( IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders )
+			{
 				bool allLevelsFound = true;
 
-				for(int i = allLevels.Count - 1; i >= 1; i--) {
-					string[] dirs = provider.ListDirectories(allLevels[i]);
+				for ( int i = allLevels.Count - 1; i >= 1; i-- )
+				{
+					string[ ] dirs = provider.ListDirectories( allLevels[ i ] );
 
 					string nextLevel =
-						(from d in dirs
-						 where d.ToLowerInvariant() == allLevels[i - 1]
-						 select d).FirstOrDefault();
+						( from d in dirs
+						  where d.ToLowerInvariant( ) == allLevels[ i - 1 ]
+						  select d ).FirstOrDefault( );
 
-					if(string.IsNullOrEmpty(nextLevel)) {
+					if ( string.IsNullOrEmpty( nextLevel ) )
+					{
 						allLevelsFound = false;
 						break;
 					}
 				}
 
-				if(allLevelsFound) return provider;
+				if ( allLevelsFound ) return provider;
 			}
 
 			return null;
@@ -141,22 +156,25 @@ namespace ScrewTurn.Wiki {
 		/// <param name="fullPath">The full path.</param>
 		/// <returns>The directories.</returns>
 		/// <remarks>If the specified directory is the root, then the list is performed on all providers.</remarks>
-		public static string[] ListDirectories(string fullPath) {
-			fullPath = NormalizeFullPath(fullPath);
+		public static string[ ] ListDirectories( string fullPath )
+		{
+			fullPath = NormalizeFullPath( fullPath );
 
-			if(fullPath == "/") {
-				List<string> directories = new List<string>(50);
+			if ( fullPath == "/" )
+			{
+				List<string> directories = new List<string>( 50 );
 
-				foreach(IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders) {
-					directories.AddRange(provider.ListDirectories(fullPath));
+				foreach ( IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders )
+				{
+					directories.AddRange( provider.ListDirectories( fullPath ) );
 				}
 
-				directories.Sort();
+				directories.Sort( );
 
-				return directories.ToArray();
+				return directories.ToArray( );
 			}
-			IFilesStorageProviderV30 provider = FindDirectoryProvider(fullPath);
-			return provider.ListDirectories(fullPath);
+			IFilesStorageProviderV30 returnProvider = FindDirectoryProvider( fullPath );
+			return returnProvider.ListDirectories( fullPath );
 		}
 
 		/// <summary>
@@ -165,22 +183,25 @@ namespace ScrewTurn.Wiki {
 		/// <param name="fullPath">The full path.</param>
 		/// <returns>The files.</returns>
 		/// <remarks>If the specified directory is the root, then the list is performed on all providers.</remarks>
-		public static string[] ListFiles(string fullPath) {
-			fullPath = NormalizeFullPath(fullPath);
+		public static string[ ] ListFiles( string fullPath )
+		{
+			fullPath = NormalizeFullPath( fullPath );
 
-			if(fullPath == "/") {
-				List<string> files = new List<string>(50);
-				
-				foreach(IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders) {
-					files.AddRange(provider.ListFiles(fullPath));
+			if ( fullPath == "/" )
+			{
+				List<string> files = new List<string>( 50 );
+
+				foreach ( IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders )
+				{
+					files.AddRange( provider.ListFiles( fullPath ) );
 				}
 
-				files.Sort();
+				files.Sort( );
 
-				return files.ToArray();
+				return files.ToArray( );
 			}
-			IFilesStorageProviderV30 provider = FindDirectoryProvider(fullPath);
-			return provider.ListFiles(fullPath);
+			IFilesStorageProviderV30 returnProvider = FindDirectoryProvider( fullPath );
+			return returnProvider.ListFiles( fullPath );
 		}
 
 		#endregion
@@ -193,14 +214,16 @@ namespace ScrewTurn.Wiki {
 		/// <param name="page">The page.</param>
 		/// <param name="attachmentName">The name of the attachment.</param>
 		/// <returns>The provider that has the attachment, or <c>null</c> if the attachment could not be found.</returns>
-		public static IFilesStorageProviderV30 FindPageAttachmentProvider(PageInfo page, string attachmentName) {
-			if(page == null) throw new ArgumentNullException("page");
-			if(attachmentName == null) throw new ArgumentNullException("attachmentName");
-			if(attachmentName.Length == 0) throw new ArgumentException("Attachment Name cannot be empty", "attachmentName");
+		public static IFilesStorageProviderV30 FindPageAttachmentProvider( PageInfo page, string attachmentName )
+		{
+			if ( page == null ) throw new ArgumentNullException( "page" );
+			if ( attachmentName == null ) throw new ArgumentNullException( "attachmentName" );
+			if ( attachmentName.Length == 0 ) throw new ArgumentException( "Attachment Name cannot be empty", "attachmentName" );
 
-			foreach(IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders) {
-				FileDetails details = provider.GetPageAttachmentDetails(page, attachmentName);
-				if(details != null) return provider;
+			foreach ( IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders )
+			{
+				FileDetails details = provider.GetPageAttachmentDetails( page, attachmentName );
+				if ( details != null ) return provider;
 			}
 
 			return null;
@@ -212,14 +235,16 @@ namespace ScrewTurn.Wiki {
 		/// <param name="page">The page.</param>
 		/// <param name="attachmentName">The name of the attachment.</param>
 		/// <returns>The details of the attachment, or <c>null</c> if the attachment could not be found.</returns>
-		public static FileDetails GetPageAttachmentDetails(PageInfo page, string attachmentName) {
-			if(page == null) throw new ArgumentNullException("page");
-			if(attachmentName == null) throw new ArgumentNullException("attachmentName");
-			if(attachmentName.Length == 0) throw new ArgumentException("Attachment Name cannot be empty", "attachmentName");
+		public static FileDetails GetPageAttachmentDetails( PageInfo page, string attachmentName )
+		{
+			if ( page == null ) throw new ArgumentNullException( "page" );
+			if ( attachmentName == null ) throw new ArgumentNullException( "attachmentName" );
+			if ( attachmentName.Length == 0 ) throw new ArgumentException( "Attachment Name cannot be empty", "attachmentName" );
 
-			foreach(IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders) {
-				FileDetails details = provider.GetPageAttachmentDetails(page, attachmentName);
-				if(details != null) return details;
+			foreach ( IFilesStorageProviderV30 provider in Collectors.FilesProviderCollector.AllProviders )
+			{
+				FileDetails details = provider.GetPageAttachmentDetails( page, attachmentName );
+				if ( details != null ) return details;
 			}
 
 			return null;
@@ -233,17 +258,23 @@ namespace ScrewTurn.Wiki {
 		/// <param name="output">The output stream.</param>
 		/// <param name="countHit">A value indicating whether or not to count this retrieval in the statistics.</param>
 		/// <returns><c>true</c> if the Attachment is retrieved, <c>false</c> otherwise.</returns>
-		public static bool RetrievePageAttachment(PageInfo page, string attachmentName, Stream output, bool countHit) {
-			if(page == null) throw new ArgumentNullException("pageInfo");
-			if(attachmentName == null) throw new ArgumentNullException("name");
-			if(attachmentName.Length == 0) throw new ArgumentException("Name cannot be empty", "name");
-			if(output == null) throw new ArgumentNullException("destinationStream");
-			if(!output.CanWrite) throw new ArgumentException("Cannot write into Destination Stream", "destinationStream");
+		public static bool RetrievePageAttachment( PageInfo page, string attachmentName, Stream output, bool countHit )
+		{
+			if ( page == null )
+				throw new ArgumentNullException( "page" );
+			if ( attachmentName == null )
+				throw new ArgumentNullException( "attachmentName" );
+			if ( attachmentName.Length == 0 )
+				throw new ArgumentException( "Name cannot be empty", "attachmentName" );
+			if ( output == null )
+				throw new ArgumentNullException( "output" );
+			if ( !output.CanWrite )
+				throw new ArgumentException( "Cannot write into Destination Stream", "output" );
 
-			IFilesStorageProviderV30 provider = FindPageAttachmentProvider(page, attachmentName);
+			IFilesStorageProviderV30 provider = FindPageAttachmentProvider( page, attachmentName );
 
-			if(provider == null) return false;
-			return provider.RetrievePageAttachment(page, attachmentName, output, countHit);
+			if ( provider == null ) return false;
+			return provider.RetrievePageAttachment( page, attachmentName, output, countHit );
 		}
 
 		#endregion
@@ -253,8 +284,9 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="fullName">The full name.</param>
 		/// <returns>The normalized full name.</returns>
-		private static string NormalizeFullName(string fullName) {
-			if(!fullName.StartsWith("/")) fullName = "/" + fullName;
+		private static string NormalizeFullName( string fullName )
+		{
+			if ( !fullName.StartsWith( "/" ) ) fullName = "/" + fullName;
 			return fullName;
 		}
 
@@ -263,10 +295,11 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="fullPath">The full path.</param>
 		/// <returns>The normalized full path.</returns>
-		private static string NormalizeFullPath(string fullPath) {
-			if(fullPath == null) return "/";
-			if(!fullPath.StartsWith("/")) fullPath = "/" + fullPath;
-			if(!fullPath.EndsWith("/")) fullPath += "/";
+		private static string NormalizeFullPath( string fullPath )
+		{
+			if ( fullPath == null ) return "/";
+			if ( !fullPath.StartsWith( "/" ) ) fullPath = "/" + fullPath;
+			if ( !fullPath.EndsWith( "/" ) ) fullPath += "/";
 			return fullPath;
 		}
 
@@ -275,13 +308,15 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="fullPath">The full path, normalized, different from "/".</param>
 		/// <returns>The directory.</returns>
-		private static string UpOneLevel(string fullPath) {
-			if(fullPath == "/") throw new ArgumentException("Cannot navigate up from the root");
+		private static string UpOneLevel( string fullPath )
+		{
+			if ( fullPath == "/" )
+				throw new ArgumentException( "Cannot navigate up from the root" );
 
-			string temp = fullPath.Trim('/');
-			int lastIndex = temp.LastIndexOf("/");
+			string temp = fullPath.Trim( '/' );
+			int lastIndex = temp.LastIndexOf( "/", StringComparison.Ordinal );
 
-			return "/" + temp.Substring(0, lastIndex + 1);
+			return "/" + temp.Substring( 0, lastIndex + 1 );
 		}
 
 	}
