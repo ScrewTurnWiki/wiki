@@ -599,6 +599,7 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="info">The original component information.</param>
 		/// <param name="typeName">The type name.</param>
+		/// <param name="updateStatus"></param>
 		/// <param name="disabled">A value indicating whether the provider is disabled.</param>
 		/// <param name="selected">A value indicating whether the provider is selected.</param>
 		public ProviderRow(ComponentInformation info, string typeName, string updateStatus, bool disabled, bool selected) {
