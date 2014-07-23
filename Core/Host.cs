@@ -6,6 +6,7 @@ using System.Text;
 using ScrewTurn.Wiki.SearchEngine;
 
 namespace ScrewTurn.Wiki {
+	using System.Linq;
 
 	/// <summary>
 	/// Implements the <b>IHost</b> interface.
@@ -212,13 +213,16 @@ namespace ScrewTurn.Wiki {
 		/// <returns><c>true</c> if the action is allowed, <c>false</c> otherwise.</returns>
 		/// <exception cref="ArgumentNullException">If <b>action</b> or <b>user</b> are <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>action</b> is empty.</exception>
-		public bool CheckActionForGlobals(string action, UserInfo user) {
-			if(action == null) throw new ArgumentNullException("action");
-			if(action.Length == 0) throw new ArgumentException("Action cannot be empty", "action");
+		public bool CheckActionForGlobals( string action, UserInfo user )
+		{
+			if ( action == null )
+				throw new ArgumentNullException( "action" );
+			if ( action.Length == 0 )
+				throw new ArgumentException( "Action cannot be empty", "action" );
 
-			var temp = user != null ? user : Users.GetAnonymousAccount();
+			var temp = user ?? Users.GetAnonymousAccount( );
 
-			return AuthChecker.CheckActionForGlobals(action, temp.Username, temp.Groups);
+			return AuthChecker.CheckActionForGlobals( action, temp.Username, temp.Groups );
 		}
 
 		/// <summary>
@@ -230,13 +234,16 @@ namespace ScrewTurn.Wiki {
 		/// <returns><c>true</c> if the action is allowed, <c>false</c> otherwise.</returns>
 		/// <exception cref="ArgumentNullException">If <b>action</b> or <b>user</b> are <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>action</b> is empty.</exception>
-		public bool CheckActionForNamespace(NamespaceInfo nspace, string action, UserInfo user) {
-			if(action == null) throw new ArgumentNullException("action");
-			if(action.Length == 0) throw new ArgumentException("Action cannot be empty", "action");
+		public bool CheckActionForNamespace( NamespaceInfo nspace, string action, UserInfo user )
+		{
+			if ( action == null )
+				throw new ArgumentNullException( "action" );
+			if ( action.Length == 0 )
+				throw new ArgumentException( "Action cannot be empty", "action" );
 
-			var temp = user != null ? user : Users.GetAnonymousAccount();
+			var temp = user ?? Users.GetAnonymousAccount( );
 
-			return AuthChecker.CheckActionForNamespace(nspace, action, temp.Username, temp.Groups);
+			return AuthChecker.CheckActionForNamespace( nspace, action, temp.Username, temp.Groups );
 		}
 
 		/// <summary>
@@ -248,14 +255,18 @@ namespace ScrewTurn.Wiki {
 		/// <returns><c>true</c> if the action is allowed, <c>false</c> otherwise.</returns>
 		/// <exception cref="ArgumentNullException">If <b>page</b>, <b>action</b> or <b>user</b> are <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>action</b> is empty.</exception>
-		public bool CheckActionForPage(PageInfo page, string action, UserInfo user) {
-			if(page == null) throw new ArgumentNullException("page");
-			if(action == null) throw new ArgumentNullException("action");
-			if(action.Length == 0) throw new ArgumentException("Action cannot be empty", "action");
+		public bool CheckActionForPage( PageInfo page, string action, UserInfo user )
+		{
+			if ( page == null )
+				throw new ArgumentNullException( "page" );
+			if ( action == null )
+				throw new ArgumentNullException( "action" );
+			if ( action.Length == 0 )
+				throw new ArgumentException( "Action cannot be empty", "action" );
 
-			var temp = user != null ? user : Users.GetAnonymousAccount();
+			var temp = user ?? Users.GetAnonymousAccount( );
 
-			return AuthChecker.CheckActionForPage(page, action, temp.Username, temp.Groups);
+			return AuthChecker.CheckActionForPage( page, action, temp.Username, temp.Groups );
 		}
 
 		/// <summary>
@@ -267,14 +278,18 @@ namespace ScrewTurn.Wiki {
 		/// <returns><c>true</c> if the action is allowed, <c>false</c> otherwise.</returns>
 		/// <exception cref="ArgumentNullException">If <b>directory</b>, <b>action</b> or <b>user</b> are <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>action</b> is empty.</exception>
-		public bool CheckActionForDirectory(StDirectoryInfo directory, string action, UserInfo user) {
-			if(directory == null) throw new ArgumentNullException("directory");
-			if(action == null) throw new ArgumentNullException("action");
-			if(action.Length == 0) throw new ArgumentException("Action cannot be empty", "action");
+		public bool CheckActionForDirectory( StDirectoryInfo directory, string action, UserInfo user )
+		{
+			if ( directory == null )
+				throw new ArgumentNullException( "directory" );
+			if ( action == null )
+				throw new ArgumentNullException( "action" );
+			if ( action.Length == 0 )
+				throw new ArgumentException( "Action cannot be empty", "action" );
 
-			var temp = user != null ? user : Users.GetAnonymousAccount();
+			var temp = user ?? Users.GetAnonymousAccount( );
 
-			return AuthChecker.CheckActionForDirectory(directory.Provider, directory.FullPath, action, temp.Username, temp.Groups);
+			return AuthChecker.CheckActionForDirectory( directory.Provider, directory.FullPath, action, temp.Username, temp.Groups );
 		}
 
 		/// <summary>
@@ -485,20 +500,18 @@ namespace ScrewTurn.Wiki {
 			List<StDirectoryInfo> result = new List<StDirectoryInfo>(20);
 
 			if(directory == null) {
-				foreach(IFilesStorageProviderV30 prov in Collectors.FilesProviderCollector.AllProviders) {
+				foreach(IFilesStorageProviderV30 prov in Collectors.FilesProviderCollector.AllProviders)
+				{
 					string[] dirs = prov.ListDirectories(null);
 
-					foreach(string dir in dirs) {
-						result.Add(new StDirectoryInfo(dir, prov));
-					}
+					result.AddRange( dirs.Select( dir => new StDirectoryInfo( dir, prov ) ) );
 				}
 			}
-			else {
+			else
+			{
 				string[] dirs = directory.Provider.ListDirectories(directory.FullPath);
 
-				foreach(string dir in dirs) {
-					result.Add(new StDirectoryInfo(dir, directory.Provider));
-				}
+				result.AddRange( dirs.Select( dir => new StDirectoryInfo( dir, directory.Provider ) ) );
 			}
 
 			return result.ToArray();
