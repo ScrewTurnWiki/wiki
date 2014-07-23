@@ -1,10 +1,6 @@
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 using NUnit.Framework;
-using Rhino.Mocks;
-using Rhino.Mocks.Constraints;
 
 namespace ScrewTurn.Wiki.SearchEngine.Tests {
 

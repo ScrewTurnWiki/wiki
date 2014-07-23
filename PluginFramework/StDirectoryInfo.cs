@@ -1,10 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace ScrewTurn.Wiki.PluginFramework {
+﻿namespace ScrewTurn.Wiki.PluginFramework {
 
 	/// <summary>
 	/// Contains information about a directory.

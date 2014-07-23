@@ -1,7 +1,6 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using System.Text;
 using ScrewTurn.Wiki.Plugins.SqlCommon;
 using ScrewTurn.Wiki.PluginFramework;
 using System.Data.SqlClient;

@@ -1,10 +1,6 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using ScrewTurn.Wiki.SearchEngine;
-using System.Data.Common;
 
 namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 

@@ -1,8 +1,6 @@
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using ScrewTurn.Wiki.SearchEngine.Tests;
 using NUnit.Framework;
 using ScrewTurn.Wiki.SearchEngine;

@@ -1,9 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ScrewTurn.Wiki {
+﻿namespace ScrewTurn.Wiki {
 
 	/// <summary>
 	/// Describes the subject of an ACL entry.

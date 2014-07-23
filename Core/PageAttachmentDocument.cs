@@ -1,7 +1,5 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Text;
 using ScrewTurn.Wiki.SearchEngine;
 using ScrewTurn.Wiki.PluginFramework;
 

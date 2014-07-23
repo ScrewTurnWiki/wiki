@@ -1,10 +1,7 @@
 ﻿
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
-using System.Text;
 using NUnit.Framework;
 using Rhino.Mocks;
 using ScrewTurn.Wiki.SearchEngine;

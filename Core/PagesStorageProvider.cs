@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Globalization;
 using System.Text;
 using ScrewTurn.Wiki.PluginFramework;
 using ScrewTurn.Wiki.SearchEngine;

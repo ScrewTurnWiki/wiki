@@ -1,7 +1,5 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.IO;
 
 namespace ScrewTurn.Wiki.Plugins.SqlCommon {

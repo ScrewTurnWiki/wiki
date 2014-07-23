@@ -1,8 +1,3 @@
-
-using System;
-using System.Configuration;
-using System.Web;
-using System.Collections.Generic;
 using ScrewTurn.Wiki.PluginFramework;
 
 namespace ScrewTurn.Wiki {

@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using ScrewTurn.Wiki.PluginFramework;
 using System.Web.Script.Serialization;
-using System.Collections;
 using ScrewTurn.Wiki.AclEngine;
 using Ionic.Zip;
 using System.IO;

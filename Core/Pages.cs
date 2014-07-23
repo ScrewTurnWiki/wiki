@@ -1,12 +1,10 @@
 
 using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using ScrewTurn.Wiki.PluginFramework;
 using System.Web;
-using System.Globalization;
 
 namespace ScrewTurn.Wiki {
 

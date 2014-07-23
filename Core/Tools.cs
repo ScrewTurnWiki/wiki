@@ -1,12 +1,9 @@
 ﻿
 using System;
-using System.Configuration;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Threading;
 using System.Web;
-using System.Web.Security;
 using System.Globalization;
 using ScrewTurn.Wiki.PluginFramework;
 using System.Reflection;

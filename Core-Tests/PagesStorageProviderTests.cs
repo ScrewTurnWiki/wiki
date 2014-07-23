@@ -1,8 +1,6 @@
 ﻿
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using ScrewTurn.Wiki.PluginFramework;
 using NUnit.Framework;
 using Rhino.Mocks;

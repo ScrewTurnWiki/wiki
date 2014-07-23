@@ -1,11 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Data.Common;
-using System.Data;
-
-namespace ScrewTurn.Wiki.Plugins.SqlCommon {
+﻿namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 	/// <summary>
 	/// Represents a generic database parameter.

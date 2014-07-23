@@ -1,8 +1,6 @@
 ﻿
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 using NUnit.Framework;
 using Rhino.Mocks;
 using ScrewTurn.Wiki.Tests;

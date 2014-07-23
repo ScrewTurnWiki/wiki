@@ -1,20 +1,7 @@
 
 using System;
-using System.Data;
-using System.Drawing;
-using System.Configuration;
-using System.Collections;
-using System.IO;
-using System.Text.RegularExpressions;
-using System.Web;
-using System.Web.Configuration;
-using System.Web.Security;
-using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using ScrewTurn.Wiki.PluginFramework;
-using System.Collections.Generic;
 
 namespace ScrewTurn.Wiki {
 

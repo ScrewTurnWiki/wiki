@@ -1,14 +1,10 @@
 ﻿
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 using NUnit.Framework;
 using Rhino.Mocks;
 using ScrewTurn.Wiki.Tests;
 using ScrewTurn.Wiki.PluginFramework;
-using ScrewTurn.Wiki.Plugins.SqlCommon;
-using ScrewTurn.Wiki.SearchEngine;
 
 namespace ScrewTurn.Wiki.Plugins.SqlServer.Tests {
 

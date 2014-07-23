@@ -1,7 +1,6 @@
 
 using System;
 using System.IO;
-using System.Resources;
 using System.Security.Principal;
 using System.Web.Configuration;
 using ScrewTurn.Wiki.PluginFramework;

@@ -1,9 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ScrewTurn.Wiki.PluginFramework;
+﻿using ScrewTurn.Wiki.PluginFramework;
 
 namespace ScrewTurn.Wiki {
 
