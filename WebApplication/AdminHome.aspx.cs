@@ -160,8 +160,9 @@ namespace ScrewTurn.Wiki {
 			sb.Append(Properties.Messages.UserCount + ": <b>" + users.Count + "</b> (" + inactive + " " + Properties.Messages.InactiveUsers + ")<br />" + "\n");
 			sb.Append(Properties.Messages.CachedPages + ": <b>" + ScrewTurn.Wiki.Cache.PageCacheUsage + "/" + Pages.GetGlobalPageCount() + "</b> (" + ScrewTurn.Wiki.Cache.FormattedPageCacheUsage + " " + Properties.Messages.Formatted + ")<br />" + "\n");
 			sb.Append(Properties.Messages.WikiVersion + ": <b>" + Settings.WikiVersion + "</b>" + "\n");
+			//TODO: Re-enable version checking once a more permanent auto-update solution can be devised.
 			if(!Page.IsPostBack) {
-				sb.Append(CheckVersion());
+				//sb.Append(CheckVersion());
 			}
 			sb.Append("<br />");
 			sb.Append(Properties.Messages.ServerUptime + ": <b>" + Tools.TimeSpanToString(Tools.SystemUptime) + "</b> (" +
@@ -170,30 +171,35 @@ namespace ScrewTurn.Wiki {
 			lblSystemStatusContent.Text = sb.ToString();
 		}
 
-		private string CheckVersion() {
-			if(Settings.DisableAutomaticVersionCheck) return "";
+		private string CheckVersion( )
+		{
+			if ( Settings.DisableAutomaticVersionCheck )
+				return "";
 
-			StringBuilder sb = new StringBuilder(100);
-			sb.Append("(");
+			StringBuilder sb = new StringBuilder( 100 );
+			sb.Append( "(" );
 
 			string newVersion = null;
 			string ignored = null;
-			UpdateStatus status = Tools.GetUpdateStatus("http://www.screwturn.eu/Version/Wiki/3.htm",
-				Settings.WikiVersion, out newVersion, out ignored);
+			UpdateStatus status = Tools.GetUpdateStatus( "http://www.screwturn.eu/Version/Wiki/3.htm",
+			                                             Settings.WikiVersion, out newVersion, out ignored );
 
-			if(status == UpdateStatus.Error) {
-				sb.Append(@"<span class=""resulterror"">" + Properties.Messages.VersionCheckError + "</span>");
+			if ( status == UpdateStatus.Error )
+			{
+				sb.Append( @"<span class=""resulterror"">" + Properties.Messages.VersionCheckError + "</span>" );
 			}
-			else if(status == UpdateStatus.NewVersionFound) {
-				sb.Append(@"<span class=""resulterror"">" + Properties.Messages.NewVersionFound + ": <b>" + newVersion + "</b></span>");
+			else if ( status == UpdateStatus.NewVersionFound )
+			{
+				sb.Append( @"<span class=""resulterror"">" + Properties.Messages.NewVersionFound + ": <b>" + newVersion + "</b></span>" );
 			}
-			else if(status == UpdateStatus.UpToDate) {
-				sb.Append(@"<span class=""resultok"">" + Properties.Messages.WikiUpToDate + "</span>");
+			else if ( status == UpdateStatus.UpToDate )
+			{
+				sb.Append( @"<span class=""resultok"">" + Properties.Messages.WikiUpToDate + "</span>" );
 			}
-			else throw new NotSupportedException();
+			else throw new NotSupportedException( );
 
-			sb.Append(")");
-			return sb.ToString();
+			sb.Append( ")" );
+			return sb.ToString( );
 		}
 
 	}
