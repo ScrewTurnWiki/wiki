@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ECB488D9-C8E9-41E0-BE27-27F41F76F8A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScrewTurn.Wiki.Plugins.SqlServer</RootNamespace>
+    <AssemblyName>SqlServerProviders</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\SqlServerProviders.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\SqlServerProviders.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyVersion.cs">
+      <Link>AssemblyVersion.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\Hash.cs">
+      <Link>SqlProvidersCommon\Hash.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\ICommandBuilder.cs">
+      <Link>SqlProvidersCommon\ICommandBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\IIndexConnector.cs">
+      <Link>SqlProvidersCommon\IIndexConnector.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\IndexConnector.cs">
+      <Link>SqlProvidersCommon\IndexConnector.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\Parameter.cs">
+      <Link>SqlProvidersCommon\Parameter.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\QueryBuilder.cs">
+      <Link>SqlProvidersCommon\QueryBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\SqlAclManager.cs">
+      <Link>SqlProvidersCommon\SqlAclManager.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\SqlClassBase.cs">
+      <Link>SqlProvidersCommon\SqlClassBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\SqlFilesStorageProviderBase.cs">
+      <Link>SqlProvidersCommon\SqlFilesStorageProviderBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\SqlIndex.cs">
+      <Link>SqlProvidersCommon\SqlIndex.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\SqlPagesStorageProviderBase.cs">
+      <Link>SqlProvidersCommon\SqlPagesStorageProviderBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\SqlSettingsStorageProviderBase.cs">
+      <Link>SqlProvidersCommon\SqlSettingsStorageProviderBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\SqlStorageProviderBase.cs">
+      <Link>SqlProvidersCommon\SqlStorageProviderBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\SqlUsersStorageProviderBase.cs">
+      <Link>SqlProvidersCommon\SqlUsersStorageProviderBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SqlProvidersCommon\Tools.cs">
+      <Link>SqlProvidersCommon\Tools.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerCommandBuilder.cs" />
+    <Compile Include="SqlServerFilesStorageProvider.cs" />
+    <Compile Include="SqlServerPagesStorageProvider.cs" />
+    <Compile Include="SqlServerSettingsStorageProvider.cs" />
+    <Compile Include="SqlServerUsersStorageProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AclEngine\AclEngine.csproj">
+      <Project>{44B0F4C1-8CDC-4272-B2A2-C0AF689CEB81}</Project>
+      <Name>AclEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginFramework\PluginFramework.csproj">
+      <Project>{531A83D6-76F9-4014-91C5-295818E2D948}</Project>
+      <Name>PluginFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SearchEngine\SearchEngine.csproj">
+      <Project>{2DF980A6-4742-49B1-A090-DE79314644D0}</Project>
+      <Name>SearchEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FilesDatabase.sql" />
+    <None Include="PagesDatabase_3000to3001.sql" />
+    <None Include="PagesDatabase.sql" />
+    <None Include="SettingsDatabase.sql" />
+    <None Include="UsersDatabase.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

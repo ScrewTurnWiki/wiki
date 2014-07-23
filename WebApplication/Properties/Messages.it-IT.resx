@@ -1,0 +1,1753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnchorTitle2" xml:space="preserve">
+    <value>Inserisci un'ancora o un collegamento ad un ancora esistente</value>
+  </data>
+  <data name="BoldTitle" xml:space="preserve">
+    <value>Imposta il testo selezionato in grassetto</value>
+  </data>
+  <data name="CodeEscapedTitle" xml:space="preserve">
+    <value>Imposta il testo selezionato come blocco di codice</value>
+  </data>
+  <data name="CodeInlineTitle" xml:space="preserve">
+    <value>Imposta il codice selezionato come codice 'inline'</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>Imposta il testo selezionato come commento (nascosto nell'output della pagina)</value>
+  </data>
+  <data name="EscapeTitle" xml:space="preserve">
+    <value>Racchiudi il testo selezionato in un blocco 'escape' che fa l'escape di tutti i caratteri wiki e HTML</value>
+  </data>
+  <data name="ExternalLinkTitle" xml:space="preserve">
+    <value>Inserisci un collegamento ad un sito web o email</value>
+  </data>
+  <data name="FileLinkTitle" xml:space="preserve">
+    <value>Inserisci un collegamento ad un file o allegato</value>
+  </data>
+  <data name="H1Title" xml:space="preserve">
+    <value>Imposta il testo selezionato come titolo di livello 1</value>
+  </data>
+  <data name="H2Title" xml:space="preserve">
+    <value>Imposta il testo selezionato come titolo di livello 2</value>
+  </data>
+  <data name="H3Title" xml:space="preserve">
+    <value>Imposta il testo selezionato come titolo di livello 3</value>
+  </data>
+  <data name="H4Title" xml:space="preserve">
+    <value>Imposta il testo selezionato come titolo di livello 4</value>
+  </data>
+  <data name="HRTitle" xml:space="preserve">
+    <value>Inserisci una riga orizzontale (separatore)</value>
+  </data>
+  <data name="ImageTitle2" xml:space="preserve">
+    <value>Inserisci un'immagine nella pagina</value>
+  </data>
+  <data name="ItalicTitle" xml:space="preserve">
+    <value>Imposta il testo selezionato in corsivo</value>
+  </data>
+  <data name="LineBreakTitle" xml:space="preserve">
+    <value>Inserisci un'interruzione di riga (singola)</value>
+  </data>
+  <data name="NoBrTitle" xml:space="preserve">
+    <value>Racchiudi il testo selezionato in un blocco 'nobr' che ignora i ritorni a capo</value>
+  </data>
+  <data name="NoWikiTitle" xml:space="preserve">
+    <value>Racchiudi il testo selezionato in un blocco 'nowiki' che ignora il WikiMarkup</value>
+  </data>
+  <data name="OrderedListTitle" xml:space="preserve">
+    <value>Inserisci una lista ordinata o racchiudi il testo selezionato in una lista ordinata (1, 2, 3, ...)</value>
+  </data>
+  <data name="PageLinkTitle" xml:space="preserve">
+    <value>Inserisci un collegamento ad una pagina</value>
+  </data>
+  <data name="SnippetsTitle" xml:space="preserve">
+    <value>Visualizza gli snippet esistenti ed inseriscine uno nella pagina</value>
+  </data>
+  <data name="SpecialTagsTitle" xml:space="preserve">
+    <value>Visualizza i tag speciali ed inseriscine uno nella pagina</value>
+  </data>
+  <data name="StrikedTitle" xml:space="preserve">
+    <value>Style selected text as strike-through</value>
+  </data>
+  <data name="SubscriptTitle" xml:space="preserve">
+    <value>Imposta il testo selezionato come pedice</value>
+  </data>
+  <data name="SuperscriptTitle" xml:space="preserve">
+    <value>Imposta il testo selezionato come apice</value>
+  </data>
+  <data name="SymbolsTitle" xml:space="preserve">
+    <value>Visualizza ed inserisci simboli speciali</value>
+  </data>
+  <data name="UnderlinedTitle" xml:space="preserve">
+    <value>Sottolinea il testo selezionato</value>
+  </data>
+  <data name="UnorderedListTitle" xml:space="preserve">
+    <value>Inserisci una lista non ordinata o racchiudi il testo selezionato in una lista non ordinata</value>
+  </data>
+  <data name="WrapperBoxTitle" xml:space="preserve">
+    <value>Racchiudi il testo selezionato in un 'box'</value>
+  </data>
+  <data name="ChangeComment" xml:space="preserve">
+    <value>Commento alla modifica</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Meta Description</value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>Meta Keyword</value>
+  </data>
+  <data name="AutoUpdateAvailable" xml:space="preserve">
+    <value>Auto-aggiornam. disponibile</value>
+  </data>
+  <data name="NAccountsDeleted" xml:space="preserve">
+    <value>$ account eliminati</value>
+    <comment>As in "3 accounts deleted"</comment>
+  </data>
+  <data name="Formatted" xml:space="preserve">
+    <value>formattato</value>
+  </data>
+  <data name="NoPagesToMigrate" xml:space="preserve">
+    <value>Nessuna pagina da migrare</value>
+  </data>
+  <data name="NoProvidersToUpdate" xml:space="preserve">
+    <value>Nessun provider da aggiornare</value>
+  </data>
+  <data name="ProvidersUpdated" xml:space="preserve">
+    <value>Provider aggiornati, riavvia l'applicazione</value>
+  </data>
+  <data name="BulkMigrationCompleted" xml:space="preserve">
+    <value>Migrazione in blocco completata</value>
+  </data>
+  <data name="BulkMigrationCompletedWithErrors" xml:space="preserve">
+    <value>Migrazione in blocco completata con errori; controlla il log</value>
+  </data>
+  <data name="BulkRebindCompleted" xml:space="preserve">
+    <value>Riabbinamento in blocco completato</value>
+  </data>
+  <data name="NoCategories" xml:space="preserve">
+    <value>Nessuna categoria selezionata</value>
+  </data>
+  <data name="NoPages" xml:space="preserve">
+    <value>Nessuna pagina da riabbinare</value>
+  </data>
+  <data name="InvalidFileName" xml:space="preserve">
+    <value>Nome file non valido</value>
+  </data>
+  <data name="OrderedList" xml:space="preserve">
+    <value>Lista ordinata</value>
+  </data>
+  <data name="UnorderedList" xml:space="preserve">
+    <value>Lista non ordinata</value>
+  </data>
+  <data name="LinkToThisSection" xml:space="preserve">
+    <value>Collegamento a questa sezione</value>
+  </data>
+  <data name="NoBr" xml:space="preserve">
+    <value>NoBR tag</value>
+  </data>
+  <data name="SelectAndDelete" xml:space="preserve">
+    <value>Seleziona ed elimina</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Errore</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>Nuova versione:</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>Aggiornato</value>
+  </data>
+  <data name="CouldNotMigratePage" xml:space="preserve">
+    <value>Impossibile migrare la pagina</value>
+  </data>
+  <data name="DiscussionsRss" xml:space="preserve">
+    <value>RSS Discussioni</value>
+  </data>
+  <data name="RssForThisCategoryDiscussion" xml:space="preserve">
+    <value>Notifiche aggiornamenti per le discussioni di questa Categoria (RSS 2.0)</value>
+  </data>
+  <data name="CodeEscaped" xml:space="preserve">
+    <value>Blocco di codice</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Riga orizzontale</value>
+  </data>
+  <data name="Snippets" xml:space="preserve">
+    <value>Snippet</value>
+  </data>
+  <data name="Symbols" xml:space="preserve">
+    <value>Simboli speciali</value>
+  </data>
+  <data name="WrapperBox" xml:space="preserve">
+    <value>Wrapper Box</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>Dettagli utente</value>
+  </data>
+  <data name="CouldNotSaveDisplayName" xml:space="preserve">
+    <value>Impossibile salvare il nome visualizzato</value>
+  </data>
+  <data name="DisplayNameSaved" xml:space="preserve">
+    <value>Nome visualizzato salvato</value>
+  </data>
+  <data name="UserDeletedMessage" xml:space="preserve">
+    <value>##USER## ha eliminato un messaggio nella discussione di ##PAGE##.</value>
+  </data>
+  <data name="UserDeletedPage" xml:space="preserve">
+    <value>##USER## ha eliminato la pagina ##PAGE##.</value>
+  </data>
+  <data name="UserEditedMessage" xml:space="preserve">
+    <value>##USER## ha modificato un messaggio nella discussione di ##PAGE##.</value>
+  </data>
+  <data name="UserPostedMessage" xml:space="preserve">
+    <value>##USER## ha inserito un messaggio nella discussione di ##PAGE##.</value>
+  </data>
+  <data name="UserRenamedPage" xml:space="preserve">
+    <value>##USER## ha rinominato la pagina ##PAGE##.</value>
+  </data>
+  <data name="UserRolledBackPage" xml:space="preserve">
+    <value>##USER## ha effettuato il roll-back della pagina ##PAGE##.</value>
+  </data>
+  <data name="UserUpdatedPage" xml:space="preserve">
+    <value>##USER## ha aggiornato la pagina ##PAGE##.</value>
+  </data>
+  <data name="CreateThisPage" xml:space="preserve">
+    <value>Creare questa pagina</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sì</value>
+  </data>
+  <data name="Corrupted" xml:space="preserve">
+    <value>Corrotto</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SelectYourLanguage" xml:space="preserve">
+    <value>Seleziona la tua lingua</value>
+  </data>
+  <data name="PreferencesSaved" xml:space="preserve">
+    <value>Preferenze salvate</value>
+  </data>
+  <data name="GoToYourProfile" xml:space="preserve">
+    <value>Vai al tuo profilo</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Ospite</value>
+  </data>
+  <data name="CouldNotRenameNamespace" xml:space="preserve">
+    <value>Impossibile rinominare il namespace</value>
+  </data>
+  <data name="NamespaceRenamed" xml:space="preserve">
+    <value>Namespace rinominato</value>
+  </data>
+  <data name="SelectTemplate" xml:space="preserve">
+    <value>Seleziona template...</value>
+  </data>
+  <data name="Action_Man_Snips_Temps" xml:space="preserve">
+    <value>Gestione Snippet e Template</value>
+  </data>
+  <data name="CouldNotCreateTemplate" xml:space="preserve">
+    <value>Impossibile creare il template</value>
+  </data>
+  <data name="CouldNotDeleteTemplate" xml:space="preserve">
+    <value>Impossibile eliminare il template</value>
+  </data>
+  <data name="CouldNotSaveTemplate" xml:space="preserve">
+    <value>Impossibile salvare il template</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>Snippet</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="TemplateCreated" xml:space="preserve">
+    <value>Template creato</value>
+  </data>
+  <data name="TemplateDeleted" xml:space="preserve">
+    <value>Template eliminato</value>
+  </data>
+  <data name="TemplateSaved" xml:space="preserve">
+    <value>Template salvato</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Creata da</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>Creata il</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Modificata da</value>
+  </data>
+  <data name="ModifiedOn" xml:space="preserve">
+    <value>Modificata il</value>
+  </data>
+  <data name="AMessageWasSentCheckInbox" xml:space="preserve">
+    <value>Un messaggio è stato inviato al tuo indirizzo email; controlla la posta in arrivo.</value>
+  </data>
+  <data name="NewPasswordSavedPleaseLogin" xml:space="preserve">
+    <value>Nuova password salvata; effettua il &lt;a href="Login.aspx" title="Login"&gt;Login&lt;/a&gt;</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="AMessageHasBeenDeletedBy" xml:space="preserve">
+    <value>Un messaggio con oggetto "##SUBJECT##" è stato eliminato da</value>
+  </data>
+  <data name="AMessageHasBeenEditedBy" xml:space="preserve">
+    <value>Un messaggio con oggetto "##SUBJECT##" è stato modificato da</value>
+  </data>
+  <data name="AMessageHasBeenPostedBy" xml:space="preserve">
+    <value>Un messaggio con oggetto "##SUBJECT##" è stato inserito da</value>
+  </data>
+  <data name="Discussion" xml:space="preserve">
+    <value>Discussione</value>
+  </data>
+  <data name="DiscussionUpdates" xml:space="preserve">
+    <value>Aggiornamenti sulla discussione</value>
+  </data>
+  <data name="RecentDiscussionUpdates" xml:space="preserve">
+    <value>Aggiornamenti recenti discussioni</value>
+  </data>
+  <data name="ApproveRejectDraft" xml:space="preserve">
+    <value>Approva/Respingi Bozza</value>
+  </data>
+  <data name="Action_Man_1Disc" xml:space="preserve">
+    <value>Gestione Discussioni</value>
+  </data>
+  <data name="Action_Pst_1Disc" xml:space="preserve">
+    <value>Inserim. Messaggi in Discussione</value>
+  </data>
+  <data name="Action_Rd_1Disc" xml:space="preserve">
+    <value>Lettura Discussioni</value>
+  </data>
+  <data name="Action_Man_Perms" xml:space="preserve">
+    <value>Gestione Permessi</value>
+  </data>
+  <data name="NotificationsStatusSaved" xml:space="preserve">
+    <value>Stato notifiche salvato</value>
+  </data>
+  <data name="NoConfigurationRequired" xml:space="preserve">
+    <value>Nessuna configurazione è richiesta</value>
+  </data>
+  <data name="DataCopied" xml:space="preserve">
+    <value>Dati copiati, cambia il Settings Storage Provider attivo nel file web.config</value>
+  </data>
+  <data name="DataMigrated" xml:space="preserve">
+    <value>Dati migrati, riavvia l'applicazione</value>
+  </data>
+  <data name="DllAlreadyExists" xml:space="preserve">
+    <value>La DLL esiste già</value>
+  </data>
+  <data name="LoadedProviders" xml:space="preserve">
+    <value>Caricati ### provider</value>
+  </data>
+  <data name="VoidOrInvalidFile" xml:space="preserve">
+    <value>File non valido o vuoto</value>
+  </data>
+  <data name="CouldNotDeleteDll" xml:space="preserve">
+    <value>Impossibile eliminare la DLL</value>
+  </data>
+  <data name="DllDeleted" xml:space="preserve">
+    <value>DLL eliminata</value>
+  </data>
+  <data name="DefaultProvidersSaved" xml:space="preserve">
+    <value>Provider predefiniti salvati</value>
+  </data>
+  <data name="ProviderRejectedConfiguration" xml:space="preserve">
+    <value>Il provider ha respinto la configurazione</value>
+  </data>
+  <data name="CouldNotCreateNavPath" xml:space="preserve">
+    <value>Impossibile creare il navigation path</value>
+  </data>
+  <data name="CouldNotDeleteNavPath" xml:space="preserve">
+    <value>Impossibile eliminare il navigation path</value>
+  </data>
+  <data name="CouldNotSaveNavPath" xml:space="preserve">
+    <value>Impossibile salvare il navigation path</value>
+  </data>
+  <data name="NavPathCreated" xml:space="preserve">
+    <value>Navigation Path creato</value>
+  </data>
+  <data name="TheNavPathMustContain" xml:space="preserve">
+    <value>Il navigation path deve contenere almeno una pagina</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>nessuno</value>
+  </data>
+  <data name="ClickToEnableEmailNotifications" xml:space="preserve">
+    <value>Attiva notifiche via email per questa pagina</value>
+  </data>
+  <data name="EmailNotificationsAreActive" xml:space="preserve">
+    <value>Notifiche email attive per questa pagina - fai click per disattivare</value>
+  </data>
+  <data name="CouldNotApproveDraft" xml:space="preserve">
+    <value>Impossibile approvare la bozza</value>
+  </data>
+  <data name="DraftApproved" xml:space="preserve">
+    <value>Bozza approvata e salvata</value>
+  </data>
+  <data name="DraftRejected" xml:space="preserve">
+    <value>Bozza respinta ed eliminata</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Bozza</value>
+  </data>
+  <data name="ViewChanges" xml:space="preserve">
+    <value>visualizza modifiche</value>
+  </data>
+  <data name="DiffingPageTitle" xml:space="preserve">
+    <value>Differenza di &lt;i&gt;##PAGETITLE##&lt;/i&gt;, revisioni &lt;i&gt;##REV1##&lt;/i&gt; e &lt;i&gt;##REV2##&lt;/i&gt;</value>
+  </data>
+  <data name="CouldNotCreateSnippet" xml:space="preserve">
+    <value>Impossibile creare lo snippet</value>
+  </data>
+  <data name="CouldNotDeleteSnippet" xml:space="preserve">
+    <value>Impossibile eliminare lo snippet</value>
+  </data>
+  <data name="CouldNotSaveSnippet" xml:space="preserve">
+    <value>Impossibile salvare lo snippet</value>
+  </data>
+  <data name="SnippetCreated" xml:space="preserve">
+    <value>Snippet creato</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Parametri</value>
+  </data>
+  <data name="CouldNotDeleteCategory" xml:space="preserve">
+    <value>Impossibile eliminare la categoria</value>
+  </data>
+  <data name="CouldNotMergeCategories" xml:space="preserve">
+    <value>Impossibile fondere le categorie</value>
+  </data>
+  <data name="CategoryCreated" xml:space="preserve">
+    <value>Categoria creata</value>
+  </data>
+  <data name="CouldNotRenameCategory" xml:space="preserve">
+    <value>Impossibile rinominare la categoria</value>
+  </data>
+  <data name="CategoryAlreadyExists" xml:space="preserve">
+    <value>Categoria già esistente</value>
+  </data>
+  <data name="CouldNotCreateCategory" xml:space="preserve">
+    <value>Impossibile creare la categoria</value>
+  </data>
+  <data name="GoToCategory" xml:space="preserve">
+    <value>Vai alla categoriea</value>
+  </data>
+  <data name="Rollback" xml:space="preserve">
+    <value>Rollback</value>
+  </data>
+  <data name="RollbackThisPage" xml:space="preserve">
+    <value>Rollback alla versione precedente di questa pagina</value>
+  </data>
+  <data name="Administrate" xml:space="preserve">
+    <value>Amministra</value>
+  </data>
+  <data name="AdministrateThisPage" xml:space="preserve">
+    <value>Amministra questa Pagina</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permessi</value>
+  </data>
+  <data name="SetPermissionsForThisPage" xml:space="preserve">
+    <value>Imposta permessi per questa pagina</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AdminTools" xml:space="preserve">
+    <value>Strum. Amministrazione</value>
+  </data>
+  <data name="ViewPageHistory" xml:space="preserve">
+    <value>Visualizza la storia della pagina</value>
+  </data>
+  <data name="Action_Man_Disc" xml:space="preserve">
+    <value>Gestione Discussioni</value>
+  </data>
+  <data name="Action_Pst_Disc" xml:space="preserve">
+    <value>Inerim. Messaggi in Discussioni</value>
+  </data>
+  <data name="Action_Rd_Disc" xml:space="preserve">
+    <value>Lettura Discussioni</value>
+  </data>
+  <data name="CouldNotDeletePage" xml:space="preserve">
+    <value>Impossibile eliminare la pagina</value>
+  </data>
+  <data name="AllMessagesDeleted" xml:space="preserve">
+    <value>Tutti i messaggi eliminati</value>
+  </data>
+  <data name="CouldNotDeleteOneOrMoreMessages" xml:space="preserve">
+    <value>Impossibile eliminare uno o più messaggi</value>
+  </data>
+  <data name="CouldNotDeletePageBackups" xml:space="preserve">
+    <value>Impossibile eliminare i backup</value>
+  </data>
+  <data name="CouldNotRollbackPage" xml:space="preserve">
+    <value>Impossibile eseguire il roll-back della pagina</value>
+  </data>
+  <data name="PageRolledBack" xml:space="preserve">
+    <value>Rollback pagina effettuato</value>
+  </data>
+  <data name="CouldNotRenamePage" xml:space="preserve">
+    <value>Impossibile rinominare la pagina</value>
+  </data>
+  <data name="PageRenamedCouldNotCreateShadowPage" xml:space="preserve">
+    <value>Pagina rinominata; impossibile creare la pagina "ombra"</value>
+  </data>
+  <data name="PageRenamedCouldNotSetShadowPageContent" xml:space="preserve">
+    <value>Pagina rinominata; impossibile salvare il contenuto della pagina "ombra"</value>
+  </data>
+  <data name="GoToPageHistory" xml:space="preserve">
+    <value>Vai alla storia della pagina</value>
+  </data>
+  <data name="GoToPageDiscussion" xml:space="preserve">
+    <value>Vai alla discussione</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Vai alla pagina</value>
+  </data>
+  <data name="CouldNotDeletePermissions" xml:space="preserve">
+    <value>Impossibile eliminare i permessi</value>
+  </data>
+  <data name="GroupCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>Gruppo creato; impossibile salvare i permessi</value>
+  </data>
+  <data name="GroupSavedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>Gruppo salvato; impossibile eliminare i vecchi permessi</value>
+  </data>
+  <data name="GroupSavedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>Gruppo salvato; impossibile salvare i nuovi permessi</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteGroup" xml:space="preserve">
+    <value>Permessi eliminati; impossibile eliminare il gruppo</value>
+  </data>
+  <data name="CouldNotSetNamespaceDefaultPage" xml:space="preserve">
+    <value>Impossibile impostare la pagina principale del namespace</value>
+  </data>
+  <data name="CouldNotSetNamespaceTheme" xml:space="preserve">
+    <value>Impossibile impostare il tema del namespace</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotCreateDefaultPage" xml:space="preserve">
+    <value>Namespace creato; impossibile creare la pagina principale</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetDefaultPage" xml:space="preserve">
+    <value>Namespace creato; impossibile impostare la pagina principale</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetTheme" xml:space="preserve">
+    <value>Namespace salvato; impossibile impostare il tema</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotStoreDefaultPageContent" xml:space="preserve">
+    <value>Namespace creato; impossibile salvare il contenuto della pagina principale</value>
+  </data>
+  <data name="UserCreatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>Utente creato; impossibile salvare l'appartenenza a gruppi</value>
+  </data>
+  <data name="UserCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>Utente creato; impossibile salvare i permessi</value>
+  </data>
+  <data name="UserUpdatedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>Utente aggiornato; impossibile eliminare i vecchi permessi</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>Utente aggiornato; impossibile memorizzare l'appartenenza a gruppi</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>Utente aggiornato: impossibile memorizzare i nuovi permessi</value>
+  </data>
+  <data name="PermissionsAndGroupMembershipDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Permessi ed appartenenza gruppi eliminati; impossibile eliminare l'utente</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Permessi eliminati; impossibile eliminare l'utente</value>
+  </data>
+  <data name="CouldNotDeleteNamespace" xml:space="preserve">
+    <value>Impossibile eliminare il namespace</value>
+  </data>
+  <data name="NamespaceDeleted" xml:space="preserve">
+    <value>Namespace eliminato</value>
+  </data>
+  <data name="NamespaceSaved" xml:space="preserve">
+    <value>Namespace salvato</value>
+  </data>
+  <data name="CouldNotStorePermissions" xml:space="preserve">
+    <value>Impossibile memorizzare i permessi</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Gruppo</value>
+  </data>
+  <data name="GoToMainPage" xml:space="preserve">
+    <value>Vai alla pagina principale</value>
+  </data>
+  <data name="Action_Crt_Dirs" xml:space="preserve">
+    <value>Creazione Cartelle</value>
+  </data>
+  <data name="Action_Crt_Pg" xml:space="preserve">
+    <value>Creazione Pagine</value>
+  </data>
+  <data name="Action_Del_1Attn" xml:space="preserve">
+    <value>Eliminazione Allegati</value>
+  </data>
+  <data name="Action_Del_Attn" xml:space="preserve">
+    <value>Eliminazione Allegati</value>
+  </data>
+  <data name="Action_Del_Dirs" xml:space="preserve">
+    <value>Eliminazione Cartelle</value>
+  </data>
+  <data name="Action_Del_Files" xml:space="preserve">
+    <value>Eliminazione File</value>
+  </data>
+  <data name="Action_Del_Pg" xml:space="preserve">
+    <value>Eliminazione Pagine</value>
+  </data>
+  <data name="Action_Down_1Attn" xml:space="preserve">
+    <value>Download Allegati</value>
+  </data>
+  <data name="Action_Down_Attn" xml:space="preserve">
+    <value>Download Allegati</value>
+  </data>
+  <data name="Action_Down_Files" xml:space="preserve">
+    <value>Download File</value>
+  </data>
+  <data name="Action_FullControl" xml:space="preserve">
+    <value>Controllo Totale</value>
+  </data>
+  <data name="Action_List" xml:space="preserve">
+    <value>Elenco Contenuti</value>
+  </data>
+  <data name="Action_Man_1Cat" xml:space="preserve">
+    <value>Gestione Categorie</value>
+  </data>
+  <data name="Action_Man_1Pg" xml:space="preserve">
+    <value>Gestione Pagina</value>
+  </data>
+  <data name="Action_Man_Acc" xml:space="preserve">
+    <value>Gestione Account Utente</value>
+  </data>
+  <data name="Action_Man_Cat" xml:space="preserve">
+    <value>Gestione Categorie</value>
+  </data>
+  <data name="Action_Man_Conf" xml:space="preserve">
+    <value>Gestione Configurazione</value>
+  </data>
+  <data name="Action_Man_Files" xml:space="preserve">
+    <value>Gestione File e Cartelle</value>
+  </data>
+  <data name="Action_Man_Grp" xml:space="preserve">
+    <value>Gestione Gruppi Utenti</value>
+  </data>
+  <data name="Action_Man_MetaFiles" xml:space="preserve">
+    <value>Gestione Meta-File</value>
+  </data>
+  <data name="Action_Man_NavPath" xml:space="preserve">
+    <value>Gestione Navigation Path</value>
+  </data>
+  <data name="Action_Man_Ns" xml:space="preserve">
+    <value>Gestione Namespace</value>
+  </data>
+  <data name="Action_Man_Pg" xml:space="preserve">
+    <value>Gestione Pagine</value>
+  </data>
+  <data name="Action_Man_PgCat" xml:space="preserve">
+    <value>Gestione Pagine e Categorie</value>
+  </data>
+  <data name="Action_Man_Prov" xml:space="preserve">
+    <value>Gestione Provider</value>
+  </data>
+  <data name="Action_Mod_1Pg" xml:space="preserve">
+    <value>Modifica Pagina</value>
+  </data>
+  <data name="Action_Mod_Pg" xml:space="preserve">
+    <value>Modifica Pagine</value>
+  </data>
+  <data name="Action_Rd_1Pg" xml:space="preserve">
+    <value>Lettura Pagina</value>
+  </data>
+  <data name="Action_Rd_Pg" xml:space="preserve">
+    <value>Lettura Pagina</value>
+  </data>
+  <data name="Action_Up_1Attn" xml:space="preserve">
+    <value>Upload Allegati</value>
+  </data>
+  <data name="Action_Up_Attn" xml:space="preserve">
+    <value>Upload Allegati</value>
+  </data>
+  <data name="Action_Up_Files" xml:space="preserve">
+    <value>Upload File</value>
+  </data>
+  <data name="CouldNotCreateGroup" xml:space="preserve">
+    <value>Impossibile creare il gruppo</value>
+  </data>
+  <data name="CouldNotUpdateGroup" xml:space="preserve">
+    <value>Impossibile aggiornare il gruppo</value>
+  </data>
+  <data name="GroupCreated" xml:space="preserve">
+    <value>Gruppo creato</value>
+  </data>
+  <data name="GroupDeleted" xml:space="preserve">
+    <value>Gruppo eliminato</value>
+  </data>
+  <data name="GroupUpdated" xml:space="preserve">
+    <value>Gruppo aggiornato</value>
+  </data>
+  <data name="CouldNotSaveFile" xml:space="preserve">
+    <value>Impossibile salvare il file</value>
+  </data>
+  <data name="NoSimilarPages" xml:space="preserve">
+    <value>Nessuna pagina con nome o titolo simili.</value>
+  </data>
+  <data name="SearchStats" xml:space="preserve">
+    <value>Questa ricerca, effettuata su &lt;b&gt;{0}&lt;/b&gt; (&lt;b&gt;{1} documenti&lt;/b&gt;, &lt;b&gt;{2} parole&lt;/b&gt;), è stata completata in &lt;b&gt;{3:N1} secondi&lt;/b&gt; ed ha prodotto &lt;b&gt;{4} risultati&lt;/b&gt;.</value>
+  </data>
+  <data name="InvalidDisplayName" xml:space="preserve">
+    <value>Nome visualizzato non valido</value>
+  </data>
+  <data name="CouldNotCreateUser" xml:space="preserve">
+    <value>Impossibile creare l'utente</value>
+  </data>
+  <data name="CouldNotUpdateUser" xml:space="preserve">
+    <value>Impossibile aggiornare l'utente</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>Utente creato</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>Utente aggiornato</value>
+  </data>
+  <data name="RootNamespace" xml:space="preserve">
+    <value>&lt;root&gt;</value>
+  </data>
+  <data name="CouldNotCreateNamespace" xml:space="preserve">
+    <value>Impossibile creare il namespace</value>
+  </data>
+  <data name="InvalidNamespaceName" xml:space="preserve">
+    <value>Nome namespace non valido</value>
+  </data>
+  <data name="NamespaceCreated" xml:space="preserve">
+    <value>Namespace creato</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Chiudi</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Allegati</value>
+  </data>
+  <data name="ThereAreAttachments" xml:space="preserve">
+    <value>Questa pagina ha degli allegati</value>
+  </data>
+  <data name="NoSnippets" xml:space="preserve">
+    <value>Nessuno snippet.</value>
+  </data>
+  <data name="LinkTitleOptional" xml:space="preserve">
+    <value>Titolo collegamento (facoltativo)</value>
+  </data>
+  <data name="UpLevel" xml:space="preserve">
+    <value>Su di un livello</value>
+  </data>
+  <data name="CannotRenameItem" xml:space="preserve">
+    <value>Impossibile rinominare l'elemento selezionato</value>
+  </data>
+  <data name="CannotStoreFile" xml:space="preserve">
+    <value>Impossibile memorizzare il file</value>
+  </data>
+  <data name="CannotCreateNewDirectory" xml:space="preserve">
+    <value>Impossibile creare la nuova cartella</value>
+  </data>
+  <data name="DiffColorKey" xml:space="preserve">
+    <value>Chiave colori: &lt;span style="background-color: #88CC33;"&gt;testo aggiunto&lt;/span&gt; / &lt;span style="background-color: #FFDF66;"&gt;testo rimosso&lt;/span&gt;.</value>
+  </data>
+  <data name="LoginNoticeFile" xml:space="preserve">
+    <value>File Informazioni di Login</value>
+  </data>
+  <data name="MayBeInaccurate" xml:space="preserve">
+    <value>Può non essere preciso</value>
+  </data>
+  <data name="RedirectedFrom" xml:space="preserve">
+    <value>Reindirizzato da</value>
+  </data>
+  <data name="ThisPageRedirectsTo" xml:space="preserve">
+    <value>Questa Pagina reindirizza a</value>
+  </data>
+  <data name="PageFooterFile" xml:space="preserve">
+    <value>File Page Footer</value>
+  </data>
+  <data name="PageHeaderFile" xml:space="preserve">
+    <value>File Page Header</value>
+  </data>
+  <data name="EnterTitleAndUrl" xml:space="preserve">
+    <value>Devi inserire sia il Titolo che l'URL.</value>
+  </data>
+  <data name="HideBreadcrumbsTrail" xml:space="preserve">
+    <value>Fai click qui per nascondere la Traccia di Navigazione</value>
+  </data>
+  <data name="ViewBreadcrumbsTrail" xml:space="preserve">
+    <value>Fai click qui per visualizzare la Traccia di Navigazione completa</value>
+  </data>
+  <data name="ServerUptime" xml:space="preserve">
+    <value>Uptime del Server</value>
+  </data>
+  <data name="FullView" xml:space="preserve">
+    <value>Visualizzazione Estesa (nuova finestra)</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Anteprima</value>
+  </data>
+  <data name="FileLink" xml:space="preserve">
+    <value>Link ad un File locale</value>
+  </data>
+  <data name="InvalidMaxLogSize" xml:space="preserve">
+    <value>Dimensione massima Log non valida: deve essere maggiore di 8 e minore di 10240 KB</value>
+  </data>
+  <data name="RssForThisCategory" xml:space="preserve">
+    <value>Notifiche aggiornamenti per questa Categoria (RSS 2.0)</value>
+  </data>
+  <data name="PageSaved" xml:space="preserve">
+    <value>Pagina salvata</value>
+  </data>
+  <data name="UserAccountSaved" xml:space="preserve">
+    <value>Account Utente salvato</value>
+  </data>
+  <data name="ConfigurationString" xml:space="preserve">
+    <value>Stringa di Configurazione</value>
+  </data>
+  <data name="LocatedIn" xml:space="preserve">
+    <value>Localizzato in</value>
+  </data>
+  <data name="InsertSnippet" xml:space="preserve">
+    <value>Inserisci uno Snippet</value>
+  </data>
+  <data name="PageDoesNotExistInProvider" xml:space="preserve">
+    <value>La Pagina ##PAGENAME## non esiste nel Provider corrente</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>oppure</value>
+    <comment>It means 'you can do this OR this"</comment>
+  </data>
+  <data name="RevisionComment" xml:space="preserve">
+    <value>Commento</value>
+  </data>
+  <data name="Wizard" xml:space="preserve">
+    <value>Wizard di Configurazione</value>
+  </data>
+  <data name="ExternalLink" xml:space="preserve">
+    <value>Link Esterno</value>
+  </data>
+  <data name="PageLink" xml:space="preserve">
+    <value>Link ad una Pagina</value>
+  </data>
+  <data name="ThePageHasBeenDeletedBy" xml:space="preserve">
+    <value>La Pagina è stata eliminata da</value>
+  </data>
+  <data name="ThePageHasBeenRenamedBy" xml:space="preserve">
+    <value>La Pagina è stata rinominata da</value>
+  </data>
+  <data name="ThePageHasBeenRolledBackBy" xml:space="preserve">
+    <value>E' stato effettuato il rollback della Pagina da</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Aggiorna</value>
+  </data>
+  <data name="DiscussionFor" xml:space="preserve">
+    <value>Discussione di</value>
+  </data>
+  <data name="RssForThisDiscussion" xml:space="preserve">
+    <value>Notifiche aggiornamenti per questa Discussione (RSS 2.0)</value>
+  </data>
+  <data name="CannotUnloadDefaultProvider" xml:space="preserve">
+    <value>Impossibile effettuare l'unload di un Provider impostato come default</value>
+  </data>
+  <data name="OnlyDllFilesAllowed" xml:space="preserve">
+    <value>Solo file DLL sono permessi</value>
+  </data>
+  <data name="ProviderUnloaded" xml:space="preserve">
+    <value>Unload del Provider effettuato</value>
+  </data>
+  <data name="YouMustProvideAFile" xml:space="preserve">
+    <value>Devi fornire un File</value>
+  </data>
+  <data name="AccessDeniedTitle" xml:space="preserve">
+    <value>Accesso Negato</value>
+  </data>
+  <data name="AdminTitle" xml:space="preserve">
+    <value>Amministrazione</value>
+  </data>
+  <data name="AllPagesTitle" xml:space="preserve">
+    <value>Indice Wiki</value>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="DiffTitle" xml:space="preserve">
+    <value>Differenza</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Errore</value>
+  </data>
+  <data name="HistoryTitle" xml:space="preserve">
+    <value>Storia della Pagina</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Login/Logout</value>
+  </data>
+  <data name="MessageTitle" xml:space="preserve">
+    <value>Scrivi Messaggio</value>
+  </data>
+  <data name="NavPathTitle" xml:space="preserve">
+    <value>Navigation Path</value>
+  </data>
+  <data name="OperationTitle" xml:space="preserve">
+    <value>Operazione</value>
+  </data>
+  <data name="PageNotFoundTitle" xml:space="preserve">
+    <value>Pagina non Trovata</value>
+  </data>
+  <data name="PostTitle" xml:space="preserve">
+    <value>Inserisci Messaggio</value>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>Profilo Utente</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Crea Account</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>Motore di Ricerca</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>Gestione File</value>
+  </data>
+  <data name="MassEmailSent" xml:space="preserve">
+    <value>Email di Massa inviata (il recapito potrebbe richiedere un po' di tempo)</value>
+  </data>
+  <data name="InvalidPort" xml:space="preserve">
+    <value>Porta non valida (deve essere compresta tra 1 e 65535)</value>
+  </data>
+  <data name="UsernameIsRequired" xml:space="preserve">
+    <value>Lo Username SMTP è richiesto se hai specificato una Password</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>Rispondi</value>
+  </data>
+  <data name="Posted" xml:space="preserve">
+    <value>Inserito</value>
+  </data>
+  <data name="PostMessage" xml:space="preserve">
+    <value>Inserisci un Messaggio</value>
+  </data>
+  <data name="PageDiscussionCleared" xml:space="preserve">
+    <value>Discussione Pagina svuotata</value>
+  </data>
+  <data name="Discuss" xml:space="preserve">
+    <value>Discuti</value>
+  </data>
+  <data name="NoMessages" xml:space="preserve">
+    <value>Nessun Messaggio per questa Pagina. Sii il primo!</value>
+  </data>
+  <data name="SubjectAndBodyNeeded" xml:space="preserve">
+    <value>Devi inserire sia l'oggetto che il corpo del Messaggio</value>
+  </data>
+  <data name="CategoriesMerged" xml:space="preserve">
+    <value>Categorie fuse</value>
+  </data>
+  <data name="CategoryDeleted" xml:space="preserve">
+    <value>Categoria eliminata</value>
+  </data>
+  <data name="CategoryRenamed" xml:space="preserve">
+    <value>Categoria rinominata</value>
+  </data>
+  <data name="CategorySaved" xml:space="preserve">
+    <value>Categoria salvata</value>
+  </data>
+  <data name="NavPathDeleted" xml:space="preserve">
+    <value>Navigation Path eliminato</value>
+  </data>
+  <data name="NavPathSaved" xml:space="preserve">
+    <value>Navigation Path salvato</value>
+  </data>
+  <data name="ProviderDisabled" xml:space="preserve">
+    <value>Provider disattivato</value>
+  </data>
+  <data name="ProviderEnabled" xml:space="preserve">
+    <value>Provider attivato</value>
+  </data>
+  <data name="CannotDisableDefaultProvider" xml:space="preserve">
+    <value>Impossibile disattivare un Provider impostato come default</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Disattivato</value>
+  </data>
+  <data name="InactiveUsers" xml:space="preserve">
+    <value>Inattivo</value>
+    <comment>Referred to the count of inactive users, for example Users: 8 (3 inactive)</comment>
+  </data>
+  <data name="ProviderConfigurationSaved" xml:space="preserve">
+    <value>Dati configurazione Provider salvati</value>
+  </data>
+  <data name="ProviderNotFound" xml:space="preserve">
+    <value>Provider non trovato</value>
+  </data>
+  <data name="ThePageHasBeenUpdatedBy" xml:space="preserve">
+    <value>La Pagina è stata aggiornata da</value>
+  </data>
+  <data name="CouldRequireLogin" xml:space="preserve">
+    <value>può richiedere il login</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Campo richiesto mancante</value>
+  </data>
+  <data name="ActivationAdmin" xml:space="preserve">
+    <value>Il tuo Account deve essere approvato da un Amministratore prima che tu possa utilizzarlo.</value>
+  </data>
+  <data name="ActivationAuto" xml:space="preserve">
+    <value>Il tuo Account sarà attivo subito dopo la registrazione.</value>
+  </data>
+  <data name="ActivationEmail" xml:space="preserve">
+    <value>Devi attivare il tuo Account entro 24 ore, seguendo le istruzioni che riceverai via Email.</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Stampa</value>
+  </data>
+  <data name="PrinterFriendlyVersion" xml:space="preserve">
+    <value>Versione per la stampa</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Tipo di File non valido</value>
+  </data>
+  <data name="LastModifiedPage" xml:space="preserve">
+    <value>Ultima Pagina modificata</value>
+  </data>
+  <data name="LatestUser" xml:space="preserve">
+    <value>Ultimo Utente</value>
+  </data>
+  <data name="PagesOfCategory" xml:space="preserve">
+    <value>Pagine della Categoria</value>
+  </data>
+  <data name="InvalidNavPath" xml:space="preserve">
+    <value>Navigation Path non valido: devono essere specificate almeno 2 Pagine</value>
+  </data>
+  <data name="InvalidNavPathName" xml:space="preserve">
+    <value>Nome Navigation Path non valido</value>
+  </data>
+  <data name="NavPathAlreadyExists" xml:space="preserve">
+    <value>Navigation Path già esistente</value>
+  </data>
+  <data name="NavPathNotFound" xml:space="preserve">
+    <value>Navigation Path non trovato</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Prossima Pagina</value>
+  </data>
+  <data name="Paths" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>Pagina Precedente</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>n/c</value>
+    <comment>It means 'not categorized'</comment>
+  </data>
+  <data name="InvalidBackupNumber" xml:space="preserve">
+    <value>Nomero non valido: deve essere maggiore o uguale a zero (omettilo per disabilitare l'eliminazione automatica dei Backup) </value>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>Proibito</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>Tutte le Pagine</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Indietro</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="CategorizedAs" xml:space="preserve">
+    <value>Categorizzata come</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>Categoria non trovata</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Commento</value>
+  </data>
+  <data name="CreateThePage" xml:space="preserve">
+    <value>creare la Pagina</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Corrente</value>
+  </data>
+  <data name="Escape" xml:space="preserve">
+    <value>Escape</value>
+  </data>
+  <data name="FileManagement" xml:space="preserve">
+    <value>Gestione File (nuova finestra)</value>
+  </data>
+  <data name="HtmlHeadFile" xml:space="preserve">
+    <value>File HTML Head</value>
+  </data>
+  <data name="InvalidCategoryName" xml:space="preserve">
+    <value>Nome Categoria non valido</value>
+  </data>
+  <data name="InvalidSnippetName" xml:space="preserve">
+    <value>Nome Snipper non valido</value>
+  </data>
+  <data name="NoPagesInThisCategory" xml:space="preserve">
+    <value>Nessuna Pagina trovata in questa Categoria</value>
+  </data>
+  <data name="PerformASearch" xml:space="preserve">
+    <value>effettuare una ricerca</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Revisione</value>
+  </data>
+  <data name="SnippetAlreadyExists" xml:space="preserve">
+    <value>Snippet già esistente</value>
+  </data>
+  <data name="SnippetDeleted" xml:space="preserve">
+    <value>Snippet eliminato</value>
+  </data>
+  <data name="SnippetNotFound" xml:space="preserve">
+    <value>Snippet non trovato</value>
+  </data>
+  <data name="SnippetSaved" xml:space="preserve">
+    <value>Snippet salvato</value>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>Non Categorizzata</value>
+  </data>
+  <data name="UncategorizedPages" xml:space="preserve">
+    <value>Pagine non Categorizzate</value>
+  </data>
+  <data name="ViewPageCode" xml:space="preserve">
+    <value>Visualizza Codice</value>
+  </data>
+  <data name="WereYouLookingFor" xml:space="preserve">
+    <value>Stavi cercando una di queste Pagine?</value>
+  </data>
+  <data name="YouCanAlso" xml:space="preserve">
+    <value>Puoi anche</value>
+  </data>
+  <data name="AccountActivated" xml:space="preserve">
+    <value>Il tuo Account è stato attivato con successo. Effettua il Login.</value>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Attivazione Account</value>
+  </data>
+  <data name="AccountActivationMessageFile" xml:space="preserve">
+    <value>File Messaggio di Attivazione Account</value>
+  </data>
+  <data name="AccountAlreadyActive" xml:space="preserve">
+    <value>L'Account è già attivo</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Account creato con successo</value>
+  </data>
+  <data name="AccountNotActivated" xml:space="preserve">
+    <value>Errore attivazione Account</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Account non trovato</value>
+  </data>
+  <data name="AdminDowngraded" xml:space="preserve">
+    <value>Amministratore declassato ad Utente</value>
+  </data>
+  <data name="Anchor" xml:space="preserve">
+    <value>Ancora</value>
+  </data>
+  <data name="AnchorId" xml:space="preserve">
+    <value>ID Ancora</value>
+  </data>
+  <data name="AnchorLink" xml:space="preserve">
+    <value>Collegam. Ancora</value>
+  </data>
+  <data name="AnchorTitle" xml:space="preserve">
+    <value>Titolo Ancora</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="BackToHistory" xml:space="preserve">
+    <value>Torna alla Storia della Pagina</value>
+  </data>
+  <data name="Bigger" xml:space="preserve">
+    <value>Più grande</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Grassetto</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>Scatola</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>da</value>
+  </data>
+  <data name="CachedPages" xml:space="preserve">
+    <value>Pagine in Cache</value>
+  </data>
+  <data name="CodeBlock" xml:space="preserve">
+    <value>Blocco di Codice</value>
+  </data>
+  <data name="CodeInline" xml:space="preserve">
+    <value>Codice 'inline'</value>
+  </data>
+  <data name="ConfigSaved" xml:space="preserve">
+    <value>Configurazione salvata con successo</value>
+  </data>
+  <data name="ConfigValuesReset" xml:space="preserve">
+    <value>Opzioni di Configurazione reimpostate ai valori precedenti</value>
+  </data>
+  <data name="ConfirmOperation" xml:space="preserve">
+    <value>Sei sicuro di voler procedere?</value>
+  </data>
+  <data name="CreateNewPage" xml:space="preserve">
+    <value>Crea una nuova Pagina</value>
+  </data>
+  <data name="CreatePage" xml:space="preserve">
+    <value>Crea Pagina</value>
+  </data>
+  <data name="CurrentRevision" xml:space="preserve">
+    <value>Revisione attuale</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Data/Ora</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Scarica</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
+  <data name="EditingFile" xml:space="preserve">
+    <value>Modifica del File</value>
+  </data>
+  <data name="EditNoticeFile" xml:space="preserve">
+    <value>File Informazioni di Modifica</value>
+  </data>
+  <data name="EditPage" xml:space="preserve">
+    <value>Modifica Pagina</value>
+  </data>
+  <data name="EditThisPage" xml:space="preserve">
+    <value>Modifica questa Pagina</value>
+  </data>
+  <data name="EmailSaved" xml:space="preserve">
+    <value>Indirizzo Email salvato</value>
+  </data>
+  <data name="EmailsNotEqual" xml:space="preserve">
+    <value>Le Email non sono uguali</value>
+  </data>
+  <data name="ErrorDeletingFile" xml:space="preserve">
+    <value>Errore durante l'eliminazione del File</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Il File esiste già</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>File non trovato</value>
+  </data>
+  <data name="FileSaved" xml:space="preserve">
+    <value>File salvato</value>
+  </data>
+  <data name="FilesDiskUsage" xml:space="preserve">
+    <value>Utilizzo spazio Disco per i File</value>
+  </data>
+  <data name="FileTooBig" xml:space="preserve">
+    <value>Il File è troppo grande</value>
+  </data>
+  <data name="FileVoid" xml:space="preserve">
+    <value>Il nome del File è vuoto</value>
+  </data>
+  <data name="FooterFile" xml:space="preserve">
+    <value>File Footer</value>
+  </data>
+  <data name="H1" xml:space="preserve">
+    <value>H1</value>
+  </data>
+  <data name="H2" xml:space="preserve">
+    <value>H2</value>
+  </data>
+  <data name="H3" xml:space="preserve">
+    <value>H3</value>
+  </data>
+  <data name="H4" xml:space="preserve">
+    <value>H4 (usare sporadicamente)</value>
+  </data>
+  <data name="HeaderFile" xml:space="preserve">
+    <value>File Header</value>
+  </data>
+  <data name="HidePreview" xml:space="preserve">
+    <value>Nascondi Anteprima</value>
+  </data>
+  <data name="HideShow" xml:space="preserve">
+    <value>Nascondi/Mostra</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Storia</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Immagine</value>
+  </data>
+  <data name="ImageAuto" xml:space="preserve">
+    <value>Immagine - Allinamento Automatico</value>
+  </data>
+  <data name="ImageBigUrl" xml:space="preserve">
+    <value>URL Immagine grande/URL Collegamento (opzionale)</value>
+  </data>
+  <data name="ImageInline" xml:space="preserve">
+    <value>Immagine - In linea (senza bordi)</value>
+  </data>
+  <data name="ImageLeft" xml:space="preserve">
+    <value>Immagine - Allineamento a sinistra</value>
+  </data>
+  <data name="ImageRight" xml:space="preserve">
+    <value>Immagine - Allineamento a destra</value>
+  </data>
+  <data name="ImageTitle" xml:space="preserve">
+    <value>Titolo Immagine</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>URL Immagine</value>
+  </data>
+  <data name="InvalidCacheCutSize" xml:space="preserve">
+    <value>Dimensione di decurtamento Cache non valida: deve essere maggiore di zero e minore della Dimensione totale della Cache</value>
+  </data>
+  <data name="InvalidCacheSize" xml:space="preserve">
+    <value>Dimensione Cache non valida: deve essere un intero maggiore di zero</value>
+  </data>
+  <data name="InvalidContactEmail" xml:space="preserve">
+    <value>Email di contatto non valida</value>
+  </data>
+  <data name="InvalidDateTimeFormat" xml:space="preserve">
+    <value>Formato Data/Ora non valido: deve essere un pattern .NET valido</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Indirizzo Email non valido</value>
+  </data>
+  <data name="InvalidFileAccessTries" xml:space="preserve">
+    <value>Tentativi di accesso File non valido: deve essere un intero maggiore di zero</value>
+  </data>
+  <data name="InvalidFileAccessTryDelay" xml:space="preserve">
+    <value>Ritardo tentativi di accesso File non valido: deve essere un intero maggiore di zero</value>
+  </data>
+  <data name="InvalidMainUrl" xml:space="preserve">
+    <value>URL Principale non valido: deve essere un URL completo e terminare con uno slash</value>
+  </data>
+  <data name="InvalidMaxFileSize" xml:space="preserve">
+    <value>Massima dimensione File non valida: deve essere maggiore di zero e minore di 20480 KB</value>
+  </data>
+  <data name="InvalidPageName" xml:space="preserve">
+    <value>Nome Pagina non valido</value>
+  </data>
+  <data name="InvalidPageTitle" xml:space="preserve">
+    <value>Titolo Pagina non valido</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Password non valida</value>
+  </data>
+  <data name="InvalidSenderEmail" xml:space="preserve">
+    <value>Email mittente non valido</value>
+  </data>
+  <data name="InvalidSmtpServer" xml:space="preserve">
+    <value>Server SMTP non valido</value>
+  </data>
+  <data name="InvalidUsername" xml:space="preserve">
+    <value>Username non valido: deve essere lungo almeno 4 caratteri, non contenere le parole 'admin' o 'guest' ed usare lettere, numeri, spazi e punti.</value>
+  </data>
+  <data name="InvalidWikiTitle" xml:space="preserve">
+    <value>Titolo Wiki non valido: non può essere vuoto e non può includere ritorni a capo</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Corsivo</value>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>Interruzione di riga (singola)</value>
+  </data>
+  <data name="LinkTitle" xml:space="preserve">
+    <value>Titolo Collegamento</value>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>URL Collegamento</value>
+  </data>
+  <data name="LogDiskUsage" xml:space="preserve">
+    <value>Utilizzo spazio disco per il Log</value>
+  </data>
+  <data name="LoggedAsAdmin" xml:space="preserve">
+    <value>Hai effettuato il Login con l'account admin, quindi non puoi modificare il tuo profilo.</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="LostPassword" xml:space="preserve">
+    <value>Password dimenticata?</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Messaggio</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>Messaggio inviato</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Modificata</value>
+  </data>
+  <data name="NewerRevision" xml:space="preserve">
+    <value>Revisione più recente</value>
+  </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>Nuova Versione trovata</value>
+  </data>
+  <data name="NoFiles" xml:space="preserve">
+    <value>Nessun File</value>
+  </data>
+  <data name="NoWiki" xml:space="preserve">
+    <value>Tag NoWiki</value>
+  </data>
+  <data name="OlderRevision" xml:space="preserve">
+    <value>Revisione più vecchia</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>Utenti online</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>Operazioni</value>
+  </data>
+  <data name="PageAlreadyExists" xml:space="preserve">
+    <value>La Pagina esiste già</value>
+  </data>
+  <data name="PageBackupsDeleted" xml:space="preserve">
+    <value>Backup della Pagina eliminati</value>
+  </data>
+  <data name="PageDeleted" xml:space="preserve">
+    <value>Pagina eliminata</value>
+  </data>
+  <data name="PageHistory" xml:space="preserve">
+    <value>Storia della Pagina</value>
+  </data>
+  <data name="PageLocked" xml:space="preserve">
+    <value>Questa Pagina è bloccata</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>Pagina non trovata</value>
+  </data>
+  <data name="PagePublic" xml:space="preserve">
+    <value>Questa Pagina è pubblica</value>
+  </data>
+  <data name="PageRenamed" xml:space="preserve">
+    <value>Pagina rinominata</value>
+  </data>
+  <data name="PageRevision" xml:space="preserve">
+    <value>Revisione Pagina</value>
+  </data>
+  <data name="PagesDiskUsage" xml:space="preserve">
+    <value>Utilizzo spazio Disco per le Pagine</value>
+  </data>
+  <data name="PageSetLocked" xml:space="preserve">
+    <value>Pagina impostata come Locked</value>
+  </data>
+  <data name="PageSetNormal" xml:space="preserve">
+    <value>Pagina impostata come Normal</value>
+  </data>
+  <data name="PageSetPublic" xml:space="preserve">
+    <value>Pagina impostata come Public</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Titolo Pagina</value>
+  </data>
+  <data name="PageUpdates" xml:space="preserve">
+    <value>Aggiornamenti Pagina</value>
+  </data>
+  <data name="PasswordResetMessageFile" xml:space="preserve">
+    <value>File Messaggio di Reset Password</value>
+  </data>
+  <data name="PasswordSaved" xml:space="preserve">
+    <value>Password salvata</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>Le Password non sono uguali</value>
+  </data>
+  <data name="PleaseSelectValidBackup" xml:space="preserve">
+    <value>Selezionare un Backup valido</value>
+  </data>
+  <data name="PreviewCreated" xml:space="preserve">
+    <value>Anteprima creata, scorrere in fondo alla Pagina</value>
+  </data>
+  <data name="RecentPageUpdates" xml:space="preserve">
+    <value>Aggiornamenti recenti della Pagina</value>
+  </data>
+  <data name="RegistrationDisabled" xml:space="preserve">
+    <value>La creazione di Account è disattivata.</value>
+  </data>
+  <data name="RollbackCompleted" xml:space="preserve">
+    <value>Rollback completato</value>
+  </data>
+  <data name="RssForTheWiki" xml:space="preserve">
+    <value>Notifiche aggiornamenti per l'intero Wiki (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisPage" xml:space="preserve">
+    <value>Notifiche aggiornamenti per questa Pagina (RSS 2.0)</value>
+  </data>
+  <data name="ScriptDetected" xml:space="preserve">
+    <value>Tag SCRIPT non permesso rilevato nel contenuto</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Cerca</value>
+  </data>
+  <data name="SendAMessage" xml:space="preserve">
+    <value>Invia un Messaggio</value>
+  </data>
+  <data name="SidebarFile" xml:space="preserve">
+    <value>File Sidebar</value>
+  </data>
+  <data name="Smaller" xml:space="preserve">
+    <value>Più piccolo</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>Ordina per Data e Ora</value>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>Ordina per Titolo</value>
+  </data>
+  <data name="SortByUser" xml:space="preserve">
+    <value>Ordina per Utente</value>
+  </data>
+  <data name="SpecialTags" xml:space="preserve">
+    <value>Tag speciali</value>
+  </data>
+  <data name="Striked" xml:space="preserve">
+    <value>Sovralineato</value>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>Pedice</value>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>Apice</value>
+  </data>
+  <data name="TableOfContents" xml:space="preserve">
+    <value>Indice dei Contenuti</value>
+  </data>
+  <data name="TempDiskUsage" xml:space="preserve">
+    <value>Utilizzo spazio Disco per i File temporanei</value>
+  </data>
+  <data name="TextareaSize" xml:space="preserve">
+    <value>Area testo</value>
+  </data>
+  <data name="ThisIsAPreview" xml:space="preserve">
+    <value>&lt;b&gt;Attenzione&lt;/b&gt;: questa è solo un'anteprima! Devi cliccare sul pulsante Salva per salvare le modifiche!</value>
+  </data>
+  <data name="ThisPageIsLocked" xml:space="preserve">
+    <value>Questa Pagina è bloccata, quindi può essere modificata solo dagli Amministratori.</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Inizio Pagina</value>
+  </data>
+  <data name="TotalDiskUsage" xml:space="preserve">
+    <value>Utilizzo spazio Disco totale</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="UnallowedFileType" xml:space="preserve">
+    <value>Il File che hai caricato non è di un tipo consentito</value>
+  </data>
+  <data name="Underlined" xml:space="preserve">
+    <value>Sottlineato</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Utente</value>
+  </data>
+  <data name="UserActivated" xml:space="preserve">
+    <value>Utente attivato</value>
+  </data>
+  <data name="UserCount" xml:space="preserve">
+    <value>Conteggio Utenti</value>
+  </data>
+  <data name="UserDeactivated" xml:space="preserve">
+    <value>Utente disattivato</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>Utente eliminato</value>
+  </data>
+  <data name="UsernameAlreadyExists" xml:space="preserve">
+    <value>Lo Username esiste già, scegline un altro</value>
+  </data>
+  <data name="UserPromoted" xml:space="preserve">
+    <value>Utente promosso ad Amministratore</value>
+  </data>
+  <data name="VersionCheckError" xml:space="preserve">
+    <value>Errore ricavazione informazioni di Versione</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Visualizza</value>
+  </data>
+  <data name="ViewingFile" xml:space="preserve">
+    <value>Visualizzazione File</value>
+  </data>
+  <data name="ViewList" xml:space="preserve">
+    <value>Visualizza Lista</value>
+  </data>
+  <data name="ViewTree" xml:space="preserve">
+    <value>Visualizza Albero</value>
+  </data>
+  <data name="WikiUpToDate" xml:space="preserve">
+    <value>Il tuo Wiki è aggiornato</value>
+  </data>
+  <data name="WikiVersion" xml:space="preserve">
+    <value>Versione Wiki</value>
+  </data>
+  <data name="WrongControlText" xml:space="preserve">
+    <value>Testo di Controllo errato</value>
+  </data>
+  <data name="WrongParameters" xml:space="preserve">
+    <value>Parametri errati</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>Password errata</value>
+  </data>
+  <data name="WrongUsernamePassword" xml:space="preserve">
+    <value>Username and/or Password errati</value>
+  </data>
+  <data name="EarlierThisMonth" xml:space="preserve">
+    <value>Questo mese</value>
+  </data>
+  <data name="EarlierThisWeek" xml:space="preserve">
+    <value>Questa settimana</value>
+  </data>
+  <data name="LastMonth" xml:space="preserve">
+    <value>Mese scorso</value>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>Meno di recente</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Oggi</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Ieri</value>
+  </data>
+</root>

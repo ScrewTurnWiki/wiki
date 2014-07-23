@@ -1,0 +1,1753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnchorTitle2" xml:space="preserve">
+    <value>Insert a new anchor or a link to an existing anchor</value>
+  </data>
+  <data name="BoldTitle" xml:space="preserve">
+    <value>Style selected text as bold</value>
+  </data>
+  <data name="CodeEscapedTitle" xml:space="preserve">
+    <value>Set selected text as a block of code</value>
+  </data>
+  <data name="CodeInlineTitle" xml:space="preserve">
+    <value>Set selected text as inline code</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>Set selected text as comment (hidden from the rendered page output)</value>
+  </data>
+  <data name="EscapeTitle" xml:space="preserve">
+    <value>Wrap selected text in an 'escape' block that escapes all wiki- and HTML-related characters</value>
+  </data>
+  <data name="ExternalLinkTitle" xml:space="preserve">
+    <value>Insert a link to a website or email address</value>
+  </data>
+  <data name="FileLinkTitle" xml:space="preserve">
+    <value>Insert a link to a file or attachment</value>
+  </data>
+  <data name="H1Title" xml:space="preserve">
+    <value>Set selected text as level-1 header</value>
+  </data>
+  <data name="H2Title" xml:space="preserve">
+    <value>Set selected text as level-2 header</value>
+  </data>
+  <data name="H3Title" xml:space="preserve">
+    <value>Set selected text as level-3 header</value>
+  </data>
+  <data name="H4Title" xml:space="preserve">
+    <value>Set selected text as level-4 header</value>
+  </data>
+  <data name="HRTitle" xml:space="preserve">
+    <value>Insert a horizontal ruler (separator)</value>
+  </data>
+  <data name="ImageTitle2" xml:space="preserve">
+    <value>Insert a picture in the page</value>
+  </data>
+  <data name="ItalicTitle" xml:space="preserve">
+    <value>Style selected text as italic</value>
+  </data>
+  <data name="LineBreakTitle" xml:space="preserve">
+    <value>Insert a single line break</value>
+  </data>
+  <data name="NoBrTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'nobr' block, that ignores line breaks</value>
+  </data>
+  <data name="NoWikiTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'nowiki' block, that ignores WikiMarkup</value>
+  </data>
+  <data name="OrderedListTitle" xml:space="preserve">
+    <value>Insert an ordered list or wrap selected text in an ordered list (1, 2, 3, ...)</value>
+  </data>
+  <data name="PageLinkTitle" xml:space="preserve">
+    <value>Insert a link to a wiki page</value>
+  </data>
+  <data name="SnippetsTitle" xml:space="preserve">
+    <value>View existing snippets and insert one in the page</value>
+  </data>
+  <data name="SpecialTagsTitle" xml:space="preserve">
+    <value>View special tags and insert one in the page</value>
+  </data>
+  <data name="StrikedTitle" xml:space="preserve">
+    <value>Style selected text as strike-through</value>
+  </data>
+  <data name="SubscriptTitle" xml:space="preserve">
+    <value>Set selected text as subscript</value>
+  </data>
+  <data name="SuperscriptTitle" xml:space="preserve">
+    <value>Set selected text as superscript</value>
+  </data>
+  <data name="SymbolsTitle" xml:space="preserve">
+    <value>View and insert special symbols</value>
+  </data>
+  <data name="UnderlinedTitle" xml:space="preserve">
+    <value>Underline selected text</value>
+  </data>
+  <data name="UnorderedListTitle" xml:space="preserve">
+    <value>Insert an unordered list or wrap selected text in an unordered list (bullet points)</value>
+  </data>
+  <data name="WrapperBoxTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'box'</value>
+  </data>
+  <data name="ChangeComment" xml:space="preserve">
+    <value>Change Comment</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Meta Description</value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>Meta Keywords</value>
+  </data>
+  <data name="AccessDeniedTitle" xml:space="preserve">
+    <value>アクセスは拒否されました</value>
+  </data>
+  <data name="AccountActivated" xml:space="preserve">
+    <value>あなたのアカウントのアクティベーションは成功しました。ログインしてください。</value>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>アカウントのアクティベーション</value>
+  </data>
+  <data name="AccountActivationMessageFile" xml:space="preserve">
+    <value>アカウント アクティベーション メッセージ ファイル</value>
+  </data>
+  <data name="AccountAlreadyActive" xml:space="preserve">
+    <value>アカウントはすでに有効です</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>アカウント作成は成功しました</value>
+  </data>
+  <data name="AccountNotActivated" xml:space="preserve">
+    <value>アカウント有効化エラー</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>アカウントが見つかりません</value>
+  </data>
+  <data name="ActivationAdmin" xml:space="preserve">
+    <value>ログインの前にあなたのアカウントは管理者によって承認されなければなりません。</value>
+  </data>
+  <data name="ActivationAuto" xml:space="preserve">
+    <value>あなたのアカウントは登録後直ちにアクティベーションされます。</value>
+  </data>
+  <data name="ActivationEmail" xml:space="preserve">
+    <value>メール書いてある手順に従い、アカウントは 24 時間以内にアクティベートしなければなりません。</value>
+  </data>
+  <data name="AdminDowngraded" xml:space="preserve">
+    <value>管理者はユーザーに格下げされました</value>
+  </data>
+  <data name="AdminTitle" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>すべてのページ</value>
+  </data>
+  <data name="AllPagesTitle" xml:space="preserve">
+    <value>Wiki インデックス</value>
+  </data>
+  <data name="Anchor" xml:space="preserve">
+    <value>アンカー</value>
+  </data>
+  <data name="AnchorId" xml:space="preserve">
+    <value>アンカー ID</value>
+  </data>
+  <data name="AnchorLink" xml:space="preserve">
+    <value>アンカー リンク</value>
+  </data>
+  <data name="AnchorTitle" xml:space="preserve">
+    <value>アンカー タイトル</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>自動</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>戻る</value>
+  </data>
+  <data name="BackToHistory" xml:space="preserve">
+    <value>ページの履歴に戻る</value>
+  </data>
+  <data name="Bigger" xml:space="preserve">
+    <value>大きく</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>太字</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>箱</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>によって</value>
+  </data>
+  <data name="CachedPages" xml:space="preserve">
+    <value>キャッシュされたページ</value>
+  </data>
+  <data name="CannotDisableDefaultProvider" xml:space="preserve">
+    <value>デフォルト プロバイダーは無効化できません</value>
+  </data>
+  <data name="CannotUnloadDefaultProvider" xml:space="preserve">
+    <value>デフォルト プロバイダーはアンロードできません</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>カテゴリー</value>
+  </data>
+  <data name="CategoriesMerged" xml:space="preserve">
+    <value>マージされたカテゴリー</value>
+  </data>
+  <data name="CategorizedAs" xml:space="preserve">
+    <value>分類されている</value>
+  </data>
+  <data name="CategoryDeleted" xml:space="preserve">
+    <value>カテゴリーは削除されました</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>カテゴリーは見つかりません</value>
+  </data>
+  <data name="CategoryRenamed" xml:space="preserve">
+    <value>カテゴリーは名前変更されました</value>
+  </data>
+  <data name="CategorySaved" xml:space="preserve">
+    <value>カテゴリーは保存されました</value>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>カテゴリー</value>
+  </data>
+  <data name="CodeBlock" xml:space="preserve">
+    <value>ブロック コード</value>
+  </data>
+  <data name="CodeInline" xml:space="preserve">
+    <value>インライン コード</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="ConfigSaved" xml:space="preserve">
+    <value>設定の保存に成功しました</value>
+  </data>
+  <data name="ConfigurationString" xml:space="preserve">
+    <value>構成文字列</value>
+  </data>
+  <data name="ConfigValuesReset" xml:space="preserve">
+    <value>設定オプションは以前の値にリセットされます</value>
+  </data>
+  <data name="ConfirmOperation" xml:space="preserve">
+    <value>本当に進んでもよろしいですか？</value>
+  </data>
+  <data name="CouldRequireLogin" xml:space="preserve">
+    <value>ログインが必要です</value>
+  </data>
+  <data name="CreateNewPage" xml:space="preserve">
+    <value>新しいページの作成</value>
+  </data>
+  <data name="CreatePage" xml:space="preserve">
+    <value>ページの作成</value>
+  </data>
+  <data name="CreateThePage" xml:space="preserve">
+    <value>ページを作成</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>現在</value>
+  </data>
+  <data name="CurrentRevision" xml:space="preserve">
+    <value>現在のリビジョン</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>日付/時刻</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="DiffColorKey" xml:space="preserve">
+    <value>カラー キー: &lt;span style="background-color: #88CC33;"&gt;追加されたテキスト&lt;/span&gt; / &lt;span style="background-color: #FFDF66;"&gt;削除されたテキスト&lt;/span&gt;.</value>
+  </data>
+  <data name="DiffingPageTitle" xml:space="preserve">
+    <value>&lt;i&gt;##PAGETITLE##&lt;/i&gt;, リビジョン &lt;i&gt;##REV1##&lt;/i&gt; と &lt;i&gt;##REV2##&lt;/i&gt; の間で異なる。</value>
+  </data>
+  <data name="DiffTitle" xml:space="preserve">
+    <value>違い</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>無効</value>
+  </data>
+  <data name="Discuss" xml:space="preserve">
+    <value>ディスカッション</value>
+  </data>
+  <data name="DiscussionFor" xml:space="preserve">
+    <value>についてのディスカッション</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>ダウンロード</value>
+  </data>
+  <data name="EarlierThisMonth" xml:space="preserve">
+    <value>今月のはじめごろ</value>
+  </data>
+  <data name="EarlierThisWeek" xml:space="preserve">
+    <value>今週のはじめごろ</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="EditingFile" xml:space="preserve">
+    <value>ファイルの編集</value>
+  </data>
+  <data name="EditNoticeFile" xml:space="preserve">
+    <value>通知ファイルを編集</value>
+  </data>
+  <data name="EditPage" xml:space="preserve">
+    <value>ページの編集</value>
+  </data>
+  <data name="EditThisPage" xml:space="preserve">
+    <value>このページを編集する</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="EmailSaved" xml:space="preserve">
+    <value>メール アドレスは保存されました</value>
+  </data>
+  <data name="EmailsNotEqual" xml:space="preserve">
+    <value>メールアドレスが一致しません</value>
+  </data>
+  <data name="EnterTitleAndUrl" xml:space="preserve">
+    <value>タイトルと URL の両方を入力しなければなりません。</value>
+  </data>
+  <data name="ErrorDeletingFile" xml:space="preserve">
+    <value>ファイルの削除に失敗</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Escape" xml:space="preserve">
+    <value>エスケープ</value>
+  </data>
+  <data name="ExternalLink" xml:space="preserve">
+    <value>外部へのリンク</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>ファイルはすでに存在します</value>
+  </data>
+  <data name="FileLink" xml:space="preserve">
+    <value>ローカル ファイルへリンク</value>
+  </data>
+  <data name="FileManagement" xml:space="preserve">
+    <value>ファイル管理 (新しいウィンドウ)</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>ファイルが見つかりません</value>
+  </data>
+  <data name="FileSaved" xml:space="preserve">
+    <value>ファイルは保存されました</value>
+  </data>
+  <data name="FilesDiskUsage" xml:space="preserve">
+    <value>ディスク スペース利用量</value>
+  </data>
+  <data name="FileTooBig" xml:space="preserve">
+    <value>ファイルが大きすぎます</value>
+  </data>
+  <data name="FileVoid" xml:space="preserve">
+    <value>ファイル名が無効</value>
+  </data>
+  <data name="FooterFile" xml:space="preserve">
+    <value>フッター ファイル</value>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>禁じられている</value>
+  </data>
+  <data name="FullView" xml:space="preserve">
+    <value>全体ビュー (新しいウィンドウ)</value>
+  </data>
+  <data name="H1" xml:space="preserve">
+    <value>H1</value>
+  </data>
+  <data name="H2" xml:space="preserve">
+    <value>H2</value>
+  </data>
+  <data name="H3" xml:space="preserve">
+    <value>H3</value>
+  </data>
+  <data name="H4" xml:space="preserve">
+    <value>H4 (控えめに使いましょう)</value>
+  </data>
+  <data name="HeaderFile" xml:space="preserve">
+    <value>ヘッダー ファイル</value>
+  </data>
+  <data name="HideBreadcrumbsTrail" xml:space="preserve">
+    <value>パンくずリストを隠すにはここをクリック</value>
+  </data>
+  <data name="HidePreview" xml:space="preserve">
+    <value>プレビューを隠す</value>
+  </data>
+  <data name="HideShow" xml:space="preserve">
+    <value>隠す/見せる</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>履歴</value>
+  </data>
+  <data name="HistoryTitle" xml:space="preserve">
+    <value>ページの履歴</value>
+  </data>
+  <data name="HtmlHeadFile" xml:space="preserve">
+    <value>HTML ヘッダー ファイル</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>イメージ</value>
+  </data>
+  <data name="ImageAuto" xml:space="preserve">
+    <value>イメージ - 自動</value>
+  </data>
+  <data name="ImageBigUrl" xml:space="preserve">
+    <value>大きいイメージの URL/リンク URL (省略可能)</value>
+  </data>
+  <data name="ImageInline" xml:space="preserve">
+    <value>イメージ - インライン (境界線なし)</value>
+  </data>
+  <data name="ImageLeft" xml:space="preserve">
+    <value>イメージ - 左寄せ</value>
+  </data>
+  <data name="ImageRight" xml:space="preserve">
+    <value>イメージ - 右寄せ</value>
+  </data>
+  <data name="ImageTitle" xml:space="preserve">
+    <value>イメージ タイトル</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>イメージ URL</value>
+  </data>
+  <data name="InactiveUsers" xml:space="preserve">
+    <value>無効</value>
+    <comment>Referred to the count of inactive users, for example Users: 8 (3 inactive)</comment>
+  </data>
+  <data name="InsertSnippet" xml:space="preserve">
+    <value>スニペットを挿入する</value>
+  </data>
+  <data name="InvalidBackupNumber" xml:space="preserve">
+    <value>無効な数値: 0 もしくは 0 以上でなければなりません (自動的なバックアップ削除を無効にするには空のままにしてください)</value>
+  </data>
+  <data name="InvalidCacheCutSize" xml:space="preserve">
+    <value>無効なキャッシュ カット サイズ: 0 より大きい整数もしくはキャッシュ カット サイズより小さくなければなりません。</value>
+  </data>
+  <data name="InvalidCacheSize" xml:space="preserve">
+    <value>無効なキャッシュ サイズ: 0 より大きい整数で無ければなりません</value>
+  </data>
+  <data name="InvalidCategoryName" xml:space="preserve">
+    <value>無効なカテゴリー名</value>
+  </data>
+  <data name="InvalidContactEmail" xml:space="preserve">
+    <value>無効な窓口メール アドレス</value>
+  </data>
+  <data name="InvalidDateTimeFormat" xml:space="preserve">
+    <value>無効な日付時刻フォーマット: 有効な .NET パターンで無ければなりません</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>無効なメール アドレス</value>
+  </data>
+  <data name="InvalidFileAccessTries" xml:space="preserve">
+    <value>無効なファイル アクセス トライ数: 0 より大きい整数で無ければなりません</value>
+  </data>
+  <data name="InvalidFileAccessTryDelay" xml:space="preserve">
+    <value>無効なファイル アクセス トライ 遅延: 0 より大きい整数で無ければなりません</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>無効なファイルタイプ</value>
+  </data>
+  <data name="InvalidMainUrl" xml:space="preserve">
+    <value>無効なメイン URL: 完全な URL で末尾はスラッシュで終わっている必要があります。</value>
+  </data>
+  <data name="InvalidMaxFileSize" xml:space="preserve">
+    <value>無効な最大ファイル サイズ: 0 より大きく 20,480 KB より小さくなければなりません。</value>
+  </data>
+  <data name="InvalidMaxLogSize" xml:space="preserve">
+    <value>無効な最大ログ サイズ: 8 より大きく 10,240 KB より小さくなければなりません。</value>
+  </data>
+  <data name="InvalidNavPath" xml:space="preserve">
+    <value>無効なナビゲーション パス: 少なくとも 2 ページは指定しなさい</value>
+  </data>
+  <data name="InvalidNavPathName" xml:space="preserve">
+    <value>無効なナビゲーション パス名</value>
+  </data>
+  <data name="InvalidPageName" xml:space="preserve">
+    <value>無効なページ名</value>
+  </data>
+  <data name="InvalidPageTitle" xml:space="preserve">
+    <value>無効なページ タイトル</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>無効なパスワード</value>
+  </data>
+  <data name="InvalidPort" xml:space="preserve">
+    <value>無効なポート (1 から 65535 の間でなければなりません)</value>
+  </data>
+  <data name="InvalidSenderEmail" xml:space="preserve">
+    <value>無効な送信者メール アドレス</value>
+  </data>
+  <data name="InvalidSmtpServer" xml:space="preserve">
+    <value>無効な SMTP サーバー</value>
+  </data>
+  <data name="InvalidSnippetName" xml:space="preserve">
+    <value>無効なスニペット名</value>
+  </data>
+  <data name="InvalidUsername" xml:space="preserve">
+    <value>無効なユーザー名: 少なくとも 4 文字必要。そして 'admin' や 'guest' を含んでいてはならない。文字、数字、スペース、ドットを使いなさい。</value>
+  </data>
+  <data name="InvalidWikiTitle" xml:space="preserve">
+    <value>無効な Wiki タイトル: 空っぽは駄目です。CR や LF を含めることはできません。</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>斜体</value>
+  </data>
+  <data name="LastModifiedPage" xml:space="preserve">
+    <value>最後に更新されたページ</value>
+  </data>
+  <data name="LastMonth" xml:space="preserve">
+    <value>先月</value>
+  </data>
+  <data name="LatestUser" xml:space="preserve">
+    <value>最新のユーザー</value>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>改行 (シングル)</value>
+  </data>
+  <data name="LinkTitle" xml:space="preserve">
+    <value>リンク タイトル</value>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>リンク URL</value>
+  </data>
+  <data name="LocatedIn" xml:space="preserve">
+    <value>位置する</value>
+  </data>
+  <data name="LogDiskUsage" xml:space="preserve">
+    <value>ディスク スペース利用量を記録する</value>
+  </data>
+  <data name="LoggedAsAdmin" xml:space="preserve">
+    <value>ビルトインの管理者アカウントでログインしているので、プロファイルの編集はできません。</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="LoginNoticeFile" xml:space="preserve">
+    <value>ログイン通知ファイル</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>ログイン/ログアウト</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>ログアウト</value>
+  </data>
+  <data name="LostPassword" xml:space="preserve">
+    <value>パスワードを忘れましたか？</value>
+  </data>
+  <data name="MassEmailSent" xml:space="preserve">
+    <value>大量のメールが送信されました (配送はしばらくかかります)</value>
+  </data>
+  <data name="MayBeInaccurate" xml:space="preserve">
+    <value>正確ではありません</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>メッセージ</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>メッセージは送信されました</value>
+  </data>
+  <data name="MessageTitle" xml:space="preserve">
+    <value>メッセージを書く</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>更新された</value>
+  </data>
+  <data name="NavPathAlreadyExists" xml:space="preserve">
+    <value>ナビゲーション パスはすでに存在します</value>
+  </data>
+  <data name="NavPathDeleted" xml:space="preserve">
+    <value>ナビゲーション パスは削除されました</value>
+  </data>
+  <data name="NavPathNotFound" xml:space="preserve">
+    <value>ナビゲーション パスは見つかりません</value>
+  </data>
+  <data name="NavPathSaved" xml:space="preserve">
+    <value>ナビゲーション パスは保存されました</value>
+  </data>
+  <data name="NavPathTitle" xml:space="preserve">
+    <value>ナビゲーション パス</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>n/c</value>
+    <comment>It means 'not categorized'</comment>
+  </data>
+  <data name="NewerRevision" xml:space="preserve">
+    <value>より新しいリビジョン</value>
+  </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>新しいバージョンが見つかりました</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>次のページ</value>
+  </data>
+  <data name="NoFiles" xml:space="preserve">
+    <value>ファイル無し</value>
+  </data>
+  <data name="NoMessages" xml:space="preserve">
+    <value>このページに関するメッセージはありません。あなたが最初に投稿してください。</value>
+  </data>
+  <data name="NoPagesInThisCategory" xml:space="preserve">
+    <value>このカテゴリーにはページがありません</value>
+  </data>
+  <data name="NoWiki" xml:space="preserve">
+    <value>NoWiki tag</value>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>より古い</value>
+  </data>
+  <data name="OlderRevision" xml:space="preserve">
+    <value>より古いリビジョン</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>オンライン ユーザー</value>
+  </data>
+  <data name="OnlyDllFilesAllowed" xml:space="preserve">
+    <value>DLL ファイルのみ許可されています</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="OperationTitle" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>または</value>
+    <comment>It means 'you can do this OR this"</comment>
+  </data>
+  <data name="PageAlreadyExists" xml:space="preserve">
+    <value>ページはすでに存在します</value>
+  </data>
+  <data name="PageBackupsDeleted" xml:space="preserve">
+    <value>ページ バックアップは削除されました</value>
+  </data>
+  <data name="PageDeleted" xml:space="preserve">
+    <value>ページは削除されました</value>
+  </data>
+  <data name="PageDiscussionCleared" xml:space="preserve">
+    <value>ページ ディスカッションはクリアされた</value>
+  </data>
+  <data name="PageDoesNotExistInProvider" xml:space="preserve">
+    <value>現在のプロバイダーには ##PAGENAME## というページは存在しません</value>
+  </data>
+  <data name="PageFooterFile" xml:space="preserve">
+    <value>ページ ヘッダー ファイル</value>
+  </data>
+  <data name="PageHeaderFile" xml:space="preserve">
+    <value>ページ フッター ファイル</value>
+  </data>
+  <data name="PageHistory" xml:space="preserve">
+    <value>ページ ヒストリー</value>
+  </data>
+  <data name="PageLink" xml:space="preserve">
+    <value>ページをリンクする</value>
+  </data>
+  <data name="PageLocked" xml:space="preserve">
+    <value>このページはロックされています</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>ページが見つかりません</value>
+  </data>
+  <data name="PageNotFoundTitle" xml:space="preserve">
+    <value>ページが見つかりません</value>
+  </data>
+  <data name="PagePublic" xml:space="preserve">
+    <value>このページはパブリックです</value>
+  </data>
+  <data name="PageRenamed" xml:space="preserve">
+    <value>ページは名前変更されました</value>
+  </data>
+  <data name="PageRevision" xml:space="preserve">
+    <value>ページ リビジョン</value>
+  </data>
+  <data name="PageSaved" xml:space="preserve">
+    <value>ページは保存されました</value>
+  </data>
+  <data name="PagesDiskUsage" xml:space="preserve">
+    <value>ページ ディスク使用量</value>
+  </data>
+  <data name="PageSetLocked" xml:space="preserve">
+    <value>ロックされたページ</value>
+  </data>
+  <data name="PageSetNormal" xml:space="preserve">
+    <value>通常のページ</value>
+  </data>
+  <data name="PageSetPublic" xml:space="preserve">
+    <value>パブリックなページ</value>
+  </data>
+  <data name="PagesOfCategory" xml:space="preserve">
+    <value>カテゴリーのページ</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>ページ タイトル</value>
+  </data>
+  <data name="PageUpdates" xml:space="preserve">
+    <value>ページ更新</value>
+  </data>
+  <data name="PasswordResetMessageFile" xml:space="preserve">
+    <value>パスワード リセット メッセージ ファイル</value>
+  </data>
+  <data name="PasswordSaved" xml:space="preserve">
+    <value>パスワードは保存されました</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>パスワードが一致しません</value>
+  </data>
+  <data name="Paths" xml:space="preserve">
+    <value>パス</value>
+  </data>
+  <data name="PerformASearch" xml:space="preserve">
+    <value>検索する</value>
+  </data>
+  <data name="PleaseSelectValidBackup" xml:space="preserve">
+    <value>有効なバックアップを選んでください</value>
+  </data>
+  <data name="Posted" xml:space="preserve">
+    <value>投稿された</value>
+  </data>
+  <data name="PostMessage" xml:space="preserve">
+    <value>メッセージを投稿する</value>
+  </data>
+  <data name="PostTitle" xml:space="preserve">
+    <value>メッセージを投稿する</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>プレビュー</value>
+  </data>
+  <data name="PreviewCreated" xml:space="preserve">
+    <value>プレビューが作成されました。このページの下部をご覧ください。</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>前のページ</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="PrinterFriendlyVersion" xml:space="preserve">
+    <value>印刷向けバージョン</value>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>ユーザー プロファイル</value>
+  </data>
+  <data name="ProviderConfigurationSaved" xml:space="preserve">
+    <value>プロバイダー構成データが保存されました</value>
+  </data>
+  <data name="ProviderDisabled" xml:space="preserve">
+    <value>プロバイダーが無効化されました</value>
+  </data>
+  <data name="ProviderEnabled" xml:space="preserve">
+    <value>プロバイダーが有効化されました</value>
+  </data>
+  <data name="ProviderNotFound" xml:space="preserve">
+    <value>プロバイダーが見つかりません</value>
+  </data>
+  <data name="ProviderRejectedConfiguration" xml:space="preserve">
+    <value>プロバイダーは構成データを拒否しました</value>
+  </data>
+  <data name="ProviderUnloaded" xml:space="preserve">
+    <value>プロバイダーはアンロードされました</value>
+  </data>
+  <data name="RecentPageUpdates" xml:space="preserve">
+    <value>最近のページの更新</value>
+  </data>
+  <data name="RedirectedFrom" xml:space="preserve">
+    <value>リダイレクトされた</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>最新の情報に更新</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>アカウントを作る</value>
+  </data>
+  <data name="RegistrationDisabled" xml:space="preserve">
+    <value>アカウント作成は無効化されています。</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>返信</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>必要な項目が未入力</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>リビジョン</value>
+  </data>
+  <data name="RevisionComment" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="RollbackCompleted" xml:space="preserve">
+    <value>ロールバックが完了しました</value>
+  </data>
+  <data name="RssForTheWiki" xml:space="preserve">
+    <value>Wiki 全体の更新通知 (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisCategory" xml:space="preserve">
+    <value>このカテゴリーの更新通知 (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisDiscussion" xml:space="preserve">
+    <value>このディスカッションの更新通知 (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisPage" xml:space="preserve">
+    <value>このページの更新通知 (RSS 2.0)</value>
+  </data>
+  <data name="ScriptDetected" xml:space="preserve">
+    <value>コンテンツに許可されていないスクリプト タグが見つかりました</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>検索エンジン</value>
+  </data>
+  <data name="SendAMessage" xml:space="preserve">
+    <value>メッセージを送る</value>
+  </data>
+  <data name="ServerUptime" xml:space="preserve">
+    <value>サーバー稼働時間</value>
+  </data>
+  <data name="SidebarFile" xml:space="preserve">
+    <value>サイドバー ファイル</value>
+  </data>
+  <data name="Smaller" xml:space="preserve">
+    <value>小さく</value>
+  </data>
+  <data name="SnippetAlreadyExists" xml:space="preserve">
+    <value>スニペットはすでに存在します</value>
+  </data>
+  <data name="SnippetDeleted" xml:space="preserve">
+    <value>スニペットは削除されました</value>
+  </data>
+  <data name="SnippetNotFound" xml:space="preserve">
+    <value>スニペットが見つかりません</value>
+  </data>
+  <data name="SnippetSaved" xml:space="preserve">
+    <value>スニペットは保存されました</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>日時で並び替え</value>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>タイトルで並び替え</value>
+  </data>
+  <data name="SortByUser" xml:space="preserve">
+    <value>ユーザーで並び替え</value>
+  </data>
+  <data name="SpecialTags" xml:space="preserve">
+    <value>特殊タグ</value>
+  </data>
+  <data name="Striked" xml:space="preserve">
+    <value>取り消し線</value>
+  </data>
+  <data name="SubjectAndBodyNeeded" xml:space="preserve">
+    <value>サブジェクトとメッセージ本文を入力しなければなりません。</value>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>下付き</value>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>上付き</value>
+  </data>
+  <data name="TableOfContents" xml:space="preserve">
+    <value>目次</value>
+  </data>
+  <data name="TempDiskUsage" xml:space="preserve">
+    <value>一時的ファイル ディスク使用量</value>
+  </data>
+  <data name="TextareaSize" xml:space="preserve">
+    <value>テキストエリアのサイズ</value>
+  </data>
+  <data name="ThePageHasBeenDeletedBy" xml:space="preserve">
+    <value>ページは削除されました</value>
+  </data>
+  <data name="ThePageHasBeenRenamedBy" xml:space="preserve">
+    <value>ページはリネームされました</value>
+  </data>
+  <data name="ThePageHasBeenRolledBackBy" xml:space="preserve">
+    <value>ページはロールバックされました</value>
+  </data>
+  <data name="ThePageHasBeenUpdatedBy" xml:space="preserve">
+    <value>ページは更新されました</value>
+  </data>
+  <data name="ThisIsAPreview" xml:space="preserve">
+    <value>&lt;b&gt;警告&lt;/b&gt;: これはプレビューに過ぎません！変更を保存するには保存ボタンをクリックしなければなりません！</value>
+  </data>
+  <data name="ThisPageIsLocked" xml:space="preserve">
+    <value>ページはロックされているので管理者のみが編集可能です。</value>
+  </data>
+  <data name="ThisPageRedirectsTo" xml:space="preserve">
+    <value>このページはリダイレクトされます</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>今日</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>トップ</value>
+  </data>
+  <data name="TotalDiskUsage" xml:space="preserve">
+    <value>全ディスク スペース利用量</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>タイプ</value>
+  </data>
+  <data name="UnallowedFileType" xml:space="preserve">
+    <value>あなたがアップロードしたファイルはファイルタイプが認められていません</value>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>未分類</value>
+  </data>
+  <data name="UncategorizedPages" xml:space="preserve">
+    <value>未分類のページ</value>
+  </data>
+  <data name="Underlined" xml:space="preserve">
+    <value>下線</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>ファイル管理</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>ユーザー</value>
+  </data>
+  <data name="UserAccountSaved" xml:space="preserve">
+    <value>ユーザー アカウントは保存されました</value>
+  </data>
+  <data name="UserActivated" xml:space="preserve">
+    <value>ユーザーが有効化されました</value>
+  </data>
+  <data name="UserCount" xml:space="preserve">
+    <value>ユーザー数</value>
+  </data>
+  <data name="UserDeactivated" xml:space="preserve">
+    <value>ユーザーは無効化されました</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>ユーザーは削除されました</value>
+  </data>
+  <data name="UsernameAlreadyExists" xml:space="preserve">
+    <value>ユーザー名はすでに存在します。別の名前を選択してください。</value>
+  </data>
+  <data name="UsernameIsRequired" xml:space="preserve">
+    <value>パスワードを指定したのなら SMTP ユーザー名が必要です。</value>
+  </data>
+  <data name="UserPromoted" xml:space="preserve">
+    <value>ユーザーは管理者に昇格されました</value>
+  </data>
+  <data name="VersionCheckError" xml:space="preserve">
+    <value>バージョン情報取得エラー</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>ビュー</value>
+  </data>
+  <data name="ViewBreadcrumbsTrail" xml:space="preserve">
+    <value>完全なパンくずリストを見るにはここをクリック</value>
+  </data>
+  <data name="ViewingFile" xml:space="preserve">
+    <value>ファイルを見る</value>
+  </data>
+  <data name="ViewList" xml:space="preserve">
+    <value>ビュー リスト</value>
+  </data>
+  <data name="ViewPageCode" xml:space="preserve">
+    <value>ページのコードを見る</value>
+  </data>
+  <data name="ViewTree" xml:space="preserve">
+    <value>ツリーを見る</value>
+  </data>
+  <data name="WereYouLookingFor" xml:space="preserve">
+    <value>これらのページを探していたのですか？</value>
+  </data>
+  <data name="WikiUpToDate" xml:space="preserve">
+    <value>あなたの Wiki は最新です</value>
+  </data>
+  <data name="WikiVersion" xml:space="preserve">
+    <value>Wiki バージョン</value>
+  </data>
+  <data name="Wizard" xml:space="preserve">
+    <value>構成ウィザード</value>
+  </data>
+  <data name="WrongControlText" xml:space="preserve">
+    <value>制御テキストが間違っています</value>
+  </data>
+  <data name="WrongParameters" xml:space="preserve">
+    <value>間違ったパラメーター</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>間違ったパスワード</value>
+  </data>
+  <data name="WrongUsernamePassword" xml:space="preserve">
+    <value>ユーザー名とパスワードの組み合わせが間違っています。</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>昨日</value>
+  </data>
+  <data name="YouCanAlso" xml:space="preserve">
+    <value>あなたは・・・もできる</value>
+  </data>
+  <data name="YouMustProvideAFile" xml:space="preserve">
+    <value>ファイルを提供してください</value>
+  </data>
+  <data name="CannotRenameItem" xml:space="preserve">
+    <value>選択した項目は名前変更できません</value>
+  </data>
+  <data name="CannotStoreFile" xml:space="preserve">
+    <value>ファイルを蓄積できません</value>
+  </data>
+  <data name="CannotCreateNewDirectory" xml:space="preserve">
+    <value>新しいディレクトリーを作成できません</value>
+  </data>
+  <data name="UpLevel" xml:space="preserve">
+    <value>一つ上のレベルへ</value>
+  </data>
+  <data name="LinkTitleOptional" xml:space="preserve">
+    <value>リンク タイトル (省略可能)</value>
+  </data>
+  <data name="NoSnippets" xml:space="preserve">
+    <value>スニペット無し</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>添付ファイル</value>
+  </data>
+  <data name="ThereAreAttachments" xml:space="preserve">
+    <value>このページには添付ファイルがあります</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="RootNamespace" xml:space="preserve">
+    <value>&lt;root&gt;</value>
+  </data>
+  <data name="CouldNotCreateNamespace" xml:space="preserve">
+    <value>ネームスペースは作成できませんでした</value>
+  </data>
+  <data name="InvalidNamespaceName" xml:space="preserve">
+    <value>無効なネームスペース名</value>
+  </data>
+  <data name="NamespaceCreated" xml:space="preserve">
+    <value>ネームスペースが作成されました</value>
+  </data>
+  <data name="CouldNotCreateUser" xml:space="preserve">
+    <value>ユーザーは作成できませんでした</value>
+  </data>
+  <data name="CouldNotUpdateUser" xml:space="preserve">
+    <value>ユーザーを更新できませんでした</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>ユーザーが作成されました</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>ユーザーは更新されました</value>
+  </data>
+  <data name="InvalidDisplayName" xml:space="preserve">
+    <value>無効な表示名</value>
+  </data>
+  <data name="NoSimilarPages" xml:space="preserve">
+    <value>名前やタイトルが似たページはありません。</value>
+  </data>
+  <data name="SearchStats" xml:space="preserve">
+    <value>この検索は &lt;b&gt;{0}&lt;/b&gt; (&lt;b&gt;{1} ドキュメント&lt;/b&gt;, &lt;b&gt;{2} ワード&lt;/b&gt;) を通し、&lt;b&gt;{3:N1} 秒&lt;/b&gt; で完了し、&lt;b&gt;{4} 結果&lt;/b&gt; を生成した。</value>
+  </data>
+  <data name="CouldNotCreateGroup" xml:space="preserve">
+    <value>グループは作成できませんでした</value>
+  </data>
+  <data name="CouldNotUpdateGroup" xml:space="preserve">
+    <value>グループを更新できませんでした</value>
+  </data>
+  <data name="GroupCreated" xml:space="preserve">
+    <value>グループは作成されました</value>
+  </data>
+  <data name="GroupDeleted" xml:space="preserve">
+    <value>グループは削除されました</value>
+  </data>
+  <data name="GroupUpdated" xml:space="preserve">
+    <value>グループは更新されました</value>
+  </data>
+  <data name="CouldNotSaveFile" xml:space="preserve">
+    <value>ファイルを保存できませんでした</value>
+  </data>
+  <data name="Action_Crt_Dirs" xml:space="preserve">
+    <value>ディレクトリーの作成</value>
+  </data>
+  <data name="Action_Crt_Pg" xml:space="preserve">
+    <value>ページの作成</value>
+  </data>
+  <data name="Action_Del_1Attn" xml:space="preserve">
+    <value>添付ファイルの削除</value>
+  </data>
+  <data name="Action_Del_Attn" xml:space="preserve">
+    <value>添付ファイルの削除</value>
+  </data>
+  <data name="Action_Del_Dirs" xml:space="preserve">
+    <value>ディレクトリーの削除</value>
+  </data>
+  <data name="Action_Del_Files" xml:space="preserve">
+    <value>ファイルの削除</value>
+  </data>
+  <data name="Action_Del_Pg" xml:space="preserve">
+    <value>ページの削除</value>
+  </data>
+  <data name="Action_Down_1Attn" xml:space="preserve">
+    <value>添付ファイルを削除</value>
+  </data>
+  <data name="Action_Down_Attn" xml:space="preserve">
+    <value>添付ファイルを削除</value>
+  </data>
+  <data name="Action_Down_Files" xml:space="preserve">
+    <value>ファイルをダウンロード</value>
+  </data>
+  <data name="Action_FullControl" xml:space="preserve">
+    <value>フル コントロール</value>
+  </data>
+  <data name="Action_List" xml:space="preserve">
+    <value>コンテンツを一覧する</value>
+  </data>
+  <data name="Action_Man_1Cat" xml:space="preserve">
+    <value>カテゴリーを管理する</value>
+  </data>
+  <data name="Action_Man_1Pg" xml:space="preserve">
+    <value>ページを管理する</value>
+  </data>
+  <data name="Action_Man_Acc" xml:space="preserve">
+    <value>ユーザー アカウントを管理する</value>
+  </data>
+  <data name="Action_Man_Cat" xml:space="preserve">
+    <value>カテゴリーを管理する</value>
+  </data>
+  <data name="Action_Man_Conf" xml:space="preserve">
+    <value>設定を管理する</value>
+  </data>
+  <data name="Action_Man_Files" xml:space="preserve">
+    <value>ファイルとディレクトリーを管理する</value>
+  </data>
+  <data name="Action_Man_Grp" xml:space="preserve">
+    <value>ユーザー グループを管理する</value>
+  </data>
+  <data name="Action_Man_MetaFiles" xml:space="preserve">
+    <value>メタファイルの管理</value>
+  </data>
+  <data name="Action_Man_NavPath" xml:space="preserve">
+    <value>ナビゲーション パスを管理する</value>
+  </data>
+  <data name="Action_Man_Ns" xml:space="preserve">
+    <value>ネームスペースを管理する</value>
+  </data>
+  <data name="Action_Man_Pg" xml:space="preserve">
+    <value>ページを管理する</value>
+  </data>
+  <data name="Action_Man_PgCat" xml:space="preserve">
+    <value>ページとカテゴリーを管理する</value>
+  </data>
+  <data name="Action_Man_Prov" xml:space="preserve">
+    <value>プロバイダーを管理する</value>
+  </data>
+  <data name="Action_Man_Snips_Temps" xml:space="preserve">
+    <value>スニペットとテンプレートを管理する</value>
+  </data>
+  <data name="Action_Mod_1Pg" xml:space="preserve">
+    <value>ページを修正する</value>
+  </data>
+  <data name="Action_Mod_Pg" xml:space="preserve">
+    <value>ページを修正する</value>
+  </data>
+  <data name="Action_Rd_1Pg" xml:space="preserve">
+    <value>ページを読む</value>
+  </data>
+  <data name="Action_Rd_Pg" xml:space="preserve">
+    <value>ページを読む</value>
+  </data>
+  <data name="Action_Up_1Attn" xml:space="preserve">
+    <value>添付ファイルをアップロード</value>
+  </data>
+  <data name="Action_Up_Attn" xml:space="preserve">
+    <value>添付ファイルをアップロード</value>
+  </data>
+  <data name="Action_Up_Files" xml:space="preserve">
+    <value>ファイルをアップロード</value>
+  </data>
+  <data name="GoToMainPage" xml:space="preserve">
+    <value>メイン ページへ</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>グループ</value>
+  </data>
+  <data name="CouldNotStorePermissions" xml:space="preserve">
+    <value>パーミッションを保存できませんでした</value>
+  </data>
+  <data name="NamespaceSaved" xml:space="preserve">
+    <value>ネームスペースは保存されました</value>
+  </data>
+  <data name="CouldNotDeleteNamespace" xml:space="preserve">
+    <value>ネームスペースを削除できませんでした</value>
+  </data>
+  <data name="NamespaceDeleted" xml:space="preserve">
+    <value>ネームスペースは削除されました</value>
+  </data>
+  <data name="CouldNotDeletePermissions" xml:space="preserve">
+    <value>パーミッションを削除できませんでした</value>
+  </data>
+  <data name="GroupCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>グループが作成されましたが、パーミッションは保存できませんでした。</value>
+  </data>
+  <data name="GroupSavedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>グループが保存されましたが、古いパーミッションは削除できませんでした。</value>
+  </data>
+  <data name="GroupSavedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>グループは保存されましたが、新しいパーミッションは保存できませんでした。</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteGroup" xml:space="preserve">
+    <value>パーミッションは削除されましたがグループは削除できませんでした</value>
+  </data>
+  <data name="CouldNotSetNamespaceDefaultPage" xml:space="preserve">
+    <value>ネームスペースのデフォルト ページを設定できませんでした</value>
+  </data>
+  <data name="CouldNotSetNamespaceTheme" xml:space="preserve">
+    <value>ネームスペースのテーマを設定できませんでした</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotCreateDefaultPage" xml:space="preserve">
+    <value>ネームスペースが作成されましたがデフォルト ページは作成できませんでした。</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetDefaultPage" xml:space="preserve">
+    <value>ネームスペースが作成されましたがデフォルト ページは設定できませんでした。</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetTheme" xml:space="preserve">
+    <value>ネームスペースは保存されましたが、テーマは設定できませんでした。</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotStoreDefaultPageContent" xml:space="preserve">
+    <value>ネームスペースが作成されましたがデフォルト ページは設定できませんでした。</value>
+  </data>
+  <data name="UserCreatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>ユーザーが作成されましたが、グループ メンバーシップは保存できませんでした。</value>
+  </data>
+  <data name="UserCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>ユーザーが作成されましたが、パーミッションは保存できませんでした。</value>
+  </data>
+  <data name="UserUpdatedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>ユーザーは更新されましたが、古いパーミッションは削除できませんでした。</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>ユーザーは更新されまし方、グループ メンバーシップは保存できませんでした</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>ユーザーは更新されまし方、新しいパーミッションは保存できませんでした</value>
+  </data>
+  <data name="PermissionsAndGroupMembershipDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>パーミッションとグループ メンバーシップは削除されましたがユーザーは削除できませんでした</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>パーミッションは削除されましたがユーザーは削除できませんでした</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>ページへ</value>
+  </data>
+  <data name="GoToPageDiscussion" xml:space="preserve">
+    <value>ページ ディスカッションへ</value>
+  </data>
+  <data name="GoToPageHistory" xml:space="preserve">
+    <value>ページの履歴へ</value>
+  </data>
+  <data name="CouldNotRenamePage" xml:space="preserve">
+    <value>ページを名前変更できませんでした</value>
+  </data>
+  <data name="PageRenamedCouldNotCreateShadowPage" xml:space="preserve">
+    <value>ページは名前変更されましたがシャドー ページは作成できませんでした</value>
+  </data>
+  <data name="PageRenamedCouldNotSetShadowPageContent" xml:space="preserve">
+    <value>ページは名前変更されましたがシャドー ページ コンテンツは設定できませんでした</value>
+  </data>
+  <data name="AllMessagesDeleted" xml:space="preserve">
+    <value>すべてのメッセージは削除されました</value>
+  </data>
+  <data name="CouldNotDeleteOneOrMoreMessages" xml:space="preserve">
+    <value>一つあるいはそれ以上のメッセージを削除できませんでした</value>
+  </data>
+  <data name="CouldNotDeletePage" xml:space="preserve">
+    <value>ページを削除できませんでした</value>
+  </data>
+  <data name="CouldNotDeletePageBackups" xml:space="preserve">
+    <value>ページ バックアップを削除できませんでした</value>
+  </data>
+  <data name="CouldNotRollbackPage" xml:space="preserve">
+    <value>ページをロールバックできませんでした</value>
+  </data>
+  <data name="PageRolledBack" xml:space="preserve">
+    <value>ページはロールバックされました</value>
+  </data>
+  <data name="Action_Man_1Disc" xml:space="preserve">
+    <value>ディスカッションを管理する</value>
+  </data>
+  <data name="Action_Pst_1Disc" xml:space="preserve">
+    <value>ページ ディスカッションにメッセージを投稿する</value>
+  </data>
+  <data name="Action_Rd_1Disc" xml:space="preserve">
+    <value>ページ ディスカッションを読む</value>
+  </data>
+  <data name="Action_Man_Disc" xml:space="preserve">
+    <value>ディスカッションを管理する</value>
+  </data>
+  <data name="Action_Pst_Disc" xml:space="preserve">
+    <value>ページ ディスカッションにメッセージを投稿する</value>
+  </data>
+  <data name="Action_Rd_Disc" xml:space="preserve">
+    <value>ページ ディスカッションを読む</value>
+  </data>
+  <data name="ViewPageHistory" xml:space="preserve">
+    <value>ページ編集履歴を見る</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="AdminTools" xml:space="preserve">
+    <value>管理ツール</value>
+  </data>
+  <data name="Administrate" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="AdministrateThisPage" xml:space="preserve">
+    <value>このページを管理する</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>パーミッション</value>
+  </data>
+  <data name="SetPermissionsForThisPage" xml:space="preserve">
+    <value>このページのパーミッションを設定</value>
+  </data>
+  <data name="Rollback" xml:space="preserve">
+    <value>ロールバック</value>
+  </data>
+  <data name="RollbackThisPage" xml:space="preserve">
+    <value>前のバージョンにロールバックする</value>
+  </data>
+  <data name="CategoryAlreadyExists" xml:space="preserve">
+    <value>カテゴリーはすでに存在します</value>
+  </data>
+  <data name="CategoryCreated" xml:space="preserve">
+    <value>カテゴリーが作成されました</value>
+  </data>
+  <data name="CouldNotCreateCategory" xml:space="preserve">
+    <value>カテゴリーは作成できませんでした</value>
+  </data>
+  <data name="CouldNotDeleteCategory" xml:space="preserve">
+    <value>カテゴリーを削除できませんでした</value>
+  </data>
+  <data name="CouldNotMergeCategories" xml:space="preserve">
+    <value>カテゴリーをマージできませんでした</value>
+  </data>
+  <data name="CouldNotRenameCategory" xml:space="preserve">
+    <value>カテゴリーを名前変更できませんでした</value>
+  </data>
+  <data name="GoToCategory" xml:space="preserve">
+    <value>カテゴリーへ</value>
+  </data>
+  <data name="CouldNotCreateSnippet" xml:space="preserve">
+    <value>スニペットを作成できませんでした</value>
+  </data>
+  <data name="CouldNotDeleteSnippet" xml:space="preserve">
+    <value>スニペットを削除できませんでした</value>
+  </data>
+  <data name="CouldNotSaveSnippet" xml:space="preserve">
+    <value>スニペットを保存できませんでした</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>パラメーター</value>
+  </data>
+  <data name="SnippetCreated" xml:space="preserve">
+    <value>スニペットが作成されました</value>
+  </data>
+  <data name="ViewChanges" xml:space="preserve">
+    <value>ビュー変更</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>下書き</value>
+  </data>
+  <data name="CouldNotApproveDraft" xml:space="preserve">
+    <value>ドラフトを承認できなかった</value>
+  </data>
+  <data name="DraftApproved" xml:space="preserve">
+    <value>ドラフトは承認されて保存されました</value>
+  </data>
+  <data name="DraftRejected" xml:space="preserve">
+    <value>ドラフトは否認されて破棄されました</value>
+  </data>
+  <data name="ClickToEnableEmailNotifications" xml:space="preserve">
+    <value>このページのメール通知を有効にするにはクリック</value>
+  </data>
+  <data name="EmailNotificationsAreActive" xml:space="preserve">
+    <value>このページに関するメール通知は有効です。無効にするにはクリックしてください。</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="CouldNotCreateNavPath" xml:space="preserve">
+    <value>ナビゲーション パスを作成できませんでした</value>
+  </data>
+  <data name="CouldNotDeleteNavPath" xml:space="preserve">
+    <value>ナビゲーション パスを削除できませんでした</value>
+  </data>
+  <data name="CouldNotSaveNavPath" xml:space="preserve">
+    <value>ナビゲーション パスを保存できませんでした</value>
+  </data>
+  <data name="NavPathCreated" xml:space="preserve">
+    <value>ナビゲーション パスは作成されました</value>
+  </data>
+  <data name="TheNavPathMustContain" xml:space="preserve">
+    <value>ナビゲーション パスは少なくとも 1 ページを含んでいなければなりません</value>
+  </data>
+  <data name="DefaultProvidersSaved" xml:space="preserve">
+    <value>デフォルト プロバイダーは保存されました</value>
+  </data>
+  <data name="CouldNotDeleteDll" xml:space="preserve">
+    <value>DLL を削除できませんでした</value>
+  </data>
+  <data name="DllAlreadyExists" xml:space="preserve">
+    <value>DLL はすでに存在します</value>
+  </data>
+  <data name="DllDeleted" xml:space="preserve">
+    <value>DLL は削除されました</value>
+  </data>
+  <data name="LoadedProviders" xml:space="preserve">
+    <value>読み込まれた ### プロバイダー</value>
+  </data>
+  <data name="VoidOrInvalidFile" xml:space="preserve">
+    <value>空もしくは無効なファイル</value>
+  </data>
+  <data name="DataCopied" xml:space="preserve">
+    <value>データはコピーされました。web.config ファイルにて有効なストレージ プロバイダーの設定を変更してください。</value>
+  </data>
+  <data name="DataMigrated" xml:space="preserve">
+    <value>データは移動されました。Web アプリケーションをリサイクルしてください。</value>
+  </data>
+  <data name="NoConfigurationRequired" xml:space="preserve">
+    <value>このプロバイダーには設定は不要です</value>
+  </data>
+  <data name="NotificationsStatusSaved" xml:space="preserve">
+    <value>通知ステータスは保存されました</value>
+  </data>
+  <data name="Action_Man_Perms" xml:space="preserve">
+    <value>パーミッションを管理する</value>
+  </data>
+  <data name="ApproveRejectDraft" xml:space="preserve">
+    <value>ドラフトの承認/否認</value>
+  </data>
+  <data name="AMessageHasBeenDeletedBy" xml:space="preserve">
+    <value>"##SUBJECT##" というタイトルのメッセージは削除されました。</value>
+  </data>
+  <data name="AMessageHasBeenEditedBy" xml:space="preserve">
+    <value>"##SUBJECT##" というタイトルのメッセージは編集されました。</value>
+  </data>
+  <data name="AMessageHasBeenPostedBy" xml:space="preserve">
+    <value>"##SUBJECT##" というタイトルのメッセージが投稿されました。</value>
+  </data>
+  <data name="Discussion" xml:space="preserve">
+    <value>ディスカッション</value>
+  </data>
+  <data name="DiscussionUpdates" xml:space="preserve">
+    <value>ディスカッションの更新</value>
+  </data>
+  <data name="RecentDiscussionUpdates" xml:space="preserve">
+    <value>最近のディスカッションの更新</value>
+  </data>
+  <data name="AMessageWasSentCheckInbox" xml:space="preserve">
+    <value>メッセージはあなたのメール アドレス宛てに送信されました。受信トレイを確認してください。</value>
+  </data>
+  <data name="NewPasswordSavedPleaseLogin" xml:space="preserve">
+    <value>新しいパスワードが保存されました。&lt;a href="Login.aspx" title="ログイン"&gt;ログイン&lt;/a&gt; してください。</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>パスワードをリセットする</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>作成者</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>作成日</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>更新者</value>
+  </data>
+  <data name="ModifiedOn" xml:space="preserve">
+    <value>更新日</value>
+  </data>
+  <data name="CouldNotCreateTemplate" xml:space="preserve">
+    <value>テンプレートを作成できませんでした</value>
+  </data>
+  <data name="CouldNotDeleteTemplate" xml:space="preserve">
+    <value>テンプレートを削除できませんでした</value>
+  </data>
+  <data name="CouldNotSaveTemplate" xml:space="preserve">
+    <value>テンプレートを保存できませんでした</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>スニペット</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>テンプレート</value>
+  </data>
+  <data name="TemplateCreated" xml:space="preserve">
+    <value>テンプレートが作成されました</value>
+  </data>
+  <data name="TemplateDeleted" xml:space="preserve">
+    <value>テンプレートが削除されました</value>
+  </data>
+  <data name="TemplateSaved" xml:space="preserve">
+    <value>テンプレートが保存されました</value>
+  </data>
+  <data name="SelectTemplate" xml:space="preserve">
+    <value>テンプレートを選択する...</value>
+  </data>
+  <data name="CouldNotRenameNamespace" xml:space="preserve">
+    <value>ネームスペースを名前変更できませんでした</value>
+  </data>
+  <data name="NamespaceRenamed" xml:space="preserve">
+    <value>ネームスペースは名前変更されました</value>
+  </data>
+  <data name="GoToYourProfile" xml:space="preserve">
+    <value>プロファイル ページへ移動する</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>ゲスト</value>
+  </data>
+  <data name="SelectYourLanguage" xml:space="preserve">
+    <value>言語を選んでください</value>
+  </data>
+  <data name="PreferencesSaved" xml:space="preserve">
+    <value>プレファレンスは保存された</value>
+  </data>
+  <data name="Corrupted" xml:space="preserve">
+    <value>壊れている</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="CreateThisPage" xml:space="preserve">
+    <value>ページを作成</value>
+  </data>
+  <data name="UserDeletedMessage" xml:space="preserve">
+    <value>##USER## は ##PAGE## ページのディスカッションに存在するメッセージを削除しました。</value>
+  </data>
+  <data name="UserDeletedPage" xml:space="preserve">
+    <value>##USER## は ##PAGE## ページを削除しました。</value>
+  </data>
+  <data name="UserEditedMessage" xml:space="preserve">
+    <value>##USER## は ##PAGE## ページのディスカッションに存在するメッセージを編集しました。</value>
+  </data>
+  <data name="UserPostedMessage" xml:space="preserve">
+    <value>##USER## は ##PAGE## ページのディスカッションにメッセージを投稿しました。</value>
+  </data>
+  <data name="UserRenamedPage" xml:space="preserve">
+    <value>##USER## は ##PAGE## ページの名前を変更しました。</value>
+  </data>
+  <data name="UserRolledBackPage" xml:space="preserve">
+    <value>##USER## は##PAGE## ページをロールバックしました。</value>
+  </data>
+  <data name="UserUpdatedPage" xml:space="preserve">
+    <value>##USER## は##PAGE## ページを更新しました。</value>
+  </data>
+  <data name="CouldNotSaveDisplayName" xml:space="preserve">
+    <value>表示名を保存できませんでした</value>
+  </data>
+  <data name="DisplayNameSaved" xml:space="preserve">
+    <value>表示名は保存されました</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>ユーザーの詳細</value>
+  </data>
+  <data name="CodeEscaped" xml:space="preserve">
+    <value>エスケープされたブロック コード</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>水平ルーラー</value>
+  </data>
+  <data name="Snippets" xml:space="preserve">
+    <value>スニペット</value>
+  </data>
+  <data name="Symbols" xml:space="preserve">
+    <value>特殊記号</value>
+  </data>
+  <data name="WrapperBox" xml:space="preserve">
+    <value>囲みボックス</value>
+  </data>
+  <data name="RssForThisCategoryDiscussion" xml:space="preserve">
+    <value>このカテゴリーのディスカッションの更新通知 (RSS 2.0)</value>
+  </data>
+  <data name="DiscussionsRss" xml:space="preserve">
+    <value>ディスカッション RSS</value>
+  </data>
+  <data name="CouldNotMigratePage" xml:space="preserve">
+    <value>ページを移動できませんでした</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>新しいバージョン:</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>最新</value>
+  </data>
+  <data name="SelectAndDelete" xml:space="preserve">
+    <value>選択して削除</value>
+  </data>
+  <data name="NoBr" xml:space="preserve">
+    <value>NoBR tag</value>
+  </data>
+  <data name="LinkToThisSection" xml:space="preserve">
+    <value>このセクションへのリンク</value>
+  </data>
+  <data name="OrderedList" xml:space="preserve">
+    <value>順序有りリスト</value>
+  </data>
+  <data name="UnorderedList" xml:space="preserve">
+    <value>順序無しリスト</value>
+  </data>
+  <data name="InvalidFileName" xml:space="preserve">
+    <value>無効なファイル名</value>
+  </data>
+  <data name="BulkRebindCompleted" xml:space="preserve">
+    <value>一括再関連付けは完了しました</value>
+  </data>
+  <data name="NoCategories" xml:space="preserve">
+    <value>カテゴリーは選択されていません</value>
+  </data>
+  <data name="NoPages" xml:space="preserve">
+    <value>リビルドすべきページはありません</value>
+  </data>
+  <data name="BulkMigrationCompleted" xml:space="preserve">
+    <value>一括移動が完了しました</value>
+  </data>
+  <data name="BulkMigrationCompletedWithErrors" xml:space="preserve">
+    <value>一括移動はエラー有りで完了しました。ログをチェックしてください。</value>
+  </data>
+  <data name="ProvidersUpdated" xml:space="preserve">
+    <value>プロバイダーは更新されました。wiki を再起動してください (管理ホーム タブ)</value>
+  </data>
+  <data name="NoProvidersToUpdate" xml:space="preserve">
+    <value>更新すべきプロバイダーはありません</value>
+  </data>
+  <data name="NoPagesToMigrate" xml:space="preserve">
+    <value>移動すべきページはありません</value>
+  </data>
+  <data name="Formatted" xml:space="preserve">
+    <value>フォーマットされている</value>
+  </data>
+  <data name="NAccountsDeleted" xml:space="preserve">
+    <value>$ アカウントが削除されました</value>
+    <comment>As in "3 accounts deleted"</comment>
+  </data>
+  <data name="AutoUpdateAvailable" xml:space="preserve">
+    <value>自動更新が利用可能です</value>
+  </data>
+</root>

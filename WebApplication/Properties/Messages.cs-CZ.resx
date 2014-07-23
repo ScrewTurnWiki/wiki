@@ -1,0 +1,1753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnchorTitle2" xml:space="preserve">
+    <value>Insert a new anchor or a link to an existing anchor</value>
+  </data>
+  <data name="BoldTitle" xml:space="preserve">
+    <value>Style selected text as bold</value>
+  </data>
+  <data name="CodeEscapedTitle" xml:space="preserve">
+    <value>Set selected text as a block of code</value>
+  </data>
+  <data name="CodeInlineTitle" xml:space="preserve">
+    <value>Set selected text as inline code</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>Set selected text as comment (hidden from the rendered page output)</value>
+  </data>
+  <data name="EscapeTitle" xml:space="preserve">
+    <value>Wrap selected text in an 'escape' block that escapes all wiki- and HTML-related characters</value>
+  </data>
+  <data name="ExternalLinkTitle" xml:space="preserve">
+    <value>Insert a link to a website or email address</value>
+  </data>
+  <data name="FileLinkTitle" xml:space="preserve">
+    <value>Insert a link to a file or attachment</value>
+  </data>
+  <data name="H1Title" xml:space="preserve">
+    <value>Set selected text as level-1 header</value>
+  </data>
+  <data name="H2Title" xml:space="preserve">
+    <value>Set selected text as level-2 header</value>
+  </data>
+  <data name="H3Title" xml:space="preserve">
+    <value>Set selected text as level-3 header</value>
+  </data>
+  <data name="H4Title" xml:space="preserve">
+    <value>Set selected text as level-4 header</value>
+  </data>
+  <data name="HRTitle" xml:space="preserve">
+    <value>Insert a horizontal ruler (separator)</value>
+  </data>
+  <data name="ImageTitle2" xml:space="preserve">
+    <value>Insert a picture in the page</value>
+  </data>
+  <data name="ItalicTitle" xml:space="preserve">
+    <value>Style selected text as italic</value>
+  </data>
+  <data name="LineBreakTitle" xml:space="preserve">
+    <value>Insert a single line break</value>
+  </data>
+  <data name="NoBrTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'nobr' block, that ignores line breaks</value>
+  </data>
+  <data name="NoWikiTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'nowiki' block, that ignores WikiMarkup</value>
+  </data>
+  <data name="OrderedListTitle" xml:space="preserve">
+    <value>Insert an ordered list or wrap selected text in an ordered list (1, 2, 3, ...)</value>
+  </data>
+  <data name="PageLinkTitle" xml:space="preserve">
+    <value>Insert a link to a wiki page</value>
+  </data>
+  <data name="SnippetsTitle" xml:space="preserve">
+    <value>View existing snippets and insert one in the page</value>
+  </data>
+  <data name="SpecialTagsTitle" xml:space="preserve">
+    <value>View special tags and insert one in the page</value>
+  </data>
+  <data name="StrikedTitle" xml:space="preserve">
+    <value>Style selected text as strike-through</value>
+  </data>
+  <data name="SubscriptTitle" xml:space="preserve">
+    <value>Set selected text as subscript</value>
+  </data>
+  <data name="SuperscriptTitle" xml:space="preserve">
+    <value>Set selected text as superscript</value>
+  </data>
+  <data name="SymbolsTitle" xml:space="preserve">
+    <value>View and insert special symbols</value>
+  </data>
+  <data name="UnderlinedTitle" xml:space="preserve">
+    <value>Underline selected text</value>
+  </data>
+  <data name="UnorderedListTitle" xml:space="preserve">
+    <value>Insert an unordered list or wrap selected text in an unordered list (bullet points)</value>
+  </data>
+  <data name="WrapperBoxTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'box'</value>
+  </data>
+  <data name="ChangeComment" xml:space="preserve">
+    <value>Change Comment</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Meta Description</value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>Meta Keywords</value>
+  </data>
+  <data name="OrderedList" xml:space="preserve">
+    <value>Tříděný seznam</value>
+  </data>
+  <data name="UnorderedList" xml:space="preserve">
+    <value>Netříděný seznam</value>
+  </data>
+  <data name="InvalidFileName" xml:space="preserve">
+    <value>Neplatné jméno souboru</value>
+  </data>
+  <data name="BulkRebindCompleted" xml:space="preserve">
+    <value>Propojení dokončeno</value>
+  </data>
+  <data name="NoCategories" xml:space="preserve">
+    <value>Nejsou vybrány kategorie</value>
+  </data>
+  <data name="NoPages" xml:space="preserve">
+    <value>Žádné stránky pro propojení</value>
+  </data>
+  <data name="BulkMigrationCompleted" xml:space="preserve">
+    <value>Migrace dokončena</value>
+  </data>
+  <data name="BulkMigrationCompletedWithErrors" xml:space="preserve">
+    <value>Migrace dokončena s chybami, zkontrolujte log</value>
+  </data>
+  <data name="ProvidersUpdated" xml:space="preserve">
+    <value>Poskytovatelé aktualizování, prosím restartujte wiki (Administrace záložka home)</value>
+  </data>
+  <data name="NoProvidersToUpdate" xml:space="preserve">
+    <value>Žádní poskytovatelé pro aktualizaci</value>
+  </data>
+  <data name="NoPagesToMigrate" xml:space="preserve">
+    <value>Žádné stránky pro migraci</value>
+  </data>
+  <data name="Formatted" xml:space="preserve">
+    <value>formátované</value>
+  </data>
+  <data name="NAccountsDeleted" xml:space="preserve">
+    <value>$ účty smazány</value>
+    <comment>As in "3 accounts deleted"</comment>
+  </data>
+  <data name="AutoUpdateAvailable" xml:space="preserve">
+    <value>Automatická aktualizace dostupná</value>
+  </data>
+  <data name="LinkToThisSection" xml:space="preserve">
+    <value>Odkaz na tuto Sekci</value>
+  </data>
+  <data name="NoBr" xml:space="preserve">
+    <value>NoBR tag</value>
+  </data>
+  <data name="SelectAndDelete" xml:space="preserve">
+    <value>Vybrat a smazat</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>Nová verze:</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>Aktualní</value>
+  </data>
+  <data name="CouldNotMigratePage" xml:space="preserve">
+    <value>Nelze migrovat stránku</value>
+  </data>
+  <data name="DiscussionsRss" xml:space="preserve">
+    <value>RSS diskuze</value>
+  </data>
+  <data name="RssForThisCategoryDiscussion" xml:space="preserve">
+    <value>Aktualizovat oznámení pro diskuzi u této Kategorie (RSS 2.0)</value>
+  </data>
+  <data name="CodeEscaped" xml:space="preserve">
+    <value>Escaped Block Code</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Horizontální pravítko</value>
+  </data>
+  <data name="Snippets" xml:space="preserve">
+    <value>Úryvky</value>
+  </data>
+  <data name="Symbols" xml:space="preserve">
+    <value>Speciální symboly</value>
+  </data>
+  <data name="WrapperBox" xml:space="preserve">
+    <value>Zalamovaný Box</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>Detail Uživatele</value>
+  </data>
+  <data name="CouldNotSaveDisplayName" xml:space="preserve">
+    <value>Nelze uložit zobrazované jméno</value>
+  </data>
+  <data name="DisplayNameSaved" xml:space="preserve">
+    <value>Zobrazované jméno uloženo</value>
+  </data>
+  <data name="UserDeletedMessage" xml:space="preserve">
+    <value>##USER## smazal zprávu v diskuzi stránku ##PAGE##.</value>
+  </data>
+  <data name="UserDeletedPage" xml:space="preserve">
+    <value>##USER## smazal stránku ##PAGE##.</value>
+  </data>
+  <data name="UserEditedMessage" xml:space="preserve">
+    <value>##USER## upravil zprávu v diskuzi stránky ##PAGE##.</value>
+  </data>
+  <data name="UserPostedMessage" xml:space="preserve">
+    <value>##USER## zaslal zprávu do diskuze stránky ##PAGE##.</value>
+  </data>
+  <data name="UserRenamedPage" xml:space="preserve">
+    <value>##USER## přejmenoval stránku ##PAGE##.</value>
+  </data>
+  <data name="UserRolledBackPage" xml:space="preserve">
+    <value>##USER## vrátil zpět stránku ##PAGE##.</value>
+  </data>
+  <data name="UserUpdatedPage" xml:space="preserve">
+    <value>##USER## upravil stránku ##PAGE##.</value>
+  </data>
+  <data name="CreateThisPage" xml:space="preserve">
+    <value>Vytvořit tuto Stránku</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+  <data name="Corrupted" xml:space="preserve">
+    <value>Poškozen</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SelectYourLanguage" xml:space="preserve">
+    <value>Vyberte jazyk</value>
+  </data>
+  <data name="PreferencesSaved" xml:space="preserve">
+    <value>Preference uloženy</value>
+  </data>
+  <data name="GoToYourProfile" xml:space="preserve">
+    <value>Přejít na Váš Profil</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="CouldNotRenameNamespace" xml:space="preserve">
+    <value>Nelze přejmenovat Jmenný prostor</value>
+  </data>
+  <data name="NamespaceRenamed" xml:space="preserve">
+    <value>Jmenný prostor přejmenován</value>
+  </data>
+  <data name="SelectTemplate" xml:space="preserve">
+    <value>Vybrat Šablonu...</value>
+  </data>
+  <data name="Action_Man_Snips_Temps" xml:space="preserve">
+    <value>Manage Snippets and Templates</value>
+  </data>
+  <data name="CouldNotCreateTemplate" xml:space="preserve">
+    <value>Nelze vytvořit Šablona</value>
+  </data>
+  <data name="CouldNotDeleteTemplate" xml:space="preserve">
+    <value>Nelze smazat Šablona</value>
+  </data>
+  <data name="CouldNotSaveTemplate" xml:space="preserve">
+    <value>Nelze uložit Šablonu</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>Úryvek</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Šablona</value>
+  </data>
+  <data name="TemplateCreated" xml:space="preserve">
+    <value>Šablona vytvořena</value>
+  </data>
+  <data name="TemplateDeleted" xml:space="preserve">
+    <value>Šablona smazána</value>
+  </data>
+  <data name="TemplateSaved" xml:space="preserve">
+    <value>Šablona uložena</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Vytvořil</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>Vytvořeno</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Změnil</value>
+  </data>
+  <data name="ModifiedOn" xml:space="preserve">
+    <value>Změněno</value>
+  </data>
+  <data name="AMessageWasSentCheckInbox" xml:space="preserve">
+    <value>Zpráva byla zaslána na Vaši emailovou adresu, prosím zkontrolujte Vaši příchozí poštu.</value>
+  </data>
+  <data name="NewPasswordSavedPleaseLogin" xml:space="preserve">
+    <value>Nové heslo bylo uloženo, prosím &lt;a href="Login.aspx" title="Login"&gt;Přihlašte se&lt;/a&gt;</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Resetovat heslo</value>
+  </data>
+  <data name="AMessageHasBeenDeletedBy" xml:space="preserve">
+    <value>Zprávu s předmětem "##SUBJECT##" smazal</value>
+  </data>
+  <data name="AMessageHasBeenEditedBy" xml:space="preserve">
+    <value>Zprávu s předmětem "##SUBJECT##" upravil</value>
+  </data>
+  <data name="AMessageHasBeenPostedBy" xml:space="preserve">
+    <value>Zprávu s předmětem "##SUBJECT##" poslal</value>
+  </data>
+  <data name="Discussion" xml:space="preserve">
+    <value>Diskuze</value>
+  </data>
+  <data name="DiscussionUpdates" xml:space="preserve">
+    <value>Změny v diskuzi</value>
+  </data>
+  <data name="RecentDiscussionUpdates" xml:space="preserve">
+    <value>Poslední změny v diskuzi</value>
+  </data>
+  <data name="ApproveRejectDraft" xml:space="preserve">
+    <value>Schválit/Odmítnout Koncept</value>
+  </data>
+  <data name="Action_Man_1Disc" xml:space="preserve">
+    <value>Manage Page discussion</value>
+  </data>
+  <data name="Action_Pst_1Disc" xml:space="preserve">
+    <value>Post messages in Page discussion</value>
+  </data>
+  <data name="Action_Rd_1Disc" xml:space="preserve">
+    <value>Read Page discussion</value>
+  </data>
+  <data name="Action_Man_Perms" xml:space="preserve">
+    <value>Manage Permissions</value>
+  </data>
+  <data name="NotificationsStatusSaved" xml:space="preserve">
+    <value>Stav uznámení uložen</value>
+  </data>
+  <data name="NoConfigurationRequired" xml:space="preserve">
+    <value>Pro tohoto poskytovatele není třeba konfigurace</value>
+  </data>
+  <data name="DataCopied" xml:space="preserve">
+    <value>Data zkopírována, prosím změnte aktivní Settings Storage Provider v souboru web.config</value>
+  </data>
+  <data name="DataMigrated" xml:space="preserve">
+    <value>Data migrována, prosím restartujte webovou aplikaci</value>
+  </data>
+  <data name="DllAlreadyExists" xml:space="preserve">
+    <value>DLL již existuje</value>
+  </data>
+  <data name="LoadedProviders" xml:space="preserve">
+    <value>Nahráno ### poskytovatelů</value>
+  </data>
+  <data name="VoidOrInvalidFile" xml:space="preserve">
+    <value>Prázdný nebo neplatný soubor</value>
+  </data>
+  <data name="CouldNotDeleteDll" xml:space="preserve">
+    <value>Nelze smazat DLL</value>
+  </data>
+  <data name="DllDeleted" xml:space="preserve">
+    <value>DLL smazána</value>
+  </data>
+  <data name="DefaultProvidersSaved" xml:space="preserve">
+    <value>Implicitní poskytovatel uložen</value>
+  </data>
+  <data name="ProviderRejectedConfiguration" xml:space="preserve">
+    <value>Poskytovatel odmítl konfigurační data</value>
+  </data>
+  <data name="CouldNotCreateNavPath" xml:space="preserve">
+    <value>Nelze vytvořit Navigační cestu</value>
+  </data>
+  <data name="CouldNotDeleteNavPath" xml:space="preserve">
+    <value>Nelze smazat Navigační cestu</value>
+  </data>
+  <data name="CouldNotSaveNavPath" xml:space="preserve">
+    <value>Nelze uložit Navigační cestu</value>
+  </data>
+  <data name="NavPathCreated" xml:space="preserve">
+    <value>Navigační cesta vytvořena</value>
+  </data>
+  <data name="TheNavPathMustContain" xml:space="preserve">
+    <value>Navigační cesta musí obsahovat nejméně jednu Stránku</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>není</value>
+  </data>
+  <data name="ClickToEnableEmailNotifications" xml:space="preserve">
+    <value>Klikněte pro povolení oznamování emailem pro tuto stránku</value>
+  </data>
+  <data name="EmailNotificationsAreActive" xml:space="preserve">
+    <value>Oznamování emailem je aktivní pro tuto stránku - klikněte pro zákaz</value>
+  </data>
+  <data name="CouldNotApproveDraft" xml:space="preserve">
+    <value>Nelze schávit koncept</value>
+  </data>
+  <data name="DraftApproved" xml:space="preserve">
+    <value>Koncept schválen a uložen</value>
+  </data>
+  <data name="DraftRejected" xml:space="preserve">
+    <value>Koncept odmítnut a vyřazen</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Koncept</value>
+  </data>
+  <data name="ViewChanges" xml:space="preserve">
+    <value>zobrazit změny</value>
+  </data>
+  <data name="DiffingPageTitle" xml:space="preserve">
+    <value>Porovnání &lt;i&gt;##PAGETITLE##&lt;/i&gt;, revize &lt;i&gt;##REV1##&lt;/i&gt; a &lt;i&gt;##REV2##&lt;/i&gt;</value>
+  </data>
+  <data name="CouldNotCreateSnippet" xml:space="preserve">
+    <value>Nelze vytvořit Úryvek</value>
+  </data>
+  <data name="CouldNotDeleteSnippet" xml:space="preserve">
+    <value>Nelze smazt Úryvek</value>
+  </data>
+  <data name="CouldNotSaveSnippet" xml:space="preserve">
+    <value>Nelze uložit Úryvek</value>
+  </data>
+  <data name="SnippetCreated" xml:space="preserve">
+    <value>Úryvek vytvořen</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Parametry</value>
+  </data>
+  <data name="CouldNotDeleteCategory" xml:space="preserve">
+    <value>Nelze smazat Kategorii</value>
+  </data>
+  <data name="CouldNotMergeCategories" xml:space="preserve">
+    <value>Nelze sloučit kategorie</value>
+  </data>
+  <data name="CategoryCreated" xml:space="preserve">
+    <value>Kategorie vytvořena</value>
+  </data>
+  <data name="CouldNotRenameCategory" xml:space="preserve">
+    <value>Nelze přejmenovat Kategorii</value>
+  </data>
+  <data name="CategoryAlreadyExists" xml:space="preserve">
+    <value>Kategorie již existuje</value>
+  </data>
+  <data name="CouldNotCreateCategory" xml:space="preserve">
+    <value>Nelze vytvořit Kategorii</value>
+  </data>
+  <data name="GoToCategory" xml:space="preserve">
+    <value>Přejít na Kategorii</value>
+  </data>
+  <data name="Rollback" xml:space="preserve">
+    <value>Vrátit zpět</value>
+  </data>
+  <data name="RollbackThisPage" xml:space="preserve">
+    <value>Vrátit zpět Stránku na přechozí verzi</value>
+  </data>
+  <data name="Administrate" xml:space="preserve">
+    <value>Administrovat</value>
+  </data>
+  <data name="AdministrateThisPage" xml:space="preserve">
+    <value>Administrovat tuto stránku</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Oprávnění</value>
+  </data>
+  <data name="SetPermissionsForThisPage" xml:space="preserve">
+    <value>Nastavit oprávnění pro tuto Stránku</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AdminTools" xml:space="preserve">
+    <value>Administrační nástroje</value>
+  </data>
+  <data name="ViewPageHistory" xml:space="preserve">
+    <value>Zobrazit historii editace stránky</value>
+  </data>
+  <data name="Action_Man_Disc" xml:space="preserve">
+    <value>Manage Page discussions</value>
+  </data>
+  <data name="Action_Pst_Disc" xml:space="preserve">
+    <value>Post messages in Page discussions</value>
+  </data>
+  <data name="Action_Rd_Disc" xml:space="preserve">
+    <value>Read Page discussions</value>
+  </data>
+  <data name="CouldNotDeletePage" xml:space="preserve">
+    <value>Nelze smazat Stránku</value>
+  </data>
+  <data name="AllMessagesDeleted" xml:space="preserve">
+    <value>Všechny zprávy smazány</value>
+  </data>
+  <data name="CouldNotDeleteOneOrMoreMessages" xml:space="preserve">
+    <value>Nelze smazat jednu nebo více zpráv</value>
+  </data>
+  <data name="CouldNotDeletePageBackups" xml:space="preserve">
+    <value>Nelze smazat zálohy Stránky</value>
+  </data>
+  <data name="CouldNotRollbackPage" xml:space="preserve">
+    <value>Nelze vrátit Stránku</value>
+  </data>
+  <data name="PageRolledBack" xml:space="preserve">
+    <value>Stránka vrácena zpět</value>
+  </data>
+  <data name="CouldNotRenamePage" xml:space="preserve">
+    <value>Nelze přejmenovat Stránku</value>
+  </data>
+  <data name="PageRenamedCouldNotCreateShadowPage" xml:space="preserve">
+    <value>Stránka přejmenována, ale nelze vytvořit záložní kopii Stránky</value>
+  </data>
+  <data name="PageRenamedCouldNotSetShadowPageContent" xml:space="preserve">
+    <value>Stránka přejmenována, ale nelze uložit obsah záložní kopie Stránky</value>
+  </data>
+  <data name="GoToPageHistory" xml:space="preserve">
+    <value>Přejít na historii Stránky</value>
+  </data>
+  <data name="GoToPageDiscussion" xml:space="preserve">
+    <value>Přejít na diskuzi ke Stránce</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Přejít na Stránku</value>
+  </data>
+  <data name="CouldNotDeletePermissions" xml:space="preserve">
+    <value>Nelze smazat oprávnění</value>
+  </data>
+  <data name="GroupCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>Skupina vytvořena, ale nelze uložit oprávnění</value>
+  </data>
+  <data name="GroupSavedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>Skupina uložena, ale nelze smazat staré oprávnění</value>
+  </data>
+  <data name="GroupSavedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>Skupina uložena, ale nelze uložit nové oprávnění</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteGroup" xml:space="preserve">
+    <value>Oprávnění smazáno, ale nelze smazat Skupinu</value>
+  </data>
+  <data name="CouldNotSetNamespaceDefaultPage" xml:space="preserve">
+    <value>Nelze nastavit defaultní Stránku pro Jmenný prostor</value>
+  </data>
+  <data name="CouldNotSetNamespaceTheme" xml:space="preserve">
+    <value>Nelze nastavit Téma pro Jmenný prostor</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotCreateDefaultPage" xml:space="preserve">
+    <value>Jmenný prostor vytvořen, ale nelze vytvořit implicitní Stránku</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetDefaultPage" xml:space="preserve">
+    <value>Jmenný prostor vytvořen, ale nelze nastavit implicitní Stránku</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetTheme" xml:space="preserve">
+    <value>Jmenný prostor uložen, ale nelze nastavit Téma</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotStoreDefaultPageContent" xml:space="preserve">
+    <value>Jmenný prostor vytvořen, ale nelze uložit obsah implicitní Stránky</value>
+  </data>
+  <data name="UserCreatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>Uživatel vytvořen, ale nelze uložit členství ve Skupině</value>
+  </data>
+  <data name="UserCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>Uživatel vytvořen, ale nelze uložit Oprávnění</value>
+  </data>
+  <data name="UserUpdatedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>Uživatel změněn, ale nelze smazat staré Oprávnění</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>Uživatel změněn, ale nelze uložit členství ve skupině</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>Uživatel změněn, ale nelze uložit nové Oprávnění</value>
+  </data>
+  <data name="PermissionsAndGroupMembershipDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Oprávnění a členství ve skupině smazáno, ale nelze smazat Uživatele</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Oprávnění smazáno, ale nelze smazat Uživatele</value>
+  </data>
+  <data name="CouldNotDeleteNamespace" xml:space="preserve">
+    <value>Nelze smazat jmenný prostor</value>
+  </data>
+  <data name="NamespaceDeleted" xml:space="preserve">
+    <value>Jmenný prostor smazán</value>
+  </data>
+  <data name="NamespaceSaved" xml:space="preserve">
+    <value>Jmenný prostor uložen</value>
+  </data>
+  <data name="CouldNotStorePermissions" xml:space="preserve">
+    <value>Nelze uložit oprávnění</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Skupina</value>
+  </data>
+  <data name="GoToMainPage" xml:space="preserve">
+    <value>Přejít na Hlavní stranu</value>
+  </data>
+  <data name="Action_Crt_Dirs" xml:space="preserve">
+    <value>Create Directories</value>
+  </data>
+  <data name="Action_Crt_Pg" xml:space="preserve">
+    <value>Create Pages</value>
+  </data>
+  <data name="Action_Del_1Attn" xml:space="preserve">
+    <value>Delete Attachments</value>
+  </data>
+  <data name="Action_Del_Attn" xml:space="preserve">
+    <value>Delete Attachments</value>
+  </data>
+  <data name="Action_Del_Dirs" xml:space="preserve">
+    <value>Delete Directories</value>
+  </data>
+  <data name="Action_Del_Files" xml:space="preserve">
+    <value>Delete Files</value>
+  </data>
+  <data name="Action_Del_Pg" xml:space="preserve">
+    <value>Delete Pages</value>
+  </data>
+  <data name="Action_Down_1Attn" xml:space="preserve">
+    <value>Download Attachments</value>
+  </data>
+  <data name="Action_Down_Attn" xml:space="preserve">
+    <value>Download Attachments</value>
+  </data>
+  <data name="Action_Down_Files" xml:space="preserve">
+    <value>Download Files</value>
+  </data>
+  <data name="Action_FullControl" xml:space="preserve">
+    <value>Full Control</value>
+  </data>
+  <data name="Action_List" xml:space="preserve">
+    <value>List Contents</value>
+  </data>
+  <data name="Action_Man_1Cat" xml:space="preserve">
+    <value>Manage Categories</value>
+  </data>
+  <data name="Action_Man_1Pg" xml:space="preserve">
+    <value>Manage Page</value>
+  </data>
+  <data name="Action_Man_Acc" xml:space="preserve">
+    <value>Manage User Accounts</value>
+  </data>
+  <data name="Action_Man_Cat" xml:space="preserve">
+    <value>Manage Categories</value>
+  </data>
+  <data name="Action_Man_Conf" xml:space="preserve">
+    <value>Manage Configuration</value>
+  </data>
+  <data name="Action_Man_Files" xml:space="preserve">
+    <value>Manage Files and Directories</value>
+  </data>
+  <data name="Action_Man_Grp" xml:space="preserve">
+    <value>Manage User Groups</value>
+  </data>
+  <data name="Action_Man_MetaFiles" xml:space="preserve">
+    <value>Manage Meta-Files</value>
+  </data>
+  <data name="Action_Man_NavPath" xml:space="preserve">
+    <value>Manage Navigation Paths</value>
+  </data>
+  <data name="Action_Man_Ns" xml:space="preserve">
+    <value>Manage Namespaces</value>
+  </data>
+  <data name="Action_Man_Pg" xml:space="preserve">
+    <value>Manage Pages</value>
+  </data>
+  <data name="Action_Man_PgCat" xml:space="preserve">
+    <value>Manage Pages and Categories</value>
+  </data>
+  <data name="Action_Man_Prov" xml:space="preserve">
+    <value>Manage Providers</value>
+  </data>
+  <data name="Action_Mod_1Pg" xml:space="preserve">
+    <value>Modify Page</value>
+  </data>
+  <data name="Action_Mod_Pg" xml:space="preserve">
+    <value>Modify Pages</value>
+  </data>
+  <data name="Action_Rd_1Pg" xml:space="preserve">
+    <value>Read Page</value>
+  </data>
+  <data name="Action_Rd_Pg" xml:space="preserve">
+    <value>Read Pages</value>
+  </data>
+  <data name="Action_Up_1Attn" xml:space="preserve">
+    <value>Upload Attachments</value>
+  </data>
+  <data name="Action_Up_Attn" xml:space="preserve">
+    <value>Upload Attachments</value>
+  </data>
+  <data name="Action_Up_Files" xml:space="preserve">
+    <value>Upload Files</value>
+  </data>
+  <data name="CouldNotCreateGroup" xml:space="preserve">
+    <value>Nelze vytvořit skupinu</value>
+  </data>
+  <data name="CouldNotUpdateGroup" xml:space="preserve">
+    <value>Nemohu aktualizovat skupinu</value>
+  </data>
+  <data name="GroupCreated" xml:space="preserve">
+    <value>Skupina vytvořena</value>
+  </data>
+  <data name="GroupDeleted" xml:space="preserve">
+    <value>Skupina smazána</value>
+  </data>
+  <data name="GroupUpdated" xml:space="preserve">
+    <value>Skupina byla aktualizována</value>
+  </data>
+  <data name="CouldNotSaveFile" xml:space="preserve">
+    <value>Nelze uložit soubor</value>
+  </data>
+  <data name="NoSimilarPages" xml:space="preserve">
+    <value>Nejsou stránky s podobným jménem nebo titulkem.</value>
+  </data>
+  <data name="SearchStats" xml:space="preserve">
+    <value>Hledání bylo provedeno přes &lt;b&gt;{0}&lt;/b&gt; (&lt;b&gt;{1} dokumentů&lt;/b&gt;, &lt;b&gt;{2} slov&lt;/b&gt;), dokončeno za &lt;b&gt;{3:N1} sekund&lt;/b&gt; a získáno &lt;b&gt;{4} výsledků&lt;/b&gt;.</value>
+  </data>
+  <data name="InvalidDisplayName" xml:space="preserve">
+    <value>Neplatné Zobrazované jméno</value>
+  </data>
+  <data name="CouldNotCreateUser" xml:space="preserve">
+    <value>Nemohu vytvořit Uživatele</value>
+  </data>
+  <data name="CouldNotUpdateUser" xml:space="preserve">
+    <value>Nemohu změnit Uživatele</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>Uživatel vytvořen</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>Uživatel změněn</value>
+  </data>
+  <data name="RootNamespace" xml:space="preserve">
+    <value>&lt;kořenový uzel&gt;</value>
+  </data>
+  <data name="CouldNotCreateNamespace" xml:space="preserve">
+    <value>Nemohu vytvořit jmenný prostor (Namespace)</value>
+  </data>
+  <data name="InvalidNamespaceName" xml:space="preserve">
+    <value>Neplatný jmenný prostor (Namespace)</value>
+  </data>
+  <data name="NamespaceCreated" xml:space="preserve">
+    <value>Jmenný prostor vyvořen</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zavřít</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Přílohy</value>
+  </data>
+  <data name="ThereAreAttachments" xml:space="preserve">
+    <value>Existují soubory připojené k této stránce</value>
+  </data>
+  <data name="NoSnippets" xml:space="preserve">
+    <value>Žádné úryvky</value>
+  </data>
+  <data name="LinkTitleOptional" xml:space="preserve">
+    <value>Titulek odkazu (volitelněl)</value>
+  </data>
+  <data name="UpLevel" xml:space="preserve">
+    <value>Nahoru o jednu úroveň</value>
+  </data>
+  <data name="CannotRenameItem" xml:space="preserve">
+    <value>Nemoho přejmenovat vybranou položku</value>
+  </data>
+  <data name="CannotStoreFile" xml:space="preserve">
+    <value>Nemohu uložit soubor</value>
+  </data>
+  <data name="CannotCreateNewDirectory" xml:space="preserve">
+    <value>Nemohu vytvořit nový adresář</value>
+  </data>
+  <data name="DiffColorKey" xml:space="preserve">
+    <value>Klíč barvy: &lt;span style="background-color: #88CC33;"&gt;přidaný text&lt;/span&gt; / &lt;span style="background-color: #FFDF66;"&gt;odstraněný text&lt;/span&gt;.</value>
+  </data>
+  <data name="EarlierThisMonth" xml:space="preserve">
+    <value>Dříve tento měsíc</value>
+  </data>
+  <data name="EarlierThisWeek" xml:space="preserve">
+    <value>Dříve tento týden</value>
+  </data>
+  <data name="LastMonth" xml:space="preserve">
+    <value>Minulý měsíc</value>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>Starší</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Dnes</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Včera</value>
+  </data>
+  <data name="LoginNoticeFile" xml:space="preserve">
+    <value>Soubor s poznámkou pro přihlášení</value>
+  </data>
+  <data name="MayBeInaccurate" xml:space="preserve">
+    <value>Může být nepřesné</value>
+  </data>
+  <data name="AccessDeniedTitle" xml:space="preserve">
+    <value>Přístup odepřen</value>
+  </data>
+  <data name="AccountActivated" xml:space="preserve">
+    <value>Váš účet byl úspěšně aktivován. Prosím přihlaste se.</value>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Aktivace účtu.</value>
+  </data>
+  <data name="AccountActivationMessageFile" xml:space="preserve">
+    <value>Soubor zprávy pro aktivaci účtu</value>
+  </data>
+  <data name="AccountAlreadyActive" xml:space="preserve">
+    <value>Účet je již aktivní</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Účet vytvořen úspěšně</value>
+  </data>
+  <data name="AccountNotActivated" xml:space="preserve">
+    <value>Chyba aktivace účtu</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Účet nenalezen</value>
+  </data>
+  <data name="ActivationAdmin" xml:space="preserve">
+    <value>Před přihlášením musí být Váš účet povolen administrátorem.</value>
+  </data>
+  <data name="ActivationAuto" xml:space="preserve">
+    <value>Váš účet se stane aktivním po registraci.</value>
+  </data>
+  <data name="ActivationEmail" xml:space="preserve">
+    <value>Musíte aktivovat Váš účet do 24 hodin, použijte instrukce které dostane v emailu.</value>
+  </data>
+  <data name="AdminDowngraded" xml:space="preserve">
+    <value>Administrátor snížen na uživatele</value>
+  </data>
+  <data name="AdminTitle" xml:space="preserve">
+    <value>Administrace</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>Všechny stránky</value>
+  </data>
+  <data name="AllPagesTitle" xml:space="preserve">
+    <value>Wiki Index</value>
+  </data>
+  <data name="Anchor" xml:space="preserve">
+    <value>Odkaz</value>
+  </data>
+  <data name="AnchorId" xml:space="preserve">
+    <value>ID odkazu</value>
+  </data>
+  <data name="AnchorLink" xml:space="preserve">
+    <value>Cíl odkazu</value>
+  </data>
+  <data name="AnchorTitle" xml:space="preserve">
+    <value>Titulek odkazu</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Zpět</value>
+  </data>
+  <data name="BackToHistory" xml:space="preserve">
+    <value>Zpět na historii stránky</value>
+  </data>
+  <data name="Bigger" xml:space="preserve">
+    <value>Větší</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Tučně</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>Box</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>od</value>
+  </data>
+  <data name="CachedPages" xml:space="preserve">
+    <value>Stránky v cache</value>
+  </data>
+  <data name="CannotDisableDefaultProvider" xml:space="preserve">
+    <value>Nelze zakázat implictního poskytovatele</value>
+  </data>
+  <data name="CannotUnloadDefaultProvider" xml:space="preserve">
+    <value>Nelze odstranit implicitního poskytovatele</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="CategoriesMerged" xml:space="preserve">
+    <value>Sloučené kategorie</value>
+  </data>
+  <data name="CategorizedAs" xml:space="preserve">
+    <value>Kategorizován jako</value>
+  </data>
+  <data name="CategoryDeleted" xml:space="preserve">
+    <value>Kategorie smazána</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>Kategorie nenalezena</value>
+  </data>
+  <data name="CategoryRenamed" xml:space="preserve">
+    <value>Kategorie přejmenována</value>
+  </data>
+  <data name="CategorySaved" xml:space="preserve">
+    <value>Kategorie uložena</value>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="CodeBlock" xml:space="preserve">
+    <value>Blokový kód</value>
+  </data>
+  <data name="CodeInline" xml:space="preserve">
+    <value>Řádkový kód</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Poznámka</value>
+  </data>
+  <data name="ConfigSaved" xml:space="preserve">
+    <value>Konfigurace úspěšně uložena.</value>
+  </data>
+  <data name="ConfigurationString" xml:space="preserve">
+    <value>Konfigurační řetězec</value>
+  </data>
+  <data name="ConfigValuesReset" xml:space="preserve">
+    <value>Konfigurační hodnoty vráceny na předchozí hodnoty</value>
+  </data>
+  <data name="ConfirmOperation" xml:space="preserve">
+    <value>Opravdu chcete provést operaci?</value>
+  </data>
+  <data name="CouldRequireLogin" xml:space="preserve">
+    <value>může vyžadovat přihlášení</value>
+  </data>
+  <data name="CreateNewPage" xml:space="preserve">
+    <value>Vytvořit novou stránku</value>
+  </data>
+  <data name="CreatePage" xml:space="preserve">
+    <value>Vytvořit stránku</value>
+  </data>
+  <data name="CreateThePage" xml:space="preserve">
+    <value>vytvořit stránku</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Aktuální</value>
+  </data>
+  <data name="CurrentRevision" xml:space="preserve">
+    <value>Aktuální revize</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Datum/Čas</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Smazat</value>
+  </data>
+  <data name="DiffTitle" xml:space="preserve">
+    <value>Rozdíly</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Zakázán</value>
+  </data>
+  <data name="Discuss" xml:space="preserve">
+    <value>Diskutovat</value>
+  </data>
+  <data name="DiscussionFor" xml:space="preserve">
+    <value>Diskutovat o</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Stáhnout</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editovat</value>
+  </data>
+  <data name="EditingFile" xml:space="preserve">
+    <value>Editovat soubor</value>
+  </data>
+  <data name="EditNoticeFile" xml:space="preserve">
+    <value>Editovat soubor poznámky</value>
+  </data>
+  <data name="EditPage" xml:space="preserve">
+    <value>Editovat stránku</value>
+  </data>
+  <data name="EditThisPage" xml:space="preserve">
+    <value>Editovat tuto stánku</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>Editace</value>
+  </data>
+  <data name="EmailSaved" xml:space="preserve">
+    <value>Emailová adresa byla uložena</value>
+  </data>
+  <data name="EmailsNotEqual" xml:space="preserve">
+    <value>Emaily nejsou stejné</value>
+  </data>
+  <data name="EnterTitleAndUrl" xml:space="preserve">
+    <value>Musíte vložit jak titulek tak URL</value>
+  </data>
+  <data name="ErrorDeletingFile" xml:space="preserve">
+    <value>Chyba při mazání souboru</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Escape" xml:space="preserve">
+    <value>Escape</value>
+  </data>
+  <data name="ExternalLink" xml:space="preserve">
+    <value>Externí odkaz</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Soubor již existuje</value>
+  </data>
+  <data name="FileLink" xml:space="preserve">
+    <value>Odkaz na lokální soubor</value>
+  </data>
+  <data name="FileManagement" xml:space="preserve">
+    <value>Správa souborů (nové okno)</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Soubor nenalezen</value>
+  </data>
+  <data name="FileSaved" xml:space="preserve">
+    <value>Soubor uložen</value>
+  </data>
+  <data name="FilesDiskUsage" xml:space="preserve">
+    <value>Využití disku soubory</value>
+  </data>
+  <data name="FileTooBig" xml:space="preserve">
+    <value>Soubor je příliš velký</value>
+  </data>
+  <data name="FileVoid" xml:space="preserve">
+    <value>Název souboru je prázdný</value>
+  </data>
+  <data name="FooterFile" xml:space="preserve">
+    <value>Soubor patičky</value>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>Zakázané</value>
+  </data>
+  <data name="FullView" xml:space="preserve">
+    <value>Plný pohled (nové okno)</value>
+  </data>
+  <data name="H1" xml:space="preserve">
+    <value>H1</value>
+  </data>
+  <data name="H2" xml:space="preserve">
+    <value>H2</value>
+  </data>
+  <data name="H3" xml:space="preserve">
+    <value>H3</value>
+  </data>
+  <data name="H4" xml:space="preserve">
+    <value>H4 (používejte opatrně)</value>
+  </data>
+  <data name="HeaderFile" xml:space="preserve">
+    <value>Soubor hlavičky</value>
+  </data>
+  <data name="HideBreadcrumbsTrail" xml:space="preserve">
+    <value>Klikněte zde pro schování drobečkové navigace</value>
+  </data>
+  <data name="HidePreview" xml:space="preserve">
+    <value>Schovat náhled</value>
+  </data>
+  <data name="HideShow" xml:space="preserve">
+    <value>Schovat/ukázat</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Historie</value>
+  </data>
+  <data name="HistoryTitle" xml:space="preserve">
+    <value>Historie stránky</value>
+  </data>
+  <data name="HtmlHeadFile" xml:space="preserve">
+    <value>Soubor hlavičky HTML</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Obrázek</value>
+  </data>
+  <data name="ImageAuto" xml:space="preserve">
+    <value>Obrázek - zarovnat auto</value>
+  </data>
+  <data name="ImageBigUrl" xml:space="preserve">
+    <value>Velký obrázek URL/Link URL (nepovinné)</value>
+  </data>
+  <data name="ImageInline" xml:space="preserve">
+    <value>Obrázek - Inline (bez okrajů)</value>
+  </data>
+  <data name="ImageLeft" xml:space="preserve">
+    <value>Obrázek - Zarovnat vlevo</value>
+  </data>
+  <data name="ImageRight" xml:space="preserve">
+    <value>Obrázek - Zarovnat vpravo</value>
+  </data>
+  <data name="ImageTitle" xml:space="preserve">
+    <value>Titulek obrázku</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>URL obrázku</value>
+  </data>
+  <data name="InactiveUsers" xml:space="preserve">
+    <value>neaktivní</value>
+    <comment>Referred to the count of inactive users, for example Users: 8 (3 inactive)</comment>
+  </data>
+  <data name="InsertSnippet" xml:space="preserve">
+    <value>Vložit úryvek</value>
+  </data>
+  <data name="InvalidBackupNumber" xml:space="preserve">
+    <value>Neplatné číslo: musí být větší nebo rovno nule (nechejte prázdné pro zakázání automatického mazání záloh) </value>
+  </data>
+  <data name="InvalidCacheCutSize" xml:space="preserve">
+    <value>Invalid Cache Cut size: musí být integer větší než 0 a menší než Cache size</value>
+  </data>
+  <data name="InvalidCacheSize" xml:space="preserve">
+    <value>Neplatná velikost Cache: musí být celé číslo větší než 0</value>
+  </data>
+  <data name="InvalidCategoryName" xml:space="preserve">
+    <value>Neplatný název kategorie</value>
+  </data>
+  <data name="InvalidContactEmail" xml:space="preserve">
+    <value>Neplatný kontaktní mail</value>
+  </data>
+  <data name="InvalidDateTimeFormat" xml:space="preserve">
+    <value>Neplatný formát Datum/Čas: musí být platný .NET vzor</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Neplatná email adresa</value>
+  </data>
+  <data name="InvalidFileAccessTries" xml:space="preserve">
+    <value>Neplatný File Access tries: musí být celé číslo větší než 0</value>
+  </data>
+  <data name="InvalidFileAccessTryDelay" xml:space="preserve">
+    <value>Invalid File Access try Delay: musí být celé číslo větší než 0</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Neplatný typ souboru</value>
+  </data>
+  <data name="InvalidMainUrl" xml:space="preserve">
+    <value>Neplatné hlavní URL: musí být kompletní URL a musí končit lomítkem</value>
+  </data>
+  <data name="InvalidMaxFileSize" xml:space="preserve">
+    <value>Neplatné Max file size: musí být větší než nula a menší než 20,480 KB</value>
+  </data>
+  <data name="InvalidMaxLogSize" xml:space="preserve">
+    <value>Neplatné Max Log size: musí být větší než 8 a menší než 10,240 KB</value>
+  </data>
+  <data name="InvalidNavPath" xml:space="preserve">
+    <value>Neplatná navigační cesta: nejméně 2 stránky musí být specifikovány</value>
+  </data>
+  <data name="InvalidNavPathName" xml:space="preserve">
+    <value>Neplatný název navigační cesty</value>
+  </data>
+  <data name="InvalidPageName" xml:space="preserve">
+    <value>Naplatný název stránky</value>
+  </data>
+  <data name="InvalidPageTitle" xml:space="preserve">
+    <value>Neplatný titulek stránky</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Neplatné heslo</value>
+  </data>
+  <data name="InvalidPort" xml:space="preserve">
+    <value>Neplatný port (musí být mezi 1 a 65535)</value>
+  </data>
+  <data name="InvalidSenderEmail" xml:space="preserve">
+    <value>Neplatný email odesílatele</value>
+  </data>
+  <data name="InvalidSmtpServer" xml:space="preserve">
+    <value>Neplatný SMTP server</value>
+  </data>
+  <data name="InvalidSnippetName" xml:space="preserve">
+    <value>Neplatný název úryvku</value>
+  </data>
+  <data name="InvalidUsername" xml:space="preserve">
+    <value>Neplatné uživatelské jméno: musí mít nejméně 4 znaky, a nesmí obsahovat slova 'admin' nebo 'guest', a musí použivat písmena, číslice, mezeru a tečku.</value>
+  </data>
+  <data name="InvalidWikiTitle" xml:space="preserve">
+    <value>Neplatný Wiki Titulek: nemůže být prázdný a nesmí obsahovat znaky pro nový řadek</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Kurzíva</value>
+  </data>
+  <data name="LastModifiedPage" xml:space="preserve">
+    <value>Poslední změněná stránka</value>
+  </data>
+  <data name="LatestUser" xml:space="preserve">
+    <value>Poslední uživatel</value>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>Nový řádek (jednoduchý)</value>
+  </data>
+  <data name="LinkTitle" xml:space="preserve">
+    <value>Titulek odkazu</value>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>URL odkazu</value>
+  </data>
+  <data name="LocatedIn" xml:space="preserve">
+    <value>Umístěn v</value>
+  </data>
+  <data name="LogDiskUsage" xml:space="preserve">
+    <value>Využití diskového prostoru pro Log soubory</value>
+  </data>
+  <data name="LoggedAsAdmin" xml:space="preserve">
+    <value>Aktuálně jste přihlášen jako pevný uživatel admin a proto nemůžete editovat svůj profil.</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Přihlásit</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Přihlásit/Odhlásit</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Odhlásit</value>
+  </data>
+  <data name="LostPassword" xml:space="preserve">
+    <value>Ztracené heslo?</value>
+  </data>
+  <data name="MassEmailSent" xml:space="preserve">
+    <value>Hromadný email zaslán (doručení může chvilku trvat)</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Zpráva</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>Zpráva poslána</value>
+  </data>
+  <data name="MessageTitle" xml:space="preserve">
+    <value>Napsat zprávu</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Změněno</value>
+  </data>
+  <data name="NavPathAlreadyExists" xml:space="preserve">
+    <value>Navigační cesty již existují</value>
+  </data>
+  <data name="NavPathDeleted" xml:space="preserve">
+    <value>Navigační cesty smazány</value>
+  </data>
+  <data name="NavPathNotFound" xml:space="preserve">
+    <value>Navigační cesty nenalezeny</value>
+  </data>
+  <data name="NavPathSaved" xml:space="preserve">
+    <value>Navigační cesty uloženy</value>
+  </data>
+  <data name="NavPathTitle" xml:space="preserve">
+    <value>Navigační cesty</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>n/c</value>
+    <comment>It means 'not categorized'</comment>
+  </data>
+  <data name="NewerRevision" xml:space="preserve">
+    <value>Novější revize</value>
+  </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>Novější revize nalezena</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Další stránka</value>
+  </data>
+  <data name="NoFiles" xml:space="preserve">
+    <value>Nejsou soubory</value>
+  </data>
+  <data name="NoMessages" xml:space="preserve">
+    <value>Žádné zprávy pro tuto stránku. Buďte první!</value>
+  </data>
+  <data name="NoPagesInThisCategory" xml:space="preserve">
+    <value>Žádná stránka nenalezena v této kategorii</value>
+  </data>
+  <data name="NoWiki" xml:space="preserve">
+    <value>NoWiki tag</value>
+  </data>
+  <data name="OlderRevision" xml:space="preserve">
+    <value>Starší revize</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>Online uživatelé</value>
+  </data>
+  <data name="OnlyDllFilesAllowed" xml:space="preserve">
+    <value>Jen soubory DLL jsou povoleny</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>Operace</value>
+  </data>
+  <data name="OperationTitle" xml:space="preserve">
+    <value>Operace</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>nebo</value>
+    <comment>It means 'you can do this OR this"</comment>
+  </data>
+  <data name="PageAlreadyExists" xml:space="preserve">
+    <value>Stránka již existuje</value>
+  </data>
+  <data name="PageBackupsDeleted" xml:space="preserve">
+    <value>Zálohy stránek smazány</value>
+  </data>
+  <data name="PageDeleted" xml:space="preserve">
+    <value>Stránka byla smazána</value>
+  </data>
+  <data name="PageDiscussionCleared" xml:space="preserve">
+    <value>Diskuze ke stránce vyčištěna</value>
+  </data>
+  <data name="PageDoesNotExistInProvider" xml:space="preserve">
+    <value>Stránka ##PAGENAME## neexistuje pro aktuálního poskytovale</value>
+  </data>
+  <data name="PageFooterFile" xml:space="preserve">
+    <value>Soubor patičky stránky</value>
+  </data>
+  <data name="PageHeaderFile" xml:space="preserve">
+    <value>Soubor hlavičky stránky</value>
+  </data>
+  <data name="PageHistory" xml:space="preserve">
+    <value>Historie stránky</value>
+  </data>
+  <data name="PageLink" xml:space="preserve">
+    <value>Odkaz na stránku</value>
+  </data>
+  <data name="PageLocked" xml:space="preserve">
+    <value>Tato stránka je uzamčená</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>Stránka nenalezena</value>
+  </data>
+  <data name="PageNotFoundTitle" xml:space="preserve">
+    <value>Stránka nenalezena</value>
+  </data>
+  <data name="PagePublic" xml:space="preserve">
+    <value>Tato stránka je veřejná</value>
+  </data>
+  <data name="PageRenamed" xml:space="preserve">
+    <value>Stránka byla přejmenována</value>
+  </data>
+  <data name="PageRevision" xml:space="preserve">
+    <value>Revize stránky</value>
+  </data>
+  <data name="PageSaved" xml:space="preserve">
+    <value>Stránka uložena</value>
+  </data>
+  <data name="PagesDiskUsage" xml:space="preserve">
+    <value>Využítí disku stránkami</value>
+  </data>
+  <data name="PageSetLocked" xml:space="preserve">
+    <value>Stránka nastavena na Uzamčená</value>
+  </data>
+  <data name="PageSetNormal" xml:space="preserve">
+    <value>Stránka nastavena na Normalní</value>
+  </data>
+  <data name="PageSetPublic" xml:space="preserve">
+    <value>Stránka nastavena na Veřejná</value>
+  </data>
+  <data name="PagesOfCategory" xml:space="preserve">
+    <value>Stránky kategorie</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Titulek stránky</value>
+  </data>
+  <data name="PageUpdates" xml:space="preserve">
+    <value>Změny stránky</value>
+  </data>
+  <data name="PasswordResetMessageFile" xml:space="preserve">
+    <value>Soubor zprávy pro vymazání hesla</value>
+  </data>
+  <data name="PasswordSaved" xml:space="preserve">
+    <value>Heslo bylo uloženo</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>Hesla nejsou stejná</value>
+  </data>
+  <data name="Paths" xml:space="preserve">
+    <value>Cesty</value>
+  </data>
+  <data name="PerformASearch" xml:space="preserve">
+    <value>provést hledání</value>
+  </data>
+  <data name="PleaseSelectValidBackup" xml:space="preserve">
+    <value>Prosím vyberte platnou zálohu</value>
+  </data>
+  <data name="Posted" xml:space="preserve">
+    <value>Posláno</value>
+  </data>
+  <data name="PostMessage" xml:space="preserve">
+    <value>Poslat zprávu</value>
+  </data>
+  <data name="PostTitle" xml:space="preserve">
+    <value>Zaslání zprávy</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Náhled</value>
+  </data>
+  <data name="PreviewCreated" xml:space="preserve">
+    <value>Náhled vytvořen, viz konec stránky.</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>Předchozí stránka</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Tisk</value>
+  </data>
+  <data name="PrinterFriendlyVersion" xml:space="preserve">
+    <value>Verze pro tisk</value>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>Uživatelský profil</value>
+  </data>
+  <data name="ProviderConfigurationSaved" xml:space="preserve">
+    <value>Konfigurační data poskytovatel uložena</value>
+  </data>
+  <data name="ProviderDisabled" xml:space="preserve">
+    <value>Poskytovatel zakázán</value>
+  </data>
+  <data name="ProviderEnabled" xml:space="preserve">
+    <value>Poskytovatel povolen</value>
+  </data>
+  <data name="ProviderNotFound" xml:space="preserve">
+    <value>Poskytovatel nenalezen</value>
+  </data>
+  <data name="ProviderUnloaded" xml:space="preserve">
+    <value>Poskytovatel uvolněn</value>
+  </data>
+  <data name="RecentPageUpdates" xml:space="preserve">
+    <value>Poslední změněné stránky</value>
+  </data>
+  <data name="RedirectedFrom" xml:space="preserve">
+    <value>Přesměrováno z</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Aktualizovat</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Vytvořit účet</value>
+  </data>
+  <data name="RegistrationDisabled" xml:space="preserve">
+    <value>Zakázáno vytváření účtů.</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>Odpověď</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Chybí požadované pole</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Revize</value>
+  </data>
+  <data name="RevisionComment" xml:space="preserve">
+    <value>Poznámka</value>
+  </data>
+  <data name="RollbackCompleted" xml:space="preserve">
+    <value>Vrácení dokončeno</value>
+  </data>
+  <data name="RssForTheWiki" xml:space="preserve">
+    <value>Informovat o změně pro celou Wiki (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisCategory" xml:space="preserve">
+    <value>Informovat o změně pro tuto kategorii (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisDiscussion" xml:space="preserve">
+    <value>Informovat o změně pro tuto diskuzi (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisPage" xml:space="preserve">
+    <value>Informovat o změně pro tuto stránku (RSS 2.0)</value>
+  </data>
+  <data name="ScriptDetected" xml:space="preserve">
+    <value>Nepovolený  tag SCRIPT detekován v textu</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Hledat</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>Vyhledávací stroj</value>
+  </data>
+  <data name="SendAMessage" xml:space="preserve">
+    <value>Poslat zprávu</value>
+  </data>
+  <data name="ServerUptime" xml:space="preserve">
+    <value>Server v provozu</value>
+  </data>
+  <data name="SidebarFile" xml:space="preserve">
+    <value>Soubor pro boční panel</value>
+  </data>
+  <data name="Smaller" xml:space="preserve">
+    <value>Menší</value>
+  </data>
+  <data name="SnippetAlreadyExists" xml:space="preserve">
+    <value>Úryvek již existuje</value>
+  </data>
+  <data name="SnippetDeleted" xml:space="preserve">
+    <value>Úryvek smazán</value>
+  </data>
+  <data name="SnippetNotFound" xml:space="preserve">
+    <value>Úryvek nenalezen</value>
+  </data>
+  <data name="SnippetSaved" xml:space="preserve">
+    <value>Úryvek uložen</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>Řadit dle data a času</value>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>Řadit dle titulku</value>
+  </data>
+  <data name="SortByUser" xml:space="preserve">
+    <value>Řadit dle uživatele</value>
+  </data>
+  <data name="SpecialTags" xml:space="preserve">
+    <value>Speciální tagy</value>
+  </data>
+  <data name="Striked" xml:space="preserve">
+    <value>Přeškrtnuté</value>
+  </data>
+  <data name="SubjectAndBodyNeeded" xml:space="preserve">
+    <value>Musíte vložit jak předmět tak tělo zprávy.</value>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>Dolní index</value>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>Horní index</value>
+  </data>
+  <data name="TableOfContents" xml:space="preserve">
+    <value>Obsah</value>
+  </data>
+  <data name="TempDiskUsage" xml:space="preserve">
+    <value>Velikost dočasných souborů</value>
+  </data>
+  <data name="TextareaSize" xml:space="preserve">
+    <value>Velikost textového pole</value>
+  </data>
+  <data name="ThePageHasBeenDeletedBy" xml:space="preserve">
+    <value>Stránka byla smazána uživatelem</value>
+  </data>
+  <data name="ThePageHasBeenRenamedBy" xml:space="preserve">
+    <value>Stránka byla přejmenována uživatelem</value>
+  </data>
+  <data name="ThePageHasBeenRolledBackBy" xml:space="preserve">
+    <value>Stránka byla vrácena uživatelem</value>
+  </data>
+  <data name="ThePageHasBeenUpdatedBy" xml:space="preserve">
+    <value>Stránka byla změněna uživatelem</value>
+  </data>
+  <data name="ThisIsAPreview" xml:space="preserve">
+    <value>&lt;b&gt;Pozor&lt;/b&gt;: toto je jen náhled! Pro uložení změn musíte kliknout na tlačítko Uložit!</value>
+  </data>
+  <data name="ThisPageIsLocked" xml:space="preserve">
+    <value>Tato stránka je uzamčena, nicméně může být editována admistrátory.</value>
+  </data>
+  <data name="ThisPageRedirectsTo" xml:space="preserve">
+    <value>Tato stránka je přesměrována na</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Nahoru</value>
+  </data>
+  <data name="TotalDiskUsage" xml:space="preserve">
+    <value>Celkové využití disku</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="UnallowedFileType" xml:space="preserve">
+    <value>Nahraný soubor není povoleného typu</value>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>Nekategorizované</value>
+  </data>
+  <data name="UncategorizedPages" xml:space="preserve">
+    <value>Nekategorizované stránky</value>
+  </data>
+  <data name="Underlined" xml:space="preserve">
+    <value>Podtržení</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>Správa souborů</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Uživatel</value>
+  </data>
+  <data name="UserAccountSaved" xml:space="preserve">
+    <value>Uživatelské konto uloženo</value>
+  </data>
+  <data name="UserActivated" xml:space="preserve">
+    <value>Uživatel aktivován</value>
+  </data>
+  <data name="UserCount" xml:space="preserve">
+    <value>Počet uživatelů</value>
+  </data>
+  <data name="UserDeactivated" xml:space="preserve">
+    <value>Uživatel deaktivován</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>Uživatel smazán</value>
+  </data>
+  <data name="UsernameAlreadyExists" xml:space="preserve">
+    <value>Uživatelské jméno již existuje, prosím vyberte jiné</value>
+  </data>
+  <data name="UsernameIsRequired" xml:space="preserve">
+    <value>SMTP Username je požadováno pokud je zadáno heslo</value>
+  </data>
+  <data name="UserPromoted" xml:space="preserve">
+    <value>Uživatel změněn na administrátora</value>
+  </data>
+  <data name="VersionCheckError" xml:space="preserve">
+    <value>Chyba při získávání informace o verzi</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Pohled</value>
+  </data>
+  <data name="ViewBreadcrumbsTrail" xml:space="preserve">
+    <value>Klikněte zde pro zobrazení celé Breadcrumbs Trail</value>
+  </data>
+  <data name="ViewingFile" xml:space="preserve">
+    <value>Zobrazuji soubor</value>
+  </data>
+  <data name="ViewList" xml:space="preserve">
+    <value>Zobrazit seznam</value>
+  </data>
+  <data name="ViewPageCode" xml:space="preserve">
+    <value>Zobrazit kód stránky</value>
+  </data>
+  <data name="ViewTree" xml:space="preserve">
+    <value>Zobrazit strom</value>
+  </data>
+  <data name="WereYouLookingFor" xml:space="preserve">
+    <value>Nehledáte jednu z těchto stránek?</value>
+  </data>
+  <data name="WikiUpToDate" xml:space="preserve">
+    <value>Vaše Wiki je aktuální</value>
+  </data>
+  <data name="WikiVersion" xml:space="preserve">
+    <value>Wiki Verze</value>
+  </data>
+  <data name="Wizard" xml:space="preserve">
+    <value>Konfigurační Wizard</value>
+  </data>
+  <data name="WrongControlText" xml:space="preserve">
+    <value>Špatný kontrolní text</value>
+  </data>
+  <data name="WrongParameters" xml:space="preserve">
+    <value>Špatné parametry</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>Špatné heslo</value>
+  </data>
+  <data name="WrongUsernamePassword" xml:space="preserve">
+    <value>Špatné uživatelské jméno a/nebo heslo</value>
+  </data>
+  <data name="YouCanAlso" xml:space="preserve">
+    <value>Můžete také</value>
+  </data>
+  <data name="YouMustProvideAFile" xml:space="preserve">
+    <value>Musíte poskytnout soubor</value>
+  </data>
+</root>

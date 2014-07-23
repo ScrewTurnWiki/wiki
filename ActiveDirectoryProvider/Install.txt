@@ -1,0 +1,34 @@
+The Active Directory plugin allows you to authenticate using your Active Directory credentials.
+
+Configuration
+The configuration string of the plugin must at least contain the mapping between ActiveDirectory groups and wiki groups in the form:
+GroupMap=ActiveDirectoryGroup1:WikiGroup1
+GroupMap=ActiveDirectoryGroup2:WikiGroup2
+
+You can also map multiple AD groups to the same wiki group or the other way round, for example
+GroupMap=ActiveDirectoryGroup1,ActiveDirectoryGroup2:WikiGroup1
+GroupMap=ActiveDirectoryGroup1:WikiGroup1,WikiGroup2
+
+Other configuration options are:
+- CommonGroups=wikigroup1[,WikiGroup2...]
+   gives all AD users membership in common wiki groups (Users, etc.)
+- DefaultGroups=WikiGroup1[,WikiGroup2...]
+   gives AD users with no wiki group membership default wiki groups (Users, etc.)
+- Domain=some.domain
+   authenticates against the given domain (if not specified tries to resolve it from the local machine)
+- Server=somedomaincontroller.some.domain
+   authenticates against the given server if the webserver is not joined to the domain (this is mutual exclusive with Domain=some.domain)
+- Username=someusername
+  Password=somepassword
+    queries Active Directory as the specified user on the domain
+- DefaultEmail=example.com
+    In case the user doesn't have an email address in his ActiveDirectory profile, sets the email to a predefined value in the form displayname@example.com
+- CaseInsensitive
+    login username is case insensitive
+
+To activate automatic login with your Active Directory credentials, you have to configure your IIS server to enable "Windows Authentication" and to disable "Anonymous Authentication".
+You have also to modify the web.config file and add the following string inside the <system.web> section:
+<anonymousIdentification enabled="false"/>
+<authentication mode="Windows" />
+
+In Internet Explorer to avoid the username and password prompt, remember to add the wiki to the trusted sites list. This way IE sends authentication data automatically based on your current Windows account.

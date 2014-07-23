@@ -1,0 +1,1754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnchorTitle2" xml:space="preserve">
+    <value>Використати новий Якір, чи зв'язати з інсуючим</value>
+  </data>
+  <data name="BoldTitle" xml:space="preserve">
+    <value>Стиль, що зробить текст жирним</value>
+  </data>
+  <data name="CodeEscapedTitle" xml:space="preserve">
+    <value>Відобразити виділений текст, як блок коду</value>
+  </data>
+  <data name="CodeInlineTitle" xml:space="preserve">
+    <value>Відобразити виділений текст, як стрічку коду</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>Відображати виділений текст, як коментар (приховано від користувачів сторінок)</value>
+  </data>
+  <data name="EscapeTitle" xml:space="preserve">
+    <value>Вставити виділений текст в 'escape' блок, що зачепить відображення всіх wiki- та HTML-пов'язаних символів</value>
+  </data>
+  <data name="ExternalLinkTitle" xml:space="preserve">
+    <value>Вставити поислання на персональний сайт чи свою email-адресу</value>
+  </data>
+  <data name="FileLinkTitle" xml:space="preserve">
+    <value>Вставити посилання на файл чи приєднаний архів</value>
+  </data>
+  <data name="H1Title" xml:space="preserve">
+    <value>Змінити виділений текст на заголовок рівня-1</value>
+  </data>
+  <data name="H2Title" xml:space="preserve">
+    <value>Змінити виділений текст на заголовок рівня-2</value>
+  </data>
+  <data name="H3Title" xml:space="preserve">
+    <value>Змінити виділений текст на заголовок рівня-3</value>
+  </data>
+  <data name="H4Title" xml:space="preserve">
+    <value>Змінити виділений текст на заголовок рівня-4</value>
+  </data>
+  <data name="HRTitle" xml:space="preserve">
+    <value>Вставити горизонтальну лінію (сепаратор)</value>
+  </data>
+  <data name="ImageTitle2" xml:space="preserve">
+    <value>Вставити зображення в сторінку</value>
+  </data>
+  <data name="ItalicTitle" xml:space="preserve">
+    <value>Визначити стиль, як нахилений</value>
+  </data>
+  <data name="LineBreakTitle" xml:space="preserve">
+    <value>Вставити додатковий рядок</value>
+  </data>
+  <data name="NoBrTitle" xml:space="preserve">
+    <value>Вставити виділений текст у 'nobr' блок, що ігнорує переніс тексту у новий рядок</value>
+  </data>
+  <data name="NoWikiTitle" xml:space="preserve">
+    <value>Вставити виділений текст у 'nowiki' блок, що дозволяє ігнорувати мову WikiMarkup</value>
+  </data>
+  <data name="OrderedListTitle" xml:space="preserve">
+    <value>Використувуйте упорядкований перелік, або ж оберніть виділений текст в упорядкований перелік (1,2,3, ...)</value>
+  </data>
+  <data name="PageLinkTitle" xml:space="preserve">
+    <value>Вставте посилання на сторінку wiki</value>
+  </data>
+  <data name="SnippetsTitle" xml:space="preserve">
+    <value>Переглянути існуючи сніпети та використати один з них</value>
+  </data>
+  <data name="SpecialTagsTitle" xml:space="preserve">
+    <value>Переглянути спеціальні теги та скористатися одним з них</value>
+  </data>
+  <data name="StrikedTitle" xml:space="preserve">
+    <value>Обрати для виділеного тексту, стиль закреслений</value>
+  </data>
+  <data name="SubscriptTitle" xml:space="preserve">
+    <value>Виділений текст встановити, як нижній індекс</value>
+  </data>
+  <data name="SuperscriptTitle" xml:space="preserve">
+    <value>Виділений текст встановити, як верхній індекс</value>
+  </data>
+  <data name="SymbolsTitle" xml:space="preserve">
+    <value>Переглянути та вставити спеціальні символи</value>
+  </data>
+  <data name="UnderlinedTitle" xml:space="preserve">
+    <value>Підкреслити виділений текст</value>
+  </data>
+  <data name="UnorderedListTitle" xml:space="preserve">
+    <value>Вставити невпорядкований перелік, або обернути виділений текст у такий (bullet points)</value>
+  </data>
+  <data name="WrapperBoxTitle" xml:space="preserve">
+    <value>Обернути виділений текст в 'box'</value>
+  </data>
+  <data name="ChangeComment" xml:space="preserve">
+    <value>Змінити коментар</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Мета-тег Опис</value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>Мета-тег Ключові Слова</value>
+  </data>
+  <data name="AutoUpdateAvailable" xml:space="preserve">
+    <value>Автооновлення доступне</value>
+  </data>
+  <data name="NAccountsDeleted" xml:space="preserve">
+    <value>$ облікових записів видалено</value>
+    <comment>Имеется в виду "3 записи удалено"</comment>
+  </data>
+  <data name="Formatted" xml:space="preserve">
+    <value>форматований</value>
+  </data>
+  <data name="NoPagesToMigrate" xml:space="preserve">
+    <value>Відсутні Сторінки для міграції</value>
+  </data>
+  <data name="NoProvidersToUpdate" xml:space="preserve">
+    <value>Відсутні Провайдери для оновлення</value>
+  </data>
+  <data name="ProvidersUpdated" xml:space="preserve">
+    <value>Провайдери оновлені, будь ласка, перезавантажте Wiki (вкладинка Адміністрування)</value>
+  </data>
+  <data name="BulkMigrationCompleted" xml:space="preserve">
+    <value>Масова міграція відбулася</value>
+  </data>
+  <data name="BulkMigrationCompletedWithErrors" xml:space="preserve">
+    <value>Масова міграція відбулася з помилками, перевірте звіт (лог)</value>
+  </data>
+  <data name="BulkRebindCompleted" xml:space="preserve">
+    <value>Масова зміна відбулася</value>
+  </data>
+  <data name="NoCategories" xml:space="preserve">
+    <value>Категорії не обрані</value>
+  </data>
+  <data name="NoPages" xml:space="preserve">
+    <value>Відсутні Сторінки для змін</value>
+  </data>
+  <data name="InvalidFileName" xml:space="preserve">
+    <value>Помилкове ім'я файлу</value>
+  </data>
+  <data name="OrderedList" xml:space="preserve">
+    <value>Нумерований перелік</value>
+  </data>
+  <data name="UnorderedList" xml:space="preserve">
+    <value>Ненумерований перелік</value>
+  </data>
+  <data name="LinkToThisSection" xml:space="preserve">
+    <value>Посилання на цей Розділ</value>
+  </data>
+  <data name="NoBr" xml:space="preserve">
+    <value>Тег NoBR</value>
+  </data>
+  <data name="SelectAndDelete" xml:space="preserve">
+    <value>Обрати та видалити</value>
+  </data>
+  <data name="CouldNotMigratePage" xml:space="preserve">
+    <value>Міграція Сторінки не відбулася</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Помилка</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>Нова версія:</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>Найновіше</value>
+  </data>
+  <data name="DiscussionsRss" xml:space="preserve">
+    <value>RSS обговорення</value>
+  </data>
+  <data name="RssForThisCategoryDiscussion" xml:space="preserve">
+    <value>Канал повідомлень щодо оновлення цієї категорії обговорення (RSS 2.0)</value>
+  </data>
+  <data name="CodeEscaped" xml:space="preserve">
+    <value>Блок стороннього коду</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Горизонтальна лінія</value>
+  </data>
+  <data name="Snippets" xml:space="preserve">
+    <value>Сніппети (фрагменти коду)</value>
+  </data>
+  <data name="Symbols" xml:space="preserve">
+    <value>Спеціальні позначення</value>
+  </data>
+  <data name="WrapperBox" xml:space="preserve">
+    <value>Блок</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>Дані Користувача</value>
+  </data>
+  <data name="CouldNotSaveDisplayName" xml:space="preserve">
+    <value>Ваше псевдо не збережено</value>
+  </data>
+  <data name="DisplayNameSaved" xml:space="preserve">
+    <value>Псевдо збережено</value>
+  </data>
+  <data name="UserDeletedMessage" xml:space="preserve">
+    <value>##USER## видалив повідомлення з обговорення сторінки ##PAGE##.</value>
+  </data>
+  <data name="UserDeletedPage" xml:space="preserve">
+    <value>##USER## видалив сторінку ##PAGE##.</value>
+  </data>
+  <data name="UserEditedMessage" xml:space="preserve">
+    <value>##USER## змінив повідомлення в обговоренні сторінки ##PAGE##.</value>
+  </data>
+  <data name="UserPostedMessage" xml:space="preserve">
+    <value>##USER## відправив повідомлення до розділу обговорення сторінки ##PAGE##.</value>
+  </data>
+  <data name="UserRenamedPage" xml:space="preserve">
+    <value>##USER## змінив назву сторінки ##PAGE##.</value>
+  </data>
+  <data name="UserRolledBackPage" xml:space="preserve">
+    <value>##USER## повернув версію сторінки ##PAGE##.</value>
+  </data>
+  <data name="UserUpdatedPage" xml:space="preserve">
+    <value>##USER## обновив сторінку ##PAGE##.</value>
+  </data>
+  <data name="CreateThisPage" xml:space="preserve">
+    <value>Створити цю сторінку</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="Corrupted" xml:space="preserve">
+    <value>Пошкоджено</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SelectYourLanguage" xml:space="preserve">
+    <value>Оберіть мову спілкування</value>
+  </data>
+  <data name="PreferencesSaved" xml:space="preserve">
+    <value>Обране Вами збережено</value>
+  </data>
+  <data name="GoToYourProfile" xml:space="preserve">
+    <value>Потрапити до Вашого запису користувача</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Гість</value>
+  </data>
+  <data name="CouldNotRenameNamespace" xml:space="preserve">
+    <value>Помилка зміни імені Простору Імен</value>
+  </data>
+  <data name="NamespaceRenamed" xml:space="preserve">
+    <value>Назва Простору Імен змінена</value>
+  </data>
+  <data name="SelectTemplate" xml:space="preserve">
+    <value>Вибір шаблону...</value>
+  </data>
+  <data name="Action_Man_Snips_Temps" xml:space="preserve">
+    <value>Управління сніпетами та шаблонами</value>
+  </data>
+  <data name="CouldNotCreateTemplate" xml:space="preserve">
+    <value>Помилка створення шаблону</value>
+  </data>
+  <data name="CouldNotDeleteTemplate" xml:space="preserve">
+    <value>Помилка видалення шаблону</value>
+  </data>
+  <data name="CouldNotSaveTemplate" xml:space="preserve">
+    <value>Помилка збереження шаблону</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>Сніпет</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Шаблон</value>
+  </data>
+  <data name="TemplateCreated" xml:space="preserve">
+    <value>Шаблон створений</value>
+  </data>
+  <data name="TemplateDeleted" xml:space="preserve">
+    <value>Шаблон видалений</value>
+  </data>
+  <data name="TemplateSaved" xml:space="preserve">
+    <value>Шаблон збережено</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Створено</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>Створено</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Змінено</value>
+  </data>
+  <data name="ModifiedOn" xml:space="preserve">
+    <value>Змінено</value>
+  </data>
+  <data name="AMessageWasSentCheckInbox" xml:space="preserve">
+    <value>На Вашу адресу надіслано повідомлення. Будь ласка, перевірте свою пошту.</value>
+  </data>
+  <data name="NewPasswordSavedPleaseLogin" xml:space="preserve">
+    <value>Ваш новий пароль збережено, для авторизації скористайтеся цією сторінкою: &lt;a href="Login.aspx" title="Login"&gt;Login&lt;/a&gt;</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Скинути пароль</value>
+  </data>
+  <data name="AMessageHasBeenDeletedBy" xml:space="preserve">
+    <value>Повідомлення із темою "##SUBJECT##" видалено користувачем</value>
+  </data>
+  <data name="AMessageHasBeenEditedBy" xml:space="preserve">
+    <value>Повідомлення із темою "##SUBJECT##" змінено користувачем</value>
+  </data>
+  <data name="AMessageHasBeenPostedBy" xml:space="preserve">
+    <value>Повідомлення із темою "##SUBJECT##" відправлено користувачем</value>
+  </data>
+  <data name="Discussion" xml:space="preserve">
+    <value>Обговорення</value>
+  </data>
+  <data name="DiscussionUpdates" xml:space="preserve">
+    <value>Оновлення дискусій</value>
+  </data>
+  <data name="RecentDiscussionUpdates" xml:space="preserve">
+    <value>Останні новини обговорень</value>
+  </data>
+  <data name="ApproveRejectDraft" xml:space="preserve">
+    <value>Затвердити/Відхилити пропозицію</value>
+  </data>
+  <data name="Action_Man_1Disc" xml:space="preserve">
+    <value>Управління сторінкою обговорення</value>
+  </data>
+  <data name="Action_Pst_1Disc" xml:space="preserve">
+    <value>Надіслати повідомлення на сторінку обговорення</value>
+  </data>
+  <data name="Action_Rd_1Disc" xml:space="preserve">
+    <value>Переглянути сторінку обговорення</value>
+  </data>
+  <data name="Action_Man_Perms" xml:space="preserve">
+    <value>Управління доступом</value>
+  </data>
+  <data name="NotificationsStatusSaved" xml:space="preserve">
+    <value>Обраний статус повідомлень збережено</value>
+  </data>
+  <data name="NoConfigurationRequired" xml:space="preserve">
+    <value>Для цього провайдеру немає конфігурації</value>
+  </data>
+  <data name="DataCopied" xml:space="preserve">
+    <value>Здійснюється копіювання діних, будь ласка, змінюйте налаштування Провайдеру зберігання даних у файлі  web.config</value>
+  </data>
+  <data name="DataMigrated" xml:space="preserve">
+    <value>Дані перенесені, будь ласка, перезавантажте веб-апплікацію (сайт)</value>
+  </data>
+  <data name="DllAlreadyExists" xml:space="preserve">
+    <value>Така DLL вже існує</value>
+  </data>
+  <data name="LoadedProviders" xml:space="preserve">
+    <value>Завантажені ### Провайдери</value>
+  </data>
+  <data name="VoidOrInvalidFile" xml:space="preserve">
+    <value>Файл порожній або з помилками</value>
+  </data>
+  <data name="CouldNotDeleteDll" xml:space="preserve">
+    <value>Помилка видалення DLL</value>
+  </data>
+  <data name="DllDeleted" xml:space="preserve">
+    <value>DLL видалена</value>
+  </data>
+  <data name="DefaultProvidersSaved" xml:space="preserve">
+    <value>Головний Провайдер встановлений</value>
+  </data>
+  <data name="ProviderRejectedConfiguration" xml:space="preserve">
+    <value>Обраний Вами провайдер не прийняв означену конфігурацію</value>
+  </data>
+  <data name="CouldNotCreateNavPath" xml:space="preserve">
+    <value>Помилка створення Навігаційного меню</value>
+  </data>
+  <data name="CouldNotDeleteNavPath" xml:space="preserve">
+    <value>Помилка видалення Навігаційного меню</value>
+  </data>
+  <data name="CouldNotSaveNavPath" xml:space="preserve">
+    <value>Помилка збереження Навігаційного меню</value>
+  </data>
+  <data name="NavPathCreated" xml:space="preserve">
+    <value>Навігаційне Меню створено</value>
+  </data>
+  <data name="TheNavPathMustContain" xml:space="preserve">
+    <value>Навігаційне меню потребує хоча б одної сторінки для переходу</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>нічого</value>
+  </data>
+  <data name="ClickToEnableEmailNotifications" xml:space="preserve">
+    <value>Якщо бажаєте отримувати повідомлення з цієї сторінки, позначте тут</value>
+  </data>
+  <data name="EmailNotificationsAreActive" xml:space="preserve">
+    <value>Email-повідомлення з цієї сторінки активовані - натисніть для відключення</value>
+  </data>
+  <data name="CouldNotApproveDraft" xml:space="preserve">
+    <value>Пропозиція відхилена</value>
+  </data>
+  <data name="DraftApproved" xml:space="preserve">
+    <value>Пропозиція затверджена та збережена</value>
+  </data>
+  <data name="DraftRejected" xml:space="preserve">
+    <value>Пропозицію відкинуто та знищено</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Чернетка</value>
+  </data>
+  <data name="ViewChanges" xml:space="preserve">
+    <value>Зміни</value>
+  </data>
+  <data name="DiffingPageTitle" xml:space="preserve">
+    <value>Порівняння &lt;i&gt;##PAGETITLE##&lt;/i&gt;, для версій &lt;i&gt;##REV1##&lt;/i&gt; та &lt;i&gt;##REV2##&lt;/i&gt;</value>
+  </data>
+  <data name="CouldNotCreateSnippet" xml:space="preserve">
+    <value>Помилка створення сніпету</value>
+  </data>
+  <data name="CouldNotDeleteSnippet" xml:space="preserve">
+    <value>Помилка видалення сніпету</value>
+  </data>
+  <data name="CouldNotSaveSnippet" xml:space="preserve">
+    <value>Помилка збереження сніпету</value>
+  </data>
+  <data name="SnippetCreated" xml:space="preserve">
+    <value>Сніпет створений</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Параметри</value>
+  </data>
+  <data name="CouldNotDeleteCategory" xml:space="preserve">
+    <value>Помилка видалення категорії</value>
+  </data>
+  <data name="CouldNotMergeCategories" xml:space="preserve">
+    <value>Помилка об'єднання категорій</value>
+  </data>
+  <data name="CategoryCreated" xml:space="preserve">
+    <value>Категорія створена</value>
+  </data>
+  <data name="CouldNotRenameCategory" xml:space="preserve">
+    <value>Помилка зміни імені категорії</value>
+  </data>
+  <data name="CategoryAlreadyExists" xml:space="preserve">
+    <value>Відповідна категорія вже існує</value>
+  </data>
+  <data name="CouldNotCreateCategory" xml:space="preserve">
+    <value>Помилка створення категорії</value>
+  </data>
+  <data name="GoToCategory" xml:space="preserve">
+    <value>Потрапити до категорії</value>
+  </data>
+  <data name="Rollback" xml:space="preserve">
+    <value>Повернення</value>
+  </data>
+  <data name="RollbackThisPage" xml:space="preserve">
+    <value>Повернення попередньої версії змісту сторінки</value>
+  </data>
+  <data name="Administrate" xml:space="preserve">
+    <value>Адмініструвати</value>
+  </data>
+  <data name="AdministrateThisPage" xml:space="preserve">
+    <value>Адмініструвати цю сторінку</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Права доступу</value>
+  </data>
+  <data name="SetPermissionsForThisPage" xml:space="preserve">
+    <value>Встановити права доступу (дозволи) для цієї сторінки</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AdminTools" xml:space="preserve">
+    <value>Адміністративні інструменти</value>
+  </data>
+  <data name="ViewPageHistory" xml:space="preserve">
+    <value>Історія змін</value>
+  </data>
+  <data name="Action_Man_Disc" xml:space="preserve">
+    <value>Управління сторінкою обговорення</value>
+  </data>
+  <data name="Action_Pst_Disc" xml:space="preserve">
+    <value>Надіслати повідомлення на сторінку обговорення</value>
+  </data>
+  <data name="Action_Rd_Disc" xml:space="preserve">
+    <value>Переглянути сторінку обговорення</value>
+  </data>
+  <data name="CouldNotDeletePage" xml:space="preserve">
+    <value>Помилка видалення сторінки</value>
+  </data>
+  <data name="AllMessagesDeleted" xml:space="preserve">
+    <value>Знищити всі повідомлення</value>
+  </data>
+  <data name="CouldNotDeleteOneOrMoreMessages" xml:space="preserve">
+    <value>Помилка видалення одного чи декількох повідомлень</value>
+  </data>
+  <data name="CouldNotDeletePageBackups" xml:space="preserve">
+    <value>Помилка видалення бекапів сторінки</value>
+  </data>
+  <data name="CouldNotRollbackPage" xml:space="preserve">
+    <value>Не вдалося повернутися до обраної версії сторінки</value>
+  </data>
+  <data name="PageRolledBack" xml:space="preserve">
+    <value>Повернення до обраної версії відбулося</value>
+  </data>
+  <data name="CouldNotRenamePage" xml:space="preserve">
+    <value>Помилка зміни імені сторінки</value>
+  </data>
+  <data name="PageRenamedCouldNotCreateShadowPage" xml:space="preserve">
+    <value>Сторінка отримала нову назву, однак не створена "тіньова" сторінка</value>
+  </data>
+  <data name="PageRenamedCouldNotSetShadowPageContent" xml:space="preserve">
+    <value>Сторінка отримала нову назву, однак не визначений зміст "тіньової" сторінки</value>
+  </data>
+  <data name="GoToPageHistory" xml:space="preserve">
+    <value>Потрапити на сторінку змін</value>
+  </data>
+  <data name="GoToPageDiscussion" xml:space="preserve">
+    <value>Потрапити на сторінку обговорення</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Потрапити на сторінку</value>
+  </data>
+  <data name="CouldNotDeletePermissions" xml:space="preserve">
+    <value>Помилка видалення дозволу доступу</value>
+  </data>
+  <data name="GroupCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>Група створена, але не встановлені права доступа (разрешения)</value>
+  </data>
+  <data name="GroupSavedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>Групу збережено, але не видалені старі права доступу (дозволи)</value>
+  </data>
+  <data name="GroupSavedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>Групу збережено, але нові права доступу (дозволи) не визначені</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteGroup" xml:space="preserve">
+    <value>Права доступу (дозволи) видалені, але не видалена Група</value>
+  </data>
+  <data name="CouldNotSetNamespaceDefaultPage" xml:space="preserve">
+    <value>Не вдалося призначити основною сторінку для Простору Імен</value>
+  </data>
+  <data name="CouldNotSetNamespaceTheme" xml:space="preserve">
+    <value>Не вдалося призначити Тему для Простору Імен</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotCreateDefaultPage" xml:space="preserve">
+    <value>Простір Імен створений, однак, не створена основна сторінка цього Простору</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetDefaultPage" xml:space="preserve">
+    <value>Простір Імен створений, однак, не обрана основна сторінка цього Простору</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetTheme" xml:space="preserve">
+    <value>Простір Імен створений, однак не обрана Тема</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotStoreDefaultPageContent" xml:space="preserve">
+    <value>Простір Імен створений, однак не збережений зміст його основної сторінки</value>
+  </data>
+  <data name="UserCreatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>Запис користувача створений, однак не встановлена Група</value>
+  </data>
+  <data name="UserCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>Запис користувача створений, однак не встановлені права доступу (дозволи) щодо такого</value>
+  </data>
+  <data name="UserUpdatedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>Обліковий запис оновлено, але не видалені старі права доступу (дозволи)</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>Обліковий запис оновлено, але не обрана Група користувачів</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>Обліковий запис оновлено, але не збережені нові Права доступу (дозволи)</value>
+  </data>
+  <data name="PermissionsAndGroupMembershipDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Права доступу і Група користувачів видалені, однак не видалено запис користувача</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Права доступу (дозволи) видалені, але не видалений запис користувача</value>
+  </data>
+  <data name="CouldNotDeleteNamespace" xml:space="preserve">
+    <value>Помилка видалення Простору Імен</value>
+  </data>
+  <data name="NamespaceDeleted" xml:space="preserve">
+    <value>Простір Імен видалений</value>
+  </data>
+  <data name="NamespaceSaved" xml:space="preserve">
+    <value>Прості Імен збережений</value>
+  </data>
+  <data name="CouldNotStorePermissions" xml:space="preserve">
+    <value>Помилка збереження прав доступу (дозволів)</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Група</value>
+  </data>
+  <data name="GoToMainPage" xml:space="preserve">
+    <value>Потрапити на Головну</value>
+  </data>
+  <data name="Action_Crt_Dirs" xml:space="preserve">
+    <value>Створити папки</value>
+  </data>
+  <data name="Action_Crt_Pg" xml:space="preserve">
+    <value>Створити сторінки</value>
+  </data>
+  <data name="Action_Del_1Attn" xml:space="preserve">
+    <value>Знищити вкладення</value>
+  </data>
+  <data name="Action_Del_Attn" xml:space="preserve">
+    <value>Знищити вкладення</value>
+  </data>
+  <data name="Action_Del_Dirs" xml:space="preserve">
+    <value>Видалити папки</value>
+  </data>
+  <data name="Action_Del_Files" xml:space="preserve">
+    <value>Знищити файли</value>
+  </data>
+  <data name="Action_Del_Pg" xml:space="preserve">
+    <value>Видалити сторінки</value>
+  </data>
+  <data name="Action_Down_1Attn" xml:space="preserve">
+    <value>Завантажити вкладення</value>
+  </data>
+  <data name="Action_Down_Attn" xml:space="preserve">
+    <value>Завантажити вкладення</value>
+  </data>
+  <data name="Action_Down_Files" xml:space="preserve">
+    <value>Завантажити файли</value>
+  </data>
+  <data name="Action_FullControl" xml:space="preserve">
+    <value>Повний контроль</value>
+  </data>
+  <data name="Action_List" xml:space="preserve">
+    <value>Зміст (перелік)</value>
+  </data>
+  <data name="Action_Man_1Cat" xml:space="preserve">
+    <value>Управління категоріями</value>
+  </data>
+  <data name="Action_Man_1Pg" xml:space="preserve">
+    <value>Управління сторінкою</value>
+  </data>
+  <data name="Action_Man_Acc" xml:space="preserve">
+    <value>Управління записами користувачів</value>
+  </data>
+  <data name="Action_Man_Cat" xml:space="preserve">
+    <value>Управління Категоріями</value>
+  </data>
+  <data name="Action_Man_Conf" xml:space="preserve">
+    <value>Управління лаштунками</value>
+  </data>
+  <data name="Action_Man_Files" xml:space="preserve">
+    <value>Управління файлами та теками</value>
+  </data>
+  <data name="Action_Man_Grp" xml:space="preserve">
+    <value>Управління групами користувачів</value>
+  </data>
+  <data name="Action_Man_MetaFiles" xml:space="preserve">
+    <value>Управління Мета-Файлами</value>
+  </data>
+  <data name="Action_Man_NavPath" xml:space="preserve">
+    <value>Управління навігаційними меню</value>
+  </data>
+  <data name="Action_Man_Ns" xml:space="preserve">
+    <value>Управління Просторами Імен</value>
+  </data>
+  <data name="Action_Man_Pg" xml:space="preserve">
+    <value>Управління сторінками</value>
+  </data>
+  <data name="Action_Man_PgCat" xml:space="preserve">
+    <value>Управління сторінками та категоріями</value>
+  </data>
+  <data name="Action_Man_Prov" xml:space="preserve">
+    <value>Управління Несучими (Провайдерами)</value>
+  </data>
+  <data name="Action_Mod_1Pg" xml:space="preserve">
+    <value>Редагувати сторінку</value>
+  </data>
+  <data name="Action_Mod_Pg" xml:space="preserve">
+    <value>Редагувати сторінки</value>
+  </data>
+  <data name="Action_Rd_1Pg" xml:space="preserve">
+    <value>Переглянути сторінку</value>
+  </data>
+  <data name="Action_Rd_Pg" xml:space="preserve">
+    <value>Переглянути сторінку</value>
+  </data>
+  <data name="Action_Up_1Attn" xml:space="preserve">
+    <value>Завантажити вкладення</value>
+  </data>
+  <data name="Action_Up_Attn" xml:space="preserve">
+    <value>Завантажити вкладення</value>
+  </data>
+  <data name="Action_Up_Files" xml:space="preserve">
+    <value>Завантажити файли</value>
+  </data>
+  <data name="CouldNotCreateGroup" xml:space="preserve">
+    <value>Помилка створення групи</value>
+  </data>
+  <data name="CouldNotUpdateGroup" xml:space="preserve">
+    <value>Групи не отримали новий стан</value>
+  </data>
+  <data name="GroupCreated" xml:space="preserve">
+    <value>Група створена</value>
+  </data>
+  <data name="GroupDeleted" xml:space="preserve">
+    <value>Група знищена</value>
+  </data>
+  <data name="GroupUpdated" xml:space="preserve">
+    <value>Група оновлена</value>
+  </data>
+  <data name="CouldNotSaveFile" xml:space="preserve">
+    <value>Помилка збереження файлу</value>
+  </data>
+  <data name="NoSimilarPages" xml:space="preserve">
+    <value>З таким заголовком та назвою не існує жодної сторінки</value>
+  </data>
+  <data name="SearchStats" xml:space="preserve">
+    <value>Пошуковий запит, зроблений щодо &lt;b&gt;{0}&lt;/b&gt; (&lt;b&gt;{1} документів&lt;/b&gt;, &lt;b&gt;{2} слів&lt;/b&gt;), завершений на &lt;b&gt;{3:N1} секунді&lt;/b&gt; та видано наступний пошуковий &lt;b&gt;{4} результат&lt;/b&gt;.</value>
+  </data>
+  <data name="InvalidDisplayName" xml:space="preserve">
+    <value>Неіснуючий НікНейм</value>
+  </data>
+  <data name="CouldNotCreateUser" xml:space="preserve">
+    <value>Помилка створення запису користувача</value>
+  </data>
+  <data name="CouldNotUpdateUser" xml:space="preserve">
+    <value>Запис користувача не отримала новий стан</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>Запис користувача створений</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>Запис Користувача оновлено</value>
+  </data>
+  <data name="RootNamespace" xml:space="preserve">
+    <value>&lt;root&gt;</value>
+  </data>
+  <data name="CouldNotCreateNamespace" xml:space="preserve">
+    <value>Помилка створення Простору Імен</value>
+  </data>
+  <data name="InvalidNamespaceName" xml:space="preserve">
+    <value>Неіснуюче ім'я в Просторі Імен</value>
+  </data>
+  <data name="NamespaceCreated" xml:space="preserve">
+    <value>Простір Імен створений</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Закрити</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Вкладення</value>
+  </data>
+  <data name="ThereAreAttachments" xml:space="preserve">
+    <value>До сторінки додані файли</value>
+  </data>
+  <data name="NoSnippets" xml:space="preserve">
+    <value>Немає сніпетів</value>
+  </data>
+  <data name="LinkTitleOptional" xml:space="preserve">
+    <value>Текстова підкладка відсилки (не обов'язково)</value>
+  </data>
+  <data name="UpLevel" xml:space="preserve">
+    <value>Вгору на один рівень</value>
+  </data>
+  <data name="CannotRenameItem" xml:space="preserve">
+    <value>Ім'я, зазначеного Вами не може бути змінено</value>
+  </data>
+  <data name="CannotStoreFile" xml:space="preserve">
+    <value>Файл не збережений</value>
+  </data>
+  <data name="CannotCreateNewDirectory" xml:space="preserve">
+    <value>Нова папка не створена</value>
+  </data>
+  <data name="DiffColorKey" xml:space="preserve">
+    <value>Управління кольорами: &lt;span style="background-color: #88CC33;"&gt;новий текст&lt;/span&gt; / &lt;span style="background-color: #FFDF66;"&gt;видалений текст&lt;/span&gt;.</value>
+  </data>
+  <data name="EarlierThisMonth" xml:space="preserve">
+    <value>Раніше в цьому місяці</value>
+  </data>
+  <data name="EarlierThisWeek" xml:space="preserve">
+    <value>Раніше на цьому тижні</value>
+  </data>
+  <data name="LastMonth" xml:space="preserve">
+    <value>Минулого місяця</value>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>Стара</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Сьогодні</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Вчора</value>
+  </data>
+  <data name="LoginNoticeFile" xml:space="preserve">
+    <value>Повідомлення на сторинці авторизації</value>
+  </data>
+  <data name="MayBeInaccurate" xml:space="preserve">
+    <value>Можливо, але не точно</value>
+  </data>
+  <data name="RedirectedFrom" xml:space="preserve">
+    <value>Передано від</value>
+  </data>
+  <data name="ThisPageRedirectsTo" xml:space="preserve">
+    <value>Ця сторінка передана від</value>
+  </data>
+  <data name="PageFooterFile" xml:space="preserve">
+    <value>Зміст нижньої частини, створюваних сторінок</value>
+  </data>
+  <data name="PageHeaderFile" xml:space="preserve">
+    <value>Зміст верхньої частини, створюваних сторінок</value>
+  </data>
+  <data name="ConfigurationString" xml:space="preserve">
+    <value>Рядок налаштування</value>
+  </data>
+  <data name="EnterTitleAndUrl" xml:space="preserve">
+    <value>Необхідно вказати Назву та URL.</value>
+  </data>
+  <data name="FileLink" xml:space="preserve">
+    <value>Відсилка до локального файлу</value>
+  </data>
+  <data name="FullView" xml:space="preserve">
+    <value>Повний перегляд (нове вікно)</value>
+  </data>
+  <data name="HideBreadcrumbsTrail" xml:space="preserve">
+    <value>Не відображати Хлібні Крихти</value>
+  </data>
+  <data name="InsertSnippet" xml:space="preserve">
+    <value>Додати сніпет</value>
+  </data>
+  <data name="InvalidMaxLogSize" xml:space="preserve">
+    <value>Неправильне значення максимального розміру Log-у: має бути більше 8 і менше 10240 KB</value>
+  </data>
+  <data name="LocatedIn" xml:space="preserve">
+    <value>Знаходиться в</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>чи</value>
+    <comment>Это значит, что "Вы можете сделать это ИЛИ это"</comment>
+  </data>
+  <data name="PageDoesNotExistInProvider" xml:space="preserve">
+    <value>Сторінка ##PAGENAME## не існує в такому керуванні (Провайдері)</value>
+  </data>
+  <data name="PageSaved" xml:space="preserve">
+    <value>Сторінку збережено</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Попередній перегляд</value>
+  </data>
+  <data name="RevisionComment" xml:space="preserve">
+    <value>Коментар</value>
+  </data>
+  <data name="RssForThisCategory" xml:space="preserve">
+    <value>Канал повідомлень щодо оновлення змісту в цій Категорії (RSS 2.0)</value>
+  </data>
+  <data name="ServerUptime" xml:space="preserve">
+    <value>Тривалість роботи Серверу</value>
+  </data>
+  <data name="UserAccountSaved" xml:space="preserve">
+    <value>Запис Користувача збережено</value>
+  </data>
+  <data name="ViewBreadcrumbsTrail" xml:space="preserve">
+    <value>Відображати Хлібні Крихти</value>
+  </data>
+  <data name="AccessDeniedTitle" xml:space="preserve">
+    <value>Доступ заборонено</value>
+  </data>
+  <data name="AccountActivated" xml:space="preserve">
+    <value>Ваш запис користувача активований. Входіть, будь-ласка.</value>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Активація запису користувача</value>
+  </data>
+  <data name="AccountActivationMessageFile" xml:space="preserve">
+    <value>Файл повідомлення про активацію запису користувача</value>
+  </data>
+  <data name="AccountAlreadyActive" xml:space="preserve">
+    <value>Запис користувача вже активований</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Запис користувача створений</value>
+  </data>
+  <data name="AccountNotActivated" xml:space="preserve">
+    <value>Помилка активації запису користувача</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Запис користувача не знайдено</value>
+  </data>
+  <data name="ActivationAdmin" xml:space="preserve">
+    <value>У Вас з'явиться змога авторизуватися лише після схвалення Вашого запису користувача Адміністратором</value>
+  </data>
+  <data name="ActivationAuto" xml:space="preserve">
+    <value>Ваш запис користувача стане дійсним після реєстрації</value>
+  </data>
+  <data name="ActivationEmail" xml:space="preserve">
+    <value>Вам необхідно активувати свій запис користувача протягом 24-х годин, дотримуючись інструкцій з автоматичного реєстраційного email-повідомлення.</value>
+  </data>
+  <data name="AdminDowngraded" xml:space="preserve">
+    <value>Адміністратор знизив статус Користувача</value>
+  </data>
+  <data name="AdminTitle" xml:space="preserve">
+    <value>Адміністрування</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>Усі сторінки</value>
+  </data>
+  <data name="AllPagesTitle" xml:space="preserve">
+    <value>Індекс Wiki</value>
+  </data>
+  <data name="Anchor" xml:space="preserve">
+    <value>Якір</value>
+  </data>
+  <data name="AnchorId" xml:space="preserve">
+    <value>ID якорю</value>
+  </data>
+  <data name="AnchorLink" xml:space="preserve">
+    <value>Відсилка якорю</value>
+  </data>
+  <data name="AnchorTitle" xml:space="preserve">
+    <value>Назва якорю</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Авто</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Повернутися</value>
+  </data>
+  <data name="BackToHistory" xml:space="preserve">
+    <value>Повернутися на сторінку змін</value>
+  </data>
+  <data name="Bigger" xml:space="preserve">
+    <value>Більше</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Напівжирний</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>У рамці</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CachedPages" xml:space="preserve">
+    <value>Кешовані сторінки</value>
+  </data>
+  <data name="CannotDisableDefaultProvider" xml:space="preserve">
+    <value>Немає можливості відключити основну Несучу (Провайдер)</value>
+  </data>
+  <data name="CannotUnloadDefaultProvider" xml:space="preserve">
+    <value>Немає можливості відключити основну Несучу (Провайдер)</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Категорії</value>
+  </data>
+  <data name="CategoriesMerged" xml:space="preserve">
+    <value>Об'єднані категорії</value>
+  </data>
+  <data name="CategorizedAs" xml:space="preserve">
+    <value>Категорії сторінки</value>
+  </data>
+  <data name="CategoryDeleted" xml:space="preserve">
+    <value>Категорія видалена</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>Категорія не знайдена</value>
+  </data>
+  <data name="CategoryRenamed" xml:space="preserve">
+    <value>Ім'я категорії змінено</value>
+  </data>
+  <data name="CategorySaved" xml:space="preserve">
+    <value>Категорія збережена</value>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>Категорії</value>
+  </data>
+  <data name="CodeBlock" xml:space="preserve">
+    <value>Для відображення фрагментів стороннього коду</value>
+  </data>
+  <data name="CodeInline" xml:space="preserve">
+    <value>Для візуального відображення стороннього коду</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Коментар</value>
+  </data>
+  <data name="ConfigSaved" xml:space="preserve">
+    <value>Налаштування збережено</value>
+  </data>
+  <data name="ConfigValuesReset" xml:space="preserve">
+    <value>Повернення до попереднього стану</value>
+  </data>
+  <data name="ConfirmOperation" xml:space="preserve">
+    <value>Ви впевнені, що бажаєте продовжити?</value>
+  </data>
+  <data name="CouldRequireLogin" xml:space="preserve">
+    <value>може знадобитися авторизація</value>
+  </data>
+  <data name="CreateNewPage" xml:space="preserve">
+    <value>Створити нову сторінку</value>
+  </data>
+  <data name="CreatePage" xml:space="preserve">
+    <value>Створити сторінку</value>
+  </data>
+  <data name="CreateThePage" xml:space="preserve">
+    <value>створити цю сторінку</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Поточна</value>
+  </data>
+  <data name="CurrentRevision" xml:space="preserve">
+    <value>Поточна версія</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Дата/Час</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="DiffTitle" xml:space="preserve">
+    <value>Розбіжності</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Відключено</value>
+  </data>
+  <data name="Discuss" xml:space="preserve">
+    <value>Обговорення</value>
+  </data>
+  <data name="DiscussionFor" xml:space="preserve">
+    <value>Тема обговорення</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Завантаження</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редагувати</value>
+  </data>
+  <data name="EditingFile" xml:space="preserve">
+    <value>Редагування файлів</value>
+  </data>
+  <data name="EditNoticeFile" xml:space="preserve">
+    <value>Редагувати файл застереження</value>
+  </data>
+  <data name="EditPage" xml:space="preserve">
+    <value>Редагувати сторінку</value>
+  </data>
+  <data name="EditThisPage" xml:space="preserve">
+    <value>Редагувати цю сторінку</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>Редагувати</value>
+  </data>
+  <data name="EmailSaved" xml:space="preserve">
+    <value>Email адреса збережена</value>
+  </data>
+  <data name="EmailsNotEqual" xml:space="preserve">
+    <value>Неправильний Email</value>
+  </data>
+  <data name="ErrorDeletingFile" xml:space="preserve">
+    <value>Помилка видалення файлу</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Помилка</value>
+  </data>
+  <data name="Escape" xml:space="preserve">
+    <value>Приклад HTML-коду</value>
+  </data>
+  <data name="ExternalLink" xml:space="preserve">
+    <value>Зовнішня відсилка</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Такий файл вже існує</value>
+  </data>
+  <data name="FileManagement" xml:space="preserve">
+    <value>Файлове управління (нове вікно)</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Файл не знайдено</value>
+  </data>
+  <data name="FileSaved" xml:space="preserve">
+    <value>Файл збережено</value>
+  </data>
+  <data name="FilesDiskUsage" xml:space="preserve">
+    <value>Використання дискового простору, завантаженими файлами</value>
+  </data>
+  <data name="FileTooBig" xml:space="preserve">
+    <value>Файл дуже великий</value>
+  </data>
+  <data name="FileVoid" xml:space="preserve">
+    <value>Невірне ім'я файлу</value>
+  </data>
+  <data name="FooterFile" xml:space="preserve">
+    <value>Зміст нижнього колонтитулу</value>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>Заборонено</value>
+  </data>
+  <data name="H1" xml:space="preserve">
+    <value>H1</value>
+  </data>
+  <data name="H2" xml:space="preserve">
+    <value>H2</value>
+  </data>
+  <data name="H3" xml:space="preserve">
+    <value>H3</value>
+  </data>
+  <data name="H4" xml:space="preserve">
+    <value>H4 (використовуйте не часто)</value>
+  </data>
+  <data name="HeaderFile" xml:space="preserve">
+    <value>Зміст верхнього колонтитулу</value>
+  </data>
+  <data name="HidePreview" xml:space="preserve">
+    <value>Не відображати попередній перегляд</value>
+  </data>
+  <data name="HideShow" xml:space="preserve">
+    <value>Не відображати/Відображати</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Історія</value>
+  </data>
+  <data name="HistoryTitle" xml:space="preserve">
+    <value>Історія змін сторінки</value>
+  </data>
+  <data name="HtmlHeadFile" xml:space="preserve">
+    <value>Зміст HTML верхньої частини сторінки</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Зображення</value>
+  </data>
+  <data name="ImageAuto" xml:space="preserve">
+    <value>Зображення - автоматичне вирівнювання</value>
+  </data>
+  <data name="ImageBigUrl" xml:space="preserve">
+    <value>URL зображення повного формату/URL посилання (не обов'язково)</value>
+  </data>
+  <data name="ImageInline" xml:space="preserve">
+    <value>Зображення - в лінію (без бордюрів)</value>
+  </data>
+  <data name="ImageLeft" xml:space="preserve">
+    <value>Зображення - вирівнювання вліво</value>
+  </data>
+  <data name="ImageRight" xml:space="preserve">
+    <value>Зображення - вирівнювання вправо</value>
+  </data>
+  <data name="ImageTitle" xml:space="preserve">
+    <value>Підкладка зображення</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>URL зображення</value>
+  </data>
+  <data name="InactiveUsers" xml:space="preserve">
+    <value>неактивні</value>
+    <comment>Количество бездействующих пользователей, например, Пользователей: 8 (3 неактивно)</comment>
+  </data>
+  <data name="InvalidBackupNumber" xml:space="preserve">
+    <value>Невірне число: має бути більше або дорівнювати нулю (відсутнє значення відключає автоматичне видалення бекапу)</value>
+  </data>
+  <data name="InvalidCacheCutSize" xml:space="preserve">
+    <value>Невірне значення упакованого кешу: має бути цілим числом, більше нуля і менше розміру самого кешу</value>
+  </data>
+  <data name="InvalidCacheSize" xml:space="preserve">
+    <value>Невірне значення кешу: повинно бути більше нуля</value>
+  </data>
+  <data name="InvalidCategoryName" xml:space="preserve">
+    <value>Невірна назва Категорії</value>
+  </data>
+  <data name="InvalidContactEmail" xml:space="preserve">
+    <value>Невірна контактна Email</value>
+  </data>
+  <data name="InvalidDateTimeFormat" xml:space="preserve">
+    <value>Невірний формат Дати/Часу: повинен відповідати .NET зразкам</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Невірна Email</value>
+  </data>
+  <data name="InvalidFileAccessTries" xml:space="preserve">
+    <value>Неправильне значення кількості спроб доступу до файлу: має бути більше 0</value>
+  </data>
+  <data name="InvalidFileAccessTryDelay" xml:space="preserve">
+    <value>Неправильне значення затримки доступу до файлу: має бути більше 0</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Неправильний тип файлу</value>
+  </data>
+  <data name="InvalidMainUrl" xml:space="preserve">
+    <value>Неправильний Головний URL: має бути повною URL-адресою і закінчуватися слешем</value>
+  </data>
+  <data name="InvalidMaxFileSize" xml:space="preserve">
+    <value>Неправильне значення максимального розміру файлу: має бути більше нуля, але не більше 20480 KB</value>
+  </data>
+  <data name="InvalidNavPath" xml:space="preserve">
+    <value>Неправильна навігація сайту: має бути визначено в меню, хоча б 2 сторінки</value>
+  </data>
+  <data name="InvalidNavPathName" xml:space="preserve">
+    <value>Неправильна назва навігації сайту</value>
+  </data>
+  <data name="InvalidPageName" xml:space="preserve">
+    <value>Невірне ім'я сторінки</value>
+  </data>
+  <data name="InvalidPageTitle" xml:space="preserve">
+    <value>Невірна назва сторінки</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Неправильний Пароль</value>
+  </data>
+  <data name="InvalidPort" xml:space="preserve">
+    <value>Неправильний порт (повинен бути в межах від 1 до 65535)</value>
+  </data>
+  <data name="InvalidSenderEmail" xml:space="preserve">
+    <value>Невірна Email-адреса</value>
+  </data>
+  <data name="InvalidSmtpServer" xml:space="preserve">
+    <value>Невірний SMTP Сервер</value>
+  </data>
+  <data name="InvalidSnippetName" xml:space="preserve">
+    <value>Неправильне ім'я сніпета</value>
+  </data>
+  <data name="InvalidUsername" xml:space="preserve">
+    <value>Неправильне ім'я користувача: має містити більше 4 символів, не можна використовувати слова 'Admin' або 'Guest', й використовувати букви, цифри, разом з пробілами й крапками.</value>
+  </data>
+  <data name="InvalidWikiTitle" xml:space="preserve">
+    <value>Невірна Назва Wiki: не может бути порожнім, не можна використовувати символ нового рядку та символи псевдографіки</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Нахилений</value>
+  </data>
+  <data name="LastModifiedPage" xml:space="preserve">
+    <value>Останні зміни сторінки</value>
+  </data>
+  <data name="LatestUser" xml:space="preserve">
+    <value>Останній користувач</value>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>Новий рядок (переведення рядку)</value>
+  </data>
+  <data name="LinkTitle" xml:space="preserve">
+    <value>Текстова підкладка відсилки</value>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>URL адреса</value>
+  </data>
+  <data name="LogDiskUsage" xml:space="preserve">
+    <value>Розмір Логу</value>
+  </data>
+  <data name="LoggedAsAdmin" xml:space="preserve">
+    <value>Ви авторизовані як Майстер-Адміністратор (вбудований профіль), у Вас немає можливості редагувати свій профіль</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Вхід</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Вхід/Вихід</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Вихід</value>
+  </data>
+  <data name="LostPassword" xml:space="preserve">
+    <value>Не пам'ятаєте Пароль?</value>
+  </data>
+  <data name="MassEmailSent" xml:space="preserve">
+    <value>Масована розсилка (тільки затребувана доставка, не спам)</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Повідомлення</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>Повідомлення надіслано</value>
+  </data>
+  <data name="MessageTitle" xml:space="preserve">
+    <value>Створіть повідомлення</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Змінено</value>
+  </data>
+  <data name="NavPathAlreadyExists" xml:space="preserve">
+    <value>Таке Меню Навігації вже існує</value>
+  </data>
+  <data name="NavPathDeleted" xml:space="preserve">
+    <value>Навігаційне Меню знищене</value>
+    <comment>или "Навигационное Меню", на выбор</comment>
+  </data>
+  <data name="NavPathNotFound" xml:space="preserve">
+    <value>Такий Навігаційний путь не знайдено</value>
+  </data>
+  <data name="NavPathSaved" xml:space="preserve">
+    <value>Навігаційне Меню збережено</value>
+  </data>
+  <data name="NavPathTitle" xml:space="preserve">
+    <value>Навігація</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>б/к</value>
+    <comment>Це означає 'без категорій'</comment>
+  </data>
+  <data name="NewerRevision" xml:space="preserve">
+    <value>Немає розбіжностей</value>
+  </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>Знайдена новіша версія</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Наступна сторінка</value>
+  </data>
+  <data name="NoFiles" xml:space="preserve">
+    <value>Немає файлів</value>
+  </data>
+  <data name="NoMessages" xml:space="preserve">
+    <value>На цій сторінці ще немає повідомлень. Ваше буде першим.</value>
+  </data>
+  <data name="NoPagesInThisCategory" xml:space="preserve">
+    <value>До цієї категорії не має відношення жодна з сторінок</value>
+  </data>
+  <data name="NoWiki" xml:space="preserve">
+    <value>Не інтерпретується мовою Wiki</value>
+  </data>
+  <data name="OlderRevision" xml:space="preserve">
+    <value>Стара версія</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>Користувачів на сайті</value>
+  </data>
+  <data name="OnlyDllFilesAllowed" xml:space="preserve">
+    <value>Дозволені лише файли DLL</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>Операції</value>
+  </data>
+  <data name="OperationTitle" xml:space="preserve">
+    <value>Операція</value>
+  </data>
+  <data name="PageAlreadyExists" xml:space="preserve">
+    <value>Така сторінка вже існує</value>
+  </data>
+  <data name="PageBackupsDeleted" xml:space="preserve">
+    <value>Резервні копії сторінки видалені</value>
+  </data>
+  <data name="PageDeleted" xml:space="preserve">
+    <value>Сторінка знищена</value>
+  </data>
+  <data name="PageDiscussionCleared" xml:space="preserve">
+    <value>Обговорення цієї сторінки очищено</value>
+  </data>
+  <data name="PageHistory" xml:space="preserve">
+    <value>Історія змін сторінки</value>
+  </data>
+  <data name="PageLink" xml:space="preserve">
+    <value>Перехід на сторінку</value>
+  </data>
+  <data name="PageLocked" xml:space="preserve">
+    <value>Ця сторінка заблокована</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>Сторінка не знайдена</value>
+  </data>
+  <data name="PageNotFoundTitle" xml:space="preserve">
+    <value>Сторінка не ЗНАЙДЕНА</value>
+  </data>
+  <data name="PagePublic" xml:space="preserve">
+    <value>Ця сторінка - публічна</value>
+  </data>
+  <data name="PageRenamed" xml:space="preserve">
+    <value>Сторінка отримала нову назву</value>
+  </data>
+  <data name="PageRevision" xml:space="preserve">
+    <value>Розбіжності версій</value>
+  </data>
+  <data name="PagesDiskUsage" xml:space="preserve">
+    <value>Розмір простору, який використовують сторінки</value>
+  </data>
+  <data name="PageSetLocked" xml:space="preserve">
+    <value>Сторінка заблокована</value>
+  </data>
+  <data name="PageSetNormal" xml:space="preserve">
+    <value>Сторінка із звичайним статусом</value>
+  </data>
+  <data name="PageSetPublic" xml:space="preserve">
+    <value>Публічна сторінка</value>
+  </data>
+  <data name="PagesOfCategory" xml:space="preserve">
+    <value>Сторінки Категорії</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Назва Сторінки</value>
+  </data>
+  <data name="PageUpdates" xml:space="preserve">
+    <value>Оновлення Сторінки</value>
+  </data>
+  <data name="PasswordResetMessageFile" xml:space="preserve">
+    <value>Повідомлення щодо зміни паролю</value>
+  </data>
+  <data name="PasswordSaved" xml:space="preserve">
+    <value>Пароль збережений</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>Паролі не співпадають</value>
+  </data>
+  <data name="Paths" xml:space="preserve">
+    <value>Шляхи</value>
+  </data>
+  <data name="PerformASearch" xml:space="preserve">
+    <value>знайти</value>
+  </data>
+  <data name="PleaseSelectValidBackup" xml:space="preserve">
+    <value>Будь ласка, оберіть існуючу резервну копію</value>
+  </data>
+  <data name="Posted" xml:space="preserve">
+    <value>Опубліковано</value>
+  </data>
+  <data name="PostMessage" xml:space="preserve">
+    <value>Опублікувати повідомлення</value>
+  </data>
+  <data name="PostTitle" xml:space="preserve">
+    <value>Коментар</value>
+  </data>
+  <data name="PreviewCreated" xml:space="preserve">
+    <value>Попередній перегляд, що Вами обрано, відображений нижче</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>Попередня сторінка</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Друкувати</value>
+  </data>
+  <data name="PrinterFriendlyVersion" xml:space="preserve">
+    <value>Версія для друку</value>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>Профіль користувача</value>
+  </data>
+  <data name="ProviderConfigurationSaved" xml:space="preserve">
+    <value>Конфігурація провайдера збережена</value>
+  </data>
+  <data name="ProviderDisabled" xml:space="preserve">
+    <value>Пррвайдер відключений</value>
+  </data>
+  <data name="ProviderEnabled" xml:space="preserve">
+    <value>Провайдер включений</value>
+  </data>
+  <data name="ProviderNotFound" xml:space="preserve">
+    <value>Провайдер не знайдений</value>
+  </data>
+  <data name="ProviderUnloaded" xml:space="preserve">
+    <value>Провайдер вивантажився</value>
+  </data>
+  <data name="RecentPageUpdates" xml:space="preserve">
+    <value>Найближчі оновлення сторінки</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Перезавантажити</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Створити Запис Користувача</value>
+  </data>
+  <data name="RegistrationDisabled" xml:space="preserve">
+    <value>Створення записів користувачів відключено.</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>Відповідь</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Область, що не використовується</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Розбіжності</value>
+  </data>
+  <data name="RollbackCompleted" xml:space="preserve">
+    <value>Повернення до обраної версії завершено</value>
+  </data>
+  <data name="RssForTheWiki" xml:space="preserve">
+    <value>Повідомлення щодо оновлення змісту по всій Wiki (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisDiscussion" xml:space="preserve">
+    <value>Повідомлення щодо новин обговорень (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisPage" xml:space="preserve">
+    <value>Повідомлення щодо оновлення змісту цієї сторінки (RSS 2.0)</value>
+  </data>
+  <data name="ScriptDetected" xml:space="preserve">
+    <value>Ви використали заборонений тег SCRIPT</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Пошук</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>Пошуковий робот</value>
+  </data>
+  <data name="SendAMessage" xml:space="preserve">
+    <value>Відправити повідомлення</value>
+  </data>
+  <data name="SidebarFile" xml:space="preserve">
+    <value>Зміст сайдбару (меню Wiki)</value>
+  </data>
+  <data name="Smaller" xml:space="preserve">
+    <value>Менше</value>
+  </data>
+  <data name="SnippetAlreadyExists" xml:space="preserve">
+    <value>Такий сніпет вже існує</value>
+  </data>
+  <data name="SnippetDeleted" xml:space="preserve">
+    <value>Сніпет видалений</value>
+  </data>
+  <data name="SnippetNotFound" xml:space="preserve">
+    <value>Сніпет не знайдено</value>
+  </data>
+  <data name="SnippetSaved" xml:space="preserve">
+    <value>Сніпет збережений</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>Відсортовано за датою та часом</value>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>Відсортовано за Назвами</value>
+  </data>
+  <data name="SortByUser" xml:space="preserve">
+    <value>Відсортовано за Користувачами</value>
+  </data>
+  <data name="SpecialTags" xml:space="preserve">
+    <value>Спец.теги</value>
+  </data>
+  <data name="Striked" xml:space="preserve">
+    <value>Перекреслений</value>
+  </data>
+  <data name="SubjectAndBodyNeeded" xml:space="preserve">
+    <value>Слід заповнити Тему та текст повідомлення</value>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>Підрядковий</value>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>Надрядковий</value>
+  </data>
+  <data name="TableOfContents" xml:space="preserve">
+    <value>Зміст</value>
+  </data>
+  <data name="TempDiskUsage" xml:space="preserve">
+    <value>Розмір тимчасових файлів</value>
+  </data>
+  <data name="TextareaSize" xml:space="preserve">
+    <value>Розмір textarea</value>
+  </data>
+  <data name="ThePageHasBeenDeletedBy" xml:space="preserve">
+    <value>Сторінка була видалена</value>
+  </data>
+  <data name="ThePageHasBeenRenamedBy" xml:space="preserve">
+    <value>Сторінка отримала нове ім'я</value>
+  </data>
+  <data name="ThePageHasBeenRolledBackBy" xml:space="preserve">
+    <value>Сторінка була</value>
+  </data>
+  <data name="ThePageHasBeenUpdatedBy" xml:space="preserve">
+    <value>Сторінка була відновлена</value>
+  </data>
+  <data name="ThisIsAPreview" xml:space="preserve">
+    <value>&lt;b&gt;Попередження&lt;/b&gt;: це тільки перегляд! Для збереження змін натисніть кнопку Зберегти!</value>
+  </data>
+  <data name="ThisPageIsLocked" xml:space="preserve">
+    <value>Ця сторінка заблокована та може бути змінена лише Адміністратором.</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Вгору</value>
+  </data>
+  <data name="TotalDiskUsage" xml:space="preserve">
+    <value>Використання дискового простору</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Написати</value>
+  </data>
+  <data name="UnallowedFileType" xml:space="preserve">
+    <value>Подібні файли, заборонені до завантаження.</value>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>Без категорій</value>
+  </data>
+  <data name="UncategorizedPages" xml:space="preserve">
+    <value>Сторінки без категорій</value>
+  </data>
+  <data name="Underlined" xml:space="preserve">
+    <value>Підкреслений</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>Управління файлами</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Користувач</value>
+  </data>
+  <data name="UserActivated" xml:space="preserve">
+    <value>Користувач активований</value>
+  </data>
+  <data name="UserCount" xml:space="preserve">
+    <value>Кількість користувачів</value>
+  </data>
+  <data name="UserDeactivated" xml:space="preserve">
+    <value>Користувач деактивований</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>Користувач видалений</value>
+  </data>
+  <data name="UsernameAlreadyExists" xml:space="preserve">
+    <value>Таке Ім'я Користувача вже існує, спробуйте інше, будь ласка</value>
+  </data>
+  <data name="UsernameIsRequired" xml:space="preserve">
+    <value>Якщо є пароль SMTP користувача, то потрібно й його ім'я (логін)</value>
+  </data>
+  <data name="UserPromoted" xml:space="preserve">
+    <value>Статус користувача змінено на "Адміністратора"</value>
+  </data>
+  <data name="VersionCheckError" xml:space="preserve">
+    <value>Помилка відновлення інформації про Версії змісту</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Перегляд</value>
+  </data>
+  <data name="ViewingFile" xml:space="preserve">
+    <value>Перегляд файлу</value>
+  </data>
+  <data name="ViewList" xml:space="preserve">
+    <value>Перегляд списку</value>
+  </data>
+  <data name="ViewPageCode" xml:space="preserve">
+    <value>Перегляд коду сторінки</value>
+  </data>
+  <data name="ViewTree" xml:space="preserve">
+    <value>Деревовидна структура</value>
+  </data>
+  <data name="WereYouLookingFor" xml:space="preserve">
+    <value>Може одна із цих сторінок?</value>
+  </data>
+  <data name="WikiUpToDate" xml:space="preserve">
+    <value>Встановлена остання версія Wiki</value>
+  </data>
+  <data name="WikiVersion" xml:space="preserve">
+    <value>Версія Wiki</value>
+  </data>
+  <data name="Wizard" xml:space="preserve">
+    <value>Конструктор уподобань</value>
+  </data>
+  <data name="WrongControlText" xml:space="preserve">
+    <value>Помилковий Компонент Тексту</value>
+  </data>
+  <data name="WrongParameters" xml:space="preserve">
+    <value>Помилковий параметр</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>Помилковий пароль</value>
+  </data>
+  <data name="WrongUsernamePassword" xml:space="preserve">
+    <value>Помилкове Ім'я Користувача та/чи Пароль</value>
+  </data>
+  <data name="YouCanAlso" xml:space="preserve">
+    <value>Ви також маєте можливість</value>
+  </data>
+  <data name="YouMustProvideAFile" xml:space="preserve">
+    <value>Будь ласка, оберіть файл</value>
+  </data>
+</root>

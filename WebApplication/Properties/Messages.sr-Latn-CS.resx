@@ -1,0 +1,2041 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnchorTitle2" xml:space="preserve">
+    <value>Insert a new anchor or a link to an existing anchor</value>
+  </data>
+  <data name="BoldTitle" xml:space="preserve">
+    <value>Style selected text as bold</value>
+  </data>
+  <data name="CodeEscapedTitle" xml:space="preserve">
+    <value>Set selected text as a block of code</value>
+  </data>
+  <data name="CodeInlineTitle" xml:space="preserve">
+    <value>Set selected text as inline code</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>Set selected text as comment (hidden from the rendered page output)</value>
+  </data>
+  <data name="EscapeTitle" xml:space="preserve">
+    <value>Wrap selected text in an 'escape' block that escapes all wiki- and HTML-related characters</value>
+  </data>
+  <data name="ExternalLinkTitle" xml:space="preserve">
+    <value>Insert a link to a website or email address</value>
+  </data>
+  <data name="FileLinkTitle" xml:space="preserve">
+    <value>Insert a link to a file or attachment</value>
+  </data>
+  <data name="H1Title" xml:space="preserve">
+    <value>Set selected text as level-1 header</value>
+  </data>
+  <data name="H2Title" xml:space="preserve">
+    <value>Set selected text as level-2 header</value>
+  </data>
+  <data name="H3Title" xml:space="preserve">
+    <value>Set selected text as level-3 header</value>
+  </data>
+  <data name="H4Title" xml:space="preserve">
+    <value>Set selected text as level-4 header</value>
+  </data>
+  <data name="HRTitle" xml:space="preserve">
+    <value>Insert a horizontal ruler (separator)</value>
+  </data>
+  <data name="ImageTitle2" xml:space="preserve">
+    <value>Insert a picture in the page</value>
+  </data>
+  <data name="ItalicTitle" xml:space="preserve">
+    <value>Style selected text as italic</value>
+  </data>
+  <data name="LineBreakTitle" xml:space="preserve">
+    <value>Insert a single line break</value>
+  </data>
+  <data name="NoBrTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'nobr' block, that ignores line breaks</value>
+  </data>
+  <data name="NoWikiTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'nowiki' block, that ignores WikiMarkup</value>
+  </data>
+  <data name="OrderedListTitle" xml:space="preserve">
+    <value>Insert an ordered list or wrap selected text in an ordered list (1, 2, 3, ...)</value>
+  </data>
+  <data name="PageLinkTitle" xml:space="preserve">
+    <value>Insert a link to a wiki page</value>
+  </data>
+  <data name="SnippetsTitle" xml:space="preserve">
+    <value>View existing snippets and insert one in the page</value>
+  </data>
+  <data name="SpecialTagsTitle" xml:space="preserve">
+    <value>View special tags and insert one in the page</value>
+  </data>
+  <data name="StrikedTitle" xml:space="preserve">
+    <value>Style selected text as strike-through</value>
+  </data>
+  <data name="SubscriptTitle" xml:space="preserve">
+    <value>Set selected text as subscript</value>
+  </data>
+  <data name="SuperscriptTitle" xml:space="preserve">
+    <value>Set selected text as superscript</value>
+  </data>
+  <data name="SymbolsTitle" xml:space="preserve">
+    <value>View and insert special symbols</value>
+  </data>
+  <data name="UnderlinedTitle" xml:space="preserve">
+    <value>Underline selected text</value>
+  </data>
+  <data name="UnorderedListTitle" xml:space="preserve">
+    <value>Insert an unordered list or wrap selected text in an unordered list (bullet points)</value>
+  </data>
+  <data name="WrapperBoxTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'box'</value>
+  </data>
+  <data name="ChangeComment" xml:space="preserve">
+    <value>Change Comment</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Meta Description</value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>Meta Keywords</value>
+  </data>
+  <data name="AutoUpdateAvailable" xml:space="preserve">
+    <value>Auto-update available</value>
+  </data>
+  <data name="NAccountsDeleted" xml:space="preserve">
+    <value>$ accounts deleted</value>
+    <comment>As in "3 accounts deleted"</comment>
+  </data>
+  <data name="Formatted" xml:space="preserve">
+    <value>formatted</value>
+  </data>
+  <data name="NoPagesToMigrate" xml:space="preserve">
+    <value>No pages to migrate</value>
+  </data>
+  <data name="NoProvidersToUpdate" xml:space="preserve">
+    <value>No Providers to update</value>
+  </data>
+  <data name="ProvidersUpdated" xml:space="preserve">
+    <value>Providers updated, please restart the wiki (Admin Home tab)</value>
+  </data>
+  <data name="BulkMigrationCompleted" xml:space="preserve">
+    <value>Bulk migration completed</value>
+  </data>
+  <data name="BulkMigrationCompletedWithErrors" xml:space="preserve">
+    <value>Bulk migration completed with errors, check the log</value>
+  </data>
+  <data name="BulkRebindCompleted" xml:space="preserve">
+    <value>Bulk rebind completed</value>
+  </data>
+  <data name="NoCategories" xml:space="preserve">
+    <value>No Categories selected</value>
+  </data>
+  <data name="NoPages" xml:space="preserve">
+    <value>No Pages to rebind</value>
+  </data>
+  <data name="InvalidFileName" xml:space="preserve">
+    <value>Invalid file name</value>
+  </data>
+  <data name="OrderedList" xml:space="preserve">
+    <value>Ordered List</value>
+  </data>
+  <data name="UnorderedList" xml:space="preserve">
+    <value>Unordered List</value>
+  </data>
+  <data name="LinkToThisSection" xml:space="preserve">
+    <value>Link to this Section</value>
+  </data>
+  <data name="NoBr" xml:space="preserve">
+    <value>NoBR tag</value>
+  </data>
+  <data name="SelectAndDelete" xml:space="preserve">
+    <value>Select and delete</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>New version:</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>Up-to-date</value>
+  </data>
+  <data name="CouldNotMigratePage" xml:space="preserve">
+    <value>Could not migrate Page</value>
+  </data>
+  <data name="DiscussionsRss" xml:space="preserve">
+    <value>Discussions RSS</value>
+  </data>
+  <data name="RssForThisCategoryDiscussion" xml:space="preserve">
+    <value>Update notifications for this Category's Discussions (RSS 2.0)</value>
+  </data>
+  <data name="CodeEscaped" xml:space="preserve">
+    <value>Escaped Block Code</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Horizontal Ruler</value>
+  </data>
+  <data name="Snippets" xml:space="preserve">
+    <value>Snippets</value>
+  </data>
+  <data name="Symbols" xml:space="preserve">
+    <value>Special Symbols</value>
+  </data>
+  <data name="WrapperBox" xml:space="preserve">
+    <value>Wrapper Box</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>User's Details</value>
+  </data>
+  <data name="CouldNotSaveDisplayName" xml:space="preserve">
+    <value>Could not save Display Name</value>
+  </data>
+  <data name="DisplayNameSaved" xml:space="preserve">
+    <value>Display Name saved</value>
+  </data>
+  <data name="UserDeletedMessage" xml:space="preserve">
+    <value>##USER## deleted a message on the discussion of ##PAGE##.</value>
+  </data>
+  <data name="UserDeletedPage" xml:space="preserve">
+    <value>##USER## deleted the page ##PAGE##.</value>
+  </data>
+  <data name="UserEditedMessage" xml:space="preserve">
+    <value>##USER## edited a message on the discussion of ##PAGE##.</value>
+  </data>
+  <data name="UserPostedMessage" xml:space="preserve">
+    <value>##USER## posted a message on the discussion of ##PAGE##.</value>
+  </data>
+  <data name="UserRenamedPage" xml:space="preserve">
+    <value>##USER## renamed the page ##PAGE##.</value>
+  </data>
+  <data name="UserRolledBackPage" xml:space="preserve">
+    <value>##USER## rolled back the page ##PAGE##.</value>
+  </data>
+  <data name="UserUpdatedPage" xml:space="preserve">
+    <value>##USER## updated the page ##PAGE##.</value>
+  </data>
+  <data name="CreateThisPage" xml:space="preserve">
+    <value>Create this Page</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Corrupted" xml:space="preserve">
+    <value>Corrupted</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SelectYourLanguage" xml:space="preserve">
+    <value>Select your language</value>
+  </data>
+  <data name="PreferencesSaved" xml:space="preserve">
+    <value>Preferences saved</value>
+  </data>
+  <data name="GoToYourProfile" xml:space="preserve">
+    <value>Go to your Profile</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Guest</value>
+  </data>
+  <data name="CouldNotRenameNamespace" xml:space="preserve">
+    <value>Could not rename Namespace</value>
+  </data>
+  <data name="NamespaceRenamed" xml:space="preserve">
+    <value>Namespace renamed</value>
+  </data>
+  <data name="SelectTemplate" xml:space="preserve">
+    <value>Select Template...</value>
+  </data>
+  <data name="Action_Man_Snips_Temps" xml:space="preserve">
+    <value>Manage Snippets and Templates</value>
+  </data>
+  <data name="CouldNotCreateTemplate" xml:space="preserve">
+    <value>Could not create Template</value>
+  </data>
+  <data name="CouldNotDeleteTemplate" xml:space="preserve">
+    <value>Could not delete template</value>
+  </data>
+  <data name="CouldNotSaveTemplate" xml:space="preserve">
+    <value>Could not save Template</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>Snippet</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="TemplateCreated" xml:space="preserve">
+    <value>Template created</value>
+  </data>
+  <data name="TemplateDeleted" xml:space="preserve">
+    <value>Template deleted</value>
+  </data>
+  <data name="TemplateSaved" xml:space="preserve">
+    <value>Template saved</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Created by</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>Created on</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Modified by</value>
+  </data>
+  <data name="ModifiedOn" xml:space="preserve">
+    <value>Modified on</value>
+  </data>
+  <data name="AMessageWasSentCheckInbox" xml:space="preserve">
+    <value>A message was sent to your email address, please check your inbox.</value>
+  </data>
+  <data name="NewPasswordSavedPleaseLogin" xml:space="preserve">
+    <value>New password saved, please &lt;a href="Login.aspx" title="Login"&gt;Login&lt;/a&gt;</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="AMessageHasBeenDeletedBy" xml:space="preserve">
+    <value>A message with subject "##SUBJECT##" has been deleted by</value>
+  </data>
+  <data name="AMessageHasBeenEditedBy" xml:space="preserve">
+    <value>A message with subject "##SUBJECT##" has been edited by</value>
+  </data>
+  <data name="AMessageHasBeenPostedBy" xml:space="preserve">
+    <value>A message with subject "##SUBJECT##" has been posted by</value>
+  </data>
+  <data name="Discussion" xml:space="preserve">
+    <value>Discussion</value>
+  </data>
+  <data name="DiscussionUpdates" xml:space="preserve">
+    <value>Discussion Updates</value>
+  </data>
+  <data name="RecentDiscussionUpdates" xml:space="preserve">
+    <value>Recent Discussion Updates</value>
+  </data>
+  <data name="ApproveRejectDraft" xml:space="preserve">
+    <value>Approve/Reject Draft</value>
+  </data>
+  <data name="Action_Man_1Disc" xml:space="preserve">
+    <value>Manage Page discussion</value>
+  </data>
+  <data name="Action_Pst_1Disc" xml:space="preserve">
+    <value>Post messages in Page discussion</value>
+  </data>
+  <data name="Action_Rd_1Disc" xml:space="preserve">
+    <value>Read Page discussion</value>
+  </data>
+  <data name="Action_Man_Perms" xml:space="preserve">
+    <value>Manage Permissions</value>
+  </data>
+  <data name="NotificationsStatusSaved" xml:space="preserve">
+    <value>Notification status saved</value>
+  </data>
+  <data name="NoConfigurationRequired" xml:space="preserve">
+    <value>No configuration is required for this provider</value>
+  </data>
+  <data name="DataCopied" xml:space="preserve">
+    <value>Data copied, please change the active Settings Storage Provider in the web.config file</value>
+  </data>
+  <data name="DataMigrated" xml:space="preserve">
+    <value>Data migrated, please recycle the web application</value>
+  </data>
+  <data name="DllAlreadyExists" xml:space="preserve">
+    <value>DLL already exists</value>
+  </data>
+  <data name="LoadedProviders" xml:space="preserve">
+    <value>Loaded ### Providers</value>
+  </data>
+  <data name="VoidOrInvalidFile" xml:space="preserve">
+    <value>Void or invalid file</value>
+  </data>
+  <data name="CouldNotDeleteDll" xml:space="preserve">
+    <value>Could not delete DLL</value>
+  </data>
+  <data name="DllDeleted" xml:space="preserve">
+    <value>DLL deleted</value>
+  </data>
+  <data name="DefaultProvidersSaved" xml:space="preserve">
+    <value>Default Providers saved</value>
+  </data>
+  <data name="ProviderRejectedConfiguration" xml:space="preserve">
+    <value>The Provider rejected the Configuration data</value>
+  </data>
+  <data name="CouldNotCreateNavPath" xml:space="preserve">
+    <value>Could not create Navigation Path</value>
+  </data>
+  <data name="CouldNotDeleteNavPath" xml:space="preserve">
+    <value>Could not delete Navigation Path</value>
+  </data>
+  <data name="CouldNotSaveNavPath" xml:space="preserve">
+    <value>Could not save Navigation Path</value>
+  </data>
+  <data name="NavPathCreated" xml:space="preserve">
+    <value>Navigation Path created</value>
+  </data>
+  <data name="TheNavPathMustContain" xml:space="preserve">
+    <value>The Navigation Path must contain at least one Page</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>none</value>
+  </data>
+  <data name="ClickToEnableEmailNotifications" xml:space="preserve">
+    <value>Click to enable email notifications for this page</value>
+  </data>
+  <data name="EmailNotificationsAreActive" xml:space="preserve">
+    <value>Email notifications are active for this page - click to disable</value>
+  </data>
+  <data name="CouldNotApproveDraft" xml:space="preserve">
+    <value>Could not approve draft</value>
+  </data>
+  <data name="DraftApproved" xml:space="preserve">
+    <value>Draft approved and saved</value>
+  </data>
+  <data name="DraftRejected" xml:space="preserve">
+    <value>Draft rejected and discarded</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="ViewChanges" xml:space="preserve">
+    <value>view changes</value>
+  </data>
+  <data name="DiffingPageTitle" xml:space="preserve">
+    <value>Diffing &lt;i&gt;##PAGETITLE##&lt;/i&gt;, at revisions &lt;i&gt;##REV1##&lt;/i&gt; and &lt;i&gt;##REV2##&lt;/i&gt;</value>
+  </data>
+  <data name="CouldNotCreateSnippet" xml:space="preserve">
+    <value>Could not create Snippet</value>
+  </data>
+  <data name="CouldNotDeleteSnippet" xml:space="preserve">
+    <value>Could not delete Snippet</value>
+  </data>
+  <data name="CouldNotSaveSnippet" xml:space="preserve">
+    <value>Could not save Snippet</value>
+  </data>
+  <data name="SnippetCreated" xml:space="preserve">
+    <value>Snippet created</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Params</value>
+  </data>
+  <data name="CouldNotDeleteCategory" xml:space="preserve">
+    <value>Could not delete Category</value>
+  </data>
+  <data name="CouldNotMergeCategories" xml:space="preserve">
+    <value>Could not merge Categories</value>
+  </data>
+  <data name="CategoryCreated" xml:space="preserve">
+    <value>Category created</value>
+  </data>
+  <data name="CouldNotRenameCategory" xml:space="preserve">
+    <value>Could not rename Category</value>
+  </data>
+  <data name="CategoryAlreadyExists" xml:space="preserve">
+    <value>Category already exists</value>
+  </data>
+  <data name="CouldNotCreateCategory" xml:space="preserve">
+    <value>Could not create Category</value>
+  </data>
+  <data name="GoToCategory" xml:space="preserve">
+    <value>Go to Category</value>
+  </data>
+  <data name="Rollback" xml:space="preserve">
+    <value>Rollback</value>
+  </data>
+  <data name="RollbackThisPage" xml:space="preserve">
+    <value>Rollback this Page to the previous version</value>
+  </data>
+  <data name="Administrate" xml:space="preserve">
+    <value>Administrate</value>
+  </data>
+  <data name="AdministrateThisPage" xml:space="preserve">
+    <value>Administrate this Page</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permissions</value>
+  </data>
+  <data name="SetPermissionsForThisPage" xml:space="preserve">
+    <value>Set permissions for this Page</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AdminTools" xml:space="preserve">
+    <value>Administration Tools</value>
+  </data>
+  <data name="ViewPageHistory" xml:space="preserve">
+    <value>View Page edit history</value>
+  </data>
+  <data name="Action_Man_Disc" xml:space="preserve">
+    <value>Manage Page discussions</value>
+  </data>
+  <data name="Action_Pst_Disc" xml:space="preserve">
+    <value>Post messages in Page discussions</value>
+  </data>
+  <data name="Action_Rd_Disc" xml:space="preserve">
+    <value>Read Page discussions</value>
+  </data>
+  <data name="CouldNotDeletePage" xml:space="preserve">
+    <value>Could not delete Page</value>
+  </data>
+  <data name="AllMessagesDeleted" xml:space="preserve">
+    <value>All Messages deleted</value>
+  </data>
+  <data name="CouldNotDeleteOneOrMoreMessages" xml:space="preserve">
+    <value>Could not delete one or more Messages</value>
+  </data>
+  <data name="CouldNotDeletePageBackups" xml:space="preserve">
+    <value>Could not delete Page backups</value>
+  </data>
+  <data name="CouldNotRollbackPage" xml:space="preserve">
+    <value>Could not rollback Page</value>
+  </data>
+  <data name="PageRolledBack" xml:space="preserve">
+    <value>Page rolled back</value>
+  </data>
+  <data name="CouldNotRenamePage" xml:space="preserve">
+    <value>Could not rename Page</value>
+  </data>
+  <data name="PageRenamedCouldNotCreateShadowPage" xml:space="preserve">
+    <value>Page renamed, but could not create shadow Page</value>
+  </data>
+  <data name="PageRenamedCouldNotSetShadowPageContent" xml:space="preserve">
+    <value>Page renamed, but could not set the content for the shadow Page</value>
+  </data>
+  <data name="GoToPageHistory" xml:space="preserve">
+    <value>Go to Page History</value>
+  </data>
+  <data name="GoToPageDiscussion" xml:space="preserve">
+    <value>Go to Page Discussion</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Go to Page</value>
+  </data>
+  <data name="CouldNotDeletePermissions" xml:space="preserve">
+    <value>Could not delete permissions</value>
+  </data>
+  <data name="GroupCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>Group created, but could not store permissions</value>
+  </data>
+  <data name="GroupSavedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>Group saved, but could not delete old permissions</value>
+  </data>
+  <data name="GroupSavedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>Group saved, but could not store new permissions</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteGroup" xml:space="preserve">
+    <value>Permissions deleted, but could not delete Group</value>
+  </data>
+  <data name="CouldNotSetNamespaceDefaultPage" xml:space="preserve">
+    <value>Could not set the Default Page for the Namespace</value>
+  </data>
+  <data name="CouldNotSetNamespaceTheme" xml:space="preserve">
+    <value>Could not set the Theme for the Namespace</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotCreateDefaultPage" xml:space="preserve">
+    <value>Namespace created, but could not create the default Page</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetDefaultPage" xml:space="preserve">
+    <value>Namespace created, but could not set its default Page</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetTheme" xml:space="preserve">
+    <value>Namespace saved, but could not set its Theme</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotStoreDefaultPageContent" xml:space="preserve">
+    <value>Namespace created, but could not store the default Page content</value>
+  </data>
+  <data name="UserCreatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>User created, but could not store Group membership</value>
+  </data>
+  <data name="UserCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>User created, but could not store Permissions</value>
+  </data>
+  <data name="UserUpdatedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>User updated, but could not delete old Permissions</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>User updated, but could not store Group membership</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>User updated, but could not store new Permissions</value>
+  </data>
+  <data name="PermissionsAndGroupMembershipDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Permissions and Group membership deleted, but could not delete User</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Permissions deleted, but could not delete User</value>
+  </data>
+  <data name="CouldNotDeleteNamespace" xml:space="preserve">
+    <value>Could not delete Namespace</value>
+  </data>
+  <data name="NamespaceDeleted" xml:space="preserve">
+    <value>Namespace deleted</value>
+  </data>
+  <data name="NamespaceSaved" xml:space="preserve">
+    <value>Namespace saved</value>
+  </data>
+  <data name="CouldNotStorePermissions" xml:space="preserve">
+    <value>Could not store permissions</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="GoToMainPage" xml:space="preserve">
+    <value>Go to the Main Page</value>
+  </data>
+  <data name="Action_Crt_Dirs" xml:space="preserve">
+    <value>Create Directories</value>
+  </data>
+  <data name="Action_Crt_Pg" xml:space="preserve">
+    <value>Create Pages</value>
+  </data>
+  <data name="Action_Del_1Attn" xml:space="preserve">
+    <value>Delete Attachments</value>
+  </data>
+  <data name="Action_Del_Attn" xml:space="preserve">
+    <value>Delete Attachments</value>
+  </data>
+  <data name="Action_Del_Dirs" xml:space="preserve">
+    <value>Delete Directories</value>
+  </data>
+  <data name="Action_Del_Files" xml:space="preserve">
+    <value>Delete Files</value>
+  </data>
+  <data name="Action_Del_Pg" xml:space="preserve">
+    <value>Delete Pages</value>
+  </data>
+  <data name="Action_Down_1Attn" xml:space="preserve">
+    <value>Download Attachments</value>
+  </data>
+  <data name="Action_Down_Attn" xml:space="preserve">
+    <value>Download Attachments</value>
+  </data>
+  <data name="Action_Down_Files" xml:space="preserve">
+    <value>Download Files</value>
+  </data>
+  <data name="Action_FullControl" xml:space="preserve">
+    <value>Full Control</value>
+  </data>
+  <data name="Action_List" xml:space="preserve">
+    <value>List Contents</value>
+  </data>
+  <data name="Action_Man_1Cat" xml:space="preserve">
+    <value>Manage Categories</value>
+  </data>
+  <data name="Action_Man_1Pg" xml:space="preserve">
+    <value>Manage Page</value>
+  </data>
+  <data name="Action_Man_Acc" xml:space="preserve">
+    <value>Manage User Accounts</value>
+  </data>
+  <data name="Action_Man_Cat" xml:space="preserve">
+    <value>Manage Categories</value>
+  </data>
+  <data name="Action_Man_Conf" xml:space="preserve">
+    <value>Manage Configuration</value>
+  </data>
+  <data name="Action_Man_Files" xml:space="preserve">
+    <value>Manage Files and Directories</value>
+  </data>
+  <data name="Action_Man_Grp" xml:space="preserve">
+    <value>Manage User Groups</value>
+  </data>
+  <data name="Action_Man_MetaFiles" xml:space="preserve">
+    <value>Manage Meta-Files</value>
+  </data>
+  <data name="Action_Man_NavPath" xml:space="preserve">
+    <value>Manage Navigation Paths</value>
+  </data>
+  <data name="Action_Man_Ns" xml:space="preserve">
+    <value>Manage Namespaces</value>
+  </data>
+  <data name="Action_Man_Pg" xml:space="preserve">
+    <value>Manage Pages</value>
+  </data>
+  <data name="Action_Man_PgCat" xml:space="preserve">
+    <value>Manage Pages and Categories</value>
+  </data>
+  <data name="Action_Man_Prov" xml:space="preserve">
+    <value>Manage Providers</value>
+  </data>
+  <data name="Action_Mod_1Pg" xml:space="preserve">
+    <value>Modify Page</value>
+  </data>
+  <data name="Action_Mod_Pg" xml:space="preserve">
+    <value>Modify Pages</value>
+  </data>
+  <data name="Action_Rd_1Pg" xml:space="preserve">
+    <value>Read Page</value>
+  </data>
+  <data name="Action_Rd_Pg" xml:space="preserve">
+    <value>Read Pages</value>
+  </data>
+  <data name="Action_Up_1Attn" xml:space="preserve">
+    <value>Upload Attachments</value>
+  </data>
+  <data name="Action_Up_Attn" xml:space="preserve">
+    <value>Upload Attachments</value>
+  </data>
+  <data name="Action_Up_Files" xml:space="preserve">
+    <value>Upload Files</value>
+  </data>
+  <data name="CouldNotCreateGroup" xml:space="preserve">
+    <value>Could not create Group</value>
+  </data>
+  <data name="CouldNotUpdateGroup" xml:space="preserve">
+    <value>Could not update group</value>
+  </data>
+  <data name="GroupCreated" xml:space="preserve">
+    <value>Group created</value>
+  </data>
+  <data name="GroupDeleted" xml:space="preserve">
+    <value>Group deleted</value>
+  </data>
+  <data name="GroupUpdated" xml:space="preserve">
+    <value>Group updated</value>
+  </data>
+  <data name="CouldNotSaveFile" xml:space="preserve">
+    <value>Could not save file</value>
+  </data>
+  <data name="NoSimilarPages" xml:space="preserve">
+    <value>There are no Pages with similar name or title.</value>
+  </data>
+  <data name="SearchStats" xml:space="preserve">
+    <value>This search, performed through &lt;b&gt;{0}&lt;/b&gt; (&lt;b&gt;{1} documents&lt;/b&gt;, &lt;b&gt;{2} words&lt;/b&gt;), completed in &lt;b&gt;{3:N1} seconds&lt;/b&gt; and yielded &lt;b&gt;{4} results&lt;/b&gt;.</value>
+  </data>
+  <data name="InvalidDisplayName" xml:space="preserve">
+    <value>Invalid Display Name</value>
+  </data>
+  <data name="CouldNotCreateUser" xml:space="preserve">
+    <value>Could not create User</value>
+  </data>
+  <data name="CouldNotUpdateUser" xml:space="preserve">
+    <value>Could not update User</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>User created</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>User updated</value>
+  </data>
+  <data name="RootNamespace" xml:space="preserve">
+    <value>&lt;root&gt;</value>
+  </data>
+  <data name="CouldNotCreateNamespace" xml:space="preserve">
+    <value>Could not create Namespace</value>
+  </data>
+  <data name="InvalidNamespaceName" xml:space="preserve">
+    <value>Invalid Namespace name</value>
+  </data>
+  <data name="NamespaceCreated" xml:space="preserve">
+    <value>Namespace created</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="ThereAreAttachments" xml:space="preserve">
+    <value>There are files attached to this page</value>
+  </data>
+  <data name="NoSnippets" xml:space="preserve">
+    <value>No Snippets</value>
+  </data>
+  <data name="LinkTitleOptional" xml:space="preserve">
+    <value>Link Title (optional)</value>
+  </data>
+  <data name="UpLevel" xml:space="preserve">
+    <value>Up one level</value>
+  </data>
+  <data name="CannotRenameItem" xml:space="preserve">
+    <value>Cannot rename the selected item</value>
+  </data>
+  <data name="CannotStoreFile" xml:space="preserve">
+    <value>Cannot store the file</value>
+  </data>
+  <data name="CannotCreateNewDirectory" xml:space="preserve">
+    <value>Cannot create new directory</value>
+  </data>
+  <data name="DiffColorKey" xml:space="preserve">
+    <value>Boja: &lt;span style="background-color: #88CC33;"&gt;novi tekst&lt;/span&gt; / &lt;span style="background-color: #FFDF66;"&gt;obrisan tekst&lt;/span&gt;.</value>
+  </data>
+  <data name="EarlierThisMonth" xml:space="preserve">
+    <value>Početkom meseca</value>
+    <comment>Earlier this month</comment>
+  </data>
+  <data name="EarlierThisWeek" xml:space="preserve">
+    <value>Početkom nedelje</value>
+    <comment>Earlier this week</comment>
+  </data>
+  <data name="LastMonth" xml:space="preserve">
+    <value>Prošlog meseca</value>
+    <comment>Last month</comment>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>Starije</value>
+    <comment>Older</comment>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Danas</value>
+    <comment>Today</comment>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Juče</value>
+    <comment>Yesterday</comment>
+  </data>
+  <data name="LoginNoticeFile" xml:space="preserve">
+    <value>Tekst za prijavu</value>
+    <comment>Login Notice File</comment>
+  </data>
+  <data name="MayBeInaccurate" xml:space="preserve">
+    <value>Možda je pogrešan</value>
+    <comment>May Be Inaccurate</comment>
+  </data>
+  <data name="RedirectedFrom" xml:space="preserve">
+    <value>Prosleđen od</value>
+    <comment>Redirected from</comment>
+  </data>
+  <data name="ThisPageRedirectsTo" xml:space="preserve">
+    <value>Stranica upućuje na</value>
+    <comment>This Page redirects to</comment>
+  </data>
+  <data name="PageFooterFile" xml:space="preserve">
+    <value>Stranica u podnožju</value>
+    <comment>Page Footer File</comment>
+  </data>
+  <data name="PageHeaderFile" xml:space="preserve">
+    <value>Stranica u zaglavlju</value>
+    <comment>Page Header File</comment>
+  </data>
+  <data name="EnterTitleAndUrl" xml:space="preserve">
+    <value>Unesite naziv i URL.</value>
+    <comment>You must enter both the Title and the URL.</comment>
+  </data>
+  <data name="HideBreadcrumbsTrail" xml:space="preserve">
+    <value>Kliknite ovde da Isključite Breadcrumbs navigaciju</value>
+    <comment>Click here to hide the Breadcrumbs Trail</comment>
+  </data>
+  <data name="ViewBreadcrumbsTrail" xml:space="preserve">
+    <value>Kliknite ovde da vidite kompletnu  Breadcrumbs navigaciju</value>
+    <comment>Click here to view the complete Breadcrumbs Trail</comment>
+  </data>
+  <data name="ServerUptime" xml:space="preserve">
+    <value>Server Uptime</value>
+    <comment>Server Uptime</comment>
+  </data>
+  <data name="FullView" xml:space="preserve">
+    <value>Cela strana (Otvara novi prozor)</value>
+    <comment>Full View (new Window)</comment>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Pregled</value>
+    <comment>Preview</comment>
+  </data>
+  <data name="FileLink" xml:space="preserve">
+    <value>Link na lokalni dokument</value>
+    <comment>Link a local File</comment>
+  </data>
+  <data name="InvalidMaxLogSize" xml:space="preserve">
+    <value>Nevažeća maksimalna veličina protokola: mora biti između 8 i 10,240 KB</value>
+    <comment>Invalid Max Log size: it must be greater than 8 and smaller than 10,240 KB</comment>
+  </data>
+  <data name="RssForThisCategory" xml:space="preserve">
+    <value>Obaveštenje o promenama za tu kategoriju (RSS 2.0)</value>
+    <comment>Update notifications for this Category (RSS 2.0)</comment>
+  </data>
+  <data name="PageSaved" xml:space="preserve">
+    <value>Stranica je sačuvana</value>
+    <comment>Page saved</comment>
+  </data>
+  <data name="UserAccountSaved" xml:space="preserve">
+    <value>korisnički konto je sačuvan</value>
+    <comment>User Account saved</comment>
+  </data>
+  <data name="ConfigurationString" xml:space="preserve">
+    <value>Tekst konfiguracije</value>
+    <comment>Configuration String</comment>
+  </data>
+  <data name="LocatedIn" xml:space="preserve">
+    <value>Pronađen u</value>
+    <comment>Located in</comment>
+  </data>
+  <data name="InsertSnippet" xml:space="preserve">
+    <value>Dodaj Snippet</value>
+    <comment>Insert a Snippet</comment>
+  </data>
+  <data name="PageDoesNotExistInProvider" xml:space="preserve">
+    <value>Stranica ##PAGENAME## ne postoji kod ovog provajdera</value>
+    <comment>The Page ##PAGENAME## does not exist in the current Provider</comment>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>Ili</value>
+    <comment>It means 'you can do this OR this"</comment>
+  </data>
+  <data name="RevisionComment" xml:space="preserve">
+    <value>Komentar</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="Wizard" xml:space="preserve">
+    <value>Asistent za konfiguraciju</value>
+    <comment>Configuration Wizard</comment>
+  </data>
+  <data name="ExternalLink" xml:space="preserve">
+    <value>Eksterni link</value>
+    <comment>External Link</comment>
+  </data>
+  <data name="PageLink" xml:space="preserve">
+    <value>Link na stranicu</value>
+    <comment>Link a Page</comment>
+  </data>
+  <data name="ThePageHasBeenDeletedBy" xml:space="preserve">
+    <value>Stranicu je obrisao</value>
+    <comment>The Page has been deleted by</comment>
+  </data>
+  <data name="ThePageHasBeenRenamedBy" xml:space="preserve">
+    <value>Stranicu je preimenovao</value>
+    <comment>The Page has been renamed by</comment>
+  </data>
+  <data name="ThePageHasBeenRolledBackBy" xml:space="preserve">
+    <value>Stranicu je povratio</value>
+    <comment>The Page has been rolled back by</comment>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Osveži</value>
+    <comment>Refresh</comment>
+  </data>
+  <data name="DiscussionFor" xml:space="preserve">
+    <value>Diskusija za</value>
+    <comment>Discussion for</comment>
+  </data>
+  <data name="RssForThisDiscussion" xml:space="preserve">
+    <value>Obaveštenja o promenama diskusije (RSS 2.0)</value>
+    <comment>Update notifications for this Discussion (RSS 2.0)</comment>
+  </data>
+  <data name="CannotUnloadDefaultProvider" xml:space="preserve">
+    <value>Stadndardni provajder ne može biti odstranjen</value>
+    <comment>Cannot unload a default Provider</comment>
+  </data>
+  <data name="OnlyDllFilesAllowed" xml:space="preserve">
+    <value>Samo DLL formati su dozvoljeni</value>
+    <comment>Only DLL files are allowed</comment>
+  </data>
+  <data name="ProviderUnloaded" xml:space="preserve">
+    <value>Odstrani provajdera</value>
+    <comment>Provider unloaded</comment>
+  </data>
+  <data name="YouMustProvideAFile" xml:space="preserve">
+    <value>Morate uneti jedan dokument</value>
+    <comment>You must provide a File</comment>
+  </data>
+  <data name="AccessDeniedTitle" xml:space="preserve">
+    <value>Pristup je zabranjen</value>
+    <comment>Access Denied</comment>
+  </data>
+  <data name="AdminTitle" xml:space="preserve">
+    <value>Administracija</value>
+    <comment>Administration</comment>
+  </data>
+  <data name="AllPagesTitle" xml:space="preserve">
+    <value>Wiki Index</value>
+    <comment>Wiki Index</comment>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>kategorije</value>
+    <comment>Categories</comment>
+  </data>
+  <data name="DiffTitle" xml:space="preserve">
+    <value>Promene</value>
+    <comment>Difference</comment>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>Obradi</value>
+    <comment>Edit</comment>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Greška</value>
+    <comment>Error</comment>
+  </data>
+  <data name="HistoryTitle" xml:space="preserve">
+    <value>Razvoj stranice</value>
+    <comment>Page History</comment>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Prijava / Odjava</value>
+    <comment>Login/Logout</comment>
+  </data>
+  <data name="MessageTitle" xml:space="preserve">
+    <value>Napiši poruku</value>
+    <comment>Write Message</comment>
+  </data>
+  <data name="NavPathTitle" xml:space="preserve">
+    <value>Navigacioni linkovi</value>
+    <comment>Navigation Paths</comment>
+  </data>
+  <data name="OperationTitle" xml:space="preserve">
+    <value>Aktion</value>
+    <comment>Operation</comment>
+  </data>
+  <data name="PageNotFoundTitle" xml:space="preserve">
+    <value>Stranica nije pronađena</value>
+    <comment>Page not Found</comment>
+  </data>
+  <data name="PostTitle" xml:space="preserve">
+    <value>Pošalji poruku</value>
+    <comment>Post Message</comment>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>Korinički profil</value>
+    <comment>User Profile</comment>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Kreiraj korinički konto</value>
+    <comment>Create Account</comment>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>Pretraživač</value>
+    <comment>Search Engine</comment>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>File Management</value>
+    <comment>File Management</comment>
+  </data>
+  <data name="MassEmailSent" xml:space="preserve">
+    <value>Poslati masovni email (Prenos može potrajati)</value>
+    <comment>Mass Email sent (delivering could require a while)</comment>
+  </data>
+  <data name="InvalidPort" xml:space="preserve">
+    <value>Neispravan Port (mora biti između 1 i 65535)</value>
+    <comment>Invalid Port (must be between 1 and 65535)</comment>
+  </data>
+  <data name="UsernameIsRequired" xml:space="preserve">
+    <value>SMTP korisničko ime je potrebno ako definišete šifru.</value>
+    <comment>SMTP Username is required if you specify a Password</comment>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>Odgovor</value>
+    <comment>Reply</comment>
+  </data>
+  <data name="Posted" xml:space="preserve">
+    <value>Isporučeno</value>
+    <comment>Posted</comment>
+  </data>
+  <data name="PostMessage" xml:space="preserve">
+    <value>Pošalji poruku</value>
+    <comment>Post a Message</comment>
+  </data>
+  <data name="PageDiscussionCleared" xml:space="preserve">
+    <value>Diskusija za artikal je obrisana</value>
+    <comment>Page Discussion cleared</comment>
+  </data>
+  <data name="Discuss" xml:space="preserve">
+    <value>Diskusija</value>
+    <comment>Discuss</comment>
+  </data>
+  <data name="NoMessages" xml:space="preserve">
+    <value>Nema poruka za ovu stranicu. Budi prvi!</value>
+    <comment>No Messages for this Page. Be the first!</comment>
+  </data>
+  <data name="SubjectAndBodyNeeded" xml:space="preserve">
+    <value>Morate upisati naslov i tekst poruke.</value>
+    <comment>You must enter both the subject and the body of the Message.</comment>
+  </data>
+  <data name="CategoriesMerged" xml:space="preserve">
+    <value>Kategorije su spojene</value>
+    <comment>Categories merged</comment>
+  </data>
+  <data name="CategoryDeleted" xml:space="preserve">
+    <value>Kategorija je obrisana</value>
+    <comment>Category deleted</comment>
+  </data>
+  <data name="CategoryRenamed" xml:space="preserve">
+    <value>Kategorija je preimenovana</value>
+    <comment>Category renamed</comment>
+  </data>
+  <data name="CategorySaved" xml:space="preserve">
+    <value>Kategorija je sačuvana</value>
+    <comment>Category saved</comment>
+  </data>
+  <data name="NavPathDeleted" xml:space="preserve">
+    <value>Navigacioni link je obrisan</value>
+    <comment>Navigation Path deleted</comment>
+  </data>
+  <data name="NavPathSaved" xml:space="preserve">
+    <value>Navigacioni link je sačuvan</value>
+    <comment>Navigation Path saved</comment>
+  </data>
+  <data name="ProviderDisabled" xml:space="preserve">
+    <value>Provajter je deaktiviran</value>
+    <comment>Provider disabled</comment>
+  </data>
+  <data name="ProviderEnabled" xml:space="preserve">
+    <value>Provajder je aktiviran</value>
+    <comment>Provider enabled</comment>
+  </data>
+  <data name="CannotDisableDefaultProvider" xml:space="preserve">
+    <value>Standardni Provider ne može biti deaktiviran</value>
+    <comment>Cannot disable a default Provider</comment>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Deaktiviran</value>
+    <comment>Disabled</comment>
+  </data>
+  <data name="InactiveUsers" xml:space="preserve">
+    <value>Inaktivnih</value>
+    <comment>Referred to the count of inactive users, for example Users: 8 (3 inactive)</comment>
+  </data>
+  <data name="ProviderConfigurationSaved" xml:space="preserve">
+    <value>Konfiguracija Provider-a je sačuvana</value>
+    <comment>Provider Configuration data saved</comment>
+  </data>
+  <data name="ProviderNotFound" xml:space="preserve">
+    <value>Provider nije pronađen</value>
+    <comment>Provider not found</comment>
+  </data>
+  <data name="ThePageHasBeenUpdatedBy" xml:space="preserve">
+    <value>Stranicu je promenuo</value>
+    <comment>The Page has been updated by</comment>
+  </data>
+  <data name="CouldRequireLogin" xml:space="preserve">
+    <value>Može tražiti prijavu</value>
+    <comment>could require login</comment>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Obavezno polje nije popunjeno</value>
+    <comment>Missing required field</comment>
+  </data>
+  <data name="ActivationAdmin" xml:space="preserve">
+    <value>Vaš korisnički konto mora biti odobren i aktiviran od strane Administratora da bi ste se vi prijavili.</value>
+    <comment>Your Account will need to be approved by an Administrator before you can login.</comment>
+  </data>
+  <data name="ActivationAuto" xml:space="preserve">
+    <value>Vaš Korisnički konto će biti aktivan odmah posle registracije.</value>
+    <comment>Your Account will be active right afer the registration.</comment>
+  </data>
+  <data name="ActivationEmail" xml:space="preserve">
+    <value>Vaš korisnički konto morate aktivirati u sledeća 24 Časa. Pratite uputstvo koje vam je prosleđeno u email-u.</value>
+    <comment>You must activate your Account within 24 hours, following the instructions that you'll receive via Email.</comment>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Odštampaj</value>
+    <comment>Print</comment>
+  </data>
+  <data name="PrinterFriendlyVersion" xml:space="preserve">
+    <value>Verzija za štampu</value>
+    <comment>Printer friendly version</comment>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Nevažeći tip podatka</value>
+    <comment>Invalid File Type</comment>
+  </data>
+  <data name="LastModifiedPage" xml:space="preserve">
+    <value>Poslednja promenjena stranica</value>
+    <comment>Last modified Page</comment>
+  </data>
+  <data name="LatestUser" xml:space="preserve">
+    <value>Poslednji korisnik</value>
+    <comment>Latest User</comment>
+  </data>
+  <data name="PagesOfCategory" xml:space="preserve">
+    <value>Stranice iz kategorije</value>
+    <comment>Pages of the Category</comment>
+  </data>
+  <data name="InvalidNavPath" xml:space="preserve">
+    <value>Nevažeći Navigacioni link: Minimalno se moraju navesti 2 stranice</value>
+    <comment>Invalid Navigation Path: at least 2 Pages must be specified</comment>
+  </data>
+  <data name="InvalidNavPathName" xml:space="preserve">
+    <value>Neispravno ime Navigacionog linka</value>
+    <comment>Invalid Navigation Path Name</comment>
+  </data>
+  <data name="NavPathAlreadyExists" xml:space="preserve">
+    <value>Navigacioni link već postoji</value>
+    <comment>Navigation Path already exists</comment>
+  </data>
+  <data name="NavPathNotFound" xml:space="preserve">
+    <value>Navigacioni link nije pronađen</value>
+    <comment>Navigation Path not found</comment>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Sledeća stranica</value>
+    <comment>Next Page</comment>
+  </data>
+  <data name="Paths" xml:space="preserve">
+    <value>Navigacioni link</value>
+    <comment>Paths</comment>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>Predhodna stranica</value>
+    <comment>Previous Page</comment>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>n/k</value>
+    <comment>It means 'not categorized' n/c</comment>
+  </data>
+  <data name="InvalidBackupNumber" xml:space="preserve">
+    <value>Nevažeći Broj: Broj mora biti jednak ili veći od nule (ostavite prazno da biste isključili automatsko brisanje arhive) </value>
+    <comment>Invalid number: it must be greater or equal to zero (leave blank to disable automatic Backup deletion)</comment>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>Zabranjeno</value>
+    <comment>Forbidden</comment>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>Sve stranice</value>
+    <comment>All Pages</comment>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Nazad</value>
+    <comment>Back</comment>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Kategorije</value>
+    <comment>Categories</comment>
+  </data>
+  <data name="CategorizedAs" xml:space="preserve">
+    <value>Kategorisan kao</value>
+    <comment>Categorized as</comment>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>Kategorija nije pronađena</value>
+    <comment>Category not found</comment>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Komentar</value>
+    <comment>Comment</comment>
+  </data>
+  <data name="CreateThePage" xml:space="preserve">
+    <value>Kreiraj stranicu</value>
+    <comment>create the Page</comment>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Aktuelno</value>
+    <comment>Current</comment>
+  </data>
+  <data name="Escape" xml:space="preserve">
+    <value>Escape</value>
+    <comment>Escape</comment>
+  </data>
+  <data name="FileManagement" xml:space="preserve">
+    <value>File Management (otvara novi prozor)</value>
+    <comment>File Management (new window)</comment>
+  </data>
+  <data name="HtmlHeadFile" xml:space="preserve">
+    <value>Dokument za HTML zaglavlje</value>
+    <comment>HTML Head File</comment>
+  </data>
+  <data name="InvalidCategoryName" xml:space="preserve">
+    <value>Nevažeće ime kategorije</value>
+    <comment>Invalid Category name</comment>
+  </data>
+  <data name="InvalidSnippetName" xml:space="preserve">
+    <value>Nevažeće Snippet ime</value>
+    <comment>Invalid Snippet Name</comment>
+  </data>
+  <data name="NoPagesInThisCategory" xml:space="preserve">
+    <value>U toj kategoriji nema stranica</value>
+    <comment>No Pages were found in this Category</comment>
+  </data>
+  <data name="PerformASearch" xml:space="preserve">
+    <value>Pretraži</value>
+    <comment>perform a search</comment>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Revizija</value>
+    <comment>Revision</comment>
+  </data>
+  <data name="SnippetAlreadyExists" xml:space="preserve">
+    <value>Snippet već postoji</value>
+    <comment>Snippet already exists</comment>
+  </data>
+  <data name="SnippetDeleted" xml:space="preserve">
+    <value>Snippet je obrisan </value>
+    <comment>Snipped deleted</comment>
+  </data>
+  <data name="SnippetNotFound" xml:space="preserve">
+    <value>Snippet nije pronađen</value>
+    <comment>Snippet not found</comment>
+  </data>
+  <data name="SnippetSaved" xml:space="preserve">
+    <value>Snippet je sačuvan</value>
+    <comment>Snippet Saved</comment>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>Nekategorisan</value>
+    <comment>Uncategorized</comment>
+  </data>
+  <data name="UncategorizedPages" xml:space="preserve">
+    <value>Nekategorisane stranice</value>
+    <comment>Uncategorized Pages</comment>
+  </data>
+  <data name="ViewPageCode" xml:space="preserve">
+    <value>Prikaži cod stranice</value>
+    <comment>View Page Code</comment>
+  </data>
+  <data name="WereYouLookingFor" xml:space="preserve">
+    <value>Tražite možda neku od sledećih stranica?</value>
+    <comment>Were you looking for one of these Pages?</comment>
+  </data>
+  <data name="YouCanAlso" xml:space="preserve">
+    <value>Možete takođe</value>
+    <comment>You can also</comment>
+  </data>
+  <data name="AccountActivated" xml:space="preserve">
+    <value>Vaš korisnički konto je uspešno aktiviran, možete se prijaviti.</value>
+    <comment>Your Account has been successfully activated. Please login.</comment>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Aktiviranje konta</value>
+    <comment>Account Activation</comment>
+  </data>
+  <data name="AccountActivationMessageFile" xml:space="preserve">
+    <value>Informacioni tekst za aktiviranje korisničkog konta</value>
+    <comment>Account Activation Message File</comment>
+  </data>
+  <data name="AccountAlreadyActive" xml:space="preserve">
+    <value>Korisnički konto je već aktivan.</value>
+    <comment>Account is already active</comment>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Vaš korisnički konto je uspešno kreiran.</value>
+    <comment>Account created successfully</comment>
+  </data>
+  <data name="AccountNotActivated" xml:space="preserve">
+    <value>Greška pri aktiviranju korisničkog konta</value>
+    <comment>Account activation error</comment>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Korisnički konto nije pronađen</value>
+    <comment>Account not found</comment>
+  </data>
+  <data name="AdminDowngraded" xml:space="preserve">
+    <value>Administrator je degradiran u korisnika</value>
+    <comment>Administrator downgraded to User</comment>
+  </data>
+  <data name="Anchor" xml:space="preserve">
+    <value>Sidro</value>
+    <comment>Anchor</comment>
+  </data>
+  <data name="AnchorId" xml:space="preserve">
+    <value>Sidro ID</value>
+    <comment>Anchor ID</comment>
+  </data>
+  <data name="AnchorLink" xml:space="preserve">
+    <value>Sidro Link</value>
+    <comment>Anchor Link</comment>
+  </data>
+  <data name="AnchorTitle" xml:space="preserve">
+    <value>Naziv sidra</value>
+    <comment>Anchor Title</comment>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+    <comment>Auto</comment>
+  </data>
+  <data name="BackToHistory" xml:space="preserve">
+    <value>Nazad na istoriju stranice</value>
+    <comment>Back to Page History</comment>
+  </data>
+  <data name="Bigger" xml:space="preserve">
+    <value>Veće</value>
+    <comment>Bigger</comment>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Bold</value>
+    <comment>Bold</comment>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>Box</value>
+    <comment>Box</comment>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>od</value>
+    <comment>by</comment>
+  </data>
+  <data name="CachedPages" xml:space="preserve">
+    <value>Stranice u Cach-u</value>
+    <comment>Cached Pages</comment>
+  </data>
+  <data name="CodeBlock" xml:space="preserve">
+    <value>Block Code</value>
+    <comment>Block Code</comment>
+  </data>
+  <data name="CodeInline" xml:space="preserve">
+    <value>Inline Code</value>
+    <comment>Inline Code</comment>
+  </data>
+  <data name="ConfigSaved" xml:space="preserve">
+    <value>Konfiguracije je uspešno sačuvana</value>
+    <comment>Configuration saved successfully</comment>
+  </data>
+  <data name="ConfigValuesReset" xml:space="preserve">
+    <value>Konfiguracija je vraćena na predhodne vrednosti</value>
+    <comment>Configuration options reset to previous values</comment>
+  </data>
+  <data name="ConfirmOperation" xml:space="preserve">
+    <value>Želite li stvarno izvršiti operaciju?</value>
+    <comment>Are you sure you want to proceed?</comment>
+  </data>
+  <data name="CreateNewPage" xml:space="preserve">
+    <value>Kreiraj novu stranicu</value>
+    <comment>Create a new Page</comment>
+  </data>
+  <data name="CreatePage" xml:space="preserve">
+    <value>Kreiraj stranicu</value>
+    <comment>Create Page</comment>
+  </data>
+  <data name="CurrentRevision" xml:space="preserve">
+    <value>Aktuelna verzija</value>
+    <comment>Current Revision</comment>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Datum/Vreme</value>
+    <comment>Date/Time</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Briši</value>
+    <comment>Delete</comment>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+    <comment>Download</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Obradi</value>
+    <comment>Edit</comment>
+  </data>
+  <data name="EditingFile" xml:space="preserve">
+    <value>Obradi datoteku</value>
+    <comment>Editing File</comment>
+  </data>
+  <data name="EditNoticeFile" xml:space="preserve">
+    <value>Uputstvo pri obradi stranice</value>
+    <comment>Edit Notice File</comment>
+  </data>
+  <data name="EditPage" xml:space="preserve">
+    <value>Obradi stranicu</value>
+    <comment>Edit Page</comment>
+  </data>
+  <data name="EditThisPage" xml:space="preserve">
+    <value>Obradi ovu stranicu</value>
+    <comment>Edit this Page</comment>
+  </data>
+  <data name="EmailSaved" xml:space="preserve">
+    <value>Email adresa je sačuvana</value>
+    <comment>Email address saved</comment>
+  </data>
+  <data name="EmailsNotEqual" xml:space="preserve">
+    <value>Email adrese nisu identične</value>
+    <comment>Emails are not equal</comment>
+  </data>
+  <data name="ErrorDeletingFile" xml:space="preserve">
+    <value>Greška pri brisanju datoteke</value>
+    <comment>Error deleting File</comment>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Datoteka već postoji</value>
+    <comment>File already exists</comment>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Datoteka nije pronađena</value>
+    <comment>File not found</comment>
+  </data>
+  <data name="FileSaved" xml:space="preserve">
+    <value>Datoteka je sačuvana</value>
+    <comment>File saved</comment>
+  </data>
+  <data name="FilesDiskUsage" xml:space="preserve">
+    <value>Files Disk space usage</value>
+    <comment>Files Disk space usage</comment>
+  </data>
+  <data name="FileTooBig" xml:space="preserve">
+    <value>Datoteka je prevelika</value>
+    <comment>The File is too big</comment>
+  </data>
+  <data name="FileVoid" xml:space="preserve">
+    <value>Ime datoteke nije važeće</value>
+    <comment>The Filename is void</comment>
+  </data>
+  <data name="FooterFile" xml:space="preserve">
+    <value>Dokument za podnožje</value>
+    <comment>Footer File</comment>
+  </data>
+  <data name="H1" xml:space="preserve">
+    <value>H1</value>
+    <comment>H1</comment>
+  </data>
+  <data name="H2" xml:space="preserve">
+    <value>H2</value>
+    <comment>H2</comment>
+  </data>
+  <data name="H3" xml:space="preserve">
+    <value>H3</value>
+    <comment>H3</comment>
+  </data>
+  <data name="H4" xml:space="preserve">
+    <value>H4 (ne koristi često)</value>
+    <comment>H4 (use sparingly)</comment>
+  </data>
+  <data name="HeaderFile" xml:space="preserve">
+    <value>Dokument za zaglavlje</value>
+    <comment>Header File</comment>
+  </data>
+  <data name="HidePreview" xml:space="preserve">
+    <value>Zatvori Pregled</value>
+    <comment>Hide Preview</comment>
+  </data>
+  <data name="HideShow" xml:space="preserve">
+    <value>Prikaži/Zatvori</value>
+    <comment>Hide/Show</comment>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Istorija</value>
+    <comment>History</comment>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Slika</value>
+    <comment>Image</comment>
+  </data>
+  <data name="ImageAuto" xml:space="preserve">
+    <value>Autoorijentacija slike</value>
+    <comment>Image - Align Auto</comment>
+  </data>
+  <data name="ImageBigUrl" xml:space="preserve">
+    <value>URL ka velikoj slici (opcionalno)</value>
+    <comment>Big Image URL (optional)</comment>
+  </data>
+  <data name="ImageInline" xml:space="preserve">
+    <value>Slika - Inline (bez rama)</value>
+    <comment>Image - Inline (no borders)</comment>
+  </data>
+  <data name="ImageLeft" xml:space="preserve">
+    <value>Slika - Orjentacija levo</value>
+    <comment>Image - Align Left</comment>
+  </data>
+  <data name="ImageRight" xml:space="preserve">
+    <value>Slika - Orjentacija desno</value>
+    <comment>Image - Align Right</comment>
+  </data>
+  <data name="ImageTitle" xml:space="preserve">
+    <value>Naslov slike</value>
+    <comment>Image Title</comment>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>URL ka slici</value>
+    <comment>Image URL</comment>
+  </data>
+  <data name="InvalidCacheCutSize" xml:space="preserve">
+    <value>Nevažeća Cach Cut veličina, verdnost mora biti celovit broj (bez decimala) veći od 0 i manji od veličine Chah-a</value>
+    <comment>Invalid Cache Cut size: it must be an integer greater than 0 and smaller than Cache size</comment>
+  </data>
+  <data name="InvalidCacheSize" xml:space="preserve">
+    <value>Nevažeća Cach veličina, verdnost mora biti celovit broj (bez decimala) veći od 0</value>
+    <comment>Invalid Cache size: it must be an integer greater than 0</comment>
+  </data>
+  <data name="InvalidContactEmail" xml:space="preserve">
+    <value>Nevažeći kontakt email</value>
+    <comment>Invalid Contact Email</comment>
+  </data>
+  <data name="InvalidDateTimeFormat" xml:space="preserve">
+    <value>Nevažeći format datuma, unesite jedan važeći .NET Format</value>
+    <comment>Invalid Date/Time format: it must be a valid .NET pattern</comment>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Nevažeća email adresa</value>
+    <comment>Invalid Email address</comment>
+  </data>
+  <data name="InvalidFileAccessTries" xml:space="preserve">
+    <value>Nevažeći broj pokušaja otvaranja datoteke, verdnost mora biti celovit broj (bez decimala) veći od 0</value>
+    <comment>Invalid File Access tries: it must be an integer greater than 0</comment>
+  </data>
+  <data name="InvalidFileAccessTryDelay" xml:space="preserve">
+    <value>Nevažeće vreme čekanja između pokušaja, verdnost mora biti celovit broj (bez decimala) veći od 0</value>
+    <comment>Invalid File Access try Delay: it must be an integer greater than 0</comment>
+  </data>
+  <data name="InvalidMainUrl" xml:space="preserve">
+    <value>Nevažeća glavna adresa, adresa mora biti kompletna URL adresa sa ( / ) na kraju</value>
+    <comment>Invalid Main URL: it must be a complete URL and end with a slash</comment>
+  </data>
+  <data name="InvalidMaxFileSize" xml:space="preserve">
+    <value>Nevažeća maksimalna veličina za datoteke koje se mogu učitati, verdnost mora biti celovit broj (bez decimala) između 1 i 20480</value>
+    <comment>Invalid Max file size: it must be greater than zero and smaller than 20480 KB</comment>
+  </data>
+  <data name="InvalidPageName" xml:space="preserve">
+    <value>Nevažeće ime stranice</value>
+    <comment>Invalid Page Name</comment>
+  </data>
+  <data name="InvalidPageTitle" xml:space="preserve">
+    <value>Nevažeći naziv stranice</value>
+    <comment>Invalid Page Title</comment>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Nevažeća šifra</value>
+    <comment>Invalid Password</comment>
+  </data>
+  <data name="InvalidSenderEmail" xml:space="preserve">
+    <value>Nevažeći email pošiljaoca</value>
+    <comment>Invalid Sender Email</comment>
+  </data>
+  <data name="InvalidSmtpServer" xml:space="preserve">
+    <value>Nevažeći SMTP Server</value>
+    <comment>Invalid SMTP Server</comment>
+  </data>
+  <data name="InvalidUsername" xml:space="preserve">
+    <value>Nevažeće korisničko ime. Potrebna su minimalno 4 slova ili znakova.(Nisu dozvoljeni 'admin' i 'guest').</value>
+    <comment>Invalid Username: it must be long at least 4 characters, and not contain the word 'admin' nor 'guest', and use letters, numbers, space and dot.</comment>
+  </data>
+  <data name="InvalidWikiTitle" xml:space="preserve">
+    <value>Nevažeće Ime od Wiki-ija. Ime ne sme da poseduje Tab, Enter ili simbol za novi red.</value>
+    <comment>Invalid Wiki Title: it cannot be empty and cannot include carriage return nor line feed characters</comment>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Italic</value>
+    <comment>Italic</comment>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>Line Break (single)</value>
+    <comment>Line Break (single)</comment>
+  </data>
+  <data name="LinkTitle" xml:space="preserve">
+    <value>Link Title</value>
+    <comment>Link Title</comment>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>Link URL</value>
+    <comment>Link URL</comment>
+  </data>
+  <data name="LogDiskUsage" xml:space="preserve">
+    <value>Veličina Log datoteke na disku</value>
+    <comment>Log Disk space usage</comment>
+  </data>
+  <data name="LoggedAsAdmin" xml:space="preserve">
+    <value>Vi ste trenutno prijavljeni kao sistemski administrator i zato ne možete menjati vaš profil.</value>
+    <comment>You are currently logged in with the built-in admin account, therefore you cannot edit your profile.</comment>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Prijava</value>
+    <comment>Login</comment>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Odjava</value>
+    <comment>Logout</comment>
+  </data>
+  <data name="LostPassword" xml:space="preserve">
+    <value>Zaboravili ste šifru?</value>
+    <comment>Lost your Password?</comment>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Poruka</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>Poruka je poslata</value>
+    <comment>Message sent</comment>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Promenjen</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="NewerRevision" xml:space="preserve">
+    <value>Novija Verzija</value>
+    <comment>Newer Revision</comment>
+  </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>Novija verzija je pronađena</value>
+    <comment>Newer version found</comment>
+  </data>
+  <data name="NoFiles" xml:space="preserve">
+    <value>Nema datoteka</value>
+    <comment>No Files</comment>
+  </data>
+  <data name="NoWiki" xml:space="preserve">
+    <value>Nema Wiki tag-a</value>
+    <comment>NoWiki tag</comment>
+  </data>
+  <data name="OlderRevision" xml:space="preserve">
+    <value>Starija verzija</value>
+    <comment>Older Revision</comment>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>Online korisnici</value>
+    <comment>Online Users</comment>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>Operacije</value>
+    <comment>Operations</comment>
+  </data>
+  <data name="PageAlreadyExists" xml:space="preserve">
+    <value>Stranica već postoji</value>
+    <comment>Page already exists</comment>
+  </data>
+  <data name="PageBackupsDeleted" xml:space="preserve">
+    <value>Istorija stranice je obrisana</value>
+    <comment>Page Backups deleted</comment>
+  </data>
+  <data name="PageDeleted" xml:space="preserve">
+    <value>Stranica je obrisana</value>
+    <comment>Page deleted</comment>
+  </data>
+  <data name="PageHistory" xml:space="preserve">
+    <value>Istorija stranice</value>
+    <comment>Page History</comment>
+  </data>
+  <data name="PageLocked" xml:space="preserve">
+    <value>Stranica je zaključana</value>
+    <comment>This Page is locked</comment>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>Stranica nije pronađena</value>
+    <comment>Page not found</comment>
+  </data>
+  <data name="PagePublic" xml:space="preserve">
+    <value>Stranica je javno dostupna</value>
+    <comment>This Page is public</comment>
+  </data>
+  <data name="PageRenamed" xml:space="preserve">
+    <value>Stranica je preimenovana</value>
+    <comment>Page renamed</comment>
+  </data>
+  <data name="PageRevision" xml:space="preserve">
+    <value>Revizija stranice</value>
+    <comment>Page Revision</comment>
+  </data>
+  <data name="PagesDiskUsage" xml:space="preserve">
+    <value>Prostor koji stranice zauzimaju na disku</value>
+    <comment>Pages Disk space usage</comment>
+  </data>
+  <data name="PageSetLocked" xml:space="preserve">
+    <value>Stranica je zaključana</value>
+    <comment>Page set to Locked</comment>
+  </data>
+  <data name="PageSetNormal" xml:space="preserve">
+    <value>Stranica je postavljena na Normal</value>
+    <comment>Page set to Normal</comment>
+  </data>
+  <data name="PageSetPublic" xml:space="preserve">
+    <value>Stranica je postavljena na Public</value>
+    <comment>Page set to Public</comment>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Naslov Stranice</value>
+    <comment>Page Title</comment>
+  </data>
+  <data name="PageUpdates" xml:space="preserve">
+    <value>Nove stranice</value>
+    <comment>Page Updates</comment>
+  </data>
+  <data name="PasswordResetMessageFile" xml:space="preserve">
+    <value>Tekst za poruku kada se resetuje šifra korisnika</value>
+    <comment>Password Reset Message File</comment>
+  </data>
+  <data name="PasswordSaved" xml:space="preserve">
+    <value>Šifra je snimljena</value>
+    <comment>Password saved</comment>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>Šifre nisu identične</value>
+    <comment>Passwords are not equal</comment>
+  </data>
+  <data name="PleaseSelectValidBackup" xml:space="preserve">
+    <value>Molim vas izaberite ispravnu Backup datoteku</value>
+    <comment>Please select a valid Backup</comment>
+  </data>
+  <data name="PreviewCreated" xml:space="preserve">
+    <value>Pregled stranice je kreiran, pogledajte ispod ove stranice</value>
+    <comment>Preview created, see the bottom of this Page</comment>
+  </data>
+  <data name="RecentPageUpdates" xml:space="preserve">
+    <value>Poslednje promene stranica</value>
+    <comment>Recent Page updates</comment>
+  </data>
+  <data name="RegistrationDisabled" xml:space="preserve">
+    <value>Kreiranje korisničkih konta je deaktivirano</value>
+    <comment>Account creation is disabled.</comment>
+  </data>
+  <data name="RollbackCompleted" xml:space="preserve">
+    <value>Povratak na prvobitno stanje je kompletan</value>
+    <comment>Rollback completed</comment>
+  </data>
+  <data name="RssForTheWiki" xml:space="preserve">
+    <value>Obaveštenja o promenama za celi Wiki (RSS 2.0)</value>
+    <comment>Update notifications for the whole Wiki (RSS 2.0)</comment>
+  </data>
+  <data name="RssForThisPage" xml:space="preserve">
+    <value>Obaveštenja o promenama za tu stranicu (RSS 2.0)</value>
+    <comment>Update notifications for this Page (RSS 2.0)</comment>
+  </data>
+  <data name="ScriptDetected" xml:space="preserve">
+    <value>Nedozvoljeni SCRIPT tag je otkriven u sadržaju</value>
+    <comment>Unallowed SCRIPT tag detected in the content</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Pretraga</value>
+    <comment>Search</comment>
+  </data>
+  <data name="SendAMessage" xml:space="preserve">
+    <value>Pošalji poruku</value>
+    <comment>Send a Message</comment>
+  </data>
+  <data name="SidebarFile" xml:space="preserve">
+    <value>Šema za levu stranicu</value>
+    <comment>Sidebar File</comment>
+  </data>
+  <data name="Smaller" xml:space="preserve">
+    <value>Manji</value>
+    <comment>Smaller</comment>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>Sortiraj po datumu</value>
+    <comment>Sort by Date and Time</comment>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>Sortiraj po naslovu</value>
+    <comment>Sort by Title</comment>
+  </data>
+  <data name="SortByUser" xml:space="preserve">
+    <value>Sortiraj po korisniku</value>
+    <comment>Sort by User</comment>
+  </data>
+  <data name="SpecialTags" xml:space="preserve">
+    <value>Specijalni znakovi</value>
+    <comment>Special Tags</comment>
+  </data>
+  <data name="Striked" xml:space="preserve">
+    <value>Striked</value>
+    <comment>Striked</comment>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>Subscript</value>
+    <comment>Subscript</comment>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>Superscript</value>
+    <comment>Superscript</comment>
+  </data>
+  <data name="TableOfContents" xml:space="preserve">
+    <value>Sadržaj</value>
+    <comment>Table of Contents</comment>
+  </data>
+  <data name="TempDiskUsage" xml:space="preserve">
+    <value>Mesto na disku koje zauzimaju TEMP datoteke</value>
+    <comment>Temp files Disk space usage</comment>
+  </data>
+  <data name="TextareaSize" xml:space="preserve">
+    <value>Unos teksta</value>
+    <comment>Textarea Size</comment>
+  </data>
+  <data name="ThisIsAPreview" xml:space="preserve">
+    <value>&lt;b&gt;Pažnja:&lt;/b&gt; ovo je samo pregled, morate kliknuti na &lt;i&gt;Snimi promene&lt;/i&gt; da bi ste sačuvali promene!</value>
+    <comment>&lt;b&gt;Warning&lt;/b&gt;: this is only a preview! You must click on the Save button to save the changes!</comment>
+  </data>
+  <data name="ThisPageIsLocked" xml:space="preserve">
+    <value>Stranica je zaključana, samo administrator može menjati sadržaj.</value>
+    <comment>This Page is locked, therefore it can be edited by the Administrators only.</comment>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Na vrhu</value>
+    <comment>Top</comment>
+  </data>
+  <data name="TotalDiskUsage" xml:space="preserve">
+    <value>Iskorišten prostor na disku</value>
+    <comment>Total Disk space usage</comment>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tip</value>
+    <comment>Type</comment>
+  </data>
+  <data name="UnallowedFileType" xml:space="preserve">
+    <value>Učitana datoteka je zabranjenog tipa.</value>
+    <comment>The File you uploaded is not of an allowed type</comment>
+  </data>
+  <data name="Underlined" xml:space="preserve">
+    <value>Podvuci</value>
+    <comment>Underlined</comment>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Korisnik</value>
+    <comment>User</comment>
+  </data>
+  <data name="UserActivated" xml:space="preserve">
+    <value>Korisnik je aktiviran</value>
+    <comment>User activated</comment>
+  </data>
+  <data name="UserCount" xml:space="preserve">
+    <value>Broj korisnika</value>
+    <comment>User Count</comment>
+  </data>
+  <data name="UserDeactivated" xml:space="preserve">
+    <value>Korisnik je Deaktiviran</value>
+    <comment>User deactivated</comment>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>Korisnik je obrisant</value>
+    <comment>User deleted</comment>
+  </data>
+  <data name="UsernameAlreadyExists" xml:space="preserve">
+    <value>Korisičko ime već postoji, izaberite drugo ime</value>
+    <comment>Username already exists, please choose another</comment>
+  </data>
+  <data name="UserPromoted" xml:space="preserve">
+    <value>Korisnik je unapređen u administratora</value>
+    <comment>User promoted to Administrator</comment>
+  </data>
+  <data name="VersionCheckError" xml:space="preserve">
+    <value>Greška pri očitavanju verzije</value>
+    <comment>Error retrieving Version information</comment>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Prikaži</value>
+    <comment>View</comment>
+  </data>
+  <data name="ViewingFile" xml:space="preserve">
+    <value>Prikaži datoteku</value>
+    <comment>Viewing File</comment>
+  </data>
+  <data name="ViewList" xml:space="preserve">
+    <value>Prikaći listu</value>
+    <comment>View List</comment>
+  </data>
+  <data name="ViewTree" xml:space="preserve">
+    <value>Prikaži Tree</value>
+    <comment>View Tree</comment>
+  </data>
+  <data name="WikiUpToDate" xml:space="preserve">
+    <value>Posedujete aktuelnu verziju Wiki-ja</value>
+    <comment>Your Wiki is up-to-date</comment>
+  </data>
+  <data name="WikiVersion" xml:space="preserve">
+    <value>Wiki verzija</value>
+    <comment>Wiki Version</comment>
+  </data>
+  <data name="WrongControlText" xml:space="preserve">
+    <value>Pogrešan tekst kontrole.</value>
+    <comment>Wrong Control Text</comment>
+  </data>
+  <data name="WrongParameters" xml:space="preserve">
+    <value>Neispravan parametar</value>
+    <comment>Wrong parameters</comment>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>Neispravna šifra</value>
+    <comment>Wrong Password</comment>
+  </data>
+  <data name="WrongUsernamePassword" xml:space="preserve">
+    <value>Neisravno korisničko ime ili šifra</value>
+    <comment>Wrong Username and/or Password</comment>
+  </data>
+</root>

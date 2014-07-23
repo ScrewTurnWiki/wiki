@@ -1,0 +1,1754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnchorTitle2" xml:space="preserve">
+    <value>Использовать новый Якорь, или связать с существующим</value>
+  </data>
+  <data name="BoldTitle" xml:space="preserve">
+    <value>Выбрать стиль полужинрный для выделенного текста</value>
+  </data>
+  <data name="CodeEscapedTitle" xml:space="preserve">
+    <value>Для выделенного текста выбрать стиль, как для блока стороннего кода</value>
+  </data>
+  <data name="CodeInlineTitle" xml:space="preserve">
+    <value>Установить стиль встроенный код для выделенного текста</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>Выделенный текст сделать комментарием (скрыто от пользователей страниц)</value>
+  </data>
+  <data name="EscapeTitle" xml:space="preserve">
+    <value>Обернуть, выделенный текст в 'escape' блок, не отображаемый во всей wiki и HTML-связанных символах</value>
+  </data>
+  <data name="ExternalLinkTitle" xml:space="preserve">
+    <value>Вставьте ссылку на свой сайты или email-адрес</value>
+  </data>
+  <data name="FileLinkTitle" xml:space="preserve">
+    <value>Вставьте ссылку на файл или вложение</value>
+  </data>
+  <data name="H1Title" xml:space="preserve">
+    <value>Выделенный текст сделать заголовком уровня-1</value>
+  </data>
+  <data name="H2Title" xml:space="preserve">
+    <value>Выделенный текст сделать заголовком уровня-2</value>
+  </data>
+  <data name="H3Title" xml:space="preserve">
+    <value>Выделенный текст сделать заголовком уровня-3</value>
+  </data>
+  <data name="H4Title" xml:space="preserve">
+    <value>Выделенный текст сделать заголовком уровня-4</value>
+  </data>
+  <data name="HRTitle" xml:space="preserve">
+    <value>Вставить горизонтальный разделитель (сепаратор)</value>
+  </data>
+  <data name="ImageTitle2" xml:space="preserve">
+    <value>Вставьте изображение в страницу</value>
+  </data>
+  <data name="ItalicTitle" xml:space="preserve">
+    <value>Сделать выделенный текст наклонным</value>
+  </data>
+  <data name="LineBreakTitle" xml:space="preserve">
+    <value>Вставить один перевод каретки</value>
+  </data>
+  <data name="NoBrTitle" xml:space="preserve">
+    <value>Оберните выделенный текст в 'nobr' блок, с игнорированием переводов каретки</value>
+  </data>
+  <data name="NoWikiTitle" xml:space="preserve">
+    <value>Оберните выделенный текст в 'nowiki' блок, игнорирующий обработку WikiMarkup</value>
+  </data>
+  <data name="OrderedListTitle" xml:space="preserve">
+    <value>Вставьте упорядоченный список, либо оберните выделенный текст в такой список (1, 2,3, ...)</value>
+  </data>
+  <data name="PageLinkTitle" xml:space="preserve">
+    <value>Вставьте ссылку на страницу wiki</value>
+  </data>
+  <data name="SnippetsTitle" xml:space="preserve">
+    <value>Просмотр существующих сниппетов и вставка одного из них</value>
+  </data>
+  <data name="SpecialTagsTitle" xml:space="preserve">
+    <value>Просмотр специальных тегов и вставка одного из них</value>
+  </data>
+  <data name="StrikedTitle" xml:space="preserve">
+    <value>Применить к выделенному тексту стиль перечёркнутый</value>
+  </data>
+  <data name="SubscriptTitle" xml:space="preserve">
+    <value>Отобразить выделенный текст, как верхний индекс</value>
+  </data>
+  <data name="SuperscriptTitle" xml:space="preserve">
+    <value>Отобразить выделенный текст, как нижний индекс</value>
+  </data>
+  <data name="SymbolsTitle" xml:space="preserve">
+    <value>Просмотреть и вставить специальные символы</value>
+  </data>
+  <data name="UnderlinedTitle" xml:space="preserve">
+    <value>Подчеркнуть выделенный текст</value>
+  </data>
+  <data name="UnorderedListTitle" xml:space="preserve">
+    <value>Вставьте неупорядоченный список, либо оберните в неупорядоченный список (bullet points), выделенный текст</value>
+  </data>
+  <data name="WrapperBoxTitle" xml:space="preserve">
+    <value>Вставьте, выделенный текст в 'box'</value>
+  </data>
+  <data name="ChangeComment" xml:space="preserve">
+    <value>Изменить комментарий</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Мета-тег Описание</value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>Мета-тег Ключевые слова</value>
+  </data>
+  <data name="AutoUpdateAvailable" xml:space="preserve">
+    <value>Автообновление доступно</value>
+  </data>
+  <data name="NAccountsDeleted" xml:space="preserve">
+    <value>$ учётных записи удалены</value>
+    <comment>имеется в виду "3 счёта удалены"</comment>
+  </data>
+  <data name="Formatted" xml:space="preserve">
+    <value>форматировано</value>
+  </data>
+  <data name="NoPagesToMigrate" xml:space="preserve">
+    <value>Не выбраны страницы для миграции</value>
+  </data>
+  <data name="NoProvidersToUpdate" xml:space="preserve">
+    <value>Нет провайдеров для обновления</value>
+  </data>
+  <data name="ProvidersUpdated" xml:space="preserve">
+    <value>Провайдери обновлены, перегрузите wiki, пожалуйста (вкладка Администрирование)</value>
+  </data>
+  <data name="BulkMigrationCompleted" xml:space="preserve">
+    <value>Массовая миграция завершена</value>
+  </data>
+  <data name="BulkMigrationCompletedWithErrors" xml:space="preserve">
+    <value>Массовая миграция завершена с ошибками, проверьте в логе</value>
+  </data>
+  <data name="BulkRebindCompleted" xml:space="preserve">
+    <value>Массовые изменения завершены</value>
+  </data>
+  <data name="NoCategories" xml:space="preserve">
+    <value>Категории не выбраны</value>
+  </data>
+  <data name="NoPages" xml:space="preserve">
+    <value>Не выбраны Страницы для изменений</value>
+  </data>
+  <data name="InvalidFileName" xml:space="preserve">
+    <value>Ошибочное имя файла</value>
+  </data>
+  <data name="OrderedList" xml:space="preserve">
+    <value>Нумерованный список</value>
+  </data>
+  <data name="UnorderedList" xml:space="preserve">
+    <value>Ненумерованный список</value>
+  </data>
+  <data name="LinkToThisSection" xml:space="preserve">
+    <value>Ссылка на этот Раздел</value>
+  </data>
+  <data name="NoBr" xml:space="preserve">
+    <value>Тег NoBR</value>
+  </data>
+  <data name="SelectAndDelete" xml:space="preserve">
+    <value>Отметить и удалить</value>
+  </data>
+  <data name="CouldNotMigratePage" xml:space="preserve">
+    <value>Страница не смогла мигрировать</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>Новая версия:</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>Новейшее</value>
+  </data>
+  <data name="DiscussionsRss" xml:space="preserve">
+    <value>RSS обсуждения</value>
+  </data>
+  <data name="RssForThisCategoryDiscussion" xml:space="preserve">
+    <value>Уведомления об обновлениях в этой категории обсуждений (RSS 2.0)</value>
+  </data>
+  <data name="CodeEscaped" xml:space="preserve">
+    <value>Pre-блок</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Горизонтальная линия</value>
+  </data>
+  <data name="Snippets" xml:space="preserve">
+    <value>Сниппеты</value>
+  </data>
+  <data name="Symbols" xml:space="preserve">
+    <value>Специальные символы</value>
+  </data>
+  <data name="WrapperBox" xml:space="preserve">
+    <value>Блок</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>Пользовательские данные</value>
+  </data>
+  <data name="CouldNotSaveDisplayName" xml:space="preserve">
+    <value>Не удалось сохранить Ваш Ник</value>
+  </data>
+  <data name="DisplayNameSaved" xml:space="preserve">
+    <value>Ник сохранён</value>
+  </data>
+  <data name="UserDeletedMessage" xml:space="preserve">
+    <value>##USER## удалил сообщение в обсуждении страницы ##PAGE##.</value>
+  </data>
+  <data name="UserDeletedPage" xml:space="preserve">
+    <value>##USER## удалил страницу ##PAGE##.</value>
+  </data>
+  <data name="UserEditedMessage" xml:space="preserve">
+    <value>##USER## изменил сообщение в обсуждении страницы ##PAGE##.</value>
+  </data>
+  <data name="UserPostedMessage" xml:space="preserve">
+    <value>##USER## отправил сообщение в обсуждение страницы ##PAGE##.</value>
+  </data>
+  <data name="UserRenamedPage" xml:space="preserve">
+    <value>##USER## переименовал страницу ##PAGE##.</value>
+  </data>
+  <data name="UserRolledBackPage" xml:space="preserve">
+    <value>##USER## откатил версию страницы ##PAGE##.</value>
+  </data>
+  <data name="UserUpdatedPage" xml:space="preserve">
+    <value>##USER## обновил страницу ##PAGE##.</value>
+  </data>
+  <data name="CreateThisPage" xml:space="preserve">
+    <value>Создать эту страницу</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Corrupted" xml:space="preserve">
+    <value>Повреждено</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SelectYourLanguage" xml:space="preserve">
+    <value>Выберите язык общения</value>
+  </data>
+  <data name="PreferencesSaved" xml:space="preserve">
+    <value>Настройки сохранены</value>
+  </data>
+  <data name="GoToYourProfile" xml:space="preserve">
+    <value>Перейти в Вашу учётную запись</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Гость</value>
+  </data>
+  <data name="CouldNotRenameNamespace" xml:space="preserve">
+    <value>Не удалось переименовать Пространство Имён</value>
+  </data>
+  <data name="NamespaceRenamed" xml:space="preserve">
+    <value>Пространство Имён переименовано</value>
+  </data>
+  <data name="SelectTemplate" xml:space="preserve">
+    <value>Выбор шаблона...</value>
+  </data>
+  <data name="Action_Man_Snips_Temps" xml:space="preserve">
+    <value>Управление сниппетами и шаблонами</value>
+  </data>
+  <data name="CouldNotCreateTemplate" xml:space="preserve">
+    <value>Не удалось создать шаблон</value>
+  </data>
+  <data name="CouldNotDeleteTemplate" xml:space="preserve">
+    <value>Не удалось удалить шаблон</value>
+  </data>
+  <data name="CouldNotSaveTemplate" xml:space="preserve">
+    <value>Не удалось сохранить шаблон</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>Сниппет</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Шаблон</value>
+  </data>
+  <data name="TemplateCreated" xml:space="preserve">
+    <value>Шаблон создан</value>
+  </data>
+  <data name="TemplateDeleted" xml:space="preserve">
+    <value>Шаблон удалён</value>
+  </data>
+  <data name="TemplateSaved" xml:space="preserve">
+    <value>Шаблон сохранён</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Создано</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>Создано</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Изменено</value>
+  </data>
+  <data name="ModifiedOn" xml:space="preserve">
+    <value>Изменено</value>
+  </data>
+  <data name="AMessageWasSentCheckInbox" xml:space="preserve">
+    <value>В Ваш адрес отправлено сообщение. Проверьте, пожалуйста, в своём почтовом ящике.</value>
+  </data>
+  <data name="NewPasswordSavedPleaseLogin" xml:space="preserve">
+    <value>Ваш новый пароль сохранён, для авторизации воспользуйтесь страницей &lt;a href="Login.aspx" title="Login"&gt;Login&lt;/a&gt;</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Сброс Пароля</value>
+  </data>
+  <data name="AMessageHasBeenDeletedBy" xml:space="preserve">
+    <value>Сообщение с темой "##SUBJECT##" удалено пользователем</value>
+  </data>
+  <data name="AMessageHasBeenEditedBy" xml:space="preserve">
+    <value>Сообщение с темой "##SUBJECT##" изменено пользователем</value>
+  </data>
+  <data name="AMessageHasBeenPostedBy" xml:space="preserve">
+    <value>Сообщение с темой "##SUBJECT##" отправлено пользователем</value>
+  </data>
+  <data name="Discussion" xml:space="preserve">
+    <value>Обсуждение</value>
+  </data>
+  <data name="DiscussionUpdates" xml:space="preserve">
+    <value>Обновления обсуждений</value>
+  </data>
+  <data name="RecentDiscussionUpdates" xml:space="preserve">
+    <value>Последние обновления обсуждений</value>
+  </data>
+  <data name="ApproveRejectDraft" xml:space="preserve">
+    <value>Утвердить/Отклонить предложенное</value>
+  </data>
+  <data name="Action_Man_1Disc" xml:space="preserve">
+    <value>Управление страницей обсуждения</value>
+  </data>
+  <data name="Action_Pst_1Disc" xml:space="preserve">
+    <value>Отправить сообщение на страницу обсуждения</value>
+  </data>
+  <data name="Action_Rd_1Disc" xml:space="preserve">
+    <value>Просмотреть страницу обсуждения</value>
+  </data>
+  <data name="Action_Man_Perms" xml:space="preserve">
+    <value>Управление доступом</value>
+  </data>
+  <data name="NotificationsStatusSaved" xml:space="preserve">
+    <value>Выбранный статус уведомлений сохранён</value>
+  </data>
+  <data name="NoConfigurationRequired" xml:space="preserve">
+    <value>Отсутствует конфигурация для этого провайдера</value>
+  </data>
+  <data name="DataCopied" xml:space="preserve">
+    <value>Данные копируются, пожалуйста, измените настройки Провайдера хранения данных в файле web.config</value>
+  </data>
+  <data name="DataMigrated" xml:space="preserve">
+    <value>Данные перенесены, пожалуйста, перегрузите веб-аппликацию (сайт)</value>
+  </data>
+  <data name="DllAlreadyExists" xml:space="preserve">
+    <value>Такая DLL уже существует</value>
+  </data>
+  <data name="LoadedProviders" xml:space="preserve">
+    <value>Загруженные ### Провайдеры</value>
+  </data>
+  <data name="VoidOrInvalidFile" xml:space="preserve">
+    <value>Файл пустой или с ошибками</value>
+  </data>
+  <data name="CouldNotDeleteDll" xml:space="preserve">
+    <value>Не удалось удалить DLL</value>
+  </data>
+  <data name="DllDeleted" xml:space="preserve">
+    <value>DLL удалена</value>
+  </data>
+  <data name="DefaultProvidersSaved" xml:space="preserve">
+    <value>Основной Провайдер установлен</value>
+  </data>
+  <data name="ProviderRejectedConfiguration" xml:space="preserve">
+    <value>Это Проавйдер не принял, указанную конфигурацию</value>
+  </data>
+  <data name="CouldNotCreateNavPath" xml:space="preserve">
+    <value>Не удалось создать Навигационное меню</value>
+  </data>
+  <data name="CouldNotDeleteNavPath" xml:space="preserve">
+    <value>Не удалось удалить Навигационное меню</value>
+  </data>
+  <data name="CouldNotSaveNavPath" xml:space="preserve">
+    <value>Не удалось сохранить Навигационное меню</value>
+  </data>
+  <data name="NavPathCreated" xml:space="preserve">
+    <value>Навигационное Меню создано</value>
+  </data>
+  <data name="TheNavPathMustContain" xml:space="preserve">
+    <value>Навигационное меню должно содержать хотя бы одну страницу перехода</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>ничего</value>
+  </data>
+  <data name="ClickToEnableEmailNotifications" xml:space="preserve">
+    <value>Если желаете получать уведомления с этой страницы, поставьте отметку</value>
+  </data>
+  <data name="EmailNotificationsAreActive" xml:space="preserve">
+    <value>Email-уведомления на этой странице активированы - нажмите для отключения</value>
+  </data>
+  <data name="CouldNotApproveDraft" xml:space="preserve">
+    <value>Предложенное не утверждено</value>
+  </data>
+  <data name="DraftApproved" xml:space="preserve">
+    <value>Предложенное утверждено и сохранено</value>
+  </data>
+  <data name="DraftRejected" xml:space="preserve">
+    <value>Предложенное отвергнуто и уничтожено</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Черновик</value>
+  </data>
+  <data name="ViewChanges" xml:space="preserve">
+    <value>Изменения</value>
+  </data>
+  <data name="DiffingPageTitle" xml:space="preserve">
+    <value>Сравнение &lt;i&gt;##PAGETITLE##&lt;/i&gt;, для версий &lt;i&gt;##REV1##&lt;/i&gt; и &lt;i&gt;##REV2##&lt;/i&gt;</value>
+  </data>
+  <data name="CouldNotCreateSnippet" xml:space="preserve">
+    <value>Не удалось создать сниппет</value>
+  </data>
+  <data name="CouldNotDeleteSnippet" xml:space="preserve">
+    <value>Не удалось удалить сниппет</value>
+  </data>
+  <data name="CouldNotSaveSnippet" xml:space="preserve">
+    <value>Не удалось сохранить сниппет</value>
+  </data>
+  <data name="SnippetCreated" xml:space="preserve">
+    <value>Сниппет создан</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="CouldNotDeleteCategory" xml:space="preserve">
+    <value>Не удалось удалить категорию</value>
+  </data>
+  <data name="CouldNotMergeCategories" xml:space="preserve">
+    <value>Не удалось объединить категории</value>
+  </data>
+  <data name="CategoryCreated" xml:space="preserve">
+    <value>Категория создана</value>
+  </data>
+  <data name="CouldNotRenameCategory" xml:space="preserve">
+    <value>Не удалось переименовать категорию</value>
+  </data>
+  <data name="CategoryAlreadyExists" xml:space="preserve">
+    <value>Такая категория уже существует</value>
+  </data>
+  <data name="CouldNotCreateCategory" xml:space="preserve">
+    <value>Не удалось создать категорию</value>
+  </data>
+  <data name="GoToCategory" xml:space="preserve">
+    <value>Перейти к категории</value>
+  </data>
+  <data name="Rollback" xml:space="preserve">
+    <value>Откат</value>
+  </data>
+  <data name="RollbackThisPage" xml:space="preserve">
+    <value>Откат этой странице к предыдущей версии</value>
+  </data>
+  <data name="Administrate" xml:space="preserve">
+    <value>Администрировать</value>
+  </data>
+  <data name="AdministrateThisPage" xml:space="preserve">
+    <value>Администрировать эту страницу</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Права доступа</value>
+  </data>
+  <data name="SetPermissionsForThisPage" xml:space="preserve">
+    <value>Установить права доступа (разрешения) для страницы</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AdminTools" xml:space="preserve">
+    <value>Административные инструменты</value>
+  </data>
+  <data name="ViewPageHistory" xml:space="preserve">
+    <value>История изменений</value>
+  </data>
+  <data name="Action_Man_Disc" xml:space="preserve">
+    <value>Управление страницей обсуждения</value>
+  </data>
+  <data name="Action_Pst_Disc" xml:space="preserve">
+    <value>Отправить сообщение на страницу обсуждения</value>
+  </data>
+  <data name="Action_Rd_Disc" xml:space="preserve">
+    <value>Просмотреть страницу обсуждения</value>
+  </data>
+  <data name="CouldNotDeletePage" xml:space="preserve">
+    <value>Не удалось удалить страницу</value>
+  </data>
+  <data name="AllMessagesDeleted" xml:space="preserve">
+    <value>Удалить все сообщения</value>
+  </data>
+  <data name="CouldNotDeleteOneOrMoreMessages" xml:space="preserve">
+    <value>Не удалось удалить одно или несколько сообщений</value>
+  </data>
+  <data name="CouldNotDeletePageBackups" xml:space="preserve">
+    <value>Не удалось удалить копии страницы</value>
+  </data>
+  <data name="CouldNotRollbackPage" xml:space="preserve">
+    <value>Не удалось откатиться к выбранной версии страницы</value>
+  </data>
+  <data name="PageRolledBack" xml:space="preserve">
+    <value>Откат к выбранной версии состоялся</value>
+  </data>
+  <data name="CouldNotRenamePage" xml:space="preserve">
+    <value>Не удалось переименовать страницу</value>
+  </data>
+  <data name="PageRenamedCouldNotCreateShadowPage" xml:space="preserve">
+    <value>Страница переименована, однако не создаётся "теневая" страница</value>
+  </data>
+  <data name="PageRenamedCouldNotSetShadowPageContent" xml:space="preserve">
+    <value>Страница переименована, однако не определяется содержание "теневой" страницы</value>
+  </data>
+  <data name="GoToPageHistory" xml:space="preserve">
+    <value>Перейти на страницу истории изменений</value>
+  </data>
+  <data name="GoToPageDiscussion" xml:space="preserve">
+    <value>Перейти на страницу обсуждения</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Перейти на страницу</value>
+  </data>
+  <data name="CouldNotDeletePermissions" xml:space="preserve">
+    <value>Не удалось удалить свойство доступа</value>
+  </data>
+  <data name="GroupCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>Группа создана, однако, не установлены права доступа (разрешения)</value>
+  </data>
+  <data name="GroupSavedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>Группа сохранена, но не удалены старые права доступа (разрешения)</value>
+  </data>
+  <data name="GroupSavedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>Группа сохранена, но не применены новые права доступа (разрешения)</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteGroup" xml:space="preserve">
+    <value>Права доступа (разрешения) удалены, но не удалена Группа</value>
+  </data>
+  <data name="CouldNotSetNamespaceDefaultPage" xml:space="preserve">
+    <value>Не удалось установить страницу по умолчанию для Пространства Имён</value>
+  </data>
+  <data name="CouldNotSetNamespaceTheme" xml:space="preserve">
+    <value>Не удалось установить Тему для Пространства Имён</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotCreateDefaultPage" xml:space="preserve">
+    <value>Пространство Имён создано, однако, не создана страница по умолчанию</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetDefaultPage" xml:space="preserve">
+    <value>Пространство Имён создано, однако, страница по умолчанию не установлена</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetTheme" xml:space="preserve">
+    <value>Пространство Имён сохранено, но не выбрана его Тема</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotStoreDefaultPageContent" xml:space="preserve">
+    <value>Пространство Имён создано, однако не сохранено содержание страницы по умолчанию</value>
+  </data>
+  <data name="UserCreatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>Учтёная запись создана, однако, не установлена Группа</value>
+  </data>
+  <data name="UserCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>Учётная запись создана, но не установлены её права доступа (разрешения)</value>
+  </data>
+  <data name="UserUpdatedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>Учётная запись обновлена, но не удалены старые права доступа (разрешения)</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>Учётная запись обновлена, однако не выбрана Группа пользователей</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>Учётная запись обновлена, но не сохранены новые Права доступа (разрешения)</value>
+  </data>
+  <data name="PermissionsAndGroupMembershipDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Права доступа и Группа пользователей удалена, однако не удалена учётная запись</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Права доступа (разрешения) удалены, но не удалена учётная запись</value>
+  </data>
+  <data name="CouldNotDeleteNamespace" xml:space="preserve">
+    <value>Не удалось удалить Пространство Имён</value>
+  </data>
+  <data name="NamespaceDeleted" xml:space="preserve">
+    <value>Пространство Имён удалено</value>
+  </data>
+  <data name="NamespaceSaved" xml:space="preserve">
+    <value>Пространство Имён сохранено</value>
+  </data>
+  <data name="CouldNotStorePermissions" xml:space="preserve">
+    <value>Не сохранены права доступа (разрешения)</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Группа</value>
+  </data>
+  <data name="GoToMainPage" xml:space="preserve">
+    <value>Перейти на Главную</value>
+  </data>
+  <data name="Action_Crt_Dirs" xml:space="preserve">
+    <value>Создать каталоги</value>
+  </data>
+  <data name="Action_Crt_Pg" xml:space="preserve">
+    <value>Создать страницы</value>
+  </data>
+  <data name="Action_Del_1Attn" xml:space="preserve">
+    <value>Удалить вложения</value>
+  </data>
+  <data name="Action_Del_Attn" xml:space="preserve">
+    <value>Удалить вложения</value>
+  </data>
+  <data name="Action_Del_Dirs" xml:space="preserve">
+    <value>Удалить каталоги</value>
+  </data>
+  <data name="Action_Del_Files" xml:space="preserve">
+    <value>Удалить файлы</value>
+  </data>
+  <data name="Action_Del_Pg" xml:space="preserve">
+    <value>Удалить страницы</value>
+  </data>
+  <data name="Action_Down_1Attn" xml:space="preserve">
+    <value>Скачать вложения</value>
+  </data>
+  <data name="Action_Down_Attn" xml:space="preserve">
+    <value>Скачать вложения</value>
+  </data>
+  <data name="Action_Down_Files" xml:space="preserve">
+    <value>Скачать файлы</value>
+  </data>
+  <data name="Action_FullControl" xml:space="preserve">
+    <value>Полный контроль</value>
+  </data>
+  <data name="Action_List" xml:space="preserve">
+    <value>Содержание (список)</value>
+  </data>
+  <data name="Action_Man_1Cat" xml:space="preserve">
+    <value>Управление Категориями</value>
+  </data>
+  <data name="Action_Man_1Pg" xml:space="preserve">
+    <value>Управление страницей</value>
+  </data>
+  <data name="Action_Man_Acc" xml:space="preserve">
+    <value>Управление учётными записями</value>
+  </data>
+  <data name="Action_Man_Cat" xml:space="preserve">
+    <value>Управление Категориями</value>
+  </data>
+  <data name="Action_Man_Conf" xml:space="preserve">
+    <value>Управление настройками</value>
+  </data>
+  <data name="Action_Man_Files" xml:space="preserve">
+    <value>Управление файлами и папками</value>
+  </data>
+  <data name="Action_Man_Grp" xml:space="preserve">
+    <value>Управление группами пользователей</value>
+  </data>
+  <data name="Action_Man_MetaFiles" xml:space="preserve">
+    <value>Управление Мета-Файлами</value>
+  </data>
+  <data name="Action_Man_NavPath" xml:space="preserve">
+    <value>Управление навигационными меню</value>
+  </data>
+  <data name="Action_Man_Ns" xml:space="preserve">
+    <value>Управление Пространством Имён</value>
+  </data>
+  <data name="Action_Man_Pg" xml:space="preserve">
+    <value>Управление страницами</value>
+  </data>
+  <data name="Action_Man_PgCat" xml:space="preserve">
+    <value>Управление страницами и категориями</value>
+  </data>
+  <data name="Action_Man_Prov" xml:space="preserve">
+    <value>Управление Провайдерами</value>
+  </data>
+  <data name="Action_Mod_1Pg" xml:space="preserve">
+    <value>Изменить страницу</value>
+  </data>
+  <data name="Action_Mod_Pg" xml:space="preserve">
+    <value>Изменить страницы</value>
+  </data>
+  <data name="Action_Rd_1Pg" xml:space="preserve">
+    <value>Просмотреть страницу</value>
+  </data>
+  <data name="Action_Rd_Pg" xml:space="preserve">
+    <value>Просмотреть страницу</value>
+  </data>
+  <data name="Action_Up_1Attn" xml:space="preserve">
+    <value>Загрузить вложения</value>
+  </data>
+  <data name="Action_Up_Attn" xml:space="preserve">
+    <value>Загрузить вложения</value>
+  </data>
+  <data name="Action_Up_Files" xml:space="preserve">
+    <value>Загрузить файлы</value>
+  </data>
+  <data name="CouldNotCreateGroup" xml:space="preserve">
+    <value>Не удалось создать группу</value>
+  </data>
+  <data name="CouldNotUpdateGroup" xml:space="preserve">
+    <value>Не обновились Группы</value>
+  </data>
+  <data name="GroupCreated" xml:space="preserve">
+    <value>Группа создана</value>
+  </data>
+  <data name="GroupDeleted" xml:space="preserve">
+    <value>Группа удалена</value>
+  </data>
+  <data name="GroupUpdated" xml:space="preserve">
+    <value>Группа обновлена</value>
+  </data>
+  <data name="CouldNotSaveFile" xml:space="preserve">
+    <value>Не удалось сохранить файл</value>
+  </data>
+  <data name="NoSimilarPages" xml:space="preserve">
+    <value>Не существует страницы с таким названием или заголовком</value>
+  </data>
+  <data name="SearchStats" xml:space="preserve">
+    <value>Поисковый запрос выполнен для &lt;b&gt;{0}&lt;/b&gt; (&lt;b&gt;{1} документов&lt;/b&gt;, &lt;b&gt;{2} слов&lt;/b&gt;), завершён на &lt;b&gt;{3:N1} секунде&lt;/b&gt; и выдал следующий поисковый &lt;b&gt;{4} результат&lt;/b&gt;.</value>
+  </data>
+  <data name="InvalidDisplayName" xml:space="preserve">
+    <value>Несуществующий НикНейм</value>
+  </data>
+  <data name="CouldNotCreateUser" xml:space="preserve">
+    <value>Не удалось создать учётную запись</value>
+  </data>
+  <data name="CouldNotUpdateUser" xml:space="preserve">
+    <value>Не обновлена учётная запись</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>Учётная запись создана</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>Учётная запись обновлена</value>
+  </data>
+  <data name="RootNamespace" xml:space="preserve">
+    <value>&lt;root&gt;</value>
+  </data>
+  <data name="CouldNotCreateNamespace" xml:space="preserve">
+    <value>Не удалось создать Пространство Имён</value>
+  </data>
+  <data name="InvalidNamespaceName" xml:space="preserve">
+    <value>Несуществующее имя в Пространстве Имён</value>
+  </data>
+  <data name="NamespaceCreated" xml:space="preserve">
+    <value>Пространство Имён создано</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Вложения</value>
+  </data>
+  <data name="ThereAreAttachments" xml:space="preserve">
+    <value>Имеются файлы, приложенные к странице</value>
+  </data>
+  <data name="NoSnippets" xml:space="preserve">
+    <value>Нет сниппетов</value>
+  </data>
+  <data name="LinkTitleOptional" xml:space="preserve">
+    <value>Подложка ссылки (не обязательно)</value>
+  </data>
+  <data name="UpLevel" xml:space="preserve">
+    <value>Вверх на один уровень</value>
+  </data>
+  <data name="CannotRenameItem" xml:space="preserve">
+    <value>Имя, отмеченного Вами не изменено</value>
+  </data>
+  <data name="CannotStoreFile" xml:space="preserve">
+    <value>Файл не сохранён</value>
+  </data>
+  <data name="CannotCreateNewDirectory" xml:space="preserve">
+    <value>Новая папка не создана</value>
+  </data>
+  <data name="DiffColorKey" xml:space="preserve">
+    <value>Установки цвета: &lt;span style="background-color: #88CC33;"&gt;новый текст&lt;/span&gt; / &lt;span style="background-color: #FFDF66;"&gt;удалённый текст&lt;/span&gt;.</value>
+  </data>
+  <data name="EarlierThisMonth" xml:space="preserve">
+    <value>Ранее в этом месяце</value>
+  </data>
+  <data name="EarlierThisWeek" xml:space="preserve">
+    <value>Ранее на этой неделе</value>
+  </data>
+  <data name="LastMonth" xml:space="preserve">
+    <value>В прошлом месяце</value>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>Старая</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Сегодня</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Вчера</value>
+  </data>
+  <data name="LoginNoticeFile" xml:space="preserve">
+    <value>Уведомление на странице авторизации</value>
+  </data>
+  <data name="MayBeInaccurate" xml:space="preserve">
+    <value>Возможно, не точно</value>
+  </data>
+  <data name="RedirectedFrom" xml:space="preserve">
+    <value>Переадресовано от</value>
+  </data>
+  <data name="ThisPageRedirectsTo" xml:space="preserve">
+    <value>Эта страница переадресована от</value>
+  </data>
+  <data name="PageFooterFile" xml:space="preserve">
+    <value>Файл Подвала, создаваемых Страниц</value>
+  </data>
+  <data name="PageHeaderFile" xml:space="preserve">
+    <value>Файл Шапки, создаваемых Страниц</value>
+  </data>
+  <data name="ConfigurationString" xml:space="preserve">
+    <value>Строка настройки</value>
+  </data>
+  <data name="EnterTitleAndUrl" xml:space="preserve">
+    <value>Необходимо ввести Название и URL.</value>
+  </data>
+  <data name="FileLink" xml:space="preserve">
+    <value>Ссылка на локальный файл</value>
+  </data>
+  <data name="FullView" xml:space="preserve">
+    <value>Полный просмотр (новое окно)</value>
+  </data>
+  <data name="HideBreadcrumbsTrail" xml:space="preserve">
+    <value>Скрыть Хлебные Крошки</value>
+  </data>
+  <data name="InsertSnippet" xml:space="preserve">
+    <value>Вставить Сниппет</value>
+  </data>
+  <data name="InvalidMaxLogSize" xml:space="preserve">
+    <value>Неверное значение максимального размера Log-а: должно быть более 8 и менее 10,240 KB</value>
+  </data>
+  <data name="LocatedIn" xml:space="preserve">
+    <value>Расположено в</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>или</value>
+    <comment>Это значит, что "Вы можете сделать это ИЛИ это"</comment>
+  </data>
+  <data name="PageDoesNotExistInProvider" xml:space="preserve">
+    <value>Страница ##PAGENAME## отсутствует в текущем управлении (Провайдере)</value>
+  </data>
+  <data name="PageSaved" xml:space="preserve">
+    <value>Страница сохранена</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Предосмотр</value>
+  </data>
+  <data name="RevisionComment" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="RssForThisCategory" xml:space="preserve">
+    <value>Канал уведомлений об обновлениях этой Категории (RSS 2.0)</value>
+  </data>
+  <data name="ServerUptime" xml:space="preserve">
+    <value>Продолжительность работы Сервера</value>
+  </data>
+  <data name="UserAccountSaved" xml:space="preserve">
+    <value>Учётная Запись сохранена</value>
+  </data>
+  <data name="ViewBreadcrumbsTrail" xml:space="preserve">
+    <value>Показывать Хлебные Крошки</value>
+  </data>
+  <data name="AccessDeniedTitle" xml:space="preserve">
+    <value>Доступ запрещён</value>
+  </data>
+  <data name="AccountActivated" xml:space="preserve">
+    <value>Ваша учётная запись активирована. Авторизуйтесь, пожалуйста.</value>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Активация учётной записи</value>
+  </data>
+  <data name="AccountActivationMessageFile" xml:space="preserve">
+    <value>Файл сообщения об активации учётной записи</value>
+  </data>
+  <data name="AccountAlreadyActive" xml:space="preserve">
+    <value>Учётная запись уже активирована</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Учётная запись создана</value>
+  </data>
+  <data name="AccountNotActivated" xml:space="preserve">
+    <value>Ошибка активации учётной записи</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Учётная запись не найдена</value>
+  </data>
+  <data name="ActivationAdmin" xml:space="preserve">
+    <value>Авторизоваться Вы сможете только, после одобрения Вашей учётной записи Администратором</value>
+  </data>
+  <data name="ActivationAuto" xml:space="preserve">
+    <value>Ваша учётная запись станет активной после регистрации</value>
+  </data>
+  <data name="ActivationEmail" xml:space="preserve">
+    <value>Вам необходимо активировать свою учётную запись в течение 24-х часов, следуя инструкциям из автоматического регистрационного сообщения, отправленного на Ваш Email.</value>
+  </data>
+  <data name="AdminDowngraded" xml:space="preserve">
+    <value>Администратор понизил статус Пользователя</value>
+  </data>
+  <data name="AdminTitle" xml:space="preserve">
+    <value>Администрирование</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>Все страницы</value>
+  </data>
+  <data name="AllPagesTitle" xml:space="preserve">
+    <value>Индекс Wiki</value>
+  </data>
+  <data name="Anchor" xml:space="preserve">
+    <value>Якорь</value>
+  </data>
+  <data name="AnchorId" xml:space="preserve">
+    <value>ID якоря</value>
+  </data>
+  <data name="AnchorLink" xml:space="preserve">
+    <value>Ссылка якоря</value>
+  </data>
+  <data name="AnchorTitle" xml:space="preserve">
+    <value>Название якоря</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Авто</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="BackToHistory" xml:space="preserve">
+    <value>Назад на страницу истории</value>
+  </data>
+  <data name="Bigger" xml:space="preserve">
+    <value>Больше</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Жирный</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>В рамке</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CachedPages" xml:space="preserve">
+    <value>Кэшированные страницы</value>
+  </data>
+  <data name="CannotDisableDefaultProvider" xml:space="preserve">
+    <value>Нельзя отключить Провайдера по умолчанию</value>
+  </data>
+  <data name="CannotUnloadDefaultProvider" xml:space="preserve">
+    <value>Нельзя выгрузить Провайдера по умолчанию</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Категории</value>
+  </data>
+  <data name="CategoriesMerged" xml:space="preserve">
+    <value>Смешанные категории</value>
+  </data>
+  <data name="CategorizedAs" xml:space="preserve">
+    <value>Категории страницы</value>
+  </data>
+  <data name="CategoryDeleted" xml:space="preserve">
+    <value>Категория удалена</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>Категория не найдена</value>
+  </data>
+  <data name="CategoryRenamed" xml:space="preserve">
+    <value>Категория переименована</value>
+  </data>
+  <data name="CategorySaved" xml:space="preserve">
+    <value>Категория сохранена</value>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>Категории</value>
+  </data>
+  <data name="CodeBlock" xml:space="preserve">
+    <value>Для отображения фрагментов стороннего кода</value>
+  </data>
+  <data name="CodeInline" xml:space="preserve">
+    <value>Для визуального выделения строки стороннего кода</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="ConfigSaved" xml:space="preserve">
+    <value>Настройки сохранены</value>
+  </data>
+  <data name="ConfigValuesReset" xml:space="preserve">
+    <value>Возврат к предыдущим настройкам</value>
+  </data>
+  <data name="ConfirmOperation" xml:space="preserve">
+    <value>Вы уверены, что хотите продолжить?</value>
+  </data>
+  <data name="CouldRequireLogin" xml:space="preserve">
+    <value>может потребоваться авторизация</value>
+  </data>
+  <data name="CreateNewPage" xml:space="preserve">
+    <value>Создать новую страницу</value>
+  </data>
+  <data name="CreatePage" xml:space="preserve">
+    <value>Создать страницу</value>
+  </data>
+  <data name="CreateThePage" xml:space="preserve">
+    <value>создать эту страницу</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Текущая</value>
+  </data>
+  <data name="CurrentRevision" xml:space="preserve">
+    <value>Текущая версия</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Дата/Время</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="DiffTitle" xml:space="preserve">
+    <value>Различия</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Отключено</value>
+  </data>
+  <data name="Discuss" xml:space="preserve">
+    <value>Обсуждение</value>
+  </data>
+  <data name="DiscussionFor" xml:space="preserve">
+    <value>Тема обсуждения</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Загрузка</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="EditingFile" xml:space="preserve">
+    <value>Редактирование файлов</value>
+  </data>
+  <data name="EditNoticeFile" xml:space="preserve">
+    <value>Редактировать файл уведомления</value>
+  </data>
+  <data name="EditPage" xml:space="preserve">
+    <value>Редактировать страницу</value>
+  </data>
+  <data name="EditThisPage" xml:space="preserve">
+    <value>Редактировать эту страницу</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="EmailSaved" xml:space="preserve">
+    <value>Email адрес сохранён</value>
+  </data>
+  <data name="EmailsNotEqual" xml:space="preserve">
+    <value>Неверный Email</value>
+  </data>
+  <data name="ErrorDeletingFile" xml:space="preserve">
+    <value>Ошибка удаления файла</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="Escape" xml:space="preserve">
+    <value>Пример HTML-кода</value>
+  </data>
+  <data name="ExternalLink" xml:space="preserve">
+    <value>Внешняя ссылка</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Файл уже существует</value>
+  </data>
+  <data name="FileManagement" xml:space="preserve">
+    <value>Файловое управление (новое окно)</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Файл не найден</value>
+  </data>
+  <data name="FileSaved" xml:space="preserve">
+    <value>Файл сохранён</value>
+  </data>
+  <data name="FilesDiskUsage" xml:space="preserve">
+    <value>Использование дискового пространства, загруженными файлами</value>
+  </data>
+  <data name="FileTooBig" xml:space="preserve">
+    <value>Файл слишком велик</value>
+  </data>
+  <data name="FileVoid" xml:space="preserve">
+    <value>Неверное имя файла</value>
+  </data>
+  <data name="FooterFile" xml:space="preserve">
+    <value>Файл нижнего колонтитула</value>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>Запрещено</value>
+  </data>
+  <data name="H1" xml:space="preserve">
+    <value>H1</value>
+  </data>
+  <data name="H2" xml:space="preserve">
+    <value>H2</value>
+  </data>
+  <data name="H3" xml:space="preserve">
+    <value>H3</value>
+  </data>
+  <data name="H4" xml:space="preserve">
+    <value>H4 (используйте в меру)</value>
+  </data>
+  <data name="HeaderFile" xml:space="preserve">
+    <value>Файл верхнего колонтитула</value>
+  </data>
+  <data name="HidePreview" xml:space="preserve">
+    <value>Скрыть предосмотр</value>
+  </data>
+  <data name="HideShow" xml:space="preserve">
+    <value>Скрыть/Показать</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>История</value>
+  </data>
+  <data name="HistoryTitle" xml:space="preserve">
+    <value>История страницы</value>
+  </data>
+  <data name="HtmlHeadFile" xml:space="preserve">
+    <value>Файл HTML шапки</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Изображение</value>
+  </data>
+  <data name="ImageAuto" xml:space="preserve">
+    <value>Изображение - автовыравнивание</value>
+  </data>
+  <data name="ImageBigUrl" xml:space="preserve">
+    <value>URL полноформатного изображения/URL ссылка (не обязательно)</value>
+  </data>
+  <data name="ImageInline" xml:space="preserve">
+    <value>Изображение - в линию (без бордюров)</value>
+  </data>
+  <data name="ImageLeft" xml:space="preserve">
+    <value>Изображение - выравнивание влево</value>
+  </data>
+  <data name="ImageRight" xml:space="preserve">
+    <value>Изображение - выравнивание вправо</value>
+  </data>
+  <data name="ImageTitle" xml:space="preserve">
+    <value>Подложка изображения</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>URL изображения</value>
+  </data>
+  <data name="InactiveUsers" xml:space="preserve">
+    <value>Неактивно</value>
+    <comment>Количество бездействующих пользователей, например, Пользователей: 8 (3 неактивно)</comment>
+  </data>
+  <data name="InvalidBackupNumber" xml:space="preserve">
+    <value>Неверное число: должно быть больше или равно нолю (пустое значение отключает автоматическое удаление бэкапа) </value>
+  </data>
+  <data name="InvalidCacheCutSize" xml:space="preserve">
+    <value>Неверное значение упакованного кэша: должно быть целым числом, больше ноля и меньше размера самого кэша</value>
+  </data>
+  <data name="InvalidCacheSize" xml:space="preserve">
+    <value>Неверное значение кэша: должно быть больше ноля</value>
+  </data>
+  <data name="InvalidCategoryName" xml:space="preserve">
+    <value>Неверное имя Категории</value>
+  </data>
+  <data name="InvalidContactEmail" xml:space="preserve">
+    <value>Неверный контактный Email</value>
+  </data>
+  <data name="InvalidDateTimeFormat" xml:space="preserve">
+    <value>Неверный формат Даты/Времени: должно соответствовать .NET образцам</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Неверный Email</value>
+  </data>
+  <data name="InvalidFileAccessTries" xml:space="preserve">
+    <value>Неверное значение количества попыток доступа к файлу: должно быть больше 0</value>
+  </data>
+  <data name="InvalidFileAccessTryDelay" xml:space="preserve">
+    <value>Неверное значение задержки доступа к файлу: должно быть больше 0</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Неверный тип файла</value>
+  </data>
+  <data name="InvalidMainUrl" xml:space="preserve">
+    <value>Неверный Главный URL: должно быть полным URL-адресом и заканчиваться слэшем</value>
+  </data>
+  <data name="InvalidMaxFileSize" xml:space="preserve">
+    <value>Неверное значение максимального размера файла: должно быть больше ноля, но не более 20480 KB</value>
+  </data>
+  <data name="InvalidNavPath" xml:space="preserve">
+    <value>Неверная навигация сайта: должно быть определено в меню, хотя бы 2 страницы</value>
+  </data>
+  <data name="InvalidNavPathName" xml:space="preserve">
+    <value>Неверное название навигации сайта</value>
+  </data>
+  <data name="InvalidPageName" xml:space="preserve">
+    <value>Неверное имя страницы</value>
+  </data>
+  <data name="InvalidPageTitle" xml:space="preserve">
+    <value>Неверное название страницы</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Неверный Пароль</value>
+  </data>
+  <data name="InvalidPort" xml:space="preserve">
+    <value>Неверный порт (должен быть в пределах от 1 до 65535)</value>
+  </data>
+  <data name="InvalidSenderEmail" xml:space="preserve">
+    <value>Неверный Email отправителя</value>
+  </data>
+  <data name="InvalidSmtpServer" xml:space="preserve">
+    <value>Неверный SMTP Сервер</value>
+  </data>
+  <data name="InvalidSnippetName" xml:space="preserve">
+    <value>Неверное имя сниппета</value>
+  </data>
+  <data name="InvalidUsername" xml:space="preserve">
+    <value>Неверное имя пользователя: должно содержать более 4 символов, нельзя использовать слова 'admin' или 'guest', и использовать буквы, цифры, вместе с пробелами и точками.</value>
+  </data>
+  <data name="InvalidWikiTitle" xml:space="preserve">
+    <value>Неверное Название Wiki: не может быть пустым, нельзя использовать перевод строки и символы псевдографики</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Наклонный</value>
+  </data>
+  <data name="LastModifiedPage" xml:space="preserve">
+    <value>Последние изменения страницы</value>
+  </data>
+  <data name="LatestUser" xml:space="preserve">
+    <value>Последний пользователь</value>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>Перевод строки (одинарный)</value>
+  </data>
+  <data name="LinkTitle" xml:space="preserve">
+    <value>Подложка ссылки</value>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>URL адрес</value>
+  </data>
+  <data name="LogDiskUsage" xml:space="preserve">
+    <value>Место, занимаемое Логом</value>
+  </data>
+  <data name="LoggedAsAdmin" xml:space="preserve">
+    <value>Вы авторизованы как Мастер-Администратор (встроенная, учётная запись), у Вас нет возможности редактировать свой профиль.</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Вход</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Вход/Выход</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="LostPassword" xml:space="preserve">
+    <value>Забыли Пароль?</value>
+  </data>
+  <data name="MassEmailSent" xml:space="preserve">
+    <value>Массовая рассылка (затребованная доставка)</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>Сообщение отправлено</value>
+  </data>
+  <data name="MessageTitle" xml:space="preserve">
+    <value>Создайте сообщение</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Изменено</value>
+  </data>
+  <data name="NavPathAlreadyExists" xml:space="preserve">
+    <value>Такой путь в навигации уже существует</value>
+  </data>
+  <data name="NavPathDeleted" xml:space="preserve">
+    <value>Навигационный путь удалён</value>
+    <comment>или "Навигационное Меню", на выбор</comment>
+  </data>
+  <data name="NavPathNotFound" xml:space="preserve">
+    <value>Такого навигационного пути не найдено</value>
+  </data>
+  <data name="NavPathSaved" xml:space="preserve">
+    <value>Навигационное меню сохранено</value>
+  </data>
+  <data name="NavPathTitle" xml:space="preserve">
+    <value>Навигация</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>н/к</value>
+    <comment>Это значит 'не категоризировано'</comment>
+  </data>
+  <data name="NewerRevision" xml:space="preserve">
+    <value>Никаких различий</value>
+  </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>Найдена более новая версия</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Следующая страница</value>
+  </data>
+  <data name="NoFiles" xml:space="preserve">
+    <value>Нет файлов</value>
+  </data>
+  <data name="NoMessages" xml:space="preserve">
+    <value>На этой странице ещё нет сообщений. Ваше будет первым!</value>
+  </data>
+  <data name="NoPagesInThisCategory" xml:space="preserve">
+    <value>К этой категории не относится ни одна из страниц</value>
+  </data>
+  <data name="NoWiki" xml:space="preserve">
+    <value>Не интерпретируется на языке Wiki</value>
+  </data>
+  <data name="OlderRevision" xml:space="preserve">
+    <value>Старая версия</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>Пользователей на сайте</value>
+  </data>
+  <data name="OnlyDllFilesAllowed" xml:space="preserve">
+    <value>Разрешены только файлы DLL</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>Операции</value>
+  </data>
+  <data name="OperationTitle" xml:space="preserve">
+    <value>Операция</value>
+  </data>
+  <data name="PageAlreadyExists" xml:space="preserve">
+    <value>Такая страница уже существует</value>
+  </data>
+  <data name="PageBackupsDeleted" xml:space="preserve">
+    <value>Резервные копии Страницы удалены</value>
+  </data>
+  <data name="PageDeleted" xml:space="preserve">
+    <value>Страница удалена</value>
+  </data>
+  <data name="PageDiscussionCleared" xml:space="preserve">
+    <value>Обсуждение этой страницы очищено</value>
+  </data>
+  <data name="PageHistory" xml:space="preserve">
+    <value>История страницы</value>
+  </data>
+  <data name="PageLink" xml:space="preserve">
+    <value>Ссылка на страницу</value>
+  </data>
+  <data name="PageLocked" xml:space="preserve">
+    <value>Эта страница заблокирована</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>Страница не найдена</value>
+  </data>
+  <data name="PageNotFoundTitle" xml:space="preserve">
+    <value>Страница не НАЙДЕНА</value>
+  </data>
+  <data name="PagePublic" xml:space="preserve">
+    <value>Эта страница - публичная</value>
+  </data>
+  <data name="PageRenamed" xml:space="preserve">
+    <value>Страница переименована</value>
+  </data>
+  <data name="PageRevision" xml:space="preserve">
+    <value>Различия версий</value>
+  </data>
+  <data name="PagesDiskUsage" xml:space="preserve">
+    <value>Использование дискового пространства страницами</value>
+  </data>
+  <data name="PageSetLocked" xml:space="preserve">
+    <value>Страница заблокирована</value>
+  </data>
+  <data name="PageSetNormal" xml:space="preserve">
+    <value>Страница с обычным статусом</value>
+  </data>
+  <data name="PageSetPublic" xml:space="preserve">
+    <value>Публичная страница</value>
+  </data>
+  <data name="PagesOfCategory" xml:space="preserve">
+    <value>Страницы Категории</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Название страницы</value>
+  </data>
+  <data name="PageUpdates" xml:space="preserve">
+    <value>Обновления страницы</value>
+  </data>
+  <data name="PasswordResetMessageFile" xml:space="preserve">
+    <value>Файл изменения пароля</value>
+  </data>
+  <data name="PasswordSaved" xml:space="preserve">
+    <value>Пароль сохранён</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>Пароли не совпадают</value>
+  </data>
+  <data name="Paths" xml:space="preserve">
+    <value>Пути</value>
+  </data>
+  <data name="PerformASearch" xml:space="preserve">
+    <value>найти</value>
+  </data>
+  <data name="PleaseSelectValidBackup" xml:space="preserve">
+    <value>Пожалуйста, выберите существующую резервную копию</value>
+  </data>
+  <data name="Posted" xml:space="preserve">
+    <value>Опубликовано</value>
+  </data>
+  <data name="PostMessage" xml:space="preserve">
+    <value>Опубликовать сообщение</value>
+  </data>
+  <data name="PostTitle" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="PreviewCreated" xml:space="preserve">
+    <value>Вызванный Вами предосмотр, отображается внизу этой страницы</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>Предыдущая страница</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Печать</value>
+  </data>
+  <data name="PrinterFriendlyVersion" xml:space="preserve">
+    <value>Версия для печати</value>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>Профиль пользователя</value>
+  </data>
+  <data name="ProviderConfigurationSaved" xml:space="preserve">
+    <value>Конфигурация провайдера сохранена</value>
+  </data>
+  <data name="ProviderDisabled" xml:space="preserve">
+    <value>Провайдер отключён</value>
+  </data>
+  <data name="ProviderEnabled" xml:space="preserve">
+    <value>Провайдер включён</value>
+  </data>
+  <data name="ProviderNotFound" xml:space="preserve">
+    <value>Провайдер не найден</value>
+  </data>
+  <data name="ProviderUnloaded" xml:space="preserve">
+    <value>Првайдер выгрузился</value>
+  </data>
+  <data name="RecentPageUpdates" xml:space="preserve">
+    <value>Недавние обновления страницы</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Перегрузить</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Создать Учётную Запись</value>
+  </data>
+  <data name="RegistrationDisabled" xml:space="preserve">
+    <value>Создание учётных записей отключено.</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>Ответ</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Не используемая область</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Различия</value>
+  </data>
+  <data name="RollbackCompleted" xml:space="preserve">
+    <value>Откат завершён</value>
+  </data>
+  <data name="RssForTheWiki" xml:space="preserve">
+    <value>Уведомления об обновлении всей Wiki (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisDiscussion" xml:space="preserve">
+    <value>Уведомления об обновлении обсуждений (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisPage" xml:space="preserve">
+    <value>Уведомления об обновлении этой страницы (RSS 2.0)</value>
+  </data>
+  <data name="ScriptDetected" xml:space="preserve">
+    <value>В этом содержании обнаружен запрещённый тег SCRIPT-а</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>Поисковая машина</value>
+  </data>
+  <data name="SendAMessage" xml:space="preserve">
+    <value>Отправить сообщение</value>
+  </data>
+  <data name="SidebarFile" xml:space="preserve">
+    <value>Файл сайдбара</value>
+  </data>
+  <data name="Smaller" xml:space="preserve">
+    <value>Меньше</value>
+  </data>
+  <data name="SnippetAlreadyExists" xml:space="preserve">
+    <value>Такой сниппет уже существует</value>
+  </data>
+  <data name="SnippetDeleted" xml:space="preserve">
+    <value>Сниппет удалён</value>
+  </data>
+  <data name="SnippetNotFound" xml:space="preserve">
+    <value>Сниппет не найден</value>
+  </data>
+  <data name="SnippetSaved" xml:space="preserve">
+    <value>Сниппет сохранён</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>Сортировано по дате и времени</value>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>Сортировано по Названию</value>
+  </data>
+  <data name="SortByUser" xml:space="preserve">
+    <value>Сортировано по пользователю</value>
+  </data>
+  <data name="SpecialTags" xml:space="preserve">
+    <value>Спец. теги</value>
+  </data>
+  <data name="Striked" xml:space="preserve">
+    <value>Перечёркнутый</value>
+  </data>
+  <data name="SubjectAndBodyNeeded" xml:space="preserve">
+    <value>Следует заполнить Тему и Текст сообщения.</value>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>Подстрочный</value>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>Надстрочный</value>
+  </data>
+  <data name="TableOfContents" xml:space="preserve">
+    <value>Оглавление</value>
+  </data>
+  <data name="TempDiskUsage" xml:space="preserve">
+    <value>Размер временных файлов</value>
+  </data>
+  <data name="TextareaSize" xml:space="preserve">
+    <value>Размер шрифта</value>
+  </data>
+  <data name="ThePageHasBeenDeletedBy" xml:space="preserve">
+    <value>Страница была удалена </value>
+  </data>
+  <data name="ThePageHasBeenRenamedBy" xml:space="preserve">
+    <value>Страница была переименована </value>
+  </data>
+  <data name="ThePageHasBeenRolledBackBy" xml:space="preserve">
+    <value>Страница была восстановлена </value>
+  </data>
+  <data name="ThePageHasBeenUpdatedBy" xml:space="preserve">
+    <value>Страница была обновлена </value>
+  </data>
+  <data name="ThisIsAPreview" xml:space="preserve">
+    <value>&lt;b&gt;Предупреждение&lt;/b&gt;: это только предосмотр! Для сохранения изменений нажмите кнопку Сохранить!</value>
+  </data>
+  <data name="ThisPageIsLocked" xml:space="preserve">
+    <value>Эта страница заблокирована и может быть отредактирована только Администратором.</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Вверх</value>
+  </data>
+  <data name="TotalDiskUsage" xml:space="preserve">
+    <value>Использование дискового пространства</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Написать</value>
+  </data>
+  <data name="UnallowedFileType" xml:space="preserve">
+    <value>Файлы такого типа, запрещёны к загрузке.</value>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>Без категорий</value>
+  </data>
+  <data name="UncategorizedPages" xml:space="preserve">
+    <value>Страницы без категорий</value>
+  </data>
+  <data name="Underlined" xml:space="preserve">
+    <value>Подчёркнутый</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>Управление файлами</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Пользователь</value>
+  </data>
+  <data name="UserActivated" xml:space="preserve">
+    <value>Пользователь активирован</value>
+  </data>
+  <data name="UserCount" xml:space="preserve">
+    <value>Количество пользователей</value>
+  </data>
+  <data name="UserDeactivated" xml:space="preserve">
+    <value>Пользователь деактивирован</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>Пользователь удалён</value>
+  </data>
+  <data name="UsernameAlreadyExists" xml:space="preserve">
+    <value>Такое Имя Пользователя уже существует, попробуйте другое, пожалуйста</value>
+  </data>
+  <data name="UsernameIsRequired" xml:space="preserve">
+    <value>В связи с установкой пароля SMTP пользователя, требуется и его имя</value>
+  </data>
+  <data name="UserPromoted" xml:space="preserve">
+    <value>Статус пользователя изменён на "Администратора"</value>
+  </data>
+  <data name="VersionCheckError" xml:space="preserve">
+    <value>Ошибка восстановления информации о Версии</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Просмотр</value>
+  </data>
+  <data name="ViewingFile" xml:space="preserve">
+    <value>Просмотр файла</value>
+  </data>
+  <data name="ViewList" xml:space="preserve">
+    <value>Просмотр списка</value>
+  </data>
+  <data name="ViewPageCode" xml:space="preserve">
+    <value>Просмотр кода страницы</value>
+  </data>
+  <data name="ViewTree" xml:space="preserve">
+    <value>Древовидная структура</value>
+  </data>
+  <data name="WereYouLookingFor" xml:space="preserve">
+    <value>Вы искали одну из этих страниц?</value>
+  </data>
+  <data name="WikiUpToDate" xml:space="preserve">
+    <value>У Вас новейшая версия Wiki</value>
+  </data>
+  <data name="WikiVersion" xml:space="preserve">
+    <value>Версия Wiki</value>
+  </data>
+  <data name="Wizard" xml:space="preserve">
+    <value>Конструктор Настроек</value>
+  </data>
+  <data name="WrongControlText" xml:space="preserve">
+    <value>Неверный Компонент Текста</value>
+  </data>
+  <data name="WrongParameters" xml:space="preserve">
+    <value>Неверный параметр</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>Неверный пароль</value>
+  </data>
+  <data name="WrongUsernamePassword" xml:space="preserve">
+    <value>Неверное Имя Пользователя и/или Пароль</value>
+  </data>
+  <data name="YouCanAlso" xml:space="preserve">
+    <value>Вы также имеете возможность</value>
+  </data>
+  <data name="YouMustProvideAFile" xml:space="preserve">
+    <value>Необходимо выбрать файл</value>
+  </data>
+</root>

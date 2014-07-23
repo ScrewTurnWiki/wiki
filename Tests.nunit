@@ -1,0 +1,12 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" />
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="AclEngine-Tests\bin\Debug\ScrewTurn.Wiki.AclEngine.Tests.dll" />
+    <assembly path="Core-Tests\bin\Debug\ScrewTurn.Wiki.Core.Tests.dll" />
+    <assembly path="PluginPack-Tests\bin\Debug\ScrewTurn.Wiki.Plugins.PluginPack.Tests.dll" />
+    <assembly path="SearchEngine-Tests\bin\Debug\ScrewTurn.Wiki.SearchEngine.Tests.dll" />
+    <assembly path="SqlProvidersCommon-Tests\bin\Debug\ScrewTurn.Wiki.Plugins.SqlCommon.Tests.dll" />
+    <assembly path="SqlServerProviders-Tests\bin\Debug\ScrewTurn.Wiki.Plugins.SqlServer.Tests.dll" />
+  </Config>
+  <Config name="Release" binpathtype="Auto" />
+</NUnitProject>

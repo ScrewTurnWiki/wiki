@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C353A35C-86D0-4154-9500-4F88CAAB29C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScrewTurn.Wiki</RootNamespace>
+    <AssemblyName>ScrewTurn.Wiki.Core</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FileAlignment>512</FileAlignment>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\ScrewTurn.Wiki.Core.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FileAlignment>512</FileAlignment>
+    <DocumentationFile>bin\Release\ScrewTurn.Wiki.Core.xml</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SgmlReaderDll">
+      <HintPath>..\References\Lib\MindTouch SGML Reader\SgmlReaderDll.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyVersion.cs">
+      <Link>AssemblyVersion.cs</Link>
+    </Compile>
+    <Compile Include="AclStorer.cs" />
+    <Compile Include="AuthChecker.cs" />
+    <Compile Include="AuthStatus.cs" />
+    <Compile Include="AuthTools.cs" />
+    <Compile Include="AuthWriter.cs" />
+    <Compile Include="BreadcrumbsManager.cs" />
+    <Compile Include="Cache.cs" />
+    <Compile Include="CacheProvider.cs" />
+    <Compile Include="Collectors.cs" />
+    <Compile Include="Collisions.cs" />
+    <Compile Include="Content.cs" />
+    <Compile Include="DataMigrator.cs" />
+    <Compile Include="Defaults.cs" />
+    <Compile Include="DiffTools.cs" />
+    <Compile Include="EmailTools.cs" />
+    <Compile Include="FileDocument.cs" />
+    <Compile Include="FilesAndAttachments.cs" />
+    <Compile Include="FilesStorageProvider.cs" />
+    <Compile Include="Formatter.cs" />
+    <Compile Include="FormattingPipeline.cs" />
+    <Compile Include="Hash.cs" />
+    <Compile Include="Host.cs" />
+    <Compile Include="IndexStorer.cs" />
+    <Compile Include="ITranslator.cs" />
+    <Compile Include="LocalPageInfo.cs" />
+    <Compile Include="LocalProvidersTools.cs" />
+    <Compile Include="LocalUserInfo.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MimeTypes.cs" />
+    <Compile Include="NavigationPaths.cs" />
+    <Compile Include="PageAttachmentDocument.cs" />
+    <Compile Include="Pages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PagesStorageProvider.cs" />
+    <Compile Include="AuthReader.cs" />
+    <Compile Include="Preferences.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderBase.cs" />
+    <Compile Include="ProviderCollector.cs" />
+    <Compile Include="ProviderLoader.cs" />
+    <Compile Include="ProviderUpdater.cs" />
+    <Compile Include="RecentChanges.cs" />
+    <Compile Include="Redirections.cs" />
+    <Compile Include="ReverseFormatter.cs" />
+    <Compile Include="SearchTools.cs" />
+    <Compile Include="SessionFacade.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsStorageProvider.cs" />
+    <Compile Include="Snippets.cs" />
+    <Compile Include="StartupTools.cs" />
+    <Compile Include="SubjectInfo.cs" />
+    <Compile Include="Templates.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="Translator.cs" />
+    <Compile Include="TranslatorFlex.cs" />
+    <Compile Include="UrlTools.cs" />
+    <Compile Include="Users.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UsersStorageProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AclEngine\AclEngine.csproj">
+      <Project>{44B0F4C1-8CDC-4272-B2A2-C0AF689CEB81}</Project>
+      <Name>AclEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginFramework\PluginFramework.csproj">
+      <Project>{531A83D6-76F9-4014-91C5-295818E2D948}</Project>
+      <Name>PluginFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SearchEngine\SearchEngine.csproj">
+      <Project>{2DF980A6-4742-49B1-A090-DE79314644D0}</Project>
+      <Name>SearchEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

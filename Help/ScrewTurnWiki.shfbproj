@@ -1,0 +1,74 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which
+         assemblies to include from solution and project documentation
+         sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1cf8d141-fed5-4815-903d-15ffebf2b72a}</ProjectGuid>
+    <SHFBSchemaVersion>1.8.0.3</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual
+         Studio adds them anyway -->
+    <AssemblyName>Documentation</AssemblyName>
+    <RootNamespace>Documentation</RootNamespace>
+    <Name>Documentation</Name>
+    <!-- SHFB properties -->
+    <OutputPath>..\Help\</OutputPath>
+    <HtmlHelpName>ScrewTurnWiki</HtmlHelpName>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\AclEngine\AclEngine.csproj" />
+<DocumentationSource sourceFile="..\ActiveDirectoryProvider\ActiveDirectoryProvider.csproj" />
+<DocumentationSource sourceFile="..\Core\Core.csproj" />
+<DocumentationSource sourceFile="..\DownloadCounterPlugin\DownloadCounterPlugin.csproj" />
+<DocumentationSource sourceFile="..\FootnotesPlugin\FootnotesPlugin.csproj" />
+<DocumentationSource sourceFile="..\MultilanguageContentPlugin\MultilanguageContentPlugin.csproj" />
+<DocumentationSource sourceFile="..\PluginFramework\PluginFramework.csproj" />
+<DocumentationSource sourceFile="..\RssFeedDisplayPlugin\RssFeedDisplayPlugin.csproj" />
+<DocumentationSource sourceFile="..\SearchEngine\SearchEngine.csproj" />
+<DocumentationSource sourceFile="..\SqlProvidersCommon\SqlProvidersCommon.csproj" />
+<DocumentationSource sourceFile="..\SqlServerProviders\SqlServerProviders.csproj" />
+<DocumentationSource sourceFile="..\UnfuddleTicketsPlugin\UnfuddleTicketsPlugin.csproj" /></DocumentationSources>
+    <NamespaceSummaries>
+      <NamespaceSummaryItem name="ScrewTurn.Wiki.AclEngine" isDocumented="True">Namespace containing ACL Engine types.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="ScrewTurn.Wiki.ImportWiki" isDocumented="False" />
+      <NamespaceSummaryItem name="ScrewTurn.Wiki.PluginFramework" isDocumented="True">Namespace containing Plugin Framework types.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="ScrewTurn.Wiki.Plugins.ActiveDirectory" isDocumented="True">Namespace containing Active Directory Provider types.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="ScrewTurn.Wiki.Plugins.PluginPack" isDocumented="True">Namespace containing Plugin Pack types.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="ScrewTurn.Wiki.Plugins.SqlCommon" isDocumented="True">Namespace containing SQL Common types.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="ScrewTurn.Wiki.Plugins.SqlServer" isDocumented="True">Namespace containing SQL Server types.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="ScrewTurn.Wiki.SearchEngine" isDocumented="True">Namespace containing Search Engine types.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="ScrewTurn.Wiki" isDocumented="True">Root ScrewTurn Wiki namespace.</NamespaceSummaryItem>
+    </NamespaceSummaries>
+    <ProjectSummary>API documentation for ScrewTurn Wiki version 3.0.</ProjectSummary>
+    <CopyrightHref>http://www.screwturn.eu</CopyrightHref>
+    <CopyrightText>Copyright %28C%29 2006-2010 Threeplicate Srl. All rights reserved.</CopyrightText>
+    <HelpTitle>ScrewTurn Wiki API Documentation</HelpTitle>
+    <RootNamespaceContainer>True</RootNamespaceContainer>
+    <RootNamespaceTitle>ScrewTurn Wiki</RootNamespaceTitle>
+    <HelpFileVersion>3.0.2.500</HelpFileVersion>
+    <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, TypeParameter, AutoDocumentDispose</MissingTags>
+    <PresentationStyle>Prototype</PresentationStyle>
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in
+       order for Visual Studio to perform the build.  The others are optional
+       common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <!-- Import the SHFB build targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+</Project>

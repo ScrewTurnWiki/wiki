@@ -1,0 +1,1753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessDeniedTitle" xml:space="preserve">
+    <value>Åtkomst nekad</value>
+  </data>
+  <data name="AccountActivated" xml:space="preserve">
+    <value>Ditt konto har aktiverats. Du kan nu logga in.</value>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Kontoaktivering</value>
+  </data>
+  <data name="AccountActivationMessageFile" xml:space="preserve">
+    <value>Meddelandefil för kontoaktivering</value>
+  </data>
+  <data name="AccountAlreadyActive" xml:space="preserve">
+    <value>Konto är redan aktiverat</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Konto skapat</value>
+  </data>
+  <data name="AccountNotActivated" xml:space="preserve">
+    <value>Fel vid kontoaktivering</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Konto kunde inte hittas</value>
+  </data>
+  <data name="ActivationAdmin" xml:space="preserve">
+    <value>Ditt konto måste godkännas av en administratör innan du kan logga in.</value>
+  </data>
+  <data name="ActivationAuto" xml:space="preserve">
+    <value>Ditt konto kommer att vara aktivt direkt efter registrering.</value>
+  </data>
+  <data name="ActivationEmail" xml:space="preserve">
+    <value>Du måste aktivera ditt konto inom 24 timmar. Följ instruktionerna du får med e-post.</value>
+  </data>
+  <data name="AdminDowngraded" xml:space="preserve">
+    <value>Administratör degraderad till användare</value>
+  </data>
+  <data name="AdminTitle" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>Alla sidor</value>
+  </data>
+  <data name="AllPagesTitle" xml:space="preserve">
+    <value>Wikiindex</value>
+  </data>
+  <data name="Anchor" xml:space="preserve">
+    <value>Bokmärke</value>
+  </data>
+  <data name="AnchorId" xml:space="preserve">
+    <value>Bokmärkes-id</value>
+  </data>
+  <data name="AnchorLink" xml:space="preserve">
+    <value>Bokmärkeslänk</value>
+  </data>
+  <data name="AnchorTitle" xml:space="preserve">
+    <value>Bokmärkesrubrik</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Återgå</value>
+  </data>
+  <data name="BackToHistory" xml:space="preserve">
+    <value>Återgå till sidhistoriken</value>
+  </data>
+  <data name="Bigger" xml:space="preserve">
+    <value>Större</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Fetstil</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>Omslagsruta</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>av</value>
+  </data>
+  <data name="CachedPages" xml:space="preserve">
+    <value>Cachade sidor</value>
+  </data>
+  <data name="CannotDisableDefaultProvider" xml:space="preserve">
+    <value>Kan inte avaktivera en standardleverantör</value>
+  </data>
+  <data name="CannotUnloadDefaultProvider" xml:space="preserve">
+    <value>Kan inte avinstallera en standardleverantör</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Kategorier</value>
+  </data>
+  <data name="CategoriesMerged" xml:space="preserve">
+    <value>Kategorier ihopslagna</value>
+  </data>
+  <data name="CategorizedAs" xml:space="preserve">
+    <value>Kategoriserad som</value>
+  </data>
+  <data name="CategoryDeleted" xml:space="preserve">
+    <value>Kategori borttagen</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>Kategori kunde inte hittas</value>
+  </data>
+  <data name="CategoryRenamed" xml:space="preserve">
+    <value>Kategorinamn ändrat</value>
+  </data>
+  <data name="CategorySaved" xml:space="preserve">
+    <value>Kategori sparad</value>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>Kategorier</value>
+  </data>
+  <data name="CodeBlock" xml:space="preserve">
+    <value>Kodblock</value>
+  </data>
+  <data name="CodeInline" xml:space="preserve">
+    <value>Inbäddad kod</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Kommentar</value>
+  </data>
+  <data name="ConfigSaved" xml:space="preserve">
+    <value>Konfiguration sparad</value>
+  </data>
+  <data name="ConfigurationString" xml:space="preserve">
+    <value>Konfigurationssträng</value>
+  </data>
+  <data name="ConfigValuesReset" xml:space="preserve">
+    <value>Konfigurationsinställningar återställda till tidigare värden</value>
+  </data>
+  <data name="ConfirmOperation" xml:space="preserve">
+    <value>Är du säker på att du vill fortsätta?</value>
+  </data>
+  <data name="CouldRequireLogin" xml:space="preserve">
+    <value>kan kräva inloggning</value>
+  </data>
+  <data name="CreateNewPage" xml:space="preserve">
+    <value>Skapa en ny sida</value>
+  </data>
+  <data name="CreatePage" xml:space="preserve">
+    <value>Skapa sida</value>
+  </data>
+  <data name="CreateThePage" xml:space="preserve">
+    <value>skapa sidan</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Aktuell</value>
+  </data>
+  <data name="CurrentRevision" xml:space="preserve">
+    <value>Aktuell version</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Datum/tid</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Ta bort</value>
+  </data>
+  <data name="DiffColorKey" xml:space="preserve">
+    <value>Färgnyckel: &lt;span style="background-color: #88CC33;"&gt;ny text&lt;/span&gt; / &lt;span style="background-color: #FFDF66;"&gt;borttagen text&lt;/span&gt;.</value>
+  </data>
+  <data name="DiffingPageTitle" xml:space="preserve">
+    <value>Jämför &lt;i&gt;##PAGETITLE##&lt;/i&gt;, version &lt;i&gt;##REV1##&lt;/i&gt; och &lt;i&gt;##REV2##&lt;/i&gt;</value>
+  </data>
+  <data name="DiffTitle" xml:space="preserve">
+    <value>Skillnader</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Avaktiverad</value>
+  </data>
+  <data name="Discuss" xml:space="preserve">
+    <value>Diskutera</value>
+  </data>
+  <data name="DiscussionFor" xml:space="preserve">
+    <value>Diskussion för</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Ladda ner</value>
+  </data>
+  <data name="EarlierThisMonth" xml:space="preserve">
+    <value>Tidigare denna månad</value>
+  </data>
+  <data name="EarlierThisWeek" xml:space="preserve">
+    <value>Tidigare denna vecka</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Redigera</value>
+  </data>
+  <data name="EditingFile" xml:space="preserve">
+    <value>Redigerar fil</value>
+  </data>
+  <data name="EditNoticeFile" xml:space="preserve">
+    <value>Redigera meddelandefil</value>
+  </data>
+  <data name="EditPage" xml:space="preserve">
+    <value>Redigera sida</value>
+  </data>
+  <data name="EditThisPage" xml:space="preserve">
+    <value>Redigera denna sida</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>Redigera</value>
+  </data>
+  <data name="EmailSaved" xml:space="preserve">
+    <value>E-postadress sparad</value>
+  </data>
+  <data name="EmailsNotEqual" xml:space="preserve">
+    <value>E-postadresser är inte identiska</value>
+  </data>
+  <data name="EnterTitleAndUrl" xml:space="preserve">
+    <value>Du måste ange både rubrik och url.</value>
+  </data>
+  <data name="ErrorDeletingFile" xml:space="preserve">
+    <value>Fel vid borttagning av fil</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Fel</value>
+  </data>
+  <data name="Escape" xml:space="preserve">
+    <value>Escape</value>
+  </data>
+  <data name="ExternalLink" xml:space="preserve">
+    <value>Extern länk</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>Fil finns redan</value>
+  </data>
+  <data name="FileLink" xml:space="preserve">
+    <value>Länka till en lokal fil</value>
+  </data>
+  <data name="FileManagement" xml:space="preserve">
+    <value>Filhantering (nytt fönster)</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Kunde inte hitta fil</value>
+  </data>
+  <data name="FileSaved" xml:space="preserve">
+    <value>Fil sparad</value>
+  </data>
+  <data name="FilesDiskUsage" xml:space="preserve">
+    <value>Använt diskutrymme för filer</value>
+  </data>
+  <data name="FileTooBig" xml:space="preserve">
+    <value>Filen är för stor</value>
+  </data>
+  <data name="FileVoid" xml:space="preserve">
+    <value>Fil saknas</value>
+  </data>
+  <data name="FooterFile" xml:space="preserve">
+    <value>Sidfotsfil</value>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>Otillåten</value>
+  </data>
+  <data name="FullView" xml:space="preserve">
+    <value>Helsidesvy (nytt fönster)</value>
+  </data>
+  <data name="H1" xml:space="preserve">
+    <value>H1</value>
+  </data>
+  <data name="H2" xml:space="preserve">
+    <value>H2</value>
+  </data>
+  <data name="H3" xml:space="preserve">
+    <value>H3</value>
+  </data>
+  <data name="H4" xml:space="preserve">
+    <value>H4 (använd sparsamt)</value>
+  </data>
+  <data name="HeaderFile" xml:space="preserve">
+    <value>Sidhuvudsfil</value>
+  </data>
+  <data name="HideBreadcrumbsTrail" xml:space="preserve">
+    <value>Klicka här för att dölja brödsmulespår</value>
+  </data>
+  <data name="HidePreview" xml:space="preserve">
+    <value>Dölj förhandsgranskning</value>
+  </data>
+  <data name="HideShow" xml:space="preserve">
+    <value>Dölj/visa</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Historik</value>
+  </data>
+  <data name="HistoryTitle" xml:space="preserve">
+    <value>Sidhistorik</value>
+  </data>
+  <data name="HtmlHeadFile" xml:space="preserve">
+    <value>HTML-sidhuvudsfil</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Bild</value>
+  </data>
+  <data name="ImageAuto" xml:space="preserve">
+    <value>Bild - autojustering</value>
+  </data>
+  <data name="ImageBigUrl" xml:space="preserve">
+    <value>Url för stor bild (valfritt)</value>
+  </data>
+  <data name="ImageInline" xml:space="preserve">
+    <value>Bild - inbäddad (ingen ram)</value>
+  </data>
+  <data name="ImageLeft" xml:space="preserve">
+    <value>Bild - vänsterjusterad</value>
+  </data>
+  <data name="ImageRight" xml:space="preserve">
+    <value>Bild - högerjusterad</value>
+  </data>
+  <data name="ImageTitle" xml:space="preserve">
+    <value>Bildrubrik</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>Bild-url</value>
+  </data>
+  <data name="InactiveUsers" xml:space="preserve">
+    <value>Inaktiva</value>
+    <comment>Referred to the count of inactive users, for example Users: 8 (3 inactive)</comment>
+  </data>
+  <data name="InsertSnippet" xml:space="preserve">
+    <value>Infoga fragment</value>
+  </data>
+  <data name="InvalidBackupNumber" xml:space="preserve">
+    <value>Ogiltigt tal: det måste vara större eller lika med noll (lämna tomt för avaktivera automatisk borttagning av gamla versioner) </value>
+  </data>
+  <data name="InvalidCacheCutSize" xml:space="preserve">
+    <value>Ogiltig cachebeskärningsstorlek: den måste vara ett heltal större än noll och mindre än cachestorleken</value>
+  </data>
+  <data name="InvalidCacheSize" xml:space="preserve">
+    <value>Ogiltig cachestorlek: den måste vara ett heltal större än noll</value>
+  </data>
+  <data name="InvalidCategoryName" xml:space="preserve">
+    <value>Ogiltigt kategorinanm</value>
+  </data>
+  <data name="InvalidContactEmail" xml:space="preserve">
+    <value>Ogiltig e-postadress</value>
+  </data>
+  <data name="InvalidDateTimeFormat" xml:space="preserve">
+    <value>Ogilitgt datum-/tidsformat: det måste vara ett giltigt .NET-format</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Ogiltig e-postadress</value>
+  </data>
+  <data name="InvalidFileAccessTries" xml:space="preserve">
+    <value>Ogiltigt värde för filåtkomstförsök: det måste vara ett heltal större än noll</value>
+  </data>
+  <data name="InvalidFileAccessTryDelay" xml:space="preserve">
+    <value>Ogiltigt värde för fördröjning mellan filåtkomstförsök: det måste vara ett heltal större än noll</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Ogiltig filtyp</value>
+  </data>
+  <data name="InvalidMainUrl" xml:space="preserve">
+    <value>Ogiltig roturl: den måste vara en komplett url avslutad med snedstreck</value>
+  </data>
+  <data name="InvalidMaxFileSize" xml:space="preserve">
+    <value>Ogiltig max filstorlek: den måste vara större än noll och mindre än 20480 kB</value>
+  </data>
+  <data name="InvalidMaxLogSize" xml:space="preserve">
+    <value>Ogiltig max loggstorlek: den måste vara större än 8 och mindre än 10240 kB</value>
+  </data>
+  <data name="InvalidNavPath" xml:space="preserve">
+    <value>Ogiltig sidföljd: minst två sidor måste anges</value>
+  </data>
+  <data name="InvalidNavPathName" xml:space="preserve">
+    <value>Ogiltigt namn på sidföljd</value>
+  </data>
+  <data name="InvalidPageName" xml:space="preserve">
+    <value>Ogiltigt sidnamn</value>
+  </data>
+  <data name="InvalidPageTitle" xml:space="preserve">
+    <value>Ogiltig sidrubrik</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Ogiltigt lösenord</value>
+  </data>
+  <data name="InvalidPort" xml:space="preserve">
+    <value>Ogiltig port (måste vara mellan 1 och 65535)</value>
+  </data>
+  <data name="InvalidSenderEmail" xml:space="preserve">
+    <value>Ogiltig avsändare-postadress</value>
+  </data>
+  <data name="InvalidSmtpServer" xml:space="preserve">
+    <value>Ogiltig smtp-server</value>
+  </data>
+  <data name="InvalidSnippetName" xml:space="preserve">
+    <value>Ogiltigt fragmentnamn</value>
+  </data>
+  <data name="InvalidUsername" xml:space="preserve">
+    <value>Ogiltigt användarnamn: namnet måste vara minst 4 tecken långt; använda bokstäver, siffror, mellanslag och punkt; och inte innehålla orden 'admin' eller 'guest'.</value>
+  </data>
+  <data name="InvalidWikiTitle" xml:space="preserve">
+    <value>Ogiltigt wikinamn: namnet kan inte vara tomt eller innehålla radbrytningar</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Kursiv</value>
+  </data>
+  <data name="LastModifiedPage" xml:space="preserve">
+    <value>Senast ändrade sida</value>
+  </data>
+  <data name="LastMonth" xml:space="preserve">
+    <value>Förra månaden</value>
+  </data>
+  <data name="LatestUser" xml:space="preserve">
+    <value>Senaste användaren</value>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>Radbrytning (enkel)</value>
+  </data>
+  <data name="LinkTitle" xml:space="preserve">
+    <value>Länkrubrik</value>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>Länk-url</value>
+  </data>
+  <data name="LocatedIn" xml:space="preserve">
+    <value>Placerad i</value>
+  </data>
+  <data name="LogDiskUsage" xml:space="preserve">
+    <value>Logga användning av diskutrymme</value>
+  </data>
+  <data name="LoggedAsAdmin" xml:space="preserve">
+    <value>Du är inloggad med det inbyggda admin-kontot, därför kan du inte ändra din profil.</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Logga in</value>
+  </data>
+  <data name="LoginNoticeFile" xml:space="preserve">
+    <value>Loginmeddelandefil</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Logga in/ut</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logga ut</value>
+  </data>
+  <data name="LostPassword" xml:space="preserve">
+    <value>Har du tappat ditt lösenord?</value>
+  </data>
+  <data name="MassEmailSent" xml:space="preserve">
+    <value>Mängdmeddelande skickat (leverans kan dröja sen stund)</value>
+  </data>
+  <data name="MayBeInaccurate" xml:space="preserve">
+    <value>Kan vara inexakt</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Meddelande</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>Meddelande skickat</value>
+  </data>
+  <data name="MessageTitle" xml:space="preserve">
+    <value>Skriv meddelande</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Ändrad</value>
+  </data>
+  <data name="NavPathAlreadyExists" xml:space="preserve">
+    <value>Sidföljd finns redan</value>
+  </data>
+  <data name="NavPathDeleted" xml:space="preserve">
+    <value>Sidföljd borttagen</value>
+  </data>
+  <data name="NavPathNotFound" xml:space="preserve">
+    <value>Sidföljd kunde inte hittas</value>
+  </data>
+  <data name="NavPathSaved" xml:space="preserve">
+    <value>Sidfö sparad</value>
+  </data>
+  <data name="NavPathTitle" xml:space="preserve">
+    <value>Sidföljder</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>-</value>
+    <comment>It means 'not categorized'</comment>
+  </data>
+  <data name="NewerRevision" xml:space="preserve">
+    <value>Nyare version</value>
+  </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>Nyare version hittad</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Nästa sida</value>
+  </data>
+  <data name="NoFiles" xml:space="preserve">
+    <value>Inga filer</value>
+  </data>
+  <data name="NoMessages" xml:space="preserve">
+    <value>Det finns inga diskussionsinlägg för denna sida. Skriv det första!</value>
+  </data>
+  <data name="NoPagesInThisCategory" xml:space="preserve">
+    <value>Inga sidor hittades i denna kategori</value>
+  </data>
+  <data name="NoWiki" xml:space="preserve">
+    <value>NoWiki-märkord</value>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>Äldre</value>
+  </data>
+  <data name="OlderRevision" xml:space="preserve">
+    <value>Äldre versioner</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>Användare anslutna</value>
+  </data>
+  <data name="OnlyDllFilesAllowed" xml:space="preserve">
+    <value>Endast dll-filer är tillåtna</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>Kommandon</value>
+  </data>
+  <data name="OperationTitle" xml:space="preserve">
+    <value>Kommando</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>eller</value>
+    <comment>It means 'you can do this OR this"</comment>
+  </data>
+  <data name="PageAlreadyExists" xml:space="preserve">
+    <value>Sida finns redan</value>
+  </data>
+  <data name="PageBackupsDeleted" xml:space="preserve">
+    <value>Sidhistorik borttagen</value>
+  </data>
+  <data name="PageDeleted" xml:space="preserve">
+    <value>Sida borttagen</value>
+  </data>
+  <data name="PageDiscussionCleared" xml:space="preserve">
+    <value>Siddiskussion rensad</value>
+  </data>
+  <data name="PageDoesNotExistInProvider" xml:space="preserve">
+    <value>Sidan ##PAGENAME## finns inte i aktuell leverantör</value>
+  </data>
+  <data name="PageFooterFile" xml:space="preserve">
+    <value>Sidfotsfil</value>
+  </data>
+  <data name="PageHeaderFile" xml:space="preserve">
+    <value>Sidhuvudsfil</value>
+  </data>
+  <data name="PageHistory" xml:space="preserve">
+    <value>Sidhistorik</value>
+  </data>
+  <data name="PageLink" xml:space="preserve">
+    <value>Länka till en sida</value>
+  </data>
+  <data name="PageLocked" xml:space="preserve">
+    <value>Denna sida är låst</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>Sida kunde inte hittas</value>
+  </data>
+  <data name="PageNotFoundTitle" xml:space="preserve">
+    <value>Sida kunde inte hittas</value>
+  </data>
+  <data name="PagePublic" xml:space="preserve">
+    <value>Denna sida är allmän</value>
+  </data>
+  <data name="PageRenamed" xml:space="preserve">
+    <value>Sida namnändrad</value>
+  </data>
+  <data name="PageRevision" xml:space="preserve">
+    <value>Sidversion</value>
+  </data>
+  <data name="PageSaved" xml:space="preserve">
+    <value>Sida sparad</value>
+  </data>
+  <data name="PagesDiskUsage" xml:space="preserve">
+    <value>Diskanvändning för sida</value>
+  </data>
+  <data name="PageSetLocked" xml:space="preserve">
+    <value>Sida satt till 'Låst'</value>
+  </data>
+  <data name="PageSetNormal" xml:space="preserve">
+    <value>Sida satt till 'Normal'</value>
+  </data>
+  <data name="PageSetPublic" xml:space="preserve">
+    <value>Sida satt till 'Allmän'</value>
+  </data>
+  <data name="PagesOfCategory" xml:space="preserve">
+    <value>Sidor för kategorin</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Sidrubrik</value>
+  </data>
+  <data name="PageUpdates" xml:space="preserve">
+    <value>Uppdateringar för sida</value>
+  </data>
+  <data name="PasswordResetMessageFile" xml:space="preserve">
+    <value>Meddelandefil för återställning av lösenord</value>
+  </data>
+  <data name="PasswordSaved" xml:space="preserve">
+    <value>Lösenord sparat</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>Lösenord är inte identiska</value>
+  </data>
+  <data name="Paths" xml:space="preserve">
+    <value>Sidföljder</value>
+  </data>
+  <data name="PerformASearch" xml:space="preserve">
+    <value>utför en sökning</value>
+  </data>
+  <data name="PleaseSelectValidBackup" xml:space="preserve">
+    <value>Var god välj en giltig tidigare version</value>
+  </data>
+  <data name="Posted" xml:space="preserve">
+    <value>Skrivet</value>
+  </data>
+  <data name="PostMessage" xml:space="preserve">
+    <value>Skriv ett inlägg</value>
+  </data>
+  <data name="PostTitle" xml:space="preserve">
+    <value>Skriv inlägg</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Förhandsgranskning</value>
+  </data>
+  <data name="PreviewCreated" xml:space="preserve">
+    <value>Förhandsgranskning skapad, se slutet av denna sida</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>Föregående sida</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Skriv ut</value>
+  </data>
+  <data name="PrinterFriendlyVersion" xml:space="preserve">
+    <value>Utskriftsvänlig version</value>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>Användarprofil</value>
+  </data>
+  <data name="ProviderConfigurationSaved" xml:space="preserve">
+    <value>Leverantörskonfiguration sparad</value>
+  </data>
+  <data name="ProviderDisabled" xml:space="preserve">
+    <value>Leverantör avaktiverad</value>
+  </data>
+  <data name="ProviderEnabled" xml:space="preserve">
+    <value>Leverantör aktiverad</value>
+  </data>
+  <data name="ProviderNotFound" xml:space="preserve">
+    <value>Leverantör kunde inte hittas</value>
+  </data>
+  <data name="ProviderRejectedConfiguration" xml:space="preserve">
+    <value>Leverantören förkastade konfigurationsdatat</value>
+  </data>
+  <data name="ProviderUnloaded" xml:space="preserve">
+    <value>Leverantör avinstallerad</value>
+  </data>
+  <data name="RecentPageUpdates" xml:space="preserve">
+    <value>Senaste siduppdateringar</value>
+  </data>
+  <data name="RedirectedFrom" xml:space="preserve">
+    <value>Omdirigerad från</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Uppdatera</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Skapa konto</value>
+  </data>
+  <data name="RegistrationDisabled" xml:space="preserve">
+    <value>Skapande av konton är avaktiverat.</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>Svara</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Saknar obligatoriskt fält</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="RevisionComment" xml:space="preserve">
+    <value>Kommentar</value>
+  </data>
+  <data name="RollbackCompleted" xml:space="preserve">
+    <value>Klar med återgång till tidigare version</value>
+  </data>
+  <data name="RssForTheWiki" xml:space="preserve">
+    <value>Uppdateringsmeddelande för hela wikin (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisCategory" xml:space="preserve">
+    <value>Uppdateringsmeddelande för denna kategori (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisDiscussion" xml:space="preserve">
+    <value>Uppdateringsmeddelande för denna diskussionstråd (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisPage" xml:space="preserve">
+    <value>Uppdateringsmeddelande för denna sida (RSS 2.0)</value>
+  </data>
+  <data name="ScriptDetected" xml:space="preserve">
+    <value>Otillåtet SCRIPT-märkord funnen i innehållet</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Sök</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>Sökmotor</value>
+  </data>
+  <data name="SendAMessage" xml:space="preserve">
+    <value>Skicka ett meddelande</value>
+  </data>
+  <data name="ServerUptime" xml:space="preserve">
+    <value>Drifttid för server</value>
+  </data>
+  <data name="SidebarFile" xml:space="preserve">
+    <value>Sidomenyfil</value>
+  </data>
+  <data name="Smaller" xml:space="preserve">
+    <value>Mindre</value>
+  </data>
+  <data name="SnippetAlreadyExists" xml:space="preserve">
+    <value>Fragment finns redan</value>
+  </data>
+  <data name="SnippetDeleted" xml:space="preserve">
+    <value>Fragment borttaget</value>
+  </data>
+  <data name="SnippetNotFound" xml:space="preserve">
+    <value>Fragment kunde inte hittas</value>
+  </data>
+  <data name="SnippetSaved" xml:space="preserve">
+    <value>Fragment sparat</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>Sortera på datum och tid</value>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>Sortera på rubrik</value>
+  </data>
+  <data name="SortByUser" xml:space="preserve">
+    <value>Sortera på användare</value>
+  </data>
+  <data name="SpecialTags" xml:space="preserve">
+    <value>Speciella märkord</value>
+  </data>
+  <data name="Striked" xml:space="preserve">
+    <value>Genomstruken</value>
+  </data>
+  <data name="SubjectAndBodyNeeded" xml:space="preserve">
+    <value>Du måste ange både ämne och meddelandetext.</value>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>Nedsänkt</value>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>Upphöjd</value>
+  </data>
+  <data name="TableOfContents" xml:space="preserve">
+    <value>Innehållsförteckning</value>
+  </data>
+  <data name="TempDiskUsage" xml:space="preserve">
+    <value>Diskutrymme för temporära filer</value>
+  </data>
+  <data name="TextareaSize" xml:space="preserve">
+    <value>Storlek på textruta</value>
+  </data>
+  <data name="ThePageHasBeenDeletedBy" xml:space="preserve">
+    <value>Sidan har tagits bort av </value>
+  </data>
+  <data name="ThePageHasBeenRenamedBy" xml:space="preserve">
+    <value>Sidan har namnändrats av </value>
+  </data>
+  <data name="ThePageHasBeenRolledBackBy" xml:space="preserve">
+    <value>Sidan har återställts till tidigare version av </value>
+  </data>
+  <data name="ThePageHasBeenUpdatedBy" xml:space="preserve">
+    <value>Sidan har uppdaterats av  </value>
+  </data>
+  <data name="ThisIsAPreview" xml:space="preserve">
+    <value>&lt;b&gt;Varning&lt;/b&gt;: detta är endast en förhandsgranskning! Du måste klicka på Spara-knappen för att spara ändringarna!</value>
+  </data>
+  <data name="ThisPageIsLocked" xml:space="preserve">
+    <value>Denna sida är låst och kan bara ändras av administratörer.</value>
+  </data>
+  <data name="ThisPageRedirectsTo" xml:space="preserve">
+    <value>Denna sida omdirigerar till</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Idag</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Topp</value>
+  </data>
+  <data name="TotalDiskUsage" xml:space="preserve">
+    <value>Total diskanvändning</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="UnallowedFileType" xml:space="preserve">
+    <value>Filen du laddat upp är inte av en tillåten typ</value>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>Okategoriserad</value>
+  </data>
+  <data name="UncategorizedPages" xml:space="preserve">
+    <value>Okategoriserade sidor</value>
+  </data>
+  <data name="Underlined" xml:space="preserve">
+    <value>Understruken</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>Filhantering</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Användare</value>
+  </data>
+  <data name="UserAccountSaved" xml:space="preserve">
+    <value>Användarkonto sparat</value>
+  </data>
+  <data name="UserActivated" xml:space="preserve">
+    <value>Användare aktiverad</value>
+  </data>
+  <data name="UserCount" xml:space="preserve">
+    <value>Användarkonto</value>
+  </data>
+  <data name="UserDeactivated" xml:space="preserve">
+    <value>Användare avaktiverad</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>Användare borttagen</value>
+  </data>
+  <data name="UsernameAlreadyExists" xml:space="preserve">
+    <value>Användarnamn finns redan, var god välj ett annat</value>
+  </data>
+  <data name="UsernameIsRequired" xml:space="preserve">
+    <value>Användarnamn måste anges om du anger ett lösenord</value>
+  </data>
+  <data name="UserPromoted" xml:space="preserve">
+    <value>Användare uppgraderad till administratör</value>
+  </data>
+  <data name="VersionCheckError" xml:space="preserve">
+    <value>Fel vid hämtning av versionsinformation</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Visa</value>
+  </data>
+  <data name="ViewBreadcrumbsTrail" xml:space="preserve">
+    <value>Klicka här för att se hela brödsmulespåret</value>
+  </data>
+  <data name="ViewingFile" xml:space="preserve">
+    <value>Visar fil</value>
+  </data>
+  <data name="ViewList" xml:space="preserve">
+    <value>Visa lista</value>
+  </data>
+  <data name="ViewPageCode" xml:space="preserve">
+    <value>Visa sidkod</value>
+  </data>
+  <data name="ViewTree" xml:space="preserve">
+    <value>Trädvy</value>
+  </data>
+  <data name="WereYouLookingFor" xml:space="preserve">
+    <value>Letade du efter en av dessa sidor?</value>
+  </data>
+  <data name="WikiUpToDate" xml:space="preserve">
+    <value>Din wiki är uppdaterad</value>
+  </data>
+  <data name="WikiVersion" xml:space="preserve">
+    <value>Wikiversion</value>
+  </data>
+  <data name="Wizard" xml:space="preserve">
+    <value>Konfigurationsguide</value>
+  </data>
+  <data name="WrongControlText" xml:space="preserve">
+    <value>Fel kontrolltext</value>
+  </data>
+  <data name="WrongParameters" xml:space="preserve">
+    <value>Fel parametrar</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>Felaktigt lösenord</value>
+  </data>
+  <data name="WrongUsernamePassword" xml:space="preserve">
+    <value>Felaktigt användarnamn och/eller lösenord</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Igår</value>
+  </data>
+  <data name="YouCanAlso" xml:space="preserve">
+    <value>Du kan även</value>
+  </data>
+  <data name="YouMustProvideAFile" xml:space="preserve">
+    <value>Du måste tillhandahålla en fil</value>
+  </data>
+  <data name="CannotRenameItem" xml:space="preserve">
+    <value>Kan inte byta namn på den valda artikeln</value>
+  </data>
+  <data name="CannotStoreFile" xml:space="preserve">
+    <value>Kan inte lagra filen</value>
+  </data>
+  <data name="CannotCreateNewDirectory" xml:space="preserve">
+    <value>Kan inte skapa ny katalog</value>
+  </data>
+  <data name="UpLevel" xml:space="preserve">
+    <value>Upp en nivå</value>
+  </data>
+  <data name="LinkTitleOptional" xml:space="preserve">
+    <value>Länkrubrik (valfritt)</value>
+  </data>
+  <data name="NoSnippets" xml:space="preserve">
+    <value>Inga fragment</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Bilagor</value>
+  </data>
+  <data name="ThereAreAttachments" xml:space="preserve">
+    <value>Det finns bilagor för denna sida</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Stäng</value>
+  </data>
+  <data name="RootNamespace" xml:space="preserve">
+    <value>&lt;rot&gt;</value>
+  </data>
+  <data name="CouldNotCreateNamespace" xml:space="preserve">
+    <value>Kunde inte skapa namnområde</value>
+  </data>
+  <data name="InvalidNamespaceName" xml:space="preserve">
+    <value>Ogiltigt namnområdesnamn</value>
+  </data>
+  <data name="NamespaceCreated" xml:space="preserve">
+    <value>Namnområde skapat</value>
+  </data>
+  <data name="CouldNotCreateUser" xml:space="preserve">
+    <value>Kunde inte skapa användare</value>
+  </data>
+  <data name="CouldNotUpdateUser" xml:space="preserve">
+    <value>Kunde inte uppdatera användare</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>Användare skapad</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>Användare uppdaterad</value>
+  </data>
+  <data name="InvalidDisplayName" xml:space="preserve">
+    <value>Ogiltigt synligt namn</value>
+  </data>
+  <data name="NoSimilarPages" xml:space="preserve">
+    <value>Det finns inga sidor med liknande namn eller rubrik.</value>
+  </data>
+  <data name="SearchStats" xml:space="preserve">
+    <value>Denna sökning genom &lt;b&gt;{0}&lt;/b&gt; (&lt;b&gt;{1} dokument&lt;/b&gt;, &lt;b&gt;{2} ord&lt;/b&gt;), genomfördes på &lt;b&gt;{3:N1} &lt;b&gt;{3:N1} sekunder&lt;/b&gt; och gav &lt;b&gt;{4} träffar&lt;/b&gt;.</value>
+  </data>
+  <data name="CouldNotCreateGroup" xml:space="preserve">
+    <value>Kunde inte skapa grupp</value>
+  </data>
+  <data name="CouldNotUpdateGroup" xml:space="preserve">
+    <value>Kunde inte uppdatera grupp</value>
+  </data>
+  <data name="GroupCreated" xml:space="preserve">
+    <value>Grupp skapad</value>
+  </data>
+  <data name="GroupDeleted" xml:space="preserve">
+    <value>Grupp borttagen</value>
+  </data>
+  <data name="GroupUpdated" xml:space="preserve">
+    <value>Grupp uppdaterad</value>
+  </data>
+  <data name="CouldNotSaveFile" xml:space="preserve">
+    <value>Kunde inte spara fil</value>
+  </data>
+  <data name="Action_Crt_Dirs" xml:space="preserve">
+    <value>Skapa kataloger</value>
+  </data>
+  <data name="Action_Crt_Pg" xml:space="preserve">
+    <value>Skapa sidor</value>
+  </data>
+  <data name="Action_Del_1Attn" xml:space="preserve">
+    <value>Ta bort bilagor</value>
+  </data>
+  <data name="Action_Del_Attn" xml:space="preserve">
+    <value>Ta bort bilagor</value>
+  </data>
+  <data name="Action_Del_Dirs" xml:space="preserve">
+    <value>Ta bort kataloger</value>
+  </data>
+  <data name="Action_Del_Files" xml:space="preserve">
+    <value>Ta bort filter</value>
+  </data>
+  <data name="Action_Del_Pg" xml:space="preserve">
+    <value>Ta bort sidor</value>
+  </data>
+  <data name="Action_Down_1Attn" xml:space="preserve">
+    <value>Ladda ner bilagor</value>
+  </data>
+  <data name="Action_Down_Attn" xml:space="preserve">
+    <value>Ladda ner bilagor</value>
+  </data>
+  <data name="Action_Down_Files" xml:space="preserve">
+    <value>Ladda ner filer</value>
+  </data>
+  <data name="Action_FullControl" xml:space="preserve">
+    <value>Fullständiga rättigheter</value>
+  </data>
+  <data name="Action_List" xml:space="preserve">
+    <value>Visa innehåll</value>
+  </data>
+  <data name="Action_Man_1Cat" xml:space="preserve">
+    <value>Hantera kategorier</value>
+  </data>
+  <data name="Action_Man_1Pg" xml:space="preserve">
+    <value>Hantera sidor</value>
+  </data>
+  <data name="Action_Man_Acc" xml:space="preserve">
+    <value>Hantera användarkonton</value>
+  </data>
+  <data name="Action_Man_Cat" xml:space="preserve">
+    <value>Hantera kategorier</value>
+  </data>
+  <data name="Action_Man_Conf" xml:space="preserve">
+    <value>Hantera konfiguration</value>
+  </data>
+  <data name="Action_Man_Files" xml:space="preserve">
+    <value>Hantera filer och kataloger</value>
+  </data>
+  <data name="Action_Man_Grp" xml:space="preserve">
+    <value>Hantera användargrupper</value>
+  </data>
+  <data name="Action_Man_MetaFiles" xml:space="preserve">
+    <value>Hantera metafiler</value>
+  </data>
+  <data name="Action_Man_NavPath" xml:space="preserve">
+    <value>Hantera sidföljder</value>
+  </data>
+  <data name="Action_Man_Ns" xml:space="preserve">
+    <value>Hantera namnområden</value>
+  </data>
+  <data name="Action_Man_Pg" xml:space="preserve">
+    <value>Hantera sidor</value>
+  </data>
+  <data name="Action_Man_PgCat" xml:space="preserve">
+    <value>Hantera sidor och kategorier</value>
+  </data>
+  <data name="Action_Man_Prov" xml:space="preserve">
+    <value>Hantera leverantörer</value>
+  </data>
+  <data name="Action_Man_Snips_Temps" xml:space="preserve">
+    <value>Hantera fragment och mallar</value>
+  </data>
+  <data name="Action_Mod_1Pg" xml:space="preserve">
+    <value>Ändra sida</value>
+  </data>
+  <data name="Action_Mod_Pg" xml:space="preserve">
+    <value>Ändra sidor</value>
+  </data>
+  <data name="Action_Rd_1Pg" xml:space="preserve">
+    <value>Se sida</value>
+  </data>
+  <data name="Action_Rd_Pg" xml:space="preserve">
+    <value>Se sidor</value>
+  </data>
+  <data name="Action_Up_1Attn" xml:space="preserve">
+    <value>Ladda upp bilagor</value>
+  </data>
+  <data name="Action_Up_Attn" xml:space="preserve">
+    <value>Ladda upp bilagor</value>
+  </data>
+  <data name="Action_Up_Files" xml:space="preserve">
+    <value>Ladda upp filer</value>
+  </data>
+  <data name="GoToMainPage" xml:space="preserve">
+    <value>Gå till startsida</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Grupp</value>
+  </data>
+  <data name="CouldNotStorePermissions" xml:space="preserve">
+    <value>Kunde inte lagra rättigheter</value>
+  </data>
+  <data name="NamespaceSaved" xml:space="preserve">
+    <value>Namnområde sparat</value>
+  </data>
+  <data name="CouldNotDeleteNamespace" xml:space="preserve">
+    <value>Kunde inte ta bort namnområde</value>
+  </data>
+  <data name="NamespaceDeleted" xml:space="preserve">
+    <value>Namnområde borttaget</value>
+  </data>
+  <data name="CouldNotDeletePermissions" xml:space="preserve">
+    <value>Kunde inte ta bort rättigheter</value>
+  </data>
+  <data name="GroupCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>Grupp skapad, men rättigheter kunde inte lagras</value>
+  </data>
+  <data name="GroupSavedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>Grupp sparad, men gamla rättigheter kunde inte tas bort</value>
+  </data>
+  <data name="GroupSavedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>Grupp sparad, men nya rättigheter kunde inte lagras</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteGroup" xml:space="preserve">
+    <value>Rättigheter borttagna, men gruppen kunde inte tas bort</value>
+  </data>
+  <data name="CouldNotSetNamespaceDefaultPage" xml:space="preserve">
+    <value>Kunde inte ange standardsida för namnområde</value>
+  </data>
+  <data name="CouldNotSetNamespaceTheme" xml:space="preserve">
+    <value>Kunde inte ange visuellt tema för namnområde</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotCreateDefaultPage" xml:space="preserve">
+    <value>Namnområde skapat, men kunde inte skapa standardsidan</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetDefaultPage" xml:space="preserve">
+    <value>Namnområde skapat, men kunde inte ange dess standardsida</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetTheme" xml:space="preserve">
+    <value>Namnområde sparat, men kunde inte ange dess visuella tema</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotStoreDefaultPageContent" xml:space="preserve">
+    <value>Namnområde skapat, men kunde inte lagra standardsidans innehåll</value>
+  </data>
+  <data name="UserCreatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>Användare skapad, men kunde inte lagra grupptillhörighet</value>
+  </data>
+  <data name="UserCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>Användare skapad, men kunde inte lagra rättigheter</value>
+  </data>
+  <data name="UserUpdatedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>Användare uppdaterad, men kunde inte ta bort gamla rättigheter</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>Användare uppdaterad, men kunde inte lagra grupptillhörigheter</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>Användare uppdaterad, men kunde inte lagra nya rättigheter</value>
+  </data>
+  <data name="PermissionsAndGroupMembershipDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Rättigheter och grupptillhörighet borttagna, men användaren kunde inte tas bort</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Rättigheter borttagna, men användaren kunde inte tas bort</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Gå till sida</value>
+  </data>
+  <data name="GoToPageDiscussion" xml:space="preserve">
+    <value>Gå till siddiskussion</value>
+  </data>
+  <data name="GoToPageHistory" xml:space="preserve">
+    <value>Gå till sidhistorik</value>
+  </data>
+  <data name="CouldNotRenamePage" xml:space="preserve">
+    <value>Kunde inte byta namn på sida</value>
+  </data>
+  <data name="PageRenamedCouldNotCreateShadowPage" xml:space="preserve">
+    <value>Sida namnändrad, men kunde inte skapa skuggsida</value>
+  </data>
+  <data name="PageRenamedCouldNotSetShadowPageContent" xml:space="preserve">
+    <value>Sida namnändrad, men kunde inte ange innehållet för skuggsidan</value>
+  </data>
+  <data name="AllMessagesDeleted" xml:space="preserve">
+    <value>Alla meddelande borttagna</value>
+  </data>
+  <data name="CouldNotDeleteOneOrMoreMessages" xml:space="preserve">
+    <value>Kunde inte ta bort ett eller fler meddelanden</value>
+  </data>
+  <data name="CouldNotDeletePage" xml:space="preserve">
+    <value>Kunde inte ta bort sida</value>
+  </data>
+  <data name="CouldNotDeletePageBackups" xml:space="preserve">
+    <value>Kunde inte ta bort sidhistorik</value>
+  </data>
+  <data name="CouldNotRollbackPage" xml:space="preserve">
+    <value>Kunde inte återgå till tidigare version</value>
+  </data>
+  <data name="PageRolledBack" xml:space="preserve">
+    <value>Sida återställd till tidigare version</value>
+  </data>
+  <data name="Action_Man_1Disc" xml:space="preserve">
+    <value>Hantera diskussionstrådar</value>
+  </data>
+  <data name="Action_Pst_1Disc" xml:space="preserve">
+    <value>Skriv inlägg i diskussionstråd</value>
+  </data>
+  <data name="Action_Rd_1Disc" xml:space="preserve">
+    <value>Läsa diskussionstråd</value>
+  </data>
+  <data name="Action_Man_Disc" xml:space="preserve">
+    <value>Hantera diskussionstrådar</value>
+  </data>
+  <data name="Action_Pst_Disc" xml:space="preserve">
+    <value>Skriv inlägg i diskussionstrådar</value>
+  </data>
+  <data name="Action_Rd_Disc" xml:space="preserve">
+    <value>Läsa diskussionstrådar</value>
+  </data>
+  <data name="ViewPageHistory" xml:space="preserve">
+    <value>Visa ändringshistorik</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AdminTools" xml:space="preserve">
+    <value>Administrationsverktyg</value>
+  </data>
+  <data name="Administrate" xml:space="preserve">
+    <value>Administrera</value>
+  </data>
+  <data name="AdministrateThisPage" xml:space="preserve">
+    <value>Administrera denna sida</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Rättigheter</value>
+  </data>
+  <data name="SetPermissionsForThisPage" xml:space="preserve">
+    <value>Ange rättigheter för denna sida</value>
+  </data>
+  <data name="Rollback" xml:space="preserve">
+    <value>Återgå</value>
+  </data>
+  <data name="RollbackThisPage" xml:space="preserve">
+    <value>Återgå till den föregående versionen</value>
+  </data>
+  <data name="CategoryAlreadyExists" xml:space="preserve">
+    <value>Kategori finns redan</value>
+  </data>
+  <data name="CategoryCreated" xml:space="preserve">
+    <value>Kategori skapad</value>
+  </data>
+  <data name="CouldNotCreateCategory" xml:space="preserve">
+    <value>Kunde inte skapa kategori</value>
+  </data>
+  <data name="CouldNotDeleteCategory" xml:space="preserve">
+    <value>Kunde inte ta bort kategori</value>
+  </data>
+  <data name="CouldNotMergeCategories" xml:space="preserve">
+    <value>Kunde inte slå ihop kategorier</value>
+  </data>
+  <data name="CouldNotRenameCategory" xml:space="preserve">
+    <value>Kunde inte byta namn på kategori</value>
+  </data>
+  <data name="GoToCategory" xml:space="preserve">
+    <value>Gå till kategori</value>
+  </data>
+  <data name="CouldNotCreateSnippet" xml:space="preserve">
+    <value>Kunde inte skapa fragment</value>
+  </data>
+  <data name="CouldNotDeleteSnippet" xml:space="preserve">
+    <value>Kunde inte ta bort fragment</value>
+  </data>
+  <data name="CouldNotSaveSnippet" xml:space="preserve">
+    <value>Kunde inte spara fragment</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Parametrar</value>
+  </data>
+  <data name="SnippetCreated" xml:space="preserve">
+    <value>Fragment skapat</value>
+  </data>
+  <data name="ViewChanges" xml:space="preserve">
+    <value>visa ändringar</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Utkast</value>
+  </data>
+  <data name="CouldNotApproveDraft" xml:space="preserve">
+    <value>Kunde inte godkänna utkast</value>
+  </data>
+  <data name="DraftApproved" xml:space="preserve">
+    <value>Utkast godkänt och sparat</value>
+  </data>
+  <data name="DraftRejected" xml:space="preserve">
+    <value>Utkast förkastat och kasserat</value>
+  </data>
+  <data name="ClickToEnableEmailNotifications" xml:space="preserve">
+    <value>Klicka för att aktivera e-postmeddelanden från denna sida</value>
+  </data>
+  <data name="EmailNotificationsAreActive" xml:space="preserve">
+    <value>E-postmeddelanden är aktiverade för denna sida - klicka för att avaktivera</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>inga</value>
+  </data>
+  <data name="CouldNotCreateNavPath" xml:space="preserve">
+    <value>Kunde inte skapa sidföljd</value>
+  </data>
+  <data name="CouldNotDeleteNavPath" xml:space="preserve">
+    <value>Kunde inte ta bort sidföljd</value>
+  </data>
+  <data name="CouldNotSaveNavPath" xml:space="preserve">
+    <value>Kunde inte spara sidföljd</value>
+  </data>
+  <data name="NavPathCreated" xml:space="preserve">
+    <value>Sidföljd skapad</value>
+  </data>
+  <data name="TheNavPathMustContain" xml:space="preserve">
+    <value>Sidföljden måste innehålla minst en sida</value>
+  </data>
+  <data name="DefaultProvidersSaved" xml:space="preserve">
+    <value>Standardleverantörer sparade</value>
+  </data>
+  <data name="CouldNotDeleteDll" xml:space="preserve">
+    <value>Kunde inte ta bort dll-fil</value>
+  </data>
+  <data name="DllAlreadyExists" xml:space="preserve">
+    <value>Dll-fil finns redan</value>
+  </data>
+  <data name="DllDeleted" xml:space="preserve">
+    <value>Dll-fil borttagen</value>
+  </data>
+  <data name="LoadedProviders" xml:space="preserve">
+    <value>Installerade ### leverantörer</value>
+  </data>
+  <data name="VoidOrInvalidFile" xml:space="preserve">
+    <value>Ogiltig fil</value>
+  </data>
+  <data name="DataCopied" xml:space="preserve">
+    <value>Data kopierat; var god byt den aktiva inställningsleverantören i filen web.config</value>
+  </data>
+  <data name="DataMigrated" xml:space="preserve">
+    <value>Data flyttat; var god starta om webbapplikationen</value>
+  </data>
+  <data name="NoConfigurationRequired" xml:space="preserve">
+    <value>Ingen konfiguration krävs för denna leverantör</value>
+  </data>
+  <data name="NotificationsStatusSaved" xml:space="preserve">
+    <value>Inställningar för e-postskick sparade</value>
+  </data>
+  <data name="Action_Man_Perms" xml:space="preserve">
+    <value>Hantera rättigheter</value>
+  </data>
+  <data name="ApproveRejectDraft" xml:space="preserve">
+    <value>Godkänn/förkasta utkast</value>
+  </data>
+  <data name="AMessageHasBeenDeletedBy" xml:space="preserve">
+    <value>Ett meddelande med ämne "##SUBJECT##" har tagits bort av </value>
+  </data>
+  <data name="AMessageHasBeenEditedBy" xml:space="preserve">
+    <value>Ett meddelande med ämne "##SUBJECT##" har ändrats av</value>
+  </data>
+  <data name="AMessageHasBeenPostedBy" xml:space="preserve">
+    <value>Ett inlägg med ämne "##SUBJECT##" har skrivits av</value>
+  </data>
+  <data name="Discussion" xml:space="preserve">
+    <value>Diskussion</value>
+  </data>
+  <data name="DiscussionUpdates" xml:space="preserve">
+    <value>Diskussionsuppdateringar</value>
+  </data>
+  <data name="RecentDiscussionUpdates" xml:space="preserve">
+    <value>Senaste diskussionsuppdateringar</value>
+  </data>
+  <data name="AMessageWasSentCheckInbox" xml:space="preserve">
+    <value>Ett meddelande skickades till din e-postadress; kontrollera din inkorg.</value>
+  </data>
+  <data name="NewPasswordSavedPleaseLogin" xml:space="preserve">
+    <value>Nytt lösenord sparat, var god &lt;a href="Login.aspx" title="Login"&gt;logga in&lt;/a&gt;</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Återställ lösenord</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Skapad av</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>Skapad</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Ändrad av</value>
+  </data>
+  <data name="ModifiedOn" xml:space="preserve">
+    <value>Ändrad</value>
+  </data>
+  <data name="CouldNotCreateTemplate" xml:space="preserve">
+    <value>Kunde inte skapa mall</value>
+  </data>
+  <data name="CouldNotDeleteTemplate" xml:space="preserve">
+    <value>Kunde inte ta bort mall</value>
+  </data>
+  <data name="CouldNotSaveTemplate" xml:space="preserve">
+    <value>Kunde inte spara mall</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>Fragment</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Mall</value>
+  </data>
+  <data name="TemplateCreated" xml:space="preserve">
+    <value>Mall skapad</value>
+  </data>
+  <data name="TemplateDeleted" xml:space="preserve">
+    <value>Mall borttagen</value>
+  </data>
+  <data name="TemplateSaved" xml:space="preserve">
+    <value>Mall sparad</value>
+  </data>
+  <data name="SelectTemplate" xml:space="preserve">
+    <value>Välj mall...</value>
+  </data>
+  <data name="CouldNotRenameNamespace" xml:space="preserve">
+    <value>Kunde inte byta namn på namnområde</value>
+  </data>
+  <data name="NamespaceRenamed" xml:space="preserve">
+    <value>Namnområde namnändrat</value>
+  </data>
+  <data name="GoToYourProfile" xml:space="preserve">
+    <value>Gå till din profil</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Gäst</value>
+  </data>
+  <data name="SelectYourLanguage" xml:space="preserve">
+    <value>Välj ditt språk</value>
+  </data>
+  <data name="PreferencesSaved" xml:space="preserve">
+    <value>Inställningar sparade</value>
+  </data>
+  <data name="Corrupted" xml:space="preserve">
+    <value>Korrupt</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="CreateThisPage" xml:space="preserve">
+    <value>Skapa denna sida</value>
+  </data>
+  <data name="UserDeletedMessage" xml:space="preserve">
+    <value>##USER## tog bort ett meddelande i diskussionen på sidan ##PAGE##.</value>
+  </data>
+  <data name="UserDeletedPage" xml:space="preserve">
+    <value>##USER## tog bort sidan ##PAGE##.</value>
+  </data>
+  <data name="UserEditedMessage" xml:space="preserve">
+    <value>##USER## ändrade ett meddelande på diskussionen på sidan ##PAGE##.</value>
+  </data>
+  <data name="UserPostedMessage" xml:space="preserve">
+    <value>##USER## skrev ett inlägg i diskussionen på sidan ##PAGE##.</value>
+  </data>
+  <data name="UserRenamedPage" xml:space="preserve">
+    <value>##USER## bytte namn på sidan ##PAGE##.</value>
+  </data>
+  <data name="UserRolledBackPage" xml:space="preserve">
+    <value>##USER## återställde sidan ##PAGE## till en tidigare version.</value>
+  </data>
+  <data name="UserUpdatedPage" xml:space="preserve">
+    <value>##USER## uppdaterade sidan ##PAGE##.</value>
+  </data>
+  <data name="CouldNotSaveDisplayName" xml:space="preserve">
+    <value>Kunde inte spara synligt namn</value>
+  </data>
+  <data name="DisplayNameSaved" xml:space="preserve">
+    <value>Synligt namn sparat</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>Användardetaljer</value>
+  </data>
+  <data name="CodeEscaped" xml:space="preserve">
+    <value>Otolkat kodblock</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Horisontell avskiljare</value>
+  </data>
+  <data name="Snippets" xml:space="preserve">
+    <value>Fragment</value>
+  </data>
+  <data name="Symbols" xml:space="preserve">
+    <value>Särskilda symboler</value>
+  </data>
+  <data name="WrapperBox" xml:space="preserve">
+    <value>Omslagsruta</value>
+  </data>
+  <data name="RssForThisCategoryDiscussion" xml:space="preserve">
+    <value>Uppdateringsmeddelande för denna kategoris diskussionstrådar (RSS 2.0)</value>
+  </data>
+  <data name="DiscussionsRss" xml:space="preserve">
+    <value>Diskussions-RSS-flöde</value>
+  </data>
+  <data name="CouldNotMigratePage" xml:space="preserve">
+    <value>Kunde inte flytta sida</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Fel</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>Ny version:</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>Aktuell</value>
+  </data>
+  <data name="SelectAndDelete" xml:space="preserve">
+    <value>Markera och ta bort</value>
+  </data>
+  <data name="NoBr" xml:space="preserve">
+    <value>NoBR-märkord</value>
+  </data>
+  <data name="LinkToThisSection" xml:space="preserve">
+    <value>Länk till detta avsnitt</value>
+  </data>
+  <data name="OrderedList" xml:space="preserve">
+    <value>Sorterad lista</value>
+  </data>
+  <data name="UnorderedList" xml:space="preserve">
+    <value>Osorterad lista</value>
+  </data>
+  <data name="InvalidFileName" xml:space="preserve">
+    <value>Ogiltigt filnamn</value>
+  </data>
+  <data name="BulkRebindCompleted" xml:space="preserve">
+    <value>Kopplingar sparade</value>
+  </data>
+  <data name="NoCategories" xml:space="preserve">
+    <value>Inga kategorier markerade</value>
+  </data>
+  <data name="NoPages" xml:space="preserve">
+    <value>Inga sidor att koppla</value>
+  </data>
+  <data name="BulkMigrationCompleted" xml:space="preserve">
+    <value>Flytt klar</value>
+  </data>
+  <data name="BulkMigrationCompletedWithErrors" xml:space="preserve">
+    <value>Flytt avslutad med fel, kontrollera loggen</value>
+  </data>
+  <data name="ProvidersUpdated" xml:space="preserve">
+    <value>Leverantörer uppdaterade, var god starta om wikin (startfliken på administratörssidorna)</value>
+  </data>
+  <data name="NoProvidersToUpdate" xml:space="preserve">
+    <value>Inga leverantörer att uppdatera</value>
+  </data>
+  <data name="NoPagesToMigrate" xml:space="preserve">
+    <value>Inga sidor att flytta</value>
+  </data>
+  <data name="Formatted" xml:space="preserve">
+    <value>formatterad</value>
+  </data>
+  <data name="NAccountsDeleted" xml:space="preserve">
+    <value>$ konton borttagna</value>
+    <comment>As in "3 accounts deleted"</comment>
+  </data>
+  <data name="AutoUpdateAvailable" xml:space="preserve">
+    <value>Auto-uppdatering tillgänglig</value>
+  </data>
+  <data name="AnchorTitle2" xml:space="preserve">
+    <value>Infoga ett nytt bokmärke eller länka till ett existerande bokmärke</value>
+  </data>
+  <data name="BoldTitle" xml:space="preserve">
+    <value>Formatera markerad text med fetstil</value>
+  </data>
+  <data name="ChangeComment" xml:space="preserve">
+    <value>Ändra kommentar</value>
+  </data>
+  <data name="CodeEscapedTitle" xml:space="preserve">
+    <value>Formatera markerad text som ett kodavsnitt</value>
+  </data>
+  <data name="CodeInlineTitle" xml:space="preserve">
+    <value>Formatera markerad text som infogad kod</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>Gör markerad text till en kommentar (syns inte när sidan visas)</value>
+  </data>
+  <data name="EscapeTitle" xml:space="preserve">
+    <value>Inneslut markerad text in ett block där alla tecken, även wiki- and HTML-relaterade, visas som de står</value>
+  </data>
+  <data name="ExternalLinkTitle" xml:space="preserve">
+    <value>Infoga webbplats- eller e-postadress</value>
+  </data>
+  <data name="FileLinkTitle" xml:space="preserve">
+    <value>Infoga länk till fil eller bilaga</value>
+  </data>
+  <data name="H1Title" xml:space="preserve">
+    <value>Formatera markerad text som rubrik i 1:a nivån</value>
+  </data>
+  <data name="H2Title" xml:space="preserve">
+    <value>Formatera markerad text som rubrik i 2:a nivån</value>
+  </data>
+  <data name="H3Title" xml:space="preserve">
+    <value>Formatera markerad text som rubrik i 3:e nivån</value>
+  </data>
+  <data name="H4Title" xml:space="preserve">
+    <value>Formatera markerad text som rubrik i 4:e nivån</value>
+  </data>
+  <data name="HRTitle" xml:space="preserve">
+    <value>Infoga horisontell avskiljare</value>
+  </data>
+  <data name="ImageTitle2" xml:space="preserve">
+    <value>Infoga bild på sidan</value>
+  </data>
+  <data name="ItalicTitle" xml:space="preserve">
+    <value>Formatera markerad text i kursiv stil</value>
+  </data>
+  <data name="LineBreakTitle" xml:space="preserve">
+    <value>Infoga en enkel radbrytning</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Metabeskrivning</value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>Metanyckelord</value>
+  </data>
+  <data name="NoBrTitle" xml:space="preserve">
+    <value>Inneslut markerad text i 'nobr'-block, som ignorerar radbrytningar</value>
+  </data>
+  <data name="NoWikiTitle" xml:space="preserve">
+    <value>Inneslut markerad text i 'nowiki'-block, som ignorerar wikimärkord</value>
+  </data>
+  <data name="OrderedListTitle" xml:space="preserve">
+    <value>Infoga en numrerad lista eller inneslut markerad text i en numrerad lista (1, 2, 3, ...)</value>
+  </data>
+  <data name="PageLinkTitle" xml:space="preserve">
+    <value>Infoga länk till wikisida</value>
+  </data>
+  <data name="SnippetsTitle" xml:space="preserve">
+    <value>Visa existerande fragment och infoga en på sidan</value>
+  </data>
+  <data name="SpecialTagsTitle" xml:space="preserve">
+    <value>Visa specialtaggar och infoga en på sidan</value>
+  </data>
+  <data name="StrikedTitle" xml:space="preserve">
+    <value>Formatera markerad text med överstruken stil</value>
+  </data>
+  <data name="SubscriptTitle" xml:space="preserve">
+    <value>Formatera markerad text med nedsänkt stil</value>
+  </data>
+  <data name="SuperscriptTitle" xml:space="preserve">
+    <value>Formatera markerad text med upphöjd stil</value>
+  </data>
+  <data name="SymbolsTitle" xml:space="preserve">
+    <value>Visa och infoga särskilda symboler</value>
+  </data>
+  <data name="UnderlinedTitle" xml:space="preserve">
+    <value>Formatera markerad text med understruken stil</value>
+  </data>
+  <data name="UnorderedListTitle" xml:space="preserve">
+    <value>Infoga en punktlista eller inneslut markerad text i en punktlista</value>
+  </data>
+  <data name="WrapperBoxTitle" xml:space="preserve">
+    <value>Inneslut markerad text in en omslagsruta</value>
+  </data>
+</root>

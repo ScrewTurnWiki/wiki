@@ -1,0 +1,1753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnchorTitle2" xml:space="preserve">
+    <value>Insert a new anchor or a link to an existing anchor</value>
+  </data>
+  <data name="BoldTitle" xml:space="preserve">
+    <value>Style selected text as bold</value>
+  </data>
+  <data name="CodeEscapedTitle" xml:space="preserve">
+    <value>Set selected text as a block of code</value>
+  </data>
+  <data name="CodeInlineTitle" xml:space="preserve">
+    <value>Set selected text as inline code</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>Set selected text as comment (hidden from the rendered page output)</value>
+  </data>
+  <data name="EscapeTitle" xml:space="preserve">
+    <value>Wrap selected text in an 'escape' block that escapes all wiki- and HTML-related characters</value>
+  </data>
+  <data name="ExternalLinkTitle" xml:space="preserve">
+    <value>Insert a link to a website or email address</value>
+  </data>
+  <data name="FileLinkTitle" xml:space="preserve">
+    <value>Insert a link to a file or attachment</value>
+  </data>
+  <data name="H1Title" xml:space="preserve">
+    <value>Set selected text as level-1 header</value>
+  </data>
+  <data name="H2Title" xml:space="preserve">
+    <value>Set selected text as level-2 header</value>
+  </data>
+  <data name="H3Title" xml:space="preserve">
+    <value>Set selected text as level-3 header</value>
+  </data>
+  <data name="H4Title" xml:space="preserve">
+    <value>Set selected text as level-4 header</value>
+  </data>
+  <data name="HRTitle" xml:space="preserve">
+    <value>Insert a horizontal ruler (separator)</value>
+  </data>
+  <data name="ImageTitle2" xml:space="preserve">
+    <value>Insert a picture in the page</value>
+  </data>
+  <data name="ItalicTitle" xml:space="preserve">
+    <value>Style selected text as italic</value>
+  </data>
+  <data name="LineBreakTitle" xml:space="preserve">
+    <value>Insert a single line break</value>
+  </data>
+  <data name="NoBrTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'nobr' block, that ignores line breaks</value>
+  </data>
+  <data name="NoWikiTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'nowiki' block, that ignores WikiMarkup</value>
+  </data>
+  <data name="OrderedListTitle" xml:space="preserve">
+    <value>Insert an ordered list or wrap selected text in an ordered list (1, 2, 3, ...)</value>
+  </data>
+  <data name="PageLinkTitle" xml:space="preserve">
+    <value>Insert a link to a wiki page</value>
+  </data>
+  <data name="SnippetsTitle" xml:space="preserve">
+    <value>View existing snippets and insert one in the page</value>
+  </data>
+  <data name="SpecialTagsTitle" xml:space="preserve">
+    <value>View special tags and insert one in the page</value>
+  </data>
+  <data name="StrikedTitle" xml:space="preserve">
+    <value>Style selected text as strike-through</value>
+  </data>
+  <data name="SubscriptTitle" xml:space="preserve">
+    <value>Set selected text as subscript</value>
+  </data>
+  <data name="SuperscriptTitle" xml:space="preserve">
+    <value>Set selected text as superscript</value>
+  </data>
+  <data name="SymbolsTitle" xml:space="preserve">
+    <value>View and insert special symbols</value>
+  </data>
+  <data name="UnderlinedTitle" xml:space="preserve">
+    <value>Underline selected text</value>
+  </data>
+  <data name="UnorderedListTitle" xml:space="preserve">
+    <value>Insert an unordered list or wrap selected text in an unordered list (bullet points)</value>
+  </data>
+  <data name="WrapperBoxTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'box'</value>
+  </data>
+  <data name="ChangeComment" xml:space="preserve">
+    <value>Change Comment</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Meta Description</value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>Meta Keywords</value>
+  </data>
+  <data name="AutoUpdateAvailable" xml:space="preserve">
+    <value>Az automatikus frissítés elérhető</value>
+  </data>
+  <data name="NAccountsDeleted" xml:space="preserve">
+    <value>$ fiók törölve</value>
+    <comment>Mint "3 fiók törölve"</comment>
+  </data>
+  <data name="Formatted" xml:space="preserve">
+    <value>formázva</value>
+  </data>
+  <data name="NoPagesToMigrate" xml:space="preserve">
+    <value>Nincs migrálható lap</value>
+  </data>
+  <data name="NoProvidersToUpdate" xml:space="preserve">
+    <value>Nincs frissíthető kiszolgáló</value>
+  </data>
+  <data name="ProvidersUpdated" xml:space="preserve">
+    <value>Kiszolgálók frissítve, indítsd újra a wikit!</value>
+  </data>
+  <data name="BulkMigrationCompleted" xml:space="preserve">
+    <value>A csoportos migrálás kész</value>
+  </data>
+  <data name="BulkMigrationCompletedWithErrors" xml:space="preserve">
+    <value>A csoportos migrálás kész, de hibák voltak. Nézd meg a rendszernaplót!</value>
+  </data>
+  <data name="BulkRebindCompleted" xml:space="preserve">
+    <value>Csoportos átlinkelés kész</value>
+  </data>
+  <data name="NoCategories" xml:space="preserve">
+    <value>Nincs kiválasztott kategória</value>
+  </data>
+  <data name="NoPages" xml:space="preserve">
+    <value>Nincs átlinkelhető lap</value>
+  </data>
+  <data name="InvalidFileName" xml:space="preserve">
+    <value>Érvénytelen fájlnév</value>
+  </data>
+  <data name="OrderedList" xml:space="preserve">
+    <value>Rendezett lista</value>
+  </data>
+  <data name="UnorderedList" xml:space="preserve">
+    <value>Rendezetlen lista</value>
+  </data>
+  <data name="LinkToThisSection" xml:space="preserve">
+    <value>Ide mutató link</value>
+  </data>
+  <data name="NoBr" xml:space="preserve">
+    <value>NoBR tag</value>
+  </data>
+  <data name="SelectAndDelete" xml:space="preserve">
+    <value>Kiválaszt és töröl</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hiba</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>Új verzió:</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>Friss</value>
+  </data>
+  <data name="CouldNotMigratePage" xml:space="preserve">
+    <value>A lap nem lett migrálva</value>
+  </data>
+  <data name="DiscussionsRss" xml:space="preserve">
+    <value>Megbeszélések RSS</value>
+  </data>
+  <data name="RssForThisCategoryDiscussion" xml:space="preserve">
+    <value>Frissítési értesítések e kategória megbeszéléseihez (RSS 2.0)</value>
+  </data>
+  <data name="CodeEscaped" xml:space="preserve">
+    <value>Escape-elt kódblokk</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Vízszintes vonal</value>
+  </data>
+  <data name="Snippets" xml:space="preserve">
+    <value>Snippetek</value>
+  </data>
+  <data name="Symbols" xml:space="preserve">
+    <value>Speciális szimbólumok</value>
+  </data>
+  <data name="WrapperBox" xml:space="preserve">
+    <value>Befoglaló doboz</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>Felhasználói részletek</value>
+  </data>
+  <data name="UserDeletedMessage" xml:space="preserve">
+    <value>##USER## törölt egy megbeszélés üzenetet ezen a lapon: ##PAGE##.</value>
+  </data>
+  <data name="UserDeletedPage" xml:space="preserve">
+    <value>##USER## törölte ezt a lapot: ##PAGE##.</value>
+  </data>
+  <data name="UserEditedMessage" xml:space="preserve">
+    <value>##USER## módosított egy megbeszélés üzenetet ezen a lapon: ##PAGE##.</value>
+  </data>
+  <data name="UserPostedMessage" xml:space="preserve">
+    <value>##USER## írt egy megbeszélés üzenetet ezen a lapon: ##PAGE##.</value>
+  </data>
+  <data name="UserRenamedPage" xml:space="preserve">
+    <value>##USER## átnevezte ezt a lapot: ##PAGE##.</value>
+  </data>
+  <data name="UserRolledBackPage" xml:space="preserve">
+    <value>##USER## visszaállította ezt a lapot: ##PAGE##.</value>
+  </data>
+  <data name="UserUpdatedPage" xml:space="preserve">
+    <value>##USER## frissítette ezt a lapot: ##PAGE##.</value>
+  </data>
+  <data name="CouldNotSaveDisplayName" xml:space="preserve">
+    <value>A megjelenítési név nem lett mentve</value>
+  </data>
+  <data name="DisplayNameSaved" xml:space="preserve">
+    <value>A megjelenítési név mentve</value>
+  </data>
+  <data name="CreateThisPage" xml:space="preserve">
+    <value>E lap létrehozása</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Igen</value>
+  </data>
+  <data name="Corrupted" xml:space="preserve">
+    <value>Korrupt</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SelectYourLanguage" xml:space="preserve">
+    <value>Válassz nyelvet</value>
+  </data>
+  <data name="PreferencesSaved" xml:space="preserve">
+    <value>Beállítások mentve</value>
+  </data>
+  <data name="GoToYourProfile" xml:space="preserve">
+    <value>Ugrás a fiókodhoz</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Vendég</value>
+  </data>
+  <data name="CouldNotRenameNamespace" xml:space="preserve">
+    <value>A névteret nem lehetett átnevezni</value>
+  </data>
+  <data name="NamespaceRenamed" xml:space="preserve">
+    <value>Névtér átnevezve</value>
+  </data>
+  <data name="SelectTemplate" xml:space="preserve">
+    <value>Válassz sablont...</value>
+  </data>
+  <data name="Action_Man_Snips_Temps" xml:space="preserve">
+    <value>Snippetek és sablonok beállítása</value>
+  </data>
+  <data name="CouldNotCreateTemplate" xml:space="preserve">
+    <value>A sablont nem lehetett létrehozni</value>
+  </data>
+  <data name="CouldNotDeleteTemplate" xml:space="preserve">
+    <value>A sablont nem lehetett törölni</value>
+  </data>
+  <data name="CouldNotSaveTemplate" xml:space="preserve">
+    <value>A sablont nem lehetett elmenteni</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>Snippet</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Sablon</value>
+  </data>
+  <data name="TemplateCreated" xml:space="preserve">
+    <value>Sablon létrehozva</value>
+  </data>
+  <data name="TemplateDeleted" xml:space="preserve">
+    <value>Sablon törölve</value>
+  </data>
+  <data name="TemplateSaved" xml:space="preserve">
+    <value>Sablon mentve</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Létrehozta</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>Létrehozva</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Módosította</value>
+  </data>
+  <data name="ModifiedOn" xml:space="preserve">
+    <value>Módosítva</value>
+  </data>
+  <data name="AMessageWasSentCheckInbox" xml:space="preserve">
+    <value>Üzenetet küldtünk az email címedre.</value>
+  </data>
+  <data name="NewPasswordSavedPleaseLogin" xml:space="preserve">
+    <value>Az új jelszó mentve, &lt;a href="Login.aspx" title="Login"&gt;lépj be&lt;/a&gt;</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Jelszó visszaállítása</value>
+  </data>
+  <data name="AMessageHasBeenDeletedBy" xml:space="preserve">
+    <value>Minden "##SUBJECT##" üzenet törölve általa:</value>
+  </data>
+  <data name="AMessageHasBeenEditedBy" xml:space="preserve">
+    <value>"##SUBJECT##" című üzenet szerkesztve általa:</value>
+  </data>
+  <data name="AMessageHasBeenPostedBy" xml:space="preserve">
+    <value>"##SUBJECT##" című üzenet elküldve általa:</value>
+  </data>
+  <data name="Discussion" xml:space="preserve">
+    <value>Megbeszélés</value>
+  </data>
+  <data name="DiscussionUpdates" xml:space="preserve">
+    <value>Megbeszélés frissítsek</value>
+  </data>
+  <data name="RecentDiscussionUpdates" xml:space="preserve">
+    <value>Legutóbbi lapkommentek</value>
+  </data>
+  <data name="ApproveRejectDraft" xml:space="preserve">
+    <value>Piszkozat elfogadása/elutasítása</value>
+  </data>
+  <data name="Action_Man_1Disc" xml:space="preserve">
+    <value>Lapkommentek beállítása</value>
+  </data>
+  <data name="Action_Pst_1Disc" xml:space="preserve">
+    <value>Lapkomment létrehozása</value>
+  </data>
+  <data name="Action_Rd_1Disc" xml:space="preserve">
+    <value>Lapkommentek olvasása</value>
+  </data>
+  <data name="Action_Man_Perms" xml:space="preserve">
+    <value>Engedélyek beállítása</value>
+  </data>
+  <data name="NotificationsStatusSaved" xml:space="preserve">
+    <value>Értesító állapota mentve</value>
+  </data>
+  <data name="NoConfigurationRequired" xml:space="preserve">
+    <value>E szolgáltatónak nincs szüksége konfigurációs adatra</value>
+  </data>
+  <data name="DataCopied" xml:space="preserve">
+    <value>Az adat átmásolva, változtasd meg az aktív tároló szolgáltatót a web.configban.</value>
+  </data>
+  <data name="DataMigrated" xml:space="preserve">
+    <value>Adat átemelve. Frissítsd a webalkalmazást.</value>
+  </data>
+  <data name="DllAlreadyExists" xml:space="preserve">
+    <value>A DLL már létezik</value>
+  </data>
+  <data name="LoadedProviders" xml:space="preserve">
+    <value>### szolgáltató betöltve</value>
+  </data>
+  <data name="VoidOrInvalidFile" xml:space="preserve">
+    <value>Üres, vagy érvénytelen fájl</value>
+  </data>
+  <data name="CouldNotDeleteDll" xml:space="preserve">
+    <value>A DLL-t nem lehetett törölni</value>
+  </data>
+  <data name="DllDeleted" xml:space="preserve">
+    <value>A DLL törölve</value>
+  </data>
+  <data name="DefaultProvidersSaved" xml:space="preserve">
+    <value>Alap szolgáltatók mentve.</value>
+  </data>
+  <data name="ProviderRejectedConfiguration" xml:space="preserve">
+    <value>A szolgáltató visszautasította a konfigurációs adatokat</value>
+  </data>
+  <data name="CouldNotCreateNavPath" xml:space="preserve">
+    <value>A navigációs útvonalat nem lehetett létrehozni</value>
+  </data>
+  <data name="CouldNotDeleteNavPath" xml:space="preserve">
+    <value>A navigációs útvonalat nem lehetett törölni</value>
+  </data>
+  <data name="CouldNotSaveNavPath" xml:space="preserve">
+    <value>A navigációs útvonalat nem lehetett elmenteni</value>
+  </data>
+  <data name="NavPathCreated" xml:space="preserve">
+    <value>Navigációs útvonal létrehozva</value>
+  </data>
+  <data name="TheNavPathMustContain" xml:space="preserve">
+    <value>A navigációs útvonal legalább egy lapot tartalmazzon!</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>nincs</value>
+  </data>
+  <data name="ClickToEnableEmailNotifications" xml:space="preserve">
+    <value>Kattints ide, az email értesítés bekapcsolásához</value>
+  </data>
+  <data name="EmailNotificationsAreActive" xml:space="preserve">
+    <value>Az email értesítés aktív ezen a lapon. Kattints ide a kikapcsoláshoz.</value>
+  </data>
+  <data name="CouldNotApproveDraft" xml:space="preserve">
+    <value>A piszkozatot nem lehetett elfogadni</value>
+  </data>
+  <data name="DraftApproved" xml:space="preserve">
+    <value>A piszkozat elfogadva és elmentve</value>
+  </data>
+  <data name="DraftRejected" xml:space="preserve">
+    <value>A piszkozat elutasítva és elvetve</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Piszkozat</value>
+  </data>
+  <data name="ViewChanges" xml:space="preserve">
+    <value>változások megtekintése</value>
+  </data>
+  <data name="DiffingPageTitle" xml:space="preserve">
+    <value>Összehasonlítás: &lt;i&gt;##PAGETITLE##&lt;/i&gt; verziók: &lt;i&gt;##REV1##&lt;/i&gt; és &lt;i&gt;##REV2##&lt;/i&gt;</value>
+  </data>
+  <data name="CouldNotCreateSnippet" xml:space="preserve">
+    <value>A snippetet nem lehetett létrehozni</value>
+  </data>
+  <data name="CouldNotDeleteSnippet" xml:space="preserve">
+    <value>A snippetet nem lehetett törölni</value>
+  </data>
+  <data name="CouldNotSaveSnippet" xml:space="preserve">
+    <value>A snippetet nem lehetett elmenteni</value>
+  </data>
+  <data name="SnippetCreated" xml:space="preserve">
+    <value>Snippet létrehozva</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Paraméterek</value>
+  </data>
+  <data name="CouldNotDeleteCategory" xml:space="preserve">
+    <value>A kategóriát nem lehetett törölni</value>
+  </data>
+  <data name="CouldNotMergeCategories" xml:space="preserve">
+    <value>A kategóriákat nem lehetett összevonni</value>
+  </data>
+  <data name="CategoryCreated" xml:space="preserve">
+    <value>Kategória létrehozva</value>
+  </data>
+  <data name="CouldNotRenameCategory" xml:space="preserve">
+    <value>A kategóriát nem lehetett átnevezni</value>
+  </data>
+  <data name="CategoryAlreadyExists" xml:space="preserve">
+    <value>A kategória már létezik</value>
+  </data>
+  <data name="CouldNotCreateCategory" xml:space="preserve">
+    <value>A kategóriát nem lehetett létrehozni</value>
+  </data>
+  <data name="GoToCategory" xml:space="preserve">
+    <value>Ugrás a kategóriára</value>
+  </data>
+  <data name="Rollback" xml:space="preserve">
+    <value>Visszaállítás</value>
+  </data>
+  <data name="RollbackThisPage" xml:space="preserve">
+    <value>A lap visszaállítása az előző verzióra</value>
+  </data>
+  <data name="Administrate" xml:space="preserve">
+    <value>Adminisztrálás</value>
+  </data>
+  <data name="AdministrateThisPage" xml:space="preserve">
+    <value>Lap adminisztráció</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Engedélyek</value>
+  </data>
+  <data name="SetPermissionsForThisPage" xml:space="preserve">
+    <value>A lap engedélyeinek beállítása</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AdminTools" xml:space="preserve">
+    <value>Adminisztrációs eszközök</value>
+  </data>
+  <data name="ViewPageHistory" xml:space="preserve">
+    <value>Laptörténet megtekintése</value>
+  </data>
+  <data name="Action_Man_Disc" xml:space="preserve">
+    <value>Lapkommentek beállítása</value>
+  </data>
+  <data name="Action_Pst_Disc" xml:space="preserve">
+    <value>Lapkommentek létrehozása</value>
+  </data>
+  <data name="Action_Rd_Disc" xml:space="preserve">
+    <value>Lapkommentek olvasása</value>
+  </data>
+  <data name="CouldNotDeletePage" xml:space="preserve">
+    <value>A lapot nem lehetett törölni</value>
+  </data>
+  <data name="AllMessagesDeleted" xml:space="preserve">
+    <value>Minden üzenet törölve</value>
+  </data>
+  <data name="CouldNotDeleteOneOrMoreMessages" xml:space="preserve">
+    <value>Egy vagy több üzenetet nem lehetett törölni</value>
+  </data>
+  <data name="CouldNotDeletePageBackups" xml:space="preserve">
+    <value>A lap mentéseit nem lehetett törölni</value>
+  </data>
+  <data name="CouldNotRollbackPage" xml:space="preserve">
+    <value>A lapot nem lehetett visszaállítani</value>
+  </data>
+  <data name="PageRolledBack" xml:space="preserve">
+    <value>A lap visszaállítva</value>
+  </data>
+  <data name="CouldNotRenamePage" xml:space="preserve">
+    <value>A lapot nem lehetett átnevezni</value>
+  </data>
+  <data name="PageRenamedCouldNotCreateShadowPage" xml:space="preserve">
+    <value>A lap átnevezve, de nem sikerült létrehozni az árnyéklapot</value>
+  </data>
+  <data name="PageRenamedCouldNotSetShadowPageContent" xml:space="preserve">
+    <value>A lap átnevezve, de az árnyéklap tartalmát nem sikerült beállítani</value>
+  </data>
+  <data name="GoToPageHistory" xml:space="preserve">
+    <value>Ugrás a laptörténetre</value>
+  </data>
+  <data name="GoToPageDiscussion" xml:space="preserve">
+    <value>Ugrás a lapkommentekre</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>Ugrás lapra</value>
+  </data>
+  <data name="CouldNotDeletePermissions" xml:space="preserve">
+    <value>Az engedélyeket nem lehetett törölni</value>
+  </data>
+  <data name="GroupCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>A csoport létrehozva, de az engedélyek nem hozhatóak létre</value>
+  </data>
+  <data name="GroupSavedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>A csoport mentve, de nem törölhetőek a régi engedélyek</value>
+  </data>
+  <data name="GroupSavedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>A csoport mentve, de az engedélyek nem hozhatóak létre</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteGroup" xml:space="preserve">
+    <value>Az engedélyek törölve, de a csoportot nem sikerült törölni</value>
+  </data>
+  <data name="CouldNotSetNamespaceDefaultPage" xml:space="preserve">
+    <value>A névtér kezdőlapját nem lehetett beállítani</value>
+  </data>
+  <data name="CouldNotSetNamespaceTheme" xml:space="preserve">
+    <value>A névtér témáját nem lehetett beállítani</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotCreateDefaultPage" xml:space="preserve">
+    <value>A névtér létrehozva, de nem sikerült létrehozni a nyitólapját</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetDefaultPage" xml:space="preserve">
+    <value>A névtér létrehozva, de nem sikerült beállítani a nyitólapját</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetTheme" xml:space="preserve">
+    <value>Névtér mentve, de nem lehetett beállítani a témáját</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotStoreDefaultPageContent" xml:space="preserve">
+    <value>A névtér létrehozva, de nem sikerült beállítani a nyitólap tartalmát</value>
+  </data>
+  <data name="UserCreatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>A felhasználó létrehozva, de nem lehetett menteni a csoporttagságot</value>
+  </data>
+  <data name="UserCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>A felhasználó létrehozva, de nem lehetett menteni az engedélyeket</value>
+  </data>
+  <data name="UserUpdatedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>A felhasználó frissítve, de nem lehetett eltávolítani a régi engedélyeket</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>A felhasználó frissítve, de nem lehetett menteni a csoporttagságot</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>A felhasználó frissítve, de nem lehetett menteni az új engedélyeket</value>
+  </data>
+  <data name="PermissionsAndGroupMembershipDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Az engedélyek és csoporttagság törölve, de a felhasználót nem sikerült törölni</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>Az engedélyek törölve, de a felhasználót nem sikerült törölni</value>
+  </data>
+  <data name="CouldNotDeleteNamespace" xml:space="preserve">
+    <value>A névteret nem lehetett törölni</value>
+  </data>
+  <data name="NamespaceDeleted" xml:space="preserve">
+    <value>Névtér törölve</value>
+  </data>
+  <data name="NamespaceSaved" xml:space="preserve">
+    <value>Névtér mentve</value>
+  </data>
+  <data name="CouldNotStorePermissions" xml:space="preserve">
+    <value>Az engedélyeket nem lehetett elmenteni</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Csoport</value>
+  </data>
+  <data name="GoToMainPage" xml:space="preserve">
+    <value>Ugrás a főoldalra</value>
+  </data>
+  <data name="Action_Crt_Dirs" xml:space="preserve">
+    <value>Mappa létrehzása</value>
+  </data>
+  <data name="Action_Crt_Pg" xml:space="preserve">
+    <value>Lapok létrehozása</value>
+  </data>
+  <data name="Action_Del_1Attn" xml:space="preserve">
+    <value>Csatolmányok törlése</value>
+  </data>
+  <data name="Action_Del_Attn" xml:space="preserve">
+    <value>Csatolmányok törlése</value>
+  </data>
+  <data name="Action_Del_Dirs" xml:space="preserve">
+    <value>Mappák törlése</value>
+  </data>
+  <data name="Action_Del_Files" xml:space="preserve">
+    <value>Fájlok törlése</value>
+  </data>
+  <data name="Action_Del_Pg" xml:space="preserve">
+    <value>Lapok törlése</value>
+  </data>
+  <data name="Action_Down_1Attn" xml:space="preserve">
+    <value>Csatolmányok letöltése</value>
+  </data>
+  <data name="Action_Down_Attn" xml:space="preserve">
+    <value>Csatolmányok letöltése</value>
+  </data>
+  <data name="Action_Down_Files" xml:space="preserve">
+    <value>Fájok letöltése</value>
+  </data>
+  <data name="Action_FullControl" xml:space="preserve">
+    <value>Teljes elérés</value>
+  </data>
+  <data name="Action_List" xml:space="preserve">
+    <value>Tartalom listázás</value>
+  </data>
+  <data name="Action_Man_1Cat" xml:space="preserve">
+    <value>Kategóriák beállítása</value>
+  </data>
+  <data name="Action_Man_1Pg" xml:space="preserve">
+    <value>Lap beállítása</value>
+  </data>
+  <data name="Action_Man_Acc" xml:space="preserve">
+    <value>Felhasználói fiókok beállítása</value>
+  </data>
+  <data name="Action_Man_Cat" xml:space="preserve">
+    <value>Kategóriák beállítása</value>
+  </data>
+  <data name="Action_Man_Conf" xml:space="preserve">
+    <value>Konfigurációs beállítások</value>
+  </data>
+  <data name="Action_Man_Files" xml:space="preserve">
+    <value>Fájlok és könyvtárak beállítása</value>
+  </data>
+  <data name="Action_Man_Grp" xml:space="preserve">
+    <value>Felhasználói csoportok beállítása</value>
+  </data>
+  <data name="Action_Man_MetaFiles" xml:space="preserve">
+    <value>Meta-fájlok beállítása</value>
+  </data>
+  <data name="Action_Man_NavPath" xml:space="preserve">
+    <value>Navigációs útvonalak beállítása</value>
+  </data>
+  <data name="Action_Man_Ns" xml:space="preserve">
+    <value>Névterek beállítása</value>
+  </data>
+  <data name="Action_Man_Pg" xml:space="preserve">
+    <value>Lapok beállítása</value>
+  </data>
+  <data name="Action_Man_PgCat" xml:space="preserve">
+    <value>Lapok és kategóriák beállítása</value>
+  </data>
+  <data name="Action_Man_Prov" xml:space="preserve">
+    <value>Szolgáltatók beállítása</value>
+  </data>
+  <data name="Action_Mod_1Pg" xml:space="preserve">
+    <value>Lap módosítása</value>
+  </data>
+  <data name="Action_Mod_Pg" xml:space="preserve">
+    <value>Lapok módosítása</value>
+  </data>
+  <data name="Action_Rd_1Pg" xml:space="preserve">
+    <value>Lap olvasása</value>
+  </data>
+  <data name="Action_Rd_Pg" xml:space="preserve">
+    <value>Lapok olvasása</value>
+  </data>
+  <data name="Action_Up_1Attn" xml:space="preserve">
+    <value>Csatolmányok feltöltése</value>
+  </data>
+  <data name="Action_Up_Attn" xml:space="preserve">
+    <value>Csatolmányok feltöltése</value>
+  </data>
+  <data name="Action_Up_Files" xml:space="preserve">
+    <value>Fájlok feltöltése</value>
+  </data>
+  <data name="CouldNotCreateGroup" xml:space="preserve">
+    <value>A csoportot nem lehetett létrehozni</value>
+  </data>
+  <data name="CouldNotUpdateGroup" xml:space="preserve">
+    <value>A csoportot nem lehetett frissíteni</value>
+  </data>
+  <data name="GroupCreated" xml:space="preserve">
+    <value>Csoport létrehozva</value>
+  </data>
+  <data name="GroupDeleted" xml:space="preserve">
+    <value>A csoport törölve</value>
+  </data>
+  <data name="GroupUpdated" xml:space="preserve">
+    <value>A csoport frissítve</value>
+  </data>
+  <data name="CouldNotSaveFile" xml:space="preserve">
+    <value>A fájlt nem lehetett elmenteni</value>
+  </data>
+  <data name="NoSimilarPages" xml:space="preserve">
+    <value>Nincs hasonló nevű, vagy című lap</value>
+  </data>
+  <data name="SearchStats" xml:space="preserve">
+    <value>A keresés &lt;b&gt;{0}&lt;/b&gt; (&lt;b&gt;{1} dokumentumban&lt;/b&gt;, &lt;b&gt;{2} szóban&lt;/b&gt;) történt, &lt;b&gt;{3:N1} másodperc alatt&lt;/b&gt; és &lt;b&gt;{4} találatot hozott&lt;/b&gt;.</value>
+  </data>
+  <data name="InvalidDisplayName" xml:space="preserve">
+    <value>Hibás megjelenő név</value>
+  </data>
+  <data name="CouldNotCreateUser" xml:space="preserve">
+    <value>A felhasználót nem lehetett létrehozni</value>
+  </data>
+  <data name="CouldNotUpdateUser" xml:space="preserve">
+    <value>A felhasználót nem lehetett frissíteni</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>A felhasználó létrehzva</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>A felhasználó frissítve</value>
+  </data>
+  <data name="RootNamespace" xml:space="preserve">
+    <value>&lt;gyökér&gt;</value>
+  </data>
+  <data name="CouldNotCreateNamespace" xml:space="preserve">
+    <value>A névteret nem lehetett létrehozni</value>
+  </data>
+  <data name="InvalidNamespaceName" xml:space="preserve">
+    <value>Hibás névtér név</value>
+  </data>
+  <data name="NamespaceCreated" xml:space="preserve">
+    <value>Névtér létrehozva</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Bezár</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Csatolmányok</value>
+  </data>
+  <data name="ThereAreAttachments" xml:space="preserve">
+    <value>A laphoz fájlok vannak csatolva</value>
+  </data>
+  <data name="NoSnippets" xml:space="preserve">
+    <value>Nincs snippet</value>
+  </data>
+  <data name="LinkTitleOptional" xml:space="preserve">
+    <value>Link neve (nem kötelező)</value>
+  </data>
+  <data name="UpLevel" xml:space="preserve">
+    <value>Egy szinttel feljebb</value>
+  </data>
+  <data name="CannotRenameItem" xml:space="preserve">
+    <value>A kiválasztott elem nem nevezhető át</value>
+  </data>
+  <data name="CannotStoreFile" xml:space="preserve">
+    <value>A fájl nem menthető el</value>
+  </data>
+  <data name="CannotCreateNewDirectory" xml:space="preserve">
+    <value>Nem hozható létre új mappa</value>
+  </data>
+  <data name="DiffColorKey" xml:space="preserve">
+    <value>Színezés: &lt;span style="background-color: #88CC33;"&gt;új szöveg&lt;/span&gt; / &lt;span style="background-color: #FFDF66;"&gt;törölt szöveg&lt;/span&gt;.</value>
+  </data>
+  <data name="EarlierThisMonth" xml:space="preserve">
+    <value>Korábban e hónapban</value>
+  </data>
+  <data name="EarlierThisWeek" xml:space="preserve">
+    <value>Korábban e héten</value>
+  </data>
+  <data name="LastMonth" xml:space="preserve">
+    <value>Múlt hónap</value>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>Régebbi</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Ma</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Tegnap</value>
+  </data>
+  <data name="LoginNoticeFile" xml:space="preserve">
+    <value>Login Notice fájl</value>
+  </data>
+  <data name="MayBeInaccurate" xml:space="preserve">
+    <value>Lehet, hogy pontatlan</value>
+  </data>
+  <data name="AccessDeniedTitle" xml:space="preserve">
+    <value>Belépés megtagadva</value>
+  </data>
+  <data name="AccountActivated" xml:space="preserve">
+    <value>Sikeres regisztráció aktiválás. Kérem lépj be!</value>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Profil aktiválás</value>
+  </data>
+  <data name="AccountActivationMessageFile" xml:space="preserve">
+    <value>Profil aktivációs fájl</value>
+  </data>
+  <data name="AccountAlreadyActive" xml:space="preserve">
+    <value>A profil már aktív</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>Sikeres profil létrehozás</value>
+  </data>
+  <data name="AccountNotActivated" xml:space="preserve">
+    <value>Sikertelen profil létrehozás</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Aprofil nem található</value>
+  </data>
+  <data name="ActivationAdmin" xml:space="preserve">
+    <value>A fiókod el kell fogadni egy adminisztrátornak, mielőtt beléphetsz.</value>
+  </data>
+  <data name="ActivationAuto" xml:space="preserve">
+    <value>A fiókod regisztráció után aktív lesz.</value>
+  </data>
+  <data name="ActivationEmail" xml:space="preserve">
+    <value>24 órán belül a kapott email alapján aktiválnod kell a fiókod.</value>
+  </data>
+  <data name="AdminDowngraded" xml:space="preserve">
+    <value>Az adminból felhasználó lett.</value>
+  </data>
+  <data name="AdminTitle" xml:space="preserve">
+    <value>Adminisztrácó</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>Minden lap</value>
+  </data>
+  <data name="AllPagesTitle" xml:space="preserve">
+    <value>Wiki tartalom</value>
+  </data>
+  <data name="Anchor" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="AnchorId" xml:space="preserve">
+    <value>Link ID</value>
+  </data>
+  <data name="AnchorLink" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="AnchorTitle" xml:space="preserve">
+    <value>Link neve</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Vissza</value>
+  </data>
+  <data name="BackToHistory" xml:space="preserve">
+    <value>Vissza a történetbe</value>
+  </data>
+  <data name="Bigger" xml:space="preserve">
+    <value>Nagyobb</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>Félkövér</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>Doboz</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>Általa:</value>
+  </data>
+  <data name="CachedPages" xml:space="preserve">
+    <value>Gyorsítótárazott lapok</value>
+  </data>
+  <data name="CannotDisableDefaultProvider" xml:space="preserve">
+    <value>Nem kapcsolható ki egy alap szolgáltató</value>
+  </data>
+  <data name="CannotUnloadDefaultProvider" xml:space="preserve">
+    <value>Nem távolítható el egy alap szolgáltató</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Kategóriák</value>
+  </data>
+  <data name="CategoriesMerged" xml:space="preserve">
+    <value>Kategóriák összerakva</value>
+  </data>
+  <data name="CategorizedAs" xml:space="preserve">
+    <value>Kategóriaban, mint</value>
+  </data>
+  <data name="CategoryDeleted" xml:space="preserve">
+    <value>Kategória törölve</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>A kategória nem található</value>
+  </data>
+  <data name="CategoryRenamed" xml:space="preserve">
+    <value>A kategória átnevezve</value>
+  </data>
+  <data name="CategorySaved" xml:space="preserve">
+    <value>A kategória elmentve</value>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>Kategóriák</value>
+  </data>
+  <data name="CodeBlock" xml:space="preserve">
+    <value>Kód blokk</value>
+  </data>
+  <data name="CodeInline" xml:space="preserve">
+    <value>Beszúrt kód</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Megjegyzés</value>
+  </data>
+  <data name="ConfigSaved" xml:space="preserve">
+    <value>A beállítások mentve</value>
+  </data>
+  <data name="ConfigurationString" xml:space="preserve">
+    <value>Beállítás string</value>
+  </data>
+  <data name="ConfigValuesReset" xml:space="preserve">
+    <value>A beállítások visszaállítva</value>
+  </data>
+  <data name="ConfirmOperation" xml:space="preserve">
+    <value>Biztos folytatod?</value>
+  </data>
+  <data name="CouldRequireLogin" xml:space="preserve">
+    <value>szükséges lehet a belépés</value>
+  </data>
+  <data name="CreateNewPage" xml:space="preserve">
+    <value>Új lap létrehozása</value>
+  </data>
+  <data name="CreatePage" xml:space="preserve">
+    <value>Lap létrehozása</value>
+  </data>
+  <data name="CreateThePage" xml:space="preserve">
+    <value>lap létrehozása</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Jelenlegi</value>
+  </data>
+  <data name="CurrentRevision" xml:space="preserve">
+    <value>Jelenlegi verzió</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Dátum/idő</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Töröl</value>
+  </data>
+  <data name="DiffTitle" xml:space="preserve">
+    <value>Különbség</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Nincs engedélyezve</value>
+  </data>
+  <data name="Discuss" xml:space="preserve">
+    <value>Megbeszélés</value>
+  </data>
+  <data name="DiscussionFor" xml:space="preserve">
+    <value>Megbeszélés</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Letöltés</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Szerkesztés</value>
+  </data>
+  <data name="EditingFile" xml:space="preserve">
+    <value>Fájl szerkesztése</value>
+  </data>
+  <data name="EditNoticeFile" xml:space="preserve">
+    <value>Megjegyzés fájl szerkesztése</value>
+  </data>
+  <data name="EditPage" xml:space="preserve">
+    <value>Lapl szerkesztése</value>
+  </data>
+  <data name="EditThisPage" xml:space="preserve">
+    <value>Lap szerkesztése</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>Szerkesztés</value>
+  </data>
+  <data name="EmailSaved" xml:space="preserve">
+    <value>Email cím mentve</value>
+  </data>
+  <data name="EmailsNotEqual" xml:space="preserve">
+    <value>Nem egyeznek az email címek</value>
+  </data>
+  <data name="EnterTitleAndUrl" xml:space="preserve">
+    <value>Címet és URL-t is be kell írni</value>
+  </data>
+  <data name="ErrorDeletingFile" xml:space="preserve">
+    <value>Fájl törlési hiba</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Hiba</value>
+  </data>
+  <data name="Escape" xml:space="preserve">
+    <value>Escape</value>
+  </data>
+  <data name="ExternalLink" xml:space="preserve">
+    <value>Külső link</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>A fájl már létezik</value>
+  </data>
+  <data name="FileLink" xml:space="preserve">
+    <value>Helyi fájl linkelése</value>
+  </data>
+  <data name="FileManagement" xml:space="preserve">
+    <value>Fájl menedzsment (új ablakban)</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>A fájl nem található</value>
+  </data>
+  <data name="FileSaved" xml:space="preserve">
+    <value>A fájl mentve</value>
+  </data>
+  <data name="FilesDiskUsage" xml:space="preserve">
+    <value>Fájlok lemezen elfoglalt helye</value>
+  </data>
+  <data name="FileTooBig" xml:space="preserve">
+    <value>A fájl túl nagy</value>
+  </data>
+  <data name="FileVoid" xml:space="preserve">
+    <value>Üres fájlnév</value>
+  </data>
+  <data name="FooterFile" xml:space="preserve">
+    <value>Lábléc</value>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>Tilos</value>
+  </data>
+  <data name="FullView" xml:space="preserve">
+    <value>Teljes nézet (új ablakban)</value>
+  </data>
+  <data name="H1" xml:space="preserve">
+    <value>H1</value>
+  </data>
+  <data name="H2" xml:space="preserve">
+    <value>H2</value>
+  </data>
+  <data name="H3" xml:space="preserve">
+    <value>H3</value>
+  </data>
+  <data name="H4" xml:space="preserve">
+    <value>H4 (használd ritkán)</value>
+  </data>
+  <data name="HeaderFile" xml:space="preserve">
+    <value>Fejléc fájl</value>
+  </data>
+  <data name="HideBreadcrumbsTrail" xml:space="preserve">
+    <value>Klikkelj ide, hogy a navigációs vonalat elrejtsd!</value>
+  </data>
+  <data name="HidePreview" xml:space="preserve">
+    <value>Előnézet elrejtése</value>
+  </data>
+  <data name="HideShow" xml:space="preserve">
+    <value>Rejtés/megjelenítés</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Történet</value>
+  </data>
+  <data name="HistoryTitle" xml:space="preserve">
+    <value>Laptörténet</value>
+  </data>
+  <data name="HtmlHeadFile" xml:space="preserve">
+    <value>HTML fejléc fájl</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Kép</value>
+  </data>
+  <data name="ImageAuto" xml:space="preserve">
+    <value>Kép - auto elrendezés</value>
+  </data>
+  <data name="ImageBigUrl" xml:space="preserve">
+    <value>Nagy kép URL (opcionális)</value>
+  </data>
+  <data name="ImageInline" xml:space="preserve">
+    <value>Kép (sorfolytonos)</value>
+  </data>
+  <data name="ImageLeft" xml:space="preserve">
+    <value>Kép - Balra zárt</value>
+  </data>
+  <data name="ImageRight" xml:space="preserve">
+    <value>Kép - Jobbra zárt</value>
+  </data>
+  <data name="ImageTitle" xml:space="preserve">
+    <value>Kép címe</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>Kép URL-je</value>
+  </data>
+  <data name="InactiveUsers" xml:space="preserve">
+    <value>Inaktív</value>
+    <comment>Referred to the count of inactive users, for example Users: 8 (3 inactive)</comment>
+  </data>
+  <data name="InsertSnippet" xml:space="preserve">
+    <value>Kód beszúrása</value>
+  </data>
+  <data name="InvalidBackupNumber" xml:space="preserve">
+    <value>Hibás szám: nullánál nagyobb legyen (hagyd üresen, hogy az automata mentés törlése kikapcsoljon)</value>
+  </data>
+  <data name="InvalidCacheCutSize" xml:space="preserve">
+    <value>Hibás cache vágás méret: nullánál nagyobb egész legyen és kisebb, mint a cache mérete.</value>
+  </data>
+  <data name="InvalidCacheSize" xml:space="preserve">
+    <value>Hibás cache méret: nullánál nagyobb egész legyen.</value>
+  </data>
+  <data name="InvalidCategoryName" xml:space="preserve">
+    <value>Hibás kategória név</value>
+  </data>
+  <data name="InvalidContactEmail" xml:space="preserve">
+    <value>Hibás kapcsolattartó email</value>
+  </data>
+  <data name="InvalidDateTimeFormat" xml:space="preserve">
+    <value>Hibás dátum/idő formátum: .NET-es formátumú legyen</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Hibás email cím</value>
+  </data>
+  <data name="InvalidFileAccessTries" xml:space="preserve">
+    <value>Hibás belépési kísérlet száma: 0-nál nagyobb legyen</value>
+  </data>
+  <data name="InvalidFileAccessTryDelay" xml:space="preserve">
+    <value>Hibás belépési kísérlet késleltetés: 0-nál nagyobb legyen</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>Hibás fájl típus</value>
+  </data>
+  <data name="InvalidMainUrl" xml:space="preserve">
+    <value>Hibás fő URL. Perjellel kell végződni, és valós legyen.</value>
+  </data>
+  <data name="InvalidMaxFileSize" xml:space="preserve">
+    <value>Hibás max fájlméret: 0 és 20,480 KB közt legyen</value>
+  </data>
+  <data name="InvalidMaxLogSize" xml:space="preserve">
+    <value>Hibás max log méret: 8 és 10,240 KB közt legyen</value>
+  </data>
+  <data name="InvalidNavPath" xml:space="preserve">
+    <value>Hibás navigációs útvonal: legalább 2 lap legyen</value>
+  </data>
+  <data name="InvalidNavPathName" xml:space="preserve">
+    <value>Hibás navigációs útvonal név</value>
+  </data>
+  <data name="InvalidPageName" xml:space="preserve">
+    <value>Hibás lap név</value>
+  </data>
+  <data name="InvalidPageTitle" xml:space="preserve">
+    <value>Hivás lap cím</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Hibás jelszó</value>
+  </data>
+  <data name="InvalidPort" xml:space="preserve">
+    <value>Hibás Port (1 és 65535 közt legyen)</value>
+  </data>
+  <data name="InvalidSenderEmail" xml:space="preserve">
+    <value>Hibás küldő email</value>
+  </data>
+  <data name="InvalidSmtpServer" xml:space="preserve">
+    <value>Hibás SMTP szerver</value>
+  </data>
+  <data name="InvalidSnippetName" xml:space="preserve">
+    <value>Hibás kód név</value>
+  </data>
+  <data name="InvalidUsername" xml:space="preserve">
+    <value>Hibás felhasználónév: 4 karakternél hoszabb legyen és nem lehet 'admin', 'guest' és szám, space, pont.</value>
+  </data>
+  <data name="InvalidWikiTitle" xml:space="preserve">
+    <value>Hibás Wiki cím. Nem lehet többsoros.</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Dőlt</value>
+  </data>
+  <data name="LastModifiedPage" xml:space="preserve">
+    <value>Utolsó módosítás dátuma</value>
+  </data>
+  <data name="LatestUser" xml:space="preserve">
+    <value>Utolsó felhasználó</value>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>Sortörés</value>
+  </data>
+  <data name="LinkTitle" xml:space="preserve">
+    <value>Link címe</value>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>Link URL</value>
+  </data>
+  <data name="LocatedIn" xml:space="preserve">
+    <value>Helye:</value>
+  </data>
+  <data name="LogDiskUsage" xml:space="preserve">
+    <value>Napló lemezen foglalt helye</value>
+  </data>
+  <data name="LoggedAsAdmin" xml:space="preserve">
+    <value>A beépített admin-nal vagy belépve, nem szerkeszthető ez a profil.</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Belépés</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Belépés/kilépés</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Kilépés</value>
+  </data>
+  <data name="LostPassword" xml:space="preserve">
+    <value>Elfelejtett jelszó</value>
+  </data>
+  <data name="MassEmailSent" xml:space="preserve">
+    <value>Tömeges levél elküldve</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Üzenet</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>Üzenet elküldve</value>
+  </data>
+  <data name="MessageTitle" xml:space="preserve">
+    <value>Üzenet írása</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Módosítva</value>
+  </data>
+  <data name="NavPathAlreadyExists" xml:space="preserve">
+    <value>A navigációs vonal már létezik</value>
+  </data>
+  <data name="NavPathDeleted" xml:space="preserve">
+    <value>A navigációs vonal törölve</value>
+  </data>
+  <data name="NavPathNotFound" xml:space="preserve">
+    <value>A navigációs vonal nem található</value>
+  </data>
+  <data name="NavPathSaved" xml:space="preserve">
+    <value>A navigációs vonal mentve</value>
+  </data>
+  <data name="NavPathTitle" xml:space="preserve">
+    <value>A navigációs vonalak</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>n/c</value>
+    <comment>Jelentése 'nincs kategóriája'</comment>
+  </data>
+  <data name="NewerRevision" xml:space="preserve">
+    <value>Újabb verzió</value>
+  </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>Újabb verzió létezik</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Következő lap</value>
+  </data>
+  <data name="NoFiles" xml:space="preserve">
+    <value>Nincsenek fájlok</value>
+  </data>
+  <data name="NoMessages" xml:space="preserve">
+    <value>Nincs üzenet itt. Légy az első!</value>
+  </data>
+  <data name="NoPagesInThisCategory" xml:space="preserve">
+    <value>Nincs lap ebben a kategóriában.</value>
+  </data>
+  <data name="NoWiki" xml:space="preserve">
+    <value>NoWiki tag</value>
+  </data>
+  <data name="OlderRevision" xml:space="preserve">
+    <value>Korábbi verziók</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>Online felhasználók</value>
+  </data>
+  <data name="OnlyDllFilesAllowed" xml:space="preserve">
+    <value>Csak DLL fájlok engedélyezettek</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>Műveletek</value>
+  </data>
+  <data name="OperationTitle" xml:space="preserve">
+    <value>Művelet</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>vagy</value>
+    <comment>It means 'you can do this OR this"</comment>
+  </data>
+  <data name="PageAlreadyExists" xml:space="preserve">
+    <value>A lap már létezik</value>
+  </data>
+  <data name="PageBackupsDeleted" xml:space="preserve">
+    <value>Biztonsági mentések törölve</value>
+  </data>
+  <data name="PageDeleted" xml:space="preserve">
+    <value>A lap törölve</value>
+  </data>
+  <data name="PageDiscussionCleared" xml:space="preserve">
+    <value>A megbeszélés törölve</value>
+  </data>
+  <data name="PageDoesNotExistInProvider" xml:space="preserve">
+    <value>A lap: ##PAGENAME## nem létezik ebben a Providerben</value>
+  </data>
+  <data name="PageFooterFile" xml:space="preserve">
+    <value>Lap lábléc</value>
+  </data>
+  <data name="PageHeaderFile" xml:space="preserve">
+    <value>Lap fejléc</value>
+  </data>
+  <data name="PageHistory" xml:space="preserve">
+    <value>Lap történet</value>
+  </data>
+  <data name="PageLink" xml:space="preserve">
+    <value>Link egy lapra</value>
+  </data>
+  <data name="PageLocked" xml:space="preserve">
+    <value>Ez a lap zárolva</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>A lap nem található</value>
+  </data>
+  <data name="PageNotFoundTitle" xml:space="preserve">
+    <value>A lap nem található</value>
+  </data>
+  <data name="PagePublic" xml:space="preserve">
+    <value>Publikus lap</value>
+  </data>
+  <data name="PageRenamed" xml:space="preserve">
+    <value>Lap átnevezve</value>
+  </data>
+  <data name="PageRevision" xml:space="preserve">
+    <value>Lap verzió</value>
+  </data>
+  <data name="PageSaved" xml:space="preserve">
+    <value>A lap mentve</value>
+  </data>
+  <data name="PagesDiskUsage" xml:space="preserve">
+    <value>Lapok lemezen foglalt helye</value>
+  </data>
+  <data name="PageSetLocked" xml:space="preserve">
+    <value>A lap zárolva</value>
+  </data>
+  <data name="PageSetNormal" xml:space="preserve">
+    <value>A lap normál-ra</value>
+  </data>
+  <data name="PageSetPublic" xml:space="preserve">
+    <value>A lap publikusra</value>
+  </data>
+  <data name="PagesOfCategory" xml:space="preserve">
+    <value>Kategóri lapjai</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Lap címe</value>
+  </data>
+  <data name="PageUpdates" xml:space="preserve">
+    <value>Lap frissítése</value>
+  </data>
+  <data name="PasswordResetMessageFile" xml:space="preserve">
+    <value>Jelszó visszaállító üzenet</value>
+  </data>
+  <data name="PasswordSaved" xml:space="preserve">
+    <value>Jelszó mentve</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>A jelszavak nem egyeznek</value>
+  </data>
+  <data name="Paths" xml:space="preserve">
+    <value>Útvonalak</value>
+  </data>
+  <data name="PerformASearch" xml:space="preserve">
+    <value>keresés</value>
+  </data>
+  <data name="PleaseSelectValidBackup" xml:space="preserve">
+    <value>Válassz egy érvényes biztonsági mentést</value>
+  </data>
+  <data name="Posted" xml:space="preserve">
+    <value>Elküldve</value>
+  </data>
+  <data name="PostMessage" xml:space="preserve">
+    <value>Üzenet írása</value>
+  </data>
+  <data name="PostTitle" xml:space="preserve">
+    <value>Üzenet írása</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Előnézet</value>
+  </data>
+  <data name="PreviewCreated" xml:space="preserve">
+    <value>Az előnézet létrehozva a lap alján</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>Előző lap</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Nyomtatás</value>
+  </data>
+  <data name="PrinterFriendlyVersion" xml:space="preserve">
+    <value>Nyomtatóbarát verzió</value>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>Felhasználói profil</value>
+  </data>
+  <data name="ProviderConfigurationSaved" xml:space="preserve">
+    <value>A szolgáltató konfigurációs adatai mentve</value>
+  </data>
+  <data name="ProviderDisabled" xml:space="preserve">
+    <value>A szolgáltató kikapcsolva</value>
+  </data>
+  <data name="ProviderEnabled" xml:space="preserve">
+    <value>A szolgáltató bekapcsolva</value>
+  </data>
+  <data name="ProviderNotFound" xml:space="preserve">
+    <value>A szolgáltató nem található</value>
+  </data>
+  <data name="ProviderUnloaded" xml:space="preserve">
+    <value>A szolgáltató eltávolítva</value>
+  </data>
+  <data name="RecentPageUpdates" xml:space="preserve">
+    <value>Nem régi frissítések</value>
+  </data>
+  <data name="RedirectedFrom" xml:space="preserve">
+    <value>Átirányítva innen</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Frissítés</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Profil létrehozása</value>
+  </data>
+  <data name="RegistrationDisabled" xml:space="preserve">
+    <value>A profil létrehozás kikapcsolva</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>Válasz</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Hiányzó kötelező mező</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Újabb verzió</value>
+  </data>
+  <data name="RevisionComment" xml:space="preserve">
+    <value>Megjegyzés</value>
+  </data>
+  <data name="RollbackCompleted" xml:space="preserve">
+    <value>Visszaálltás sikeres</value>
+  </data>
+  <data name="RssForTheWiki" xml:space="preserve">
+    <value>Az egész Wiki értesítései frissítése (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisCategory" xml:space="preserve">
+    <value>Kategória értesítések frissítése (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisDiscussion" xml:space="preserve">
+    <value>Megbeszélés értesítések frissítése  (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisPage" xml:space="preserve">
+    <value>Lap értesítések frissítése (RSS 2.0)</value>
+  </data>
+  <data name="ScriptDetected" xml:space="preserve">
+    <value>Nem engedélyezett SCRIPT tagot találtam</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Keresés</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>Keresőmotor</value>
+  </data>
+  <data name="SendAMessage" xml:space="preserve">
+    <value>Üzenet küldése</value>
+  </data>
+  <data name="ServerUptime" xml:space="preserve">
+    <value>Szerver üzemideje</value>
+  </data>
+  <data name="SidebarFile" xml:space="preserve">
+    <value>Oldalmenü fájl</value>
+  </data>
+  <data name="Smaller" xml:space="preserve">
+    <value>Kisebb</value>
+  </data>
+  <data name="SnippetAlreadyExists" xml:space="preserve">
+    <value>A kód már létezik</value>
+  </data>
+  <data name="SnippetDeleted" xml:space="preserve">
+    <value>Kód törölve</value>
+  </data>
+  <data name="SnippetNotFound" xml:space="preserve">
+    <value>A kód nem található</value>
+  </data>
+  <data name="SnippetSaved" xml:space="preserve">
+    <value>A kód mentve</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>Dátum szerinti rendezés</value>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>Cím szerinti rendezés</value>
+  </data>
+  <data name="SortByUser" xml:space="preserve">
+    <value>Felhasználó szerinti rendezés</value>
+  </data>
+  <data name="SpecialTags" xml:space="preserve">
+    <value>Speciális tag-ek</value>
+  </data>
+  <data name="Striked" xml:space="preserve">
+    <value>Áthúzott</value>
+  </data>
+  <data name="SubjectAndBodyNeeded" xml:space="preserve">
+    <value>Tárgy és törzs is kötelező</value>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>Alsó index</value>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>Felső index</value>
+  </data>
+  <data name="TableOfContents" xml:space="preserve">
+    <value>Tartalomjegyzék</value>
+  </data>
+  <data name="TempDiskUsage" xml:space="preserve">
+    <value>Temp fájlok lemezen foglalt helye</value>
+  </data>
+  <data name="TextareaSize" xml:space="preserve">
+    <value>Szövegmező mérete</value>
+  </data>
+  <data name="ThePageHasBeenDeletedBy" xml:space="preserve">
+    <value>A lapot törölte</value>
+  </data>
+  <data name="ThePageHasBeenRenamedBy" xml:space="preserve">
+    <value>A lapot átnevezte</value>
+  </data>
+  <data name="ThePageHasBeenRolledBackBy" xml:space="preserve">
+    <value>A lapot visszaállította</value>
+  </data>
+  <data name="ThePageHasBeenUpdatedBy" xml:space="preserve">
+    <value>A lapot frissítette</value>
+  </data>
+  <data name="ThisIsAPreview" xml:space="preserve">
+    <value>&lt;b&gt;Figyelem&lt;/b&gt;: ez csak előnézet! Kattints a Mentésre a változások megőrzéséhez.</value>
+  </data>
+  <data name="ThisPageIsLocked" xml:space="preserve">
+    <value>A lap zárolva, csak admin szerkesztheti.</value>
+  </data>
+  <data name="ThisPageRedirectsTo" xml:space="preserve">
+    <value>A lap átirányít</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Teteje</value>
+  </data>
+  <data name="TotalDiskUsage" xml:space="preserve">
+    <value>Teljes foglalt hely</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Típus</value>
+  </data>
+  <data name="UnallowedFileType" xml:space="preserve">
+    <value>A feltöltött fájl típusa nem engedélyett</value>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>Kategória nélkül</value>
+  </data>
+  <data name="UncategorizedPages" xml:space="preserve">
+    <value>Kategória nélküli lapok</value>
+  </data>
+  <data name="Underlined" xml:space="preserve">
+    <value>Aláhúzott</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>Fájl menedzsment</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Felhasználó</value>
+  </data>
+  <data name="UserAccountSaved" xml:space="preserve">
+    <value>A felhasználó mentve</value>
+  </data>
+  <data name="UserActivated" xml:space="preserve">
+    <value>Felhasználó aktiválva</value>
+  </data>
+  <data name="UserCount" xml:space="preserve">
+    <value>Felhasználók száma</value>
+  </data>
+  <data name="UserDeactivated" xml:space="preserve">
+    <value>Felhasználó deaktiválva</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>Felhasználó törölve</value>
+  </data>
+  <data name="UsernameAlreadyExists" xml:space="preserve">
+    <value>A felhasználónév már létezik, válassz másikat!</value>
+  </data>
+  <data name="UsernameIsRequired" xml:space="preserve">
+    <value>SMTP felhasználónév szükséges, ha a jelszó ki van töltve.</value>
+  </data>
+  <data name="UserPromoted" xml:space="preserve">
+    <value>Adminisztrátorrá téve</value>
+  </data>
+  <data name="VersionCheckError" xml:space="preserve">
+    <value>Hiba a verzió info lekérdezésénél</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Megtekint</value>
+  </data>
+  <data name="ViewBreadcrumbsTrail" xml:space="preserve">
+    <value>Kattints ide a teljes navigációs vonal megtekintéséhez</value>
+  </data>
+  <data name="ViewingFile" xml:space="preserve">
+    <value>Fájl nézete</value>
+  </data>
+  <data name="ViewList" xml:space="preserve">
+    <value>Lista nézete</value>
+  </data>
+  <data name="ViewPageCode" xml:space="preserve">
+    <value>Lap kód nézete</value>
+  </data>
+  <data name="ViewTree" xml:space="preserve">
+    <value>Fa nézet</value>
+  </data>
+  <data name="WereYouLookingFor" xml:space="preserve">
+    <value>Ezek közül kerestél?</value>
+  </data>
+  <data name="WikiUpToDate" xml:space="preserve">
+    <value>A Wiki naprakész.</value>
+  </data>
+  <data name="WikiVersion" xml:space="preserve">
+    <value>Wiki verzió</value>
+  </data>
+  <data name="Wizard" xml:space="preserve">
+    <value>Beállításvarázsló</value>
+  </data>
+  <data name="WrongControlText" xml:space="preserve">
+    <value>Hibás kontrol szöveg</value>
+  </data>
+  <data name="WrongParameters" xml:space="preserve">
+    <value>Hibás paraméterek</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>Hibás jelszó</value>
+  </data>
+  <data name="WrongUsernamePassword" xml:space="preserve">
+    <value>Hibás felhasználónév vagy jelszó</value>
+  </data>
+  <data name="YouCanAlso" xml:space="preserve">
+    <value>Ezt teheted</value>
+  </data>
+  <data name="YouMustProvideAFile" xml:space="preserve">
+    <value>Adj meg egy fájlt</value>
+  </data>
+</root>

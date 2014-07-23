@@ -1,0 +1,1753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessDeniedTitle" xml:space="preserve">
+    <value>접근 거부</value>
+  </data>
+  <data name="AccountActivated" xml:space="preserve">
+    <value>계정이 성공적으로 활성화되었습니다. 로그인하세요.</value>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>계정 활성화</value>
+  </data>
+  <data name="AccountActivationMessageFile" xml:space="preserve">
+    <value>계정 활성화메세지 파일</value>
+  </data>
+  <data name="AccountAlreadyActive" xml:space="preserve">
+    <value>계정이 이미 활성화되었습니다</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>계정이 성공적으로 생성되었습니다</value>
+  </data>
+  <data name="AccountNotActivated" xml:space="preserve">
+    <value>계정 활성화 에러</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>계정을 찾을 수 없습니다</value>
+  </data>
+  <data name="ActivationAdmin" xml:space="preserve">
+    <value>로그인 전에 계정이 관리자에게 승인받아야합니다.</value>
+  </data>
+  <data name="ActivationAuto" xml:space="preserve">
+    <value>등록 후 계정이 바로 활성화됩니다.</value>
+  </data>
+  <data name="ActivationEmail" xml:space="preserve">
+    <value>계정이 24시간내에 활성화되어야 합니다, 이메일을 통해 지시사항을 받으세요.</value>
+  </data>
+  <data name="AdminDowngraded" xml:space="preserve">
+    <value>관리자를 사용자로 다운그레이드</value>
+  </data>
+  <data name="AdminTitle" xml:space="preserve">
+    <value>관리</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>모든 페이지</value>
+  </data>
+  <data name="AllPagesTitle" xml:space="preserve">
+    <value>위키 색인</value>
+  </data>
+  <data name="Anchor" xml:space="preserve">
+    <value>앵커</value>
+  </data>
+  <data name="AnchorId" xml:space="preserve">
+    <value>앵커 아이디</value>
+  </data>
+  <data name="AnchorLink" xml:space="preserve">
+    <value>앵커 링크</value>
+  </data>
+  <data name="AnchorTitle" xml:space="preserve">
+    <value>앵커 제목</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>자동</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>돌아가기 </value>
+  </data>
+  <data name="BackToHistory" xml:space="preserve">
+    <value>페이지 히스토리로 돌아가기</value>
+  </data>
+  <data name="Bigger" xml:space="preserve">
+    <value>크게</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>굵게</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>박스</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="CachedPages" xml:space="preserve">
+    <value>캐싱된 페이지</value>
+  </data>
+  <data name="CannotDisableDefaultProvider" xml:space="preserve">
+    <value>기본 프로바이더를 비활성화할 수 없습니다</value>
+  </data>
+  <data name="CannotUnloadDefaultProvider" xml:space="preserve">
+    <value>기본 프로바이더를 언로드할 수 없습니다</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>분류</value>
+  </data>
+  <data name="CategoriesMerged" xml:space="preserve">
+    <value>분류 병함</value>
+  </data>
+  <data name="CategorizedAs" xml:space="preserve">
+    <value>로 분류됨</value>
+  </data>
+  <data name="CategoryDeleted" xml:space="preserve">
+    <value>분류 삭제됨</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>분류를 찾을 수 없습니다</value>
+  </data>
+  <data name="CategoryRenamed" xml:space="preserve">
+    <value>Category renamed</value>
+  </data>
+  <data name="CategorySaved" xml:space="preserve">
+    <value>Category saved</value>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>분류</value>
+  </data>
+  <data name="CodeBlock" xml:space="preserve">
+    <value>블록 코드</value>
+  </data>
+  <data name="CodeInline" xml:space="preserve">
+    <value>인라인 코드</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>코멘트</value>
+  </data>
+  <data name="ConfigSaved" xml:space="preserve">
+    <value>설정이 성공적으로 저장됨</value>
+  </data>
+  <data name="ConfigurationString" xml:space="preserve">
+    <value>설정 문자열</value>
+  </data>
+  <data name="ConfigValuesReset" xml:space="preserve">
+    <value>설정옵션 이전값으로 리셋</value>
+  </data>
+  <data name="ConfirmOperation" xml:space="preserve">
+    <value>진행하시겠습니까?</value>
+  </data>
+  <data name="CouldRequireLogin" xml:space="preserve">
+    <value>로그인이 필요할 수 있습니다</value>
+  </data>
+  <data name="CreateNewPage" xml:space="preserve">
+    <value>새 페이지 생성</value>
+  </data>
+  <data name="CreatePage" xml:space="preserve">
+    <value>페이지 생성</value>
+  </data>
+  <data name="CreateThePage" xml:space="preserve">
+    <value>페이지 생성</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>현재</value>
+  </data>
+  <data name="CurrentRevision" xml:space="preserve">
+    <value>현재 리비전</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>날짜/시간</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="DiffColorKey" xml:space="preserve">
+    <value>색상 키: &lt;span style="background-color: #88CC33;"&gt;텍스트에 추가됨&lt;/span&gt; / &lt;span style="background-color: #FFDF66;"&gt;삭제됨&lt;/span&gt;.</value>
+  </data>
+  <data name="DiffingPageTitle" xml:space="preserve">
+    <value>&lt;i&gt;##PAGETITLE##&lt;/i&gt; 리비전에서 &lt;i&gt;##REV1##&lt;/i&gt; 과 &lt;i&gt;##REV2##&lt;/i&gt; 의 차이</value>
+  </data>
+  <data name="DiffTitle" xml:space="preserve">
+    <value>Difference</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>비활성화</value>
+  </data>
+  <data name="Discuss" xml:space="preserve">
+    <value>토론</value>
+  </data>
+  <data name="DiscussionFor" xml:space="preserve">
+    <value>토론</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>다운로드</value>
+  </data>
+  <data name="EarlierThisMonth" xml:space="preserve">
+    <value>이 달 전</value>
+  </data>
+  <data name="EarlierThisWeek" xml:space="preserve">
+    <value>이 주 전</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>편집</value>
+  </data>
+  <data name="EditingFile" xml:space="preserve">
+    <value>파일 편집</value>
+  </data>
+  <data name="EditNoticeFile" xml:space="preserve">
+    <value>알림 파일 편집</value>
+  </data>
+  <data name="EditPage" xml:space="preserve">
+    <value>페이지 편집</value>
+  </data>
+  <data name="EditThisPage" xml:space="preserve">
+    <value>이 페이지 편집</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>편집</value>
+  </data>
+  <data name="EmailSaved" xml:space="preserve">
+    <value>이메일 저장됨</value>
+  </data>
+  <data name="EmailsNotEqual" xml:space="preserve">
+    <value>이메일이 일치하지 않음</value>
+  </data>
+  <data name="EnterTitleAndUrl" xml:space="preserve">
+    <value>제목과 URL를 넣어야합니다</value>
+  </data>
+  <data name="ErrorDeletingFile" xml:space="preserve">
+    <value>Error deleting File</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Escape" xml:space="preserve">
+    <value>Escape</value>
+  </data>
+  <data name="ExternalLink" xml:space="preserve">
+    <value>외부 링크</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>파일이 이미 존재</value>
+  </data>
+  <data name="FileLink" xml:space="preserve">
+    <value>로컬 파일 링크</value>
+  </data>
+  <data name="FileManagement" xml:space="preserve">
+    <value>파일 관리자 (새 창)</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>파일이 없습니다</value>
+  </data>
+  <data name="FileSaved" xml:space="preserve">
+    <value>파일 저장됨</value>
+  </data>
+  <data name="FilesDiskUsage" xml:space="preserve">
+    <value>파일 디스크 사용량</value>
+  </data>
+  <data name="FileTooBig" xml:space="preserve">
+    <value>파일이 너무 큽니다</value>
+  </data>
+  <data name="FileVoid" xml:space="preserve">
+    <value>파일이름이 void입니다</value>
+  </data>
+  <data name="FooterFile" xml:space="preserve">
+    <value>꼬릿말 파일</value>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>숨김</value>
+  </data>
+  <data name="FullView" xml:space="preserve">
+    <value>전체보기 (새 창)</value>
+  </data>
+  <data name="H1" xml:space="preserve">
+    <value>H1</value>
+  </data>
+  <data name="H2" xml:space="preserve">
+    <value>H2</value>
+  </data>
+  <data name="H3" xml:space="preserve">
+    <value>H3</value>
+  </data>
+  <data name="H4" xml:space="preserve">
+    <value>H4 (use sparingly)</value>
+  </data>
+  <data name="HeaderFile" xml:space="preserve">
+    <value>Header File</value>
+  </data>
+  <data name="HideBreadcrumbsTrail" xml:space="preserve">
+    <value>Click here to hide the Breadcrumbs Trail</value>
+  </data>
+  <data name="HidePreview" xml:space="preserve">
+    <value>Hide Preview</value>
+  </data>
+  <data name="HideShow" xml:space="preserve">
+    <value>숨김/보이기</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>히스토리</value>
+  </data>
+  <data name="HistoryTitle" xml:space="preserve">
+    <value>페이지 히스토리</value>
+  </data>
+  <data name="HtmlHeadFile" xml:space="preserve">
+    <value>HTML 헤더 파일</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>이미지</value>
+  </data>
+  <data name="ImageAuto" xml:space="preserve">
+    <value>이미지 - 자동정렬</value>
+  </data>
+  <data name="ImageBigUrl" xml:space="preserve">
+    <value>큰 이미지 URL/링크 URL (옵션)</value>
+  </data>
+  <data name="ImageInline" xml:space="preserve">
+    <value>이미지 - 인라인 (경계없음))</value>
+  </data>
+  <data name="ImageLeft" xml:space="preserve">
+    <value>이미지 - 왼쪽 정렬</value>
+  </data>
+  <data name="ImageRight" xml:space="preserve">
+    <value>이미지 - 오른쪽 정렬</value>
+  </data>
+  <data name="ImageTitle" xml:space="preserve">
+    <value>이미지 제목</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>Image URL</value>
+  </data>
+  <data name="InactiveUsers" xml:space="preserve">
+    <value>비활성화</value>
+    <comment>Referred to the count of inactive users, for example Users: 8 (3 inactive)</comment>
+  </data>
+  <data name="InsertSnippet" xml:space="preserve">
+    <value>스니퍼 삽입</value>
+  </data>
+  <data name="InvalidBackupNumber" xml:space="preserve">
+    <value>유효하지 않은 숫자: 0과 같거나 커야합니다 (빈칸으로 두면 자동 백업삭제가 비활성화됨) </value>
+  </data>
+  <data name="InvalidCacheCutSize" xml:space="preserve">
+    <value>유효하지 않은 캐시 자르기 크기:0보다 크고 캐시크기보다 작은 정수</value>
+  </data>
+  <data name="InvalidCacheSize" xml:space="preserve">
+    <value>유효하지 않은 캐시 크기: 0보다 큰 정수</value>
+  </data>
+  <data name="InvalidCategoryName" xml:space="preserve">
+    <value>유효하지 않은 분류 이름</value>
+  </data>
+  <data name="InvalidContactEmail" xml:space="preserve">
+    <value>유효하지 않은 이메일</value>
+  </data>
+  <data name="InvalidDateTimeFormat" xml:space="preserve">
+    <value>유효하지 않은 날짜/시간 형식:  .NET 패턴이어야합니다</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>유효하지 않은 이메일</value>
+  </data>
+  <data name="InvalidFileAccessTries" xml:space="preserve">
+    <value>유효하지 않은 파일 접근시도 수: 0보다 큰 정수</value>
+  </data>
+  <data name="InvalidFileAccessTryDelay" xml:space="preserve">
+    <value>유효하지 않은 파일 접근 연기: 0보다 큰 정수</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>유효하지 않은 파일유형</value>
+  </data>
+  <data name="InvalidMainUrl" xml:space="preserve">
+    <value>유효하지 않은 메인 URL: / 로 끝나는 완전한 URL</value>
+  </data>
+  <data name="InvalidMaxFileSize" xml:space="preserve">
+    <value>유효하지 않은 최대 파일 크기: 0보다 크고 20,480 KB 보다 작은값</value>
+  </data>
+  <data name="InvalidMaxLogSize" xml:space="preserve">
+    <value>유효하지 않은 최대 로그 크기: 8보다 크고 10,240 KB 보다 작은값</value>
+  </data>
+  <data name="InvalidNavPath" xml:space="preserve">
+    <value>Invalid Navigation Path: at least 2 Pages must be specified</value>
+  </data>
+  <data name="InvalidNavPathName" xml:space="preserve">
+    <value>Invalid Navigation Path Name</value>
+  </data>
+  <data name="InvalidPageName" xml:space="preserve">
+    <value>Invalid Page Name</value>
+  </data>
+  <data name="InvalidPageTitle" xml:space="preserve">
+    <value>유효하지 않은 페이지 제목</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>유효하지 않은 비밀번호</value>
+  </data>
+  <data name="InvalidPort" xml:space="preserve">
+    <value>유효하지 않은 포트(1 ~ 65535)</value>
+  </data>
+  <data name="InvalidSenderEmail" xml:space="preserve">
+    <value>유효하지 않은 발송메일</value>
+  </data>
+  <data name="InvalidSmtpServer" xml:space="preserve">
+    <value>유효하지 않은 SMTP 서버</value>
+  </data>
+  <data name="InvalidSnippetName" xml:space="preserve">
+    <value>유효하지 않은 스니퍼 이름</value>
+  </data>
+  <data name="InvalidUsername" xml:space="preserve">
+    <value>유효하지 않은 사용자이름: 4글자이상,  'admin' 이나 'guest', 숫자, 공백, 점은 허용하지 않음.</value>
+  </data>
+  <data name="InvalidWikiTitle" xml:space="preserve">
+    <value>유효하지 않은 위키 제목: 빈칸이거나 캐리지 리턴 또는 라인 피드문자가 포함되지 않아야함</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>이탤릭체</value>
+  </data>
+  <data name="LastModifiedPage" xml:space="preserve">
+    <value>지난 수정 페이지</value>
+  </data>
+  <data name="LastMonth" xml:space="preserve">
+    <value>지난 날</value>
+  </data>
+  <data name="LatestUser" xml:space="preserve">
+    <value>최신 사용자</value>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>줄 바꿈</value>
+  </data>
+  <data name="LinkTitle" xml:space="preserve">
+    <value>링크 제목</value>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>링크 URL</value>
+  </data>
+  <data name="LocatedIn" xml:space="preserve">
+    <value>위치함</value>
+  </data>
+  <data name="LogDiskUsage" xml:space="preserve">
+    <value>디스크 공간 사용 로그</value>
+  </data>
+  <data name="LoggedAsAdmin" xml:space="preserve">
+    <value>현재 빌트인 관리자로 로그인되어 프로파일설정이 불가합니다.</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>로그인</value>
+  </data>
+  <data name="LoginNoticeFile" xml:space="preserve">
+    <value>로그인 알림 파일</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>로그인/로그아웃</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>로그아웃</value>
+  </data>
+  <data name="LostPassword" xml:space="preserve">
+    <value>비밀번호를 잊으셨나요?</value>
+  </data>
+  <data name="MassEmailSent" xml:space="preserve">
+    <value>대량 메일전송 (시간이 소요될 수 있습니다)</value>
+  </data>
+  <data name="MayBeInaccurate" xml:space="preserve">
+    <value>부정확할 수 있음</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>메세지</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>Message sent</value>
+  </data>
+  <data name="MessageTitle" xml:space="preserve">
+    <value>Write Message</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>수정됨</value>
+  </data>
+  <data name="NavPathAlreadyExists" xml:space="preserve">
+    <value>네비게이션 경로가 이미 존재함</value>
+  </data>
+  <data name="NavPathDeleted" xml:space="preserve">
+    <value>네비게이션 경로가 삭제됨</value>
+  </data>
+  <data name="NavPathNotFound" xml:space="preserve">
+    <value>네비게이션 경로가 발견되지 않았습니다</value>
+  </data>
+  <data name="NavPathSaved" xml:space="preserve">
+    <value>네비게이션 경로가 저장됨</value>
+  </data>
+  <data name="NavPathTitle" xml:space="preserve">
+    <value>네비게이션 경로</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>분류없음</value>
+    <comment>It means 'not categorized'</comment>
+  </data>
+  <data name="NewerRevision" xml:space="preserve">
+    <value>새로운 리비전</value>
+  </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>새로운 버전이 발견됨</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>다음 페이지</value>
+  </data>
+  <data name="NoFiles" xml:space="preserve">
+    <value>파일 없음</value>
+  </data>
+  <data name="NoMessages" xml:space="preserve">
+    <value>이 페이지에 메세지가 없음. 첫 등록하세요!</value>
+  </data>
+  <data name="NoPagesInThisCategory" xml:space="preserve">
+    <value>이 분류의 페이지 없음</value>
+  </data>
+  <data name="NoWiki" xml:space="preserve">
+    <value>NoWiki tag</value>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>오래됨</value>
+  </data>
+  <data name="OlderRevision" xml:space="preserve">
+    <value>오래된 리비전</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>온라인 사용자</value>
+  </data>
+  <data name="OnlyDllFilesAllowed" xml:space="preserve">
+    <value>오직 DLL 파일만 허용</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>오퍼레이션</value>
+  </data>
+  <data name="OperationTitle" xml:space="preserve">
+    <value>오퍼레이션</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>또는 </value>
+    <comment>It means 'you can do this OR this"</comment>
+  </data>
+  <data name="PageAlreadyExists" xml:space="preserve">
+    <value>페이지가 이미 존재합니다</value>
+  </data>
+  <data name="PageBackupsDeleted" xml:space="preserve">
+    <value>페이지 백업 삭제됨</value>
+  </data>
+  <data name="PageDeleted" xml:space="preserve">
+    <value>페이지 삭제됨</value>
+  </data>
+  <data name="PageDiscussionCleared" xml:space="preserve">
+    <value>페이지 토론 삭제됨</value>
+  </data>
+  <data name="PageDoesNotExistInProvider" xml:space="preserve">
+    <value>##PAGENAME## 페이지가 현재 프로바이더에 존재하지 않습니다</value>
+  </data>
+  <data name="PageFooterFile" xml:space="preserve">
+    <value>페이지 꼬릿말 파일</value>
+  </data>
+  <data name="PageHeaderFile" xml:space="preserve">
+    <value>페이지 헤더파일</value>
+  </data>
+  <data name="PageHistory" xml:space="preserve">
+    <value>페이지 히스토리</value>
+  </data>
+  <data name="PageLink" xml:space="preserve">
+    <value>페이지 링크</value>
+  </data>
+  <data name="PageLocked" xml:space="preserve">
+    <value>이 페이지를 잠금</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>페이지가 발견되지 않음</value>
+  </data>
+  <data name="PageNotFoundTitle" xml:space="preserve">
+    <value>페이지가 발견되지 않음</value>
+  </data>
+  <data name="PagePublic" xml:space="preserve">
+    <value>이 페이지는 public입니다</value>
+  </data>
+  <data name="PageRenamed" xml:space="preserve">
+    <value>페이지 이름바꾸기</value>
+  </data>
+  <data name="PageRevision" xml:space="preserve">
+    <value>페이지 리비전</value>
+  </data>
+  <data name="PageSaved" xml:space="preserve">
+    <value>페이지 저장됨</value>
+  </data>
+  <data name="PagesDiskUsage" xml:space="preserve">
+    <value>페이지 디스크 사용량</value>
+  </data>
+  <data name="PageSetLocked" xml:space="preserve">
+    <value>페이지 잠금 설정</value>
+  </data>
+  <data name="PageSetNormal" xml:space="preserve">
+    <value>일반 페이지로 설정</value>
+  </data>
+  <data name="PageSetPublic" xml:space="preserve">
+    <value>Public 페이지로 설정</value>
+  </data>
+  <data name="PagesOfCategory" xml:space="preserve">
+    <value>분류의 페이지</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>페이지 제목</value>
+  </data>
+  <data name="PageUpdates" xml:space="preserve">
+    <value>페이지 업데이트</value>
+  </data>
+  <data name="PasswordResetMessageFile" xml:space="preserve">
+    <value>비밀번호 리셋 메세지 파일</value>
+  </data>
+  <data name="PasswordSaved" xml:space="preserve">
+    <value>비밀번호 저장됨</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>비밀번호가 일치하지 않습니다</value>
+  </data>
+  <data name="Paths" xml:space="preserve">
+    <value>Paths</value>
+  </data>
+  <data name="PerformASearch" xml:space="preserve">
+    <value>perform a search</value>
+  </data>
+  <data name="PleaseSelectValidBackup" xml:space="preserve">
+    <value>유효한 백업을 선택하세요</value>
+  </data>
+  <data name="Posted" xml:space="preserve">
+    <value>포스트됨</value>
+  </data>
+  <data name="PostMessage" xml:space="preserve">
+    <value>메세지 포스트</value>
+  </data>
+  <data name="PostTitle" xml:space="preserve">
+    <value>메세지 포스트</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>미리보기</value>
+  </data>
+  <data name="PreviewCreated" xml:space="preserve">
+    <value>미리보기 생성됨, 이 페이지의 아래를 보세요</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>이전 페이지</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>프린트</value>
+  </data>
+  <data name="PrinterFriendlyVersion" xml:space="preserve">
+    <value>프린터 친화적 버전</value>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>사용자 프로파일</value>
+  </data>
+  <data name="ProviderConfigurationSaved" xml:space="preserve">
+    <value>프로바이더 설정데이터 저장됨</value>
+  </data>
+  <data name="ProviderDisabled" xml:space="preserve">
+    <value>프로바이더 비활성화</value>
+  </data>
+  <data name="ProviderEnabled" xml:space="preserve">
+    <value>프로바이더 활성화</value>
+  </data>
+  <data name="ProviderNotFound" xml:space="preserve">
+    <value>프로바이더가 발견되지 않음</value>
+  </data>
+  <data name="ProviderRejectedConfiguration" xml:space="preserve">
+    <value>프로바이더가 설정 데이터에서 거부됨</value>
+  </data>
+  <data name="ProviderUnloaded" xml:space="preserve">
+    <value>프로바이더 언로드됨</value>
+  </data>
+  <data name="RecentPageUpdates" xml:space="preserve">
+    <value>Recent Page updates</value>
+  </data>
+  <data name="RedirectedFrom" xml:space="preserve">
+    <value>Redirected from</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>계정 생성</value>
+  </data>
+  <data name="RegistrationDisabled" xml:space="preserve">
+    <value>계정생성 비활성화</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>응답</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>필수항목이 없음</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>리비전</value>
+  </data>
+  <data name="RevisionComment" xml:space="preserve">
+    <value>코멘트</value>
+  </data>
+  <data name="RollbackCompleted" xml:space="preserve">
+    <value>롤백 완료</value>
+  </data>
+  <data name="RssForTheWiki" xml:space="preserve">
+    <value>전체 위키 알림 업데이트 (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisCategory" xml:space="preserve">
+    <value>이 분류 알림 업데이트(RSS 2.0)</value>
+  </data>
+  <data name="RssForThisDiscussion" xml:space="preserve">
+    <value>이 토론 알림 업데이트 (RSS 2.0)</value>
+  </data>
+  <data name="RssForThisPage" xml:space="preserve">
+    <value>이 페이지 알림 업데이트 (RSS 2.0)</value>
+  </data>
+  <data name="ScriptDetected" xml:space="preserve">
+    <value>허용되지 않는 스크립트 태그가 컨텐츠에서 발견</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>Search Engine</value>
+  </data>
+  <data name="SendAMessage" xml:space="preserve">
+    <value>Send a Message</value>
+  </data>
+  <data name="ServerUptime" xml:space="preserve">
+    <value>서버 실행시간</value>
+  </data>
+  <data name="SidebarFile" xml:space="preserve">
+    <value>사이드바 파일</value>
+  </data>
+  <data name="Smaller" xml:space="preserve">
+    <value>작게</value>
+  </data>
+  <data name="SnippetAlreadyExists" xml:space="preserve">
+    <value>스니퍼가 이미 존재합니다</value>
+  </data>
+  <data name="SnippetDeleted" xml:space="preserve">
+    <value>스니퍼 삭제</value>
+  </data>
+  <data name="SnippetNotFound" xml:space="preserve">
+    <value>스니퍼가 발견되지 않았습니다</value>
+  </data>
+  <data name="SnippetSaved" xml:space="preserve">
+    <value>스니퍼 저장됨</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>시간/날짜로 정렬</value>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>제목으로 정렬</value>
+  </data>
+  <data name="SortByUser" xml:space="preserve">
+    <value>사용자로 정렬</value>
+  </data>
+  <data name="SpecialTags" xml:space="preserve">
+    <value>스페셜 태그</value>
+  </data>
+  <data name="Striked" xml:space="preserve">
+    <value>강조</value>
+  </data>
+  <data name="SubjectAndBodyNeeded" xml:space="preserve">
+    <value>메세지의 제목과 본문을 입력해야만 합니다.</value>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>Subscript</value>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>Superscript</value>
+  </data>
+  <data name="TableOfContents" xml:space="preserve">
+    <value>컨텐츠 테이블</value>
+  </data>
+  <data name="TempDiskUsage" xml:space="preserve">
+    <value>임시파일 디스크 사용량</value>
+  </data>
+  <data name="TextareaSize" xml:space="preserve">
+    <value>텍스트에어리어 크기</value>
+  </data>
+  <data name="ThePageHasBeenDeletedBy" xml:space="preserve">
+    <value>페이지 삭제됨</value>
+  </data>
+  <data name="ThePageHasBeenRenamedBy" xml:space="preserve">
+    <value>페이지 이름변경됨</value>
+  </data>
+  <data name="ThePageHasBeenRolledBackBy" xml:space="preserve">
+    <value>페이지 롤백됨</value>
+  </data>
+  <data name="ThePageHasBeenUpdatedBy" xml:space="preserve">
+    <value>페이지 업데이트됨</value>
+  </data>
+  <data name="ThisIsAPreview" xml:space="preserve">
+    <value>&lt;b&gt;경고&lt;/b&gt;: 단지 미리보기일 뿐입니다! 저장을 하시려면 저장버튼을 누르세요!</value>
+  </data>
+  <data name="ThisPageIsLocked" xml:space="preserve">
+    <value>페이지가 잠겼서 관리자만 편집이 가능합니다.</value>
+  </data>
+  <data name="ThisPageRedirectsTo" xml:space="preserve">
+    <value>이 페이지 리다이렉트</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="TotalDiskUsage" xml:space="preserve">
+    <value>총 디스크 사용량</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>타입</value>
+  </data>
+  <data name="UnallowedFileType" xml:space="preserve">
+    <value>업로드된 파일은 허용되는 유형이 아닙니다</value>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>분류되지 않음</value>
+  </data>
+  <data name="UncategorizedPages" xml:space="preserve">
+    <value>분류되지 않은 페이지</value>
+  </data>
+  <data name="Underlined" xml:space="preserve">
+    <value>밑줄침</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>파일 관리</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>사용자</value>
+  </data>
+  <data name="UserAccountSaved" xml:space="preserve">
+    <value>사용자 계정 저장됨</value>
+  </data>
+  <data name="UserActivated" xml:space="preserve">
+    <value>사용자 활성화됨</value>
+  </data>
+  <data name="UserCount" xml:space="preserve">
+    <value>사용자 수</value>
+  </data>
+  <data name="UserDeactivated" xml:space="preserve">
+    <value>사용자 비활성화됨</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>사용자 삭제됨</value>
+  </data>
+  <data name="UsernameAlreadyExists" xml:space="preserve">
+    <value>이미 존재하는 사용자입니다</value>
+  </data>
+  <data name="UsernameIsRequired" xml:space="preserve">
+    <value>SMTP Username is required if you specify a Password</value>
+  </data>
+  <data name="UserPromoted" xml:space="preserve">
+    <value>사용자가 관리자로 승격됨</value>
+  </data>
+  <data name="VersionCheckError" xml:space="preserve">
+    <value>복구 버전 정보 에러</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>보기</value>
+  </data>
+  <data name="ViewBreadcrumbsTrail" xml:space="preserve">
+    <value>완료된 Breadcrumbs Trail 보려면 여기를 클릭</value>
+  </data>
+  <data name="ViewingFile" xml:space="preserve">
+    <value>파일 보는중</value>
+  </data>
+  <data name="ViewList" xml:space="preserve">
+    <value>목록 보기</value>
+  </data>
+  <data name="ViewPageCode" xml:space="preserve">
+    <value>View Page Code</value>
+  </data>
+  <data name="ViewTree" xml:space="preserve">
+    <value>트리 보기</value>
+  </data>
+  <data name="WereYouLookingFor" xml:space="preserve">
+    <value>이 페이지중 하나를 찾나요?</value>
+  </data>
+  <data name="WikiUpToDate" xml:space="preserve">
+    <value>최신 위키입니다</value>
+  </data>
+  <data name="WikiVersion" xml:space="preserve">
+    <value>위키 버전</value>
+  </data>
+  <data name="Wizard" xml:space="preserve">
+    <value>설정 마법사</value>
+  </data>
+  <data name="WrongControlText" xml:space="preserve">
+    <value>틀린 컨트롤 텍스트</value>
+  </data>
+  <data name="WrongParameters" xml:space="preserve">
+    <value>틀린 파라미터</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>틀린 비밀번호</value>
+  </data>
+  <data name="WrongUsernamePassword" xml:space="preserve">
+    <value>틀린 사용자이름/비밀번호</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>어제</value>
+  </data>
+  <data name="YouCanAlso" xml:space="preserve">
+    <value>역시 가능합니다</value>
+  </data>
+  <data name="YouMustProvideAFile" xml:space="preserve">
+    <value>파일을 제공해야합니다</value>
+  </data>
+  <data name="CannotRenameItem" xml:space="preserve">
+    <value>선택된 항목이름을 바꿀 수 없습니다</value>
+  </data>
+  <data name="CannotStoreFile" xml:space="preserve">
+    <value>파일을 저장할 수 없습니다</value>
+  </data>
+  <data name="CannotCreateNewDirectory" xml:space="preserve">
+    <value>새 디렉토리를 생성할 수 없습니다</value>
+  </data>
+  <data name="UpLevel" xml:space="preserve">
+    <value>상위버전</value>
+  </data>
+  <data name="LinkTitleOptional" xml:space="preserve">
+    <value>링크 제목 (옵션)</value>
+  </data>
+  <data name="NoSnippets" xml:space="preserve">
+    <value>No 스니퍼</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>첨부파일</value>
+  </data>
+  <data name="ThereAreAttachments" xml:space="preserve">
+    <value>페이지에 첨부된 파일이 있습니다</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="RootNamespace" xml:space="preserve">
+    <value>&lt;root&gt;</value>
+  </data>
+  <data name="CouldNotCreateNamespace" xml:space="preserve">
+    <value>네임스페이스 생성을 할 수 없습니다</value>
+  </data>
+  <data name="InvalidNamespaceName" xml:space="preserve">
+    <value>유효하지 않은 네임스페이스 이름</value>
+  </data>
+  <data name="NamespaceCreated" xml:space="preserve">
+    <value>네임스페이스 생성됨</value>
+  </data>
+  <data name="CouldNotCreateUser" xml:space="preserve">
+    <value>사용자 생성을 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotUpdateUser" xml:space="preserve">
+    <value>사용자 업데이트를 할 수 없습니다</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>사용자 생성됨</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>사용자 업데이트됨</value>
+  </data>
+  <data name="InvalidDisplayName" xml:space="preserve">
+    <value>유효하지 않은  표시 이름</value>
+  </data>
+  <data name="NoSimilarPages" xml:space="preserve">
+    <value>비슷한 이름과 제목의 페이지 없음</value>
+  </data>
+  <data name="SearchStats" xml:space="preserve">
+    <value>&lt;b&gt;{0}&lt;/b&gt;를 통해 수행된 검색 (&lt;b&gt;{1} 문서&lt;/b&gt;, &lt;b&gt;{2} 단어&lt;/b&gt;), 완료됨 &lt;b&gt;{3:N1} 초&lt;/b&gt; 소요 &lt;b&gt;{4} 껼과&lt;/b&gt;.</value>
+  </data>
+  <data name="CouldNotCreateGroup" xml:space="preserve">
+    <value>그룹 생성을 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotUpdateGroup" xml:space="preserve">
+    <value>그룹 업데이트를 할 수 없습니다</value>
+  </data>
+  <data name="GroupCreated" xml:space="preserve">
+    <value>그룹 생성됨</value>
+  </data>
+  <data name="GroupDeleted" xml:space="preserve">
+    <value>그룹 삭제됨</value>
+  </data>
+  <data name="GroupUpdated" xml:space="preserve">
+    <value>그룹 업데이트됨</value>
+  </data>
+  <data name="CouldNotSaveFile" xml:space="preserve">
+    <value>파일저장을 할 수 없습니다</value>
+  </data>
+  <data name="Action_Crt_Dirs" xml:space="preserve">
+    <value>디렉토리 생성</value>
+  </data>
+  <data name="Action_Crt_Pg" xml:space="preserve">
+    <value>페이지 생성</value>
+  </data>
+  <data name="Action_Del_1Attn" xml:space="preserve">
+    <value>첨부파일 삭제</value>
+  </data>
+  <data name="Action_Del_Attn" xml:space="preserve">
+    <value>첨부파일 삭제</value>
+  </data>
+  <data name="Action_Del_Dirs" xml:space="preserve">
+    <value>디렉토리 삭제</value>
+  </data>
+  <data name="Action_Del_Files" xml:space="preserve">
+    <value>파일 삭제</value>
+  </data>
+  <data name="Action_Del_Pg" xml:space="preserve">
+    <value>페이지 삭제</value>
+  </data>
+  <data name="Action_Down_1Attn" xml:space="preserve">
+    <value>첨부파일 다운로드</value>
+  </data>
+  <data name="Action_Down_Attn" xml:space="preserve">
+    <value>첨부파일 다운로드</value>
+  </data>
+  <data name="Action_Down_Files" xml:space="preserve">
+    <value>다운로드 파일</value>
+  </data>
+  <data name="Action_FullControl" xml:space="preserve">
+    <value>전체 컨트롤</value>
+  </data>
+  <data name="Action_List" xml:space="preserve">
+    <value>컨텐츠 목록</value>
+  </data>
+  <data name="Action_Man_1Cat" xml:space="preserve">
+    <value>분류 관리</value>
+  </data>
+  <data name="Action_Man_1Pg" xml:space="preserve">
+    <value>페이지 관리</value>
+  </data>
+  <data name="Action_Man_Acc" xml:space="preserve">
+    <value>Manage User Accounts</value>
+  </data>
+  <data name="Action_Man_Cat" xml:space="preserve">
+    <value>Manage Categories</value>
+  </data>
+  <data name="Action_Man_Conf" xml:space="preserve">
+    <value>설정 관리</value>
+  </data>
+  <data name="Action_Man_Files" xml:space="preserve">
+    <value>파일과 디렉토리 관리</value>
+  </data>
+  <data name="Action_Man_Grp" xml:space="preserve">
+    <value>사용자 계정 관리</value>
+  </data>
+  <data name="Action_Man_MetaFiles" xml:space="preserve">
+    <value>메타파일 관리</value>
+  </data>
+  <data name="Action_Man_NavPath" xml:space="preserve">
+    <value>네비게이션 경로 관리</value>
+  </data>
+  <data name="Action_Man_Ns" xml:space="preserve">
+    <value>네임스페이스 관리</value>
+  </data>
+  <data name="Action_Man_Pg" xml:space="preserve">
+    <value>페이지 관리</value>
+  </data>
+  <data name="Action_Man_PgCat" xml:space="preserve">
+    <value>페이지와 분류 관리</value>
+  </data>
+  <data name="Action_Man_Prov" xml:space="preserve">
+    <value>프로바이더 관리</value>
+  </data>
+  <data name="Action_Man_Snips_Temps" xml:space="preserve">
+    <value>스니퍼와 템플릿 관리</value>
+  </data>
+  <data name="Action_Mod_1Pg" xml:space="preserve">
+    <value>페이지 수정</value>
+  </data>
+  <data name="Action_Mod_Pg" xml:space="preserve">
+    <value>페이지 수정</value>
+  </data>
+  <data name="Action_Rd_1Pg" xml:space="preserve">
+    <value>Read Page</value>
+  </data>
+  <data name="Action_Rd_Pg" xml:space="preserve">
+    <value>Read Pages</value>
+  </data>
+  <data name="Action_Up_1Attn" xml:space="preserve">
+    <value>첨부파일 업로드</value>
+  </data>
+  <data name="Action_Up_Attn" xml:space="preserve">
+    <value>첨부파일 업로드</value>
+  </data>
+  <data name="Action_Up_Files" xml:space="preserve">
+    <value>파일 업로드</value>
+  </data>
+  <data name="GoToMainPage" xml:space="preserve">
+    <value>Go to the Main Page</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>그룹</value>
+  </data>
+  <data name="CouldNotStorePermissions" xml:space="preserve">
+    <value>Could not store permissions</value>
+  </data>
+  <data name="NamespaceSaved" xml:space="preserve">
+    <value>네임스페이스 저장됨</value>
+  </data>
+  <data name="CouldNotDeleteNamespace" xml:space="preserve">
+    <value>네임스페이스 삭제를 할 수 없습니다</value>
+  </data>
+  <data name="NamespaceDeleted" xml:space="preserve">
+    <value>네임스페이스 삭제됨</value>
+  </data>
+  <data name="CouldNotDeletePermissions" xml:space="preserve">
+    <value>페이지 권한 삭제를 할 수 없습니다</value>
+  </data>
+  <data name="GroupCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>그룹이 생성되었지만 권한을 저장할 수 없었습니다</value>
+  </data>
+  <data name="GroupSavedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>그룹이 저장되었지만 예전권한을 삭제할 수 없었습니다</value>
+  </data>
+  <data name="GroupSavedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>그룹이 저장되었지만 새 권한 저장을 할 수 없었습니다</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteGroup" xml:space="preserve">
+    <value>권한이 삭제되었지만 그룹을 삭제할 수 없습니다</value>
+  </data>
+  <data name="CouldNotSetNamespaceDefaultPage" xml:space="preserve">
+    <value>네임스페이스 기본페이지 설정을 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotSetNamespaceTheme" xml:space="preserve">
+    <value>네임스페이스 테마설정을 할 수 없습니다</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotCreateDefaultPage" xml:space="preserve">
+    <value>네임스페이스가 생성되었지만 기본 페이지를 생성할 수 없습니다</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetDefaultPage" xml:space="preserve">
+    <value>네임스페이스가 생성되었지만 기본페이지로 설정할 수 없습니다</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetTheme" xml:space="preserve">
+    <value>네임스페이스가 저장되었지만 테마를 설정할 수 없습니다</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotStoreDefaultPageContent" xml:space="preserve">
+    <value>네임스페이스가 생성되었지만 기본페이지 컨텐츠를 저장할 수 없습니다</value>
+  </data>
+  <data name="UserCreatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>사용자가 생성되었지만 그룹멤버쉽을 저장할 수 없었습니다</value>
+  </data>
+  <data name="UserCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>사용자가 생성되었지만 권한을 저장할 수 없었습니다</value>
+  </data>
+  <data name="UserUpdatedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>사용자가 업데이트 되었지만, 예전 권한을 지울 수 없었습니다</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>사용자가 업데이트 되었지만, 그룹 멤버쉽을 저장할 수 없었습니다</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>User updated, but could not store new Permissions</value>
+  </data>
+  <data name="PermissionsAndGroupMembershipDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>권한과 그룹이 삭제되었지만 사용자을 삭제할 수 없습니다</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>권한이 삭제되었지만 사용자을 삭제할 수 없습니다</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>페이지로 가기</value>
+  </data>
+  <data name="GoToPageDiscussion" xml:space="preserve">
+    <value>페이지 토론으로 가기</value>
+  </data>
+  <data name="GoToPageHistory" xml:space="preserve">
+    <value>페이지 히스토리로 가기</value>
+  </data>
+  <data name="CouldNotRenamePage" xml:space="preserve">
+    <value>페이지 이름바꾸기를 할 수 없습니다</value>
+  </data>
+  <data name="PageRenamedCouldNotCreateShadowPage" xml:space="preserve">
+    <value>페이지 이름을 바꿨지만 새도우 페이지를 생성할 수 없습니다</value>
+  </data>
+  <data name="PageRenamedCouldNotSetShadowPageContent" xml:space="preserve">
+    <value>페이지 이름을 바꿨지만 새도우 페이지의 컨텐츠 설정을 생성할 수 없습니다</value>
+  </data>
+  <data name="AllMessagesDeleted" xml:space="preserve">
+    <value>모든 메세지 삭제</value>
+  </data>
+  <data name="CouldNotDeleteOneOrMoreMessages" xml:space="preserve">
+    <value>Could not delete one or more Messages</value>
+  </data>
+  <data name="CouldNotDeletePage" xml:space="preserve">
+    <value>페이지 삭제를 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotDeletePageBackups" xml:space="preserve">
+    <value>페이지 백업 삭제를 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotRollbackPage" xml:space="preserve">
+    <value>페이지 롤백을 할 수 없습니다</value>
+  </data>
+  <data name="PageRolledBack" xml:space="preserve">
+    <value>페이지 롤백</value>
+  </data>
+  <data name="Action_Man_1Disc" xml:space="preserve">
+    <value>페이지 토론 관리</value>
+  </data>
+  <data name="Action_Pst_1Disc" xml:space="preserve">
+    <value>페이지 토론에 메세지 포스트</value>
+  </data>
+  <data name="Action_Rd_1Disc" xml:space="preserve">
+    <value>Read Page discussion</value>
+  </data>
+  <data name="Action_Man_Disc" xml:space="preserve">
+    <value>페이지 토론 관리</value>
+  </data>
+  <data name="Action_Pst_Disc" xml:space="preserve">
+    <value>페이지 토론에 메세지 포스트</value>
+  </data>
+  <data name="Action_Rd_Disc" xml:space="preserve">
+    <value>Read Page discussions</value>
+  </data>
+  <data name="ViewPageHistory" xml:space="preserve">
+    <value>페이지 편집 히스토리 보기</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>관리자</value>
+  </data>
+  <data name="AdminTools" xml:space="preserve">
+    <value>관리 도구</value>
+  </data>
+  <data name="Administrate" xml:space="preserve">
+    <value>관리</value>
+  </data>
+  <data name="AdministrateThisPage" xml:space="preserve">
+    <value>이 페이지 관리</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permissions</value>
+  </data>
+  <data name="SetPermissionsForThisPage" xml:space="preserve">
+    <value>이 페이지 권한 설정</value>
+  </data>
+  <data name="Rollback" xml:space="preserve">
+    <value>롤백</value>
+  </data>
+  <data name="RollbackThisPage" xml:space="preserve">
+    <value>이전 버전으로 이페이지 롤백</value>
+  </data>
+  <data name="CategoryAlreadyExists" xml:space="preserve">
+    <value>분류가 이미 존재합니다</value>
+  </data>
+  <data name="CategoryCreated" xml:space="preserve">
+    <value>분류 생성됨</value>
+  </data>
+  <data name="CouldNotCreateCategory" xml:space="preserve">
+    <value>분류 생성을 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotDeleteCategory" xml:space="preserve">
+    <value>분류 삭제를 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotMergeCategories" xml:space="preserve">
+    <value>분류 병합을 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotRenameCategory" xml:space="preserve">
+    <value>분류 이름바꾸기를 할 수 없습니다</value>
+  </data>
+  <data name="GoToCategory" xml:space="preserve">
+    <value>Go to Category</value>
+  </data>
+  <data name="CouldNotCreateSnippet" xml:space="preserve">
+    <value>스니퍼 생성을 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotDeleteSnippet" xml:space="preserve">
+    <value>스니퍼 삭제를 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotSaveSnippet" xml:space="preserve">
+    <value>스니퍼 저장을 할 수 없습니다</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>파라미터</value>
+  </data>
+  <data name="SnippetCreated" xml:space="preserve">
+    <value>스니퍼 생성</value>
+  </data>
+  <data name="ViewChanges" xml:space="preserve">
+    <value>변경내용 보기</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>드래프트</value>
+  </data>
+  <data name="CouldNotApproveDraft" xml:space="preserve">
+    <value>드래프트 승인을 할 수 없습니다</value>
+  </data>
+  <data name="DraftApproved" xml:space="preserve">
+    <value>드래프트 승인후 저장됨</value>
+  </data>
+  <data name="DraftRejected" xml:space="preserve">
+    <value>드래프트 거절후 취소됨</value>
+  </data>
+  <data name="ClickToEnableEmailNotifications" xml:space="preserve">
+    <value>이 페이지의 이메일알림을 활성화하려면 클릭하세요</value>
+  </data>
+  <data name="EmailNotificationsAreActive" xml:space="preserve">
+    <value>이 페이지의 이메일알림이 활성화되어있습니다 - 비활성화 클릭</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="CouldNotCreateNavPath" xml:space="preserve">
+    <value>네이게이션 경로 생성을 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotDeleteNavPath" xml:space="preserve">
+    <value>네비게이션 경로 삭제를 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotSaveNavPath" xml:space="preserve">
+    <value>네비게이션 경로 저장을 할 수 없습니다</value>
+  </data>
+  <data name="NavPathCreated" xml:space="preserve">
+    <value>네비게이션 경로가 생성됨</value>
+  </data>
+  <data name="TheNavPathMustContain" xml:space="preserve">
+    <value>네비게이션 경로는 적어도 한페이지를 포함해야합니다</value>
+  </data>
+  <data name="DefaultProvidersSaved" xml:space="preserve">
+    <value>기본 프로바이더 저장됨</value>
+  </data>
+  <data name="CouldNotDeleteDll" xml:space="preserve">
+    <value>DLL 삭제를  할 수 없습니다</value>
+  </data>
+  <data name="DllAlreadyExists" xml:space="preserve">
+    <value>DLL 이 이미 존재합니다</value>
+  </data>
+  <data name="DllDeleted" xml:space="preserve">
+    <value>DLL 삭제됨</value>
+  </data>
+  <data name="LoadedProviders" xml:space="preserve">
+    <value>### Providers 로드됨</value>
+  </data>
+  <data name="VoidOrInvalidFile" xml:space="preserve">
+    <value>Void 또는 유효하지않은 파일</value>
+  </data>
+  <data name="DataCopied" xml:space="preserve">
+    <value>데이터 복사됨, web.config 파일에 active Settings Storage Provider 를 변경해주세요</value>
+  </data>
+  <data name="DataMigrated" xml:space="preserve">
+    <value>데이터 마이그레이션 됨, 웹어플리케이션을 재시작해주세요</value>
+  </data>
+  <data name="NoConfigurationRequired" xml:space="preserve">
+    <value>프로바이더에 필요한 설정 없음</value>
+  </data>
+  <data name="NotificationsStatusSaved" xml:space="preserve">
+    <value>알림 상태 저장됨</value>
+  </data>
+  <data name="Action_Man_Perms" xml:space="preserve">
+    <value>권한 관리</value>
+  </data>
+  <data name="ApproveRejectDraft" xml:space="preserve">
+    <value>승인/거절 드래프트</value>
+  </data>
+  <data name="AMessageHasBeenDeletedBy" xml:space="preserve">
+    <value>제목 "##SUBJECT##" 삭제됨</value>
+  </data>
+  <data name="AMessageHasBeenEditedBy" xml:space="preserve">
+    <value>A message with subject "##SUBJECT##" has been edited by</value>
+  </data>
+  <data name="AMessageHasBeenPostedBy" xml:space="preserve">
+    <value>A message with subject "##SUBJECT##" has been posted by</value>
+  </data>
+  <data name="Discussion" xml:space="preserve">
+    <value>토론</value>
+  </data>
+  <data name="DiscussionUpdates" xml:space="preserve">
+    <value>토론 업데이트</value>
+  </data>
+  <data name="RecentDiscussionUpdates" xml:space="preserve">
+    <value>Recent Discussion Updates</value>
+  </data>
+  <data name="AMessageWasSentCheckInbox" xml:space="preserve">
+    <value>메세지는 메일로 전송됩니다, 받은 편지함을 확인하세요.</value>
+  </data>
+  <data name="NewPasswordSavedPleaseLogin" xml:space="preserve">
+    <value>새 비밀번호가 저장되었습니다, &lt;a href="Login.aspx" title="Login"&gt;로그인&lt;/a&gt;하세요</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>비밀번호 리셋</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>생성자</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>생성일</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>수정자</value>
+  </data>
+  <data name="ModifiedOn" xml:space="preserve">
+    <value>수정일</value>
+  </data>
+  <data name="CouldNotCreateTemplate" xml:space="preserve">
+    <value>템플릿 생성을 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotDeleteTemplate" xml:space="preserve">
+    <value>템플릿 삭제를 할 수 없습니다</value>
+  </data>
+  <data name="CouldNotSaveTemplate" xml:space="preserve">
+    <value>템플릿 저장을 할 수 없습니다</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>스니퍼</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>템플릿</value>
+  </data>
+  <data name="TemplateCreated" xml:space="preserve">
+    <value>템플릿 생성됨</value>
+  </data>
+  <data name="TemplateDeleted" xml:space="preserve">
+    <value>템플릿 삭제됨</value>
+  </data>
+  <data name="TemplateSaved" xml:space="preserve">
+    <value>템플릿 저장됨</value>
+  </data>
+  <data name="SelectTemplate" xml:space="preserve">
+    <value>Select Template...</value>
+  </data>
+  <data name="CouldNotRenameNamespace" xml:space="preserve">
+    <value>네임스페이스 이름바꾸기를 할 수 없습니다</value>
+  </data>
+  <data name="NamespaceRenamed" xml:space="preserve">
+    <value>네임스페이스 이름 변경됨</value>
+  </data>
+  <data name="GoToYourProfile" xml:space="preserve">
+    <value>사용자 프로파일로 가기</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>게스트</value>
+  </data>
+  <data name="SelectYourLanguage" xml:space="preserve">
+    <value>Select your language</value>
+  </data>
+  <data name="PreferencesSaved" xml:space="preserve">
+    <value>선호도 저장됨</value>
+  </data>
+  <data name="Corrupted" xml:space="preserve">
+    <value>오류</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>예</value>
+  </data>
+  <data name="CreateThisPage" xml:space="preserve">
+    <value>이 페이지 생성</value>
+  </data>
+  <data name="UserDeletedMessage" xml:space="preserve">
+    <value>##USER##  ##PAGE## 토론에 메세지 삭제.</value>
+  </data>
+  <data name="UserDeletedPage" xml:space="preserve">
+    <value>##USER##  ##PAGE## 삭제.</value>
+  </data>
+  <data name="UserEditedMessage" xml:space="preserve">
+    <value>##USER##  ##PAGE## 토론에 메세지 편집.</value>
+  </data>
+  <data name="UserPostedMessage" xml:space="preserve">
+    <value>##USER##  ##PAGE## 토론에 메세지 포스트.</value>
+  </data>
+  <data name="UserRenamedPage" xml:space="preserve">
+    <value>##USER##  ##PAGE## 이름바꾸기.</value>
+  </data>
+  <data name="UserRolledBackPage" xml:space="preserve">
+    <value>##USER##  ##PAGE## 롤백.</value>
+  </data>
+  <data name="UserUpdatedPage" xml:space="preserve">
+    <value>##USER##  ##PAGE## 업데이트.</value>
+  </data>
+  <data name="CouldNotSaveDisplayName" xml:space="preserve">
+    <value>표시이름 저장을 할 수 없습니다</value>
+  </data>
+  <data name="DisplayNameSaved" xml:space="preserve">
+    <value>표시이름 저장됨</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>사용자 상세</value>
+  </data>
+  <data name="CodeEscaped" xml:space="preserve">
+    <value>이스케이프된 블록 코드</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>수평 자</value>
+  </data>
+  <data name="Snippets" xml:space="preserve">
+    <value>스니퍼</value>
+  </data>
+  <data name="Symbols" xml:space="preserve">
+    <value>스페셜 심볼</value>
+  </data>
+  <data name="WrapperBox" xml:space="preserve">
+    <value>래퍼 박스</value>
+  </data>
+  <data name="RssForThisCategoryDiscussion" xml:space="preserve">
+    <value>이 분류 토론 알림 업데이트 (RSS 2.0)</value>
+  </data>
+  <data name="DiscussionsRss" xml:space="preserve">
+    <value>RSS 토론</value>
+  </data>
+  <data name="CouldNotMigratePage" xml:space="preserve">
+    <value>페이지 마이그레이션을 할 수 없습니다</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>에러</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>새 버전:</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>최신</value>
+  </data>
+  <data name="SelectAndDelete" xml:space="preserve">
+    <value>Select and delete</value>
+  </data>
+  <data name="NoBr" xml:space="preserve">
+    <value>NoBR 태그</value>
+  </data>
+  <data name="LinkToThisSection" xml:space="preserve">
+    <value>Link to this Section</value>
+  </data>
+  <data name="OrderedList" xml:space="preserve">
+    <value>정렬된 리스트</value>
+  </data>
+  <data name="UnorderedList" xml:space="preserve">
+    <value>정렬되지 않은 목록</value>
+  </data>
+  <data name="InvalidFileName" xml:space="preserve">
+    <value>유효하지 않은 파일 이름</value>
+  </data>
+  <data name="BulkRebindCompleted" xml:space="preserve">
+    <value>대량 리바인드 완료</value>
+  </data>
+  <data name="NoCategories" xml:space="preserve">
+    <value>선택된 분류 없음</value>
+  </data>
+  <data name="NoPages" xml:space="preserve">
+    <value>리바인드할 페이지 없음</value>
+  </data>
+  <data name="BulkMigrationCompleted" xml:space="preserve">
+    <value>대량 마이그레이션 완료</value>
+  </data>
+  <data name="BulkMigrationCompletedWithErrors" xml:space="preserve">
+    <value>에러와 함께 대량 마이그레이션 완료, 로그를 확인하세요</value>
+  </data>
+  <data name="ProvidersUpdated" xml:space="preserve">
+    <value>프로바이더 업데이트됨, 위키를 재시작하세요 (관리자 홈 탭)</value>
+  </data>
+  <data name="NoProvidersToUpdate" xml:space="preserve">
+    <value>업데이트할 프로바이더 없음</value>
+  </data>
+  <data name="NoPagesToMigrate" xml:space="preserve">
+    <value>마이그레이션 할 페이지 없음</value>
+  </data>
+  <data name="Formatted" xml:space="preserve">
+    <value>형식</value>
+  </data>
+  <data name="NAccountsDeleted" xml:space="preserve">
+    <value>$ 계정 삭제됨</value>
+    <comment>As in "3 accounts deleted"</comment>
+  </data>
+  <data name="AutoUpdateAvailable" xml:space="preserve">
+    <value>자동업데이트 사용가능</value>
+  </data>
+  <data name="ChangeComment" xml:space="preserve">
+    <value>코멘트 변경</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>메타 설명</value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>메타 키워드</value>
+  </data>
+  <data name="AnchorTitle2" xml:space="preserve">
+    <value>새 앵커나 존재하는 앵커의 링크를 삽입하세요</value>
+  </data>
+  <data name="BoldTitle" xml:space="preserve">
+    <value>선택된 텍스트 굵게</value>
+  </data>
+  <data name="CodeEscapedTitle" xml:space="preserve">
+    <value>선택된 텍스트를 블록 코드로 설정</value>
+  </data>
+  <data name="CodeInlineTitle" xml:space="preserve">
+    <value>선택된 텍스트를 인라인 코드로 설정</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>선택된 텍스트를 코멘트로 설정 (렌더링된 페이지 출력에서 숨김)</value>
+  </data>
+  <data name="EscapeTitle" xml:space="preserve">
+    <value>모든 위키-, HTML-관련 문자 '이스케이프' 블록에 선택된 문자 래핑</value>
+  </data>
+  <data name="ExternalLinkTitle" xml:space="preserve">
+    <value>웹사이트나 이메일 링크 삽입address</value>
+  </data>
+  <data name="FileLinkTitle" xml:space="preserve">
+    <value>파일또는 첨부파일 링크 삽입</value>
+  </data>
+  <data name="H1Title" xml:space="preserve">
+    <value>레벨 1 헤더로 선택된 텍스트 설정</value>
+  </data>
+  <data name="H2Title" xml:space="preserve">
+    <value>레벨 2 헤더로 선택된 텍스트 설정</value>
+  </data>
+  <data name="H3Title" xml:space="preserve">
+    <value>레벨 3 헤더로 선택된 텍스트 설정</value>
+  </data>
+  <data name="H4Title" xml:space="preserve">
+    <value>레벨 4 헤더로 선택된 텍스트 설정</value>
+  </data>
+  <data name="HRTitle" xml:space="preserve">
+    <value>수평 자 삽입(구분자)</value>
+  </data>
+  <data name="ImageTitle2" xml:space="preserve">
+    <value>Insert a picture in the page</value>
+  </data>
+  <data name="ItalicTitle" xml:space="preserve">
+    <value>선택된 문자를 이탤릭체로</value>
+  </data>
+  <data name="LineBreakTitle" xml:space="preserve">
+    <value>줄 바꿈 삽입</value>
+  </data>
+  <data name="NoBrTitle" xml:space="preserve">
+    <value>줄바꿈을 무시하는 'nobr' 블록에 선택된 텍스트 래핑</value>
+  </data>
+  <data name="NoWikiTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'nowiki' block, that ignores WikiMarkup</value>
+  </data>
+  <data name="OrderedListTitle" xml:space="preserve">
+    <value>정렬리스트를 삽입하거나 정렬리스트에 선택문자를 래핑 (1, 2, 3, ...)</value>
+  </data>
+  <data name="PageLinkTitle" xml:space="preserve">
+    <value>위키페이지에 링크 삽입</value>
+  </data>
+  <data name="SnippetsTitle" xml:space="preserve">
+    <value>존재하는 스니퍼 보고 페이지에 삽입</value>
+  </data>
+  <data name="SpecialTagsTitle" xml:space="preserve">
+    <value>스페셜 태그 보고 페이지에 삽입</value>
+  </data>
+  <data name="StrikedTitle" xml:space="preserve">
+    <value>선택된 텍스트를 강조</value>
+  </data>
+  <data name="SubscriptTitle" xml:space="preserve">
+    <value>Set selected text as subscript</value>
+  </data>
+  <data name="SuperscriptTitle" xml:space="preserve">
+    <value>선택된 텍스트를 슈퍼스크립트로 설정</value>
+  </data>
+  <data name="SymbolsTitle" xml:space="preserve">
+    <value>보기 후 스페셜 심볼삽입</value>
+  </data>
+  <data name="UnderlinedTitle" xml:space="preserve">
+    <value>선택된 텍스트 밑줄</value>
+  </data>
+  <data name="UnorderedListTitle" xml:space="preserve">
+    <value>정렬되지 않은 목록을 삽입하거나 목록에 선택된 텍스트 래핑 (중요항목)</value>
+  </data>
+  <data name="WrapperBoxTitle" xml:space="preserve">
+    <value>박스안에 선택된 텍스트 래핑</value>
+  </data>
+</root>

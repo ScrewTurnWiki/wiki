@@ -1,0 +1,1753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnchorTitle2" xml:space="preserve">
+    <value>Insert a new anchor or a link to an existing anchor</value>
+  </data>
+  <data name="BoldTitle" xml:space="preserve">
+    <value>Style selected text as bold</value>
+  </data>
+  <data name="CodeEscapedTitle" xml:space="preserve">
+    <value>Set selected text as a block of code</value>
+  </data>
+  <data name="CodeInlineTitle" xml:space="preserve">
+    <value>Set selected text as inline code</value>
+  </data>
+  <data name="CommentTitle" xml:space="preserve">
+    <value>Set selected text as comment (hidden from the rendered page output)</value>
+  </data>
+  <data name="EscapeTitle" xml:space="preserve">
+    <value>Wrap selected text in an 'escape' block that escapes all wiki- and HTML-related characters</value>
+  </data>
+  <data name="ExternalLinkTitle" xml:space="preserve">
+    <value>Insert a link to a website or email address</value>
+  </data>
+  <data name="FileLinkTitle" xml:space="preserve">
+    <value>Insert a link to a file or attachment</value>
+  </data>
+  <data name="H1Title" xml:space="preserve">
+    <value>Set selected text as level-1 header</value>
+  </data>
+  <data name="H2Title" xml:space="preserve">
+    <value>Set selected text as level-2 header</value>
+  </data>
+  <data name="H3Title" xml:space="preserve">
+    <value>Set selected text as level-3 header</value>
+  </data>
+  <data name="H4Title" xml:space="preserve">
+    <value>Set selected text as level-4 header</value>
+  </data>
+  <data name="HRTitle" xml:space="preserve">
+    <value>Insert a horizontal ruler (separator)</value>
+  </data>
+  <data name="ImageTitle2" xml:space="preserve">
+    <value>Insert a picture in the page</value>
+  </data>
+  <data name="ItalicTitle" xml:space="preserve">
+    <value>Style selected text as italic</value>
+  </data>
+  <data name="LineBreakTitle" xml:space="preserve">
+    <value>Insert a single line break</value>
+  </data>
+  <data name="NoBrTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'nobr' block, that ignores line breaks</value>
+  </data>
+  <data name="NoWikiTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'nowiki' block, that ignores WikiMarkup</value>
+  </data>
+  <data name="OrderedListTitle" xml:space="preserve">
+    <value>Insert an ordered list or wrap selected text in an ordered list (1, 2, 3, ...)</value>
+  </data>
+  <data name="PageLinkTitle" xml:space="preserve">
+    <value>Insert a link to a wiki page</value>
+  </data>
+  <data name="SnippetsTitle" xml:space="preserve">
+    <value>View existing snippets and insert one in the page</value>
+  </data>
+  <data name="SpecialTagsTitle" xml:space="preserve">
+    <value>View special tags and insert one in the page</value>
+  </data>
+  <data name="StrikedTitle" xml:space="preserve">
+    <value>Style selected text as strike-through</value>
+  </data>
+  <data name="SubscriptTitle" xml:space="preserve">
+    <value>Set selected text as subscript</value>
+  </data>
+  <data name="SuperscriptTitle" xml:space="preserve">
+    <value>Set selected text as superscript</value>
+  </data>
+  <data name="SymbolsTitle" xml:space="preserve">
+    <value>View and insert special symbols</value>
+  </data>
+  <data name="UnderlinedTitle" xml:space="preserve">
+    <value>Underline selected text</value>
+  </data>
+  <data name="UnorderedListTitle" xml:space="preserve">
+    <value>Insert an unordered list or wrap selected text in an unordered list (bullet points)</value>
+  </data>
+  <data name="WrapperBoxTitle" xml:space="preserve">
+    <value>Wrap selected text in a 'box'</value>
+  </data>
+  <data name="ChangeComment" xml:space="preserve">
+    <value>Change Comment</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Meta Description</value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>Meta Keywords</value>
+  </data>
+  <data name="AutoUpdateAvailable" xml:space="preserve">
+    <value>自動更新可用</value>
+  </data>
+  <data name="NAccountsDeleted" xml:space="preserve">
+    <value>刪除了 $ 個帳戶</value>
+    <comment>As in "3 accounts deleted"</comment>
+  </data>
+  <data name="Formatted" xml:space="preserve">
+    <value>已格式化</value>
+  </data>
+  <data name="NoPagesToMigrate" xml:space="preserve">
+    <value>沒有可遷移的頁面</value>
+  </data>
+  <data name="NoProvidersToUpdate" xml:space="preserve">
+    <value>沒有可更新的提供者</value>
+  </data>
+  <data name="ProvidersUpdated" xml:space="preserve">
+    <value>提供者已更新，請重新啟動維基（管理首頁標籤頁）</value>
+  </data>
+  <data name="BulkMigrationCompleted" xml:space="preserve">
+    <value>大量的遷移完成</value>
+  </data>
+  <data name="BulkMigrationCompletedWithErrors" xml:space="preserve">
+    <value>大量的遷移完成，但遇到錯誤，請檢查日誌</value>
+  </data>
+  <data name="BulkRebindCompleted" xml:space="preserve">
+    <value>大量的重新綁定完成</value>
+  </data>
+  <data name="NoCategories" xml:space="preserve">
+    <value>沒有選中的分類</value>
+  </data>
+  <data name="NoPages" xml:space="preserve">
+    <value>沒有可重新綁定的頁面</value>
+  </data>
+  <data name="InvalidFileName" xml:space="preserve">
+    <value>檔案名無效</value>
+  </data>
+  <data name="OrderedList" xml:space="preserve">
+    <value>有序列表</value>
+  </data>
+  <data name="UnorderedList" xml:space="preserve">
+    <value>無序列表</value>
+  </data>
+  <data name="NoBr" xml:space="preserve">
+    <value>NoBR 標籤</value>
+  </data>
+  <data name="LinkToThisSection" xml:space="preserve">
+    <value>鏈結到此節</value>
+  </data>
+  <data name="SelectAndDelete" xml:space="preserve">
+    <value>選中並刪除</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>錯誤</value>
+  </data>
+  <data name="NewVersion" xml:space="preserve">
+    <value>新版本：</value>
+  </data>
+  <data name="UpToDate" xml:space="preserve">
+    <value>最新</value>
+  </data>
+  <data name="CouldNotMigratePage" xml:space="preserve">
+    <value>無法遷移頁面</value>
+  </data>
+  <data name="DiscussionsRss" xml:space="preserve">
+    <value>討論區 RSS</value>
+  </data>
+  <data name="RssForThisCategoryDiscussion" xml:space="preserve">
+    <value>本分類討論的更新通知（RSS 2.0）</value>
+  </data>
+  <data name="CodeEscaped" xml:space="preserve">
+    <value>代碼塊</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>水平線</value>
+  </data>
+  <data name="Snippets" xml:space="preserve">
+    <value>片段</value>
+  </data>
+  <data name="Symbols" xml:space="preserve">
+    <value>特殊符號</value>
+  </data>
+  <data name="WrapperBox" xml:space="preserve">
+    <value>框</value>
+  </data>
+  <data name="UserTitle" xml:space="preserve">
+    <value>使用者詳細資料</value>
+  </data>
+  <data name="CouldNotSaveDisplayName" xml:space="preserve">
+    <value>無法保存顯示名稱</value>
+  </data>
+  <data name="DisplayNameSaved" xml:space="preserve">
+    <value>顯示名稱已保存</value>
+  </data>
+  <data name="UserDeletedMessage" xml:space="preserve">
+    <value>##USER## 在頁面 ##PAGE## 的討論區刪除了一條消息。</value>
+  </data>
+  <data name="UserDeletedPage" xml:space="preserve">
+    <value>##USER## 刪除了頁面 ##PAGE##。</value>
+  </data>
+  <data name="UserEditedMessage" xml:space="preserve">
+    <value>##USER## 在頁面 ##PAGE## 的討論區編輯了一條消息。</value>
+  </data>
+  <data name="UserPostedMessage" xml:space="preserve">
+    <value>##USER## 在頁面 ##PAGE## 的討論區發佈了一條消息。</value>
+  </data>
+  <data name="UserRenamedPage" xml:space="preserve">
+    <value>##USER## 重命名了頁面 ##PAGE##。</value>
+  </data>
+  <data name="UserRolledBackPage" xml:space="preserve">
+    <value>##USER## 回滾了頁面 ##PAGE##。</value>
+  </data>
+  <data name="UserUpdatedPage" xml:space="preserve">
+    <value>##USER## 更新了頁面 ##PAGE##。</value>
+  </data>
+  <data name="CreateThisPage" xml:space="preserve">
+    <value>建立此頁</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="Corrupted" xml:space="preserve">
+    <value>損壞</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>正常</value>
+  </data>
+  <data name="SelectYourLanguage" xml:space="preserve">
+    <value>選擇您的語言</value>
+  </data>
+  <data name="PreferencesSaved" xml:space="preserve">
+    <value>偏好已保存</value>
+  </data>
+  <data name="GoToYourProfile" xml:space="preserve">
+    <value>轉到使用者概要</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>訪客</value>
+  </data>
+  <data name="CouldNotRenameNamespace" xml:space="preserve">
+    <value>無法重命名命名空間</value>
+  </data>
+  <data name="NamespaceRenamed" xml:space="preserve">
+    <value>命名空間已重命名</value>
+  </data>
+  <data name="SelectTemplate" xml:space="preserve">
+    <value>選擇範本...</value>
+  </data>
+  <data name="Action_Man_Snips_Temps" xml:space="preserve">
+    <value>管理摘錄和範本</value>
+  </data>
+  <data name="CouldNotCreateTemplate" xml:space="preserve">
+    <value>無法建立範本</value>
+  </data>
+  <data name="CouldNotDeleteTemplate" xml:space="preserve">
+    <value>無法刪除範本</value>
+  </data>
+  <data name="CouldNotSaveTemplate" xml:space="preserve">
+    <value>無法保存範本</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>片段</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>範本</value>
+  </data>
+  <data name="TemplateCreated" xml:space="preserve">
+    <value>範本已建立</value>
+  </data>
+  <data name="TemplateDeleted" xml:space="preserve">
+    <value>範本已刪除</value>
+  </data>
+  <data name="TemplateSaved" xml:space="preserve">
+    <value>範本已保存</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>建立者</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>建立於</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>修改者</value>
+  </data>
+  <data name="ModifiedOn" xml:space="preserve">
+    <value>修改於</value>
+  </data>
+  <data name="AMessageWasSentCheckInbox" xml:space="preserve">
+    <value>一條消息已發送到您的電子郵件位址，請檢查您的收件箱。</value>
+  </data>
+  <data name="NewPasswordSavedPleaseLogin" xml:space="preserve">
+    <value>新密碼已保存，請&lt;a href="Login.aspx" title="Login"&gt;登入&lt;/a&gt;</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>重置密碼</value>
+  </data>
+  <data name="AMessageHasBeenDeletedBy" xml:space="preserve">
+    <value>一條標題為 "##SUBJECT##" 的消息已刪除，刪除者為</value>
+  </data>
+  <data name="AMessageHasBeenEditedBy" xml:space="preserve">
+    <value>一條標題為 "##SUBJECT##" 的消息已編輯，編輯者為</value>
+  </data>
+  <data name="AMessageHasBeenPostedBy" xml:space="preserve">
+    <value>一條標題為 "##SUBJECT##" 的消息已發佈，發佈者為</value>
+  </data>
+  <data name="Discussion" xml:space="preserve">
+    <value>討論</value>
+  </data>
+  <data name="DiscussionUpdates" xml:space="preserve">
+    <value>討論更新</value>
+  </data>
+  <data name="RecentDiscussionUpdates" xml:space="preserve">
+    <value>最近討論更新</value>
+  </data>
+  <data name="ApproveRejectDraft" xml:space="preserve">
+    <value>認可/否決草稿</value>
+  </data>
+  <data name="Action_Man_1Disc" xml:space="preserve">
+    <value>管理頁面討論</value>
+  </data>
+  <data name="Action_Pst_1Disc" xml:space="preserve">
+    <value>在頁面討論區發佈消息</value>
+  </data>
+  <data name="Action_Rd_1Disc" xml:space="preserve">
+    <value>閱讀頁面討論</value>
+  </data>
+  <data name="Action_Man_Perms" xml:space="preserve">
+    <value>管理許可權</value>
+  </data>
+  <data name="NotificationsStatusSaved" xml:space="preserve">
+    <value>提醒狀態已保存</value>
+  </data>
+  <data name="NoConfigurationRequired" xml:space="preserve">
+    <value>此提供者不需要配置</value>
+  </data>
+  <data name="DataCopied" xml:space="preserve">
+    <value>資料已複製，請更改 web.config 檔中的 Settings Storage Provider 設置</value>
+  </data>
+  <data name="DataMigrated" xml:space="preserve">
+    <value>資料已遷移，請回收 Web 應用程式</value>
+  </data>
+  <data name="DllAlreadyExists" xml:space="preserve">
+    <value>DLL 已存在</value>
+  </data>
+  <data name="LoadedProviders" xml:space="preserve">
+    <value>載入了 ### 個提供者</value>
+  </data>
+  <data name="VoidOrInvalidFile" xml:space="preserve">
+    <value>無效檔</value>
+  </data>
+  <data name="CouldNotDeleteDll" xml:space="preserve">
+    <value>無法刪除 DLL</value>
+  </data>
+  <data name="DllDeleted" xml:space="preserve">
+    <value>DLL 已刪除</value>
+  </data>
+  <data name="DefaultProvidersSaved" xml:space="preserve">
+    <value>默認提供者已保存</value>
+  </data>
+  <data name="ProviderRejectedConfiguration" xml:space="preserve">
+    <value>提供者拒絕了配置資料</value>
+  </data>
+  <data name="CouldNotCreateNavPath" xml:space="preserve">
+    <value>無法建立瀏覽路徑</value>
+  </data>
+  <data name="CouldNotDeleteNavPath" xml:space="preserve">
+    <value>無法刪除瀏覽路徑</value>
+  </data>
+  <data name="CouldNotSaveNavPath" xml:space="preserve">
+    <value>無法保存瀏覽路徑</value>
+  </data>
+  <data name="NavPathCreated" xml:space="preserve">
+    <value>瀏覽路徑已建立</value>
+  </data>
+  <data name="TheNavPathMustContain" xml:space="preserve">
+    <value>瀏覽路徑必須至少包含一個頁面</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>無</value>
+  </data>
+  <data name="ClickToEnableEmailNotifications" xml:space="preserve">
+    <value>點擊啟用本頁的郵件提醒</value>
+  </data>
+  <data name="EmailNotificationsAreActive" xml:space="preserve">
+    <value>本頁的電子郵件通知已啟動 - 點擊禁用</value>
+  </data>
+  <data name="CouldNotApproveDraft" xml:space="preserve">
+    <value>無法認可草稿</value>
+  </data>
+  <data name="DraftApproved" xml:space="preserve">
+    <value>草稿已認可並保存</value>
+  </data>
+  <data name="DraftRejected" xml:space="preserve">
+    <value>草稿已否決並捨棄</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>草稿</value>
+  </data>
+  <data name="ViewChanges" xml:space="preserve">
+    <value>查看更改</value>
+  </data>
+  <data name="DiffingPageTitle" xml:space="preserve">
+    <value>比較 &lt;i&gt;##PAGETITLE##&lt;/i&gt;，修訂版 &lt;i&gt;##REV1##&lt;/i&gt; 和 &lt;i&gt;##REV2##&lt;/i&gt;</value>
+  </data>
+  <data name="CouldNotCreateSnippet" xml:space="preserve">
+    <value>無法建立片段</value>
+  </data>
+  <data name="CouldNotDeleteSnippet" xml:space="preserve">
+    <value>無法刪除片段</value>
+  </data>
+  <data name="CouldNotSaveSnippet" xml:space="preserve">
+    <value>無法保存片段</value>
+  </data>
+  <data name="SnippetCreated" xml:space="preserve">
+    <value>片段已建立</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>參數</value>
+  </data>
+  <data name="CouldNotDeleteCategory" xml:space="preserve">
+    <value>無法刪除分類</value>
+  </data>
+  <data name="CouldNotMergeCategories" xml:space="preserve">
+    <value>無法合併分類</value>
+  </data>
+  <data name="CategoryCreated" xml:space="preserve">
+    <value>分類已建立</value>
+  </data>
+  <data name="CouldNotRenameCategory" xml:space="preserve">
+    <value>無法重命名分類</value>
+  </data>
+  <data name="CategoryAlreadyExists" xml:space="preserve">
+    <value>分類已存在</value>
+  </data>
+  <data name="CouldNotCreateCategory" xml:space="preserve">
+    <value>無法建立分類</value>
+  </data>
+  <data name="GoToCategory" xml:space="preserve">
+    <value>轉到分類</value>
+  </data>
+  <data name="Rollback" xml:space="preserve">
+    <value>退回</value>
+  </data>
+  <data name="RollbackThisPage" xml:space="preserve">
+    <value>退回本頁至之前版本</value>
+  </data>
+  <data name="Administrate" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="AdministrateThisPage" xml:space="preserve">
+    <value>管理本頁</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>許可權</value>
+  </data>
+  <data name="SetPermissionsForThisPage" xml:space="preserve">
+    <value>為本頁設置許可權</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="AdminTools" xml:space="preserve">
+    <value>管理工具</value>
+  </data>
+  <data name="ViewPageHistory" xml:space="preserve">
+    <value>查看頁面編輯歷史</value>
+  </data>
+  <data name="Action_Man_Disc" xml:space="preserve">
+    <value>管理頁面討論</value>
+  </data>
+  <data name="Action_Pst_Disc" xml:space="preserve">
+    <value>在頁面討論區發佈消息</value>
+  </data>
+  <data name="Action_Rd_Disc" xml:space="preserve">
+    <value>閱讀頁面討論</value>
+  </data>
+  <data name="CouldNotDeletePage" xml:space="preserve">
+    <value>無法刪除頁面</value>
+  </data>
+  <data name="AllMessagesDeleted" xml:space="preserve">
+    <value>所有消息已刪除</value>
+  </data>
+  <data name="CouldNotDeleteOneOrMoreMessages" xml:space="preserve">
+    <value>無法刪除一條或多條資訊</value>
+  </data>
+  <data name="CouldNotDeletePageBackups" xml:space="preserve">
+    <value>無法刪除頁面備份</value>
+  </data>
+  <data name="CouldNotRollbackPage" xml:space="preserve">
+    <value>無法退回頁面</value>
+  </data>
+  <data name="PageRolledBack" xml:space="preserve">
+    <value>頁面已退回</value>
+  </data>
+  <data name="CouldNotRenamePage" xml:space="preserve">
+    <value>無法重命名頁面</value>
+  </data>
+  <data name="PageRenamedCouldNotCreateShadowPage" xml:space="preserve">
+    <value>頁面已重命名，但無法建立影子頁面</value>
+  </data>
+  <data name="PageRenamedCouldNotSetShadowPageContent" xml:space="preserve">
+    <value>頁面已重命名，但無法為影子頁面設定內容</value>
+  </data>
+  <data name="GoToPageHistory" xml:space="preserve">
+    <value>轉到頁面歷史</value>
+  </data>
+  <data name="GoToPageDiscussion" xml:space="preserve">
+    <value>轉到頁面討論</value>
+  </data>
+  <data name="GoToPage" xml:space="preserve">
+    <value>轉到頁面</value>
+  </data>
+  <data name="CouldNotDeletePermissions" xml:space="preserve">
+    <value>無法刪除許可權</value>
+  </data>
+  <data name="GroupCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>組已建立，但無法存儲許可權</value>
+  </data>
+  <data name="GroupSavedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>組已保存，但無法刪除舊許可權</value>
+  </data>
+  <data name="GroupSavedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>組已保存，但無法儲存新許可權</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteGroup" xml:space="preserve">
+    <value>許可權已刪除，但無法刪除組</value>
+  </data>
+  <data name="CouldNotSetNamespaceDefaultPage" xml:space="preserve">
+    <value>無法為此命名空間設置默認頁面</value>
+  </data>
+  <data name="CouldNotSetNamespaceTheme" xml:space="preserve">
+    <value>無法為此命名空間設置主題</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotCreateDefaultPage" xml:space="preserve">
+    <value>命名空間已建立，但無法建立默認頁面</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetDefaultPage" xml:space="preserve">
+    <value>命名空間已建立，但無法設置默認頁面</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotSetTheme" xml:space="preserve">
+    <value>命名空間已保存，但無法設置主題</value>
+  </data>
+  <data name="NamespaceCreatedCouldNotStoreDefaultPageContent" xml:space="preserve">
+    <value>命名空間已建立，但無法存儲默認頁面內容</value>
+  </data>
+  <data name="UserCreatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>使用者已建立，但無法儲存群組身份</value>
+  </data>
+  <data name="UserCreatedCouldNotStorePermissions" xml:space="preserve">
+    <value>使用者已建立，但無法儲存群組許可權</value>
+  </data>
+  <data name="UserUpdatedCouldNotDeleteOldPermissions" xml:space="preserve">
+    <value>使用者已更新，但無法刪除舊許可權</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreGroupMembership" xml:space="preserve">
+    <value>使用者已更新，但無法儲存群組身份</value>
+  </data>
+  <data name="UserUpdatedCouldNotStoreNewPermissions" xml:space="preserve">
+    <value>使用者已更新，但無法存儲新許可權</value>
+  </data>
+  <data name="PermissionsAndGroupMembershipDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>許可權及組身份已刪除，但無法刪除使用者</value>
+  </data>
+  <data name="PermissionsDeletedCouldNotDeleteUser" xml:space="preserve">
+    <value>許可權已刪除，但無法刪除使用者</value>
+  </data>
+  <data name="CouldNotDeleteNamespace" xml:space="preserve">
+    <value>無法刪除命名空間</value>
+  </data>
+  <data name="NamespaceDeleted" xml:space="preserve">
+    <value>命名空間已刪除</value>
+  </data>
+  <data name="NamespaceSaved" xml:space="preserve">
+    <value>命名空間已保存</value>
+  </data>
+  <data name="CouldNotStorePermissions" xml:space="preserve">
+    <value>無法存儲許可權</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>群組</value>
+  </data>
+  <data name="GoToMainPage" xml:space="preserve">
+    <value>轉到首頁</value>
+  </data>
+  <data name="Action_Crt_Dirs" xml:space="preserve">
+    <value>建立目錄</value>
+  </data>
+  <data name="Action_Crt_Pg" xml:space="preserve">
+    <value>建立頁面</value>
+  </data>
+  <data name="Action_Del_1Attn" xml:space="preserve">
+    <value>刪除附件</value>
+  </data>
+  <data name="Action_Del_Attn" xml:space="preserve">
+    <value>刪除附件</value>
+  </data>
+  <data name="Action_Del_Dirs" xml:space="preserve">
+    <value>刪除目錄</value>
+  </data>
+  <data name="Action_Del_Files" xml:space="preserve">
+    <value>刪除檔</value>
+  </data>
+  <data name="Action_Del_Pg" xml:space="preserve">
+    <value>刪除頁面</value>
+  </data>
+  <data name="Action_Down_1Attn" xml:space="preserve">
+    <value>下載附件</value>
+  </data>
+  <data name="Action_Down_Attn" xml:space="preserve">
+    <value>下載附件</value>
+  </data>
+  <data name="Action_Down_Files" xml:space="preserve">
+    <value>下載文件</value>
+  </data>
+  <data name="Action_FullControl" xml:space="preserve">
+    <value>完全控制</value>
+  </data>
+  <data name="Action_List" xml:space="preserve">
+    <value>列出內容</value>
+  </data>
+  <data name="Action_Man_1Cat" xml:space="preserve">
+    <value>管理分類</value>
+  </data>
+  <data name="Action_Man_1Pg" xml:space="preserve">
+    <value>管理頁面</value>
+  </data>
+  <data name="Action_Man_Acc" xml:space="preserve">
+    <value>管理使用者帳戶</value>
+  </data>
+  <data name="Action_Man_Cat" xml:space="preserve">
+    <value>管理分類</value>
+  </data>
+  <data name="Action_Man_Conf" xml:space="preserve">
+    <value>管理配置</value>
+  </data>
+  <data name="Action_Man_Files" xml:space="preserve">
+    <value>管理檔和目錄</value>
+  </data>
+  <data name="Action_Man_Grp" xml:space="preserve">
+    <value>管理使用者群組</value>
+  </data>
+  <data name="Action_Man_MetaFiles" xml:space="preserve">
+    <value>管理元文件</value>
+  </data>
+  <data name="Action_Man_NavPath" xml:space="preserve">
+    <value>管理瀏覽路徑</value>
+  </data>
+  <data name="Action_Man_Ns" xml:space="preserve">
+    <value>管理命名空間</value>
+  </data>
+  <data name="Action_Man_Pg" xml:space="preserve">
+    <value>管理頁面</value>
+  </data>
+  <data name="Action_Man_PgCat" xml:space="preserve">
+    <value>管理頁面和分類</value>
+  </data>
+  <data name="Action_Man_Prov" xml:space="preserve">
+    <value>管理提供者</value>
+  </data>
+  <data name="Action_Mod_1Pg" xml:space="preserve">
+    <value>修改頁面</value>
+  </data>
+  <data name="Action_Mod_Pg" xml:space="preserve">
+    <value>修改頁面</value>
+  </data>
+  <data name="Action_Rd_1Pg" xml:space="preserve">
+    <value>閱讀頁面</value>
+  </data>
+  <data name="Action_Rd_Pg" xml:space="preserve">
+    <value>閱讀頁面</value>
+  </data>
+  <data name="Action_Up_1Attn" xml:space="preserve">
+    <value>上傳附件</value>
+  </data>
+  <data name="Action_Up_Attn" xml:space="preserve">
+    <value>上傳附件</value>
+  </data>
+  <data name="Action_Up_Files" xml:space="preserve">
+    <value>上傳文件</value>
+  </data>
+  <data name="CouldNotCreateGroup" xml:space="preserve">
+    <value>無法建立組</value>
+  </data>
+  <data name="CouldNotUpdateGroup" xml:space="preserve">
+    <value>無法更新組</value>
+  </data>
+  <data name="GroupCreated" xml:space="preserve">
+    <value>組已建立</value>
+  </data>
+  <data name="GroupDeleted" xml:space="preserve">
+    <value>組已刪除</value>
+  </data>
+  <data name="GroupUpdated" xml:space="preserve">
+    <value>組已更新</value>
+  </data>
+  <data name="CouldNotSaveFile" xml:space="preserve">
+    <value>無法保存檔</value>
+  </data>
+  <data name="NoSimilarPages" xml:space="preserve">
+    <value>沒有類似名稱或標題的頁面。</value>
+  </data>
+  <data name="SearchStats" xml:space="preserve">
+    <value>本次搜尋，搜尋了&lt;b&gt;{0}&lt;/b&gt;（&lt;b&gt;{1} 篇文檔&lt;/b&gt;, &lt;b&gt;{2} 個詞&lt;/b&gt;），用時 &lt;b&gt;{3:N1} 秒&lt;/b&gt;並得到&lt;b&gt;{4} 個結果&lt;/b&gt;。</value>
+  </data>
+  <data name="InvalidDisplayName" xml:space="preserve">
+    <value>顯示名稱無效</value>
+  </data>
+  <data name="CouldNotCreateUser" xml:space="preserve">
+    <value>無法建立使用者</value>
+  </data>
+  <data name="CouldNotUpdateUser" xml:space="preserve">
+    <value>無法更新使用者</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>使用者已建立</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>使用者已更新</value>
+  </data>
+  <data name="RootNamespace" xml:space="preserve">
+    <value>&lt;根&gt;</value>
+  </data>
+  <data name="CouldNotCreateNamespace" xml:space="preserve">
+    <value>無法建立命名空間</value>
+  </data>
+  <data name="InvalidNamespaceName" xml:space="preserve">
+    <value>命名空間名稱無效</value>
+  </data>
+  <data name="NamespaceCreated" xml:space="preserve">
+    <value>命名空間已建立</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="ThereAreAttachments" xml:space="preserve">
+    <value>本頁面包含附件</value>
+  </data>
+  <data name="NoSnippets" xml:space="preserve">
+    <value>沒有摘錄</value>
+  </data>
+  <data name="LinkTitleOptional" xml:space="preserve">
+    <value>鏈結標題（可選）</value>
+  </data>
+  <data name="UpLevel" xml:space="preserve">
+    <value>向上一級</value>
+  </data>
+  <data name="CannotRenameItem" xml:space="preserve">
+    <value>無法重命名選定項</value>
+  </data>
+  <data name="CannotStoreFile" xml:space="preserve">
+    <value>無法存儲此檔</value>
+  </data>
+  <data name="CannotCreateNewDirectory" xml:space="preserve">
+    <value>無法新建目錄</value>
+  </data>
+  <data name="DiffColorKey" xml:space="preserve">
+    <value>顏色範例：&lt;span style="background-color: #88CC33;"&gt;添加的文字&lt;/span&gt; / &lt;span style="background-color: #FFDF66;"&gt;移除的文字&lt;/span&gt;。</value>
+  </data>
+  <data name="EarlierThisMonth" xml:space="preserve">
+    <value>本月早些時候</value>
+  </data>
+  <data name="EarlierThisWeek" xml:space="preserve">
+    <value>本周早些時候</value>
+  </data>
+  <data name="LastMonth" xml:space="preserve">
+    <value>上月</value>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>較早</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>昨天</value>
+  </data>
+  <data name="LoginNoticeFile" xml:space="preserve">
+    <value>登入提示檔</value>
+  </data>
+  <data name="MayBeInaccurate" xml:space="preserve">
+    <value>可能不準確</value>
+  </data>
+  <data name="AccessDeniedTitle" xml:space="preserve">
+    <value>拒絕訪問</value>
+  </data>
+  <data name="AccountActivated" xml:space="preserve">
+    <value>使用者啟動成功，請登入。</value>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>使用者啟動</value>
+  </data>
+  <data name="AccountActivationMessageFile" xml:space="preserve">
+    <value>使用者啟動消息檔</value>
+  </data>
+  <data name="AccountAlreadyActive" xml:space="preserve">
+    <value>使用者已被啟動</value>
+  </data>
+  <data name="AccountCreated" xml:space="preserve">
+    <value>使用者建立成功</value>
+  </data>
+  <data name="AccountNotActivated" xml:space="preserve">
+    <value>使用者啟動出錯</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>找不到使用者</value>
+  </data>
+  <data name="ActivationAdmin" xml:space="preserve">
+    <value>使用者必須得到管理員審核才能登入</value>
+  </data>
+  <data name="ActivationAuto" xml:space="preserve">
+    <value>使用者將在註冊後自動啟動</value>
+  </data>
+  <data name="ActivationEmail" xml:space="preserve">
+    <value>您必須在 24 小時內根據收到郵件內的指令啟動使用者</value>
+  </data>
+  <data name="AdminDowngraded" xml:space="preserve">
+    <value>管理員已降級為普通使用者</value>
+  </data>
+  <data name="AdminTitle" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>所有頁面</value>
+  </data>
+  <data name="AllPagesTitle" xml:space="preserve">
+    <value>維基索引</value>
+  </data>
+  <data name="Anchor" xml:space="preserve">
+    <value>段落鏈結</value>
+  </data>
+  <data name="AnchorId" xml:space="preserve">
+    <value>段落鏈結 ID</value>
+  </data>
+  <data name="AnchorLink" xml:space="preserve">
+    <value>鏈結位址</value>
+  </data>
+  <data name="AnchorTitle" xml:space="preserve">
+    <value>鏈結標題</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>自動</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>後退</value>
+  </data>
+  <data name="BackToHistory" xml:space="preserve">
+    <value>退到頁面歷史</value>
+  </data>
+  <data name="Bigger" xml:space="preserve">
+    <value>更大</value>
+  </data>
+  <data name="Bold" xml:space="preserve">
+    <value>粗體</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>框</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>由</value>
+  </data>
+  <data name="CachedPages" xml:space="preserve">
+    <value>快取的頁面</value>
+  </data>
+  <data name="CannotDisableDefaultProvider" xml:space="preserve">
+    <value>無法關閉默認提供者</value>
+  </data>
+  <data name="CannotUnloadDefaultProvider" xml:space="preserve">
+    <value>無法卸載默認提供者</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>所有分類</value>
+  </data>
+  <data name="CategoriesMerged" xml:space="preserve">
+    <value>分類已合併</value>
+  </data>
+  <data name="CategorizedAs" xml:space="preserve">
+    <value>分類為</value>
+  </data>
+  <data name="CategoryDeleted" xml:space="preserve">
+    <value>分類已刪除</value>
+  </data>
+  <data name="CategoryNotFound" xml:space="preserve">
+    <value>找不到分類</value>
+  </data>
+  <data name="CategoryRenamed" xml:space="preserve">
+    <value>分類已重命名</value>
+  </data>
+  <data name="CategorySaved" xml:space="preserve">
+    <value>分類已保存</value>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>分類標題</value>
+  </data>
+  <data name="CodeBlock" xml:space="preserve">
+    <value>代碼區塊</value>
+  </data>
+  <data name="CodeInline" xml:space="preserve">
+    <value>嵌入代碼</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>注釋</value>
+  </data>
+  <data name="ConfigSaved" xml:space="preserve">
+    <value>組態配置已經成功保存</value>
+  </data>
+  <data name="ConfigurationString" xml:space="preserve">
+    <value>組態配置字串</value>
+  </data>
+  <data name="ConfigValuesReset" xml:space="preserve">
+    <value>組態配置項已重置為先前的值</value>
+  </data>
+  <data name="ConfirmOperation" xml:space="preserve">
+    <value>確認要繼續嗎？</value>
+  </data>
+  <data name="CouldRequireLogin" xml:space="preserve">
+    <value>需要登入</value>
+  </data>
+  <data name="CreateNewPage" xml:space="preserve">
+    <value>新建頁面</value>
+  </data>
+  <data name="CreatePage" xml:space="preserve">
+    <value>新建頁面</value>
+  </data>
+  <data name="CreateThePage" xml:space="preserve">
+    <value>建立頁面</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>當前</value>
+  </data>
+  <data name="CurrentRevision" xml:space="preserve">
+    <value>當前修訂</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>日期/時間</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="DiffTitle" xml:space="preserve">
+    <value>差異</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>禁用</value>
+  </data>
+  <data name="Discuss" xml:space="preserve">
+    <value>討論</value>
+  </data>
+  <data name="DiscussionFor" xml:space="preserve">
+    <value>討論</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>下載</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>編輯</value>
+  </data>
+  <data name="EditingFile" xml:space="preserve">
+    <value>編輯檔</value>
+  </data>
+  <data name="EditNoticeFile" xml:space="preserve">
+    <value>編輯通告檔</value>
+  </data>
+  <data name="EditPage" xml:space="preserve">
+    <value>編輯頁面</value>
+  </data>
+  <data name="EditThisPage" xml:space="preserve">
+    <value>編輯此頁面</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>編輯</value>
+  </data>
+  <data name="EmailSaved" xml:space="preserve">
+    <value>電子郵件位址已保存</value>
+  </data>
+  <data name="EmailsNotEqual" xml:space="preserve">
+    <value>電子郵件位址不相符</value>
+  </data>
+  <data name="EnterTitleAndUrl" xml:space="preserve">
+    <value>您必須輸入標題和網址</value>
+  </data>
+  <data name="ErrorDeletingFile" xml:space="preserve">
+    <value>刪除檔案出錯</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>錯誤</value>
+  </data>
+  <data name="Escape" xml:space="preserve">
+    <value>XHTML</value>
+  </data>
+  <data name="ExternalLink" xml:space="preserve">
+    <value>外部鏈結</value>
+  </data>
+  <data name="FileAlreadyExists" xml:space="preserve">
+    <value>檔案已經存在</value>
+  </data>
+  <data name="FileLink" xml:space="preserve">
+    <value>檔案鏈結</value>
+  </data>
+  <data name="FileManagement" xml:space="preserve">
+    <value>檔案管理（新視窗）</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>找不到檔案</value>
+  </data>
+  <data name="FileSaved" xml:space="preserve">
+    <value>檔案已保存</value>
+  </data>
+  <data name="FilesDiskUsage" xml:space="preserve">
+    <value>檔案磁片使用情況</value>
+  </data>
+  <data name="FileTooBig" xml:space="preserve">
+    <value>文件太大</value>
+  </data>
+  <data name="FileVoid" xml:space="preserve">
+    <value>缺少檔案名</value>
+  </data>
+  <data name="FooterFile" xml:space="preserve">
+    <value>頁腳文件</value>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>禁止</value>
+  </data>
+  <data name="FullView" xml:space="preserve">
+    <value>全螢幕預覽（新窗口）</value>
+  </data>
+  <data name="H1" xml:space="preserve">
+    <value>一級標題</value>
+  </data>
+  <data name="H2" xml:space="preserve">
+    <value>二級標題</value>
+  </data>
+  <data name="H3" xml:space="preserve">
+    <value>三級標題</value>
+  </data>
+  <data name="H4" xml:space="preserve">
+    <value>四級標題（請謹慎使用）</value>
+  </data>
+  <data name="HeaderFile" xml:space="preserve">
+    <value>頁首文件</value>
+  </data>
+  <data name="HideBreadcrumbsTrail" xml:space="preserve">
+    <value>點擊這裏隱藏當前位置瀏覽</value>
+  </data>
+  <data name="HidePreview" xml:space="preserve">
+    <value>隱藏預覽</value>
+  </data>
+  <data name="HideShow" xml:space="preserve">
+    <value>隱藏/顯示</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>歷史</value>
+  </data>
+  <data name="HistoryTitle" xml:space="preserve">
+    <value>頁面歷史</value>
+  </data>
+  <data name="HtmlHeadFile" xml:space="preserve">
+    <value>HTML Head 文件</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>圖片</value>
+  </data>
+  <data name="ImageAuto" xml:space="preserve">
+    <value>圖片 - 自動對齊</value>
+  </data>
+  <data name="ImageBigUrl" xml:space="preserve">
+    <value>大圖片網址/鏈結網址（可選）</value>
+  </data>
+  <data name="ImageInline" xml:space="preserve">
+    <value>圖片－嵌入（無邊框）</value>
+  </data>
+  <data name="ImageLeft" xml:space="preserve">
+    <value>圖片－左對齊</value>
+  </data>
+  <data name="ImageRight" xml:space="preserve">
+    <value>圖片－右對齊</value>
+  </data>
+  <data name="ImageTitle" xml:space="preserve">
+    <value>圖片標題</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>圖片網址</value>
+  </data>
+  <data name="InactiveUsers" xml:space="preserve">
+    <value>禁用</value>
+    <comment>Referred to the count of inactive users, for example Users: 8 (3 inactive)</comment>
+  </data>
+  <data name="InsertSnippet" xml:space="preserve">
+    <value>插入片段</value>
+  </data>
+  <data name="InvalidBackupNumber" xml:space="preserve">
+    <value>數字無效：必須大於或等於 0（不填的話將禁用備份自動刪除功能）。</value>
+  </data>
+  <data name="InvalidCacheCutSize" xml:space="preserve">
+    <value>變更快取大小無效：必須是大於 0 小於快取大小的整數。</value>
+  </data>
+  <data name="InvalidCacheSize" xml:space="preserve">
+    <value>快取大小無效：必須是大於 0 的整數。</value>
+  </data>
+  <data name="InvalidCategoryName" xml:space="preserve">
+    <value>分類名稱無效</value>
+  </data>
+  <data name="InvalidContactEmail" xml:space="preserve">
+    <value>連絡人電子郵件位址無效</value>
+  </data>
+  <data name="InvalidDateTimeFormat" xml:space="preserve">
+    <value>日期/時間格式無效：必須是合法的 .NET 樣式</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>電子郵件位址無效</value>
+  </data>
+  <data name="InvalidFileAccessTries" xml:space="preserve">
+    <value>檔訪問嘗試數無效：必須是大於 0 的整數。</value>
+  </data>
+  <data name="InvalidFileAccessTryDelay" xml:space="preserve">
+    <value>檔訪問嘗試延遲無效：必須是大於 0 的整數。</value>
+  </data>
+  <data name="InvalidFileType" xml:space="preserve">
+    <value>檔類型無效</value>
+  </data>
+  <data name="InvalidMainUrl" xml:space="preserve">
+    <value>主網址無效：必須是完整的網址並且以斜杠結尾</value>
+  </data>
+  <data name="InvalidMaxFileSize" xml:space="preserve">
+    <value>最大檔大小無效：必須是大於 0 並且小於 20,480 KB</value>
+  </data>
+  <data name="InvalidMaxLogSize" xml:space="preserve">
+    <value>最大日誌大小無效：必須大於 8 小於 10,240 KB</value>
+  </data>
+  <data name="InvalidNavPath" xml:space="preserve">
+    <value>瀏覽路徑無效：需要至少指定 2 個頁面</value>
+  </data>
+  <data name="InvalidNavPathName" xml:space="preserve">
+    <value>瀏覽路徑名稱無效</value>
+  </data>
+  <data name="InvalidPageName" xml:space="preserve">
+    <value>頁面名稱無效</value>
+  </data>
+  <data name="InvalidPageTitle" xml:space="preserve">
+    <value>頁面標題無效</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>密碼無效</value>
+  </data>
+  <data name="InvalidPort" xml:space="preserve">
+    <value>埠無效（必須在 1 和 65535 之間）</value>
+  </data>
+  <data name="InvalidSenderEmail" xml:space="preserve">
+    <value>發件人電子郵件位址無效</value>
+  </data>
+  <data name="InvalidSmtpServer" xml:space="preserve">
+    <value>SMTP 伺服器無效</value>
+  </data>
+  <data name="InvalidSnippetName" xml:space="preserve">
+    <value>片段名稱無效</value>
+  </data>
+  <data name="InvalidUsername" xml:space="preserve">
+    <value>使用者名無效：必須至少四個字元，並且不能包含單詞“admin”或“guest”，只能使用字母、數位、空格和“.”。</value>
+  </data>
+  <data name="InvalidWikiTitle" xml:space="preserve">
+    <value>維基標題無效：必須非空，並且不能包含回車或換行字元</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>斜體</value>
+  </data>
+  <data name="LastModifiedPage" xml:space="preserve">
+    <value>最新修改頁面</value>
+  </data>
+  <data name="LatestUser" xml:space="preserve">
+    <value>最新使用者</value>
+  </data>
+  <data name="LineBreak" xml:space="preserve">
+    <value>換行</value>
+  </data>
+  <data name="LinkTitle" xml:space="preserve">
+    <value>鏈結標題</value>
+  </data>
+  <data name="LinkUrl" xml:space="preserve">
+    <value>鏈結網址</value>
+  </data>
+  <data name="LocatedIn" xml:space="preserve">
+    <value>位於</value>
+  </data>
+  <data name="LogDiskUsage" xml:space="preserve">
+    <value>日誌磁片使用情況</value>
+  </data>
+  <data name="LoggedAsAdmin" xml:space="preserve">
+    <value>您正用內建的管理員使用者登入，所以不能修改概要。</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>登入</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>登入/登出</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="LostPassword" xml:space="preserve">
+    <value>忘記密碼？</value>
+  </data>
+  <data name="MassEmailSent" xml:space="preserve">
+    <value>群發郵件已發送（可能需要一會兒才能發送出去）</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>消息</value>
+  </data>
+  <data name="MessageSent" xml:space="preserve">
+    <value>消息已發送</value>
+  </data>
+  <data name="MessageTitle" xml:space="preserve">
+    <value>編寫消息</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>修改時間</value>
+  </data>
+  <data name="NavPathAlreadyExists" xml:space="preserve">
+    <value>瀏覽路徑已存在</value>
+  </data>
+  <data name="NavPathDeleted" xml:space="preserve">
+    <value>瀏覽路徑已刪除</value>
+  </data>
+  <data name="NavPathNotFound" xml:space="preserve">
+    <value>找不到瀏覽路徑</value>
+  </data>
+  <data name="NavPathSaved" xml:space="preserve">
+    <value>瀏覽路徑已保存</value>
+  </data>
+  <data name="NavPathTitle" xml:space="preserve">
+    <value>所有瀏覽路徑</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>未分類</value>
+    <comment>It means 'not categorized'</comment>
+  </data>
+  <data name="NewerRevision" xml:space="preserve">
+    <value>更新的修訂版</value>
+  </data>
+  <data name="NewVersionFound" xml:space="preserve">
+    <value>找到更新版本</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>下一頁</value>
+  </data>
+  <data name="NoFiles" xml:space="preserve">
+    <value>沒有檔</value>
+  </data>
+  <data name="NoMessages" xml:space="preserve">
+    <value>本頁面沒有消息。快搶沙發啦！</value>
+  </data>
+  <data name="NoPagesInThisCategory" xml:space="preserve">
+    <value>本分類中沒有頁面</value>
+  </data>
+  <data name="NoWiki" xml:space="preserve">
+    <value>非格式文本</value>
+  </data>
+  <data name="OlderRevision" xml:space="preserve">
+    <value>較早的修訂</value>
+  </data>
+  <data name="OnlineUsers" xml:space="preserve">
+    <value>線上使用者</value>
+  </data>
+  <data name="OnlyDllFilesAllowed" xml:space="preserve">
+    <value>只允許 DLL 檔</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>所有操作</value>
+  </data>
+  <data name="OperationTitle" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>或</value>
+    <comment>It means 'you can do this OR this"</comment>
+  </data>
+  <data name="PageAlreadyExists" xml:space="preserve">
+    <value>頁面已存在</value>
+  </data>
+  <data name="PageBackupsDeleted" xml:space="preserve">
+    <value>頁面備份已刪除</value>
+  </data>
+  <data name="PageDeleted" xml:space="preserve">
+    <value>頁面已刪除</value>
+  </data>
+  <data name="PageDiscussionCleared" xml:space="preserve">
+    <value>頁面討論已刪除</value>
+  </data>
+  <data name="PageDoesNotExistInProvider" xml:space="preserve">
+    <value>當前提供者中不存在頁面 ##PAGENAME##</value>
+  </data>
+  <data name="PageFooterFile" xml:space="preserve">
+    <value>頁面頁腳檔</value>
+  </data>
+  <data name="PageHeaderFile" xml:space="preserve">
+    <value>頁面頁頭檔</value>
+  </data>
+  <data name="PageHistory" xml:space="preserve">
+    <value>頁面歷史</value>
+  </data>
+  <data name="PageLink" xml:space="preserve">
+    <value>內部鏈結</value>
+  </data>
+  <data name="PageLocked" xml:space="preserve">
+    <value>本頁面被鎖定</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>找不到頁面</value>
+  </data>
+  <data name="PageNotFoundTitle" xml:space="preserve">
+    <value>找不到頁面</value>
+  </data>
+  <data name="PagePublic" xml:space="preserve">
+    <value>本頁面已公開</value>
+  </data>
+  <data name="PageRenamed" xml:space="preserve">
+    <value>頁面已重命名</value>
+  </data>
+  <data name="PageRevision" xml:space="preserve">
+    <value>頁面修訂版</value>
+  </data>
+  <data name="PageSaved" xml:space="preserve">
+    <value>頁面已修改</value>
+  </data>
+  <data name="PagesDiskUsage" xml:space="preserve">
+    <value>頁面磁片使用情況</value>
+  </data>
+  <data name="PageSetLocked" xml:space="preserve">
+    <value>頁面已設置為鎖定</value>
+  </data>
+  <data name="PageSetNormal" xml:space="preserve">
+    <value>頁面已設置為正常</value>
+  </data>
+  <data name="PageSetPublic" xml:space="preserve">
+    <value>頁面設置為公開</value>
+  </data>
+  <data name="PagesOfCategory" xml:space="preserve">
+    <value>分類的所有頁面</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>頁面標題</value>
+  </data>
+  <data name="PageUpdates" xml:space="preserve">
+    <value>頁面更新</value>
+  </data>
+  <data name="PasswordResetMessageFile" xml:space="preserve">
+    <value>重置密碼消息檔</value>
+  </data>
+  <data name="PasswordSaved" xml:space="preserve">
+    <value>密碼已保存</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>密碼不相符</value>
+  </data>
+  <data name="Paths" xml:space="preserve">
+    <value>路徑</value>
+  </data>
+  <data name="PerformASearch" xml:space="preserve">
+    <value>執行搜尋</value>
+  </data>
+  <data name="PleaseSelectValidBackup" xml:space="preserve">
+    <value>請選擇正確的備份</value>
+  </data>
+  <data name="Posted" xml:space="preserve">
+    <value>已發送</value>
+  </data>
+  <data name="PostMessage" xml:space="preserve">
+    <value>發送消息</value>
+  </data>
+  <data name="PostTitle" xml:space="preserve">
+    <value>發送消息</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>預覽</value>
+  </data>
+  <data name="PreviewCreated" xml:space="preserve">
+    <value>預覽已建立，請查看頁面的底部</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>上一頁</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>答應</value>
+  </data>
+  <data name="PrinterFriendlyVersion" xml:space="preserve">
+    <value>列印友好版本</value>
+  </data>
+  <data name="ProfileTitle" xml:space="preserve">
+    <value>使用者概要</value>
+  </data>
+  <data name="ProviderConfigurationSaved" xml:space="preserve">
+    <value>提供者配置資料已保存</value>
+  </data>
+  <data name="ProviderDisabled" xml:space="preserve">
+    <value>提供者已被禁用</value>
+  </data>
+  <data name="ProviderEnabled" xml:space="preserve">
+    <value>提供者已被啟用</value>
+  </data>
+  <data name="ProviderNotFound" xml:space="preserve">
+    <value>找不到提供者</value>
+  </data>
+  <data name="ProviderUnloaded" xml:space="preserve">
+    <value>提供者已卸載</value>
+  </data>
+  <data name="RecentPageUpdates" xml:space="preserve">
+    <value>最近頁面更新</value>
+  </data>
+  <data name="RedirectedFrom" xml:space="preserve">
+    <value>重定向自</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>新建使用者</value>
+  </data>
+  <data name="RegistrationDisabled" xml:space="preserve">
+    <value>新建使用者被禁用</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>回復</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>缺少必需的欄位</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>修訂</value>
+  </data>
+  <data name="RevisionComment" xml:space="preserve">
+    <value>注釋</value>
+  </data>
+  <data name="RollbackCompleted" xml:space="preserve">
+    <value>已完成回滾</value>
+  </data>
+  <data name="RssForTheWiki" xml:space="preserve">
+    <value>整個維基的更新通知（RSS 2.0）</value>
+  </data>
+  <data name="RssForThisCategory" xml:space="preserve">
+    <value>本分類的更新通知（RSS 2.0）</value>
+  </data>
+  <data name="RssForThisDiscussion" xml:space="preserve">
+    <value>本討論的更新通知（RSS 2.0）</value>
+  </data>
+  <data name="RssForThisPage" xml:space="preserve">
+    <value>本頁面的更新通知 （RSS 2.0）</value>
+  </data>
+  <data name="ScriptDetected" xml:space="preserve">
+    <value>內容中發現有不允許的 SCRIPT 標籤</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜尋</value>
+  </data>
+  <data name="SearchTitle" xml:space="preserve">
+    <value>搜尋引擎</value>
+  </data>
+  <data name="SendAMessage" xml:space="preserve">
+    <value>發送消息</value>
+  </data>
+  <data name="ServerUptime" xml:space="preserve">
+    <value>伺服器啟動時間</value>
+  </data>
+  <data name="SidebarFile" xml:space="preserve">
+    <value>邊欄文件</value>
+  </data>
+  <data name="Smaller" xml:space="preserve">
+    <value>更小</value>
+  </data>
+  <data name="SnippetAlreadyExists" xml:space="preserve">
+    <value>片段已存在</value>
+  </data>
+  <data name="SnippetDeleted" xml:space="preserve">
+    <value>片段已刪除</value>
+  </data>
+  <data name="SnippetNotFound" xml:space="preserve">
+    <value>找不到片段</value>
+  </data>
+  <data name="SnippetSaved" xml:space="preserve">
+    <value>片段已保存</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>按日期和時間排序</value>
+  </data>
+  <data name="SortByTitle" xml:space="preserve">
+    <value>按標題排序</value>
+  </data>
+  <data name="SortByUser" xml:space="preserve">
+    <value>按使用者排序</value>
+  </data>
+  <data name="SpecialTags" xml:space="preserve">
+    <value>特殊標籤</value>
+  </data>
+  <data name="Striked" xml:space="preserve">
+    <value>刪除線</value>
+  </data>
+  <data name="SubjectAndBodyNeeded" xml:space="preserve">
+    <value>您必須輸入消息的主題和正文。</value>
+  </data>
+  <data name="Subscript" xml:space="preserve">
+    <value>下標</value>
+  </data>
+  <data name="Superscript" xml:space="preserve">
+    <value>上標</value>
+  </data>
+  <data name="TableOfContents" xml:space="preserve">
+    <value>目錄</value>
+  </data>
+  <data name="TempDiskUsage" xml:space="preserve">
+    <value>暫存檔案磁片使用情況</value>
+  </data>
+  <data name="TextareaSize" xml:space="preserve">
+    <value>文本區大小</value>
+  </data>
+  <data name="ThePageHasBeenDeletedBy" xml:space="preserve">
+    <value>頁面刪除者為：</value>
+  </data>
+  <data name="ThePageHasBeenRenamedBy" xml:space="preserve">
+    <value>頁面重新命名者為：</value>
+  </data>
+  <data name="ThePageHasBeenRolledBackBy" xml:space="preserve">
+    <value>頁面回復者為：</value>
+  </data>
+  <data name="ThePageHasBeenUpdatedBy" xml:space="preserve">
+    <value>頁面上傳者為：</value>
+  </data>
+  <data name="ThisIsAPreview" xml:space="preserve">
+    <value>&lt;b&gt;警告&lt;/b&gt;：這只是預覽！您必須點擊“保存”按鈕已保存更改！</value>
+  </data>
+  <data name="ThisPageIsLocked" xml:space="preserve">
+    <value>頁面已被鎖定，所以它只能被管理員編輯。</value>
+  </data>
+  <data name="ThisPageRedirectsTo" xml:space="preserve">
+    <value>頁面重新導向到</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>頂部</value>
+  </data>
+  <data name="TotalDiskUsage" xml:space="preserve">
+    <value>全部磁片使用情況</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>類型</value>
+  </data>
+  <data name="UnallowedFileType" xml:space="preserve">
+    <value>您上傳的檔是不允許的類型</value>
+  </data>
+  <data name="Uncategorized" xml:space="preserve">
+    <value>未分類</value>
+  </data>
+  <data name="UncategorizedPages" xml:space="preserve">
+    <value>未分類的頁面</value>
+  </data>
+  <data name="Underlined" xml:space="preserve">
+    <value>下底線</value>
+  </data>
+  <data name="UploadTitle" xml:space="preserve">
+    <value>文件管理</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>使用者</value>
+  </data>
+  <data name="UserAccountSaved" xml:space="preserve">
+    <value>使用者資訊已保存</value>
+  </data>
+  <data name="UserActivated" xml:space="preserve">
+    <value>使用者已啟動</value>
+  </data>
+  <data name="UserCount" xml:space="preserve">
+    <value>使用者總數</value>
+  </data>
+  <data name="UserDeactivated" xml:space="preserve">
+    <value>使用者已禁用</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>使用者已刪除</value>
+  </data>
+  <data name="UsernameAlreadyExists" xml:space="preserve">
+    <value>使用者名已存在，請重選一個</value>
+  </data>
+  <data name="UsernameIsRequired" xml:space="preserve">
+    <value>如果指定密碼的話也要指定 SMTP 使用者名</value>
+  </data>
+  <data name="UserPromoted" xml:space="preserve">
+    <value>使用者已晉升為管理員</value>
+  </data>
+  <data name="VersionCheckError" xml:space="preserve">
+    <value>獲取修訂資訊錯誤</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>查看</value>
+  </data>
+  <data name="ViewBreadcrumbsTrail" xml:space="preserve">
+    <value>點擊這裏查看完整的瀏覽資訊</value>
+  </data>
+  <data name="ViewingFile" xml:space="preserve">
+    <value>查看文件</value>
+  </data>
+  <data name="ViewList" xml:space="preserve">
+    <value>列表視圖</value>
+  </data>
+  <data name="ViewPageCode" xml:space="preserve">
+    <value>查看頁面代碼</value>
+  </data>
+  <data name="ViewTree" xml:space="preserve">
+    <value>樹狀視圖</value>
+  </data>
+  <data name="WereYouLookingFor" xml:space="preserve">
+    <value>您正在查找這些頁面中的一個嗎？</value>
+  </data>
+  <data name="WikiUpToDate" xml:space="preserve">
+    <value>您的維基已是最新版本</value>
+  </data>
+  <data name="WikiVersion" xml:space="preserve">
+    <value>維基版本</value>
+  </data>
+  <data name="Wizard" xml:space="preserve">
+    <value>配置嚮導</value>
+  </data>
+  <data name="WrongControlText" xml:space="preserve">
+    <value>控制文本錯誤</value>
+  </data>
+  <data name="WrongParameters" xml:space="preserve">
+    <value>參數錯誤</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>密碼錯誤</value>
+  </data>
+  <data name="WrongUsernamePassword" xml:space="preserve">
+    <value>使用者名稱或密碼錯誤</value>
+  </data>
+  <data name="YouCanAlso" xml:space="preserve">
+    <value>您還可以</value>
+  </data>
+  <data name="YouMustProvideAFile" xml:space="preserve">
+    <value>您必須提供一個檔案</value>
+  </data>
+</root>

@@ -1,0 +1,2867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DB1E325-A12E-4415-990C-A5DB669BE835}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScrewTurn.Wiki</RootNamespace>
+    <AssemblyName>ScrewTurn.Wiki</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Anthem, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Lib\Anthem.NET\Anthem.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyVersion.cs">
+      <Link>Code\AssemblyVersion.cs</Link>
+    </Compile>
+    <Compile Include="AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AclActionsSelector.ascx.cs">
+      <DependentUpon>AclActionsSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AclActionsSelector.ascx.designer.cs">
+      <DependentUpon>AclActionsSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.master.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.master.designer.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCategories.aspx.cs">
+      <DependentUpon>AdminCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCategories.aspx.designer.cs">
+      <DependentUpon>AdminCategories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminConfig.aspx.cs">
+      <DependentUpon>AdminConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminConfig.aspx.designer.cs">
+      <DependentUpon>AdminConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminContent.aspx.cs">
+      <DependentUpon>AdminContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminContent.aspx.designer.cs">
+      <DependentUpon>AdminContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGroups.aspx.cs">
+      <DependentUpon>AdminGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminGroups.aspx.designer.cs">
+      <DependentUpon>AdminGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLog.aspx.cs">
+      <DependentUpon>AdminLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLog.aspx.designer.cs">
+      <DependentUpon>AdminLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminNamespaces.aspx.cs">
+      <DependentUpon>AdminNamespaces.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminNamespaces.aspx.designer.cs">
+      <DependentUpon>AdminNamespaces.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminNavPaths.aspx.cs">
+      <DependentUpon>AdminNavPaths.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminNavPaths.aspx.designer.cs">
+      <DependentUpon>AdminNavPaths.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages.aspx.cs">
+      <DependentUpon>AdminPages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages.aspx.designer.cs">
+      <DependentUpon>AdminPages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProviders.aspx.cs">
+      <DependentUpon>AdminProviders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProviders.aspx.designer.cs">
+      <DependentUpon>AdminProviders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSnippets.aspx.cs">
+      <DependentUpon>AdminSnippets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSnippets.aspx.designer.cs">
+      <DependentUpon>AdminSnippets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsers.aspx.cs">
+      <DependentUpon>AdminUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUsers.aspx.designer.cs">
+      <DependentUpon>AdminUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages.aspx.designer.cs">
+      <DependentUpon>AllPages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageListBuilder.ascx.cs">
+      <DependentUpon>PageListBuilder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageListBuilder.ascx.designer.cs">
+      <DependentUpon>PageListBuilder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.af-ZA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.af-ZA.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.cs-CZ.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.cs-CZ.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.da-DK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.da-DK.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.de-DE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.es-ES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.fa-IR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.fa-IR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AttachmentManager.ascx.cs">
+      <DependentUpon>AttachmentManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttachmentManager.ascx.designer.cs">
+      <DependentUpon>AttachmentManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AttachmentViewer.ascx.cs">
+      <DependentUpon>AttachmentViewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttachmentViewer.ascx.designer.cs">
+      <DependentUpon>AttachmentViewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientImageBrowser.ascx.cs">
+      <DependentUpon>ClientImageBrowser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientImageBrowser.ascx.designer.cs">
+      <DependentUpon>ClientImageBrowser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientTree.ascx.cs">
+      <DependentUpon>ClientTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientTree.ascx.designer.cs">
+      <DependentUpon>ClientTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Code\Compressor.cs" />
+    <Compile Include="Code\ExtendedPageInfo.cs" />
+    <Compile Include="Code\LoginTools.cs" />
+    <Compile Include="Code\PageSortingTools.cs" />
+    <Compile Include="Code\ResourceExchanger.cs" />
+    <Compile Include="AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages.aspx.cs">
+      <DependentUpon>AllPages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Captcha.ascx.cs">
+      <DependentUpon>Captcha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Captcha.ascx.designer.cs">
+      <DependentUpon>Captcha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Captcha.aspx.cs">
+      <DependentUpon>Captcha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Captcha.aspx.designer.cs">
+      <DependentUpon>Captcha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\TreeElement.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diff.aspx.cs">
+      <DependentUpon>Diff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diff.aspx.designer.cs">
+      <DependentUpon>Diff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.ascx.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editor.ascx.designer.cs">
+      <DependentUpon>Editor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager.ascx.cs">
+      <DependentUpon>FileManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager.ascx.designer.cs">
+      <DependentUpon>FileManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GetFile.aspx.cs">
+      <DependentUpon>GetFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetFile.aspx.designer.cs">
+      <DependentUpon>GetFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IFrameEditor.aspx.cs">
+      <DependentUpon>IFrameEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IFrameEditor.aspx.designer.cs">
+      <DependentUpon>IFrameEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageEditor.aspx.cs">
+      <DependentUpon>ImageEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageEditor.aspx.designer.cs">
+      <DependentUpon>ImageEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Language.aspx.cs">
+      <DependentUpon>Language.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Language.aspx.designer.cs">
+      <DependentUpon>Language.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageSelector.ascx.cs">
+      <DependentUpon>LanguageSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LanguageSelector.ascx.designer.cs">
+      <DependentUpon>LanguageSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPageSA.Master.cs">
+      <DependentUpon>MasterPageSA.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPageSA.Master.designer.cs">
+      <DependentUpon>MasterPageSA.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NavPath.aspx.cs">
+      <DependentUpon>NavPath.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NavPath.aspx.designer.cs">
+      <DependentUpon>NavPath.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation.aspx.cs">
+      <DependentUpon>Operation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation.aspx.designer.cs">
+      <DependentUpon>Operation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageDiscussion.ascx.cs">
+      <DependentUpon>PageDiscussion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageDiscussion.ascx.designer.cs">
+      <DependentUpon>PageDiscussion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PageNotFound.aspx.cs">
+      <DependentUpon>PageNotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageNotFound.aspx.designer.cs">
+      <DependentUpon>PageNotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageSelector.ascx.cs">
+      <DependentUpon>PageSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageSelector.ascx.designer.cs">
+      <DependentUpon>PageSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PermissionsManager.ascx.cs">
+      <DependentUpon>PermissionsManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PermissionsManager.ascx.designer.cs">
+      <DependentUpon>PermissionsManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Popup.aspx.cs">
+      <DependentUpon>Popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Popup.aspx.designer.cs">
+      <DependentUpon>Popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopupWYSIWYG.aspx.cs">
+      <DependentUpon>PopupWYSIWYG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopupWYSIWYG.aspx.designer.cs">
+      <DependentUpon>PopupWYSIWYG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Post.aspx.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Post.aspx.designer.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Preview.aspx.cs">
+      <DependentUpon>Preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Preview.aspx.designer.cs">
+      <DependentUpon>Preview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Print.aspx.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print.aspx.designer.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Messages.fr-FR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.hi-IN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.hi-IN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.hu-HU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.hu-HU.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.it-IT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.it-IT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.ja-JP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.ja-JP.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.ko-KR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.ko-KR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.lv-LV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.lv-LV.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.nb-NO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.nb-NO.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.nl-NL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.nl-NL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.pl-PL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.pl-PL.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.pt-BR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.pt-BR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.pt-PT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.pt-PT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.ro-RO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.ro-RO.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.ru-RU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.ru-RU.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.sk-SK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.sk-SK.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.sr-Latn-CS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.sr-Latn-CS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.sv-SE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.sv-SE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.tr-TR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.tr-TR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.uk-UA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.uk-UA.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.vi-VN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.vi-VN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.zh-cn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.zh-cn.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Messages.zh-tw.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.zh-tw.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RandPage.aspx.cs">
+      <DependentUpon>RandPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RandPage.aspx.designer.cs">
+      <DependentUpon>RandPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RSS.aspx.cs">
+      <DependentUpon>RSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RSS.aspx.designer.cs">
+      <DependentUpon>RSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionRefresh.aspx.cs">
+      <DependentUpon>SessionRefresh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionRefresh.aspx.designer.cs">
+      <DependentUpon>SessionRefresh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitemap.aspx.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitemap.aspx.designer.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Thumb.aspx.cs">
+      <DependentUpon>Thumb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Thumb.aspx.designer.cs">
+      <DependentUpon>Thumb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderSelector.ascx.cs">
+      <DependentUpon>ProviderSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProviderSelector.ascx.designer.cs">
+      <DependentUpon>ProviderSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessDenied.aspx" />
+    <Content Include="Admin.aspx" />
+    <Content Include="AllPages.aspx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AccessDenied.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AllPages.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Captcha.ascx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Category.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Error.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\History.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\NavPath.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Operation.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PageNotFound.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Post.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Register.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Upload.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Captcha.ascx" />
+    <Content Include="Captcha.aspx" />
+    <Content Include="Category.aspx" />
+    <Content Include="Diff.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="GetFile.aspx" />
+    <Content Include="GPL.txt" />
+    <Content Include="History.aspx" />
+    <Content Include="Images\Alert.png" />
+    <Content Include="Images\Comment.png" />
+    <Content Include="Images\DatePick.png" />
+    <Content Include="Images\Dir.png" />
+    <Content Include="Images\Directory.png" />
+    <Content Include="Images\DirectoryUp.png" />
+    <Content Include="Images\Error.png" />
+    <Content Include="Images\File.png" />
+    <Content Include="Images\Icon.ico" />
+    <Content Include="Images\InputError.png" />
+    <Content Include="Images\LogError.png" />
+    <Content Include="Images\LogGeneral.png" />
+    <Content Include="Images\LogWarning.png" />
+    <Content Include="Images\PoweredBy.png" />
+    <Content Include="Images\Refresh.png" />
+    <Content Include="Images\Rename.png" />
+    <Content Include="Images\Trash.png" />
+    <Content Include="Images\Up.png" />
+    <Content Include="Images\Void.png" />
+    <Content Include="Images\Wait.gif" />
+    <Content Include="Import.aspx" />
+    <Content Include="JS\Readme.txt" />
+    <Content Include="JS\Scripts.js" />
+    <Content Include="Language.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="NavPath.aspx" />
+    <Content Include="Operation.aspx" />
+    <Content Include="PageNotFound.aspx" />
+    <Content Include="Post.aspx" />
+    <Content Include="Preview.aspx" />
+    <Content Include="Print.aspx" />
+    <Content Include="Profile.aspx" />
+    <Content Include="RandPage.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="RSS.aspx" />
+    <Content Include="SessionRefresh.aspx" />
+    <Content Include="Themes\Admin.css" />
+    <Content Include="Themes\Elegant\Icon.ico" />
+    <Content Include="Themes\Elegant\Images\Attachment.png" />
+    <Content Include="Themes\Elegant\Images\Background.gif" />
+    <Content Include="Themes\Elegant\Images\ExternalLink.gif" />
+    <Content Include="Themes\Elegant\Images\MessageDelete.png" />
+    <Content Include="Themes\Elegant\Images\MessageEdit.png" />
+    <Content Include="Themes\Elegant\Images\MessageReply.png" />
+    <Content Include="Themes\Elegant\Images\Print.png" />
+    <Content Include="Themes\Elegant\Images\RSS.png" />
+    <Content Include="Themes\Elegant\Images\Search.png" />
+    <Content Include="Themes\Elegant\Print_Styles.css" />
+    <Content Include="Themes\Elegant\Screen_Styles.css" />
+    <Content Include="Themes\Elegant\Scripts.js" />
+    <Content Include="Themes\Print.css" />
+    <Content Include="Upload.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\PageListBuilder.ascx.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.da-DK.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.de-DE.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.es-ES.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.fr-FR.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.hu-HU.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.it-IT.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.nb-NO.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.nl-NL.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.pl-PL.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.ro-RO.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.ru-RU.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.sk-SK.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.tr-TR.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.uk-UA.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.zh-cn.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Admin.master.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Category.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Default.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Error.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.ja-JP.resx" />
+    <Content Include="App_LocalResources\History.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Login.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.ja-JP.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.ja-JP.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Post.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Register.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Search.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\User.aspx.ja-JP.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Admin.master.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Category.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Default.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Error.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.af-ZA.resx" />
+    <Content Include="App_LocalResources\History.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Login.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.af-ZA.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.af-ZA.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Post.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Register.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Search.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\User.aspx.af-ZA.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Admin.master.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Category.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Default.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Error.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.pt-PT.resx" />
+    <Content Include="App_LocalResources\History.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Login.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.pt-PT.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.pt-PT.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Post.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Register.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Search.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\User.aspx.pt-PT.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Admin.master.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Category.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Default.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Error.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\History.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Login.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.fa-IR.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Post.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Register.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Search.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\User.aspx.fa-IR.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Admin.master.lv-LV.resx" />
+    <Content Include="App_LocalResources\Admin.master.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.lv-LV.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Category.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Category.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Default.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Default.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Error.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Error.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.lv-LV.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.sv-SE.resx" />
+    <Content Include="App_LocalResources\History.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\History.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Login.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Login.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.lv-LV.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.sv-SE.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.lv-LV.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.sv-SE.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.lv-LV.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Post.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Post.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Register.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Register.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Search.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Search.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\User.aspx.lv-LV.resx" />
+    <Content Include="App_LocalResources\User.aspx.sv-SE.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Admin.master.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Category.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Default.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Error.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.ko-KR.resx" />
+    <Content Include="App_LocalResources\History.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Login.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.ko-KR.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.ko-KR.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Post.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Register.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Search.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\User.aspx.ko-KR.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Admin.master.pt-BR.resx" />
+    <Content Include="App_LocalResources\Admin.master.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.pt-BR.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Category.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Category.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Default.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Default.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Error.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Error.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.pt-BR.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.vi-VN.resx" />
+    <Content Include="App_LocalResources\History.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\History.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Login.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Login.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.pt-BR.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.vi-VN.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.pt-BR.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.vi-VN.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.pt-BR.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Post.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Post.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Register.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Register.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Search.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Search.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\User.aspx.pt-BR.resx" />
+    <Content Include="App_LocalResources\User.aspx.vi-VN.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Admin.master.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.hi-IN.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Category.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Default.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Error.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.hi-IN.resx" />
+    <Content Include="App_LocalResources\History.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Login.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.hi-IN.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\PageListBuilder.ascx.hi-IN.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Post.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Register.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Search.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.hi-IN.resx" />
+    <Content Include="App_LocalResources\User.aspx.hi-IN.resx" />
+    <EmbeddedResource Include="Properties\Messages.af-ZA.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.af-ZA.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.cs-CZ.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.cs-CZ.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.da-DK.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.da-DK.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.de-DE.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.de-DE.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.es-ES.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.es-ES.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.fa-IR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.fa-IR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.fr-FR.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.fr-FR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.hi-IN.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.hi-IN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.hu-HU.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.hu-HU.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.it-IT.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.it-IT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.ja-JP.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.ko-KR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.ko-KR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.lv-LV.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.lv-LV.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.nb-NO.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.nb-NO.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.nl-NL.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.nl-NL.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.pl-PL.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.pl-PL.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.pt-BR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.pt-BR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.pt-PT.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.pt-PT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.ro-RO.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.ro-RO.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.ru-RU.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.ru-RU.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.sk-SK.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.sk-SK.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.sr-Latn-CS.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.sv-SE.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.sv-SE.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.tr-TR.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.tr-TR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.uk-UA.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.uk-UA.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.vi-VN.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.vi-VN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.zh-cn.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.zh-cn.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Messages.zh-tw.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.zh-tw.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="App_LocalResources\AccessDenied.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Admin.master.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.pl-PL.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Category.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Default.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Error.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.pl-PL.resx" />
+    <Content Include="App_LocalResources\History.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Login.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.pl-PL.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Post.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Register.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Search.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\User.aspx.pl-PL.resx" />
+    <Content Include="App_LocalResources\User.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\User.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\User.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\User.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\User.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\User.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\User.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\User.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\User.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\User.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\User.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\User.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\User.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\User.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\User.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\User.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\User.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\User.aspx.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.ro-RO.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.ru-RU.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.sk-SK.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.tr-TR.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.uk-UA.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.zh-cn.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.zh-tw.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.cs-CZ.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.da-DK.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.de-DE.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.es-ES.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.fr-FR.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.hu-HU.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.it-IT.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.nb-NO.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.nl-NL.resx" />
+    <Content Include="App_LocalResources\MasterPageSA.Master.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminProviders.aspx.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminContent.aspx.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminNavPaths.aspx.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminConfig.aspx.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminLog.aspx.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminSnippets.aspx.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminCategories.aspx.resx" />
+    <Content Include="App_LocalResources\Default.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Default.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\Default.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\Default.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\Default.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\Default.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Default.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\Default.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\Default.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\Default.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\Default.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\Default.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\Default.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\Default.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\Default.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\Default.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\Default.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\Default.aspx.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.da-DK.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.de-DE.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.es-ES.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.fr-FR.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.hu-HU.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.it-IT.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.nb-NO.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.nl-NL.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.ro-RO.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.ru-RU.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.sk-SK.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.tr-TR.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.uk-UA.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.zh-cn.resx" />
+    <Content Include="App_LocalResources\PermissionsManager.ascx.zh-tw.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.zh-CN.resx" />
+    <Content Include="App_LocalResources\Edit.aspx.zh-TW.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.da-DK.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.de-DE.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.es-ES.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.it-IT.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AclActionsSelector.ascx.zh-tw.resx" />
+    <Content Include="App_LocalResources\Admin.master.cs-CZ.resx" />
+    <Content Include="App_LocalResources\Admin.master.da-DK.resx" />
+    <Content Include="App_LocalResources\Admin.master.de-DE.resx" />
+    <Content Include="App_LocalResources\Admin.master.es-ES.resx" />
+    <Content Include="App_LocalResources\Admin.master.fr-FR.resx" />
+    <Content Include="App_LocalResources\Admin.master.hu-HU.resx" />
+    <Content Include="App_LocalResources\Admin.master.it-IT.resx" />
+    <Content Include="App_LocalResources\Admin.master.nb-NO.resx" />
+    <Content Include="App_LocalResources\Admin.master.nl-NL.resx" />
+    <Content Include="App_LocalResources\Admin.master.resx" />
+    <Content Include="App_LocalResources\Admin.master.ro-RO.resx" />
+    <Content Include="App_LocalResources\Admin.master.ru-RU.resx" />
+    <Content Include="App_LocalResources\Admin.master.sk-SK.resx" />
+    <Content Include="App_LocalResources\Admin.master.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\Admin.master.tr-TR.resx" />
+    <Content Include="App_LocalResources\Admin.master.uk-UA.resx" />
+    <Content Include="App_LocalResources\Admin.master.zh-cn.resx" />
+    <Content Include="App_LocalResources\Admin.master.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminGroups.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminHome.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminNamespaces.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminPages.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\AdminUsers.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Search.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Register.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Post.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Login.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\History.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Error.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Category.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.uk-UA.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\Search.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\Register.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\Post.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\Login.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\History.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.da-DK.resx" />
+    <Content Include="App_LocalResources\Error.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.da-DK.resx" />
+    <Content Include="App_LocalResources\Category.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.da-DK.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.da-DK.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.da-DK.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.da-DK.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.it-IT.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\ImageEditor.aspx.resx" />
+    <Content Include="App_LocalResources\Search.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Search.aspx.ru-RU.resx" />
+    <Content Include="App_LocalResources\Search.aspx.sk-SK.resx" />
+    <Content Include="App_LocalResources\Search.aspx.sr-Latn-CS.resx" />
+    <Content Include="App_LocalResources\Search.aspx.tr-TR.resx" />
+    <Content Include="App_LocalResources\Search.aspx.zh-cn.resx" />
+    <Content Include="App_LocalResources\Search.aspx.zh-tw.resx" />
+    <Content Include="App_LocalResources\Search.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\Search.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\Search.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\Search.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\Search.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\Search.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\Search.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\Search.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\Search.aspx.resx" />
+    <Content Include="App_LocalResources\AccessDenied.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AllPages.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.ro-RO.resx" />
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Captcha.ascx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Category.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Error.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\FileManager.ascx.ro-RO.resx" />
+    <Content Include="App_LocalResources\History.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Login.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\NavPath.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Operation.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\PageNotFound.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Popup.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Post.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Profile.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Register.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Upload.aspx.ro-RO.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.resx" />
+    <Content Include="App_LocalResources\Editor.ascx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Editor.ascx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.cs-CZ.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.de-DE.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.es-ES.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.fr-FR.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.hu-HU.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.it-IT.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.nb-NO.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.nl-NL.resx" />
+    <Content Include="App_LocalResources\PopupWYSIWYG.aspx.resx" />
+    <Content Include="App_LocalResources\AttachmentManager.ascx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentManager.ascx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\AttachmentViewer.ascx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\FileManager.ascx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.sk-SK.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.sr-Latn-CS.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.de-DE.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.es-ES.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.fr-FR.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.hu-HU.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.it-IT.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.nb-NO.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.nl-NL.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Popup.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AttachmentManager.ascx" />
+    <Content Include="AttachmentViewer.ascx" />
+    <Content Include="ClientImageBrowser.ascx" />
+    <Content Include="ClientTree.ascx" />
+    <Content Include="Edit.aspx" />
+    <Content Include="Editor.ascx" />
+    <Content Include="FileManager.ascx" />
+    <Content Include="IFrameEditor.aspx" />
+    <Content Include="Images\Editor\Anchor.png" />
+    <Content Include="Images\Editor\Bold.png" />
+    <Content Include="Images\Editor\Box.png" />
+    <Content Include="Images\Editor\BR.png" />
+    <Content Include="Images\Editor\Code.png" />
+    <Content Include="Images\Editor\Comment.png" />
+    <Content Include="Images\Editor\Directory.png" />
+    <Content Include="Images\Editor\EditorBigger.png" />
+    <Content Include="Images\Editor\EditorSmaller.png" />
+    <Content Include="Images\Editor\Escape.png" />
+    <Content Include="Images\Editor\File.png" />
+    <Content Include="Images\Editor\Folder.png" />
+    <Content Include="Images\Editor\FolderUp.png" />
+    <Content Include="Images\Editor\H1.png" />
+    <Content Include="Images\Editor\H2.png" />
+    <Content Include="Images\Editor\H3.png" />
+    <Content Include="Images\Editor\H4.png" />
+    <Content Include="Images\Editor\HR.png" />
+    <Content Include="Images\Editor\Image.png" />
+    <Content Include="Images\Editor\Img.png" />
+    <Content Include="Images\Editor\Italic.png" />
+    <Content Include="Images\Editor\Link.png" />
+    <Content Include="Images\Editor\NoWiki.png" />
+    <Content Include="Images\Editor\PageLink.png" />
+    <Content Include="Images\Editor\Pre.png" />
+    <Content Include="Images\Editor\PreEsc.png" />
+    <Content Include="Images\Editor\Preview.png" />
+    <Content Include="Images\Editor\Progress.gif" />
+    <Content Include="Images\Editor\Refresh.png" />
+    <Content Include="Images\Editor\Snippet.png" />
+    <Content Include="Images\Editor\SpecialTags.png" />
+    <Content Include="Images\Editor\Striked.png" />
+    <Content Include="Images\Editor\Subscript.png" />
+    <Content Include="Images\Editor\Superscript.png" />
+    <Content Include="Images\Editor\Symbol.png" />
+    <Content Include="Images\Editor\Underlined.png" />
+    <Content Include="MasterPage.master" />
+    <Content Include="Popup.aspx" />
+    <Content Include="PopupWYSIWYG.aspx" />
+    <Content Include="Themes\Default\Icon.ico" />
+    <Content Include="Themes\Default\Images\Attachment.png" />
+    <Content Include="Themes\Default\Images\ExternalLink.gif" />
+    <Content Include="Themes\Default\Images\MessageDelete.png" />
+    <Content Include="Themes\Default\Images\MessageEdit.png" />
+    <Content Include="Themes\Default\Images\MessageReply.png" />
+    <Content Include="Themes\Default\Images\Print.png" />
+    <Content Include="Themes\Default\Images\RSS.png" />
+    <Content Include="Themes\Default\Images\Search.png" />
+    <Content Include="Themes\Default\Print_Styles.css" />
+    <Content Include="Themes\Default\Screen_Styles.css" />
+    <Content Include="Themes\Default\Scripts.js" />
+    <Content Include="Themes\Editor.css" />
+    <Content Include="Thumb.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AclEngine\AclEngine.csproj">
+      <Project>{44B0F4C1-8CDC-4272-B2A2-C0AF689CEB81}</Project>
+      <Name>AclEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BackupRestore\BackupRestore.csproj">
+      <Project>{06320590-F6FC-4F8B-B3A2-2B5991676BE8}</Project>
+      <Name>BackupRestore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{C353A35C-86D0-4154-9500-4F88CAAB29C3}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginFramework\PluginFramework.csproj">
+      <Project>{531A83D6-76F9-4014-91C5-295818E2D948}</Project>
+      <Name>PluginFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SearchEngine\SearchEngine.csproj">
+      <Project>{2DF980A6-4742-49B1-A090-DE79314644D0}</Project>
+      <Name>SearchEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AclActionsSelector.ascx" />
+    <Content Include="Admin.master" />
+    <Content Include="AdminCategories.aspx" />
+    <Content Include="AdminConfig.aspx" />
+    <Content Include="AdminContent.aspx" />
+    <Content Include="AdminGroups.aspx" />
+    <Content Include="AdminHome.aspx" />
+    <Content Include="AdminLog.aspx" />
+    <Content Include="AdminNamespaces.aspx" />
+    <Content Include="AdminNavPaths.aspx" />
+    <Content Include="AdminPages.aspx" />
+    <Content Include="AdminProviders.aspx" />
+    <Content Include="AdminSnippets.aspx" />
+    <Content Include="AdminUsers.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="ImageEditor.aspx" />
+    <Content Include="Images\ArrowRight.png" />
+    <Content Include="Images\Blank.png" />
+    <Content Include="Images\Editor\TranspBG.png" />
+    <Content Include="Images\Filter.png" />
+    <Content Include="PageDiscussion.ascx" />
+    <Content Include="PermissionsManager.ascx" />
+    <Content Include="Search.aspx" />
+    <Content Include="ProviderSelector.ascx" />
+    <Content Include="Themes\Default\Images\EmailNotifOff.png" />
+    <Content Include="Themes\Default\Images\EmailNotifOn.png" />
+    <Content Include="Themes\Default\Images\File.png" />
+    <Content Include="Themes\Default\Images\Message.png" />
+    <Content Include="Themes\Default\Images\Page.png" />
+    <Content Include="Themes\Default\Images\Redirect.png" />
+    <Content Include="Themes\Elegant\Images\EmailNotifOff.png" />
+    <Content Include="Themes\Elegant\Images\EmailNotifOn.png" />
+    <Content Include="Themes\Elegant\Images\File.png" />
+    <Content Include="Themes\Elegant\Images\Message.png" />
+    <Content Include="Themes\Elegant\Images\Page.png" />
+    <Content Include="Themes\Elegant\Images\Redirect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app_online.htm" />
+    <Content Include="Images\Editor\NoBr.png" />
+    <Content Include="Images\SearchIcon.ico" />
+    <Content Include="LanguageSelector.ascx" />
+    <Content Include="MasterPageSA.Master" />
+    <Content Include="PageSelector.ascx" />
+    <Content Include="Themes\Default\Images\DropDown.png" />
+    <Content Include="Themes\Elegant\Images\DropDown.png" />
+    <Content Include="User.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Editor\OL.png" />
+    <Content Include="Images\Editor\UL.png" />
+    <Content Include="JS\jquery-1.4.2.min.js" />
+    <Content Include="JS\SearchHighlight.js" />
+    <Content Include="PageListBuilder.ascx" />
+    <Content Include="Sitemap.aspx" />
+    <Content Include="Themes\Default-v2\Icon.ico" />
+    <Content Include="Themes\Default-v2\Images\Attachment.png" />
+    <Content Include="Themes\Default-v2\Images\Background.gif" />
+    <Content Include="Themes\Default-v2\Images\DropDown.png" />
+    <Content Include="Themes\Default-v2\Images\EmailNotifOff-Discussion.png" />
+    <Content Include="Themes\Default-v2\Images\EmailNotifOff.png" />
+    <Content Include="Themes\Default-v2\Images\EmailNotifOn-Discussion.png" />
+    <Content Include="Themes\Default-v2\Images\EmailNotifOn.png" />
+    <Content Include="Themes\Default-v2\Images\ExternalLink.gif" />
+    <Content Include="Themes\Default-v2\Images\File.png" />
+    <Content Include="Themes\Default-v2\Images\Message.png" />
+    <Content Include="Themes\Default-v2\Images\MessageDelete.png" />
+    <Content Include="Themes\Default-v2\Images\MessageEdit.png" />
+    <Content Include="Themes\Default-v2\Images\MessageReply.png" />
+    <Content Include="Themes\Default-v2\Images\Page.png" />
+    <Content Include="Themes\Default-v2\Images\Print.png" />
+    <Content Include="Themes\Default-v2\Images\Redirect.png" />
+    <Content Include="Themes\Default-v2\Images\RSS-Discussion.png" />
+    <Content Include="Themes\Default-v2\Images\RSS.png" />
+    <Content Include="Themes\Default-v2\Images\Search.png" />
+    <Content Include="Themes\Default-v2\Print_Styles.css" />
+    <Content Include="Themes\Default-v2\Screen_Styles.css" />
+    <Content Include="Themes\Default-v2\Scripts.js" />
+    <Content Include="Themes\Default\Images\EmailNotifOff-Discussion.png" />
+    <Content Include="Themes\Default\Images\EmailNotifOn-Discussion.png" />
+    <Content Include="Themes\Default\Images\MainBackground.gif" />
+    <Content Include="Themes\Default\Images\RSS-Discussion.png" />
+    <Content Include="Themes\Elegant\Images\EmailNotifOff-Discussion.png" />
+    <Content Include="Themes\Elegant\Images\EmailNotifOn-Discussion.png" />
+    <Content Include="Themes\Elegant\Images\RSS-Discussion.png" />
+    <Content Include="Web.SqlServer.Release.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10043</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
