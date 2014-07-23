@@ -8,6 +8,10 @@ namespace ScrewTurn.Wiki.AclEngine {
 	/// </summary>
 	public class AclEntry : IEquatable<AclEntry>
 	{
+		/// <summary>
+		/// Gets a hash code for this AclEntry.
+		/// </summary>
+		/// <returns></returns>
 		public override int GetHashCode( )
 		{
 			unchecked
