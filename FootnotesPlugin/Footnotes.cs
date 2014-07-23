@@ -11,14 +11,14 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 
 		// Kindly contributed by Jens Felsner
 
-		private static readonly ComponentInformation info = new ComponentInformation("Footnotes Plugin", "Threeplicate Srl", "3.0.1.472", "http://www.screwturn.eu", "http://www.screwturn.eu/Version/PluginPack/Footnotes2.txt");
+		private static readonly ComponentInformation Info = new ComponentInformation("Footnotes Plugin", "Threeplicate Srl", "3.0.2.473", "", "");
 
 		private static readonly Regex ReferencesRegex = new Regex("(<[ ]*references[ ]*/[ ]*>|<[ ]*references[ ]*>.*?<[ ]*/[ ]*references[ ]*>)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 		private static readonly Regex RefRegex = new Regex("<[ ]*ref[ ]*>.*?<[ ]*/[ ]*ref[ ]*>", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 		private static readonly Regex RefRemovalRegex = new Regex("(<[ ]*ref[ ]*>|<[ ]*/[ ]*ref[ ]*>)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-		private IHostV30 host = null;
-		private string config = "";
+		private IHostV30 _host = null;
+		private string _config = string.Empty;
 
 		/// <summary>
 		/// Initializes the Storage Provider.
@@ -28,13 +28,14 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 		/// <exception cref="ArgumentNullException">If <paramref name="host"/> or <paramref name="config"/> are <c>null</c>.</exception>
 		/// <exception cref="InvalidConfigurationException">If <paramref name="config"/> is not valid or is incorrect.</exception>
 		public void Init(IHostV30 host, string config) {
-			this.host = host;
-			this.config = config != null ? config : "";
+			_host = host;
+			_config = config ?? string.Empty;
 		}
 
 		// Replaces the first occurence of 'find' in 'input' with 'replace'
-		private static string ReplaceFirst(string input, string find, string replace) {
-			return input.Substring(0, input.IndexOf(find)) + replace + input.Substring(input.IndexOf(find) + find.Length);
+		private static string ReplaceFirst(string input, string find, string replace)
+		{
+			return input.Substring( 0, input.IndexOf( find, StringComparison.Ordinal ) ) + replace + input.Substring( input.IndexOf( find, StringComparison.Ordinal ) + find.Length );
 		}
 
 		/// <summary>
@@ -57,7 +58,7 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 			}
 
 			string output = raw;
-			string ref_string = "<table class=\"footnotes\">";
+			string refString = "<table class=\"footnotes\">";
 
 			int footnoteCounter = 0;
 
@@ -66,12 +67,12 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 				footnoteCounter++;
 				output = ReplaceFirst(output, m.Value, "<a id=\"refnote" + footnoteCounter + "\" href=\"#footnote" + footnoteCounter + "\"><sup>" + footnoteCounter + "</sup></a>");
 
-				ref_string += "<tr><td><a id=\"footnote" + footnoteCounter + "\" href=\"#refnote" + footnoteCounter + "\"><sup>" + footnoteCounter + "</sup></a></td><td>" + RefRemovalRegex.Replace(m.Value, "") + "</td></tr>";
+				refString += "<tr><td><a id=\"footnote" + footnoteCounter + "\" href=\"#refnote" + footnoteCounter + "\"><sup>" + footnoteCounter + "</sup></a></td><td>" + RefRemovalRegex.Replace(m.Value, "") + "</td></tr>";
 			}
-			ref_string += "</table>";
+			refString += "</table>";
 
 			// Replace <reference/> with ref-section
-			output = ReferencesRegex.Replace(output, ref_string);
+			output = ReferencesRegex.Replace(output, refString);
 
 			return output;
 		}
@@ -131,7 +132,7 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 		/// Gets the Information about the Provider.
 		/// </summary>
 		public ComponentInformation Information {
-			get { return info; }
+			get { return Info; }
 		}
 
 		/// <summary>
