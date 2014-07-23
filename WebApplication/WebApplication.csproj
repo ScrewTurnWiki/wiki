@@ -2729,15 +2729,15 @@
       <Name>AclEngine</Name>
     </ProjectReference>
     <ProjectReference Include="..\BackupRestore\BackupRestore.csproj">
-      <Project>{06320590-F6FC-4F8B-B3A2-2B5991676BE8}</Project>
+      <Project>{06320590-f6fc-4f8b-b3a2-2b5991676be8}</Project>
       <Name>BackupRestore</Name>
     </ProjectReference>
     <ProjectReference Include="..\Core\Core.csproj">
-      <Project>{C353A35C-86D0-4154-9500-4F88CAAB29C3}</Project>
+      <Project>{c353a35c-86d0-4154-9500-4f88caab29c3}</Project>
       <Name>Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\PluginFramework\PluginFramework.csproj">
-      <Project>{531A83D6-76F9-4014-91C5-295818E2D948}</Project>
+      <Project>{531a83d6-76f9-4014-91c5-295818e2d948}</Project>
       <Name>PluginFramework</Name>
     </ProjectReference>
     <ProjectReference Include="..\SearchEngine\SearchEngine.csproj">
