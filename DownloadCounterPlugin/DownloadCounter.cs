@@ -183,7 +183,7 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 		private static string TryGetAttribute(XmlNode node, string attribute) {
 			XmlAttribute attr = node.Attributes[attribute];
 			if(attr != null) return attr.Value;
-			else return null;
+			return null;
 		}
 
 		/// <summary>

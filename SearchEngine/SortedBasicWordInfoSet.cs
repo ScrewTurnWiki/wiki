@@ -60,7 +60,7 @@ namespace ScrewTurn.Wiki.SearchEngine {
 				items.Insert(~idx, item);
 				return true;
 			}
-			else return false;
+			return false;
 		}
 
 		/// <summary>

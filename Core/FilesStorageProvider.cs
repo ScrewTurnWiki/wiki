@@ -470,7 +470,7 @@ namespace ScrewTurn.Wiki {
 					if(fields[0].ToLowerInvariant() == lowercaseFullName) {
 						int res = 0;
 						if(int.TryParse(fields[1], out res)) return res;
-						else return 0;
+						return 0;
 					}
 				}
 			}
@@ -851,7 +851,7 @@ namespace ScrewTurn.Wiki {
 					if(fields[0].ToLowerInvariant() == lowercaseFullName) {
 						int count;
 						if(int.TryParse(fields[1], out count)) return count;
-						else return 0;
+						return 0;
 					}
 				}
 			}

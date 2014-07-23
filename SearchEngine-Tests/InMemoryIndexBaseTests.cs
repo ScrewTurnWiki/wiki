@@ -138,10 +138,11 @@ namespace ScrewTurn.Wiki.SearchEngine.Tests {
 				new DumpedWordMapping(words[10].ID, documents[1].ID, new BasicWordInfo(20, 4, WordLocation.Content)),
 				new DumpedWordMapping(words[11].ID, documents[1].ID, new BasicWordInfo(28, 5, WordLocation.Content)) };
 
-			index.SetBuildDocumentDelegate(delegate(DumpedDocument d) {
-				if(d.Name == "doc") return doc;
-				else return null;
-			});
+			index.SetBuildDocumentDelegate(delegate(DumpedDocument d)
+			                               {
+				                               if(d.Name == "doc") return doc;
+				                               return null;
+			                               } );
 
 			index.InitializeData(documents, words, mappings);
 

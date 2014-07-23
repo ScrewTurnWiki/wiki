@@ -16,9 +16,10 @@ namespace ScrewTurn.Wiki {
 		/// Gets the current Session object.
 		/// </summary>
 		private static HttpSessionState Session {
-			get {
+			get
+			{
 				if(HttpContext.Current == null) return null;
-				else return HttpContext.Current.Session;
+				return HttpContext.Current.Session;
 			}
 		}
 
@@ -42,32 +43,27 @@ namespace ScrewTurn.Wiki {
 		/// Gets the current user, if any.
 		/// </summary>
 		/// <returns>The current user, or <c>null</c>.</returns>
-		public static UserInfo GetCurrentUser() {
+		public static UserInfo GetCurrentUser()
+		{
 			if(Session != null) {
 				string sessionId = Session.SessionID;
 
 				UserInfo current = SessionCache.GetCurrentUser(sessionId);
 				if(current != null) return current;
-				else {
-					string un = CurrentUsername;
-					if(string.IsNullOrEmpty(un)) return null;
-					else if(un == AnonymousUsername) return Users.GetAnonymousAccount();
-					else {
-						current = Users.FindUser(un);
-						if(current != null) {
-							SessionCache.SetCurrentUser(sessionId, current);
-							return current;
-						}
-						else {
-							// Username is invalid
-							Session.Clear();
-							Session.Abandon();
-							return null;
-						}
-					}
+				string un = CurrentUsername;
+				if(string.IsNullOrEmpty(un)) return null;
+				if(un == AnonymousUsername) return Users.GetAnonymousAccount();
+				current = Users.FindUser(un);
+				if(current != null) {
+					SessionCache.SetCurrentUser(sessionId, current);
+					return current;
 				}
+				// Username is invalid
+				Session.Clear();
+				Session.Abandon();
+				return null;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -82,13 +78,14 @@ namespace ScrewTurn.Wiki {
 		public static string GetCurrentUsername() {
 			string un = CurrentUsername;
 			if(string.IsNullOrEmpty(un)) return AnonymousUsername;
-			else return un;
+			return un;
 		}
 
 		/// <summary>
 		/// Gets the current user groups.
 		/// </summary>
-		public static UserGroup[] GetCurrentGroups() {
+		public static UserGroup[] GetCurrentGroups()
+		{
 			if(Session != null) {
 				string sessionId = Session.SessionID;
 				UserGroup[] groups = SessionCache.GetCurrentGroups(sessionId);
@@ -113,7 +110,7 @@ namespace ScrewTurn.Wiki {
 
 				return groups;
 			}
-			else return new UserGroup[0];
+			return new UserGroup[0];
 		}
 
 		/// <summary>

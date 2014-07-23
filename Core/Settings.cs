@@ -72,9 +72,10 @@ namespace ScrewTurn.Wiki {
 		/// Gets direction of the application
 		/// </summary>
 		public static string Direction {
-			get {
+			get
+			{
 				if(Tools.IsRightToLeftCulture()) return "rtl";
-				else return "ltr";
+				return "ltr";
 			}
 		}
 
@@ -172,11 +173,9 @@ namespace ScrewTurn.Wiki {
 
 				string pubDirName = PublicDirectoryName;
 				if(Path.IsPathRooted(pubDirName)) return pubDirName;
-				else {
-					string path = Path.Combine(RootDirectory, pubDirName);
-					if(!path.EndsWith(Path.DirectorySeparatorChar.ToString())) path += Path.DirectorySeparatorChar;
-					return path;
-				}
+				string path = Path.Combine(RootDirectory, pubDirName);
+				if(!path.EndsWith(Path.DirectorySeparatorChar.ToString())) path += Path.DirectorySeparatorChar;
+				return path;
 			}
 		}
 
@@ -189,7 +188,7 @@ namespace ScrewTurn.Wiki {
 				if(string.IsNullOrEmpty(dir)) throw new InvalidConfigurationException("PublicDirectory cannot be empty or null");
 				dir = dir.Trim('\\', '/'); // Remove '/' and '\' from head and tail
 				if(string.IsNullOrEmpty(dir)) throw new InvalidConfigurationException("PublicDirectory cannot be empty or null");
-				else return dir;
+				return dir;
 			}
 		}
 
@@ -246,12 +245,10 @@ namespace ScrewTurn.Wiki {
 		/// <returns>The result.</returns>
 		private static bool GetBool(string value, bool def) {
 			if(value == null) return def;
-			else {
-				if(value.ToLowerInvariant() == "yes") return true;
-				bool b = def;
-				bool.TryParse(value, out b);
-				return b;
-			}
+			if(value.ToLowerInvariant() == "yes") return true;
+			bool b = def;
+			bool.TryParse(value, out b);
+			return b;
 		}
 
 		/// <summary>
@@ -269,9 +266,10 @@ namespace ScrewTurn.Wiki {
 		/// <param name="value">The raw string.</param>
 		/// <param name="def">The default value, returned when the raw string is <c>null</c>.</param>
 		/// <returns>The result.</returns>
-		private static string GetString(string value, string def) {
+		private static string GetString(string value, string def)
+		{
 			if(string.IsNullOrEmpty(value)) return def;
-			else return value;
+			return value;
 		}
 
 		/// <summary>
@@ -847,7 +845,7 @@ namespace ScrewTurn.Wiki {
 		public static string GetThemePath(string nspace) {
 			string theme = GetTheme(nspace);
 			if(!Directory.Exists(ThemesDirectory + theme)) return ThemesDirectoryName + "/Default/";
-			else return ThemesDirectoryName + "/" + theme + "/";
+			return ThemesDirectoryName + "/" + theme + "/";
 		}
 
 		/// <summary>

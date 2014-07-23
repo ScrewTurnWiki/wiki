@@ -362,9 +362,10 @@ namespace ScrewTurn.Wiki {
 		/// Gets or sets the current directory.
 		/// </summary>
 		private string CurrentDirectory {
-			get {
+			get
+			{
 				if(ViewState["CurrDir"] != null) return ((string)ViewState["CurrDir"]).Replace("//", "/");
-				else return "/";
+				return "/";
 			}
 			set { ViewState["CurrDir"] = value.Replace("//", "/"); }
 		}

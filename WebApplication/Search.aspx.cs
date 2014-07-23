@@ -135,10 +135,11 @@ namespace ScrewTurn.Wiki {
 		/// Gets the search mode string.
 		/// </summary>
 		/// <returns>The search mode string.</returns>
-		private string GetMode() {
+		private string GetMode()
+		{
 			if(rdoAtLeastOneWord.Checked) return "1";
-			else if(rdoAllWords.Checked) return "2";
-			else return "3";
+			if(rdoAllWords.Checked) return "2";
+			return "3";
 		}
 
 		/// <summary>
@@ -383,33 +384,33 @@ namespace ScrewTurn.Wiki {
 					FormattingPipeline.PrepareTitle(pageDoc.Title, false, FormattingContext.PageContent, pageDoc.PageInfo),
 					result.Relevance.Value, GetExcerpt(pageDoc.PageInfo, result.Matches));
 			}
-			else if(result.Document.TypeTag == MessageDocument.StandardTypeTag) {
+			if(result.Document.TypeTag == MessageDocument.StandardTypeTag) {
 				MessageDocument msgDoc = result.Document as MessageDocument;
 
 				PageContent content = Content.GetPageContent(msgDoc.PageInfo, true);
 
 				return new SearchResultRow(msgDoc.PageInfo.FullName + Settings.PageExtension + "?" + queryStringKeywords +"&amp;Discuss=1#" + Tools.GetMessageIdForAnchor(msgDoc.DateTime), Message,
-					FormattingPipeline.PrepareTitle(msgDoc.Title, false, FormattingContext.MessageBody, content.PageInfo) + " (" +
-					FormattingPipeline.PrepareTitle(content.Title, false, FormattingContext.MessageBody, content.PageInfo) +
-					")", result.Relevance.Value, GetExcerpt(msgDoc.PageInfo, msgDoc.MessageID, result.Matches));
+				                           FormattingPipeline.PrepareTitle(msgDoc.Title, false, FormattingContext.MessageBody, content.PageInfo) + " (" +
+				                           FormattingPipeline.PrepareTitle(content.Title, false, FormattingContext.MessageBody, content.PageInfo) +
+				                           ")", result.Relevance.Value, GetExcerpt(msgDoc.PageInfo, msgDoc.MessageID, result.Matches));
 			}
-			else if(result.Document.TypeTag == FileDocument.StandardTypeTag) {
+			if(result.Document.TypeTag == FileDocument.StandardTypeTag) {
 				FileDocument fileDoc = result.Document as FileDocument;
 
 				return new SearchResultRow("GetFile.aspx?File=" + Tools.UrlEncode(fileDoc.Name.Substring(fileDoc.Provider.Length + 1)) +
-					"&amp;Provider=" + Tools.UrlEncode(fileDoc.Provider),
-					File, fileDoc.Title, result.Relevance.Value, "");
+				                           "&amp;Provider=" + Tools.UrlEncode(fileDoc.Provider),
+				                           File, fileDoc.Title, result.Relevance.Value, "");
 			}
-			else if(result.Document.TypeTag == PageAttachmentDocument.StandardTypeTag) {
+			if(result.Document.TypeTag == PageAttachmentDocument.StandardTypeTag) {
 				PageAttachmentDocument attnDoc = result.Document as PageAttachmentDocument;
 				PageContent content = Content.GetPageContent(attnDoc.Page, false);
 
 				return new SearchResultRow(attnDoc.Page.FullName + Settings.PageExtension, Attachment,
-					attnDoc.Title + " (" +
-					FormattingPipeline.PrepareTitle(content.Title, false, FormattingContext.PageContent, content.PageInfo) +
-					")", result.Relevance.Value, "");
+				                           attnDoc.Title + " (" +
+				                           FormattingPipeline.PrepareTitle(content.Title, false, FormattingContext.PageContent, content.PageInfo) +
+				                           ")", result.Relevance.Value, "");
 			}
-			else throw new NotSupportedException();
+			throw new NotSupportedException();
 		}
 
 		/// <summary>

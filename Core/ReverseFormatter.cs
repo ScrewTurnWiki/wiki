@@ -380,11 +380,9 @@ namespace ScrewTurn.Wiki {
 							if(node.Attributes["class"] != null && node.Attributes["class"].Value.Contains("imagedescription")) {
 								continue;
 							}
-							else {
-								ProcessChild(node.ChildNodes, sb);
-								sb.Append("\n");
-								if(!Settings.ProcessSingleLineBreaks) sb.Append("\n");
-							}
+							ProcessChild(node.ChildNodes, sb);
+							sb.Append("\n");
+							if(!Settings.ProcessSingleLineBreaks) sb.Append("\n");
 							break;
 						case "div":
 							if(node.Attributes["class"] != null && node.Attributes["class"].Value.Contains("box")) {
@@ -547,9 +545,7 @@ namespace ScrewTurn.Wiki {
 				ProcessChild(x.FirstChild.ChildNodes, sb);
 				return sb.ToString();
 			}
-			else {
-				return "";
-			}
+			return "";
 		}
 	}
 }

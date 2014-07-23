@@ -141,18 +141,18 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				PageInfo page = GetPage(pageName);
 
 				if(page == null) return null;
-				else return new PageDocument(page, dumpedDocument, TokenizeContent);
+				return new PageDocument(page, dumpedDocument, TokenizeContent);
 			}
-			else if(dumpedDocument.TypeTag == MessageDocument.StandardTypeTag) {
+			if(dumpedDocument.TypeTag == MessageDocument.StandardTypeTag) {
 				string pageFullName;
 				int id;
 				MessageDocument.GetMessageDetails(dumpedDocument.Name, out pageFullName, out id);
 
 				PageInfo page = GetPage(pageFullName);
 				if(page == null) return null;
-				else return new MessageDocument(page, id, dumpedDocument, TokenizeContent);
+				return new MessageDocument(page, id, dumpedDocument, TokenizeContent);
 			}
-			else return null;
+			return null;
 		}
 
 		// Extremely dirty way for testing the search engine in combination with alwaysGenerateDocument
@@ -450,7 +450,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			int id = ExecuteScalar<int>(command, -1, false);
 
 			if(id == -1) return 0;
-			else return (uint)id + 1;
+			return (uint)id + 1;
 		}
 
 		/// <summary>
@@ -761,7 +761,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -804,7 +804,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -869,7 +869,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -896,7 +896,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			int rows = ExecuteNonQuery(command);
 
 			if(rows == 1) return new NamespaceInfo(name, this, null);
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -967,10 +967,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return null;
-			}
+			RollbackTransaction(transaction);
+			return null;
 		}
 
 		/// <summary>
@@ -1012,10 +1010,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				CommitTransaction(transaction);
 				return new NamespaceInfo(nspace.Name, this, page);
 			}
-			else {
-				RollbackTransaction(transaction);
-				return null;
-			}
+			RollbackTransaction(transaction);
+			return null;
 		}
 
 		/// <summary>
@@ -1068,10 +1064,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 			NamespaceInfo nspace = GetNamespace(transaction, nspaceName);
 			if(nspace == null) return false;
-			else {
-				if(nspace.DefaultPage != null) return new PageNameComparer().Compare(nspace.DefaultPage, page) == 0;
-				else return false;
-			}
+			if(nspace.DefaultPage != null) return new PageNameComparer().Compare(nspace.DefaultPage, page) == 0;
+			return false;
 		}
 
 		/// <summary>
@@ -1186,10 +1180,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return null;
-			}
+			RollbackTransaction(transaction);
+			return null;
 		}
 
 		/// <summary>
@@ -1238,7 +1230,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1287,7 +1279,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1365,7 +1357,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1423,7 +1415,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1502,7 +1494,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1533,7 +1525,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			int rows = ExecuteNonQuery(command);
 
 			if(rows == 1) return new CategoryInfo(NameTools.GetFullName(nspace, name), this);
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1578,10 +1570,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				CommitTransaction(transaction);
 				return result;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return null;
-			}
+			RollbackTransaction(transaction);
+			return null;
 		}
 
 		/// <summary>
@@ -1688,17 +1678,15 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			
 			// If one is null and the other not null, fail
 			if(sourceNs == null && destinationNs != null || sourceNs != null && destinationNs == null) return null;
-			else {
-				// Both non-null or both null
-				if(sourceNs != null) {
-					// Both non-null, check names
-					NamespaceInfo tempSource = new NamespaceInfo(sourceNs, this, null);
-					NamespaceInfo tempDest = new NamespaceInfo(destinationNs, this, null);
-					// Different names, fail
-					if(new NamespaceComparer().Compare(tempSource, tempDest) != 0) return null;
-				}
-				// else both null, OK
+			// Both non-null or both null
+			if(sourceNs != null) {
+				// Both non-null, check names
+				NamespaceInfo tempSource = new NamespaceInfo(sourceNs, this, null);
+				NamespaceInfo tempDest = new NamespaceInfo(destinationNs, this, null);
+				// Different names, fail
+				if(new NamespaceComparer().Compare(tempSource, tempDest) != 0) return null;
 			}
+			// else both null, OK
 
 			string nspace = sourceNs != null ? sourceNs : "";
 
@@ -1790,10 +1778,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				result.Pages = mergedPages;
 				return result;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return null;
-			}
+			RollbackTransaction(transaction);
+			return null;
 		}
 
 		/// <summary>
@@ -1860,7 +1846,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1901,7 +1887,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1959,7 +1945,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1997,7 +1983,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -2050,7 +2036,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -2115,7 +2101,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -2180,7 +2166,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -2281,7 +2267,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -2328,7 +2314,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -2434,7 +2420,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return rows == content.Keywords.Length;
 			}
-			else return true;
+			return true;
 		}
 
 		/// <summary>
@@ -2563,7 +2549,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(rows == 1) {
 				return new PageInfo(NameTools.GetFullName(nspace, name), this, creationDateTime);
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -2652,10 +2638,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return null;
-			}
+			RollbackTransaction(transaction);
+			return null;
 		}
 
 		/// <summary>
@@ -2748,7 +2732,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return set;
 			}
-			else return false;
+			return false;
 		}
 
 		/// <summary>
@@ -2885,10 +2869,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return rows >= 0;
 			}
-			else {
-				CommitTransaction(transaction);
-				return true;
-			}
+			CommitTransaction(transaction);
+			return true;
 		}
 
 		/// <summary>
@@ -2999,7 +2981,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return rows == categories.Length;
 			}
-			else return true;
+			return true;
 		}
 
 		/// <summary>
@@ -3058,7 +3040,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return rows == categories.Length;
 			}
-			else return true;
+			return true;
 		}
 
 		/// <summary>
@@ -3163,7 +3145,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -3239,7 +3221,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -3401,10 +3383,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				CommitTransaction(transaction);
 				return true;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return false;
-			}
+			RollbackTransaction(transaction);
+			return false;
 		}
 
 		/// <summary>
@@ -3514,10 +3494,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				CommitTransaction(transaction);
 				return true;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return false;
-			}
+			RollbackTransaction(transaction);
+			return false;
 		}
 
 		/// <summary>
@@ -3733,10 +3711,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				CommitTransaction(transaction);
 				return true;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return false;
-			}
+			RollbackTransaction(transaction);
+			return false;
 		}
 
 		/// <summary>
@@ -3795,7 +3771,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -3840,7 +3816,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				result.Pages = Array.ConvertAll<PageInfo, string>(pages, (x) => { return x.FullName; });
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -3922,15 +3898,11 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 					CommitTransaction(transaction);
 					return result;
 				}
-				else {
-					RollbackTransaction(transaction);
-					return null;
-				}
-			}
-			else {
 				RollbackTransaction(transaction);
 				return null;
 			}
+			RollbackTransaction(transaction);
+			return null;
 		}
 
 		/// <summary>
@@ -4039,7 +4011,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -4065,7 +4037,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(rows == 1) {
 				return new Snippet(name, content, this);
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -4091,7 +4063,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(rows == 1) {
 				return new Snippet(name, content, this);
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -4141,10 +4113,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return null;
-			}
+			RollbackTransaction(transaction);
+			return null;
 		}
 
 		/// <summary>
@@ -4239,7 +4209,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -4265,7 +4235,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(rows == 1) {
 				return new ContentTemplate(name, content, this);
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -4291,7 +4261,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(rows == 1) {
 				return new ContentTemplate(name, content, this);
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -4341,10 +4311,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return template;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return null;
-			}
+			RollbackTransaction(transaction);
+			return null;
 		}
 
 		/// <summary>

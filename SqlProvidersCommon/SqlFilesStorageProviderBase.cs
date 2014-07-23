@@ -20,13 +20,12 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// </summary>
 		/// <param name="directory">The directory to prepare.</param>
 		/// <returns>The prepared directory, for example "/" or "/my/directory/".</returns>
-		private static string PrepareDirectory(string directory) {
+		private static string PrepareDirectory(string directory)
+		{
 			if(string.IsNullOrEmpty(directory)) return "/";
-			else {
-				return (!directory.StartsWith("/") ? "/" : "") +
-					directory +
-					(!directory.EndsWith("/") ? "/" : "");
-			}
+			return (!directory.StartsWith("/") ? "/" : "") +
+			       directory +
+			       (!directory.EndsWith("/") ? "/" : "");
 		}
 
 		/// <summary>
@@ -190,7 +189,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -233,7 +232,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -276,7 +275,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -543,7 +542,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return details;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -870,7 +869,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -905,7 +904,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -940,7 +939,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1250,7 +1249,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return details;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>

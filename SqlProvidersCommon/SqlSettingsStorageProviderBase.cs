@@ -95,7 +95,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -177,7 +177,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -393,7 +393,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -593,7 +593,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -738,7 +738,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -816,7 +816,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -991,12 +991,10 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			CloseReader(command, reader);
 
 			if(enabled.HasValue) return enabled.Value;
-			else {
-				if(typeName == "ScrewTurn.Wiki.UsersStorageProvider" ||
-					typeName == "ScrewTurn.Wiki.PagesStorageProvider" ||
-					typeName == "ScrewTurn.Wiki.FilesStorageProvider") return false;
-				else return true;
-			}
+			if(typeName == "ScrewTurn.Wiki.UsersStorageProvider" ||
+			   typeName == "ScrewTurn.Wiki.PagesStorageProvider" ||
+			   typeName == "ScrewTurn.Wiki.FilesStorageProvider") return false;
+			return true;
 		}
 
 		/// <summary>
@@ -1169,7 +1167,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1215,7 +1213,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1375,7 +1373,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1411,7 +1409,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1447,7 +1445,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>

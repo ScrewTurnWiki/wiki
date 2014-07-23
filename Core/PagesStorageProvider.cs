@@ -73,9 +73,10 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="nspace">The namespace, or <c>null</c>.</param>
 		/// <returns>The correct partial path, such as 'Namespace\' or ''.</returns>
-		private string GetNamespacePartialPathForPageContent(string nspace) {
+		private string GetNamespacePartialPathForPageContent(string nspace)
+		{
 			if(nspace == null || nspace.Length == 0) return "";
-			else return nspace + Path.DirectorySeparatorChar;
+			return nspace + Path.DirectorySeparatorChar;
 		}
 
 		/// <summary>
@@ -478,7 +479,7 @@ namespace ScrewTurn.Wiki {
 			NamespaceInfo[] allNamespaces = GetNamespaces();
 			Array.Sort(allNamespaces, new NamespaceComparer());
 			if(FindNamespace(name, allNamespaces) != null) return true;
-			else return false;
+			return false;
 		}
 
 		/// <summary>
@@ -709,7 +710,7 @@ namespace ScrewTurn.Wiki {
 
 					return true;
 				}
-				else return false;
+				return false;
 			}
 		}
 
@@ -1148,7 +1149,8 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="dumpedDocument">The input dumped document.</param>
 		/// <returns>The resulting <see cref="T:IDocument" />.</returns>
-		private IDocument BuildDocumentHandler(DumpedDocument dumpedDocument) {
+		private IDocument BuildDocumentHandler(DumpedDocument dumpedDocument)
+		{
 			if(dumpedDocument.TypeTag == PageDocument.StandardTypeTag) {
 				string pageName = PageDocument.GetPageName(dumpedDocument.Name);
 
@@ -1156,18 +1158,18 @@ namespace ScrewTurn.Wiki {
 					GetAllPages());
 
 				if(page == null) return null;
-				else return new PageDocument(page, dumpedDocument, TokenizeContent);
+				return new PageDocument(page, dumpedDocument, TokenizeContent);
 			}
-			else if(dumpedDocument.TypeTag == MessageDocument.StandardTypeTag) {
+			if(dumpedDocument.TypeTag == MessageDocument.StandardTypeTag) {
 				string pageFullName;
 				int id;
 				MessageDocument.GetMessageDetails(dumpedDocument.Name, out pageFullName, out id);
 
 				PageInfo page = FindPage(NameTools.GetNamespace(pageFullName), NameTools.GetLocalName(pageFullName), GetAllPages());
 				if(page == null) return null;
-				else return new MessageDocument(page, id, dumpedDocument, TokenizeContent);
+				return new MessageDocument(page, id, dumpedDocument, TokenizeContent);
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1299,9 +1301,7 @@ namespace ScrewTurn.Wiki {
 			if(fields.Length == 3) {
 				return new LocalPageInfo(fields[0], this, DateTime.Parse(fields[2]), fields[1]);
 			}
-			else {
-				throw new ArgumentException("Unsupported data format", "fileLine");
-			}
+			throw new ArgumentException("Unsupported data format", "fileLine");
 		}
 
 		/// <summary>
@@ -1609,7 +1609,7 @@ namespace ScrewTurn.Wiki {
 				string path = GetFullPathForPageContent(GetNamespacePartialPathForPageContent(NameTools.GetNamespace(page.FullName)) + filename);
 
 				if(!File.Exists(path)) return null;
-				else return ExtractContent(File.ReadAllText(path), page);
+				return ExtractContent(File.ReadAllText(path), page);
 			}
 		}
 
@@ -1872,7 +1872,7 @@ namespace ScrewTurn.Wiki {
 				string targetFileFullPath = GetDraftFullPath(local);
 
 				if(!File.Exists(targetFileFullPath)) return null;
-				else return ExtractContent(File.ReadAllText(targetFileFullPath), local);
+				return ExtractContent(File.ReadAllText(targetFileFullPath), local);
 			}
 		}
 
@@ -1892,14 +1892,12 @@ namespace ScrewTurn.Wiki {
 				string targetFileFullPath = GetDraftFullPath(local);
 
 				if(!File.Exists(targetFileFullPath)) return false;
-				else {
-					File.Delete(targetFileFullPath);
-					// Delete directory if empty
-					if(Directory.GetFiles(Path.GetDirectoryName(targetFileFullPath)).Length == 0) {
-						Directory.Delete(Path.GetDirectoryName(targetFileFullPath));
-					}
-					return true;
+				File.Delete(targetFileFullPath);
+				// Delete directory if empty
+				if(Directory.GetFiles(Path.GetDirectoryName(targetFileFullPath)).Length == 0) {
+					Directory.Delete(Path.GetDirectoryName(targetFileFullPath));
 				}
+				return true;
 			}
 		}
 

@@ -124,22 +124,20 @@ namespace ScrewTurn.Wiki.SearchEngine {
 
 			IDocument target = FindKey(key);
 			if(target == null) throw new KeyNotFoundException("Specified IDocument was not found");
-			else {
-				IDocument mappedDoc = mappings[key.Name];
-				if(mappings.Remove(target.Name)) {
-					// Prepare the list of DumpedWordMapping objects
-					SortedBasicWordInfoSet set = dictionary[mappedDoc];
-					List<DumpedWordMapping> dump = new List<DumpedWordMapping>(set.Count);
-					foreach(BasicWordInfo w in set) {
-						dump.Add(new DumpedWordMapping(wordId, key.ID, w));
-					}
-
-					if(!dictionary.Remove(target)) throw new InvalidOperationException("Internal data is broken");
-
-					return dump;
+			IDocument mappedDoc = mappings[key.Name];
+			if(mappings.Remove(target.Name)) {
+				// Prepare the list of DumpedWordMapping objects
+				SortedBasicWordInfoSet set = dictionary[mappedDoc];
+				List<DumpedWordMapping> dump = new List<DumpedWordMapping>(set.Count);
+				foreach(BasicWordInfo w in set) {
+					dump.Add(new DumpedWordMapping(wordId, key.ID, w));
 				}
-				else throw new InvalidOperationException("Internal data is broken");
+
+				if(!dictionary.Remove(target)) throw new InvalidOperationException("Internal data is broken");
+
+				return dump;
 			}
+			throw new InvalidOperationException("Internal data is broken");
 		}
 
 		/// <summary>
@@ -153,7 +151,7 @@ namespace ScrewTurn.Wiki.SearchEngine {
 
 			IDocument target = null;
 			if(mappings.TryGetValue(key.Name, out target)) return target;
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -171,10 +169,8 @@ namespace ScrewTurn.Wiki.SearchEngine {
 				value = null;
 				return false;
 			}
-			else {
-				value = dictionary[target];
-				return true;
-			}
+			value = dictionary[target];
+			return true;
 		}
 
 		/// <summary>
@@ -197,7 +193,7 @@ namespace ScrewTurn.Wiki.SearchEngine {
 
 				IDocument target = FindKey(key);
 				if(target == null) throw new IndexOutOfRangeException("The specified key was not found");
-				else return dictionary[target];
+				return dictionary[target];
 			}
 			set {
 				if(key == null) throw new ArgumentNullException("key");
@@ -205,7 +201,7 @@ namespace ScrewTurn.Wiki.SearchEngine {
 
 				IDocument target = FindKey(key);
 				if(target == null) throw new IndexOutOfRangeException("The specified key was not found");
-				else dictionary[target] = value;
+				dictionary[target] = value;
 			}
 		}
 

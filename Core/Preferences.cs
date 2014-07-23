@@ -22,7 +22,7 @@ namespace ScrewTurn.Wiki {
 				string culture = cookie["C"];
 				return culture;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -35,7 +35,7 @@ namespace ScrewTurn.Wiki {
 				string culture = Users.GetUserData(currentUser, "Culture");
 				return culture;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -110,12 +110,10 @@ namespace ScrewTurn.Wiki {
 
 				return true;
 			}
-			else {
-				if(user == null) {
-					Log.LogEntry("Attempt to save user data when no user has logged in", EntryType.Warning, Log.SystemUsername);
-				}
-				return false;
+			if(user == null) {
+				Log.LogEntry("Attempt to save user data when no user has logged in", EntryType.Warning, Log.SystemUsername);
 			}
+			return false;
 		}
 
 		/// <summary>

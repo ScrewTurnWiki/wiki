@@ -146,13 +146,12 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		public SearchResultCollection Search(SearchParameters parameters) {
 			if(parameters == null) throw new ArgumentNullException("parameters");
 
-			using(IWordFetcher fetcher = connector.GetWordFetcher()) {
+			using(IWordFetcher fetcher = connector.GetWordFetcher())
+			{
 				if(parameters.DocumentTypeTags == null) {
 					return ScrewTurn.Wiki.SearchEngine.Tools.SearchInternal(parameters.Query, null, false, parameters.Options, fetcher);
 				}
-				else {
-					return ScrewTurn.Wiki.SearchEngine.Tools.SearchInternal(parameters.Query, parameters.DocumentTypeTags, true, parameters.Options, fetcher);
-				}
+				return ScrewTurn.Wiki.SearchEngine.Tools.SearchInternal(parameters.Query, parameters.DocumentTypeTags, true, parameters.Options, fetcher);
 			}
 		}
 

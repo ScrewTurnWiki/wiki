@@ -119,9 +119,10 @@ namespace ScrewTurn.Wiki {
 			rptAccounts.DataBind();
 		}
 
-		private bool FilterUsername(UserInfo user) {
+		private bool FilterUsername(UserInfo user)
+		{
 			if(txtFilter.Text.Length == 0) return true;
-			else return user.Username.ToLower(System.Globalization.CultureInfo.CurrentCulture).Contains(txtFilter.Text.ToLower(System.Globalization.CultureInfo.CurrentCulture));
+			return user.Username.ToLower(System.Globalization.CultureInfo.CurrentCulture).Contains(txtFilter.Text.ToLower(System.Globalization.CultureInfo.CurrentCulture));
 		}
 
 		protected void rptAccounts_DataBinding(object sender, EventArgs e) {

@@ -93,28 +93,27 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="info">The component information.</param>
 		/// <returns>The update status.</returns>
-		private string GetUpdateStatus(ComponentInformation info) {
+		private string GetUpdateStatus(ComponentInformation info)
+		{
 			if(!Settings.DisableAutomaticVersionCheck) {
 				if(string.IsNullOrEmpty(info.UpdateUrl)) return "n/a";
-				else {
-					string newVersion = null;
-					string newAssemblyUrl = null;
-					UpdateStatus status = Tools.GetUpdateStatus(info.UpdateUrl, info.Version, out newVersion, out newAssemblyUrl);
+				string newVersion = null;
+				string newAssemblyUrl = null;
+				UpdateStatus status = Tools.GetUpdateStatus(info.UpdateUrl, info.Version, out newVersion, out newAssemblyUrl);
 
-					if(status == UpdateStatus.Error) {
-						return "<span class=\"resulterror\">" + Properties.Messages.Error + "</span>";
-					}
-					else if(status == UpdateStatus.NewVersionFound) {
-						return "<span class=\"resulterror\">" + Properties.Messages.NewVersion + " <b>" + newVersion + "</b>" +
-							(string.IsNullOrEmpty(newAssemblyUrl) ? "" : " (" + Properties.Messages.AutoUpdateAvailable + ")") + "</span>";
-					}
-					else if(status == UpdateStatus.UpToDate) {
-						return "<span class=\"resultok\">" + Properties.Messages.UpToDate + "</span>";
-					}
-					else throw new NotSupportedException();
+				if(status == UpdateStatus.Error) {
+					return "<span class=\"resulterror\">" + Properties.Messages.Error + "</span>";
 				}
+				if(status == UpdateStatus.NewVersionFound) {
+					return "<span class=\"resulterror\">" + Properties.Messages.NewVersion + " <b>" + newVersion + "</b>" +
+					       (string.IsNullOrEmpty(newAssemblyUrl) ? "" : " (" + Properties.Messages.AutoUpdateAvailable + ")") + "</span>";
+				}
+				if(status == UpdateStatus.UpToDate) {
+					return "<span class=\"resultok\">" + Properties.Messages.UpToDate + "</span>";
+				}
+				throw new NotSupportedException();
 			}
-			else return "n/a";
+			return "n/a";
 		}
 
 		/// <summary>
@@ -352,31 +351,30 @@ namespace ScrewTurn.Wiki {
 			Log.LogEntry("Provider DLL upload requested " + upDll.FileName, EntryType.General, SessionFacade.CurrentUsername);
 
 			string[] asms = Settings.Provider.ListPluginAssemblies();
-			if(Array.Find<string>(asms, delegate(string v) {
-				if(v.Equals(file)) return true;
-				else return false;
-			}) != null) {
+			if(Array.Find<string>(asms, delegate(string v)
+			                            {
+				                            if(v.Equals(file)) return true;
+				                            return false;
+			                            } ) != null) {
 				// DLL already exists
 				lblUploadResult.CssClass = "resulterror";
 				lblUploadResult.Text = Properties.Messages.DllAlreadyExists;
 				return;
 			}
-			else {
-				Settings.Provider.StorePluginAssembly(file, upDll.FileBytes);
+			Settings.Provider.StorePluginAssembly(file, upDll.FileBytes);
 
-				int count = ProviderLoader.LoadFromAuto(file);
+			int count = ProviderLoader.LoadFromAuto(file);
 
-				lblUploadResult.CssClass = "resultok";
-				lblUploadResult.Text = Properties.Messages.LoadedProviders.Replace("###", count.ToString());
-				upDll.Attributes.Add("value", "");
+			lblUploadResult.CssClass = "resultok";
+			lblUploadResult.Text = Properties.Messages.LoadedProviders.Replace("###", count.ToString());
+			upDll.Attributes.Add("value", "");
 
-				PerformPostProviderChangeActions();
+			PerformPostProviderChangeActions();
 
-				LoadDlls();
-				ResetEditor();
-				rptProviders.DataBind();
-				LoadSourceProviders();
-			}
+			LoadDlls();
+			ResetEditor();
+			rptProviders.DataBind();
+			LoadSourceProviders();
 		}
 
 		#endregion
@@ -566,7 +564,7 @@ namespace ScrewTurn.Wiki {
 		private string GetMimeType(string ext) {
 			string mime = "";
 			if(MimeTypes.Types.TryGetValue(ext, out mime)) return mime;
-			else return "application/octet-stream";
+			return "application/octet-stream";
 		}
 
 		/// <summary>

@@ -78,13 +78,12 @@ namespace ScrewTurn.Wiki {
 			SubjectInfo[] subjects = GetSubjects();
 
 			// Sort: groups first, users second
-			Array.Sort(subjects, delegate(SubjectInfo x, SubjectInfo y) {
-				if(x.Type == y.Type) return x.Name.CompareTo(y.Name);
-				else {
-					if(x.Type == SubjectType.Group) return -1;
-					else return 1;
-				}
-			});
+			Array.Sort(subjects, delegate(SubjectInfo x, SubjectInfo y)
+			                     {
+				                     if(x.Type == y.Type) return x.Name.CompareTo(y.Name);
+				                     if(x.Type == SubjectType.Group) return -1;
+				                     return 1;
+			                     } );
 
 			lstSubjects.Items.Clear();
 
@@ -212,10 +211,8 @@ namespace ScrewTurn.Wiki {
 				return AuthWriter.RemoveEntriesForNamespace(
 					Users.FindUserGroup(subject), namespaceInfo);
 			}
-			else {
-				return AuthWriter.RemoveEntriesForNamespace(
-					Users.FindUser(subject), namespaceInfo);
-			}
+			return AuthWriter.RemoveEntriesForNamespace(
+				Users.FindUser(subject), namespaceInfo);
 		}
 
 		/// <summary>
@@ -234,10 +231,8 @@ namespace ScrewTurn.Wiki {
 				return AuthWriter.RemoveEntriesForPage(
 					Users.FindUserGroup(subject), currentPage);
 			}
-			else {
-				return AuthWriter.RemoveEntriesForPage(
-					Users.FindUser(subject), currentPage);
-			}
+			return AuthWriter.RemoveEntriesForPage(
+				Users.FindUser(subject), currentPage);
 		}
 
 		/// <summary>
@@ -255,10 +250,8 @@ namespace ScrewTurn.Wiki {
 				return AuthWriter.RemoveEntriesForDirectory(
 					Users.FindUserGroup(subject), provider, directory);
 			}
-			else {
-				return AuthWriter.RemoveEntriesForDirectory(
-					Users.FindUser(subject), provider, directory);
-			}
+			return AuthWriter.RemoveEntriesForDirectory(
+				Users.FindUser(subject), provider, directory);
 		}
 
 		/// <summary>

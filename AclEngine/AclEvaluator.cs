@@ -45,10 +45,11 @@ namespace ScrewTurn.Wiki.AclEngine {
 			Array.Reverse(sortedEntries);
 
 			foreach(AclEntry entry in sortedEntries) {
-				if(entry.Resource == resource && (entry.Action == action || entry.Action == AclEntry.FullControlAction) && entry.Subject == user) {
+				if(entry.Resource == resource && (entry.Action == action || entry.Action == AclEntry.FullControlAction) && entry.Subject == user)
+				{
 					if(entry.Value == Value.Grant) return Authorization.Granted;
-					else if(entry.Value == Value.Deny) return Authorization.Denied;
-					else throw new NotSupportedException("Entry value not supported");
+					if(entry.Value == Value.Deny) return Authorization.Denied;
+					throw new NotSupportedException("Entry value not supported");
 				}
 			}
 
@@ -101,8 +102,8 @@ namespace ScrewTurn.Wiki.AclEngine {
 				if(!groupFullControlGrant[group] && groupFullControlDeny[group]) tentativeDeny = true;
 			}
 			if(tentativeGrant && !tentativeDeny) return Authorization.Granted;
-			else if(tentativeDeny) return Authorization.Denied;
-			else return Authorization.Unknown;
+			if(tentativeDeny) return Authorization.Denied;
+			return Authorization.Unknown;
 		}
 
 	}

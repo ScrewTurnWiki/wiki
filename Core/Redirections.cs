@@ -33,7 +33,7 @@ namespace ScrewTurn.Wiki {
 
 			string destination = Cache.Provider.GetRedirectionDestination(page.FullName);
 			if(string.IsNullOrEmpty(destination)) return null;
-			else return Pages.FindPage(destination);
+			return Pages.FindPage(destination);
 		}
 
 		/// <summary>

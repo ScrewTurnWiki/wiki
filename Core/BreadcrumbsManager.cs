@@ -20,12 +20,13 @@ namespace ScrewTurn.Wiki {
 		/// Gets the cookie.
 		/// </summary>
 		/// <returns>The cookie, or <c>null</c>.</returns>
-		private HttpCookie GetCookie() {
+		private HttpCookie GetCookie()
+		{
 			if(HttpContext.Current.Request != null) {
 				HttpCookie cookie = HttpContext.Current.Request.Cookies[CookieName];
 				return cookie;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>

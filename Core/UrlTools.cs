@@ -90,7 +90,7 @@ namespace ScrewTurn.Wiki {
 
 			if(fields.Length != 1 && fields.Length != 2) return null; // Unrecognized format
 			if(fields.Length == 1) return ""; // Just page name
-			else return fields[0]; // Namespace.Page
+			return fields[0]; // Namespace.Page
 		}
 
 		/// <summary>

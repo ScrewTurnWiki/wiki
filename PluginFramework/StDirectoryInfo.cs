@@ -43,7 +43,7 @@
 
 			int lastIndex = filePath.LastIndexOf("/");
 			if(lastIndex == 0) return "/";
-			else return filePath.Substring(0, lastIndex + 1);
+			return filePath.Substring(0, lastIndex + 1);
 		}
 
 	}

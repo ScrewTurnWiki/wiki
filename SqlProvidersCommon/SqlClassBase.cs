@@ -29,9 +29,10 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <param name="column">The name of the column.</param>
 		/// <param name="defaultValue">The default value to return when the column contains a null value.</param>
 		/// <returns>The value.</returns>
-		protected T GetNullableColumn<T>(DbDataReader reader, string column, T defaultValue) {
+		protected T GetNullableColumn<T>(DbDataReader reader, string column, T defaultValue)
+		{
 			if(IsDBNull(reader, column)) return defaultValue;
-			else return (T)reader[column];
+			return (T)reader[column];
 		}
 
 		/// <summary>
@@ -142,7 +143,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(temp != null) {
 				return (T)temp;
 			}
-			else return defaultValue;
+			return defaultValue;
 		}
 
 		/// <summary>

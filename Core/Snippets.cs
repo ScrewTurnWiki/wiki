@@ -37,7 +37,7 @@ namespace ScrewTurn.Wiki {
 			int result = allSnippets.BinarySearch(new Snippet(name, "", null), new SnippetNameComparer());
 
 			if(allSnippets.Count > 0 && result >= 0) return allSnippets[result];
-			else return null;
+			return null;
 		}
 
 		/// <summary>

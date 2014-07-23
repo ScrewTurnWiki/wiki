@@ -36,7 +36,7 @@ namespace ScrewTurn.Wiki {
 			int index = templates.BinarySearch(new ContentTemplate(name, "", null), new ContentTemplateNameComparer());
 
 			if(templates.Count > 0 && index >= 0) return templates[index];
-			else return null;
+			return null;
 		}
 
 		/// <summary>

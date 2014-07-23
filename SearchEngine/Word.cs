@@ -147,9 +147,10 @@ namespace ScrewTurn.Wiki.SearchEngine {
 		public List<DumpedWordMapping> RemoveOccurrences(IDocument document) {
 			if(document == null) throw new ArgumentNullException("document");
 
-			lock(occurrences) {
+			lock(occurrences)
+			{
 				if(occurrences.ContainsKey(document)) return occurrences.RemoveExtended(document, ID);
-				else return new List<DumpedWordMapping>();
+				return new List<DumpedWordMapping>();
 			}
 		}
 

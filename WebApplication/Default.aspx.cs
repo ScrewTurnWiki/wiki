@@ -289,17 +289,15 @@ namespace ScrewTurn.Wiki {
 					GetCategoryLink("-"),
 					Properties.Messages.Uncategorized, Properties.Messages.Uncategorized);
 			}
-			else {
-				StringBuilder sb = new StringBuilder(categories.Length * 10);
-				for(int i = 0; i < categories.Length; i++) {
-					sb.AppendFormat(@"<a href=""{0}"" title=""{1}"">{2}</a>",
-						GetCategoryLink(categories[i].FullName),
-						NameTools.GetLocalName(categories[i].FullName),
-						NameTools.GetLocalName(categories[i].FullName));
-					if(i != categories.Length - 1) sb.Append(", ");
-				}
-				return sb.ToString();
+			StringBuilder sb = new StringBuilder(categories.Length * 10);
+			for(int i = 0; i < categories.Length; i++) {
+				sb.AppendFormat(@"<a href=""{0}"" title=""{1}"">{2}</a>",
+				                GetCategoryLink(categories[i].FullName),
+				                NameTools.GetLocalName(categories[i].FullName),
+				                NameTools.GetLocalName(categories[i].FullName));
+				if(i != categories.Length - 1) sb.Append(", ");
 			}
+			return sb.ToString();
 		}
 
 		/// <summary>
@@ -488,7 +486,7 @@ namespace ScrewTurn.Wiki {
 			sb.Insert(0, buffer.ToString());
 
 			if(count > 0) return id;
-			else return null;
+			return null;
 		}
 
 		/// <summary>

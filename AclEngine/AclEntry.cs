@@ -105,7 +105,7 @@ namespace ScrewTurn.Wiki.AclEngine {
 		public override bool Equals(object obj) {
 			AclEntry other = obj as AclEntry;
 			if(other != null) return Equals(other);
-			else return false;
+			return false;
 		}
 
 		/// <summary>
@@ -113,10 +113,11 @@ namespace ScrewTurn.Wiki.AclEngine {
 		/// </summary>
 		/// <param name="other">The other instance.</param>
 		/// <returns><c>true</c> if this instance equals <b>other</b>, <c>false</c> otherwise.</returns>
-		public bool Equals(AclEntry other) {
+		public bool Equals(AclEntry other)
+		{
 			if(object.ReferenceEquals(other, null)) return false;
-			else return resource == other.Resource &&
-				action == other.Action && subject == other.Subject;
+			return resource == other.Resource &&
+			       action == other.Action && subject == other.Subject;
 		}
 
 		/// <summary>

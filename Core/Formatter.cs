@@ -72,10 +72,8 @@ namespace ScrewTurn.Wiki {
 			if(currentPage == null) {
 				return Tools.DetectCurrentNamespaceInfo();
 			}
-			else {
-				string ns = NameTools.GetNamespace(currentPage.FullName);
-				return Pages.FindNamespace(ns);
-			}
+			string ns = NameTools.GetNamespace(currentPage.FullName);
+			return Pages.FindNamespace(ns);
 		}
 
 		/// <summary>
@@ -821,9 +819,7 @@ namespace ScrewTurn.Wiki {
 							sb.Replace("}", "&#125;", match.Index, match.Length);
 							break; // Give up
 						}
-						else {
-							sb.Remove(match.Index, balanced.Length);
-						}
+						sb.Remove(match.Index, balanced.Length);
 
 						if(balanced.IndexOf("}") == balanced.Length - 1) {
 							// Single-level snippet
@@ -977,10 +973,11 @@ namespace ScrewTurn.Wiki {
 			// Sort by descending date/time
 			allChanges.Reverse();
 
-			Func<NamespaceInfo, string> getName = (ns) => {
-				if(ns == null) return null;
-				else return ns.Name;
-			};
+			Func<NamespaceInfo, string> getName = (ns) =>
+			                                      {
+				                                      if(ns == null) return null;
+				                                      return ns.Name;
+			                                      };
 
 			string currentNamespaceName = getName(currentNamespace);
 
@@ -1064,9 +1061,7 @@ namespace ScrewTurn.Wiki {
 				return string.Format(@"<a href=""{0}{1}"" class=""pagelink"">{2}</a>",
 					change.Page, Settings.PageExtension, FormattingPipeline.PrepareTitle(change.Title, false, context, currentPage));
 			}
-			else {
-				return FormattingPipeline.PrepareTitle(change.Title, false, context, currentPage) + " (" + change.Page + ")";
-			}
+			return FormattingPipeline.PrepareTitle(change.Title, false, context, currentPage) + " (" + change.Page + ")";
 		}
 
 		/// <summary>
@@ -1084,9 +1079,7 @@ namespace ScrewTurn.Wiki {
 					FormattingPipeline.PrepareTitle(change.Title, false, context, currentPage) + " (" +
 					FormattingPipeline.PrepareTitle(change.MessageSubject, false, context, currentPage) + ")");
 			}
-			else {
-				return FormattingPipeline.PrepareTitle(change.Title, false, context, currentPage) + " (" + change.Page + ")";
-			}
+			return FormattingPipeline.PrepareTitle(change.Title, false, context, currentPage) + " (" + change.Page + ")";
 		}
 
 		/// <summary>
@@ -1503,9 +1496,7 @@ namespace ScrewTurn.Wiki {
 				string fs = PrepareSnippet(parameters, snippet.Content);
 				return fs.Trim('\n');
 			}
-			else {
-				return @"<b style=""color: #FF0000;"">FORMATTER ERROR (Snippet Not Found)</b>";
-			}
+			return @"<b style=""color: #FF0000;"">FORMATTER ERROR (Snippet Not Found)</b>";
 		}
 
 		/// <summary>

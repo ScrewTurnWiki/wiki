@@ -104,10 +104,8 @@ namespace ScrewTurn.Wiki {
 				Log.LogEntry("Namespace " + name + " created", EntryType.General, Log.SystemUsername);
 				return true;
 			}
-			else {
-				Log.LogEntry("Namespace creation failed for " + name, EntryType.Error, Log.SystemUsername);
-				return false;
-			}
+			Log.LogEntry("Namespace creation failed for " + name, EntryType.Error, Log.SystemUsername);
+			return false;
 		}
 
 		/// <summary>
@@ -139,10 +137,8 @@ namespace ScrewTurn.Wiki {
 				Log.LogEntry("Namespace " + realNspace.Name + " removed", EntryType.General, Log.SystemUsername);
 				return true;
 			}
-			else {
-				Log.LogEntry("Namespace deletion failed for " + realNspace.Name, EntryType.General, Log.SystemUsername);
-				return false;
-			}
+			Log.LogEntry("Namespace deletion failed for " + realNspace.Name, EntryType.General, Log.SystemUsername);
+			return false;
 		}
 
 		/// <summary>
@@ -197,10 +193,8 @@ namespace ScrewTurn.Wiki {
 				Log.LogEntry("Namespace " + nspace.Name + " renamed to " + newName, EntryType.General, Log.SystemUsername);
 				return true;
 			}
-			else {
-				Log.LogEntry("Namespace rename failed for " + nspace.Name, EntryType.General, Log.SystemUsername);
-				return false;
-			}
+			Log.LogEntry("Namespace rename failed for " + nspace.Name, EntryType.General, Log.SystemUsername);
+			return false;
 		}
 
 		/// <summary>
@@ -308,10 +302,8 @@ namespace ScrewTurn.Wiki {
 				Log.LogEntry("Default Page set for " + nspace.Name + " (" + page.FullName + ")", EntryType.General, Log.SystemUsername);
 				return true;
 			}
-			else {
-				Log.LogEntry("Default Page setting failed for " + nspace.Name + " (" + page.FullName + ")", EntryType.Error, Log.SystemUsername);
-				return false;
-			}
+			Log.LogEntry("Default Page setting failed for " + nspace.Name + " (" + page.FullName + ")", EntryType.Error, Log.SystemUsername);
+			return false;
 		}
 
 		#endregion
@@ -382,7 +374,7 @@ namespace ScrewTurn.Wiki {
 		public static List<int> GetBackups(PageInfo page) {
 			int[] temp = page.Provider.GetBackups(page);
 			if(temp == null) return null;
-			else return new List<int>(temp);
+			return new List<int>(temp);
 		}
 
 		/// <summary>
@@ -452,10 +444,8 @@ namespace ScrewTurn.Wiki {
 				Host.Instance.OnPageActivity(page, null, SessionFacade.GetCurrentUsername(), PageActivity.PageRolledBack);
 				return true;
 			}
-			else {
-				Log.LogEntry("Rollback failed for " + page.FullName + " at revision " + version, EntryType.Error, Log.SystemUsername);
-				return false;
-			}
+			Log.LogEntry("Rollback failed for " + page.FullName + " at revision " + version, EntryType.Error, Log.SystemUsername);
+			return false;
 		}
 
 		/// <summary>
@@ -516,10 +506,8 @@ namespace ScrewTurn.Wiki {
 				Host.Instance.OnPageActivity(newPage, null, SessionFacade.GetCurrentUsername(), PageActivity.PageCreated);
 				return true;
 			}
-			else {
-				Log.LogEntry("Page creation failed for " + fullName, EntryType.Error, Log.SystemUsername);
-				return false;
-			}
+			Log.LogEntry("Page creation failed for " + fullName, EntryType.Error, Log.SystemUsername);
+			return false;
 		}
 
 		/// <summary>
@@ -562,10 +550,8 @@ namespace ScrewTurn.Wiki {
 				Host.Instance.OnPageActivity(page, null, SessionFacade.GetCurrentUsername(), PageActivity.PageDeleted);
 				return true;
 			}
-			else {
-				Log.LogEntry("Page deletion failed for " + page.FullName, EntryType.Error, Log.SystemUsername);
-				return false;
-			}
+			Log.LogEntry("Page deletion failed for " + page.FullName, EntryType.Error, Log.SystemUsername);
+			return false;
 		}
 
 		/// <summary>
@@ -608,10 +594,8 @@ namespace ScrewTurn.Wiki {
 				Host.Instance.OnPageActivity(page, oldName, SessionFacade.GetCurrentUsername(), PageActivity.PageRenamed);
 				return true;
 			}
-			else {
-				Log.LogEntry("Page rename failed for " + page.FullName + " (" + name + ")", EntryType.Error, Log.SystemUsername);
-				return false;
-			}
+			Log.LogEntry("Page rename failed for " + page.FullName + " (" + name + ")", EntryType.Error, Log.SystemUsername);
+			return false;
 		}
 
 		/// <summary>
@@ -1186,10 +1170,8 @@ namespace ScrewTurn.Wiki {
 
 				return true;
 			}
-			else {
-				Log.LogEntry("Category creation failed for " + fullName, EntryType.Error, Log.SystemUsername);
-				return false;
-			}
+			Log.LogEntry("Category creation failed for " + fullName, EntryType.Error, Log.SystemUsername);
+			return false;
 		}
 
 		/// <summary>
@@ -1288,9 +1270,7 @@ namespace ScrewTurn.Wiki {
 			if(page != null) {
 				return page.Provider.GetCategories(pageNamespace);
 			}
-			else {
-				return Collectors.PagesProviderCollector.GetProvider(Settings.DefaultPagesProvider).GetCategories(pageNamespace);
-			}
+			return Collectors.PagesProviderCollector.GetProvider(Settings.DefaultPagesProvider).GetCategories(pageNamespace);
 		}
 
 		/// <summary>
@@ -1562,7 +1542,7 @@ namespace ScrewTurn.Wiki {
 				name.Contains("#") || name.Contains("[") || name.Contains("]") || name.Contains("__")) {
 				return false;
 			}
-			else return true;
+			return true;
 		}
 
 	}

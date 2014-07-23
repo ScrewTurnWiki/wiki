@@ -54,9 +54,7 @@ namespace ScrewTurn.Wiki {
 				lblMessages.Text = "<i>" + Properties.Messages.NoMessages + "</i>";
 				return;
 			}
-			else {
-				lblMessages.Text = PrintDiscussion();
-			}
+			lblMessages.Text = PrintDiscussion();
 		}
 
 		/// <summary>
@@ -68,11 +66,9 @@ namespace ScrewTurn.Wiki {
 			if(messages.Count == 0) {
 				return "<i>" + Properties.Messages.NoMessages + "</i>";
 			}
-			else {
-				StringBuilder sb = new StringBuilder(10000);
-				PrintSubtree(messages, null, sb);
-				return sb.ToString();
-			}
+			StringBuilder sb = new StringBuilder(10000);
+			PrintSubtree(messages, null, sb);
+			return sb.ToString();
 		}
 
 		/// <summary>

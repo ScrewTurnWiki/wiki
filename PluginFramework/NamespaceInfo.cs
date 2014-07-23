@@ -79,13 +79,13 @@ namespace ScrewTurn.Wiki.PluginFramework {
 		/// <param name="x">The first object.</param>
 		/// <param name="y">The second object.</param>
 		/// <returns>The comparison result (-1, 0 or 1).</returns>
-		public int Compare(NamespaceInfo x, NamespaceInfo y) {
+		public int Compare(NamespaceInfo x, NamespaceInfo y)
+		{
 			if(x == null && y == null) return 0;
-			else if(x == null && y != null) return -1;
-			else if(x != null && y == null) return 1;
-			else return StringComparer.OrdinalIgnoreCase.Compare(x.Name, y.Name);
+			if(x == null && y != null) return -1;
+			if(x != null && y == null) return 1;
+			return StringComparer.OrdinalIgnoreCase.Compare(x.Name, y.Name);
 		}
-
 	}
 
 }

@@ -217,12 +217,13 @@ namespace ScrewTurn.Wiki {
 			result.Dispose();
 		}
 
-		private Rectangle GetImageRectangle(int targetW, int targetH, int w, int h, bool swapped) {
+		private Rectangle GetImageRectangle(int targetW, int targetH, int w, int h, bool swapped)
+		{
 			if(w == h) {
 				// Square
 				return new Rectangle(0, 0, targetW, targetH);
 			}
-			else if(w > h) {
+			if(w > h) {
 				// Landscape
 				float scale = (float)targetW / (float)w;
 				if(targetW > w) scale = 1;
@@ -253,7 +254,6 @@ namespace ScrewTurn.Wiki {
 				return new Rectangle((targetW - width) / 2, (targetH - height) / 2, width, height);
 			}
 		}
-
 	}
 
 }

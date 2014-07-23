@@ -189,11 +189,9 @@ namespace ScrewTurn.Wiki {
 				Log.LogEntry("User creation failed for " + username, EntryType.Error, Log.SystemUsername);
 				return false;
 			}
-			else {
-				Log.LogEntry("User " + username + " created", EntryType.General, Log.SystemUsername);
-				Host.Instance.OnUserAccountActivity(u, UserAccountActivity.AccountAdded);
-				return true;
-			}
+			Log.LogEntry("User " + username + " created", EntryType.General, Log.SystemUsername);
+			Host.Instance.OnUserAccountActivity(u, UserAccountActivity.AccountAdded);
+			return true;
 		}
 
 		/// <summary>
@@ -218,10 +216,8 @@ namespace ScrewTurn.Wiki {
 				}
 				return true;
 			}
-			else {
-				Log.LogEntry("User update failed for " + user.Username, EntryType.Error, Log.SystemUsername);
-				return false;
-			}
+			Log.LogEntry("User update failed for " + user.Username, EntryType.Error, Log.SystemUsername);
+			return false;
 		}
 
 		/// <summary>
@@ -240,10 +236,8 @@ namespace ScrewTurn.Wiki {
 				Host.Instance.OnUserAccountActivity(user, UserAccountActivity.AccountRemoved);
 				return true;
 			}
-			else {
-				Log.LogEntry("User deletion failed for " + user.Username, EntryType.Error, Log.SystemUsername);
-				return false;
-			}
+			Log.LogEntry("User deletion failed for " + user.Username, EntryType.Error, Log.SystemUsername);
+			return false;
 		}
 
 		/// <summary>
@@ -433,7 +427,7 @@ namespace ScrewTurn.Wiki {
 			int index = allGroups.BinarySearch(new UserGroup(name, "", null), new UserGroupComparer());
 
 			if(index < 0) return null;
-			else return allGroups[index];
+			return allGroups[index];
 		}
 
 		/// <summary>
@@ -560,7 +554,7 @@ namespace ScrewTurn.Wiki {
 					@"href=""" + UrlTools.BuildUrl("User.aspx?Username=", Tools.UrlEncode(u.Username)) + @""">" +
 					GetDisplayName(u) + "</a>";
 			}
-			else return username;
+			return username;
 		}
 
 		/// <summary>
@@ -568,9 +562,10 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="user">The user.</param>
 		/// <returns>The display name.</returns>
-		public static string GetDisplayName(UserInfo user) {
+		public static string GetDisplayName(UserInfo user)
+		{
 			if(string.IsNullOrEmpty(user.DisplayName)) return user.Username;
-			else return user.DisplayName;
+			return user.DisplayName;
 		}
 
 		/// <summary>

@@ -59,11 +59,12 @@ namespace ScrewTurn.Wiki {
 			file = file.Replace("..", "");
 		}
 
-		private int GetSelectedRotation() {
+		private int GetSelectedRotation()
+		{
 			if(rdo90CW.Checked) return 90;
-			else if(rdo90CCW.Checked) return 270;
-			else if(rdo180.Checked) return 180;
-			else return 0;
+			if(rdo90CCW.Checked) return 270;
+			if(rdo180.Checked) return 180;
+			return 0;
 		}
 
 		private void ResizeImage() {
@@ -251,28 +252,29 @@ namespace ScrewTurn.Wiki {
 			return null;
 		}
 
-		private string GetCurrentFormat() {
-			if(chkNewName.Checked) {
+		private string GetCurrentFormat()
+		{
+			if(chkNewName.Checked)
+			{
 				if(rdoPng.Checked) return "image/png";
-				else return "image/jpeg";
+				return "image/jpeg";
 			}
-			else {
-				switch(Path.GetExtension(file).ToLowerInvariant()) {
-					case ".jpg":
-					case ".jpeg":
-						return "image/jpeg";
-					default:
-						return "image/png";
-				}
+			switch(Path.GetExtension(file).ToLowerInvariant()) {
+				case ".jpg":
+				case ".jpeg":
+					return "image/jpeg";
+				default:
+					return "image/png";
 			}
 		}
 
-		private Rectangle GetImageRectangle(int targetW, int targetH, int w, int h, bool swapped) {
+		private Rectangle GetImageRectangle(int targetW, int targetH, int w, int h, bool swapped)
+		{
 			if(w == h) {
 				// Square
 				return new Rectangle(0, 0, targetW, targetH);
 			}
-			else if(w > h) {
+			if(w > h) {
 				// Landscape
 				float scale = (float)targetW / (float)w;
 				if(targetW > w) scale = 1;

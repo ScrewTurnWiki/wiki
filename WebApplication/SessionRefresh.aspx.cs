@@ -13,12 +13,10 @@ namespace ScrewTurn.Wiki {
 			if(Request["Page"] != null) {
 				PageInfo page = Pages.FindPage(Request["Page"]);
 				if(page == null) return;
-				else {
-					// The system already authenticates the user, if any, at the request level
-					string username = Request.UserHostAddress;
-					if(SessionFacade.LoginKey != null) username = SessionFacade.CurrentUsername;
-					Collisions.RenewEditingSession(page, username);
-				}
+				// The system already authenticates the user, if any, at the request level
+				string username = Request.UserHostAddress;
+				if(SessionFacade.LoginKey != null) username = SessionFacade.CurrentUsername;
+				Collisions.RenewEditingSession(page, username);
 			}
 
 		}

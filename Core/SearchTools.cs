@@ -152,14 +152,15 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="doc">The dumped document instance.</param>
 		/// <returns>The proper document instance.</returns>
-		private static IDocument DetectFileOrAttachment(DumpedDocument doc) {
+		private static IDocument DetectFileOrAttachment(DumpedDocument doc)
+		{
 			if(doc.TypeTag == FileDocument.StandardTypeTag) {
 				return new FileDocument(doc);
 			}
-			else if(doc.TypeTag == PageAttachmentDocument.StandardTypeTag) {
+			if(doc.TypeTag == PageAttachmentDocument.StandardTypeTag) {
 				return new PageAttachmentDocument(doc);
 			}
-			else throw new NotSupportedException();
+			throw new NotSupportedException();
 		}
 
 		/// <summary>

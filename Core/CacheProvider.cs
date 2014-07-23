@@ -379,11 +379,9 @@ namespace ScrewTurn.Wiki {
 							// Page is being edited
 							return true;
 						}
-						else {
-							// Lost contact
-							_sessions.Remove(_sessions[i]);
-							return false;
-						}
+						// Lost contact
+						_sessions.Remove(_sessions[i]);
+						return false;
 					}
 				}
 			}

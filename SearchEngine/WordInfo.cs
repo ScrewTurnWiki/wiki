@@ -51,9 +51,10 @@ namespace ScrewTurn.Wiki.SearchEngine {
 		/// </summary>
 		/// <param name="other">The instance of the object.</param>
 		/// <returns><c>true</c> if the instances are value-equal, <c>false</c> otherwise.</returns>
-		public override bool Equals(object other) {
+		public override bool Equals(object other)
+		{
 			if(other is WordInfo) return Equals((WordInfo)other);
-			else return false;
+			return false;
 		}
 
 		/// <summary>

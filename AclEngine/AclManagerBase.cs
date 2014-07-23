@@ -91,7 +91,7 @@ namespace ScrewTurn.Wiki.AclEngine {
 					OnAclChanged(new AclEntry[] { entry }, Change.EntryDeleted);
 					return true;
 				}
-				else return false;
+				return false;
 			}
 		}
 
@@ -126,7 +126,7 @@ namespace ScrewTurn.Wiki.AclEngine {
 
 					return true;
 				}
-				else return false;
+				return false;
 			}
 		}
 
@@ -161,7 +161,7 @@ namespace ScrewTurn.Wiki.AclEngine {
 
 					return true;
 				}
-				else return false;
+				return false;
 			}
 		}
 

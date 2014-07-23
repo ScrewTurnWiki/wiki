@@ -19,7 +19,7 @@ namespace ScrewTurn.Wiki {
 		public static string GetSettingsStorageProviderConfiguration() {
 			string config = WebConfigurationManager.AppSettings["SettingsStorageProviderConfig"];
 			if(config != null) return config;
-			else return "";
+			return "";
 		}
 
 		/// <summary>

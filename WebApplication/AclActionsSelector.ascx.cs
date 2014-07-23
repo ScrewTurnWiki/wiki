@@ -17,7 +17,7 @@ namespace ScrewTurn.Wiki {
 			get {
 				object temp = ViewState["CR"];
 				if(temp == null) return AclResources.Globals;
-				else return (AclResources)temp;
+				return (AclResources)temp;
 			}
 			set {
 				ViewState["CR"] = value;

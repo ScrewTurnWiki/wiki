@@ -249,11 +249,9 @@ namespace ScrewTurn.Wiki {
 			if(string.IsNullOrEmpty(Request["Template"])) return "";
 			ContentTemplate template = Templates.Find(Request["Template"]);
 			if(template == null) return "";
-			else {
-				lblAutoTemplate.Text = lblAutoTemplate.Text.Replace("##TEMPLATE##", template.Name);
-				pnlAutoTemplate.Visible = true;
-				return template.Content;
-			}
+			lblAutoTemplate.Text = lblAutoTemplate.Text.Replace("##TEMPLATE##", template.Name);
+			pnlAutoTemplate.Visible = true;
+			return template.Content;
 		}
 
 		protected void btnAutoTemplateOK_Click(object sender, EventArgs e) {

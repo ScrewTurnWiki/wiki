@@ -64,7 +64,7 @@ namespace ScrewTurn.Wiki {
 			List<NavigationPath> allPaths = GetAllNavigationPaths();
 			int idx = allPaths.BinarySearch(new NavigationPath(fullName, null), new NavigationPathComparer());
 			if(idx >= 0) return allPaths[idx];
-			else return null;
+			return null;
 		}
 
 		/// <summary>

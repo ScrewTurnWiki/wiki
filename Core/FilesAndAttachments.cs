@@ -70,7 +70,7 @@ namespace ScrewTurn.Wiki {
 			IFilesStorageProviderV30 provider = FindFileProvider(fullName);
 
 			if(provider == null) return false;
-			else return provider.RetrieveFile(fullName, output, countHit);
+			return provider.RetrieveFile(fullName, output, countHit);
 		}
 
 		#endregion
@@ -155,10 +155,8 @@ namespace ScrewTurn.Wiki {
 
 				return directories.ToArray();
 			}
-			else {
-				IFilesStorageProviderV30 provider = FindDirectoryProvider(fullPath);
-				return provider.ListDirectories(fullPath);
-			}
+			IFilesStorageProviderV30 provider = FindDirectoryProvider(fullPath);
+			return provider.ListDirectories(fullPath);
 		}
 
 		/// <summary>
@@ -181,10 +179,8 @@ namespace ScrewTurn.Wiki {
 
 				return files.ToArray();
 			}
-			else {
-				IFilesStorageProviderV30 provider = FindDirectoryProvider(fullPath);
-				return provider.ListFiles(fullPath);
-			}
+			IFilesStorageProviderV30 provider = FindDirectoryProvider(fullPath);
+			return provider.ListFiles(fullPath);
 		}
 
 		#endregion
@@ -247,7 +243,7 @@ namespace ScrewTurn.Wiki {
 			IFilesStorageProviderV30 provider = FindPageAttachmentProvider(page, attachmentName);
 
 			if(provider == null) return false;
-			else return provider.RetrievePageAttachment(page, attachmentName, output, countHit);
+			return provider.RetrievePageAttachment(page, attachmentName, output, countHit);
 		}
 
 		#endregion

@@ -88,7 +88,7 @@ namespace ScrewTurn.Wiki {
 			if(user != null && Request["ResetCode"] == Tools.ComputeSecurityHash(user.Username, user.Email, user.DateTime)) {
 				return user;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>

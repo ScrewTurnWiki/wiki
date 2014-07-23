@@ -240,18 +240,16 @@ namespace ScrewTurn.Wiki {
 		/// <returns>The snippet placeholder/template.</returns>
 		private static string GetParametersPlaceHolders(string[] parameters, bool isSnippetPositional) {
 			if(parameters.Length == 0) return "";
-			else {
-				StringBuilder sb = new StringBuilder(20);
-				foreach(string param in parameters) {
-					if(isSnippetPositional) sb.AppendFormat("|PLACE YOUR VALUE HERE ({0})", param);
-					else sb.AppendFormat("| {0} = PLACE YOUR VALUE HERE\\r\\n", param);
-				}
-				/*for(int i = 1; i <= paramCount; i++) {
+			StringBuilder sb = new StringBuilder(20);
+			foreach(string param in parameters) {
+				if(isSnippetPositional) sb.AppendFormat("|PLACE YOUR VALUE HERE ({0})", param);
+				else sb.AppendFormat("| {0} = PLACE YOUR VALUE HERE\\r\\n", param);
+			}
+			/*for(int i = 1; i <= paramCount; i++) {
 					sb.Append("|P");
 					sb.Append(i.ToString());
 				}*/
-				return sb.ToString();
-			}
+			return sb.ToString();
 		}
 
 		#endregion
@@ -275,9 +273,10 @@ namespace ScrewTurn.Wiki {
 		/// Gets the edited content.
 		/// </summary>
 		/// <returns>The content.</returns>
-		public string GetContent() {
+		public string GetContent()
+		{
 			if(inWYSIWYG) return ReverseFormatter.ReverseFormat(lblWYSIWYG.Text);
-			else return txtMarkup.Text;
+			return txtMarkup.Text;
 		}
 
 		/// <summary>

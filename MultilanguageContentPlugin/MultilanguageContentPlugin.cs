@@ -62,11 +62,12 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 				notLocalized = false;
 				noLocalization = true;
 			}
-			if(displayWarning && !noLocalization && context.Page != null) {
+			if(displayWarning && !noLocalization && context.Page != null)
+			{
 				if(notLocalized) return NotLocalizedMessage + result;
-				else return StandardMessage + result;
+				return StandardMessage + result;
 			}
-			else return result;
+			return result;
 		}
 
 		private string ExtractLocalizedContent(string language, string content) {
@@ -79,7 +80,7 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 				match = regex.Match(content, match.Index + match.Length);
 			}
 			if(sb.Length > 0) return sb.ToString();
-			else return null;
+			return null;
 		}
 
 		/// <summary>

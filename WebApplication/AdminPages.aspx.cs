@@ -71,9 +71,10 @@ namespace ScrewTurn.Wiki {
 			string filter = txtFilter.Text.Trim().ToLower(System.Globalization.CultureInfo.CurrentCulture);
 
 			foreach(PageInfo page in pages) {
-				if(NameTools.GetLocalName(page.FullName).ToLower(System.Globalization.CultureInfo.CurrentCulture).Contains(filter)) {
+				if(NameTools.GetLocalName(page.FullName).ToLower(System.Globalization.CultureInfo.CurrentCulture).Contains(filter))
+				{
 					if(chkOrphansOnly.Checked && !orphanPages.Contains(page.FullName)) continue;
-					else result.Add(page);
+					result.Add(page);
 				}
 			}
 
@@ -842,10 +843,8 @@ namespace ScrewTurn.Wiki {
 			if(string.IsNullOrEmpty(nspace)) {
 				return localName.ToLowerInvariant() == Settings.DefaultPage.ToLowerInvariant();
 			}
-			else {
-				NamespaceInfo ns = Pages.FindNamespace(nspace);
-				return ns.DefaultPage != null && ns.DefaultPage.FullName.ToLowerInvariant() == page.FullName.ToLowerInvariant();
-			}
+			NamespaceInfo ns = Pages.FindNamespace(nspace);
+			return ns.DefaultPage != null && ns.DefaultPage.FullName.ToLowerInvariant() == page.FullName.ToLowerInvariant();
 		}
 
 		protected void btnBulkMigratePages_Click(object sender, EventArgs e) {

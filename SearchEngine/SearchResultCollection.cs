@@ -61,9 +61,10 @@ namespace ScrewTurn.Wiki.SearchEngine {
 		/// </summary>
 		/// <param name="item">The item to check for.</param>
 		/// <returns><c>true</c> if the collection contains <b>item</b>, <c>false</c> otherwise.</returns>
-		public bool Contains(SearchResult item) {
+		public bool Contains(SearchResult item)
+		{
 			if(item == null) return false;
-			else return items.Contains(item);
+			return items.Contains(item);
 		}
 
 		/// <summary>

@@ -91,7 +91,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -136,7 +136,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(rows == 1) {
 				return new UserInfo(username, displayName, email, active, dateTime, this);
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -171,7 +171,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -206,7 +206,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -265,10 +265,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				CommitTransaction(transaction);
 				return result;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return null;
-			}
+			RollbackTransaction(transaction);
+			return null;
 		}
 
 		/// <summary>
@@ -353,7 +351,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -385,7 +383,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(rows == 1) {
 				return new UserGroup(name, description, this);
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -420,7 +418,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -455,7 +453,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result.ToArray();
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -494,10 +492,8 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				CommitTransaction(transaction);
 				return result;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return null;
-			}
+			RollbackTransaction(transaction);
+			return null;
 		}
 
 		/// <summary>
@@ -714,17 +710,18 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				CloseReader(command, reader);
 
-				if(result != null) {
+				if(result != null)
+				{
 					if(result.Active &&
 						string.CompareOrdinal(result.Username, username) == 0 &&
 						string.CompareOrdinal(passwordHash, providedPasswordHash) == 0) {
 						return result;
 					}
-					else return null;
+					return null;
 				}
-				else return null;
+				return null;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -804,7 +801,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -872,7 +869,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -962,15 +959,11 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 					return rows == 1;
 				}
-				else {
-					CommitTransaction(transaction);
-					return true;
-				}
+				CommitTransaction(transaction);
+				return true;
 			}
-			else {
-				RollbackTransaction(transaction);
-				return false;
-			}
+			RollbackTransaction(transaction);
+			return false;
 		}
 
 		/// <summary>
@@ -1012,7 +1005,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return data;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1049,7 +1042,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -1129,7 +1122,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				return result;
 			}
-			else return null;
+			return null;
 		}
 
 		#endregion

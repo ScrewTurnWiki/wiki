@@ -240,7 +240,7 @@ namespace ScrewTurn.Wiki {
 								if(useCat) {
 									CategoryInfo[] infos = Pages.GetCategoriesForPage(p);
 									if(infos.Length == 0 && cat != "-") continue;
-									else if(infos.Length != 0) {
+									if(infos.Length != 0) {
 										bool found = false;
 										for(int k = 0; k < infos.Length; k++) {
 											if(infos[k].FullName == cat) {
@@ -361,7 +361,7 @@ namespace ScrewTurn.Wiki {
 								if(useCat) {
 									CategoryInfo[] infos = Pages.GetCategoriesForPage(p);
 									if(infos.Length == 0 && cat != "-") continue;
-									else if(infos.Length != 0) {
+									if(infos.Length != 0) {
 										bool found = false;
 										for(int k = 0; k < infos.Length; k++) {
 											if(infos[k].FullName == cat) {

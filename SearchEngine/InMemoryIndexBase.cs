@@ -51,13 +51,14 @@ namespace ScrewTurn.Wiki.SearchEngine {
 		/// <param name="changeData">The dumped change data.</param>
 		/// <param name="state">A state object that is passed to the IndexStorer SaveDate/DeleteData function.</param>
 		/// <returns>The storage result or <c>null</c>.</returns>
-		protected IndexStorerResult OnIndexChange(IDocument document, IndexChangeType change, DumpedChange changeData, object state) {
+		protected IndexStorerResult OnIndexChange(IDocument document, IndexChangeType change, DumpedChange changeData, object state)
+		{
 			if(IndexChanged != null) {
 				IndexChangedEventArgs args = new IndexChangedEventArgs(document, change, changeData, state);
 				IndexChanged(this, args);
 				return args.Result;
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -444,7 +445,7 @@ namespace ScrewTurn.Wiki.SearchEngine {
 			if(dm.Count > 0 || dw.Count > 0 || document != null) {
 				return new DumpedChange(new DumpedDocument(document), dw, dm);
 			}
-			else return null;
+			return null;
 		}
 
 		/// <summary>
@@ -456,13 +457,12 @@ namespace ScrewTurn.Wiki.SearchEngine {
 		public SearchResultCollection Search(SearchParameters parameters) {
 			if(parameters == null) throw new ArgumentNullException("parameters");
 
-			using(IWordFetcher fetcher = new InMemoryIndexWordFetcher(catalog)) {
+			using(IWordFetcher fetcher = new InMemoryIndexWordFetcher(catalog))
+			{
 				if(parameters.DocumentTypeTags == null) {
 					return Tools.SearchInternal(parameters.Query, null, false, parameters.Options, fetcher);
 				}
-				else {
-					return Tools.SearchInternal(parameters.Query, parameters.DocumentTypeTags, true, parameters.Options, fetcher);
-				}
+				return Tools.SearchInternal(parameters.Query, parameters.DocumentTypeTags, true, parameters.Options, fetcher);
 			}
 		}
 

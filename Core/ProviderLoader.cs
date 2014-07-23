@@ -425,7 +425,7 @@ namespace ScrewTurn.Wiki {
 			}
 
 			if(result == null) throw new ArgumentException("Could not load the specified Settings Storage Provider", inner);
-			else return result;
+			return result;
 		}
 
 		/// <summary>

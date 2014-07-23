@@ -227,7 +227,7 @@ namespace ScrewTurn.Wiki {
 			lock(this) {
 				string val = null;
 				if(configData.TryGetValue(name, out val)) return val;
-				else return null;
+				return null;
 			}
 		}
 
@@ -630,7 +630,7 @@ namespace ScrewTurn.Wiki {
 			lock(this) {
 				string fullFile = GetFullPathForMetaDataItem(tag, MetaDataItemFiles[item]);
 				if(!File.Exists(fullFile)) return "";
-				else return File.ReadAllText(fullFile);
+				return File.ReadAllText(fullFile);
 			}
 		}
 
@@ -1007,13 +1007,11 @@ namespace ScrewTurn.Wiki {
 			lock(this) {
 				string file = GetFullPathForPluginConfig(typeName + ".cs");
 				if(!File.Exists(file)) return "";
-				else {
-					try {
-						return File.ReadAllText(file);
-					}
-					catch(IOException) {
-						return "";
-					}
+				try {
+					return File.ReadAllText(file);
+				}
+				catch(IOException) {
+					return "";
 				}
 			}
 		}

@@ -60,19 +60,17 @@ namespace ScrewTurn.Wiki {
 				lblNewCategoryResult.Text = Properties.Messages.CategoryAlreadyExists;
 				return;
 			}
-			else {
-				Log.LogEntry("Category creation requested for " + txtNewCategory.Text, EntryType.General, Log.SystemUsername);
+			Log.LogEntry("Category creation requested for " + txtNewCategory.Text, EntryType.General, Log.SystemUsername);
 
-				if(Pages.CreateCategory(lstNamespace.SelectedValue, txtNewCategory.Text)) {
-					txtNewCategory.Text = "";
-					lblNewCategoryResult.CssClass = "resultok";
-					lblNewCategoryResult.Text = Properties.Messages.CategoryCreated;
-					RefreshList();
-				}
-				else {
-					lblNewCategoryResult.CssClass = "resulterror";
-					lblNewCategoryResult.Text = Properties.Messages.CouldNotCreateCategory;
-				}
+			if(Pages.CreateCategory(lstNamespace.SelectedValue, txtNewCategory.Text)) {
+				txtNewCategory.Text = "";
+				lblNewCategoryResult.CssClass = "resultok";
+				lblNewCategoryResult.Text = Properties.Messages.CategoryCreated;
+				RefreshList();
+			}
+			else {
+				lblNewCategoryResult.CssClass = "resulterror";
+				lblNewCategoryResult.Text = Properties.Messages.CouldNotCreateCategory;
 			}
 		}
 

@@ -114,7 +114,7 @@ namespace ScrewTurn.Wiki {
 
 			// Case sensitive
 			if(url == requestUrl) return "";
-			else return "<link rel=\"canonical\" href=\"" + url + "\" />";
+			return "<link rel=\"canonical\" href=\"" + url + "\" />";
 		}
 
 		/// <summary>
@@ -122,11 +122,12 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="bytes">The # of bytes.</param>
 		/// <returns>The formatted string.</returns>
-		public static string BytesToString(long bytes) {
+		public static string BytesToString(long bytes)
+		{
 			if(bytes < 1024) return bytes + " B";
-			else if(bytes < 1048576) return string.Format("{0:N2} KB", (float)bytes / 1024F);
-			else if(bytes < 1073741824) return string.Format("{0:N2} MB", (float)bytes / 1048576F);
-			else return string.Format("{0:N2} GB", (float)bytes / 1073741824F);
+			if(bytes < 1048576) return string.Format("{0:N2} KB", (float)bytes / 1024F);
+			if(bytes < 1073741824) return string.Format("{0:N2} MB", (float)bytes / 1048576F);
+			return string.Format("{0:N2} GB", (float)bytes / 1073741824F);
 		}
 
 		/// <summary>
@@ -243,11 +244,12 @@ namespace ScrewTurn.Wiki {
 			}
 		}
 
-		private static string UppercaseInitial(string value) {
+		private static string UppercaseInitial(string value)
+		{
 			if(value.Length > 0) {
 				return value[0].ToString().ToUpper(CultureInfo.CurrentCulture) + value.Substring(1);
 			}
-			else return "";
+			return "";
 		}
 
 		/// <summary>
@@ -388,10 +390,8 @@ namespace ScrewTurn.Wiki {
 		/// <returns>The encoded string.</returns>
 		public static string UrlEncode(string input) {
 			if(HttpContext.Current != null && HttpContext.Current.Server != null) return HttpContext.Current.Server.UrlEncode(input).Replace("+", "%20");
-			else {
-				Log.LogEntry("HttpContext.Current or HttpContext.Current.Server were null (Tools.UrlEncode)", EntryType.Warning, Log.SystemUsername);
-				return input;
-			}
+			Log.LogEntry("HttpContext.Current or HttpContext.Current.Server were null (Tools.UrlEncode)", EntryType.Warning, Log.SystemUsername);
+			return input;
 		}
 
 		/// <summary>
@@ -584,14 +584,12 @@ namespace ScrewTurn.Wiki {
 					newAssemblyUrl = null;
 					return UpdateStatus.UpToDate;
 				}
-				else {
-					newVersion = ver;
+				newVersion = ver;
 
-					if(lines.Length == 2) newAssemblyUrl = lines[1];
-					else newAssemblyUrl = null;
+				if(lines.Length == 2) newAssemblyUrl = lines[1];
+				else newAssemblyUrl = null;
 
-					return UpdateStatus.NewVersionFound;
-				}
+				return UpdateStatus.NewVersionFound;
 			}
 			catch(Exception) {
 				if(HttpContext.Current != null) {

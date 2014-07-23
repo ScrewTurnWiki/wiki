@@ -720,9 +720,10 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="enabled"><c>true</c> to get enabled providers, <c>false</c> to get disabled providers.</param>
 		/// <returns>The providers.</returns>
-		public IPagesStorageProviderV30[] GetPagesStorageProviders(bool enabled) {
+		public IPagesStorageProviderV30[] GetPagesStorageProviders(bool enabled)
+		{
 			if(enabled) return Collectors.PagesProviderCollector.AllProviders;
-			else return Collectors.DisabledPagesProviderCollector.AllProviders;
+			return Collectors.DisabledPagesProviderCollector.AllProviders;
 		}
 
 		/// <summary>
@@ -730,9 +731,10 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="enabled"><c>true</c> to get enabled providers, <c>false</c> to get disabled providers.</param>
 		/// <returns>The providers.</returns>
-		public IUsersStorageProviderV30[] GetUsersStorageProviders(bool enabled) {
+		public IUsersStorageProviderV30[] GetUsersStorageProviders(bool enabled)
+		{
 			if(enabled) return Collectors.UsersProviderCollector.AllProviders;
-			else return Collectors.DisabledUsersProviderCollector.AllProviders;
+			return Collectors.DisabledUsersProviderCollector.AllProviders;
 		}
 
 		/// <summary>
@@ -740,9 +742,10 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="enabled"><c>true</c> to get enabled providers, <c>false</c> to get disabled providers.</param>
 		/// <returns>The providers.</returns>
-		public IFilesStorageProviderV30[] GetFilesStorageProviders(bool enabled) {
+		public IFilesStorageProviderV30[] GetFilesStorageProviders(bool enabled)
+		{
 			if(enabled) return Collectors.FilesProviderCollector.AllProviders;
-			else return Collectors.DisabledFilesProviderCollector.AllProviders;
+			return Collectors.DisabledFilesProviderCollector.AllProviders;
 		}
 
 		/// <summary>
@@ -750,9 +753,10 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="enabled"><c>true</c> to get enabled providers, <c>false</c> to get disabled providers.</param>
 		/// <returns>The providers.</returns>
-		public ICacheProviderV30[] GetCacheProviders(bool enabled) {
+		public ICacheProviderV30[] GetCacheProviders(bool enabled)
+		{
 			if(enabled) return Collectors.CacheProviderCollector.AllProviders;
-			else return Collectors.DisabledCacheProviderCollector.AllProviders;
+			return Collectors.DisabledCacheProviderCollector.AllProviders;
 		}
 
 		/// <summary>
@@ -760,9 +764,10 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="enabled"><c>true</c> to get enabled providers, <c>false</c> to get disabled providers.</param>
 		/// <returns>The providers.</returns>
-		public IFormatterProviderV30[] GetFormatterProviders(bool enabled) {
+		public IFormatterProviderV30[] GetFormatterProviders(bool enabled)
+		{
 			if(enabled) return Collectors.FormatterProviderCollector.AllProviders;
-			else return Collectors.DisabledFormatterProviderCollector.AllProviders;
+			return Collectors.DisabledFormatterProviderCollector.AllProviders;
 		}
 
 		/// <summary>
@@ -787,7 +792,7 @@ namespace ScrewTurn.Wiki {
 			if(providerTypeName == Settings.Provider.GetType().FullName) {
 				return StartupTools.GetSettingsStorageProviderConfiguration();
 			}
-			else return ProviderLoader.LoadConfiguration(providerTypeName);
+			return ProviderLoader.LoadConfiguration(providerTypeName);
 		}
 
 		/// <summary>
