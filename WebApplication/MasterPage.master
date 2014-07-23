@@ -6,6 +6,7 @@
 <head runat="server">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title runat="server">Title</title>
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
 </head>
 <body>
 	<form runat="server" id="FrmMaster">

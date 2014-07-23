@@ -9,6 +9,7 @@
 	<link rel="shortcut icon" href="Images/Icon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="Themes/Admin.css" />
 	<link rel="stylesheet" type="text/css" href="Themes/Editor.css" />
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
 	<asp:Literal ID="lblJS" runat="server" EnableViewState="false" />
 	<asp:ContentPlaceHolder ID="head" runat="server" />
 </head>
