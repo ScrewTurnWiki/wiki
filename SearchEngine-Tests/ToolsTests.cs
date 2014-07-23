@@ -45,9 +45,9 @@ namespace ScrewTurn.Wiki.SearchEngine.Tests {
 			Assert.AreEqual(expectedOutput.Length, output.Length, "Wrong output length");
 
 			for(int i = 0; i < output.Length; i++) {
-				Assert.AreEqual(expectedOutput[i].Text, output[i].Text, "Wrong word text at index " + i.ToString());
-				Assert.AreEqual(expectedOutput[i].FirstCharIndex, output[i].FirstCharIndex, "Wrong first char index at " + i.ToString());
-				Assert.AreEqual(expectedOutput[i].WordIndex, output[i].WordIndex, "Wrong word index at " + i.ToString());
+				Assert.AreEqual(expectedOutput[i].Text, output[i].Text, "Wrong word text at index " + i);
+				Assert.AreEqual(expectedOutput[i].FirstCharIndex, output[i].FirstCharIndex, "Wrong first char index at " + i);
+				Assert.AreEqual(expectedOutput[i].WordIndex, output[i].WordIndex, "Wrong word index at " + i);
 			}
 		}
 
@@ -61,9 +61,9 @@ namespace ScrewTurn.Wiki.SearchEngine.Tests {
 			Assert.AreEqual(expectedOutput.Length, output.Length, "Wrong output length");
 
 			for(int i = 0; i < output.Length; i++) {
-				Assert.AreEqual(expectedOutput[i].Text, output[i].Text, "Wrong word text at index " + i.ToString());
-				Assert.AreEqual(expectedOutput[i].FirstCharIndex, output[i].FirstCharIndex, "Wrong first char index at " + i.ToString());
-				Assert.AreEqual(expectedOutput[i].WordIndex, output[i].WordIndex, "Wrong word index at " + i.ToString());
+				Assert.AreEqual(expectedOutput[i].Text, output[i].Text, "Wrong word text at index " + i);
+				Assert.AreEqual(expectedOutput[i].FirstCharIndex, output[i].FirstCharIndex, "Wrong first char index at " + i);
+				Assert.AreEqual(expectedOutput[i].WordIndex, output[i].WordIndex, "Wrong word index at " + i);
 			}
 		}
 
@@ -77,9 +77,9 @@ namespace ScrewTurn.Wiki.SearchEngine.Tests {
 			Assert.AreEqual(expectedOutput.Length, output.Length, "Wrong output length");
 
 			for(int i = 0; i < output.Length; i++) {
-				Assert.AreEqual(expectedOutput[i].Text, output[i].Text, "Wrong word text at index " + i.ToString());
-				Assert.AreEqual(expectedOutput[i].FirstCharIndex, output[i].FirstCharIndex, "Wrong first char index at " + i.ToString());
-				Assert.AreEqual(expectedOutput[i].WordIndex, output[i].WordIndex, "Wrong word index at " + i.ToString());
+				Assert.AreEqual(expectedOutput[i].Text, output[i].Text, "Wrong word text at index " + i);
+				Assert.AreEqual(expectedOutput[i].FirstCharIndex, output[i].FirstCharIndex, "Wrong first char index at " + i);
+				Assert.AreEqual(expectedOutput[i].WordIndex, output[i].WordIndex, "Wrong word index at " + i);
 			}
 		}
 
@@ -101,8 +101,8 @@ namespace ScrewTurn.Wiki.SearchEngine.Tests {
 			Assert.AreEqual(expectedOutput.Length, output.Length, "Wrong output length");
 
 			for(int i = 0; i < output.Length; i++) {
-				Assert.AreEqual(expectedOutput[i].Text, output[i].Text, "Wrong word text at index " + i.ToString());
-				Assert.AreEqual(expectedOutput[i].FirstCharIndex, output[i].FirstCharIndex, "Wrong word position at index " + i.ToString());
+				Assert.AreEqual(expectedOutput[i].Text, output[i].Text, "Wrong word text at index " + i);
+				Assert.AreEqual(expectedOutput[i].FirstCharIndex, output[i].FirstCharIndex, "Wrong word position at index " + i);
 			}
 		}
 

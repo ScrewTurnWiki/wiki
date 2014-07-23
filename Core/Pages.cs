@@ -415,11 +415,11 @@ namespace ScrewTurn.Wiki {
 
 			bool done = page.Provider.DeleteBackups(page, firstToDelete);
 			if(done) {
-				Log.LogEntry("Backups (0-" + firstToDelete.ToString() + ") deleted for " + page.FullName, EntryType.General, Log.SystemUsername);
+				Log.LogEntry("Backups (0-" + firstToDelete + ") deleted for " + page.FullName, EntryType.General, Log.SystemUsername);
 				Host.Instance.OnPageActivity(page, null, SessionFacade.GetCurrentUsername(), PageActivity.PageBackupsDeleted);
 			}
 			else {
-				Log.LogEntry("Backups (0-" + firstToDelete.ToString() + ") deletion failed for " + page.FullName, EntryType.Error, Log.SystemUsername);
+				Log.LogEntry("Backups (0-" + firstToDelete + ") deletion failed for " + page.FullName, EntryType.Error, Log.SystemUsername);
 			}
 			return done;
 		}
@@ -449,13 +449,13 @@ namespace ScrewTurn.Wiki {
 
 				Settings.Provider.StoreOutgoingLinks(page.FullName, outgoingLinks);
 
-				Log.LogEntry("Rollback executed for " + page.FullName + " at revision " + version.ToString(), EntryType.General, Log.SystemUsername);
+				Log.LogEntry("Rollback executed for " + page.FullName + " at revision " + version, EntryType.General, Log.SystemUsername);
 				RecentChanges.AddChange(page.FullName, pageContent.Title, null, DateTime.Now, SessionFacade.GetCurrentUsername(), Change.PageRolledBack, "");
 				Host.Instance.OnPageActivity(page, null, SessionFacade.GetCurrentUsername(), PageActivity.PageRolledBack);
 				return true;
 			}
 			else {
-				Log.LogEntry("Rollback failed for " + page.FullName + " at revision " + version.ToString(), EntryType.Error, Log.SystemUsername);
+				Log.LogEntry("Rollback failed for " + page.FullName + " at revision " + version, EntryType.Error, Log.SystemUsername);
 				return false;
 			}
 		}

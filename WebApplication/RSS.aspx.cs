@@ -181,7 +181,7 @@ namespace ScrewTurn.Wiki {
 							rss.WriteElementString("pubDate", messages[i].DateTime.ToUniversalTime().ToString("R"));
 							rss.WriteStartElement("guid");
 							rss.WriteAttributeString("isPermaLink", "false");
-							rss.WriteString(GetGuid(page.FullName + "-" + messages[i].ID.ToString(), messages[i].DateTime));
+							rss.WriteString(GetGuid(page.FullName + "-" + messages[i].ID, messages[i].DateTime));
 							rss.WriteEndElement();
 
 							// Complete the item element

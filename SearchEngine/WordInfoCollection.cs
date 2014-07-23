@@ -181,7 +181,7 @@ namespace ScrewTurn.Wiki.SearchEngine {
 		/// </summary>
 		/// <returns>The string representation.</returns>
 		public override string ToString() {
-			return items.Count.ToString() + " matches";
+			return items.Count + " matches";
 		}
 
 	}

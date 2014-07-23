@@ -373,7 +373,7 @@ namespace ScrewTurn.Wiki.Tests {
 
 			RecentChange[] changes = prov.GetRecentChanges();
 
-			Assert.IsTrue(changes.Length > 0 && changes.Length <= MaxRecentChanges, "Wrong recent change count (" + changes.Length.ToString() + ")");
+			Assert.IsTrue(changes.Length > 0 && changes.Length <= MaxRecentChanges, "Wrong recent change count (" + changes.Length + ")");
 		}
 
 		[Test]

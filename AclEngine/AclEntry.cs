@@ -88,7 +88,7 @@ namespace ScrewTurn.Wiki.AclEngine {
 		/// </summary>
 		/// <returns>The string representation.</returns>
 		public override string ToString() {
-			return resource + "->" + action + ": " + subject + " (" + value.ToString() + ")";
+			return resource + "->" + action + ": " + subject + " (" + value + ")";
 		}
 
 		/// <summary>

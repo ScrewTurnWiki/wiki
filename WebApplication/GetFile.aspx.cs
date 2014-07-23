@@ -125,7 +125,7 @@ namespace ScrewTurn.Wiki {
 					retrieved = provider.RetrievePageAttachment(pageInfo, filename, Response.OutputStream, countHit);
 				}
 				catch(ArgumentException ex) {
-					Log.LogEntry("Attempted to download an inexistent attachment (" + pageInfo.FullName + "/" + filename + ")\n" + ex.ToString(), EntryType.Warning, Log.SystemUsername);
+					Log.LogEntry("Attempted to download an inexistent attachment (" + pageInfo.FullName + "/" + filename + ")\n" + ex, EntryType.Warning, Log.SystemUsername);
 				}
 			}
 			else {
@@ -133,7 +133,7 @@ namespace ScrewTurn.Wiki {
 					retrieved = provider.RetrieveFile(filename, Response.OutputStream, countHit);
 				}
 				catch(ArgumentException ex) {
-					Log.LogEntry("Attempted to download an inexistent file/attachment (" + filename + ")\n" + ex.ToString(), EntryType.Warning, Log.SystemUsername);
+					Log.LogEntry("Attempted to download an inexistent file/attachment (" + filename + ")\n" + ex, EntryType.Warning, Log.SystemUsername);
 				}
 			}
 
@@ -147,7 +147,7 @@ namespace ScrewTurn.Wiki {
 			//Response.AddFileDependency(filename);
 			//Response.Cache.SetETagFromFileDependencies();
 			//Response.Cache.SetLastModifiedFromFileDependencies();
-			Response.Cache.SetETag(filename.GetHashCode().ToString() + "-" + size.ToString());
+			Response.Cache.SetETag(filename.GetHashCode() + "-" + size);
 			Response.Cache.SetCacheability(HttpCacheability.Public);
 			Response.Cache.SetSlidingExpiration(true);
 			Response.Cache.SetValidUntilExpires(true);

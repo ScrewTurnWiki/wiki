@@ -259,7 +259,7 @@ namespace ScrewTurn.Wiki {
 				}
 			}
 
-			Log.LogEntry("Bulk account deletion completed - " + count.ToString() + " accounts deleted", EntryType.General, SessionFacade.CurrentUsername);
+			Log.LogEntry("Bulk account deletion completed - " + count + " accounts deleted", EntryType.General, SessionFacade.CurrentUsername);
 
 			ResetUserList();
 			RefreshList();

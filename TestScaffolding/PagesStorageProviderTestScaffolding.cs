@@ -758,7 +758,7 @@ namespace ScrewTurn.Wiki.Tests {
 			Assert.AreEqual(expected.FullName, actual.FullName, "Wrong full name");
 			Assert.AreEqual(expected.Pages.Length, actual.Pages.Length, "Wrong page count");
 			for(int i = 0; i < expected.Pages.Length; i++) {
-				Assert.AreEqual(expected.Pages[i], actual.Pages[i], "Wrong page at position " + i.ToString());
+				Assert.AreEqual(expected.Pages[i], actual.Pages[i], "Wrong page at position " + i);
 			}
 			if(checkProvider) Assert.AreSame(expected.Provider, actual.Provider, "Different provider instances");
 		}
@@ -3596,11 +3596,11 @@ namespace ScrewTurn.Wiki.Tests {
 			IPagesStorageProviderV30 prov = GetProvider();
 
 			for(int i = 0; i < PagesContent.Length; i++) {
-				PageInfo page = prov.AddPage(null, "The Longest Page Name Ever Seen In The Whole Universe (Maybe) - " + i.ToString(), DateTime.Now);
+				PageInfo page = prov.AddPage(null, "The Longest Page Name Ever Seen In The Whole Universe (Maybe) - " + i, DateTime.Now);
 				Assert.IsNotNull(page, "AddPage should return something");
 
-				bool done = prov.ModifyPage(page, "Page " + i.ToString(), "NUnit", DateTime.Now, "Comment " + i.ToString(),
-					PagesContent[i], null, "Test Page " + i.ToString(), SaveMode.Normal);
+				bool done = prov.ModifyPage(page, "Page " + i, "NUnit", DateTime.Now, "Comment " + i,
+					PagesContent[i], null, "Test Page " + i, SaveMode.Normal);
 				Assert.IsTrue(done, "ModifyPage should return true");
 			}
 

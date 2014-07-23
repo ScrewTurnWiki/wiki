@@ -138,8 +138,8 @@ namespace ScrewTurn.Wiki {
 
 			// Put dimension in script
 			lblDimensions.Text = "<script type=\"text/javascript\"><!--\r\nvar width = " +
-				source.Width.ToString() +
-				";\r\nvar height = " + source.Height.ToString() +
+				source.Width +
+				";\r\nvar height = " + source.Height +
 				";\r\n// -->\r\n</script>";
 
 			int resultWidth = source.Width;
@@ -192,14 +192,14 @@ namespace ScrewTurn.Wiki {
 				imgPreview.ImageUrl = "Thumb.aspx?File=" + Request["File"] +
 					@"&Size=imgeditprev&Width=" + previewWidth + @"&Height=" + previewHeight +
 					@"&Page=" + (string.IsNullOrEmpty(page) ? "" : page) +
-					(!rdoNoRotation.Checked ? ("&Rot=" + rotation.ToString()) : "");
+					(!rdoNoRotation.Checked ? ("&Rot=" + rotation) : "");
 			}
 			else {
 				lblScale.Text = "100";
 				imgPreview.ImageUrl = "Thumb.aspx?File=" + Request["File"] +
 					@"&Size=imgeditprev&Width=" + resultWidth + @"&Height=" + resultHeight +
 					@"&Page=" + (string.IsNullOrEmpty(page) ? "" : page) +
-					(!rdoNoRotation.Checked ? ("&Rot=" + rotation.ToString()) : "");
+					(!rdoNoRotation.Checked ? ("&Rot=" + rotation) : "");
 			}
 
 			// Destination bitmap

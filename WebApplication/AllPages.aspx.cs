@@ -57,7 +57,7 @@ namespace ScrewTurn.Wiki {
 				pageSelector.SelectPage(selectedPage);
 			}
 
-			Page.Title = Properties.Messages.AllPagesTitle + " (" + (rangeBegin + 1).ToString() + "-" + (rangeEnd + 1).ToString() + ") - " + Settings.WikiTitle;
+			Page.Title = Properties.Messages.AllPagesTitle + " (" + (rangeBegin + 1) + "-" + (rangeEnd + 1) + ") - " + Settings.WikiTitle;
 
 			// Important note
 			// This page cannot use a repeater because the page list has particular elements used for grouping pages

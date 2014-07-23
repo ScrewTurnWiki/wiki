@@ -160,7 +160,7 @@ namespace ScrewTurn.Wiki {
 				results = SearchTools.Search(query, true, searchFilesAndAttachments, mode);
 			}
 			catch(ArgumentException ex) {
-				Log.LogEntry("Search threw an exception\n" + ex.ToString(), EntryType.Warning, SessionFacade.CurrentUsername);
+				Log.LogEntry("Search threw an exception\n" + ex, EntryType.Warning, SessionFacade.CurrentUsername);
 				results = new SearchResultCollection();
 			}
 			DateTime end = DateTime.Now;

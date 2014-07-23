@@ -520,7 +520,7 @@ namespace ScrewTurn.Wiki {
 				to.Init(Host.Instance, txtSettingsDestinationConfig.Text);
 			}
 			catch(InvalidConfigurationException ex) {
-				Log.LogEntry("Provider rejected configuration: " + ex.ToString(), EntryType.Error, Log.SystemUsername);
+				Log.LogEntry("Provider rejected configuration: " + ex, EntryType.Error, Log.SystemUsername);
 				lblCopySettingsResult.CssClass = "resulterror";
 				lblCopySettingsResult.Text = Properties.Messages.ProviderRejectedConfiguration;
 				return;

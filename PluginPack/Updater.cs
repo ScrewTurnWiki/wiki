@@ -70,7 +70,7 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 						assemblies.Add(dll, content);
 					}
 					else {
-						throw new InvalidOperationException("Response status code for " + dll + ":" + resp.StatusCode.ToString());
+						throw new InvalidOperationException("Response status code for " + dll + ":" + resp.StatusCode);
 					}
 				}
 
@@ -87,7 +87,7 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 				AlreadyRun = true;
 			}
 			catch(Exception ex) {
-				host.LogEntry("Error occurred during automatic DLL updating with Updater Plugin\n" + ex.ToString(), LogEntryType.Error, null, this);
+				host.LogEntry("Error occurred during automatic DLL updating with Updater Plugin\n" + ex, LogEntryType.Error, null, this);
 			}
 		}
 

@@ -86,7 +86,7 @@ namespace ScrewTurn.Wiki {
 		protected void btnDeleteMessage_Click(object sender, EventArgs e) {
 			int id = int.Parse(Request["Message"]);
 			PageInfo page = Pages.FindPage(Request["Page"]);
-			Log.LogEntry("Message deletion requested for " + page.FullName + "." + id.ToString(), EntryType.General, SessionFacade.GetCurrentUsername());
+			Log.LogEntry("Message deletion requested for " + page.FullName + "." + id, EntryType.General, SessionFacade.GetCurrentUsername());
 			bool done = Pages.RemoveMessage(page, id, chkDeleteMessageReplies.Checked);
 			UrlTools.Redirect(UrlTools.BuildUrl(Request["Page"], Settings.PageExtension + "?Discuss=1"));
 		}

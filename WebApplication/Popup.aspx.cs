@@ -273,9 +273,9 @@ namespace ScrewTurn.Wiki {
 
 			foreach(string f in files) {
 				if(IsImage(f)) {
-					string name = provider.GetType().ToString() + "|" + f;
+					string name = provider.GetType() + "|" + f;
 					TreeElement item = new TreeElement(name,
-						@"<img src=""Thumb.aspx?Provider=" + provider.GetType().ToString() +
+						@"<img src=""Thumb.aspx?Provider=" + provider.GetType() +
 						@"&amp;Size=Small&amp;File=" + Tools.UrlEncode(f) +
 						@"&amp;Page=" + (chkImageAttachments.Checked ? Tools.UrlEncode(currentPage.FullName) : "") +
 						@""" alt=""" + name + @""" /><span class=""imageinfo"">" + f.Substring(f.LastIndexOf("/") + 1) + "</span>",

@@ -155,15 +155,15 @@ namespace ScrewTurn.Wiki {
 		public void PrintSystemStatus() {
 			StringBuilder sb = new StringBuilder(500);
 			sb.Append(Properties.Messages.OnlineUsers + ": <b>" + 
-				ScrewTurn.Wiki.Cache.OnlineUsers.ToString() + "</b><br />" + "\n");
+				ScrewTurn.Wiki.Cache.OnlineUsers + "</b><br />" + "\n");
 			int inactive = 0;
 
 			List<UserInfo> users = Users.GetUsers();
 			for(int i = 0; i < users.Count; i++) {
 				if(!users[i].Active) inactive++;
 			}
-			sb.Append(Properties.Messages.UserCount + ": <b>" + users.Count.ToString() + "</b> (" + inactive.ToString() + " " + Properties.Messages.InactiveUsers + ")<br />" + "\n");
-			sb.Append(Properties.Messages.CachedPages + ": <b>" + ScrewTurn.Wiki.Cache.PageCacheUsage.ToString() + "/" + Pages.GetGlobalPageCount().ToString() + "</b> (" + ScrewTurn.Wiki.Cache.FormattedPageCacheUsage.ToString() + " " + Properties.Messages.Formatted + ")<br />" + "\n");
+			sb.Append(Properties.Messages.UserCount + ": <b>" + users.Count + "</b> (" + inactive + " " + Properties.Messages.InactiveUsers + ")<br />" + "\n");
+			sb.Append(Properties.Messages.CachedPages + ": <b>" + ScrewTurn.Wiki.Cache.PageCacheUsage + "/" + Pages.GetGlobalPageCount() + "</b> (" + ScrewTurn.Wiki.Cache.FormattedPageCacheUsage + " " + Properties.Messages.Formatted + ")<br />" + "\n");
 			sb.Append(Properties.Messages.WikiVersion + ": <b>" + Settings.WikiVersion + "</b>" + "\n");
 			if(!Page.IsPostBack) {
 				sb.Append(CheckVersion());

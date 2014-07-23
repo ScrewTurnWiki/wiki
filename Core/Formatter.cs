@@ -2321,7 +2321,7 @@ namespace ScrewTurn.Wiki {
 			indent = indent.Trim();
 			while(colons < indent.Length && indent[colons] == ':') colons++;
 			indent = indent.Substring(colons).Trim();
-			return @"<div class=""indent"" style=""margin: 0px; padding: 0px; padding-left: " + ((int)(colons * 15)).ToString() + @"px"">" + indent + "</div>";
+			return @"<div class=""indent"" style=""margin: 0px; padding: 0px; padding-left: " + ((int)(colons * 15)) + @"px"">" + indent + "</div>";
 		}
 
 		/// <summary>

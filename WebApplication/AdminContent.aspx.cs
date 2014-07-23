@@ -101,7 +101,7 @@ namespace ScrewTurn.Wiki {
 				tag = lstNamespace.SelectedValue;
 			}
 
-			Log.LogEntry("Metadata file change requested for " + item.ToString() +
+			Log.LogEntry("Metadata file change requested for " + item +
 				(tag != null ? ", ns: " + tag : "") + lstNamespace.SelectedValue, EntryType.General, SessionFacade.CurrentUsername);
 
 			Settings.Provider.SetMetaDataItem(item, tag, editor.GetContent());

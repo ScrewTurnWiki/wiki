@@ -340,7 +340,7 @@ namespace ScrewTurn.Wiki {
 				return instance;
 			}
 			catch {
-				Log.LogEntry("Unable to create instance of " + type.ToString(), EntryType.Error, Log.SystemUsername);
+				Log.LogEntry("Unable to create instance of " + type, EntryType.Error, Log.SystemUsername);
 				throw;
 			}
 		}

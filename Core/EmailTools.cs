@@ -124,7 +124,7 @@ namespace ScrewTurn.Wiki {
 						DateTime.Now.ToString("yyyy'/'MM'/'dd' 'HH':'mm':'ss") + " (server time) in the wiki hosted at " +
 						Settings.MainUrl + " - server stack trace follows.\r\n\r\n" +
 						(!string.IsNullOrEmpty(url) ? url + "\r\n\r\n" : "") +
-						ex.ToString(), false);
+						ex, false);
 				}
 			}
 			catch { }

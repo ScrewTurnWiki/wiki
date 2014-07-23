@@ -88,7 +88,7 @@ namespace ScrewTurn.Wiki {
 				}
 			}
 
-			Log.LogEntry("Automatic providers update completed: updated " + updatedDlls.ToString() + " DLLs", EntryType.General, Log.SystemUsername);
+			Log.LogEntry("Automatic providers update completed: updated " + updatedDlls + " DLLs", EntryType.General, Log.SystemUsername);
 
 			return updatedDlls;
 		}
@@ -105,7 +105,7 @@ namespace ScrewTurn.Wiki {
 				HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
 				if(response.StatusCode != HttpStatusCode.OK) {
-					Log.LogEntry("Update failed for provider " + provider.GetType().FullName + ": Status Code=" + response.StatusCode.ToString(), EntryType.Error, Log.SystemUsername);
+					Log.LogEntry("Update failed for provider " + provider.GetType().FullName + ": Status Code=" + response.StatusCode, EntryType.Error, Log.SystemUsername);
 					response.Close();
 					return false;
 				}
@@ -121,7 +121,7 @@ namespace ScrewTurn.Wiki {
 				return done;
 			}
 			catch(Exception ex) {
-				Log.LogEntry("Update failed for provider " + provider.GetType().FullName + ": " + ex.ToString(), EntryType.Error, Log.SystemUsername);
+				Log.LogEntry("Update failed for provider " + provider.GetType().FullName + ": " + ex, EntryType.Error, Log.SystemUsername);
 				return false;
 			}
 		}

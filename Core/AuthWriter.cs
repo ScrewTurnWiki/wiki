@@ -87,11 +87,11 @@ namespace ScrewTurn.Wiki {
 
 				if(done) {
 					Log.LogEntry(MessageSetSuccess + GetLogMessage(Actions.ForGlobals.ResourceMasterPrefix, "",
-						action, subject, Set + status.ToString()), EntryType.General, Log.SystemUsername);
+						action, subject, Set + status), EntryType.General, Log.SystemUsername);
 				}
 				else {
 					Log.LogEntry(MessageSetFailure + GetLogMessage(Actions.ForGlobals.ResourceMasterPrefix, "",
-					action, subject, Set + status.ToString()), EntryType.Error, Log.SystemUsername);
+					action, subject, Set + status), EntryType.Error, Log.SystemUsername);
 				}
 
 				return done;
@@ -164,11 +164,11 @@ namespace ScrewTurn.Wiki {
 
 				if(done) {
 					Log.LogEntry(MessageSetSuccess + GetLogMessage(Actions.ForNamespaces.ResourceMasterPrefix, namespaceName,
-						action, subject, Set + status.ToString()), EntryType.General, Log.SystemUsername);
+						action, subject, Set + status), EntryType.General, Log.SystemUsername);
 				}
 				else {
 					Log.LogEntry(MessageSetFailure + GetLogMessage(Actions.ForNamespaces.ResourceMasterPrefix, namespaceName,
-						action, subject, Set + status.ToString()), EntryType.Error, Log.SystemUsername);
+						action, subject, Set + status), EntryType.Error, Log.SystemUsername);
 				}
 
 				return done;
@@ -247,11 +247,11 @@ namespace ScrewTurn.Wiki {
 
 				if(done) {
 					Log.LogEntry(MessageSetSuccess + GetLogMessage(Actions.ForDirectories.ResourceMasterPrefix, directoryName,
-						action, subject, Set + status.ToString()), EntryType.General, Log.SystemUsername);
+						action, subject, Set + status), EntryType.General, Log.SystemUsername);
 				}
 				else {
 					Log.LogEntry(MessageSetFailure + GetLogMessage(Actions.ForDirectories.ResourceMasterPrefix, directoryName,
-						action, subject, Set + status.ToString()), EntryType.Error, Log.SystemUsername);
+						action, subject, Set + status), EntryType.Error, Log.SystemUsername);
 				}
 
 				return done;
@@ -323,11 +323,11 @@ namespace ScrewTurn.Wiki {
 
 				if(done) {
 					Log.LogEntry(MessageSetSuccess + GetLogMessage(Actions.ForPages.ResourceMasterPrefix, page.FullName,
-						action, subject, Set + status.ToString()), EntryType.General, Log.SystemUsername);
+						action, subject, Set + status), EntryType.General, Log.SystemUsername);
 				}
 				else {
 					Log.LogEntry(MessageSetFailure + GetLogMessage(Actions.ForPages.ResourceMasterPrefix, page.FullName,
-						action, subject, Set + status.ToString()), EntryType.Error, Log.SystemUsername);
+						action, subject, Set + status), EntryType.Error, Log.SystemUsername);
 				}
 
 				return done;

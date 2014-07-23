@@ -126,7 +126,7 @@ namespace ScrewTurn.Wiki {
 		/// <param name="bytes">The # of bytes.</param>
 		/// <returns>The formatted string.</returns>
 		public static string BytesToString(long bytes) {
-			if(bytes < 1024) return bytes.ToString() + " B";
+			if(bytes < 1024) return bytes + " B";
 			else if(bytes < 1048576) return string.Format("{0:N2} KB", (float)bytes / 1024F);
 			else if(bytes < 1073741824) return string.Format("{0:N2} MB", (float)bytes / 1048576F);
 			else return string.Format("{0:N2} GB", (float)bytes / 1073741824F);
@@ -337,10 +337,10 @@ namespace ScrewTurn.Wiki {
 		/// <param name="span">The Time Span.</param>
 		/// <returns>The string.</returns>
 		public static string TimeSpanToString(TimeSpan span) {
-			string result = span.Days.ToString() + "d ";
-			result += span.Hours.ToString() + "h ";
-			result += span.Minutes.ToString() + "m ";
-			result += span.Seconds.ToString() + "s";
+			string result = span.Days + "d ";
+			result += span.Hours + "h ";
+			result += span.Minutes + "m ";
+			result += span.Seconds + "s";
 			return result;
 		}
 
@@ -532,7 +532,7 @@ namespace ScrewTurn.Wiki {
 			// TODO: Verify usage of WebPermission class
 			// http://msdn.microsoft.com/en-us/library/system.net.webpermission.aspx
 
-			string urlHash = "UpdUrlCache-" + url.GetHashCode().ToString();
+			string urlHash = "UpdUrlCache-" + url.GetHashCode();
 
 			try {
 				string ver = null;

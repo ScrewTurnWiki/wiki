@@ -101,7 +101,7 @@ namespace ScrewTurn.Wiki {
 					hasDescription = true;
 					StringBuilder tempSb = new StringBuilder();
 					ProcessChild(node.ChildNodes, tempSb);
-					p += "|" + tempSb.ToString() + "|";
+					p += "|" + tempSb + "|";
 				}
 				else if(node.Name.ToLowerInvariant() == "a") {
 					string link = "";

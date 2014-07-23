@@ -288,7 +288,7 @@ namespace ScrewTurn.Wiki {
 			if(currentPage == null) return;
 
 			lblRefreshLink.Text = @"<a href=""" +
-				UrlTools.BuildUrl("Edit.aspx?Page=", Tools.UrlEncode(currentPage.FullName), (Request["Section"] != null ? "&amp;Section=" + currentSection.ToString() : "")) +
+				UrlTools.BuildUrl("Edit.aspx?Page=", Tools.UrlEncode(currentPage.FullName), (Request["Section"] != null ? "&amp;Section=" + currentSection : "")) +
 				@""">" + Properties.Messages.Refresh + " &raquo;</a>";
 
 			string username = Request.UserHostAddress;
@@ -453,7 +453,7 @@ namespace ScrewTurn.Wiki {
 					ExtractSection(Content.GetPageContent(currentPage, true).Content, currentSection, out start, out len, out anchor);
 				}
 
-				UrlTools.Redirect(Tools.UrlEncode(currentPage.FullName) + Settings.PageExtension + (anchor != null ? ("#" + anchor + "_" + currentSection.ToString()) : ""));
+				UrlTools.Redirect(Tools.UrlEncode(currentPage.FullName) + Settings.PageExtension + (anchor != null ? ("#" + anchor + "_" + currentSection) : ""));
 			}
 			else UrlTools.Redirect(UrlTools.BuildUrl("Default.aspx"));
 		}
@@ -682,7 +682,7 @@ namespace ScrewTurn.Wiki {
 				if(redirect) {
 					Collisions.CancelEditingSession(currentPage, username);
 					string target = UrlTools.BuildUrl(Tools.UrlEncode(currentPage.FullName), Settings.PageExtension, "?NoRedirect=1",
-						(!string.IsNullOrEmpty(anchor) ? ("#" + anchor + "_" + currentSection.ToString()) : ""));
+						(!string.IsNullOrEmpty(anchor) ? ("#" + anchor + "_" + currentSection) : ""));
 					UrlTools.Redirect(target);
 				}
 			}

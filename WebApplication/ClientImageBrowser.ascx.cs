@@ -78,7 +78,7 @@ namespace ScrewTurn.Wiki {
 
 			sb.Append("</div>");
 
-			sb.Append(temp.ToString());
+			sb.Append(temp);
 		}
 
 		private void RenderItem(TreeElement item, StringBuilder sb, int iteration) {

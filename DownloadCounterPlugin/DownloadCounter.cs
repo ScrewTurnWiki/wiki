@@ -79,7 +79,7 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 			KeyValuePair<int, string> block = FindAndRemoveFirstOccurrence(buffer);
 
 			while(block.Key != -1) {
-				string blockHash = "DownCount-" + block.Value.ToString();
+				string blockHash = "DownCount-" + block.Value;
 
 				string result = null;
 

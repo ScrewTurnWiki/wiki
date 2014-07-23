@@ -468,7 +468,7 @@ namespace ScrewTurn.Wiki {
 			string[] outgoingLinks = Pages.GetPageOutgoingLinks(page);
 			if(outgoingLinks == null || outgoingLinks.Length == 0) return null;
 
-			string id = dbPrefix + Guid.NewGuid().ToString();
+			string id = dbPrefix + Guid.NewGuid();
 
 			StringBuilder buffer = new StringBuilder(300);
 

@@ -24,7 +24,7 @@ namespace ScrewTurn.Wiki.PluginFramework {
 		/// <returns>The document name.</returns>
 		public static string GetDocumentName(PageInfo page, int messageID) {
 			if(page == null) throw new ArgumentNullException("page");
-			return page.FullName + "..." + messageID.ToString();
+			return page.FullName + "..." + messageID;
 		}
 
 		/// <summary>

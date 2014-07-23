@@ -346,7 +346,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 							List<Parameter> parameters = new List<Parameter>(MaxParametersInQuery);
 
 							for(int i = chunk * MaxParametersInQuery; i < Math.Min(ids.Count, (chunk + 1) * MaxParametersInQuery); i++) {
-								parms.Add("P" + i.ToString());
+								parms.Add("P" + i);
 								parameters.Add(new Parameter(ParameterType.Int32, parms[parms.Count - 1], ids[i]));
 							}
 
@@ -695,7 +695,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 						List<Parameter> parameters = new List<Parameter>(MaxParametersInQuery);
 
 						for(int i = chunk * MaxParametersInQuery; i < Math.Min(ids.Count, (chunk + 1) * MaxParametersInQuery); i++) {
-							parms.Add("P" + i.ToString());
+							parms.Add("P" + i);
 							parameters.Add(new Parameter(ParameterType.Int32, parms[parms.Count - 1], ids[i]));
 						}
 

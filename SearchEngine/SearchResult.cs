@@ -65,7 +65,7 @@ namespace ScrewTurn.Wiki.SearchEngine {
 		/// </summary>
 		/// <returns>The string representation.</returns>
 		public override string ToString() {
-			return document.Name + "(" + matches.Count.ToString() + " matches)";
+			return document.Name + "(" + matches.Count + " matches)";
 		}
 
 	}

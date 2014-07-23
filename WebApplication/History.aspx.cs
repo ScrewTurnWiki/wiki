@@ -160,7 +160,7 @@ namespace ScrewTurn.Wiki {
 				if(!canRollback) return;
 				int rev = int.Parse(e.CommandArgument as string);
 
-				Log.LogEntry("Page rollback requested for " + page.FullName + " to rev. " + rev.ToString(), EntryType.General, SessionFacade.GetCurrentUsername());
+				Log.LogEntry("Page rollback requested for " + page.FullName + " to rev. " + rev, EntryType.General, SessionFacade.GetCurrentUsername());
 				Pages.Rollback(page, rev);
 
 				PrintHistory();

@@ -174,7 +174,7 @@ namespace ScrewTurn.Wiki {
 				DataRow row = table.NewRow();
 				row["Type"] = "D";
 				row["Name"] = GetItemName(s)/* + "/"*/;
-				row["Size"] = "(" + ((int)(provider.ListFiles(s).Length + provider.ListDirectories(s).Length)).ToString() + ")";
+				row["Size"] = "(" + ((int)(provider.ListFiles(s).Length + provider.ListDirectories(s).Length)) + ")";
 				row["WikiMarkupLink"] = "&nbsp;";
 				row["Link"] = "";
 				row["Editable"] = false;
@@ -406,7 +406,7 @@ namespace ScrewTurn.Wiki {
 			string current = "/";
 			for(int i = 0; i < dirs.Length; i++) {
 				Anthem.LinkButton lnk = new Anthem.LinkButton();
-				lnk.ID = "lnkDir" + i.ToString();
+				lnk.ID = "lnkDir" + i;
 				lnk.Text = dirs[i];
 				current += dirs[i] + "/";
 				lnk.CommandArgument = current;
@@ -415,7 +415,7 @@ namespace ScrewTurn.Wiki {
 				plhDirectory.Controls.Add(lnk);
 
 				Anthem.Label lbl = new Anthem.Label();
-				lbl.ID = "lblDir" + i.ToString();
+				lbl.ID = "lblDir" + i;
 				lbl.Text = " / ";
 				plhDirectory.Controls.Add(lbl);
 			}

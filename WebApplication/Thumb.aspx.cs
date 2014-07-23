@@ -86,7 +86,7 @@ namespace ScrewTurn.Wiki {
 					retrieved = provider.RetrieveFile(filename, ms, false);
 				}
 				catch(ArgumentException ex) {
-					Log.LogEntry("Attempted to create thumb of inexistent file (" + filename + ")\n" + ex.ToString(), EntryType.Warning, Log.SystemUsername);
+					Log.LogEntry("Attempted to create thumb of inexistent file (" + filename + ")\n" + ex, EntryType.Warning, Log.SystemUsername);
 				}
 
 				if(!retrieved) {
@@ -109,7 +109,7 @@ namespace ScrewTurn.Wiki {
 					retrieved = provider.RetrievePageAttachment(pageInfo, filename, ms, false);
 				}
 				catch(ArgumentException ex) {
-					Log.LogEntry("Attempted to create thumb of inexistent attachment (" + page + "/" + filename + ")\n" + ex.ToString(), EntryType.Warning, Log.SystemUsername);
+					Log.LogEntry("Attempted to create thumb of inexistent attachment (" + page + "/" + filename + ")\n" + ex, EntryType.Warning, Log.SystemUsername);
 				}
 
 				if(!retrieved) {

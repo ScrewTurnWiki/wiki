@@ -67,9 +67,9 @@ namespace ScrewTurn.Wiki.Plugins.PluginPack {
 			// For each <ref>...</ref> replace it with Footnote, append it to ref-section
 			foreach(Match m in mc) {
 				footnoteCounter++;
-				output = ReplaceFirst(output, m.Value, "<a id=\"refnote" + footnoteCounter.ToString() + "\" href=\"#footnote" + footnoteCounter.ToString() + "\"><sup>" + footnoteCounter.ToString() + "</sup></a>");
+				output = ReplaceFirst(output, m.Value, "<a id=\"refnote" + footnoteCounter + "\" href=\"#footnote" + footnoteCounter + "\"><sup>" + footnoteCounter + "</sup></a>");
 
-				ref_string += "<tr><td><a id=\"footnote" + footnoteCounter.ToString() + "\" href=\"#refnote" + footnoteCounter.ToString() + "\"><sup>" + footnoteCounter.ToString() + "</sup></a></td><td>" + RefRemovalRegex.Replace(m.Value, "") + "</td></tr>";
+				ref_string += "<tr><td><a id=\"footnote" + footnoteCounter + "\" href=\"#refnote" + footnoteCounter + "\"><sup>" + footnoteCounter + "</sup></a></td><td>" + RefRemovalRegex.Replace(m.Value, "") + "</td></tr>";
 			}
 			ref_string += "</table>";
 

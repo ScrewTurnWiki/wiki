@@ -152,7 +152,7 @@ namespace ScrewTurn.Wiki {
 
 			if(indexStorer.DataCorrupted) {
 				host.LogEntry("Search Engine Index is corrupted and needs to be rebuilt\r\n" +
-					indexStorer.ReasonForDataCorruption.ToString(),	LogEntryType.Warning, null, this);
+					indexStorer.ReasonForDataCorruption,	LogEntryType.Warning, null, this);
 			}
 		}
 
@@ -1209,7 +1209,7 @@ namespace ScrewTurn.Wiki {
 					return count;
 				}
 				catch(Exception ex) {
-					host.LogEntry("Page indexing error for " + content.PageInfo.FullName + " (skipping page): " + ex.ToString(), LogEntryType.Error, null, this);
+					host.LogEntry("Page indexing error for " + content.PageInfo.FullName + " (skipping page): " + ex, LogEntryType.Error, null, this);
 					return 0;
 				}
 			}
@@ -2414,14 +2414,14 @@ namespace ScrewTurn.Wiki {
 						host.PrepareContentForIndexing(null, body), null);
 
 					if(count == 0 && body.Length > 0) {
-						host.LogEntry("Indexed 0 words for message " + page.FullName + ":" + id.ToString() + ": possible index corruption. Please report this error to the developers",
+						host.LogEntry("Indexed 0 words for message " + page.FullName + ":" + id + ": possible index corruption. Please report this error to the developers",
 							LogEntryType.Warning, null, this);
 					}
 
 					return count;
 				}
 				catch(Exception ex) {
-					host.LogEntry("Message indexing error for " + page.FullName + ":" + id.ToString() + " (skipping message): " + ex.ToString(), LogEntryType.Error, null, this);
+					host.LogEntry("Message indexing error for " + page.FullName + ":" + id + " (skipping message): " + ex, LogEntryType.Error, null, this);
 					return 0;
 				}
 			}

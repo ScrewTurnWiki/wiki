@@ -126,7 +126,7 @@ namespace ScrewTurn.Wiki {
 			if(backups.Count > 0) {
 				int targetRevision = backups[backups.Count - 1];
 
-				Log.LogEntry("Page rollback requested for " + txtCurrentPage.Value + " to rev. " + targetRevision.ToString(), EntryType.General, SessionFacade.GetCurrentUsername());
+				Log.LogEntry("Page rollback requested for " + txtCurrentPage.Value + " to rev. " + targetRevision, EntryType.General, SessionFacade.GetCurrentUsername());
 
 				Pages.Rollback(externallySelectedPage, targetRevision);
 
@@ -429,7 +429,7 @@ namespace ScrewTurn.Wiki {
 			foreach(int bak in backups) {
 				PageContent bakContent = Pages.GetBackupContent(page, bak);
 				
-				ListItem item = new ListItem(bak.ToString() + ": " +
+				ListItem item = new ListItem(bak + ": " +
 					Preferences.AlignWithTimezone(bakContent.LastModified).ToString(Settings.DateTimeFormat) + 
 					" " + Properties.Messages.By + " " + bakContent.User,
 					bak.ToString());
@@ -674,7 +674,7 @@ namespace ScrewTurn.Wiki {
 			// This should never occur
 			if(!int.TryParse(lstRevision.SelectedValue, out targetRevision)) return;
 
-			Log.LogEntry("Page rollback requested for " + txtCurrentPage.Value + " to rev. " + targetRevision.ToString(), EntryType.General, Log.SystemUsername);
+			Log.LogEntry("Page rollback requested for " + txtCurrentPage.Value + " to rev. " + targetRevision, EntryType.General, Log.SystemUsername);
 
 			bool done = Pages.Rollback(page, targetRevision);
 

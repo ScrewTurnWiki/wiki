@@ -184,7 +184,7 @@ namespace ScrewTurn.Wiki {
 		/// <param name="selected">A value indicating whether the page is selected.</param>
 		public ItemBlockRow(int page, int begin, int size, bool selected) {
 			this.page = page.ToString();
-			this.text = (begin + 1).ToString() + "-" + (begin + size).ToString();
+			this.text = (begin + 1) + "-" + (begin + size);
 			this.selected = selected;
 		}
 

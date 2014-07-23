@@ -312,7 +312,7 @@ namespace ScrewTurn.Wiki {
 						int count = 0;
 						int.TryParse(fields[1], out count);
 						count = count + 1;
-						lines[i] = itemName + "|" + count.ToString();
+						lines[i] = itemName + "|" + count;
 						found = true;
 					}
 				}
@@ -351,7 +351,7 @@ namespace ScrewTurn.Wiki {
 
 					if(fields[0].ToLowerInvariant() == lowercaseItemName) {
 						// Set the new count
-						outputLines.Add(fields[0] + "|" + count.ToString());
+						outputLines.Add(fields[0] + "|" + count);
 					}
 					else {
 						// Copy data with no modification
