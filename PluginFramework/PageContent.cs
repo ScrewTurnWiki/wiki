@@ -65,7 +65,7 @@ namespace ScrewTurn.Wiki.PluginFramework {
 			this.lastModified = lastModified;
 			this.content = content;
 			this.comment = comment;
-			this.keywords = keywords != null ? keywords : new string[0];
+			this.keywords = keywords ?? new string[ 0 ];
 			this.description = description;
 		}
 
