@@ -132,12 +132,6 @@
   <data name="pnlAccountResource1.GroupingText" xml:space="preserve">
     <value />
   </data>
-  <data name="cvEmail1Resource1.ErrorMessage" xml:space="preserve">
-    <value>Die E-Mail-Adressen sind nicht identisch</value>
-  </data>  
-  <data name="cvEmail2Resource1.ErrorMessage" xml:space="preserve">
-    <value>Die E-Mail-Adressen sind nicht identisch</value>
-  </data>  
   <data name="pnlAccountResource1.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -418,9 +412,6 @@
     <value>Hier können Sie Ihre Profilinformationen, wie E-Mail-Adresse und Passwort, ändern. Der Benutzername kann nicht geändert werden.</value>
     <comment>Here you can edit your Profile settings, such as E-Mail address and Password. You cannot change your Username.</comment>
   </data>
-  <data name="lblEditEmailPasswordResource1.Text" xml:space="preserve">
-    <value>Anzeigename, E-Mail-Adresse und Passwort</value>
-  </data>  
   <data name="lblOldPasswordResource1.Text" xml:space="preserve">
     <value>Aktuelles Passwort</value>
     <comment>Old Password</comment>

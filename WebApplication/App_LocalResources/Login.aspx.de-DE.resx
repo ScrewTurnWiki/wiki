@@ -138,9 +138,6 @@
   <data name="lblNewPassword1Resource1.Text" xml:space="preserve">
     <value>Passwort</value>
   </data>
-  <data name="lblEmailResetResource1.Text" xml:space="preserve">
-    <value>E-Mail-Adresse</value>
-  </data>
   <data name="lblNewPassword2Resource1.Text" xml:space="preserve">
     <value>Passwort (Wiederholung)</value>
   </data>
