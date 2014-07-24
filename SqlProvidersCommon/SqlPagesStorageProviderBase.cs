@@ -1677,18 +1677,20 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			string destinationNs = NameTools.GetNamespace(destination.FullName);
 			
 			// If one is null and the other not null, fail
-			if(sourceNs == null && destinationNs != null || sourceNs != null && destinationNs == null) return null;
+			if(sourceNs == null && destinationNs != null || sourceNs != null && destinationNs == null)
+				return null;
 			// Both non-null or both null
 			if(sourceNs != null) {
 				// Both non-null, check names
 				NamespaceInfo tempSource = new NamespaceInfo(sourceNs, this, null);
 				NamespaceInfo tempDest = new NamespaceInfo(destinationNs, this, null);
 				// Different names, fail
-				if(new NamespaceComparer().Compare(tempSource, tempDest) != 0) return null;
+				if ( tempSource.Name != tempDest.Name )
+					return null;
 			}
 			// else both null, OK
 
-			string nspace = sourceNs != null ? sourceNs : "";
+			string nspace = sourceNs ?? string.Empty;
 
 			ICommandBuilder builder = GetCommandBuilder();
 			DbConnection connection = builder.GetConnection(connString);

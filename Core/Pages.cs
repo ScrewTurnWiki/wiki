@@ -19,17 +19,20 @@ namespace ScrewTurn.Wiki {
 		/// Gets all the namespaces, sorted.
 		/// </summary>
 		/// <returns>The namespaces, sorted.</returns>
-		public static List<NamespaceInfo> GetNamespaces() {
-			List<NamespaceInfo> result = new List<NamespaceInfo>(10);
+		public static List<NamespaceInfo> GetNamespaces( )
+		{
+			List<NamespaceInfo> result = new List<NamespaceInfo>( 10 );
 
 			int count = 0;
-			foreach(IPagesStorageProviderV30 provider in Collectors.PagesProviderCollector.AllProviders) {
+			foreach ( IPagesStorageProviderV30 provider in Collectors.PagesProviderCollector.AllProviders )
+			{
 				count++;
-				result.AddRange(provider.GetNamespaces());
+				result.AddRange( provider.GetNamespaces( ) );
 			}
 
-			if(count > 1) {
-				result.Sort(new NamespaceComparer());
+			if ( count > 1 )
+			{
+				result.Sort( ( x, y ) => x.CompareTo( y ) );
 			}
 
 			return result;
@@ -291,8 +294,8 @@ namespace ScrewTurn.Wiki {
 
 			if(pageNamespace == null) return false;
 
-			NamespaceComparer comp = new NamespaceComparer();
-			if(comp.Compare(pageNamespace, nspace) != 0) return false;
+			if ( nspace.CompareTo( pageNamespace ) != 0 )
+				return false;
 
 			NamespaceInfo result = pageNamespace.Provider.SetNamespaceDefaultPage(nspace, page);
 
