@@ -2813,9 +2813,6 @@
     <Content Include="User.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.Release.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Images\Editor\OL.png" />
     <Content Include="Images\Editor\UL.png" />
     <Content Include="JS\SearchHighlight.js" />
@@ -2851,7 +2848,6 @@
     <Content Include="Themes\Elegant\Images\EmailNotifOff-Discussion.png" />
     <Content Include="Themes\Elegant\Images\EmailNotifOn-Discussion.png" />
     <Content Include="Themes\Elegant\Images\RSS-Discussion.png" />
-    <Content Include="Web.SqlServer.Release.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
