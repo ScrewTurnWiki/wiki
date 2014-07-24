@@ -1842,7 +1842,7 @@ namespace ScrewTurn.Wiki
 		public bool SetBackupContent( PageContent content, int revision )
 		{
 			if ( content == null ) throw new ArgumentNullException( "content" );
-			if ( revision < 0 ) throw new ArgumentOutOfRangeException( "Invalid Revision", "revision" );
+			if ( revision < 0 ) throw new ArgumentOutOfRangeException( "revision", "Invalid Revision" );
 
 			lock ( this )
 			{
@@ -2161,7 +2161,7 @@ namespace ScrewTurn.Wiki
 		public bool RollbackPage( PageInfo page, int revision )
 		{
 			if ( page == null ) throw new ArgumentNullException( "page" );
-			if ( revision < 0 ) throw new ArgumentOutOfRangeException( "Invalid Revision", "revision" );
+			if ( revision < 0 ) throw new ArgumentOutOfRangeException( "revision", "Invalid Revision" );
 
 			lock ( this )
 			{
@@ -2193,7 +2193,7 @@ namespace ScrewTurn.Wiki
 		public bool DeleteBackups( PageInfo page, int revision )
 		{
 			if ( page == null ) throw new ArgumentNullException( "page" );
-			if ( revision < -1 ) throw new ArgumentOutOfRangeException( "Invalid Revision", "revision" );
+			if ( revision < -1 ) throw new ArgumentOutOfRangeException( "revision", "Invalid Revision" );
 
 			lock ( this )
 			{
@@ -2834,7 +2834,7 @@ namespace ScrewTurn.Wiki
 		public bool RemoveMessage( PageInfo page, int id, bool removeReplies )
 		{
 			if ( page == null ) throw new ArgumentNullException( "page" );
-			if ( id < 0 ) throw new ArgumentOutOfRangeException( "Invalid ID", "id" );
+			if ( id < 0 ) throw new ArgumentOutOfRangeException( "id", "Invalid ID" );
 
 			lock ( this )
 			{
@@ -2961,7 +2961,7 @@ namespace ScrewTurn.Wiki
 		public bool ModifyMessage( PageInfo page, int id, string username, string subject, DateTime dateTime, string body )
 		{
 			if ( page == null ) throw new ArgumentNullException( "page" );
-			if ( id < 0 ) throw new ArgumentOutOfRangeException( "Invalid Message ID", "id" );
+			if ( id < 0 ) throw new ArgumentOutOfRangeException( "id", "Invalid Message ID" );
 			if ( username == null ) throw new ArgumentNullException( "username" );
 			if ( username.Length == 0 ) throw new ArgumentException( "Username cannot be empty", "username" );
 			if ( subject == null ) throw new ArgumentNullException( "subject" );

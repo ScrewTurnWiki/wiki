@@ -542,14 +542,19 @@
 		/// <param name="nspace">The namespace.</param>
 		/// <param name="pages">The local names of the pages in the namespace.</param>
 		public static void ClearEntriesForNamespace(string nspace, List<string> pages) {
-			if(nspace == null) throw new ArgumentNullException("nspac");
-			if(nspace.Length == 0) throw new ArgumentException("Namespace cannot be empty", "nspace");
+			if(nspace == null)
+				throw new ArgumentNullException("nspace");
+			if(nspace.Length == 0)
+				throw new ArgumentException("Namespace cannot be empty", "nspace");
 
-			if(pages == null) throw new ArgumentNullException("pages");
+			if(pages == null)
+				throw new ArgumentNullException("pages");
 
 			foreach(string p in pages) {
-				if(p == null) throw new ArgumentNullException("pages");
-				if(p.Length == 0) throw new ArgumentException("Page Element cannot be empty", "pages");
+				if(p == null)
+					throw new ArgumentNullException("pages");
+				if(p.Length == 0)
+					throw new ArgumentException("Page Element cannot be empty", "pages");
 			}
 
 			string resourceName;

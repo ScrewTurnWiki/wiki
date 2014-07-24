@@ -1005,7 +1005,7 @@ namespace ScrewTurn.Wiki
 		/// <exception cref="ArgumentException">If <b>filename</b> is empty.</exception>
 		public bool DeletePluginAssembly( string filename )
 		{
-			if ( filename == null ) throw new ArgumentNullException( filename );
+			if ( filename == null ) throw new ArgumentNullException( "filename" );
 			if ( filename.Length == 0 ) throw new ArgumentException( "Filename cannot be empty", "filename" );
 
 			lock ( this )
