@@ -1,15 +1,14 @@
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
-
 namespace ScrewTurn.Wiki.ImportWiki {
+	using System.Collections.Generic;
+	using System.Text;
+	using System.Text.RegularExpressions;
 
 	/// <summary>
 	/// Implements a translator tool for importing MediaWiki data.
 	/// </summary>
-	public class Translator : ScrewTurn.Wiki.ImportWiki.ITranslator {
+	public class Translator : ITranslator {
 
-		private Regex noWiki = new Regex(@"<nowiki>(.|\n|\r)*?</nowiki>", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+		private readonly Regex _noWiki = new Regex(@"<nowiki>(.|\n|\r)*?</nowiki>", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
 		/// <summary>
 		/// Executes the translation.
@@ -32,7 +31,6 @@ namespace ScrewTurn.Wiki.ImportWiki {
 			Regex references = new Regex(@"<ref>(.|\n|\r)*?</ref>");
 			Regex references1 = new Regex(@"\<references\/\>");
 			Regex redirect = new Regex(@"\#REDIRECT\ \[{2}.+\]{2}");
-			Match match;
 
 			List<int> noWikiBegin = new List<int>(), noWikiEnd = new List<int>();
 
@@ -61,7 +59,7 @@ namespace ScrewTurn.Wiki.ImportWiki {
 			///////////////////////////////////////////////
 			//////BEGIN of unsupported formatting-tag//////
 			///////////////////////////////////////////////
-			match = math.Match(sb.ToString());
+			Match match = math.Match(sb.ToString());
 			while(match.Success) {
 				int end;
 				if(IsNoWikied(match.Index, noWikiBegin, noWikiEnd, out end)) {
@@ -283,11 +281,11 @@ namespace ScrewTurn.Wiki.ImportWiki {
 			noWikiBegin.Clear();
 			noWikiEnd.Clear();
 
-			match = noWiki.Match(text);
+			match = _noWiki.Match(text);
 			while(match.Success) {
 				noWikiBegin.Add(match.Index);
 				noWikiEnd.Add(match.Index + match.Length - 1);
-				match = noWiki.Match(text, match.Index + match.Length);
+				match = _noWiki.Match(text, match.Index + match.Length);
 			}
 		}
 

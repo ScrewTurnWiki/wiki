@@ -1,10 +1,8 @@
-
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
-
 namespace ScrewTurn.Wiki.ImportWiki {
+	using System;
+	using System.Collections.Generic;
+	using System.Text;
+	using System.Text.RegularExpressions;
 
 	/// <summary>
 	/// Implements a translator tool for importing FlexWiki data.

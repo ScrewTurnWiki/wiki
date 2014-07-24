@@ -106,8 +106,10 @@
     <Compile Include="FormattingPipeline.cs" />
     <Compile Include="Hash.cs" />
     <Compile Include="Host.cs" />
+    <Compile Include="ImportWiki\ITranslator.cs" />
+    <Compile Include="ImportWiki\Translator.cs" />
+    <Compile Include="ImportWiki\TranslatorFlex.cs" />
     <Compile Include="IndexStorer.cs" />
-    <Compile Include="ITranslator.cs" />
     <Compile Include="LocalPageInfo.cs" />
     <Compile Include="LocalProvidersTools.cs" />
     <Compile Include="LocalUserInfo.cs" />
@@ -138,8 +140,6 @@
     <Compile Include="SubjectInfo.cs" />
     <Compile Include="Templates.cs" />
     <Compile Include="Tools.cs" />
-    <Compile Include="Translator.cs" />
-    <Compile Include="TranslatorFlex.cs" />
     <Compile Include="UrlTools.cs" />
     <Compile Include="Users.cs">
       <SubType>Code</SubType>
