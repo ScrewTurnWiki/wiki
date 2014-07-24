@@ -8,6 +8,7 @@ using ScrewTurn.Wiki.AclEngine;
 using ScrewTurn.Wiki.PluginFramework;
 
 namespace ScrewTurn.Wiki.Tests {
+	using ScrewTurn.Wiki.Acl;
 
 	[TestFixture]
 	public class AuthReaderTests {
