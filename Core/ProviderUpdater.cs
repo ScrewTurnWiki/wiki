@@ -112,7 +112,7 @@ namespace ScrewTurn.Wiki
 		{
 			try
 			{
-				HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create( url );
+				HttpWebRequest request = (HttpWebRequest)WebRequest.Create( url );
 				HttpWebResponse response = (HttpWebResponse)request.GetResponse( );
 
 				if ( response.StatusCode != HttpStatusCode.OK )

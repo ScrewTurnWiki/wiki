@@ -19,7 +19,7 @@ namespace ScrewTurn.Wiki
 		/// <returns>The Hash code.</returns>
 		public static byte[ ] ComputeBytes( string input )
 		{
-			MD5 md5 = MD5CryptoServiceProvider.Create( );
+			MD5 md5 = MD5.Create( );
 			return md5.ComputeHash( Encoding.ASCII.GetBytes( input ) );
 		}
 

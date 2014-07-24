@@ -97,8 +97,8 @@ namespace ScrewTurn.Wiki
 		{
 			get
 			{
-				MD5 md5 = MD5CryptoServiceProvider.Create( );
-				return md5.ComputeHash( System.Text.UTF8Encoding.UTF8.GetBytes( MasterPassword ) );
+				MD5 md5 = MD5.Create( );
+				return md5.ComputeHash( System.Text.Encoding.UTF8.GetBytes( MasterPassword ) );
 			}
 		}
 

@@ -321,7 +321,7 @@ namespace ScrewTurn.Wiki
 			lock ( this )
 			{
 				configData = new Dictionary<string, string>( 30 );
-				string data = File.ReadAllText( GetFullPath( ConfigFile ), System.Text.UTF8Encoding.UTF8 );
+				string data = File.ReadAllText( GetFullPath( ConfigFile ), Encoding.UTF8 );
 
 				data = data.Replace( "\r", "" );
 
@@ -528,7 +528,7 @@ namespace ScrewTurn.Wiki
 					return;
 				}
 
-				StreamWriter sw = new StreamWriter( fs, System.Text.UTF8Encoding.UTF8 );
+				StreamWriter sw = new StreamWriter( fs, Encoding.UTF8 );
 				// Type | DateTime | Message | User
 				try
 				{
@@ -606,7 +606,7 @@ namespace ScrewTurn.Wiki
 					throw new IOException( "Unable to open the file: " + LogFile, ex );
 				}
 
-				StreamWriter sw = new StreamWriter( fs, System.Text.UTF8Encoding.UTF8 );
+				StreamWriter sw = new StreamWriter( fs, Encoding.UTF8 );
 				// Type | DateTime | Message | User
 				try
 				{
