@@ -10,6 +10,7 @@ using ScrewTurn.Wiki.PluginFramework;
 using ScrewTurn.Wiki.AclEngine;
 
 namespace ScrewTurn.Wiki.Tests {
+	using ScrewTurn.Wiki.Acl;
 
 	[TestFixture]
 	public class DataMigratorTests {

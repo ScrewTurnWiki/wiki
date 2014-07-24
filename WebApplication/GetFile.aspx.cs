@@ -6,6 +6,7 @@ namespace ScrewTurn.Wiki
 	using System.Linq;
 	using System.Web;
 	using System.Web.UI;
+	using ScrewTurn.Wiki.Acl;
 	using ScrewTurn.Wiki.PluginFramework;
 	using ScrewTurn.Wiki.Properties;
 

@@ -7,6 +7,7 @@ using ScrewTurn.Wiki.PluginFramework;
 using ScrewTurn.Wiki.SearchEngine;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	public partial class Search : BasePage {
 

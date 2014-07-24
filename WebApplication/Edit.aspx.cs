@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 using System.Linq;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	public partial class Edit : BasePage {
 

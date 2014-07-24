@@ -1,8 +1,7 @@
-﻿using System;
-using ScrewTurn.Wiki.PluginFramework;
-using ScrewTurn.Wiki.AclEngine;
-
-namespace ScrewTurn.Wiki {
+﻿namespace ScrewTurn.Wiki.Acl {
+	using System;
+	using ScrewTurn.Wiki.AclEngine;
+	using ScrewTurn.Wiki.PluginFramework;
 
 	/// <summary>
 	/// Utility class for checking permissions and authorizations.

@@ -4,6 +4,7 @@ using System.Xml;
 using ScrewTurn.Wiki.PluginFramework;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	public partial class Sitemap : System.Web.UI.Page {
 

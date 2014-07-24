@@ -8,6 +8,7 @@ using ScrewTurn.Wiki.PluginFramework;
 using System.Drawing.Imaging;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	public partial class ImageEditor : BasePage {
 

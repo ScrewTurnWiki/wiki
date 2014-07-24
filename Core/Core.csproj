@@ -84,12 +84,12 @@
     <Compile Include="..\AssemblyVersion.cs">
       <Link>AssemblyVersion.cs</Link>
     </Compile>
-    <Compile Include="AclStorer.cs" />
+    <Compile Include="Acl\AclStorer.cs" />
     <Compile Include="Acl\SubjectType.cs" />
-    <Compile Include="AuthChecker.cs" />
-    <Compile Include="AuthStatus.cs" />
-    <Compile Include="AuthTools.cs" />
-    <Compile Include="AuthWriter.cs" />
+    <Compile Include="Acl\AuthChecker.cs" />
+    <Compile Include="Acl\AuthStatus.cs" />
+    <Compile Include="Acl\AuthTools.cs" />
+    <Compile Include="Acl\AuthWriter.cs" />
     <Compile Include="BreadcrumbsManager.cs" />
     <Compile Include="Cache.cs" />
     <Compile Include="CacheProvider.cs" />

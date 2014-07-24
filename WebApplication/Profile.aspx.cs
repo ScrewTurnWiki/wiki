@@ -5,6 +5,7 @@ using ScrewTurn.Wiki.PluginFramework;
 using System.Globalization;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	public partial class UserProfile : BasePage {
 

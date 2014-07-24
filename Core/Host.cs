@@ -7,6 +7,7 @@ using ScrewTurn.Wiki.SearchEngine;
 
 namespace ScrewTurn.Wiki {
 	using System.Linq;
+	using ScrewTurn.Wiki.Acl;
 
 	/// <summary>
 	/// Implements the <b>IHost</b> interface.

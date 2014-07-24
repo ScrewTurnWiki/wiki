@@ -1,10 +1,8 @@
-﻿
-using System;
-using System.IO;
-using System.Text;
-using ScrewTurn.Wiki.AclEngine;
-
-namespace ScrewTurn.Wiki {
+﻿namespace ScrewTurn.Wiki.Acl {
+	using System;
+	using System.IO;
+	using System.Text;
+	using ScrewTurn.Wiki.AclEngine;
 
 	/// <summary>
 	/// Implements a file-based ACL Storer.

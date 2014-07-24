@@ -8,6 +8,7 @@ using ScrewTurn.Wiki.PluginFramework;
 using ScrewTurn.Wiki.AclEngine;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	/// <summary>
 	/// Implements a Settings Storage Provider against local text pluginAssemblies.

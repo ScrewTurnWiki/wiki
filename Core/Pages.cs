@@ -7,6 +7,7 @@ using ScrewTurn.Wiki.PluginFramework;
 using System.Web;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	/// <summary>
 	/// Allows access to the Pages.

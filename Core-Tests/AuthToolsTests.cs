@@ -3,6 +3,7 @@ using System;
 using NUnit.Framework;
 
 namespace ScrewTurn.Wiki.Tests {
+	using ScrewTurn.Wiki.Acl;
 
 	[TestFixture]
 	public class AuthToolsTests {

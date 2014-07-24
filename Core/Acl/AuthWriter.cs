@@ -1,10 +1,8 @@
-﻿
-using System;
-using System.Collections.Generic;
-using ScrewTurn.Wiki.PluginFramework;
-using ScrewTurn.Wiki.AclEngine;
-
-namespace ScrewTurn.Wiki {
+﻿namespace ScrewTurn.Wiki.Acl {
+	using System;
+	using System.Collections.Generic;
+	using ScrewTurn.Wiki.AclEngine;
+	using ScrewTurn.Wiki.PluginFramework;
 
 	/// <summary>
 	/// Utility class for writing permissions and authorizations.

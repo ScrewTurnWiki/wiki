@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using ScrewTurn.Wiki.PluginFramework;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	public partial class AttachmentManager : System.Web.UI.UserControl {
 

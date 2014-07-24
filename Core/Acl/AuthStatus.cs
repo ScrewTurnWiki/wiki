@@ -1,4 +1,4 @@
-﻿namespace ScrewTurn.Wiki {
+﻿namespace ScrewTurn.Wiki.Acl {
 
 	/// <summary>
 	/// Lists legal values for authorizations.

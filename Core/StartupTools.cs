@@ -6,6 +6,7 @@ using System.Web.Configuration;
 using ScrewTurn.Wiki.PluginFramework;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	/// <summary>
 	/// Provides tools for starting and shutting down the wiki engine.

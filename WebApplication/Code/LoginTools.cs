@@ -4,7 +4,8 @@ using System.Web;
 using ScrewTurn.Wiki.PluginFramework;
 
 namespace ScrewTurn.Wiki {
-	
+	using ScrewTurn.Wiki.Acl;
+
 	/// <summary>
 	/// Implements login tools.
 	/// </summary>

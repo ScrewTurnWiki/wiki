@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	// No BasePage because compression/language selection are not needed
 	public partial class Thumb : Page {

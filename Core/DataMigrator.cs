@@ -6,6 +6,7 @@ using ScrewTurn.Wiki.AclEngine;
 using ScrewTurn.Wiki.PluginFramework;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	/// <summary>
 	/// Provides methods for migrating data from a Provider to another.

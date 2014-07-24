@@ -4,6 +4,7 @@ using ScrewTurn.Wiki.PluginFramework;
 using System.Text;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	public partial class Operation : BasePage {
 

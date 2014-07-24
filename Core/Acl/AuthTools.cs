@@ -1,8 +1,6 @@
-﻿
-using System;
-using ScrewTurn.Wiki.PluginFramework;
-
-namespace ScrewTurn.Wiki {
+﻿namespace ScrewTurn.Wiki.Acl {
+	using System;
+	using ScrewTurn.Wiki.PluginFramework;
 
 	/// <summary>
 	/// Implements tools supporting athorization management.

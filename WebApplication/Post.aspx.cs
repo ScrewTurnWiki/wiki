@@ -4,6 +4,7 @@ using ScrewTurn.Wiki.PluginFramework;
 using System.Text.RegularExpressions;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	public partial class Post : BasePage {
 

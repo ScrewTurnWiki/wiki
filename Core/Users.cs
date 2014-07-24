@@ -5,6 +5,7 @@ using ScrewTurn.Wiki.PluginFramework;
 using System.Web;
 
 namespace ScrewTurn.Wiki {
+	using ScrewTurn.Wiki.Acl;
 
 	/// <summary>
 	/// Manages all the User Accounts data.
