@@ -1,9 +1,11 @@
-﻿namespace ScrewTurn.Wiki {
+﻿namespace ScrewTurn.Wiki
+{
 
 	/// <summary>
 	/// Contains default values.
 	/// </summary>
-	public static class Defaults {
+	public static class Defaults
+	{
 
 		/// <summary>
 		/// The default content of the main page.

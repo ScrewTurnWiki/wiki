@@ -2,12 +2,14 @@
 using System;
 using ScrewTurn.Wiki.SearchEngine;
 
-namespace ScrewTurn.Wiki {
+namespace ScrewTurn.Wiki
+{
 
 	/// <summary>
 	/// Represents a file document.
 	/// </summary>
-	public class FileDocument : IDocument {
+	public class FileDocument : IDocument
+	{
 
 		/// <summary>
 		/// The type tag for a <see cref="T:FileDocument" />.
@@ -27,15 +29,16 @@ namespace ScrewTurn.Wiki {
 		/// <param name="fullName">The file full name.</param>
 		/// <param name="provider">The file provider.</param>
 		/// <param name="dateTime">The modification date/time.</param>
-		public FileDocument(string fullName, string provider, DateTime dateTime) {
-			if(fullName == null) throw new ArgumentNullException("fullName");
-			if(fullName.Length == 0) throw new ArgumentException("Full Name cannot be empty", "fullName");
-			if(provider == null) throw new ArgumentNullException("provider");
-			if(provider.Length == 0) throw new ArgumentException("Provider cannot be empty", "provider");
+		public FileDocument( string fullName, string provider, DateTime dateTime )
+		{
+			if ( fullName == null ) throw new ArgumentNullException( "fullName" );
+			if ( fullName.Length == 0 ) throw new ArgumentException( "Full Name cannot be empty", "fullName" );
+			if ( provider == null ) throw new ArgumentNullException( "provider" );
+			if ( provider.Length == 0 ) throw new ArgumentException( "Provider cannot be empty", "provider" );
 
-			id = Tools.HashDocumentNameForTemporaryIndex(fullName);
+			id = Tools.HashDocumentNameForTemporaryIndex( fullName );
 			name = provider + "|" + fullName;
-			title = fullName.Substring(Tools.GetDirectoryName(fullName).Length);
+			title = fullName.Substring( Tools.GetDirectoryName( fullName ).Length );
 			this.dateTime = dateTime;
 			this.provider = provider;
 		}
@@ -44,20 +47,22 @@ namespace ScrewTurn.Wiki {
 		/// Initializes a new instance of the <see cref="T:FileDocument" /> class.
 		/// </summary>
 		/// <param name="doc">The dumped document.</param>
-		public FileDocument(DumpedDocument doc) {
-			string[] fields = doc.Name.Split('|');
+		public FileDocument( DumpedDocument doc )
+		{
+			string[ ] fields = doc.Name.Split( '|' );
 
 			id = doc.ID;
 			name = doc.Name;
 			title = doc.Title;
 			dateTime = doc.DateTime;
-			provider = fields[0];
+			provider = fields[ 0 ];
 		}
 
 		/// <summary>
 		/// Gets or sets the globally unique ID of the document.
 		/// </summary>
-		public uint ID {
+		public uint ID
+		{
 			get { return id; }
 			set { id = value; }
 		}
@@ -65,28 +70,32 @@ namespace ScrewTurn.Wiki {
 		/// <summary>
 		/// Gets the globally-unique name of the document.
 		/// </summary>
-		public string Name {
+		public string Name
+		{
 			get { return name; }
 		}
 
 		/// <summary>
 		/// Gets the title of the document, if any.
 		/// </summary>
-		public string Title {
+		public string Title
+		{
 			get { return title; }
 		}
 
 		/// <summary>
 		/// Gets the tag for the document type.
 		/// </summary>
-		public string TypeTag {
+		public string TypeTag
+		{
 			get { return typeTag; }
 		}
 
 		/// <summary>
 		/// Gets the document date/time.
 		/// </summary>
-		public DateTime DateTime {
+		public DateTime DateTime
+		{
 			get { return dateTime; }
 		}
 
@@ -95,14 +104,16 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="content">The content to tokenize.</param>
 		/// <returns>The extracted words and their positions (always an empty array).</returns>
-		public WordInfo[] Tokenize(string content) {
-			return ScrewTurn.Wiki.SearchEngine.Tools.Tokenize(content);
+		public WordInfo[ ] Tokenize( string content )
+		{
+			return ScrewTurn.Wiki.SearchEngine.Tools.Tokenize( content );
 		}
 
 		/// <summary>
 		/// Gets the provider.
 		/// </summary>
-		public string Provider {
+		public string Provider
+		{
 			get { return provider; }
 		}
 

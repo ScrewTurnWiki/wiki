@@ -5,23 +5,27 @@ using ScrewTurn.Wiki.PluginFramework;
 using System.Text;
 using ScrewTurn.Wiki.SearchEngine;
 
-namespace ScrewTurn.Wiki {
+namespace ScrewTurn.Wiki
+{
 	using System.Linq;
 	using ScrewTurn.Wiki.Acl;
 
 	/// <summary>
 	/// Implements the <b>IHost</b> interface.
 	/// </summary>
-	public class Host : IHostV30 {
+	public class Host : IHostV30
+	{
 
 		private static Host instance;
 
 		/// <summary>
 		/// Gets or sets the singleton instance of the <b>Host</b> object.
 		/// </summary>
-		public static Host Instance {
-			get {
-				if(instance == null) throw new InvalidOperationException("Host.Instance is null");
+		public static Host Instance
+		{
+			get
+			{
+				if ( instance == null ) throw new InvalidOperationException( "Host.Instance is null" );
 				return instance;
 			}
 			set { instance = value; }
@@ -32,16 +36,20 @@ namespace ScrewTurn.Wiki {
 		/// <summary>
 		/// Initializes a new instance of the <b>PluginHost</b> class.
 		/// </summary>
-		public Host() {
-			customSpecialTags = new Dictionary<string, CustomToolbarItem>(5);
+		public Host( )
+		{
+			customSpecialTags = new Dictionary<string, CustomToolbarItem>( 5 );
 		}
 
 		/// <summary>
 		/// Gets the Special Tags added by providers.
 		/// </summary>
-		public Dictionary<string, CustomToolbarItem> CustomSpecialTags {
-			get {
-				lock(customSpecialTags) {
+		public Dictionary<string, CustomToolbarItem> CustomSpecialTags
+		{
+			get
+			{
+				lock ( customSpecialTags )
+				{
 					return customSpecialTags;
 				}
 			}
@@ -52,8 +60,10 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="name">The Setting's Name.</param>
 		/// <returns>The Setting's value.</returns>
-		public string GetSettingValue(SettingName name) {
-			switch(name) {
+		public string GetSettingValue( SettingName name )
+		{
+			switch ( name )
+			{
 				case SettingName.ContactEmail:
 					return Settings.ContactEmail;
 				case SettingName.DateTimeFormat:
@@ -63,7 +73,7 @@ namespace ScrewTurn.Wiki {
 				case SettingName.RootNamespaceDefaultPage:
 					return Settings.DefaultPage;
 				case SettingName.DefaultTimeZone:
-					return Settings.DefaultTimezone.ToString();
+					return Settings.DefaultTimezone.ToString( );
 				case SettingName.MainUrl:
 					return Settings.MainUrl;
 				case SettingName.SenderEmail:
@@ -75,7 +85,7 @@ namespace ScrewTurn.Wiki {
 				case SettingName.PublicDirectory:
 					return Settings.PublicDirectory;
 				case SettingName.UsersCanRegister:
-					return Settings.UsersCanRegister.ToString();
+					return Settings.UsersCanRegister.ToString( );
 				case SettingName.UsernameRegex:
 					return Settings.UsernameRegex;
 				case SettingName.PasswordRegex:
@@ -85,49 +95,49 @@ namespace ScrewTurn.Wiki {
 				case SettingName.MainUrlRegex:
 					return Settings.MainUrlRegex;
 				case SettingName.EnableDoubleClickEditing:
-					return Settings.EnableDoubleClickEditing.ToString();
+					return Settings.EnableDoubleClickEditing.ToString( );
 				case SettingName.ProcessSingleLineBreaks:
-					return Settings.ProcessSingleLineBreaks.ToString();
+					return Settings.ProcessSingleLineBreaks.ToString( );
 				case SettingName.AccountActivationMode:
-					return Settings.AccountActivationMode.ToString();
+					return Settings.AccountActivationMode.ToString( );
 				case SettingName.AllowedFileTypes:
-					StringBuilder sb = new StringBuilder(50);
-					foreach(string s in Settings.AllowedFileTypes) sb.Append(s + ",");
-					return sb.ToString().TrimEnd(',');
+					StringBuilder sb = new StringBuilder( 50 );
+					foreach ( string s in Settings.AllowedFileTypes ) sb.Append( s + "," );
+					return sb.ToString( ).TrimEnd( ',' );
 				case SettingName.DisableAutomaticVersionCheck:
-					return Settings.DisableAutomaticVersionCheck.ToString();
+					return Settings.DisableAutomaticVersionCheck.ToString( );
 				case SettingName.DisableBreadcrumbsTrail:
-					return Settings.DisableBreadcrumbsTrail.ToString();
+					return Settings.DisableBreadcrumbsTrail.ToString( );
 				case SettingName.DisableCache:
-					return Settings.DisableCache.ToString();
+					return Settings.DisableCache.ToString( );
 				case SettingName.DisableCaptchaControl:
-					return Settings.DisableCaptchaControl.ToString();
+					return Settings.DisableCaptchaControl.ToString( );
 				case SettingName.DisableConcurrentEditing:
-					return Settings.DisableConcurrentEditing.ToString();
+					return Settings.DisableConcurrentEditing.ToString( );
 				case SettingName.EnableHttpCompression:
-					return Settings.EnableHttpCompression.ToString();
+					return Settings.EnableHttpCompression.ToString( );
 				case SettingName.EnableViewStateCompression:
-					return Settings.EnableViewStateCompression.ToString();
+					return Settings.EnableViewStateCompression.ToString( );
 				case SettingName.LoggingLevel:
-					return Settings.LoggingLevel.ToString();
+					return Settings.LoggingLevel.ToString( );
 				case SettingName.MaxFileSize:
-					return Settings.MaxFileSize.ToString();
+					return Settings.MaxFileSize.ToString( );
 				case SettingName.PageExtension:
 					return Settings.PageExtension;
 				case SettingName.ScriptTagsAllowed:
-					return Settings.ScriptTagsAllowed.ToString();
+					return Settings.ScriptTagsAllowed.ToString( );
 				case SettingName.WikiVersion:
 					return Settings.WikiVersion;
 				case SettingName.MaxLogSize:
-					return Settings.MaxLogSize.ToString();
+					return Settings.MaxLogSize.ToString( );
 				case SettingName.MaxRecentChanges:
-					return Settings.MaxRecentChanges.ToString();
+					return Settings.MaxRecentChanges.ToString( );
 				case SettingName.CacheSize:
-					return Settings.CacheSize.ToString();
+					return Settings.CacheSize.ToString( );
 				case SettingName.CacheCutSize:
-					return Settings.CacheCutSize.ToString();
+					return Settings.CacheCutSize.ToString( );
 				case SettingName.EditingSessionTimeout:
-					return Collisions.EditingSessionTimeout.ToString();
+					return Collisions.EditingSessionTimeout.ToString( );
 				case SettingName.AdministratorsGroup:
 					return Settings.AdministratorsGroup;
 				case SettingName.UsersGroup:
@@ -135,7 +145,7 @@ namespace ScrewTurn.Wiki {
 				case SettingName.AnonymousGroup:
 					return Settings.AnonymousGroup;
 				case SettingName.ChangeModerationMode:
-					return Settings.ChangeModerationMode.ToString();
+					return Settings.ChangeModerationMode.ToString( );
 				case SettingName.DefaultPagesStorageProvider:
 					return Settings.DefaultPagesProvider;
 				case SettingName.DefaultUsersStorageProvider:
@@ -145,9 +155,9 @@ namespace ScrewTurn.Wiki {
 				case SettingName.DefaultCacheProvider:
 					return Settings.DefaultCacheProvider;
 				case SettingName.RootNamespaceTheme:
-					return Settings.GetTheme(null);
+					return Settings.GetTheme( null );
 				case SettingName.ListSize:
-					return Settings.ListSize.ToString();
+					return Settings.ListSize.ToString( );
 			}
 			return "";
 		}
@@ -156,8 +166,9 @@ namespace ScrewTurn.Wiki {
 		/// Gets the list of the Users.
 		/// </summary>
 		/// <returns>The users.</returns>
-		public UserInfo[] GetUsers() {
-			return Users.GetUsers().ToArray();
+		public UserInfo[ ] GetUsers( )
+		{
+			return Users.GetUsers( ).ToArray( );
 		}
 
 		/// <summary>
@@ -167,11 +178,12 @@ namespace ScrewTurn.Wiki {
 		/// <returns>The <see cref="T:UserInfo" />, or <c>null</c> if no users are found.</returns>
 		/// <exception cref="ArgumentNullException">If <b>username</b> is <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>username</b> is empty.</exception>
-		public UserInfo FindUser(string username) {
-			if(username == null) throw new ArgumentNullException("username");
-			if(username.Length == 0) throw new ArgumentException("Username cannot be empty", "username");
+		public UserInfo FindUser( string username )
+		{
+			if ( username == null ) throw new ArgumentNullException( "username" );
+			if ( username.Length == 0 ) throw new ArgumentException( "Username cannot be empty", "username" );
 
-			return Users.FindUser(username);
+			return Users.FindUser( username );
 		}
 
 		/// <summary>
@@ -180,16 +192,18 @@ namespace ScrewTurn.Wiki {
 		/// <returns>The authenticated user, or <c>null</c> if no user is authenticated.</returns>
 		/// <remarks>If the built-it <i>admin</i> user is authenticated, the returned user 
 		/// has <i>admin</i> as Username.</remarks>
-		public UserInfo GetCurrentUser() {
-			return SessionFacade.GetCurrentUser();
+		public UserInfo GetCurrentUser( )
+		{
+			return SessionFacade.GetCurrentUser( );
 		}
 
 		/// <summary>
 		/// Gets the list of the user groups.
 		/// </summary>
 		/// <returns>The groups.</returns>
-		public UserGroup[] GetUserGroups() {
-			return Users.GetUserGroups().ToArray();
+		public UserGroup[ ] GetUserGroups( )
+		{
+			return Users.GetUserGroups( ).ToArray( );
 		}
 
 		/// <summary>
@@ -199,11 +213,12 @@ namespace ScrewTurn.Wiki {
 		/// <returns>The <see cref="T:UserGroup "/>, or <c>null</c> if no groups are found.</returns>
 		/// <exception cref="ArgumentNullException">If <b>name</b> is <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>name</b> is empty.</exception>
-		public UserGroup FindUserGroup(string name) {
-			if(name == null) throw new ArgumentNullException("name");
-			if(name.Length == 0) throw new ArgumentException("Name cannot be empty", "name");
+		public UserGroup FindUserGroup( string name )
+		{
+			if ( name == null ) throw new ArgumentNullException( "name" );
+			if ( name.Length == 0 ) throw new ArgumentException( "Name cannot be empty", "name" );
 
-			return Users.FindUserGroup(name);
+			return Users.FindUserGroup( name );
 		}
 
 		/// <summary>
@@ -298,16 +313,18 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="nspace">The namespace (<c>null</c> for the root).</param>
 		/// <returns>The theme.</returns>
-		public string GetTheme(NamespaceInfo nspace) {
-			return Settings.GetTheme(nspace != null ? nspace.Name : null);
+		public string GetTheme( NamespaceInfo nspace )
+		{
+			return Settings.GetTheme( nspace != null ? nspace.Name : null );
 		}
 
 		/// <summary>
 		/// Gets the list of the namespaces.
 		/// </summary>
 		/// <returns>The namespaces.</returns>
-		public NamespaceInfo[] GetNamespaces() {
-			return Pages.GetNamespaces().ToArray();
+		public NamespaceInfo[ ] GetNamespaces( )
+		{
+			return Pages.GetNamespaces( ).ToArray( );
 		}
 
 		/// <summary>
@@ -315,8 +332,9 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="name">The name.</param>
 		/// <returns>The <see cref="T:NamespaceInfo" />, or <c>null</c> if no namespaces are found.</returns>
-		public NamespaceInfo FindNamespace(string name) {
-			return Pages.FindNamespace(name);
+		public NamespaceInfo FindNamespace( string name )
+		{
+			return Pages.FindNamespace( name );
 		}
 
 		/// <summary>
@@ -324,8 +342,9 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="nspace">The namespace (<c>null</c> for the root).</param>
 		/// <returns>The pages.</returns>
-		public PageInfo[] GetPages(NamespaceInfo nspace) {
-			return Pages.GetPages(nspace).ToArray();
+		public PageInfo[ ] GetPages( NamespaceInfo nspace )
+		{
+			return Pages.GetPages( nspace ).ToArray( );
 		}
 
 		/// <summary>
@@ -333,16 +352,18 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="nspace">The namespace (<c>null</c> for the root).</param>
 		/// <returns>The categories.</returns>
-		public CategoryInfo[] GetCategories(NamespaceInfo nspace) {
-			return Pages.GetCategories(nspace).ToArray();
+		public CategoryInfo[ ] GetCategories( NamespaceInfo nspace )
+		{
+			return Pages.GetCategories( nspace ).ToArray( );
 		}
 
 		/// <summary>
 		/// Gets the list of Snippets.
 		/// </summary>
 		/// <returns>The snippets.</returns>
-		public Snippet[] GetSnippets() {
-			return Snippets.GetSnippets().ToArray();
+		public Snippet[ ] GetSnippets( )
+		{
+			return Snippets.GetSnippets( ).ToArray( );
 		}
 
 		/// <summary>
@@ -350,8 +371,9 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="nspace">The namespace (<c>null</c> for the root).</param>
 		/// <returns>The navigation paths.</returns>
-		public NavigationPath[] GetNavigationPaths(NamespaceInfo nspace) {
-			return NavigationPaths.GetNavigationPaths(nspace).ToArray();
+		public NavigationPath[ ] GetNavigationPaths( NamespaceInfo nspace )
+		{
+			return NavigationPaths.GetNavigationPaths( nspace ).ToArray( );
 		}
 
 		/// <summary>
@@ -360,10 +382,11 @@ namespace ScrewTurn.Wiki {
 		/// <param name="page">The Page.</param>
 		/// <returns>The Categories.</returns>
 		/// <exception cref="ArgumentNullException">If <b>page</b> is <c>null</c>.</exception>
-		public CategoryInfo[] GetCategoriesPerPage(PageInfo page) {
-			if(page == null) throw new ArgumentNullException("page");
+		public CategoryInfo[ ] GetCategoriesPerPage( PageInfo page )
+		{
+			if ( page == null ) throw new ArgumentNullException( "page" );
 
-			return Pages.GetCategoriesForPage(page);
+			return Pages.GetCategoriesForPage( page );
 		}
 
 		/// <summary>
@@ -373,11 +396,12 @@ namespace ScrewTurn.Wiki {
 		/// <returns>The Wiki Page or <c>null</c>.</returns>
 		/// <exception cref="ArgumentNullException">If <b>fullName</b> is <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>fullName</b> is empty.</exception>
-		public PageInfo FindPage(string fullName) {
-			if(fullName == null) throw new ArgumentNullException("fullName");
-			if(fullName.Length == 0) throw new ArgumentException("Full Name cannot be empty");
+		public PageInfo FindPage( string fullName )
+		{
+			if ( fullName == null ) throw new ArgumentNullException( "fullName" );
+			if ( fullName.Length == 0 ) throw new ArgumentException( "Full Name cannot be empty" );
 
-			return Pages.FindPage(fullName);
+			return Pages.FindPage( fullName );
 		}
 
 		/// <summary>
@@ -386,10 +410,11 @@ namespace ScrewTurn.Wiki {
 		/// <param name="page">The Page.</param>
 		/// <returns>The Page Content.</returns>
 		/// <exception cref="ArgumentNullException">If <b>page</b> is <c>null</c>.</exception>
-		public PageContent GetPageContent(PageInfo page) {
-			if(page == null) throw new ArgumentNullException("page");
+		public PageContent GetPageContent( PageInfo page )
+		{
+			if ( page == null ) throw new ArgumentNullException( "page" );
 
-			return Content.GetPageContent(page, true);
+			return Content.GetPageContent( page, true );
 		}
 
 		/// <summary>
@@ -398,10 +423,11 @@ namespace ScrewTurn.Wiki {
 		/// <param name="page">The Page.</param>
 		/// <returns>The Backup/Revision numbers.</returns>
 		/// <exception cref="ArgumentNullException">If <b>page</b> is <c>null</c>.</exception>
-		public int[] GetBackups(PageInfo page) {
-			if(page == null) throw new ArgumentNullException("page");
+		public int[ ] GetBackups( PageInfo page )
+		{
+			if ( page == null ) throw new ArgumentNullException( "page" );
 
-			return Pages.GetBackups(page).ToArray();
+			return Pages.GetBackups( page ).ToArray( );
 		}
 
 		/// <summary>
@@ -412,11 +438,12 @@ namespace ScrewTurn.Wiki {
 		/// <returns>The Backup Content.</returns>
 		/// <exception cref="ArgumentNullException">If <b>page</b> is <c>null</c>.</exception>
 		/// <exception cref="ArgumentOutOfRangeException">If <b>revision</b> is less than zero.</exception>
-		public PageContent GetBackupContent(PageInfo page, int revision) {
-			if(page == null) throw new ArgumentNullException("page");
-			if(revision < 0) throw new ArgumentOutOfRangeException("revision", "Revision must be greater than or equal to zero");
+		public PageContent GetBackupContent( PageInfo page, int revision )
+		{
+			if ( page == null ) throw new ArgumentNullException( "page" );
+			if ( revision < 0 ) throw new ArgumentOutOfRangeException( "revision", "Revision must be greater than or equal to zero" );
 
-			return Pages.GetBackupContent(page, revision);
+			return Pages.GetBackupContent( page, revision );
 		}
 
 		/// <summary>
@@ -425,13 +452,14 @@ namespace ScrewTurn.Wiki {
 		/// <param name="page">The Page.</param>
 		/// <returns>The formatted content.</returns>
 		/// <exception cref="ArgumentNullException">If <b>page</b> is <c>null</c>.</exception>
-		public string GetFormattedContent(PageInfo page) {
-			if(page == null) throw new ArgumentNullException("page");
+		public string GetFormattedContent( PageInfo page )
+		{
+			if ( page == null ) throw new ArgumentNullException( "page" );
 
-			PageInfo pageInfo = Pages.FindPage(page.FullName);
-			if(pageInfo == null) return null;
-			PageContent content = Content.GetPageContent(pageInfo, true);
-			return Formatter.Format(content.Content, false, FormattingContext.PageContent, page);
+			PageInfo pageInfo = Pages.FindPage( page.FullName );
+			if ( pageInfo == null ) return null;
+			PageContent content = Content.GetPageContent( pageInfo, true );
+			return Formatter.Format( content.Content, false, FormattingContext.PageContent, page );
 		}
 
 		/// <summary>
@@ -440,10 +468,11 @@ namespace ScrewTurn.Wiki {
 		/// <param name="raw">The block of WikiMarkup.</param>
 		/// <returns>The formatted content.</returns>
 		/// <exception cref="ArgumentNullException">If <b>raw</b> is <c>null</c>.</exception>
-		public string Format(string raw) {
-			if(raw == null) throw new ArgumentNullException("raw");
+		public string Format( string raw )
+		{
+			if ( raw == null ) throw new ArgumentNullException( "raw" );
 
-			return Formatter.Format(raw, false, FormattingContext.Unknown, null);
+			return Formatter.Format( raw, false, FormattingContext.Unknown, null );
 		}
 
 		/// <summary>
@@ -453,12 +482,13 @@ namespace ScrewTurn.Wiki {
 		/// <param name="content">The string to prepare.</param>
 		/// <returns>The sanitized string.</returns>
 		/// <exception cref="ArgumentNullException">If <b>content</b> is <c>null</c>.</exception>
-		public string PrepareContentForIndexing(PageInfo page, string content) {
-			if(content == null) throw new ArgumentNullException("content");
+		public string PrepareContentForIndexing( PageInfo page, string content )
+		{
+			if ( content == null ) throw new ArgumentNullException( "content" );
 
 			// TODO: Improve this method - HTML formatting should not be needed
-			return Tools.RemoveHtmlMarkup(FormattingPipeline.FormatWithPhase1And2(content, true,
-				page != null ? FormattingContext.PageContent : FormattingContext.Unknown, page));
+			return Tools.RemoveHtmlMarkup( FormattingPipeline.FormatWithPhase1And2( content, true,
+				page != null ? FormattingContext.PageContent : FormattingContext.Unknown, page ) );
 		}
 
 		/// <summary>
@@ -468,11 +498,12 @@ namespace ScrewTurn.Wiki {
 		/// <param name="title">The title to prepare.</param>
 		/// <returns>The sanitized string.</returns>
 		/// <exception cref="ArgumentNullException">If <b>title</b> is <c>null</c>.</exception>
-		public string PrepareTitleForIndexing(PageInfo page, string title) {
-			if(title == null) throw new ArgumentNullException("title");
+		public string PrepareTitleForIndexing( PageInfo page, string title )
+		{
+			if ( title == null ) throw new ArgumentNullException( "title" );
 
-			return FormattingPipeline.PrepareTitle(title, true,
-				page != null ? FormattingContext.PageContent : FormattingContext.Unknown, page);
+			return FormattingPipeline.PrepareTitle( title, true,
+				page != null ? FormattingContext.PageContent : FormattingContext.Unknown, page );
 		}
 
 		/// <summary>
@@ -485,11 +516,12 @@ namespace ScrewTurn.Wiki {
 		/// <returns>The search results.</returns>
 		/// <exception cref="ArgumentNullException">If <b>query</b> is <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>query</b> is empty.</exception>
-		public SearchResultCollection PerformSearch(string query, bool fullText, bool filesAndAttachments, SearchOptions options) {
-			if(query == null) throw new ArgumentNullException("query");
-			if(query.Length == 0) throw new ArgumentException("Query cannot be empty", "query");
+		public SearchResultCollection PerformSearch( string query, bool fullText, bool filesAndAttachments, SearchOptions options )
+		{
+			if ( query == null ) throw new ArgumentNullException( "query" );
+			if ( query.Length == 0 ) throw new ArgumentException( "Query cannot be empty", "query" );
 
-			return SearchTools.Search(query, fullText, filesAndAttachments, options);
+			return SearchTools.Search( query, fullText, filesAndAttachments, options );
 		}
 
 		/// <summary>
@@ -497,25 +529,27 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="directory">The directory (<c>null</c> for the root, first invocation).</param>
 		/// <returns>The directories.</returns>
-		public StDirectoryInfo[] ListDirectories(StDirectoryInfo directory) {
-			List<StDirectoryInfo> result = new List<StDirectoryInfo>(20);
+		public StDirectoryInfo[ ] ListDirectories( StDirectoryInfo directory )
+		{
+			List<StDirectoryInfo> result = new List<StDirectoryInfo>( 20 );
 
-			if(directory == null) {
-				foreach(IFilesStorageProviderV30 prov in Collectors.FilesProviderCollector.AllProviders)
+			if ( directory == null )
+			{
+				foreach ( IFilesStorageProviderV30 prov in Collectors.FilesProviderCollector.AllProviders )
 				{
-					string[] dirs = prov.ListDirectories(null);
+					string[ ] dirs = prov.ListDirectories( null );
 
 					result.AddRange( dirs.Select( dir => new StDirectoryInfo( dir, prov ) ) );
 				}
 			}
 			else
 			{
-				string[] dirs = directory.Provider.ListDirectories(directory.FullPath);
+				string[ ] dirs = directory.Provider.ListDirectories( directory.FullPath );
 
 				result.AddRange( dirs.Select( dir => new StDirectoryInfo( dir, directory.Provider ) ) );
 			}
 
-			return result.ToArray();
+			return result.ToArray( );
 		}
 
 		/// <summary>
@@ -523,29 +557,35 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="directory">The directory (<c>null</c> for the root, first invocation).</param>
 		/// <returns>The files.</returns>
-		public StFileInfo[] ListFiles(StDirectoryInfo directory) {
-			List<StFileInfo> result = new List<StFileInfo>(20);
+		public StFileInfo[ ] ListFiles( StDirectoryInfo directory )
+		{
+			List<StFileInfo> result = new List<StFileInfo>( 20 );
 
-			if(directory == null) {
-				foreach(IFilesStorageProviderV30 prov in Collectors.FilesProviderCollector.AllProviders) {
-					string[] files = prov.ListFiles(null);
+			if ( directory == null )
+			{
+				foreach ( IFilesStorageProviderV30 prov in Collectors.FilesProviderCollector.AllProviders )
+				{
+					string[ ] files = prov.ListFiles( null );
 
-					foreach(string file in files) {
-						FileDetails details = prov.GetFileDetails(file);
-						result.Add(new StFileInfo(details.Size, details.LastModified, details.RetrievalCount, file, prov));
+					foreach ( string file in files )
+					{
+						FileDetails details = prov.GetFileDetails( file );
+						result.Add( new StFileInfo( details.Size, details.LastModified, details.RetrievalCount, file, prov ) );
 					}
 				}
 			}
-			else {
-				string[] files = directory.Provider.ListFiles(directory.FullPath);
+			else
+			{
+				string[ ] files = directory.Provider.ListFiles( directory.FullPath );
 
-				foreach(string file in files) {
-					FileDetails details = directory.Provider.GetFileDetails(file);
-					result.Add(new StFileInfo(details.Size, details.LastModified, details.RetrievalCount, file, directory.Provider));
+				foreach ( string file in files )
+				{
+					FileDetails details = directory.Provider.GetFileDetails( file );
+					result.Add( new StFileInfo( details.Size, details.LastModified, details.RetrievalCount, file, directory.Provider ) );
 				}
 			}
 
-			return result.ToArray();
+			return result.ToArray( );
 		}
 
 		/// <summary>
@@ -554,20 +594,23 @@ namespace ScrewTurn.Wiki {
 		/// <param name="page">The page.</param>
 		/// <returns>The attachments.</returns>
 		/// <exception cref="ArgumentNullException">If <b>page</b> is <c>null</c>.</exception>
-		public StFileInfo[] ListPageAttachments(PageInfo page) {
-			if(page == null) throw new ArgumentNullException("page");
+		public StFileInfo[ ] ListPageAttachments( PageInfo page )
+		{
+			if ( page == null ) throw new ArgumentNullException( "page" );
 
-			List<StFileInfo> result = new List<StFileInfo>(10);
-			foreach(IFilesStorageProviderV30 prov in Collectors.FilesProviderCollector.AllProviders) {
-				string[] attachments = prov.ListPageAttachments(page);
+			List<StFileInfo> result = new List<StFileInfo>( 10 );
+			foreach ( IFilesStorageProviderV30 prov in Collectors.FilesProviderCollector.AllProviders )
+			{
+				string[ ] attachments = prov.ListPageAttachments( page );
 
-				foreach(string attn in attachments) {
-					FileDetails details = prov.GetPageAttachmentDetails(page, attn);
-					result.Add(new StFileInfo(details.Size, details.LastModified, details.RetrievalCount, attn, prov));
+				foreach ( string attn in attachments )
+				{
+					FileDetails details = prov.GetPageAttachmentDetails( page, attn );
+					result.Add( new StFileInfo( details.Size, details.LastModified, details.RetrievalCount, attn, prov ) );
 				}
 			}
 
-			return result.ToArray();
+			return result.ToArray( );
 		}
 
 		/// <summary>
@@ -581,21 +624,24 @@ namespace ScrewTurn.Wiki {
 		/// <returns>True if the message has been sent successfully.</returns>
 		/// <exception cref="ArgumentNullException">If <b>recipient</b>, <b>sender</b>, <b>subject</b> or <b>body</b> are <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>recipient</b>, <b>sender</b>, <b>subject</b> or <b>body</b> are empty.</exception>
-		public bool SendEmail(string recipient, string sender, string subject, string body, bool html) {
-			if(recipient == null) throw new ArgumentNullException("recipient");
-			if(recipient.Length == 0) throw new ArgumentException("Recipient cannot be empty");
-			if(sender == null) throw new ArgumentNullException("sender");
-			if(sender.Length == 0) throw new ArgumentException("Sender cannot be empty");
-			if(subject == null) throw new ArgumentNullException("subject");
-			if(subject.Length == 0) throw new ArgumentException("Subject cannot be empty", "subject");
-			if(body == null) throw new ArgumentNullException("body");
-			if(body.Length == 0) throw new ArgumentException("Body cannot be empty", "body");
+		public bool SendEmail( string recipient, string sender, string subject, string body, bool html )
+		{
+			if ( recipient == null ) throw new ArgumentNullException( "recipient" );
+			if ( recipient.Length == 0 ) throw new ArgumentException( "Recipient cannot be empty" );
+			if ( sender == null ) throw new ArgumentNullException( "sender" );
+			if ( sender.Length == 0 ) throw new ArgumentException( "Sender cannot be empty" );
+			if ( subject == null ) throw new ArgumentNullException( "subject" );
+			if ( subject.Length == 0 ) throw new ArgumentException( "Subject cannot be empty", "subject" );
+			if ( body == null ) throw new ArgumentNullException( "body" );
+			if ( body.Length == 0 ) throw new ArgumentException( "Body cannot be empty", "body" );
 
-			try {
-				EmailTools.AsyncSendEmail(recipient, sender, subject, body, html);
+			try
+			{
+				EmailTools.AsyncSendEmail( recipient, sender, subject, body, html );
 				return true;
 			}
-			catch {
+			catch
+			{
 				return false;
 			}
 		}
@@ -609,13 +655,15 @@ namespace ScrewTurn.Wiki {
 		/// <param name="caller">The Component that calls the method. The caller cannot be null.</param>
 		/// <exception cref="ArgumentNullException">If <b>message</b> or <b>caller</b> are <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>message is empty.</b></exception>
-		public void LogEntry(string message, LogEntryType entryType, string user, object caller) {
-			if(message == null) throw new ArgumentNullException("message");
-			if(message.Length == 0) throw new ArgumentException("Message cannot be empty");
-			if(caller == null) throw new ArgumentNullException("caller");
+		public void LogEntry( string message, LogEntryType entryType, string user, object caller )
+		{
+			if ( message == null ) throw new ArgumentNullException( "message" );
+			if ( message.Length == 0 ) throw new ArgumentException( "Message cannot be empty" );
+			if ( caller == null ) throw new ArgumentNullException( "caller" );
 
 			EntryType t = EntryType.General;
-			switch(entryType) {
+			switch ( entryType )
+			{
 				case LogEntryType.General:
 					t = EntryType.General;
 					break;
@@ -627,27 +675,29 @@ namespace ScrewTurn.Wiki {
 					break;
 			}
 			string name = "?";
-			if(user == null) {
-				if(caller is IUsersStorageProviderV30) name = ((IUsersStorageProviderV30)caller).Information.Name;
-				else if(caller is IPagesStorageProviderV30) name = ((IPagesStorageProviderV30)caller).Information.Name;
-				else if(caller is IFormatterProviderV30) name = ((IFormatterProviderV30)caller).Information.Name;
-				else if(caller is ISettingsStorageProviderV30) name = ((ISettingsStorageProviderV30)caller).Information.Name;
-				else if(caller is IFilesStorageProviderV30) name = ((IFilesStorageProviderV30)caller).Information.Name;
-				else if(caller is ICacheProviderV30) name = ((ICacheProviderV30)caller).Information.Name;
+			if ( user == null )
+			{
+				if ( caller is IUsersStorageProviderV30 ) name = ( (IUsersStorageProviderV30)caller ).Information.Name;
+				else if ( caller is IPagesStorageProviderV30 ) name = ( (IPagesStorageProviderV30)caller ).Information.Name;
+				else if ( caller is IFormatterProviderV30 ) name = ( (IFormatterProviderV30)caller ).Information.Name;
+				else if ( caller is ISettingsStorageProviderV30 ) name = ( (ISettingsStorageProviderV30)caller ).Information.Name;
+				else if ( caller is IFilesStorageProviderV30 ) name = ( (IFilesStorageProviderV30)caller ).Information.Name;
+				else if ( caller is ICacheProviderV30 ) name = ( (ICacheProviderV30)caller ).Information.Name;
 				name += "+" + Log.SystemUsername;
 			}
 			else name = user;
-			Log.LogEntry(message, t, name);
+			Log.LogEntry( message, t, name );
 		}
 
 		/// <summary>
 		/// Changes the language of the current user.
 		/// </summary>
 		/// <param name="language">The language code.</param>
-		public void ChangeCurrentUserLanguage(string language) {
-			int timezone = Preferences.LoadTimezoneFromCookie() ?? Settings.DefaultTimezone;
-			if(SessionFacade.LoginKey == null || SessionFacade.CurrentUsername == "admin") Preferences.SavePreferencesInCookie(language, timezone);
-			else Preferences.SavePreferencesInUserData(language, timezone);
+		public void ChangeCurrentUserLanguage( string language )
+		{
+			int timezone = Preferences.LoadTimezoneFromCookie( ) ?? Settings.DefaultTimezone;
+			if ( SessionFacade.LoginKey == null || SessionFacade.CurrentUsername == "admin" ) Preferences.SavePreferencesInCookie( language, timezone );
+			else Preferences.SavePreferencesInUserData( language, timezone );
 		}
 
 		/// <summary>
@@ -656,24 +706,27 @@ namespace ScrewTurn.Wiki {
 		/// <param name="dt">The Date/Time to align.</param>
 		/// <returns>The aligned Date/Time.</returns>
 		/// <remarks>The method takes care of daylight saving settings.</remarks>
-		public DateTime AlignDateTimeWithPreferences(DateTime dt) {
-			return Preferences.AlignWithTimezone(dt);
+		public DateTime AlignDateTimeWithPreferences( DateTime dt )
+		{
+			return Preferences.AlignWithTimezone( dt );
 		}
 
 		/// <summary>
 		/// Clears the cache.
 		/// </summary>
 		/// <param name="data">The part of the cache to clear.</param>
-		public void ClearCache(CacheData data) {
-			switch(data) {
+		public void ClearCache( CacheData data )
+		{
+			switch ( data )
+			{
 				case CacheData.Pages:
-					Content.InvalidateAllPages();
+					Content.InvalidateAllPages( );
 					break;
 				case CacheData.MetaFiles:
-					Content.ClearPseudoCache();
+					Content.ClearPseudoCache( );
 					break;
 				default:
-					throw new ArgumentException("Invalid CacheData");
+					throw new ArgumentException( "Invalid CacheData" );
 			}
 		}
 
@@ -686,22 +739,25 @@ namespace ScrewTurn.Wiki {
 		/// <exception cref="ArgumentNullException">If <b>text</b> or <b>value</b> are <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>text</b> or <b>value</b> are empty, or if they contain single or double quotes, 
 		/// or if <b>value</b> does not contain a pipe when <b>item</b> is <b>SpecialTagWrap</b>.</exception>
-		public void AddToolbarItem(ToolbarItem item, string text, string value) {
-			if(text == null) throw new ArgumentNullException("text");
-			if(text.Length == 0) throw new ArgumentException("Text cannot be empty", "text");
-			if(text.Contains("\"") || text.Contains("'")) throw new ArgumentException("Text cannot contain single or double quotes", "text");
-			if(value == null) throw new ArgumentNullException("value");
-			if(value.Length == 0) throw new ArgumentException("Value cannot be empty", "value");
-			if(value.Contains("\"") || value.Contains("'")) throw new ArgumentException("Value cannot contain single or double quotes", "value");
+		public void AddToolbarItem( ToolbarItem item, string text, string value )
+		{
+			if ( text == null ) throw new ArgumentNullException( "text" );
+			if ( text.Length == 0 ) throw new ArgumentException( "Text cannot be empty", "text" );
+			if ( text.Contains( "\"" ) || text.Contains( "'" ) ) throw new ArgumentException( "Text cannot contain single or double quotes", "text" );
+			if ( value == null ) throw new ArgumentNullException( "value" );
+			if ( value.Length == 0 ) throw new ArgumentException( "Value cannot be empty", "value" );
+			if ( value.Contains( "\"" ) || value.Contains( "'" ) ) throw new ArgumentException( "Value cannot contain single or double quotes", "value" );
 
-			if(item == ToolbarItem.SpecialTagWrap && !value.Contains("|")) throw new ArgumentException("Invalid value for a SpecialTagWrap (pipe not found)", "value");
+			if ( item == ToolbarItem.SpecialTagWrap && !value.Contains( "|" ) ) throw new ArgumentException( "Invalid value for a SpecialTagWrap (pipe not found)", "value" );
 
-			lock(customSpecialTags) {
-				if(customSpecialTags.ContainsKey(text)) {
-					customSpecialTags[text].Value = value;
-					customSpecialTags[text].Item = item;
+			lock ( customSpecialTags )
+			{
+				if ( customSpecialTags.ContainsKey( text ) )
+				{
+					customSpecialTags[ text ].Value = value;
+					customSpecialTags[ text ].Item = item;
 				}
-				else customSpecialTags.Add(text, new CustomToolbarItem(item, text, value));
+				else customSpecialTags.Add( text, new CustomToolbarItem( item, text, value ) );
 			}
 		}
 
@@ -714,8 +770,10 @@ namespace ScrewTurn.Wiki {
 		/// <see cref="T:IFilesStorageProviderV30" />, 
 		/// <see cref="T:ICacheStorageProviderV30" />).</param>
 		/// <returns>The Full type name of the default provider of the specified type or <c>null</c>.</returns>
-		public string GetDefaultProvider(Type providerType) {
-			switch(providerType.FullName) {
+		public string GetDefaultProvider( Type providerType )
+		{
+			switch ( providerType.FullName )
+			{
 				case ProviderLoader.UsersProviderInterfaceName:
 					return Settings.DefaultUsersProvider;
 				case ProviderLoader.PagesProviderInterfaceName:
@@ -734,9 +792,9 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="enabled"><c>true</c> to get enabled providers, <c>false</c> to get disabled providers.</param>
 		/// <returns>The providers.</returns>
-		public IPagesStorageProviderV30[] GetPagesStorageProviders(bool enabled)
+		public IPagesStorageProviderV30[ ] GetPagesStorageProviders( bool enabled )
 		{
-			if(enabled) return Collectors.PagesProviderCollector.AllProviders;
+			if ( enabled ) return Collectors.PagesProviderCollector.AllProviders;
 			return Collectors.DisabledPagesProviderCollector.AllProviders;
 		}
 
@@ -745,9 +803,9 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="enabled"><c>true</c> to get enabled providers, <c>false</c> to get disabled providers.</param>
 		/// <returns>The providers.</returns>
-		public IUsersStorageProviderV30[] GetUsersStorageProviders(bool enabled)
+		public IUsersStorageProviderV30[ ] GetUsersStorageProviders( bool enabled )
 		{
-			if(enabled) return Collectors.UsersProviderCollector.AllProviders;
+			if ( enabled ) return Collectors.UsersProviderCollector.AllProviders;
 			return Collectors.DisabledUsersProviderCollector.AllProviders;
 		}
 
@@ -756,9 +814,9 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="enabled"><c>true</c> to get enabled providers, <c>false</c> to get disabled providers.</param>
 		/// <returns>The providers.</returns>
-		public IFilesStorageProviderV30[] GetFilesStorageProviders(bool enabled)
+		public IFilesStorageProviderV30[ ] GetFilesStorageProviders( bool enabled )
 		{
-			if(enabled) return Collectors.FilesProviderCollector.AllProviders;
+			if ( enabled ) return Collectors.FilesProviderCollector.AllProviders;
 			return Collectors.DisabledFilesProviderCollector.AllProviders;
 		}
 
@@ -767,9 +825,9 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="enabled"><c>true</c> to get enabled providers, <c>false</c> to get disabled providers.</param>
 		/// <returns>The providers.</returns>
-		public ICacheProviderV30[] GetCacheProviders(bool enabled)
+		public ICacheProviderV30[ ] GetCacheProviders( bool enabled )
 		{
-			if(enabled) return Collectors.CacheProviderCollector.AllProviders;
+			if ( enabled ) return Collectors.CacheProviderCollector.AllProviders;
 			return Collectors.DisabledCacheProviderCollector.AllProviders;
 		}
 
@@ -778,9 +836,9 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="enabled"><c>true</c> to get enabled providers, <c>false</c> to get disabled providers.</param>
 		/// <returns>The providers.</returns>
-		public IFormatterProviderV30[] GetFormatterProviders(bool enabled)
+		public IFormatterProviderV30[ ] GetFormatterProviders( bool enabled )
 		{
-			if(enabled) return Collectors.FormatterProviderCollector.AllProviders;
+			if ( enabled ) return Collectors.FormatterProviderCollector.AllProviders;
 			return Collectors.DisabledFormatterProviderCollector.AllProviders;
 		}
 
@@ -788,7 +846,8 @@ namespace ScrewTurn.Wiki {
 		/// Gets the current settings storage provider.
 		/// </summary>
 		/// <returns>The settings storage provider.</returns>
-		public ISettingsStorageProviderV30 GetSettingsStorageProvider() {
+		public ISettingsStorageProviderV30 GetSettingsStorageProvider( )
+		{
 			return Settings.Provider;
 		}
 
@@ -799,14 +858,16 @@ namespace ScrewTurn.Wiki {
 		/// <returns>The configuration (can be empty or <c>null</c>).</returns>
 		/// <exception cref="ArgumentNullException">If <b>providerTypeName</b> is <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <b>providerTypeName</b> is empty.</exception>
-		public string GetProviderConfiguration(string providerTypeName) {
-			if(providerTypeName == null) throw new ArgumentNullException("providerTypeName");
-			if(providerTypeName.Length == 0) throw new ArgumentException("Provider Type Name cannot be empty", "providerTypeName");
+		public string GetProviderConfiguration( string providerTypeName )
+		{
+			if ( providerTypeName == null ) throw new ArgumentNullException( "providerTypeName" );
+			if ( providerTypeName.Length == 0 ) throw new ArgumentException( "Provider Type Name cannot be empty", "providerTypeName" );
 
-			if(providerTypeName == Settings.Provider.GetType().FullName) {
-				return StartupTools.GetSettingsStorageProviderConfiguration();
+			if ( providerTypeName == Settings.Provider.GetType( ).FullName )
+			{
+				return StartupTools.GetSettingsStorageProviderConfiguration( );
 			}
-			return ProviderLoader.LoadConfiguration(providerTypeName);
+			return ProviderLoader.LoadConfiguration( providerTypeName );
 		}
 
 		/// <summary>
@@ -816,12 +877,13 @@ namespace ScrewTurn.Wiki {
 		/// <param name="configuration">The configuration to set.</param>
 		/// <returns><c>true</c> if the configuration is set, <c>false</c> otherwise.</returns>
 		/// <exception cref="ArgumentNullException">If <b>provider</b> is <c>null</c>.</exception>
-		public bool SetProviderConfiguration(IProviderV30 provider, string configuration) {
-			if(provider == null) throw new ArgumentNullException("provider");
+		public bool SetProviderConfiguration( IProviderV30 provider, string configuration )
+		{
+			if ( provider == null ) throw new ArgumentNullException( "provider" );
 
-			if(configuration == null) configuration = "";
+			if ( configuration == null ) configuration = "";
 
-			ProviderLoader.SaveConfiguration(provider.GetType().FullName, configuration);
+			ProviderLoader.SaveConfiguration( provider.GetType( ).FullName, configuration );
 
 			return true;
 		}
@@ -834,20 +896,22 @@ namespace ScrewTurn.Wiki {
 		/// <returns><c>true</c> if the operation succeeded, <c>false</c> otherwise.</returns>
 		/// <exception cref="ArgumentNullException">If <b>page</b> is <c>null</c>.</exception>
 		/// <exception cref="ArgumentOutOfRangeException">If <b>oldStatus</b> is invalid.</exception>
-		public bool UpgradePageStatusToAcl(PageInfo page, char oldStatus) {
-			if(page == null) throw new ArgumentNullException("page");
+		public bool UpgradePageStatusToAcl( PageInfo page, char oldStatus )
+		{
+			if ( page == null ) throw new ArgumentNullException( "page" );
 
-			switch(oldStatus) {
+			switch ( oldStatus )
+			{
 				case 'L':
 					// Locked: only administrators can edit this page
-					return AuthWriter.SetPermissionForPage(AuthStatus.Deny, page, Actions.ForPages.ModifyPage,
-						Users.FindUserGroup(Settings.UsersGroup));
+					return AuthWriter.SetPermissionForPage( AuthStatus.Deny, page, Actions.ForPages.ModifyPage,
+						Users.FindUserGroup( Settings.UsersGroup ) );
 				case 'P':
 					// Public: anonymous users can edit this page
-					return AuthWriter.SetPermissionForPage(AuthStatus.Grant, page, Actions.ForPages.ModifyPage,
-						Users.FindUserGroup(Settings.AnonymousGroup));
+					return AuthWriter.SetPermissionForPage( AuthStatus.Grant, page, Actions.ForPages.ModifyPage,
+						Users.FindUserGroup( Settings.AnonymousGroup ) );
 				default:
-					throw new ArgumentOutOfRangeException("oldStatus", "Invalid old status code");
+					throw new ArgumentOutOfRangeException( "oldStatus", "Invalid old status code" );
 			}
 		}
 
@@ -858,13 +922,14 @@ namespace ScrewTurn.Wiki {
 		/// <param name="users">The users group.</param>
 		/// <returns><c>true</c> if the operation succeeded, <c>false</c> otherwise.</returns>
 		/// <exception cref="ArgumentNullException">If <b>administrators</b> or <b>users</b> are <c>null</c>.</exception>
-		public bool UpgradeSecurityFlagsToGroupsAcl(UserGroup administrators, UserGroup users) {
-			if(administrators == null) throw new ArgumentNullException("administrators");
-			if(users == null) throw new ArgumentNullException("users");
+		public bool UpgradeSecurityFlagsToGroupsAcl( UserGroup administrators, UserGroup users )
+		{
+			if ( administrators == null ) throw new ArgumentNullException( "administrators" );
+			if ( users == null ) throw new ArgumentNullException( "users" );
 
 			bool done = true;
-			done &= StartupTools.SetAdministratorsGroupDefaultPermissions(administrators);
-			done &= StartupTools.SetUsersGroupDefaultPermissions(users);
+			done &= StartupTools.SetAdministratorsGroupDefaultPermissions( administrators );
+			done &= StartupTools.SetUsersGroupDefaultPermissions( users );
 
 			return done;
 		}
@@ -876,11 +941,12 @@ namespace ScrewTurn.Wiki {
 		/// <exception cref="ArgumentNullException">If <paramref name="fullPath"/> is <c>null</c>.</exception>
 		/// <exception cref="ArgumentException">If <paramref name="fullPath"/> is empty.</exception>
 		/// <exception cref="InvalidOperationException">If it's too late to override the public directory.</exception>
-		public void OverridePublicDirectory(string fullPath) {
-			if(fullPath == null) throw new ArgumentNullException("fullPath");
-			if(fullPath == "") throw new ArgumentException("Full Path cannot be empty", "fullPath");
+		public void OverridePublicDirectory( string fullPath )
+		{
+			if ( fullPath == null ) throw new ArgumentNullException( "fullPath" );
+			if ( fullPath == "" ) throw new ArgumentException( "Full Path cannot be empty", "fullPath" );
 
-			Settings.OverridePublicDirectory(fullPath);
+			Settings.OverridePublicDirectory( fullPath );
 		}
 
 		/// <summary>
@@ -893,9 +959,11 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="user">The user the activity refers to.</param>
 		/// <param name="activity">The activity.</param>
-		public void OnUserAccountActivity(UserInfo user, UserAccountActivity activity) {
-			if(UserAccountActivity != null) {
-				UserAccountActivity(this, new UserAccountActivityEventArgs(user, activity));
+		public void OnUserAccountActivity( UserInfo user, UserAccountActivity activity )
+		{
+			if ( UserAccountActivity != null )
+			{
+				UserAccountActivity( this, new UserAccountActivityEventArgs( user, activity ) );
 			}
 		}
 
@@ -909,9 +977,11 @@ namespace ScrewTurn.Wiki {
 		/// </summary>
 		/// <param name="group">The group the activity refers to.</param>
 		/// <param name="activity">The activity.</param>
-		public void OnUserGroupActivity(UserGroup group, UserGroupActivity activity) {
-			if(UserGroupActivity != null) {
-				UserGroupActivity(this, new UserGroupActivityEventArgs(group, activity));
+		public void OnUserGroupActivity( UserGroup group, UserGroupActivity activity )
+		{
+			if ( UserGroupActivity != null )
+			{
+				UserGroupActivity( this, new UserGroupActivityEventArgs( group, activity ) );
 			}
 		}
 
@@ -926,9 +996,11 @@ namespace ScrewTurn.Wiki {
 		/// <param name="nspace">The namespace the activity refers to.</param>
 		/// <param name="nspaceOldName">The old name of the renamed namespace, or <c>null</c>.</param>
 		/// <param name="activity">The activity.</param>
-		public void OnNamespaceActivity(NamespaceInfo nspace, string nspaceOldName, NamespaceActivity activity) {
-			if(NamespaceActivity != null) {
-				NamespaceActivity(this, new NamespaceActivityEventArgs(nspace, nspaceOldName, activity));
+		public void OnNamespaceActivity( NamespaceInfo nspace, string nspaceOldName, NamespaceActivity activity )
+		{
+			if ( NamespaceActivity != null )
+			{
+				NamespaceActivity( this, new NamespaceActivityEventArgs( nspace, nspaceOldName, activity ) );
 			}
 		}
 
@@ -944,9 +1016,11 @@ namespace ScrewTurn.Wiki {
 		/// <param name="pageOldName">The old name of the renamed page, or <c>null</c>.</param>
 		/// <param name="author">The author of the activity.</param>
 		/// <param name="activity">The activity.</param>
-		public void OnPageActivity(PageInfo page, string pageOldName, string author, PageActivity activity) {
-			if(PageActivity != null) {
-				PageActivity(this, new PageActivityEventArgs(page, pageOldName, author, activity));
+		public void OnPageActivity( PageInfo page, string pageOldName, string author, PageActivity activity )
+		{
+			if ( PageActivity != null )
+			{
+				PageActivity( this, new PageActivityEventArgs( page, pageOldName, author, activity ) );
 			}
 		}
 
@@ -962,12 +1036,14 @@ namespace ScrewTurn.Wiki {
 		/// <param name="file">The name of the file that changed.</param>
 		/// <param name="oldFileName">The old name of the renamed file, if any.</param>
 		/// <param name="activity">The activity.</param>
-		public void OnFileActivity(string provider, string file, string oldFileName, FileActivity activity) {
-			if(FileActivity != null) {
-				IFilesStorageProviderV30 prov = Collectors.FilesProviderCollector.GetProvider(provider);
+		public void OnFileActivity( string provider, string file, string oldFileName, FileActivity activity )
+		{
+			if ( FileActivity != null )
+			{
+				IFilesStorageProviderV30 prov = Collectors.FilesProviderCollector.GetProvider( provider );
 
-				FileActivity(this, new FileActivityEventArgs(
-					new StFileInfo(prov.GetFileDetails(file), file, prov), oldFileName, null, null, null, activity));
+				FileActivity( this, new FileActivityEventArgs(
+					new StFileInfo( prov.GetFileDetails( file ), file, prov ), oldFileName, null, null, null, activity ) );
 			}
 		}
 
@@ -979,13 +1055,15 @@ namespace ScrewTurn.Wiki {
 		/// <param name="page">The page that owns the attachment.</param>
 		/// <param name="oldAttachmentName">The old name of the renamed attachment, if any.</param>
 		/// <param name="activity">The activity.</param>
-		public void OnAttachmentActivity(string provider, string attachment, string page, string oldAttachmentName, FileActivity activity) {
-			if(FileActivity != null) {
-				IFilesStorageProviderV30 prov = Collectors.FilesProviderCollector.GetProvider(provider);
-				PageInfo pageInfo = Pages.FindPage(page);
+		public void OnAttachmentActivity( string provider, string attachment, string page, string oldAttachmentName, FileActivity activity )
+		{
+			if ( FileActivity != null )
+			{
+				IFilesStorageProviderV30 prov = Collectors.FilesProviderCollector.GetProvider( provider );
+				PageInfo pageInfo = Pages.FindPage( page );
 
-				FileActivity(this, new FileActivityEventArgs(
-					new StFileInfo(prov.GetPageAttachmentDetails(pageInfo, attachment), attachment, prov), oldAttachmentName, null, null, pageInfo, activity));
+				FileActivity( this, new FileActivityEventArgs(
+					new StFileInfo( prov.GetPageAttachmentDetails( pageInfo, attachment ), attachment, prov ), oldAttachmentName, null, null, pageInfo, activity ) );
 			}
 		}
 
@@ -996,12 +1074,14 @@ namespace ScrewTurn.Wiki {
 		/// <param name="directory">The directory that changed.</param>
 		/// <param name="oldDirectoryName">The old name of the renamed directory, if any.</param>
 		/// <param name="activity">The activity.</param>
-		public void OnDirectoryActivity(string provider, string directory, string oldDirectoryName, FileActivity activity) {
-			if(FileActivity != null) {
-				IFilesStorageProviderV30 prov = Collectors.FilesProviderCollector.GetProvider(provider);
+		public void OnDirectoryActivity( string provider, string directory, string oldDirectoryName, FileActivity activity )
+		{
+			if ( FileActivity != null )
+			{
+				IFilesStorageProviderV30 prov = Collectors.FilesProviderCollector.GetProvider( provider );
 
-				FileActivity(this, new FileActivityEventArgs(
-					null, null, new StDirectoryInfo(directory, prov), oldDirectoryName, null, activity));
+				FileActivity( this, new FileActivityEventArgs(
+					null, null, new StDirectoryInfo( directory, prov ), oldDirectoryName, null, activity ) );
 			}
 		}
 
@@ -1010,7 +1090,8 @@ namespace ScrewTurn.Wiki {
 	/// <summary>
 	/// Represents a custom toolbar item.
 	/// </summary>
-	public class CustomToolbarItem {
+	public class CustomToolbarItem
+	{
 
 		private ToolbarItem item;
 		private string text, value;
@@ -1021,7 +1102,8 @@ namespace ScrewTurn.Wiki {
 		/// <param name="item">The item.</param>
 		/// <param name="text">The text.</param>
 		/// <param name="value">The value.</param>
-		public CustomToolbarItem(ToolbarItem item, string text, string value) {
+		public CustomToolbarItem( ToolbarItem item, string text, string value )
+		{
 			this.item = item;
 			this.text = text;
 			this.value = value;
@@ -1030,7 +1112,8 @@ namespace ScrewTurn.Wiki {
 		/// <summary>
 		/// Gets or sets the item.
 		/// </summary>
-		public ToolbarItem Item {
+		public ToolbarItem Item
+		{
 			get { return item; }
 			set { item = value; }
 		}
@@ -1038,14 +1121,16 @@ namespace ScrewTurn.Wiki {
 		/// <summary>
 		/// Gets the text.
 		/// </summary>
-		public string Text {
+		public string Text
+		{
 			get { return text; }
 		}
 
 		/// <summary>
 		/// Gets or sets the value.
 		/// </summary>
-		public string Value {
+		public string Value
+		{
 			get { return value; }
 			set { this.value = value; }
 		}
