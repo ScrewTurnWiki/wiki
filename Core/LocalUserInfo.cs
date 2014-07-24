@@ -10,9 +10,6 @@ namespace ScrewTurn.Wiki
 	/// </summary>
 	public class LocalUserInfo : UserInfo
 	{
-
-		private string passwordHash;
-
 		/// <summary>
 		/// Initializes a new instance of the <b>LocalUserInfo</b> class.
 		/// </summary>
@@ -27,18 +24,13 @@ namespace ScrewTurn.Wiki
 			IUsersStorageProviderV30 provider, string passwordHash )
 			: base( username, displayName, email, active, dateTime, provider )
 		{
-			this.passwordHash = passwordHash;
+			PasswordHash = passwordHash;
 		}
 
 		/// <summary>
 		/// Gets or sets the Password Hash.
 		/// </summary>
-		public string PasswordHash
-		{
-			get { return passwordHash; }
-			set { passwordHash = value; }
-		}
-
+		public string PasswordHash { get; set; }
 	}
 
 }

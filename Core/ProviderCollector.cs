@@ -2,6 +2,7 @@ using System.Collections.Generic;
 
 namespace ScrewTurn.Wiki
 {
+	using System.Linq;
 
 	/// <summary>
 	/// Implements a generic Provider Collector.
@@ -10,14 +11,14 @@ namespace ScrewTurn.Wiki
 	public class ProviderCollector<T>
 	{
 
-		private List<T> list;
+		private readonly List<T> _list;
 
 		/// <summary>
 		/// Initializes a new instance of the class.
 		/// </summary>
 		public ProviderCollector( )
 		{
-			list = new List<T>( 3 );
+			_list = new List<T>( 3 );
 		}
 
 		/// <summary>
@@ -28,7 +29,7 @@ namespace ScrewTurn.Wiki
 		{
 			lock ( this )
 			{
-				list.Add( provider );
+				_list.Add( provider );
 			}
 		}
 
@@ -40,7 +41,7 @@ namespace ScrewTurn.Wiki
 		{
 			lock ( this )
 			{
-				list.Remove( provider );
+				_list.Remove( provider );
 			}
 		}
 
@@ -53,7 +54,7 @@ namespace ScrewTurn.Wiki
 			{
 				lock ( this )
 				{
-					return list.ToArray( );
+					return _list.ToArray( );
 				}
 			}
 		}
@@ -67,11 +68,7 @@ namespace ScrewTurn.Wiki
 		{
 			lock ( this )
 			{
-				for ( int i = 0; i < list.Count; i++ )
-				{
-					if ( list[ i ].GetType( ).FullName.Equals( typeName ) ) return list[ i ];
-				}
-				return default( T );
+				return _list.FirstOrDefault( t => t.GetType( ).FullName.Equals( typeName ) );
 			}
 		}
 

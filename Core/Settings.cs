@@ -17,7 +17,7 @@ namespace ScrewTurn.Wiki
 	public static class Settings
 	{
 
-		private static string version = null;
+		private static string _version = null;
 
 		/// <summary>
 		/// A value indicating whether the public directory can still be overridden.
@@ -40,12 +40,12 @@ namespace ScrewTurn.Wiki
 		{
 			get
 			{
-				if ( version == null )
+				if ( _version == null )
 				{
-					version = typeof( Settings ).Assembly.GetName( ).Version.ToString( );
+					_version = typeof( Settings ).Assembly.GetName( ).Version.ToString( );
 				}
 
-				return version;
+				return _version;
 			}
 		}
 

@@ -7,10 +7,10 @@ namespace ScrewTurn.Wiki.ImportWiki {
 	/// <summary>
 	/// Implements a translator tool for importing FlexWiki data.
 	/// </summary>
-	public class TranslatorFlex : ScrewTurn.Wiki.ImportWiki.ITranslator {
+	public class TranslatorFlex : ITranslator {
 
-		private Regex noWiki = new Regex(@"\<nowiki\>(.|\s)+?\<\/nowiki\>", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-		private Regex noFlex = new Regex(@"\<noflex\>(.|\s)+?\<\/noflex\>", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+		private readonly Regex _noWiki = new Regex(@"\<nowiki\>(.|\s)+?\<\/nowiki\>", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+		private readonly Regex _noFlex = new Regex(@"\<noflex\>(.|\s)+?\<\/noflex\>", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
 		/// <summary>
 		/// Executes the translation.
@@ -370,11 +370,11 @@ namespace ScrewTurn.Wiki.ImportWiki {
 			noWikiBegin.Clear();
 			noWikiEnd.Clear();
 
-			match = noWiki.Match(text);
+			match = _noWiki.Match(text);
 			while(match.Success) {
 				noWikiBegin.Add(match.Index);
 				noWikiEnd.Add(match.Index + match.Length - 1);
-				match = noWiki.Match(text, match.Index + match.Length);
+				match = _noWiki.Match(text, match.Index + match.Length);
 			}
 		}
 
@@ -394,11 +394,11 @@ namespace ScrewTurn.Wiki.ImportWiki {
 			noFlexBegin.Clear();
 			noFlexEnd.Clear();
 
-			match = noFlex.Match(text);
+			match = _noFlex.Match(text);
 			while(match.Success) {
 				noFlexBegin.Add(match.Index);
 				noFlexEnd.Add(match.Index + match.Length - 1);
-				match = noFlex.Match(text, match.Index + match.Length);
+				match = _noFlex.Match(text, match.Index + match.Length);
 			}
 		}
 

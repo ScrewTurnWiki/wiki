@@ -29,31 +29,31 @@ namespace ScrewTurn.Wiki
 		private const string IndexWordsFile = "IndexWords.cs";
 		private const string IndexMappingsFile = "IndexMappings.cs";
 
-		private readonly ComponentInformation info =
+		private readonly ComponentInformation _info =
 			new ComponentInformation( "Local Pages Provider", "Threeplicate Srl", Settings.WikiVersion, "http://www.screwturn.eu", null );
-		private IHostV30 host;
+		private IHostV30 _host;
 
 		// This cache is needed due to performance problems
-		private NamespaceInfo[ ] namespacesCache = null;
-		private PageInfo[ ] pagesCache = null;
-		private CategoryInfo[ ] categoriesCache = null;
+		private NamespaceInfo[ ] _namespacesCache = null;
+		private PageInfo[ ] _pagesCache = null;
+		private CategoryInfo[ ] _categoriesCache = null;
 
-		private IInMemoryIndex index;
-		private IndexStorerBase indexStorer;
+		private IInMemoryIndex _index;
+		private IndexStorerBase _indexStorer;
 
 		private string GetFullPath( string filename )
 		{
-			return Path.Combine( GetDataDirectory( host ), filename );
+			return Path.Combine( GetDataDirectory( _host ), filename );
 		}
 
 		private string GetFullPathForPageContent( string filename )
 		{
-			return Path.Combine( Path.Combine( GetDataDirectory( host ), PagesDirectory ), filename );
+			return Path.Combine( Path.Combine( GetDataDirectory( _host ), PagesDirectory ), filename );
 		}
 
 		private string GetFullPathForPageDrafts( string filename )
 		{
-			return Path.Combine( Path.Combine( GetDataDirectory( host ), DraftsDirectory ), filename );
+			return Path.Combine( Path.Combine( GetDataDirectory( _host ), DraftsDirectory ), filename );
 		}
 
 		private string GetDraftFullPath( LocalPageInfo page )
@@ -65,17 +65,17 @@ namespace ScrewTurn.Wiki
 
 		private string GetFullPathForMessages( string filename )
 		{
-			return Path.Combine( Path.Combine( GetDataDirectory( host ), MessagesDirectory ), filename );
+			return Path.Combine( Path.Combine( GetDataDirectory( _host ), MessagesDirectory ), filename );
 		}
 
 		private string GetFullPathForSnippets( string filename )
 		{
-			return Path.Combine( Path.Combine( GetDataDirectory( host ), SnippetsDirectory ), filename );
+			return Path.Combine( Path.Combine( GetDataDirectory( _host ), SnippetsDirectory ), filename );
 		}
 
 		private string GetFullPathForContentTemplate( string filename )
 		{
-			return Path.Combine( Path.Combine( GetDataDirectory( host ), ContentTemplatesDirectory ), filename );
+			return Path.Combine( Path.Combine( GetDataDirectory( _host ), ContentTemplatesDirectory ), filename );
 		}
 
 		/// <summary>
@@ -101,7 +101,7 @@ namespace ScrewTurn.Wiki
 			if ( host == null ) throw new ArgumentNullException( "host" );
 			if ( config == null ) throw new ArgumentNullException( "config" );
 
-			this.host = host;
+			this._host = host;
 
 			if ( !LocalProvidersTools.CheckWritePermissions( GetDataDirectory( host ) ) )
 			{
@@ -166,18 +166,18 @@ namespace ScrewTurn.Wiki
 			}
 
 			// Prepare search index
-			index = new StandardIndex( );
-			index.SetBuildDocumentDelegate( BuildDocumentHandler );
-			indexStorer = new IndexStorer( GetFullPath( IndexDocumentsFile ),
+			_index = new StandardIndex( );
+			_index.SetBuildDocumentDelegate( BuildDocumentHandler );
+			_indexStorer = new IndexStorer( GetFullPath( IndexDocumentsFile ),
 				GetFullPath( IndexWordsFile ),
 				GetFullPath( IndexMappingsFile ),
-				index );
-			indexStorer.LoadIndex( );
+				_index );
+			_indexStorer.LoadIndex( );
 
-			if ( indexStorer.DataCorrupted )
+			if ( _indexStorer.DataCorrupted )
 			{
 				host.LogEntry( "Search Engine Index is corrupted and needs to be rebuilt\r\n" +
-					indexStorer.ReasonForDataCorruption, LogEntryType.Warning, null, this );
+					_indexStorer.ReasonForDataCorruption, LogEntryType.Warning, null, this );
 			}
 		}
 
@@ -188,7 +188,7 @@ namespace ScrewTurn.Wiki
 		{
 			// Load file lines, replacing all dots with underscores in category names
 
-			host.LogEntry( "Upgrading categories format from 2.0 to 3.0", LogEntryType.General, null, this );
+			_host.LogEntry( "Upgrading categories format from 2.0 to 3.0", LogEntryType.General, null, this );
 
 			string[ ] lines = File.ReadAllText( GetFullPath( CategoriesFile ) ).Replace( "\r", "" ).Split( new char[ ] { '\n' }, StringSplitOptions.RemoveEmptyEntries );
 
@@ -258,7 +258,7 @@ namespace ScrewTurn.Wiki
 			// If parsing is successful, then the file must be converted
 			// Conversion consists in removing the 'Status' field and properly modifying permissions of pages
 
-			host.LogEntry( "Upgrading pages format from 2.0 to 3.0", LogEntryType.General, null, this );
+			_host.LogEntry( "Upgrading pages format from 2.0 to 3.0", LogEntryType.General, null, this );
 
 			//string[] lines = File.ReadAllLines(GetFullPath(PagesFile));
 			string[ ] lines = File.ReadAllText( GetFullPath( PagesFile ) ).Replace( "\r", "" ).Split( new char[ ] { '\n' }, StringSplitOptions.RemoveEmptyEntries );
@@ -339,7 +339,7 @@ namespace ScrewTurn.Wiki
 					if ( oldStylePermissions[ i ] != 'N' )
 					{
 						// Need to set permissions emulating old-style behavior
-						host.UpgradePageStatusToAcl( pages[ i ], oldStylePermissions[ i ] );
+						_host.UpgradePageStatusToAcl( pages[ i ], oldStylePermissions[ i ] );
 					}
 				}
 
@@ -358,7 +358,7 @@ namespace ScrewTurn.Wiki
 		{
 			// Load file lines, replacing all dots with underscores in category names
 
-			host.LogEntry( "Upgrading navigation paths format from 2.0 to 3.0", LogEntryType.General, null, this );
+			_host.LogEntry( "Upgrading navigation paths format from 2.0 to 3.0", LogEntryType.General, null, this );
 
 			string[ ] lines = File.ReadAllText( GetFullPath( NavigationPathsFile ) ).Replace( "\r", "" ).Split( new char[ ] { '\n' }, StringSplitOptions.RemoveEmptyEntries );
 
@@ -399,7 +399,7 @@ namespace ScrewTurn.Wiki
 		{
 			lock ( this )
 			{
-				indexStorer.Dispose( );
+				_indexStorer.Dispose( );
 			}
 		}
 
@@ -408,7 +408,7 @@ namespace ScrewTurn.Wiki
 		/// </summary>
 		public ComponentInformation Information
 		{
-			get { return info; }
+			get { return _info; }
 		}
 
 		/// <summary>
@@ -473,7 +473,7 @@ namespace ScrewTurn.Wiki
 			lock ( this )
 			{
 				// Namespaces must be loaded from disk
-				if ( namespacesCache == null )
+				if ( _namespacesCache == null )
 				{
 
 					string[ ] lines = File.ReadAllText( GetFullPath( NamespacesFile ) ).Replace( "\r", "" ).Split( new char[ ] { '\n' }, StringSplitOptions.RemoveEmptyEntries );
@@ -509,10 +509,10 @@ namespace ScrewTurn.Wiki
 
 					result.Sort( ( x, y ) => x.CompareTo( y ) );
 
-					namespacesCache = result.ToArray( );
+					_namespacesCache = result.ToArray( );
 				}
 
-				return namespacesCache;
+				return _namespacesCache;
 			}
 		}
 
@@ -568,7 +568,7 @@ namespace ScrewTurn.Wiki
 				// Create folder for messages files
 				Directory.CreateDirectory( GetFullPathForMessages( GetNamespacePartialPathForPageContent( name ) ) );
 
-				namespacesCache = null;
+				_namespacesCache = null;
 				return new NamespaceInfo( name, this, null );
 			}
 		}
@@ -687,9 +687,9 @@ namespace ScrewTurn.Wiki
 				}
 				DumpPages( allPages );
 
-				namespacesCache = null;
-				pagesCache = null;
-				categoriesCache = null;
+				_namespacesCache = null;
+				_pagesCache = null;
+				_categoriesCache = null;
 
 				// Re-add all pages and their messages to the search engine index
 				foreach ( PageInfo page in GetPages( result ) )
@@ -736,7 +736,7 @@ namespace ScrewTurn.Wiki
 
 				targetNamespace.DefaultPage = localPage;
 				DumpNamespaces( allNamespaces );
-				namespacesCache = null;
+				_namespacesCache = null;
 
 				return new NamespaceInfo( targetNamespace.Name, this, targetNamespace.DefaultPage );
 			}
@@ -791,9 +791,9 @@ namespace ScrewTurn.Wiki
 					// Remove messages folder
 					Directory.Delete( GetFullPathForMessages( GetNamespacePartialPathForPageContent( nspace.Name ) ), true );
 
-					namespacesCache = null;
-					pagesCache = null;
-					categoriesCache = null;
+					_namespacesCache = null;
+					_pagesCache = null;
+					_categoriesCache = null;
 
 					return true;
 				}
@@ -936,9 +936,9 @@ namespace ScrewTurn.Wiki
 				RebindPage( newPage, newCategories.ToArray( ) );
 			}
 
-			namespacesCache = null;
-			pagesCache = null;
-			categoriesCache = null;
+			_namespacesCache = null;
+			_pagesCache = null;
+			_categoriesCache = null;
 			return newPage;
 		}
 
@@ -1064,7 +1064,7 @@ namespace ScrewTurn.Wiki
 		{
 			lock ( this )
 			{
-				if ( categoriesCache == null )
+				if ( _categoriesCache == null )
 				{
 					string tmp = File.ReadAllText( GetFullPath( CategoriesFile ) ).Replace( "\r", "" );
 
@@ -1078,10 +1078,10 @@ namespace ScrewTurn.Wiki
 
 					Array.Sort( result, new CategoryNameComparer( ) );
 
-					categoriesCache = result;
+					_categoriesCache = result;
 				}
 
-				return categoriesCache;
+				return _categoriesCache;
 			}
 		}
 
@@ -1158,7 +1158,7 @@ namespace ScrewTurn.Wiki
 				// Namespace.Category|Page1|Page2|...
 				File.AppendAllText( GetFullPath( CategoriesFile ), "\r\n" + result.FullName );
 				result.Pages = new string[ 0 ];
-				categoriesCache = null;
+				_categoriesCache = null;
 				return result;
 			}
 		}
@@ -1192,7 +1192,7 @@ namespace ScrewTurn.Wiki
 						result.Pages = cats[ i ].Pages;
 						cats[ i ] = result;
 						DumpCategories( cats );
-						categoriesCache = null;
+						_categoriesCache = null;
 						return result;
 					}
 				}
@@ -1221,7 +1221,7 @@ namespace ScrewTurn.Wiki
 						List<CategoryInfo> tmp = new List<CategoryInfo>( cats );
 						tmp.Remove( tmp[ i ] );
 						DumpCategories( tmp.ToArray( ) );
-						categoriesCache = null;
+						_categoriesCache = null;
 						return true;
 					}
 				}
@@ -1295,7 +1295,7 @@ namespace ScrewTurn.Wiki
 				DumpCategories( tmp.ToArray( ) );
 				CategoryInfo newCat = new CategoryInfo( destination.FullName, this );
 				newCat.Pages = newPages.ToArray( );
-				categoriesCache = null;
+				_categoriesCache = null;
 				return newCat;
 			}
 		}
@@ -1356,17 +1356,17 @@ namespace ScrewTurn.Wiki
 
 					string documentName = PageDocument.GetDocumentName( content.PageInfo );
 
-					DumpedDocument ddoc = new DumpedDocument( 0, documentName, host.PrepareTitleForIndexing( content.PageInfo, content.Title ),
+					DumpedDocument ddoc = new DumpedDocument( 0, documentName, _host.PrepareTitleForIndexing( content.PageInfo, content.Title ),
 						PageDocument.StandardTypeTag, content.LastModified );
 
 					// Store the document
 					// The content should always be prepared using IHost.PrepareForSearchEngineIndexing()
-					int count = index.StoreDocument( new PageDocument( content.PageInfo, ddoc, TokenizeContent ),
-						content.Keywords, host.PrepareContentForIndexing( content.PageInfo, content.Content ), null );
+					int count = _index.StoreDocument( new PageDocument( content.PageInfo, ddoc, TokenizeContent ),
+						content.Keywords, _host.PrepareContentForIndexing( content.PageInfo, content.Content ), null );
 
 					if ( count == 0 && content.Content.Length > 0 )
 					{
-						host.LogEntry( "Indexed 0 words for page " + content.PageInfo.FullName + ": possible index corruption. Please report this error to the developers",
+						_host.LogEntry( "Indexed 0 words for page " + content.PageInfo.FullName + ": possible index corruption. Please report this error to the developers",
 							LogEntryType.Warning, null, this );
 					}
 
@@ -1374,7 +1374,7 @@ namespace ScrewTurn.Wiki
 				}
 				catch ( Exception ex )
 				{
-					host.LogEntry( "Page indexing error for " + content.PageInfo.FullName + " (skipping page): " + ex, LogEntryType.Error, null, this );
+					_host.LogEntry( "Page indexing error for " + content.PageInfo.FullName + " (skipping page): " + ex, LogEntryType.Error, null, this );
 					return 0;
 				}
 			}
@@ -1390,9 +1390,9 @@ namespace ScrewTurn.Wiki
 			{
 				string documentName = PageDocument.GetDocumentName( content.PageInfo );
 
-				DumpedDocument ddoc = new DumpedDocument( 0, documentName, host.PrepareTitleForIndexing( content.PageInfo, content.Title ),
+				DumpedDocument ddoc = new DumpedDocument( 0, documentName, _host.PrepareTitleForIndexing( content.PageInfo, content.Title ),
 					PageDocument.StandardTypeTag, content.LastModified );
-				index.RemoveDocument( new PageDocument( content.PageInfo, ddoc, TokenizeContent ), null );
+				_index.RemoveDocument( new PageDocument( content.PageInfo, ddoc, TokenizeContent ), null );
 			}
 		}
 
@@ -1408,7 +1408,7 @@ namespace ScrewTurn.Wiki
 
 			lock ( this )
 			{
-				return index.Search( parameters );
+				return _index.Search( parameters );
 			}
 		}
 
@@ -1419,7 +1419,7 @@ namespace ScrewTurn.Wiki
 		{
 			lock ( this )
 			{
-				index.Clear( null );
+				_index.Clear( null );
 
 				foreach ( PageInfo page in GetAllPages( ) )
 				{
@@ -1444,10 +1444,10 @@ namespace ScrewTurn.Wiki
 		{
 			lock ( this )
 			{
-				documentCount = index.TotalDocuments;
-				wordCount = index.TotalWords;
-				occurrenceCount = index.TotalOccurrences;
-				size = indexStorer.Size;
+				documentCount = _index.TotalDocuments;
+				wordCount = _index.TotalWords;
+				occurrenceCount = _index.TotalOccurrences;
+				size = _indexStorer.Size;
 			}
 		}
 
@@ -1460,7 +1460,7 @@ namespace ScrewTurn.Wiki
 			{
 				lock ( this )
 				{
-					return indexStorer.DataCorrupted;
+					return _indexStorer.DataCorrupted;
 				}
 			}
 		}
@@ -1491,7 +1491,7 @@ namespace ScrewTurn.Wiki
 		{
 			lock ( this )
 			{
-				if ( pagesCache == null )
+				if ( _pagesCache == null )
 				{
 					string tmp = File.ReadAllText( GetFullPath( PagesFile ) ).Replace( "\r", "" );
 
@@ -1503,10 +1503,10 @@ namespace ScrewTurn.Wiki
 						result[ i ] = BuildLocalPageInfo( lines[ i ] );
 					}
 
-					pagesCache = result;
+					_pagesCache = result;
 				}
 
-				return pagesCache;
+				return _pagesCache;
 			}
 		}
 
@@ -1662,7 +1662,7 @@ namespace ScrewTurn.Wiki
 				File.AppendAllText( GetFullPath( PagesFile ), result.FullName + "|" + result.File + "|" + creationDateTime.ToString( "yyyy'/'MM'/'dd' 'HH':'mm':'ss" ) + "\r\n" );
 				//File.Create(GetFullPathForPageContent(result.File)).Close(); // Empty content file might cause problems with backups
 				File.WriteAllText( GetFullPathForPageContent( result.File ), "--\r\n--|1900/01/01 0:00:00|\r\n##PAGE##\r\n--" );
-				pagesCache = null;
+				_pagesCache = null;
 
 				return result;
 			}
@@ -1691,7 +1691,7 @@ namespace ScrewTurn.Wiki
 				}
 				catch ( Exception ex )
 				{
-					host.LogEntry( "Could not load content file (" + local.File + ") for page " + local.FullName + " - returning empty (" + ex.Message + ")",
+					_host.LogEntry( "Could not load content file (" + local.File + ") for page " + local.FullName + " - returning empty (" + ex.Message + ")",
 						LogEntryType.Error, null, this );
 					return PageContent.GetEmpty( page );
 				}
@@ -1712,7 +1712,7 @@ namespace ScrewTurn.Wiki
 			string[ ] lines = data.Split( '\n' );
 			if ( lines.Length < 4 )
 			{
-				host.LogEntry( "Corrupted or malformed page data for page " + pageInfo.FullName + " - returning empty", LogEntryType.Error, null, this );
+				_host.LogEntry( "Corrupted or malformed page data for page " + pageInfo.FullName + " - returning empty", LogEntryType.Error, null, this );
 				return PageContent.GetEmpty( pageInfo );
 			}
 			string[ ] fields = lines[ 1 ].Split( '|' );
@@ -1961,8 +1961,8 @@ namespace ScrewTurn.Wiki
 
 						DumpPages( pgs );
 						// Clear internal cache
-						categoriesCache = null;
-						pagesCache = null;
+						_categoriesCache = null;
+						_pagesCache = null;
 						// Re-bind page with previously saved categories
 						RebindPage( local, cats );
 
@@ -2286,8 +2286,8 @@ namespace ScrewTurn.Wiki
 							File.Delete( GetFullPathForMessages( local.File ) );
 						}
 						catch { }
-						pagesCache = null;
-						categoriesCache = null;
+						_pagesCache = null;
+						_categoriesCache = null;
 
 						return true;
 					}
@@ -2356,8 +2356,8 @@ namespace ScrewTurn.Wiki
 					}
 				}
 				DumpCategories( cats );
-				pagesCache = null;
-				categoriesCache = null;
+				_pagesCache = null;
+				_categoriesCache = null;
 			}
 			return true;
 		}
@@ -2715,17 +2715,17 @@ namespace ScrewTurn.Wiki
 
 					string documentName = MessageDocument.GetDocumentName( page, id );
 
-					DumpedDocument ddoc = new DumpedDocument( 0, documentName, host.PrepareTitleForIndexing( null, subject ),
+					DumpedDocument ddoc = new DumpedDocument( 0, documentName, _host.PrepareTitleForIndexing( null, subject ),
 						MessageDocument.StandardTypeTag, dateTime );
 
 					// Store the document
 					// The content should always be prepared using IHost.PrepareForSearchEngineIndexing()
-					int count = index.StoreDocument( new MessageDocument( page, id, ddoc, TokenizeContent ), null,
-						host.PrepareContentForIndexing( null, body ), null );
+					int count = _index.StoreDocument( new MessageDocument( page, id, ddoc, TokenizeContent ), null,
+						_host.PrepareContentForIndexing( null, body ), null );
 
 					if ( count == 0 && body.Length > 0 )
 					{
-						host.LogEntry( "Indexed 0 words for message " + page.FullName + ":" + id + ": possible index corruption. Please report this error to the developers",
+						_host.LogEntry( "Indexed 0 words for message " + page.FullName + ":" + id + ": possible index corruption. Please report this error to the developers",
 							LogEntryType.Warning, null, this );
 					}
 
@@ -2733,7 +2733,7 @@ namespace ScrewTurn.Wiki
 				}
 				catch ( Exception ex )
 				{
-					host.LogEntry( "Message indexing error for " + page.FullName + ":" + id + " (skipping message): " + ex, LogEntryType.Error, null, this );
+					_host.LogEntry( "Message indexing error for " + page.FullName + ":" + id + " (skipping message): " + ex, LogEntryType.Error, null, this );
 					return 0;
 				}
 			}
@@ -2771,9 +2771,9 @@ namespace ScrewTurn.Wiki
 
 				string documentName = MessageDocument.GetDocumentName( page, id );
 
-				DumpedDocument ddoc = new DumpedDocument( 0, documentName, host.PrepareTitleForIndexing( null, subject ),
+				DumpedDocument ddoc = new DumpedDocument( 0, documentName, _host.PrepareTitleForIndexing( null, subject ),
 					MessageDocument.StandardTypeTag, DateTime.Now );
-				index.RemoveDocument( new MessageDocument( page, id, ddoc, TokenizeContent ), null );
+				_index.RemoveDocument( new MessageDocument( page, id, ddoc, TokenizeContent ), null );
 			}
 		}
 

@@ -16,12 +16,13 @@ namespace ScrewTurn.Wiki
 	{
 
 		private static readonly byte[ ] ReservedBytes = new byte[ ] { 2, 0, 0, 0, 0, 0, 0, 0 };
-		private static readonly int Zero = 0;
 
-		private string documentsFile, wordsFile, mappingsFile;
+		private readonly string _documentsFile;
+		private readonly string _wordsFile;
+		private readonly string _mappingsFile;
 
-		private uint firstFreeDocumentId = 1;
-		private uint firstFreeWordId = 1;
+		private uint _firstFreeDocumentId = 1;
+		private uint _firstFreeWordId = 1;
 
 		// Documents file binary format
 		// Reserved(8bytes) Count(int) Entries...
@@ -54,9 +55,9 @@ namespace ScrewTurn.Wiki
 			if ( wordsFile.Length == 0 ) throw new ArgumentException( "Words File cannot be emtpy", "wordsFile" );
 			if ( mappingsFile.Length == 0 ) throw new ArgumentException( "Mappings File cannot be empty", "mappingsFile" );
 
-			this.documentsFile = documentsFile;
-			this.wordsFile = wordsFile;
-			this.mappingsFile = mappingsFile;
+			this._documentsFile = documentsFile;
+			this._wordsFile = wordsFile;
+			this._mappingsFile = mappingsFile;
 
 			InitFiles( );
 		}
@@ -73,13 +74,13 @@ namespace ScrewTurn.Wiki
 					long size = 0;
 					FileInfo fi;
 
-					fi = new FileInfo( documentsFile );
+					fi = new FileInfo( _documentsFile );
 					size += fi.Length;
 
-					fi = new FileInfo( wordsFile );
+					fi = new FileInfo( _wordsFile );
 					size += fi.Length;
 
-					fi = new FileInfo( mappingsFile );
+					fi = new FileInfo( _mappingsFile );
 					size += fi.Length;
 
 					return size;
@@ -99,7 +100,7 @@ namespace ScrewTurn.Wiki
 			uint maxWordId = 0;
 
 			// 1. Load Documents
-			using ( FileStream fs = new FileStream( documentsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
+			using ( FileStream fs = new FileStream( _documentsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
 			{
 				int count = ReadCount( fs );
 				BinaryReader reader = new BinaryReader( fs, Encoding.UTF8 );
@@ -109,11 +110,11 @@ namespace ScrewTurn.Wiki
 					documents[ i ] = ReadDumpedDocument( reader );
 					if ( documents[ i ].ID > maxDocumentId ) maxDocumentId = documents[ i ].ID;
 				}
-				firstFreeDocumentId = maxDocumentId + 1;
+				_firstFreeDocumentId = maxDocumentId + 1;
 			}
 
 			// 2. Load Words
-			using ( FileStream fs = new FileStream( wordsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
+			using ( FileStream fs = new FileStream( _wordsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
 			{
 				int count = ReadCount( fs );
 				BinaryReader reader = new BinaryReader( fs, Encoding.UTF8 );
@@ -123,11 +124,11 @@ namespace ScrewTurn.Wiki
 					words[ i ] = ReadDumpedWord( reader );
 					if ( words[ i ].ID > maxWordId ) maxWordId = words[ i ].ID;
 				}
-				firstFreeWordId = maxWordId + 1;
+				_firstFreeWordId = maxWordId + 1;
 			}
 
 			// 3. Load Mappings
-			using ( FileStream fs = new FileStream( mappingsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
+			using ( FileStream fs = new FileStream( _mappingsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
 			{
 				int count = ReadCount( fs );
 				BinaryReader reader = new BinaryReader( fs, Encoding.UTF8 );
@@ -160,27 +161,27 @@ namespace ScrewTurn.Wiki
 		/// </summary>
 		private void InitFiles( )
 		{
-			if ( !File.Exists( documentsFile ) )
+			if ( !File.Exists( _documentsFile ) )
 			{
-				using ( FileStream fs = new FileStream( documentsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
+				using ( FileStream fs = new FileStream( _documentsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
 				{
 					BinaryWriter writer = new BinaryWriter( fs, Encoding.UTF8 );
 					WriteHeader( writer );
 				}
 			}
 
-			if ( !File.Exists( wordsFile ) )
+			if ( !File.Exists( _wordsFile ) )
 			{
-				using ( FileStream fs = new FileStream( wordsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
+				using ( FileStream fs = new FileStream( _wordsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
 				{
 					BinaryWriter writer = new BinaryWriter( fs, Encoding.UTF8 );
 					WriteHeader( writer );
 				}
 			}
 
-			if ( !File.Exists( mappingsFile ) )
+			if ( !File.Exists( _mappingsFile ) )
 			{
-				using ( FileStream fs = new FileStream( mappingsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
+				using ( FileStream fs = new FileStream( _mappingsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
 				{
 					BinaryWriter writer = new BinaryWriter( fs, Encoding.UTF8 );
 					WriteHeader( writer );
@@ -194,19 +195,19 @@ namespace ScrewTurn.Wiki
 		/// <param name="state">A state object passed from the index.</param>
 		protected override void InitDataStore( object state )
 		{
-			using ( FileStream fs = new FileStream( documentsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
+			using ( FileStream fs = new FileStream( _documentsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
 			{
 				BinaryWriter writer = new BinaryWriter( fs, Encoding.UTF8 );
 				WriteHeader( writer );
 			}
 
-			using ( FileStream fs = new FileStream( wordsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
+			using ( FileStream fs = new FileStream( _wordsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
 			{
 				BinaryWriter writer = new BinaryWriter( fs, Encoding.UTF8 );
 				WriteHeader( writer );
 			}
 
-			using ( FileStream fs = new FileStream( mappingsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
+			using ( FileStream fs = new FileStream( _mappingsFile, FileMode.Create, FileAccess.Write, FileShare.None ) )
 			{
 				BinaryWriter writer = new BinaryWriter( fs, Encoding.UTF8 );
 				WriteHeader( writer );
@@ -220,7 +221,7 @@ namespace ScrewTurn.Wiki
 		private static void WriteHeader( BinaryWriter writer )
 		{
 			writer.Write( ReservedBytes );
-			writer.Write( Zero );
+			writer.Write( 0 );
 		}
 
 		/// <summary>
@@ -311,7 +312,7 @@ namespace ScrewTurn.Wiki
 			IndexStorerResult result = new IndexStorerResult( null, null );
 
 			// 1. Save Document
-			using ( FileStream fs = new FileStream( documentsFile, FileMode.Open, FileAccess.ReadWrite, FileShare.None ) )
+			using ( FileStream fs = new FileStream( _documentsFile, FileMode.Open, FileAccess.ReadWrite, FileShare.None ) )
 			{
 				int count = ReadCount( fs );
 				// Update count and append document
@@ -319,16 +320,16 @@ namespace ScrewTurn.Wiki
 				fs.Seek( -4, SeekOrigin.Current );
 				writer.Write( count + 1 );
 				writer.Seek( 0, SeekOrigin.End );
-				data.Document.ID = firstFreeDocumentId;
+				data.Document.ID = _firstFreeDocumentId;
 				WriteDumpedDocument( writer, data.Document );
 
-				result.DocumentID = firstFreeDocumentId;
-				firstFreeDocumentId++;
+				result.DocumentID = _firstFreeDocumentId;
+				_firstFreeDocumentId++;
 			}
 
 			// 2. Save Words
 			Dictionary<uint, WordId> wordIds = null;
-			using ( FileStream fs = new FileStream( wordsFile, FileMode.Open, FileAccess.ReadWrite, FileShare.None ) )
+			using ( FileStream fs = new FileStream( _wordsFile, FileMode.Open, FileAccess.ReadWrite, FileShare.None ) )
 			{
 				int count = ReadCount( fs );
 				// Update count and append words
@@ -340,16 +341,16 @@ namespace ScrewTurn.Wiki
 				wordIds = new Dictionary<uint, WordId>( data.Words.Count );
 				foreach ( DumpedWord dw in data.Words )
 				{
-					wordIds.Add( dw.ID, new WordId( dw.Text, firstFreeWordId ) );
-					dw.ID = firstFreeWordId;
+					wordIds.Add( dw.ID, new WordId( dw.Text, _firstFreeWordId ) );
+					dw.ID = _firstFreeWordId;
 					WriteDumpedWord( writer, dw );
-					firstFreeWordId++;
+					_firstFreeWordId++;
 				}
 				result.WordIDs = new List<WordId>( wordIds.Values );
 			}
 
 			// 3. Save Mappings
-			using ( FileStream fs = new FileStream( mappingsFile, FileMode.Open, FileAccess.ReadWrite, FileShare.None ) )
+			using ( FileStream fs = new FileStream( _mappingsFile, FileMode.Open, FileAccess.ReadWrite, FileShare.None ) )
 			{
 				int count = ReadCount( fs );
 				// Update count and append mappings
@@ -396,12 +397,12 @@ namespace ScrewTurn.Wiki
 		protected override void DeleteData( DumpedChange data, object state )
 		{
 			// Files are regenerated in a tempDumpedWord location and copied back
-			string tempDocumentsFile = GetTempFile( documentsFile );
-			string tempWordsFile = GetTempFile( wordsFile );
-			string tempMappingsFile = GetTempFile( mappingsFile );
+			string tempDocumentsFile = GetTempFile( _documentsFile );
+			string tempWordsFile = GetTempFile( _wordsFile );
+			string tempMappingsFile = GetTempFile( _mappingsFile );
 
 			// 1. Remove Mappings
-			using ( FileStream fsi = new FileStream( mappingsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
+			using ( FileStream fsi = new FileStream( _mappingsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
 			{
 				int count = ReadCount( fsi );
 				int countLocation = (int)fsi.Position - 4;
@@ -427,11 +428,11 @@ namespace ScrewTurn.Wiki
 				}
 			}
 			// Replace the file
-			File.Copy( tempMappingsFile, mappingsFile, true );
+			File.Copy( tempMappingsFile, _mappingsFile, true );
 			File.Delete( tempMappingsFile );
 
 			// 2. Remove Words
-			using ( FileStream fsi = new FileStream( wordsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
+			using ( FileStream fsi = new FileStream( _wordsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
 			{
 				int count = ReadCount( fsi );
 				int countLocation = (int)fsi.Position - 4;
@@ -457,11 +458,11 @@ namespace ScrewTurn.Wiki
 				}
 			}
 			// Replace the file
-			File.Copy( tempWordsFile, wordsFile, true );
+			File.Copy( tempWordsFile, _wordsFile, true );
 			File.Delete( tempWordsFile );
 
 			// 3. Remove Document
-			using ( FileStream fsi = new FileStream( documentsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
+			using ( FileStream fsi = new FileStream( _documentsFile, FileMode.Open, FileAccess.Read, FileShare.None ) )
 			{
 				int count = ReadCount( fsi );
 				int countLocation = (int)fsi.Position - 4;
@@ -484,7 +485,7 @@ namespace ScrewTurn.Wiki
 					writer.Write( count - 1 );
 				}
 			}
-			File.Copy( tempDocumentsFile, documentsFile, true );
+			File.Copy( tempDocumentsFile, _documentsFile, true );
 			File.Delete( tempDocumentsFile );
 		}
 

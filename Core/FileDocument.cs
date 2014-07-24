@@ -16,13 +16,6 @@ namespace ScrewTurn.Wiki
 		/// </summary>
 		public const string StandardTypeTag = "F";
 
-		private uint id;
-		private string name;
-		private string title;
-		private string typeTag = StandardTypeTag;
-		private DateTime dateTime;
-		private string provider;
-
 		/// <summary>
 		/// Initializes a new instance of the <see cref="T:FileDocument" /> class.
 		/// </summary>
@@ -36,11 +29,11 @@ namespace ScrewTurn.Wiki
 			if ( provider == null ) throw new ArgumentNullException( "provider" );
 			if ( provider.Length == 0 ) throw new ArgumentException( "Provider cannot be empty", "provider" );
 
-			id = Tools.HashDocumentNameForTemporaryIndex( fullName );
-			name = provider + "|" + fullName;
-			title = fullName.Substring( Tools.GetDirectoryName( fullName ).Length );
-			this.dateTime = dateTime;
-			this.provider = provider;
+			ID = Tools.HashDocumentNameForTemporaryIndex( fullName );
+			Name = provider + "|" + fullName;
+			Title = fullName.Substring( Tools.GetDirectoryName( fullName ).Length );
+			this.DateTime = dateTime;
+			this.Provider = provider;
 		}
 
 		/// <summary>
@@ -51,53 +44,37 @@ namespace ScrewTurn.Wiki
 		{
 			string[ ] fields = doc.Name.Split( '|' );
 
-			id = doc.ID;
-			name = doc.Name;
-			title = doc.Title;
-			dateTime = doc.DateTime;
-			provider = fields[ 0 ];
+			ID = doc.ID;
+			Name = doc.Name;
+			Title = doc.Title;
+			DateTime = doc.DateTime;
+			Provider = fields[ 0 ];
 		}
 
 		/// <summary>
 		/// Gets or sets the globally unique ID of the document.
 		/// </summary>
-		public uint ID
-		{
-			get { return id; }
-			set { id = value; }
-		}
+		public uint ID { get; set; }
 
 		/// <summary>
 		/// Gets the globally-unique name of the document.
 		/// </summary>
-		public string Name
-		{
-			get { return name; }
-		}
+		public string Name { get; private set; }
 
 		/// <summary>
 		/// Gets the title of the document, if any.
 		/// </summary>
-		public string Title
-		{
-			get { return title; }
-		}
+		public string Title { get; private set; }
 
 		/// <summary>
 		/// Gets the tag for the document type.
 		/// </summary>
-		public string TypeTag
-		{
-			get { return typeTag; }
-		}
+		public string TypeTag { get { return "F"; } }
 
 		/// <summary>
 		/// Gets the document date/time.
 		/// </summary>
-		public DateTime DateTime
-		{
-			get { return dateTime; }
-		}
+		public DateTime DateTime { get; private set; }
 
 		/// <summary>
 		/// Performs the tokenization of the document content.
@@ -112,11 +89,7 @@ namespace ScrewTurn.Wiki
 		/// <summary>
 		/// Gets the provider.
 		/// </summary>
-		public string Provider
-		{
-			get { return provider; }
-		}
-
+		public string Provider { get; private set; }
 	}
 
 }

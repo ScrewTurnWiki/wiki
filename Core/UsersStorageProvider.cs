@@ -18,17 +18,17 @@ namespace ScrewTurn.Wiki
 		private const string UsersDataFile = "UsersData.cs";
 		private const string GroupsFile = "Groups.cs";
 
-		private readonly ComponentInformation info = new ComponentInformation( "Local Users Provider",
-			"Threeplicate Srl", Settings.WikiVersion, "http://www.screwturn.eu", null );
+		private readonly ComponentInformation _info = new ComponentInformation( "Local Users Provider",
+			"Threeplicate Srl", Settings.WikiVersion, "http://www.screwturnwiki.com", null );
 
-		private IHostV30 host;
+		private IHostV30 _host;
 
-		private UserGroup[ ] groupsCache = null;
-		private UserInfo[ ] usersCache = null;
+		private UserGroup[ ] _groupsCache = null;
+		private UserInfo[ ] _usersCache = null;
 
 		private string GetFullPath( string filename )
 		{
-			return Path.Combine( GetDataDirectory( host ), filename );
+			return Path.Combine( GetDataDirectory( _host ), filename );
 		}
 
 		/// <summary>
@@ -43,7 +43,7 @@ namespace ScrewTurn.Wiki
 			if ( host == null ) throw new ArgumentNullException( "host" );
 			if ( config == null ) throw new ArgumentNullException( "config" );
 
-			this.host = host;
+			this._host = host;
 
 			if ( !LocalProvidersTools.CheckWritePermissions( GetDataDirectory( host ) ) )
 			{
@@ -134,11 +134,11 @@ namespace ScrewTurn.Wiki
 					string backupFile = GetFullPath( Path.GetFileNameWithoutExtension( UsersFile ) + "_v2" + Path.GetExtension( UsersFile ) );
 					File.Copy( GetFullPath( UsersFile ), backupFile );
 
-					host.LogEntry( "Upgrading users format from 2.0 to 3.0", LogEntryType.General, null, this );
+					_host.LogEntry( "Upgrading users format from 2.0 to 3.0", LogEntryType.General, null, this );
 
 					DumpUsers( users );
-					UserGroup adminsGroup = AddUserGroup( host.GetSettingValue( SettingName.AdministratorsGroup ), "Built-in Administrators" );
-					UserGroup usersGroup = AddUserGroup( host.GetSettingValue( SettingName.UsersGroup ), "Built-in Users" );
+					UserGroup adminsGroup = AddUserGroup( _host.GetSettingValue( SettingName.AdministratorsGroup ), "Built-in Administrators" );
+					UserGroup usersGroup = AddUserGroup( _host.GetSettingValue( SettingName.UsersGroup ), "Built-in Users" );
 
 					for ( int i = 0; i < users.Length; i++ )
 					{
@@ -152,7 +152,7 @@ namespace ScrewTurn.Wiki
 						}
 					}
 
-					host.UpgradeSecurityFlagsToGroupsAcl( adminsGroup, usersGroup );
+					_host.UpgradeSecurityFlagsToGroupsAcl( adminsGroup, usersGroup );
 				}
 			}
 		}
@@ -168,7 +168,7 @@ namespace ScrewTurn.Wiki
 		/// </summary>
 		public ComponentInformation Information
 		{
-			get { return info; }
+			get { return _info; }
 		}
 
 		/// <summary>
@@ -237,7 +237,7 @@ namespace ScrewTurn.Wiki
 		{
 			lock ( this )
 			{
-				if ( usersCache == null )
+				if ( _usersCache == null )
 				{
 
 					UserGroup[ ] groups = GetUserGroups( );
@@ -266,10 +266,10 @@ namespace ScrewTurn.Wiki
 
 					Array.Sort( result, new UsernameComparer( ) );
 
-					usersCache = result;
+					_usersCache = result;
 				}
 
-				return usersCache;
+				return _usersCache;
 			}
 		}
 
@@ -374,7 +374,7 @@ namespace ScrewTurn.Wiki
 				sb.Append( "\r\n" );
 				File.AppendAllText( GetFullPath( UsersFile ), sb.ToString( ) );
 
-				usersCache = null;
+				_usersCache = null;
 
 				return new LocalUserInfo( username, displayName, email, active, dateTime, this, Hash.Compute( password ) );
 			}
@@ -405,7 +405,7 @@ namespace ScrewTurn.Wiki
 				UserInfo[ ] allUsers = GetUsers( );
 				UsernameComparer comp = new UsernameComparer( );
 
-				usersCache = null;
+				_usersCache = null;
 
 				for ( int i = 0; i < allUsers.Length; i++ )
 				{
@@ -470,7 +470,7 @@ namespace ScrewTurn.Wiki
 				tmp.Remove( tmp[ idx ] );
 				DumpUsers( tmp.ToArray( ) );
 
-				usersCache = null;
+				_usersCache = null;
 			}
 			return true;
 		}
@@ -553,7 +553,7 @@ namespace ScrewTurn.Wiki
 		{
 			lock ( this )
 			{
-				if ( groupsCache == null )
+				if ( _groupsCache == null )
 				{
 
 					string[ ] lines = File.ReadAllLines( GetFullPath( GroupsFile ) );
@@ -581,10 +581,10 @@ namespace ScrewTurn.Wiki
 
 					Array.Sort( result, new UserGroupComparer( ) );
 
-					groupsCache = result;
+					_groupsCache = result;
 				}
 
-				return groupsCache;
+				return _groupsCache;
 			}
 		}
 
@@ -608,7 +608,7 @@ namespace ScrewTurn.Wiki
 
 				BackupGroupsFile( );
 
-				groupsCache = null;
+				_groupsCache = null;
 
 				// Structure - description can be empty
 				// Name|Description|User1|User2|...
@@ -678,7 +678,7 @@ namespace ScrewTurn.Wiki
 			{
 				UserGroup[ ] allGroups = GetUserGroups( );
 
-				groupsCache = null;
+				_groupsCache = null;
 
 				UserGroupComparer comp = new UserGroupComparer( );
 				for ( int i = 0; i < allGroups.Length; i++ )
@@ -723,8 +723,8 @@ namespace ScrewTurn.Wiki
 
 				DumpUserGroups( result.ToArray( ) );
 
-				groupsCache = null;
-				usersCache = null;
+				_groupsCache = null;
+				_usersCache = null;
 
 				return result.Count == allGroups.Length - 1;
 			}
@@ -774,8 +774,8 @@ namespace ScrewTurn.Wiki
 					allGroups[ i ].Users = users.ToArray( );
 				}
 
-				groupsCache = null;
-				usersCache = null;
+				_groupsCache = null;
+				_usersCache = null;
 
 				DumpUserGroups( allGroups );
 

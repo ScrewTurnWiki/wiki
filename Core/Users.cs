@@ -14,8 +14,8 @@ namespace ScrewTurn.Wiki
 	public static class Users
 	{
 
-		private static UserInfo adminAccount = null;
-		private static UserInfo anonAccount = null;
+		private static UserInfo _adminAccount = null;
+		private static UserInfo _anonAccount = null;
 
 		/// <summary>
 		/// Gets the built-in administrator account.
@@ -23,13 +23,13 @@ namespace ScrewTurn.Wiki
 		/// <returns>The account.</returns>
 		public static UserInfo GetAdministratorAccount( )
 		{
-			if ( adminAccount == null )
+			if ( _adminAccount == null )
 			{
-				adminAccount = new UserInfo( "admin", "Administrator", Settings.ContactEmail, true, DateTime.MinValue, null );
-				adminAccount.Groups = new[ ] { Settings.AdministratorsGroup };
+				_adminAccount = new UserInfo( "admin", "Administrator", Settings.ContactEmail, true, DateTime.MinValue, null );
+				_adminAccount.Groups = new[ ] { Settings.AdministratorsGroup };
 			}
 
-			return adminAccount;
+			return _adminAccount;
 		}
 
 		/// <summary>
@@ -38,13 +38,13 @@ namespace ScrewTurn.Wiki
 		/// <returns>The account.</returns>
 		public static UserInfo GetAnonymousAccount( )
 		{
-			if ( anonAccount == null )
+			if ( _anonAccount == null )
 			{
-				anonAccount = new UserInfo( SessionFacade.AnonymousUsername, null, null, false, DateTime.MinValue, null );
-				anonAccount.Groups = new[ ] { Settings.AnonymousGroup };
+				_anonAccount = new UserInfo( SessionFacade.AnonymousUsername, null, null, false, DateTime.MinValue, null );
+				_anonAccount.Groups = new[ ] { Settings.AnonymousGroup };
 			}
 
-			return anonAccount;
+			return _anonAccount;
 		}
 
 		/// <summary>

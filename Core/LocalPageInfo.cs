@@ -10,9 +10,6 @@ namespace ScrewTurn.Wiki
 	/// </summary>
 	public class LocalPageInfo : PageInfo
 	{
-
-		private string file;
-
 		/// <summary>
 		/// Initializes a new instance of the <b>PageInfo</b> class.
 		/// </summary>
@@ -24,18 +21,13 @@ namespace ScrewTurn.Wiki
 			: base( fullName, provider, creationDateTime )
 		{
 
-			this.file = file;
+			this.File = file;
 		}
 
 		/// <summary>
 		/// Gets or sets the relative path of the File used for data storage.
 		/// </summary>
-		public string File
-		{
-			get { return file; }
-			set { file = value; }
-		}
-
+		public string File { get; set; }
 	}
 
 }

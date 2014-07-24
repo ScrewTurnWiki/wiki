@@ -14,11 +14,11 @@ namespace ScrewTurn.Wiki
 	public class ProviderUpdater
 	{
 
-		private List<string> visitedUrls;
+		private readonly List<string> _visitedUrls;
 
-		private ISettingsStorageProviderV30 settingsProvider;
-		private List<IProviderV30> providers;
-		private Dictionary<string, string> fileNamesForProviders;
+		private readonly ISettingsStorageProviderV30 _settingsProvider;
+		private readonly List<IProviderV30> _providers;
+		private readonly Dictionary<string, string> _fileNamesForProviders;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="T:ProviderUpdater" /> class.
@@ -36,16 +36,16 @@ namespace ScrewTurn.Wiki
 			if ( providers == null ) throw new ArgumentNullException( "providers" );
 			if ( providers.Length == 0 ) throw new ArgumentException( "Providers cannot be empty", "providers" );
 
-			this.settingsProvider = settingsProvider;
-			this.fileNamesForProviders = fileNamesForProviders;
+			this._settingsProvider = settingsProvider;
+			this._fileNamesForProviders = fileNamesForProviders;
 
-			this.providers = new List<IProviderV30>( 20 );
+			this._providers = new List<IProviderV30>( 20 );
 			foreach ( IProviderV30[ ] group in providers )
 			{
-				this.providers.AddRange( group );
+				this._providers.AddRange( group );
 			}
 
-			visitedUrls = new List<string>( 10 );
+			_visitedUrls = new List<string>( 10 );
 		}
 
 		/// <summary>
@@ -58,7 +58,7 @@ namespace ScrewTurn.Wiki
 
 			int updatedDlls = 0;
 
-			foreach ( IProviderV30 prov in providers )
+			foreach ( IProviderV30 prov in _providers )
 			{
 				if ( string.IsNullOrEmpty( prov.Information.UpdateUrl ) ) continue;
 
@@ -72,11 +72,11 @@ namespace ScrewTurn.Wiki
 					// Update is possible
 
 					// Case insensitive check
-					if ( !visitedUrls.Contains( newDllUrl.ToLowerInvariant( ) ) )
+					if ( !_visitedUrls.Contains( newDllUrl.ToLowerInvariant( ) ) )
 					{
 						string dllName = null;
 
-						if ( !fileNamesForProviders.TryGetValue( prov.GetType( ).FullName, out dllName ) )
+						if ( !_fileNamesForProviders.TryGetValue( prov.GetType( ).FullName, out dllName ) )
 						{
 							Log.LogEntry( "Could not determine DLL name for provider " + prov.GetType( ).FullName, EntryType.Error, Log.SystemUsername );
 							continue;
@@ -85,7 +85,7 @@ namespace ScrewTurn.Wiki
 						// Download DLL and install
 						if ( DownloadAndUpdateDll( prov, newDllUrl, dllName ) )
 						{
-							visitedUrls.Add( newDllUrl.ToLowerInvariant( ) );
+							_visitedUrls.Add( newDllUrl.ToLowerInvariant( ) );
 							updatedDlls++;
 						}
 					}
@@ -126,7 +126,7 @@ namespace ScrewTurn.Wiki
 				byte[ ] content = reader.ReadBytes( (int)response.ContentLength );
 				reader.Close( );
 
-				bool done = settingsProvider.StorePluginAssembly( filename, content );
+				bool done = _settingsProvider.StorePluginAssembly( filename, content );
 				if ( done ) Log.LogEntry( "Provider " + provider.GetType( ).FullName + " updated", EntryType.General, Log.SystemUsername );
 				else Log.LogEntry( "Update failed for provider " + provider.GetType( ).FullName + ": could not store assembly", EntryType.Error, Log.SystemUsername );
 

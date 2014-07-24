@@ -11,7 +11,7 @@
 	public class AclStorer : AclStorerBase
 	{
 
-		private string file;
+		private readonly string _file;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="T:AclStorer" /> class.
@@ -25,7 +25,7 @@
 			if ( file == null ) throw new ArgumentNullException( "file" );
 			if ( file.Length == 0 ) throw new ArgumentException( "File cannot be empty", "file" );
 
-			this.file = file;
+			_file = file;
 		}
 
 		/// <summary>
@@ -36,23 +36,22 @@
 		{
 			lock ( this )
 			{
-				if ( !File.Exists( file ) )
+				if ( !File.Exists( _file ) )
 				{
-					File.Create( file ).Close( );
+					File.Create( _file ).Close( );
 					return new AclEntry[ 0 ];
 				}
 
 				// Format
 				// Resource|Action|Subject|(1|0)
 
-				string[ ] lines = File.ReadAllLines( file );
+				string[ ] lines = File.ReadAllLines( _file );
 
 				AclEntry[ ] result = new AclEntry[ lines.Length ];
 
-				string[ ] fields;
 				for ( int i = 0; i < lines.Length; i++ )
 				{
-					fields = lines[ i ].Split( '|' );
+					string[ ] fields = lines[ i ].Split( '|' );
 
 					result[ i ] = new AclEntry( fields[ 0 ], fields[ 1 ], fields[ 2 ], ( fields[ 3 ] == "1" ? Value.Grant : Value.Deny ) );
 				}
@@ -102,7 +101,7 @@
 					}
 				}
 
-				File.WriteAllText( file, sb.ToString( ) );
+				File.WriteAllText( _file, sb.ToString( ) );
 			}
 		}
 
@@ -121,7 +120,7 @@
 					sb.Append( "\r\n" );
 				}
 
-				File.AppendAllText( file, sb.ToString( ) );
+				File.AppendAllText( _file, sb.ToString( ) );
 			}
 		}
 

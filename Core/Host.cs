@@ -16,7 +16,7 @@ namespace ScrewTurn.Wiki
 	public class Host : IHostV30
 	{
 
-		private static Host instance;
+		private static Host _instance;
 
 		/// <summary>
 		/// Gets or sets the singleton instance of the <b>Host</b> object.
@@ -25,20 +25,20 @@ namespace ScrewTurn.Wiki
 		{
 			get
 			{
-				if ( instance == null ) throw new InvalidOperationException( "Host.Instance is null" );
-				return instance;
+				if ( _instance == null ) throw new InvalidOperationException( "Host.Instance is null" );
+				return _instance;
 			}
-			set { instance = value; }
+			set { _instance = value; }
 		}
 
-		private Dictionary<string, CustomToolbarItem> customSpecialTags;
+		private readonly Dictionary<string, CustomToolbarItem> _customSpecialTags;
 
 		/// <summary>
 		/// Initializes a new instance of the <b>PluginHost</b> class.
 		/// </summary>
 		public Host( )
 		{
-			customSpecialTags = new Dictionary<string, CustomToolbarItem>( 5 );
+			_customSpecialTags = new Dictionary<string, CustomToolbarItem>( 5 );
 		}
 
 		/// <summary>
@@ -48,9 +48,9 @@ namespace ScrewTurn.Wiki
 		{
 			get
 			{
-				lock ( customSpecialTags )
+				lock ( _customSpecialTags )
 				{
-					return customSpecialTags;
+					return _customSpecialTags;
 				}
 			}
 		}
@@ -750,14 +750,14 @@ namespace ScrewTurn.Wiki
 
 			if ( item == ToolbarItem.SpecialTagWrap && !value.Contains( "|" ) ) throw new ArgumentException( "Invalid value for a SpecialTagWrap (pipe not found)", "value" );
 
-			lock ( customSpecialTags )
+			lock ( _customSpecialTags )
 			{
-				if ( customSpecialTags.ContainsKey( text ) )
+				if ( _customSpecialTags.ContainsKey( text ) )
 				{
-					customSpecialTags[ text ].Value = value;
-					customSpecialTags[ text ].Item = item;
+					_customSpecialTags[ text ].Value = value;
+					_customSpecialTags[ text ].Item = item;
 				}
-				else customSpecialTags.Add( text, new CustomToolbarItem( item, text, value ) );
+				else _customSpecialTags.Add( text, new CustomToolbarItem( item, text, value ) );
 			}
 		}
 
