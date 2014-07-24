@@ -3,6 +3,7 @@ using System;
 using System.Web;
 
 namespace ScrewTurn.Wiki {
+	using System.IO;
 
 	public class Global : System.Web.HttpApplication {
 
@@ -30,7 +31,7 @@ namespace ScrewTurn.Wiki {
 				Application.UnLock();
 			}
 
-			ScrewTurn.Wiki.UrlTools.RouteCurrentRequest();
+			RouteCurrentRequest( );
 		}
 
 		protected void Application_AcquireRequestState(object sender, EventArgs e) {
@@ -95,6 +96,94 @@ namespace ScrewTurn.Wiki {
 		protected void Application_End(object sender, EventArgs e) {
 			// Try to cleanly shutdown the application and providers
 			ScrewTurn.Wiki.StartupTools.Shutdown();
+		}
+
+		/// <summary>
+		/// Properly routes the current virtual request to a physical ASP.NET page.
+		/// </summary>
+		public static void RouteCurrentRequest( )
+		{
+			string physicalPath = null;
+
+			try
+			{
+				physicalPath = HttpContext.Current.Request.PhysicalPath;
+			}
+			catch ( ArgumentException )
+			{
+				// Illegal characters in path
+				HttpContext.Current.Response.Redirect( "~/PageNotFound.aspx" );
+				return;
+			}
+
+			// Extract the physical page name, e.g. MainPage, Edit or Category
+			string pageName = Path.GetFileNameWithoutExtension( physicalPath );
+			// Exctract the extension, e.g. .ashx or .aspx
+			var extension = Path.GetExtension( HttpContext.Current.Request.PhysicalPath );
+			if ( extension == null )
+			{
+				//If extension null, nothing to do.
+				return;
+			}
+			string ext = extension.ToLowerInvariant( );
+			// Remove trailing dot, .ashx -> ashx
+			if ( ext.Length > 0 )
+				ext = ext.Substring( 1 );
+
+			// IIS7+Integrated Pipeline handles all requests through the ASP.NET engine
+			// All non-interesting files are not processed, such as GIF, CSS, etc.
+			if ( ext != "ashx" && ext != "aspx" ) return;
+
+			// Extract the current namespace, if any
+			string nspace = UrlTools.GetCurrentNamespace( ) + "";
+			if ( !string.IsNullOrEmpty( nspace ) )
+			{
+				// Verify that namespace exists
+				if ( Pages.FindNamespace( nspace ) == null )
+					HttpContext.Current.Response.Redirect( "~/PageNotFound.aspx?Page=" + pageName );
+			}
+			// Trim Namespace. from pageName
+			if ( !string.IsNullOrEmpty( nspace ) )
+				pageName = pageName.Substring( nspace.Length + 1 );
+
+			string queryString = ""; // Empty or begins with ampersand, not question mark
+			try
+			{
+				// This might throw exceptions if 3rd-party modules interfer with the request pipeline
+				queryString = HttpContext.Current.Request.Url.Query.Replace( "?", "&" ); // Host not used
+			}
+			catch { }
+
+			if ( ext.Equals( "ashx" ) )
+			{
+				// Content page requested, process it via Default.aspx
+				if ( !queryString.Contains( "NS=" ) )
+				{
+					HttpContext.Current.RewritePath( "~/Default.aspx?Page=" + Tools.UrlEncode( pageName ) + "&NS=" + Tools.UrlEncode( nspace ) + queryString );
+				}
+				else
+				{
+					HttpContext.Current.RewritePath( "~/Default.aspx?Page=" + Tools.UrlEncode( pageName ) + queryString );
+				}
+			}
+			else if ( ext.Equals( "aspx" ) )
+			{
+				// System page requested, redirect to the root of the application
+				// For example: http://www.server.com/Namespace.Edit.aspx?Page=MainPage -> http://www.server.com/Edit.aspx?Page=MainPage&NS=Namespace
+				if ( !string.IsNullOrEmpty( nspace ) )
+				{
+					if ( !queryString.Contains( "NS=" ) )
+					{
+						HttpContext.Current.RewritePath( "~/" + Tools.UrlEncode( pageName ) + "." + ext + "?NS=" + Tools.UrlEncode( nspace ) + queryString );
+					}
+					else
+					{
+						if ( queryString.Length > 1 ) queryString = "?" + queryString.Substring( 1 );
+						HttpContext.Current.RewritePath( "~/" + Tools.UrlEncode( pageName ) + "." + ext + queryString );
+					}
+				}
+			}
+			// else nothing to do
 		}
 
 	}
