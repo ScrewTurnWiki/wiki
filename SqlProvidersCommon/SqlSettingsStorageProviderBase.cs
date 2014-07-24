@@ -17,7 +17,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		private const int MaxAssemblySize = 5242880; // 5 MB
 		private const int MaxParametersInQuery = 50;
 
-		private IAclManager aclManager;
+		private IAclManager _aclManager;
 
 		/// <summary>
 		/// Holds a value indicating whether the application was started for the first time.
@@ -33,7 +33,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		public new void Init(IHostV30 host, string config) {
 			base.Init(host, config);
 
-			aclManager = new SqlAclManager(StoreEntry, DeleteEntries, RenameAclResource, RetrieveAllAclEntries, RetrieveAclEntriesForResource, RetrieveAclEntriesForSubject);
+			_aclManager = new SqlAclManager(StoreEntry, DeleteEntries, RenameAclResource, RetrieveAllAclEntries, RetrieveAclEntriesForResource, RetrieveAclEntriesForSubject);
 		}
 
 		/// <summary>
@@ -73,7 +73,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Name", name));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -116,7 +116,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(value == null) value = "";
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -162,7 +162,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// Sorting order is not relevant
 			string query = QueryBuilder.NewQuery(builder).SelectFrom("Setting");
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -271,14 +271,14 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Message", Sanitize(message)));
 
 			try {
-				DbCommand command = builder.GetCommand(connString, query, parameters);
+				DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 				ExecuteNonQuery(command, true);
 
 				// No transaction - accurate log sizing is not really a concern
 
 				int logSize = LogSize;
-				if(logSize > int.Parse(host.GetSettingValue(SettingName.MaxLogSize))) {
+				if(logSize > int.Parse(Host.GetSettingValue(SettingName.MaxLogSize))) {
 					CutLog((int)(logSize * 0.75));
 				}
 			}
@@ -291,7 +291,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <param name="size">The size to shrink the log to (in bytes).</param>
 		private void CutLog(int size) {
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -377,7 +377,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			string query = queryBuilder.SelectFrom("Log", new string[] { "DateTime", "EntryType", "User", "Message" });
 			query = queryBuilder.OrderBy(query, new string[] { "DateTime" }, new Ordering[] { Ordering.Asc });
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -404,7 +404,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 			string query = QueryBuilder.NewQuery(builder).DeleteFrom("Log");
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			ExecuteNonQuery(command);
 		}
@@ -419,7 +419,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				string query = queryBuilder.SelectCountFrom("Log");
 
-				DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+				DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 				int rows = ExecuteScalar<int>(command, -1);
 
@@ -451,7 +451,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Name", item.ToString()));
 			parameters.Add(new Parameter(ParameterType.String, "Tag", tag));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			string value = ExecuteScalar<string>(command, "");
 
@@ -473,7 +473,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 2. Store new value
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -575,7 +575,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			string query = queryBuilder.SelectFrom("RecentChange", new string[] { "Page", "Title", "MessageSubject", "DateTime", "User", "Change", "Description" });
 			query = queryBuilder.OrderBy(query, new string[] { "DateTime" }, new Ordering[] { Ordering.Asc });
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -633,7 +633,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(!string.IsNullOrEmpty(descr)) parameters.Add(new Parameter(ParameterType.String, "Description", descr));
 			else parameters.Add(new Parameter(ParameterType.String, "Description", DBNull.Value));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			int rows = ExecuteNonQuery(command);
 
@@ -647,7 +647,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// </summary>
 		private void CutRecentChangesIfNecessary() {
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -658,7 +658,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 			int rows = ExecuteScalar<int>(command, -1, false);
 
-			int maxChanges = int.Parse(host.GetSettingValue(SettingName.MaxRecentChanges));
+			int maxChanges = int.Parse(Host.GetSettingValue(SettingName.MaxRecentChanges));
 
 			if(rows > maxChanges) {
 				// Remove 10% of old changes to avoid 1-by-1 deletion every time a change is made
@@ -723,7 +723,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// Sort order is not relevant
 			string query = QueryBuilder.NewQuery(builder).SelectFrom("PluginAssembly", new string[] { "Name" });
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -760,7 +760,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 2. Store new assembly
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			DeletePluginAssembly(transaction, filename);
@@ -801,7 +801,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Name", filename));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -877,7 +877,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(filename.Length == 0) throw new ArgumentException("Filename cannot be empty", "filename");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			bool deleted = DeletePluginAssembly(connection, filename);
 			CloseConnection(connection);
@@ -935,7 +935,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(typeName.Length == 0) throw new ArgumentException("Type Name cannot be empty", "typeName");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			PreparePluginStatusRow(transaction, typeName);
@@ -979,7 +979,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Name", typeName));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -1012,7 +1012,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(config == null) config = "";
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			PreparePluginStatusRow(transaction, typeName);
@@ -1056,7 +1056,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Name", typeName));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			string result = ExecuteScalar<string>(command, "");
 
@@ -1067,7 +1067,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// Gets the ACL Manager instance.
 		/// </summary>
 		public IAclManager AclManager {
-			get { return aclManager; }
+			get { return _aclManager; }
 		}
 
 		/// <summary>
@@ -1092,7 +1092,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 2. Store new values
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -1152,7 +1152,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Source", page));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -1182,7 +1182,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			string query = queryBuilder.SelectFrom("OutgoingLink", new string[] { "Source", "Destination" });
 			query = queryBuilder.GroupBy(query, new string[] { "Source", "Destination" });
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -1238,7 +1238,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Source", page));
 			parameters.Add(new Parameter(ParameterType.String, "Destination", page));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			int rows = ExecuteNonQuery(command);
 
@@ -1263,7 +1263,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 2. Rename destinations
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -1357,7 +1357,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// Sort order is not relevant
 			string query = QueryBuilder.NewQuery(builder).SelectFrom("AclEntry");
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -1393,7 +1393,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Resource", resource));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -1429,7 +1429,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Subject", subject));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -1455,7 +1455,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <returns><c>true</c> if one or more entries were deleted, <c>false</c> otherwise.</returns>
 		private bool DeleteEntries(AclEntry[] entries) {
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -1491,7 +1491,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <returns><c>true</c> if the entry was stored, <c>false</c> otherwise.</returns>
 		private bool StoreEntry(AclEntry entry) {
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -1524,7 +1524,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <returns><c>true</c> if one or more entries weere updated, <c>false</c> otherwise.</returns>
 		private bool RenameAclResource(string resource, string newName) {
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);

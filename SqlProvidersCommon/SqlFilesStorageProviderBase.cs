@@ -44,12 +44,11 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			string query = queryBuilder.SelectCountFrom("Directory");
 			query = queryBuilder.Where(query, "FullPath", WhereOperator.Equals, "FullPath");
 
-			List<Parameter> parameters = new List<Parameter>(1);
-			parameters.Add(new Parameter(ParameterType.String, "FullPath", directory));
+			List<Parameter> parameters = new List<Parameter> { new Parameter( ParameterType.String, "FullPath", directory ) };
 
 			DbCommand command = builder.GetCommand(connection, query, parameters);
 
-			int count = ExecuteScalar<int>(command, -1, false);
+			int count = ExecuteScalar<int>( command, -1, false );
 
 			return count == 1;
 		}
@@ -158,7 +157,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			directory = PrepareDirectory(directory);
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			if(!DirectoryExists(connection, directory)) {
 				CloseConnection(connection);
@@ -288,7 +287,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			directory = PrepareDirectory(directory);
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			if(!DirectoryExists(connection, directory)) {
 				CloseConnection(connection);
@@ -322,7 +321,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			SplitFileFullName(fullName, out directory, out filename);
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -398,7 +397,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(!destinationStream.CanWrite) throw new ArgumentException("Cannot write into Destination Stream", "destinationStream");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(!FileExists(transaction, fullName)) {
@@ -496,7 +495,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Directory", directory));
 			parameters.Add(new Parameter(ParameterType.Int32, "Downloads", count));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			ExecuteNonQuery(command);
 		}
@@ -526,7 +525,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Name", filename));
 			parameters.Add(new Parameter(ParameterType.String, "Directory", directory));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -557,7 +556,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(fullName.Length == 0) throw new ArgumentException("Full Name cannot be empty", "fullName");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(!FileExists(transaction, fullName)) {
@@ -602,7 +601,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(newFullName.Length == 0) throw new ArgumentException("New Full Name cannot be empty", "newFullName");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -655,7 +654,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			path = PrepareDirectory(path);
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(!DirectoryExists(transaction, path)) {
@@ -740,7 +739,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 2. Delete directory
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(!DirectoryExists(transaction, fullPath)) {
@@ -812,7 +811,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			newFullPath = PrepareDirectory(newFullPath);
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(!DirectoryExists(transaction, oldFullPath)) {
@@ -854,7 +853,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			query = queryBuilder.GroupBy(query, new[] { "Page" });
 			query = queryBuilder.OrderBy(query, new[] { "Page" }, new[] { Ordering.Asc });
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -952,7 +951,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(pageInfo == null) throw new ArgumentNullException("pageInfo");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			string[] result = ListPageAttachments(connection, pageInfo);
 			CloseConnection(connection);
@@ -1032,7 +1031,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(!sourceStream.CanRead) throw new ArgumentException("Cannot read from Source Stream", "sourceStream");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			bool attachmentExists = AttachmentExists(transaction, pageInfo, name);
@@ -1111,7 +1110,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(!destinationStream.CanWrite) throw new ArgumentException("Cannot write into Destination Stream", "destinationStream");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(!AttachmentExists(transaction, pageInfo, name)) {
@@ -1204,7 +1203,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Page", pageInfo.FullName));
 			parameters.Add(new Parameter(ParameterType.Int32, "Downloads", count));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			ExecuteNonQuery(command);
 		}
@@ -1233,7 +1232,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Name", name));
 			parameters.Add(new Parameter(ParameterType.String, "Page", pageInfo.FullName));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -1266,7 +1265,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(name.Length == 0) throw new ArgumentException("Name cannot be empty");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(!AttachmentExists(transaction, pageInfo, name)) {
@@ -1311,7 +1310,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(newName.Length == 0) throw new ArgumentException("New Name cannot be empty", "newName");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(!AttachmentExists(transaction, pageInfo, oldName)) {
@@ -1355,7 +1354,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(newPage == null) throw new ArgumentNullException("newPage");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(ListPageAttachments(transaction, newPage).Length > 0) {

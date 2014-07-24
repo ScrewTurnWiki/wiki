@@ -41,7 +41,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				new string[] { "UserGroup" });
 			query = queryBuilder.OrderBy(query, new[] { "User_Username" }, new[] { Ordering.Asc });
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -129,7 +129,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.Boolean, "Active", active));
 			parameters.Add(new Parameter(ParameterType.DateTime, "DateTime", dateTime));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			int rows = ExecuteNonQuery(command);
 
@@ -226,7 +226,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(newEmail.Length == 0) throw new ArgumentException("New Email cannot be empty", "newEmail");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -287,7 +287,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Username", user.Username));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			int rows = ExecuteNonQuery(command);
 
@@ -307,7 +307,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 				new string[] { "Name", "Description" }, new string[] { "User" });
 			query = queryBuilder.OrderBy(query, new[] { "UserGroup_Name", "UserGroupMembership_User" }, new[] { Ordering.Asc, Ordering.Asc });
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -376,7 +376,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Name", name));
 			parameters.Add(new Parameter(ParameterType.String, "Description", description));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			int rows = ExecuteNonQuery(command);
 
@@ -468,7 +468,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(description == null) throw new ArgumentNullException("description");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -514,7 +514,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Name", group.Name));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			int rows = ExecuteNonQuery(command);
 
@@ -602,7 +602,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 2. Add new memberships, one by one
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(!UserExists(transaction, user.Username)) {
@@ -669,7 +669,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Username", username));
 			parameters.Add(new Parameter(ParameterType.String, "PasswordHash", providedPasswordHash));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -760,7 +760,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(2);
 			parameters.Add(new Parameter(ParameterType.String, "Username", username));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -828,7 +828,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(2);
 			parameters.Add(new Parameter(ParameterType.String, "Email", email));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -936,7 +936,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 2. Add new key, if value != null
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			bool done = RemoveUserData(transaction, user.Username, key);
@@ -990,7 +990,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Username", user.Username));
 			parameters.Add(new Parameter(ParameterType.String, "Key", key));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -1027,7 +1027,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Username", user.Username));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -1068,7 +1068,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Key", key));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 

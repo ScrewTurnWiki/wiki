@@ -12,9 +12,9 @@ namespace ScrewTurn.Wiki.Plugins.SqlServer {
 	/// </summary>
 	public class SqlServerSettingsStorageProvider : SqlSettingsStorageProviderBase {
 
-		private readonly ComponentInformation info = new ComponentInformation("SQL Server Settings Storage Provider", "Threeplicate Srl", "3.0.1.471", "http://www.screwturn.eu", "http://www.screwturn.eu/Version/SQLServerProv/Settings.txt");
+		private readonly ComponentInformation _info = new ComponentInformation("SQL Server Settings Storage Provider", "Threeplicate Srl", "3.0.1.471", "http://www.screwturn.eu", "http://www.screwturn.eu/Version/SQLServerProv/Settings.txt");
 
-		private readonly SqlServerCommandBuilder commandBuilder = new SqlServerCommandBuilder();
+		private readonly SqlServerCommandBuilder _commandBuilder = new SqlServerCommandBuilder();
 
 		private const int CurrentSchemaVersion = 3000;
 
@@ -24,7 +24,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlServer {
 		/// <param name="connString">The connection string.</param>
 		/// <returns>The command.</returns>
 		private SqlCommand GetCommand(string connString) {
-			return commandBuilder.GetCommand(connString, "select current_user", new List<Parameter>()) as SqlCommand;
+			return _commandBuilder.GetCommand(connString, "select current_user", new List<Parameter>()) as SqlCommand;
 		}
 
 		/// <summary>
@@ -32,7 +32,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlServer {
 		/// </summary>
 		/// <returns>The command builder.</returns>
 		protected override ICommandBuilder GetCommandBuilder() {
-			return commandBuilder;
+			return _commandBuilder;
 		}
 
 		/// <summary>
@@ -67,7 +67,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlServer {
 		/// </summary>
 		/// <returns><c>true</c> if the schema exists, <c>false</c> otherwise.</returns>
 		private bool SchemaExists() {
-			SqlCommand cmd = GetCommand(connString);
+			SqlCommand cmd = GetCommand(ConnString);
 			cmd.CommandText = "select [Version] from [Version] where [Component] = 'Settings'";
 
 			bool exists = false;
@@ -95,7 +95,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlServer {
 		/// </summary>
 		/// <returns><c>true</c> if an update is needed, <c>false</c> otherwise.</returns>
 		private bool SchemaNeedsUpdate() {
-			SqlCommand cmd = GetCommand(connString);
+			SqlCommand cmd = GetCommand(ConnString);
 			cmd.CommandText = "select [Version] from [Version] where [Component] = 'Settings'";
 
 			bool exists = false;
@@ -121,7 +121,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlServer {
 		/// Creates the standard database schema.
 		/// </summary>
 		private void CreateStandardSchema() {
-			SqlCommand cmd = GetCommand(connString);
+			SqlCommand cmd = GetCommand(ConnString);
 			cmd.CommandText = Properties.Resources.SettingsDatabase;
 
 			cmd.ExecuteNonQuery();
@@ -162,7 +162,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlServer {
 		/// Gets the Information about the Provider.
 		/// </summary>
 		public override ComponentInformation Information {
-			get { return info; }
+			get { return _info; }
 		}
 
 		/// <summary>

@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using ScrewTurn.Wiki.PluginFramework;
@@ -18,9 +17,9 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		private const int CurrentRevision = -1;
 		private const int DraftRevision = -100;
 
-		private IIndex index;
+		private IIndex _index;
 
-		private bool alwaysGenerateDocument = false;
+		private bool _alwaysGenerateDocument = false;
 
 		/// <summary>
 		/// Initializes the Storage Provider.
@@ -31,7 +30,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		public new void Init(IHostV30 host, string config) {
 			base.Init(host, config);
 
-			index = new SqlIndex(new IndexConnector(GetWordFetcher, GetSize, GetCount, ClearIndex, DeleteDataForDocument, SaveDataForDocument, TryFindWord));
+			_index = new SqlIndex(new IndexConnector(GetWordFetcher, GetSize, GetCount, ClearIndex, DeleteDataForDocument, SaveDataForDocument, TryFindWord));
 		}
 
 		#region Index and Search Engine
@@ -42,7 +41,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <param name="alwaysGenerateDocument">A value indicating whether to always generate a result when resolving a document, 
 		/// even when the page does not exist.</param>
 		public void SetFlags(bool alwaysGenerateDocument) {
-			this.alwaysGenerateDocument = alwaysGenerateDocument;
+			this._alwaysGenerateDocument = alwaysGenerateDocument;
 		}
 
 		/// <summary>
@@ -50,14 +49,14 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// </summary>
 		/// <returns>The word fetcher.</returns>
 		private IWordFetcher GetWordFetcher() {
-			return new SqlWordFetcher(GetCommandBuilder().GetConnection(connString), TryFindWord);
+			return new SqlWordFetcher(GetCommandBuilder().GetConnection(ConnString), TryFindWord);
 		}
 
 		/// <summary>
 		/// Gets the search index (only used for testing purposes).
 		/// </summary>
 		public IIndex Index {
-			get { return index; }
+			get { return _index; }
 		}
 
 		/// <summary>
@@ -69,17 +68,17 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		public SearchResultCollection PerformSearch(SearchParameters parameters) {
 			if(parameters == null) throw new ArgumentNullException("parameters");
 
-			return index.Search(parameters);
+			return _index.Search(parameters);
 		}
 
 		/// <summary>
 		/// Rebuilds the search index.
 		/// </summary>
 		public void RebuildIndex() {
-			index.Clear(null);
+			_index.Clear(null);
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			List<NamespaceInfo> allNamespaces = new List<NamespaceInfo>(GetNamespaces());
@@ -103,7 +102,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 						CommitTransaction(transaction);
 						indexedElements = 0;
 
-						connection = builder.GetConnection(connString);
+						connection = builder.GetConnection(ConnString);
 						transaction = BeginTransaction(connection);
 					}
 				}
@@ -125,7 +124,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <param name="dumpedDocument">The input dumped document.</param>
 		/// <returns>The resulting <see cref="T:IDocument" />.</returns>
 		private IDocument BuildDocument(DumpedDocument dumpedDocument) {
-			if(alwaysGenerateDocument) {
+			if(_alwaysGenerateDocument) {
 				return new DummyDocument() {
 					ID = dumpedDocument.ID,
 					Name = dumpedDocument.Name,
@@ -182,9 +181,9 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <param name="occurrenceCount">The total number of word-document occurrences.</param>
 		/// <param name="size">The approximated size, in bytes, of the search engine index.</param>
 		public void GetIndexStats(out int documentCount, out int wordCount, out int occurrenceCount, out long size) {
-			documentCount = index.TotalDocuments;
-			wordCount = index.TotalWords;
-			occurrenceCount = index.TotalOccurrences;
+			documentCount = _index.TotalDocuments;
+			wordCount = _index.TotalWords;
+			occurrenceCount = _index.TotalOccurrences;
 			size = GetSize();
 		}
 
@@ -198,7 +197,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 4. Size = Size * 2
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
 
@@ -237,7 +236,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <returns>The number of elements.</returns>
 		private int GetCount(IndexElementType element) {
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
 
@@ -283,7 +282,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 			DbCommand command = null;
 			if(state != null) command = builder.GetCommand((DbTransaction)state, query, parameters);
-			else command = builder.GetCommand(connString, query, parameters);
+			else command = builder.GetCommand(ConnString, query, parameters);
 
 			// Close only if state is null
 			ExecuteNonQuery(command, state == null);
@@ -313,7 +312,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			DbTransaction transaction = null;
 			if(state != null) transaction = (DbTransaction)state;
 			else {
-				DbConnection connection = builder.GetConnection(connString);
+				DbConnection connection = builder.GetConnection(ConnString);
 				transaction = BeginTransaction(connection);
 			}
 
@@ -568,7 +567,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			query = queryBuilder.AppendForBatch(query, queryBuilder.DeleteFrom("IndexDocument"));
 
 			DbCommand command = null;
-			if(state == null) command = builder.GetCommand(connString, query, new List<Parameter>());
+			if(state == null) command = builder.GetCommand(ConnString, query, new List<Parameter>());
 			else command = builder.GetCommand((DbTransaction)state, query, new List<Parameter>());
 
 			ExecuteNonQuery(command, state == null);
@@ -596,23 +595,23 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				string documentName = PageDocument.GetDocumentName(content.PageInfo);
 
-				DumpedDocument ddoc = new DumpedDocument(0, documentName, host.PrepareTitleForIndexing(content.PageInfo, content.Title),
+				DumpedDocument ddoc = new DumpedDocument(0, documentName, Host.PrepareTitleForIndexing(content.PageInfo, content.Title),
 					PageDocument.StandardTypeTag, content.LastModified);
 
 				// Store the document
 				// The content should always be prepared using IHost.PrepareForSearchEngineIndexing()
-				int count = index.StoreDocument(new PageDocument(content.PageInfo, ddoc, TokenizeContent),
-					content.Keywords, host.PrepareContentForIndexing(content.PageInfo, content.Content), transaction);
+				int count = _index.StoreDocument(new PageDocument(content.PageInfo, ddoc, TokenizeContent),
+					content.Keywords, Host.PrepareContentForIndexing(content.PageInfo, content.Content), transaction);
 
 				if(count == 0 && content.Content.Length > 0) {
-					host.LogEntry("Indexed 0 words for page " + content.PageInfo.FullName + ": possible index corruption. Please report this error to the developers",
+					Host.LogEntry("Indexed 0 words for page " + content.PageInfo.FullName + ": possible index corruption. Please report this error to the developers",
 						LogEntryType.Warning, null, this);
 				}
 
 				return count;
 			}
 			catch(Exception ex) {
-				host.LogEntry("Page indexing error for " + content.PageInfo.FullName + " (skipping page): " + ex, LogEntryType.Error, null, this);
+				Host.LogEntry("Page indexing error for " + content.PageInfo.FullName + " (skipping page): " + ex, LogEntryType.Error, null, this);
 				return 0;
 			}
 		}
@@ -625,9 +624,9 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		private void UnindexPage(PageContent content, DbTransaction transaction) {
 			string documentName = PageDocument.GetDocumentName(content.PageInfo);
 
-			DumpedDocument ddoc = new DumpedDocument(0, documentName, host.PrepareTitleForIndexing(content.PageInfo, content.Title),
+			DumpedDocument ddoc = new DumpedDocument(0, documentName, Host.PrepareTitleForIndexing(content.PageInfo, content.Title),
 				PageDocument.StandardTypeTag, content.LastModified);
-			index.RemoveDocument(new PageDocument(content.PageInfo, ddoc, TokenizeContent), transaction);
+			_index.RemoveDocument(new PageDocument(content.PageInfo, ddoc, TokenizeContent), transaction);
 		}
 
 		/// <summary>
@@ -662,23 +661,23 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 				string documentName = MessageDocument.GetDocumentName(page, id);
 
-				DumpedDocument ddoc = new DumpedDocument(0, documentName, host.PrepareTitleForIndexing(null, subject),
+				DumpedDocument ddoc = new DumpedDocument(0, documentName, Host.PrepareTitleForIndexing(null, subject),
 					MessageDocument.StandardTypeTag, dateTime);
 
 				// Store the document
 				// The content should always be prepared using IHost.PrepareForSearchEngineIndexing()
-				int count = index.StoreDocument(new MessageDocument(page, id, ddoc, TokenizeContent), null,
-					host.PrepareContentForIndexing(null, body), transaction);
+				int count = _index.StoreDocument(new MessageDocument(page, id, ddoc, TokenizeContent), null,
+					Host.PrepareContentForIndexing(null, body), transaction);
 
 				if(count == 0 && body.Length > 0) {
-					host.LogEntry("Indexed 0 words for message " + page.FullName + ":" + id + ": possible index corruption. Please report this error to the developers",
+					Host.LogEntry("Indexed 0 words for message " + page.FullName + ":" + id + ": possible index corruption. Please report this error to the developers",
 						LogEntryType.Warning, null, this);
 				}
 
 				return count;
 			}
 			catch(Exception ex) {
-				host.LogEntry("Message indexing error for " + page.FullName + ":" + id + " (skipping message): " + ex, LogEntryType.Error, null, this);
+				Host.LogEntry("Message indexing error for " + page.FullName + ":" + id + " (skipping message): " + ex, LogEntryType.Error, null, this);
 				return 0;
 			}
 		}
@@ -712,9 +711,9 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 			string documentName = MessageDocument.GetDocumentName(page, id);
 
-			DumpedDocument ddoc = new DumpedDocument(0, documentName, host.PrepareTitleForIndexing(null, subject),
+			DumpedDocument ddoc = new DumpedDocument(0, documentName, Host.PrepareTitleForIndexing(null, subject),
 				MessageDocument.StandardTypeTag, DateTime.Now);
-			index.RemoveDocument(new MessageDocument(page, id, ddoc, TokenizeContent), transaction);
+			_index.RemoveDocument(new MessageDocument(page, id, ddoc, TokenizeContent), transaction);
 		}
 
 		#endregion
@@ -819,7 +818,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(name.Length == 0) throw new ArgumentException("Name cannot be empty");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			NamespaceInfo nspace = GetNamespace(connection, name);
 			CloseConnection(connection);
@@ -846,7 +845,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Empty1", ""));
 			parameters.Add(new Parameter(ParameterType.String, "Empty2", ""));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -891,7 +890,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Name", name));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			int rows = ExecuteNonQuery(command);
 
@@ -913,7 +912,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(newName.Length == 0) throw new ArgumentException("New Name cannot be empty", "newName");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(GetNamespace(transaction, nspace.Name) == null) {
@@ -984,7 +983,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// Namespace existence is verified by the affected rows (should be 1)
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(page != null && GetPage(transaction, page.FullName) == null) {
@@ -1024,7 +1023,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(nspace == null) throw new ArgumentNullException("nspace");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			foreach(PageInfo page in GetPages(transaction, nspace)) {
@@ -1093,7 +1092,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(sourceName == null) sourceName = "";
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(destinationName.ToLowerInvariant() == sourceName.ToLowerInvariant()) return null;
@@ -1294,7 +1293,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(fullName.Length == 0) throw new ArgumentException("Full Name cannot be empty", "fullName");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			CategoryInfo category = GetCategory(connection, fullName);
 			CloseConnection(connection);
@@ -1425,7 +1424,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <returns>All the Categories in the namespace, sorted by name.</returns>
 		public CategoryInfo[] GetCategories(NamespaceInfo nspace) {
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			CategoryInfo[] categories = GetCategories(connection, nspace);
 			CloseConnection(connection);
@@ -1459,7 +1458,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Namespace", nspace));
 			parameters.Add(new Parameter(ParameterType.String, "Page", pageName));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -1520,7 +1519,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Name", name));
 			parameters.Add(new Parameter(ParameterType.String, "Namespace", nspace));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			int rows = ExecuteNonQuery(command);
 
@@ -1547,7 +1546,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(nspace == null) nspace = "";
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			QueryBuilder queryBuilder = new QueryBuilder(builder);
@@ -1644,7 +1643,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(category == null) throw new ArgumentNullException("category");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			bool removed = RemoveCategory(connection, category);
 			CloseConnection(connection);
@@ -1693,7 +1692,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			string nspace = sourceNs ?? string.Empty;
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			CategoryInfo actualSource = GetCategory(transaction, source.FullName);
@@ -1904,7 +1903,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(fullName.Length == 0) throw new ArgumentException("Full Name cannot be empty", "fullName");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			PageInfo page = GetPage(connection, fullName);
 			CloseConnection(connection);
@@ -1995,7 +1994,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <returns>All the Pages in the namespace. The array is not sorted.</returns>
 		public PageInfo[] GetPages(NamespaceInfo nspace) {
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			PageInfo[] pages = GetPages(connection, nspace);
 			CloseConnection(connection);
@@ -2022,7 +2021,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Namespace", nspaceName));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -2181,7 +2180,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(page == null) return null;
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			PageContent content = GetContent(connection, page, CurrentRevision);
 			CloseConnection(connection);
@@ -2199,7 +2198,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(page == null) throw new ArgumentNullException("page");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			PageContent content = GetContent(connection, page, DraftRevision);
 			CloseConnection(connection);
@@ -2217,7 +2216,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(page == null) throw new ArgumentNullException("page");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			bool deleted = DeleteContent(connection, page, DraftRevision);
 			CloseConnection(connection);
@@ -2329,7 +2328,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(page == null) throw new ArgumentNullException("page");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			int[] revisions = GetBackups(connection, page);
 			CloseConnection(connection);
@@ -2350,7 +2349,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(revision < 0) throw new ArgumentOutOfRangeException("revision", "Invalid Revision");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			PageContent content = GetContent(connection, page, revision);
 			CloseConnection(connection);
@@ -2505,7 +2504,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 2. Set new content
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			DeleteContent(transaction, content.PageInfo, revision);
@@ -2544,7 +2543,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			parameters.Add(new Parameter(ParameterType.String, "Namespace", nspace));
 			parameters.Add(new Parameter(ParameterType.DateTime, "CreationDateTime", creationDateTime));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			int rows = ExecuteNonQuery(command);
 
@@ -2572,7 +2571,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 2. New name already exists
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(GetPage(transaction, page.FullName) == null) {
@@ -2669,7 +2668,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(content == null) throw new ArgumentNullException("content"); // content can be empty
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			PageContent currentContent = GetContent(transaction, page, CurrentRevision);
@@ -2753,7 +2752,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 2. Modify page with loaded content, performing backup
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			PageContent targetContent = GetContent(transaction, page, revision);
@@ -2808,7 +2807,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 4. Re-number remaining revisions starting from FirstRevision (zero) to revision-1 (don't re-number revs -1, -100)
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(GetPage(transaction, page.FullName) == null) {
@@ -2885,7 +2884,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(page == null) throw new ArgumentNullException("page");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(IsDefaultPage(transaction, page)) {
@@ -3066,7 +3065,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			// 2. Store new bindings
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			bool rebound = RebindPage(connection, page, categories);
 			CloseConnection(connection);
@@ -3236,7 +3235,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(page == null) throw new ArgumentNullException("page");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			Message[] messages = GetMessages(connection, page);
 			CloseConnection(connection);
@@ -3254,7 +3253,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(page == null) throw new ArgumentNullException("page");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			if(GetPage(connection, page.FullName) == null) {
 				CloseConnection(connection);
@@ -3294,7 +3293,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(messages == null) throw new ArgumentNullException("messages");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(GetPage(transaction, page.FullName) == null) {
@@ -3444,7 +3443,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(nspace == null) nspace = "";
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(parent != -1 && FindMessage(GetMessages(transaction, page), parent) == null) {
@@ -3633,7 +3632,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			//    Else unindex only this message
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			bool done = RemoveMessage(transaction, page, id, removeReplies);
@@ -3671,7 +3670,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(nspace == null) nspace = "";
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			Message[] messages = GetMessages(transaction, page);
@@ -3735,7 +3734,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			List<Parameter> parameters = new List<Parameter>(1);
 			parameters.Add(new Parameter(ParameterType.String, "Namespace", nspaceName));
 
-			DbCommand command = builder.GetCommand(connString, query, parameters);
+			DbCommand command = builder.GetCommand(ConnString, query, parameters);
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -3839,7 +3838,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(nspace == null) nspace = "";
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			foreach(PageInfo page in pages) {
@@ -3875,7 +3874,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(pages.Length == 0) throw new ArgumentException("Pages cannot be empty");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			foreach(PageInfo page in pages) {
@@ -3979,7 +3978,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(nspace == null) nspace = "";
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			bool removed = RemoveNavigationPath(connection, path);
 			CloseConnection(connection);
@@ -3998,7 +3997,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			string query = queryBuilder.SelectFrom("Snippet");
 			query = queryBuilder.OrderBy(query, new[] { "Name" }, new[] { Ordering.Asc });
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -4082,7 +4081,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(content == null) throw new ArgumentNullException("content"); // content can be empty
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			Snippet snippet = AddSnippet(connection, name, content);
 			CloseConnection(connection);
@@ -4104,7 +4103,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(content == null) throw new ArgumentNullException("content"); // content can be empty
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(RemoveSnippet(transaction, name)) {
@@ -4177,7 +4176,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(name.Length == 0) throw new ArgumentException("Name cannot be empty", "name");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			bool removed = RemoveSnippet(connection, name);
 			CloseConnection(connection);
@@ -4196,7 +4195,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			string query = queryBuilder.SelectFrom("ContentTemplate");
 			query = queryBuilder.OrderBy(query, new[] { "Name" }, new[] { Ordering.Asc });
 
-			DbCommand command = builder.GetCommand(connString, query, new List<Parameter>());
+			DbCommand command = builder.GetCommand(ConnString, query, new List<Parameter>());
 
 			DbDataReader reader = ExecuteReader(command);
 
@@ -4280,7 +4279,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(content == null) throw new ArgumentNullException("content"); // content can be empty
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			ContentTemplate template = AddContentTemplate(connection, name, content);
 			CloseConnection(connection);
@@ -4302,7 +4301,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(content == null) throw new ArgumentNullException("content"); // content can be empty
 			
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 			DbTransaction transaction = BeginTransaction(connection);
 
 			if(RemoveContentTemplate(transaction, name)) {
@@ -4375,7 +4374,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(name.Length == 0) throw new ArgumentException("Name cannot be empty", "name");
 
 			ICommandBuilder builder = GetCommandBuilder();
-			DbConnection connection = builder.GetConnection(connString);
+			DbConnection connection = builder.GetConnection(ConnString);
 
 			bool removed = RemoveContentTemplate(connection, name);
 			CloseConnection(connection);

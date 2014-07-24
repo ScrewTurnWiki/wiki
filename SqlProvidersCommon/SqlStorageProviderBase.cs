@@ -12,12 +12,12 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <summary>
 		/// The connection string.
 		/// </summary>
-		protected string connString;
+		protected string ConnString;
 
 		/// <summary>
 		/// The host.
 		/// </summary>
-		protected IHostV30 host;
+		protected IHostV30 Host;
 
 		/// <summary>
 		/// Gets a new command builder object.
@@ -31,7 +31,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 		/// <param name="ex">The exception.</param>
 		protected override void LogException(Exception ex) {
 			try {
-				host.LogEntry(ex.ToString(), LogEntryType.Error, null, this);
+				Host.LogEntry(ex.ToString(), LogEntryType.Error, null, this);
 			}
 			catch { }
 		}
@@ -73,7 +73,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 			if(host == null) throw new ArgumentNullException("host");
 			if(config == null) throw new ArgumentNullException("config");
 
-			this.host = host;
+			this.Host = host;
 
 			if(config.Length == 0) {
 				// Try to load v2 provider configuration
@@ -89,7 +89,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlCommon {
 
 			ValidateConnectionString(config);
 
-			connString = config;
+			ConnString = config;
 
 			CreateOrUpdateDatabaseIfNecessary();
 		}
