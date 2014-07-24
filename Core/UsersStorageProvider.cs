@@ -19,7 +19,7 @@ namespace ScrewTurn.Wiki
 		private const string GroupsFile = "Groups.cs";
 
 		private readonly ComponentInformation _info = new ComponentInformation( "Local Users Provider",
-			"Threeplicate Srl", Settings.WikiVersion, "http://www.screwturnwiki.com", null );
+			"ScrewTurn Wiki Project", Settings.WikiVersion, "http://www.screwturnwiki.com", null );
 
 		private IHostV30 _host;
 

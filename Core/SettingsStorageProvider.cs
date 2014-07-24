@@ -53,7 +53,8 @@ namespace ScrewTurn.Wiki
 		public static readonly string ProviderName = "Local Settings Provider";
 
 		private readonly ComponentInformation info =
-			new ComponentInformation( ProviderName, "Threeplicate Srl", Settings.WikiVersion, "http://www.screwturn.eu", null );
+			new ComponentInformation( ProviderName,
+			"ScrewTurn Wiki Project", Settings.WikiVersion, "http://www.screwturnwiki.com", null );
 
 		private IHostV30 host;
 
