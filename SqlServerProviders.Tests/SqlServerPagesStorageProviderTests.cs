@@ -1,122 +1,136 @@
-﻿
-using System;
-using System.Data.SqlClient;
-using NUnit.Framework;
-using Rhino.Mocks;
-using ScrewTurn.Wiki.Tests;
-using ScrewTurn.Wiki.PluginFramework;
-
-namespace ScrewTurn.Wiki.Plugins.SqlServer.Tests {
+﻿namespace SqlServerProviders.Tests
+{
+	using System;
+	using System.Data.SqlClient;
+	using NUnit.Framework;
+	using Rhino.Mocks;
+	using ScrewTurn.Wiki.PluginFramework;
+	using ScrewTurn.Wiki.Plugins.SqlServer;
+	using ScrewTurn.Wiki.Tests;
 
 	[TestFixture]
-	public class SqlServerPagesStorageProviderTests : PagesStorageProviderTestScaffolding {
+	public class SqlServerPagesStorageProviderTests : PagesStorageProviderTestScaffolding
+	{
 
 		//private const string ConnString = "Data Source=(local)\\SQLExpress;User ID=sa;Password=password;";
 		private const string ConnString = "Data Source=(local)\\SQLExpress;Integrated Security=SSPI;";
 		private const string InitialCatalog = "Initial Catalog=ScrewTurnWikiTest;";
 
-		public override IPagesStorageProviderV30 GetProvider() {
-			SqlServerPagesStorageProvider prov = new SqlServerPagesStorageProvider();
-			prov.Init(MockHost(), ConnString + InitialCatalog);
+		public override IPagesStorageProviderV30 GetProvider( )
+		{
+			SqlServerPagesStorageProvider prov = new SqlServerPagesStorageProvider( );
+			prov.Init( MockHost( ), ConnString + InitialCatalog );
 			return prov;
 		}
 
 		[TestFixtureSetUp]
-		public void FixtureSetUp() {
+		public void FixtureSetUp( )
+		{
 			// Create database with no tables
-			SqlConnection cn = new SqlConnection(ConnString);
-			cn.Open();
+			SqlConnection cn = new SqlConnection( ConnString );
+			cn.Open( );
 
-			SqlCommand cmd = cn.CreateCommand();
+			SqlCommand cmd = cn.CreateCommand( );
 			cmd.CommandText = "if (select count(*) from sys.databases where [Name] = 'ScrewTurnWikiTest') = 0 begin create database [ScrewTurnWikiTest] end";
-			cmd.ExecuteNonQuery();
+			cmd.ExecuteNonQuery( );
 
-			cn.Close();
+			cn.Close( );
 		}
 
 		[TearDown]
-		public new void TearDown() {
-			base.TearDown();
+		public new void TearDown( )
+		{
+			base.TearDown( );
 
 			// Clear all tables
-			SqlConnection cn = new SqlConnection(ConnString);
-			cn.Open();
+			SqlConnection cn = new SqlConnection( ConnString );
+			cn.Open( );
 
-			SqlCommand cmd = cn.CreateCommand();
+			SqlCommand cmd = cn.CreateCommand( );
 			cmd.CommandText = "use [ScrewTurnWikiTest]; delete from [IndexWordMapping]; delete from [IndexWord]; delete from [IndexDocument]; delete from [ContentTemplate]; delete from [Snippet]; delete from [NavigationPath]; delete from [Message]; delete from [PageKeyword]; delete from [PageContent]; delete from [CategoryBinding]; delete from [Page]; delete from [Category]; delete from [Namespace] where [Name] <> '';";
-			try {
-				cmd.ExecuteNonQuery();
+			try
+			{
+				cmd.ExecuteNonQuery( );
 			}
-			catch(SqlException sqlex) {
-				Console.WriteLine(sqlex.ToString());
+			catch ( SqlException sqlex )
+			{
+				Console.WriteLine( sqlex.ToString( ) );
 			}
 
-			cn.Close();
+			cn.Close( );
 		}
 
 		[TestFixtureTearDown]
-		public void FixtureTearDown() {
+		public void FixtureTearDown( )
+		{
 			// Delete database
-			SqlConnection cn = new SqlConnection(ConnString);
-			cn.Open();
+			SqlConnection cn = new SqlConnection( ConnString );
+			cn.Open( );
 
-			SqlCommand cmd = cn.CreateCommand();
+			SqlCommand cmd = cn.CreateCommand( );
 			cmd.CommandText = "alter database [ScrewTurnWikiTest] set single_user with rollback immediate";
-			try {
-				cmd.ExecuteNonQuery();
+			try
+			{
+				cmd.ExecuteNonQuery( );
 			}
-			catch(SqlException sqlex) {
-				Console.WriteLine(sqlex.ToString());
+			catch ( SqlException sqlex )
+			{
+				Console.WriteLine( sqlex.ToString( ) );
 			}
 
-			cmd = cn.CreateCommand();
+			cmd = cn.CreateCommand( );
 			cmd.CommandText = "drop database [ScrewTurnWikiTest]";
-			try {
-				cmd.ExecuteNonQuery();
+			try
+			{
+				cmd.ExecuteNonQuery( );
 			}
-			catch(SqlException sqlex) {
-				Console.WriteLine(sqlex.ToString());
+			catch ( SqlException sqlex )
+			{
+				Console.WriteLine( sqlex.ToString( ) );
 			}
 
-			cn.Close();
+			cn.Close( );
 
 			// This is neede because the pooled connection are using a session
 			// that is now invalid due to the commands executed above
-			SqlConnection.ClearAllPools();
+			SqlConnection.ClearAllPools( );
 		}
 
 		[Test]
-		public void Init() {
-			IPagesStorageProviderV30 prov = GetProvider();
-			prov.Init(MockHost(), ConnString + InitialCatalog);
+		public void Init( )
+		{
+			IPagesStorageProviderV30 prov = GetProvider( );
+			prov.Init( MockHost( ), ConnString + InitialCatalog );
 
-			Assert.IsNotNull(prov.Information, "Information should not be null");
+			Assert.IsNotNull( prov.Information, "Information should not be null" );
 		}
 
-		[TestCase("", ExpectedException = typeof(InvalidConfigurationException))]
-		[TestCase("blah", ExpectedException = typeof(InvalidConfigurationException))]
-		[TestCase("Data Source=(local)\\SQLExpress;User ID=inexistent;Password=password;InitialCatalog=Inexistent;", ExpectedException = typeof(InvalidConfigurationException))]
-		public void Init_InvalidConnString(string c) {
-			IPagesStorageProviderV30 prov = GetProvider();
-			prov.Init(MockHost(), c);
+		[TestCase( "", ExpectedException = typeof( InvalidConfigurationException ) )]
+		[TestCase( "blah", ExpectedException = typeof( InvalidConfigurationException ) )]
+		[TestCase( "Data Source=(local)\\SQLExpress;User ID=inexistent;Password=password;InitialCatalog=Inexistent;", ExpectedException = typeof( InvalidConfigurationException ) )]
+		public void Init_InvalidConnString( string c )
+		{
+			IPagesStorageProviderV30 prov = GetProvider( );
+			prov.Init( MockHost( ), c );
 		}
 
 		[Test]
-		public void Init_Upgrade() {
-			FixtureTearDown();
+		public void Init_Upgrade( )
+		{
+			FixtureTearDown( );
 
-			SqlConnection cn = new SqlConnection(ConnString);
-			cn.Open();
+			SqlConnection cn = new SqlConnection( ConnString );
+			cn.Open( );
 
-			SqlCommand cmd = cn.CreateCommand();
+			SqlCommand cmd = cn.CreateCommand( );
 			cmd.CommandText = "create database [ScrewTurnWikiTest];";
-			cmd.ExecuteNonQuery();
-			cn.Close();
+			cmd.ExecuteNonQuery( );
+			cn.Close( );
 
-			cn = new SqlConnection(ConnString + InitialCatalog);
-			cn.Open();
+			cn = new SqlConnection( ConnString + InitialCatalog );
+			cn.Open( );
 
-			cmd = cn.CreateCommand();
+			cmd = cn.CreateCommand( );
 			cmd.CommandText =
 @"CREATE TABLE [PagesProviderVersion] (
 	[Version] varchar(12) PRIMARY KEY
@@ -207,68 +221,71 @@ insert into [NavigationPathBinding] ([NavigationPath], [Page], [Number]) values 
 insert into [NavigationPathBinding] ([NavigationPath], [Page], [Number]) values ('Path', 'Page.WithDot', 3);";
 
 			bool done = false;
-			try {
-				cmd.ExecuteNonQuery();
+			try
+			{
+				cmd.ExecuteNonQuery( );
 				done = true;
 			}
-			catch(SqlException sqlex) {
-				Console.WriteLine(sqlex);
+			catch ( SqlException sqlex )
+			{
+				Console.WriteLine( sqlex );
 			}
-			finally {
-				cn.Close();
+			finally
+			{
+				cn.Close( );
 			}
 
-			if(!done) throw new Exception("Could not generate v2 test database");
+			if ( !done ) throw new Exception( "Could not generate v2 test database" );
 
-			MockRepository mocks = new MockRepository();
-			IHostV30 host = mocks.DynamicMock<IHostV30>();
-			Expect.Call(host.UpgradePageStatusToAcl(null, 'L')).IgnoreArguments().Repeat.Twice().Return(true);
+			MockRepository mocks = new MockRepository( );
+			IHostV30 host = mocks.DynamicMock<IHostV30>( );
+			Expect.Call( host.UpgradePageStatusToAcl( null, 'L' ) ).IgnoreArguments( ).Repeat.Twice( ).Return( true );
 
-			mocks.Replay(host);
+			mocks.Replay( host );
 
-			SqlServerPagesStorageProvider prov = new SqlServerPagesStorageProvider();
-			prov.Init(host, ConnString + InitialCatalog);
+			SqlServerPagesStorageProvider prov = new SqlServerPagesStorageProvider( );
+			prov.Init( host, ConnString + InitialCatalog );
 
-			Snippet[] snippets = prov.GetSnippets();
-			Assert.AreEqual(1, snippets.Length, "Wrong snippet count");
-			Assert.AreEqual("Snip", snippets[0].Name, "Wrong snippet name");
-			Assert.AreEqual("Content", snippets[0].Content, "Wrong snippet content");
+			Snippet[ ] snippets = prov.GetSnippets( );
+			Assert.AreEqual( 1, snippets.Length, "Wrong snippet count" );
+			Assert.AreEqual( "Snip", snippets[ 0 ].Name, "Wrong snippet name" );
+			Assert.AreEqual( "Content", snippets[ 0 ].Content, "Wrong snippet content" );
 
-			PageInfo[] pages = prov.GetPages(null);
-			Assert.AreEqual(3, pages.Length, "Wrong page count");
-			Assert.AreEqual("Page_WithDot", pages[0].FullName, "Wrong page name");
-			Assert.AreEqual("Page1", pages[1].FullName, "Wrong page name");
-			Assert.AreEqual("Page2", pages[2].FullName, "Wrong page name");
+			PageInfo[ ] pages = prov.GetPages( null );
+			Assert.AreEqual( 3, pages.Length, "Wrong page count" );
+			Assert.AreEqual( "Page_WithDot", pages[ 0 ].FullName, "Wrong page name" );
+			Assert.AreEqual( "Page1", pages[ 1 ].FullName, "Wrong page name" );
+			Assert.AreEqual( "Page2", pages[ 2 ].FullName, "Wrong page name" );
 
-			Assert.AreEqual("Test Content 3", prov.GetContent(pages[0]).Content, "Wrong content");
-			Assert.AreEqual("Test Content 1", prov.GetContent(pages[1]).Content, "Wrong content");
-			Assert.AreEqual("Test Content 0", prov.GetBackupContent(pages[1], 0).Content, "Wrong backup content");
-			Assert.AreEqual("Test Content 2", prov.GetContent(pages[2]).Content, "Wrong content");
+			Assert.AreEqual( "Test Content 3", prov.GetContent( pages[ 0 ] ).Content, "Wrong content" );
+			Assert.AreEqual( "Test Content 1", prov.GetContent( pages[ 1 ] ).Content, "Wrong content" );
+			Assert.AreEqual( "Test Content 0", prov.GetBackupContent( pages[ 1 ], 0 ).Content, "Wrong backup content" );
+			Assert.AreEqual( "Test Content 2", prov.GetContent( pages[ 2 ] ).Content, "Wrong content" );
 
-			Message[] messages = prov.GetMessages(pages[0]);
-			Assert.AreEqual(1, messages.Length, "Wrong message count");
-			Assert.AreEqual("Test dot", messages[0].Subject, "Wrong message subject");
+			Message[ ] messages = prov.GetMessages( pages[ 0 ] );
+			Assert.AreEqual( 1, messages.Length, "Wrong message count" );
+			Assert.AreEqual( "Test dot", messages[ 0 ].Subject, "Wrong message subject" );
 
-			CategoryInfo[] categories = prov.GetCategories(null);
-			Assert.AreEqual(3, categories.Length, "Wrong category count");
-			Assert.AreEqual("Cat_WithDot", categories[0].FullName, "Wrong category name");
-			Assert.AreEqual(1, categories[0].Pages.Length, "Wrong page count");
-			Assert.AreEqual("Page_WithDot", categories[0].Pages[0], "Wrong page");
-			Assert.AreEqual("Cat1", categories[1].FullName, "Wrong category name");
-			Assert.AreEqual("Page1", categories[1].Pages[0], "Wrong page");
-			Assert.AreEqual("Page2", categories[1].Pages[1], "Wrong page");
-			Assert.AreEqual("Cat2", categories[2].FullName, "Wrong category name");
-			Assert.AreEqual("Page_WithDot", categories[2].Pages[0], "Wrong page");
-			Assert.AreEqual("Page1", categories[2].Pages[1], "Wrong page");
+			CategoryInfo[ ] categories = prov.GetCategories( null );
+			Assert.AreEqual( 3, categories.Length, "Wrong category count" );
+			Assert.AreEqual( "Cat_WithDot", categories[ 0 ].FullName, "Wrong category name" );
+			Assert.AreEqual( 1, categories[ 0 ].Pages.Length, "Wrong page count" );
+			Assert.AreEqual( "Page_WithDot", categories[ 0 ].Pages[ 0 ], "Wrong page" );
+			Assert.AreEqual( "Cat1", categories[ 1 ].FullName, "Wrong category name" );
+			Assert.AreEqual( "Page1", categories[ 1 ].Pages[ 0 ], "Wrong page" );
+			Assert.AreEqual( "Page2", categories[ 1 ].Pages[ 1 ], "Wrong page" );
+			Assert.AreEqual( "Cat2", categories[ 2 ].FullName, "Wrong category name" );
+			Assert.AreEqual( "Page_WithDot", categories[ 2 ].Pages[ 0 ], "Wrong page" );
+			Assert.AreEqual( "Page1", categories[ 2 ].Pages[ 1 ], "Wrong page" );
 
-			NavigationPath[] paths = prov.GetNavigationPaths(null);
-			Assert.AreEqual(1, paths.Length, "Wrong navigation path count");
-			Assert.AreEqual("Path", paths[0].FullName, "Wrong navigation path name");
-			Assert.AreEqual("Page1", paths[0].Pages[0], "Wrong page");
-			Assert.AreEqual("Page2", paths[0].Pages[1], "Wrong page");
-			Assert.AreEqual("Page_WithDot", paths[0].Pages[2], "Wrong page");
+			NavigationPath[ ] paths = prov.GetNavigationPaths( null );
+			Assert.AreEqual( 1, paths.Length, "Wrong navigation path count" );
+			Assert.AreEqual( "Path", paths[ 0 ].FullName, "Wrong navigation path name" );
+			Assert.AreEqual( "Page1", paths[ 0 ].Pages[ 0 ], "Wrong page" );
+			Assert.AreEqual( "Page2", paths[ 0 ].Pages[ 1 ], "Wrong page" );
+			Assert.AreEqual( "Page_WithDot", paths[ 0 ].Pages[ 2 ], "Wrong page" );
 
-			mocks.Verify(host);
+			mocks.Verify( host );
 		}
 
 	}

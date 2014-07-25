@@ -1,5 +1,5 @@
-<NUnitProject>
-  <Settings activeconfig="Debug" processModel="Default" domainUsage="Default" />
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" />
   <Config name="Debug" binpathtype="Auto">
     <assembly path="Core.Tests\bin\Debug\Core.Tests.dll" />
     <assembly path="AclEngine.Tests\bin\Debug\AclEngine.Tests.dll" />
