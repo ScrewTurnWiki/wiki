@@ -1,14 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AclEngine.Tests
 {
+	using NUnit.Framework;
 	using ScrewTurn.Wiki.AclEngine;
+	using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
-	[TestClass]
+	[TestFixture]
 	public class AclChangedEventArgsTests
 	{
-		[TestMethod]
+		[Test]
 		public void Constructor( )
 		{
 			AclEntry entry = new AclEntry( "Res", "Action", "U.User", Value.Grant );
@@ -26,15 +27,15 @@ namespace AclEngine.Tests
 			Assert.AreEqual( Change.EntryDeleted, args.Change, "Wrong change" );
 		}
 
-		[TestMethod]
-		[ExpectedException( typeof( ArgumentNullException ) )]
+		[Test]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException( typeof( ArgumentNullException ) )]
 		public void Constructor_NullEntries( )
 		{
 			AclChangedEventArgs args = new AclChangedEventArgs( null, Change.EntryDeleted );
 		}
 
-		[TestMethod]
-		[ExpectedException( typeof( ArgumentException ) )]
+		[Test]
+		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException( typeof( ArgumentException ) )]
 		public void Constructor_EmptyEntries( )
 		{
 			AclChangedEventArgs args = new AclChangedEventArgs( new AclEntry[ 0 ], Change.EntryDeleted );

@@ -1,12 +1,11 @@
 ﻿namespace AclEngine.Tests
 {
 	using System;
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
 	using NUnit.Framework;
 	using ScrewTurn.Wiki.AclEngine;
 	using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
-	[TestClass]
+	[TestFixture]
 	public class AclEntryTests
 	{
 
