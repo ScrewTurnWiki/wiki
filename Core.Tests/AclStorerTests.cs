@@ -1,4 +1,4 @@
-﻿namespace ScrewTurn.Wiki.Core.Tests {
+﻿namespace Core.Tests {
 	using System;
 	using System.IO;
 	using NUnit.Framework;

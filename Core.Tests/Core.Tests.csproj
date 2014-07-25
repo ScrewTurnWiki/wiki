@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{16145E63-AF44-49AC-9365-0B4F4018EC14}</ProjectGuid>
+    <ProjectGuid>{4F444FCE-2083-4705-928C-E9FDA51D14CD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AclEngine.Tests</RootNamespace>
-    <AssemblyName>AclEngine.Tests</AssemblyName>
+    <RootNamespace>Core.Tests</RootNamespace>
+    <AssemblyName>Core.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -38,14 +38,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Web" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -60,16 +61,48 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="AclChangedEventArgsTests.cs" />
-    <Compile Include="AclEntryTests.cs" />
-    <Compile Include="AclEvaluatorTests.cs" />
-    <Compile Include="AclManagerBaseTests.cs" />
+    <Compile Include="AclStorerTests.cs" />
+    <Compile Include="AuthCheckerTests.cs" />
+    <Compile Include="AuthReaderTests.cs" />
+    <Compile Include="AuthToolsTests.cs" />
+    <Compile Include="AuthWriterTests.cs" />
+    <Compile Include="CacheProviderTests.cs" />
+    <Compile Include="DataMigratorTests.cs" />
+    <Compile Include="FilesStorageProviderTests.cs" />
+    <Compile Include="FormatterTests.cs" />
+    <Compile Include="IndexStorerTests.cs" />
+    <Compile Include="PagesStorageProviderTests.cs" />
+    <Compile Include="ProviderLoaderTests.cs" />
+    <Compile Include="ReverseFormatterTests.cs" />
+    <Compile Include="SettingsStorageProviderTests.cs" />
+    <Compile Include="TestSettingsStorageProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersStorageProviderTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AclEngine\AclEngine.csproj">
       <Project>{44B0F4C1-8CDC-4272-B2A2-C0AF689CEB81}</Project>
       <Name>AclEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{C353A35C-86D0-4154-9500-4F88CAAB29C3}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginFramework\PluginFramework.csproj">
+      <Project>{531A83D6-76F9-4014-91C5-295818E2D948}</Project>
+      <Name>PluginFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SearchEngine-Tests\SearchEngine-Tests.csproj">
+      <Project>{07625628-842E-4CAA-A029-4D6852C7CA20}</Project>
+      <Name>SearchEngine-Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SearchEngine\SearchEngine.csproj">
+      <Project>{2DF980A6-4742-49B1-A090-DE79314644D0}</Project>
+      <Name>SearchEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestScaffolding\TestScaffolding.csproj">
+      <Project>{F865670A-DEDE-41B5-B426-48D73C3B5B1C}</Project>
+      <Name>TestScaffolding</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -189,13 +189,15 @@ namespace ScrewTurn.Wiki.Tests {
 			prov.ListFiles("/dir/that/does/not/exist");
 		}
 
-		[TestCase(null, ExpectedException = typeof(ArgumentNullException))]
-		[TestCase("", ExpectedException = typeof(ArgumentException))]
-		public void RetrieveFile_InvalidFile(string f) {
-			IFilesStorageProviderV30 prov = GetProvider();
+		[TestCase( null, ExpectedException = typeof ( ArgumentNullException ) )]
+		[TestCase( "", ExpectedException = typeof ( ArgumentException ) )]
+		public void RetrieveFile_InvalidFile( string f )
+		{
+			IFilesStorageProviderV30 prov = GetProvider( );
 
-			using(MemoryStream s = new MemoryStream()) {
-				prov.RetrieveFile(f, s, false);
+			using ( MemoryStream s = new MemoryStream( ) )
+			{
+				prov.RetrieveFile( f, s, false );
 			}
 		}
 

@@ -419,7 +419,7 @@ namespace ScrewTurn.Wiki
 		/// <returns>The settings storage provider.</returns>
 		public static ISettingsStorageProviderV30 LoadSettingsStorageProvider( string name )
 		{
-			if ( name == null || name.Length == 0 || string.Compare( name, "default", true, CultureInfo.InvariantCulture ) == 0 )
+			if ( string.IsNullOrEmpty( name ) || string.Compare( name, "default", true, CultureInfo.InvariantCulture ) == 0 )
 			{
 				return new SettingsStorageProvider( );
 			}
@@ -485,7 +485,8 @@ namespace ScrewTurn.Wiki
 				}
 			}
 
-			if ( result == null ) throw new ArgumentException( "Could not load the specified Settings Storage Provider", inner );
+			if ( result == null )
+				throw new ArgumentException( "Could not load the specified Settings Storage Provider", inner );
 			return result;
 		}
 

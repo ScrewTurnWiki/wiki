@@ -25,7 +25,7 @@ namespace ScrewTurn.Wiki
 		private readonly string _uploadDirectory = "Upload" + Path.DirectorySeparatorChar;
 
 		private readonly ComponentInformation _info = new ComponentInformation( "Local Files Provider",
-		                                                                        "ScrewTurn Wiki Project", Settings.WikiVersion, "http://www.screwturnwiki.com", null );
+																				"ScrewTurn Wiki Project", Settings.WikiVersion, "http://www.screwturnwiki.com", null );
 
 		private IHostV30 _host;
 
@@ -248,9 +248,13 @@ namespace ScrewTurn.Wiki
 		/// </exception>
 		public bool RetrieveFile( string fullName, Stream destinationStream, bool countHit )
 		{
-			if ( string.IsNullOrEmpty( fullName ) )
+			if ( fullName == null )
 			{
-				throw new ArgumentException( "Full Name must be specified and cannot be empty", "fullName" );
+				throw new ArgumentNullException( "fullName", "Full Name must be specified and cannot be empty" );
+			}
+			if ( fullName.Trim( ) == string.Empty )
+			{
+				throw new ArgumentException( "Full Name cannot be empty", "fullName" );
 			}
 			if ( destinationStream == null )
 			{
