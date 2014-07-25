@@ -41,8 +41,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestScaffolding", "TestScaf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AclEngine", "AclEngine\AclEngine.csproj", "{44B0F4C1-8CDC-4272-B2A2-C0AF689CEB81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AclEngine-Tests", "AclEngine-Tests\AclEngine-Tests.csproj", "{9F22D0A6-115B-4EB1-8506-65263674CEA3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlProvidersCommon", "SqlProvidersCommon\SqlProvidersCommon.csproj", "{617D5D30-97F9-48B2-903D-29D4524492E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlProvidersCommon-Tests", "SqlProvidersCommon-Tests\SqlProvidersCommon-Tests.csproj", "{67590C3A-1A7C-4608-90CA-1C1632D2F643}"
@@ -124,10 +122,6 @@ Global
 		{44B0F4C1-8CDC-4272-B2A2-C0AF689CEB81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44B0F4C1-8CDC-4272-B2A2-C0AF689CEB81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44B0F4C1-8CDC-4272-B2A2-C0AF689CEB81}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F22D0A6-115B-4EB1-8506-65263674CEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F22D0A6-115B-4EB1-8506-65263674CEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F22D0A6-115B-4EB1-8506-65263674CEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F22D0A6-115B-4EB1-8506-65263674CEA3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{617D5D30-97F9-48B2-903D-29D4524492E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{617D5D30-97F9-48B2-903D-29D4524492E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{617D5D30-97F9-48B2-903D-29D4524492E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
