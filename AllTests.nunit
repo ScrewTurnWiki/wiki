@@ -1,0 +1,15 @@
+<NUnitProject>
+  <Settings activeconfig="Debug" processModel="Default" domainUsage="Default" />
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="Core.Tests\bin\Debug\Core.Tests.dll" />
+    <assembly path="AclEngine.Tests\bin\Debug\AclEngine.Tests.dll" />
+    <assembly path="DownloadCounterPlugin.Tests\bin\Debug\DownloadCounterPlugin.Tests.dll" />
+    <assembly path="SqlProvidersCommon.Tests\bin\Debug\SqlProvidersCommon.Tests.dll" />
+  </Config>
+  <Config name="Release" binpathtype="Auto">
+    <assembly path="Core.Tests\bin\Release\Core.Tests.dll" />
+    <assembly path="AclEngine.Tests\bin\Release\AclEngine.Tests.dll" />
+    <assembly path="DownloadCounterPlugin.Tests\bin\Release\DownloadCounterPlugin.Tests.dll" />
+    <assembly path="SqlProvidersCommon.Tests\bin\Release\SqlProvidersCommon.Tests.dll" />
+  </Config>
+</NUnitProject>
