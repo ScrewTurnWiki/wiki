@@ -92,9 +92,9 @@
       <Project>{531A83D6-76F9-4014-91C5-295818E2D948}</Project>
       <Name>PluginFramework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SearchEngine-Tests\SearchEngine-Tests.csproj">
-      <Project>{07625628-842E-4CAA-A029-4D6852C7CA20}</Project>
-      <Name>SearchEngine-Tests</Name>
+    <ProjectReference Include="..\SearchEngine.Tests\SearchEngine.Tests.csproj">
+      <Project>{5B21D4E2-59DB-4943-974F-19CDEF914F58}</Project>
+      <Name>SearchEngine.Tests</Name>
     </ProjectReference>
     <ProjectReference Include="..\SearchEngine\SearchEngine.csproj">
       <Project>{2DF980A6-4742-49B1-A090-DE79314644D0}</Project>
