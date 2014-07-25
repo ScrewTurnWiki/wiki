@@ -10,7 +10,7 @@
 	public class AclEntryTests
 	{
 
-		[TestMethod]
+		[Test]
 		public void Constructor( )
 		{
 			AclEntry entry = new AclEntry( "Res", "Action", "U.User", Value.Grant );
@@ -49,7 +49,7 @@
 			AclEntry entry = new AclEntry( "Res", "Action", s, Value.Grant );
 		}
 
-		[TestMethod]
+		[Test]
 		public void Equals( )
 		{
 			AclEntry entry = new AclEntry( "Res", "Action", "U.User", Value.Grant );
@@ -64,7 +64,7 @@
 			Assert.IsTrue( entry.Equals( entry ), "Equals should return true" );
 		}
 
-		[TestMethod]
+		[Test]
 		public void Static_Equals( )
 		{
 			AclEntry entry = new AclEntry( "Res", "Action", "U.User", Value.Grant );

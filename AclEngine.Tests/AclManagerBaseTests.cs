@@ -43,7 +43,7 @@
 			AclEntry[ ] allEntries = manager.RetrieveAllEntries( );
 			Assert.AreEqual( 2, allEntries.Length, "Wrong entry count" );
 
-			Array.Sort( allEntries, delegate( AclEntry x, AclEntry y ) { return x.Subject.CompareTo( y.Subject ); } );
+			Array.Sort( allEntries, ( x, y ) => x.Subject.CompareTo( y.Subject ) );
 
 			AssertAclEntriesAreEqual( new AclEntry( "Res", "Action", "G.Group", Value.Deny ), allEntries[ 0 ] );
 			AssertAclEntriesAreEqual( new AclEntry( "Res", "Action", "U.User", Value.Grant ), allEntries[ 1 ] );
@@ -89,7 +89,7 @@
 			AclEntry[ ] allEntries = manager.RetrieveAllEntries( );
 			Assert.AreEqual( 2, allEntries.Length, "Wrong entry count" );
 
-			Array.Sort( allEntries, delegate( AclEntry x, AclEntry y ) { return x.Subject.CompareTo( y.Subject ); } );
+			Array.Sort( allEntries, ( x, y ) => x.Subject.CompareTo( y.Subject ) );
 
 			AssertAclEntriesAreEqual( new AclEntry( "Res", "Action", "G.Group", Value.Grant ), allEntries[ 0 ] );
 			AssertAclEntriesAreEqual( new AclEntry( "Res", "Action", "U.User", Value.Deny ), allEntries[ 1 ] );
@@ -293,7 +293,7 @@
 			AclEntry[ ] allEntries = manager.RetrieveAllEntries( );
 			Assert.AreEqual( 2, allEntries.Length, "Wrong entry count" );
 
-			Array.Sort( allEntries, delegate( AclEntry x, AclEntry y ) { return x.Subject.CompareTo( y.Subject ); } );
+			Array.Sort( allEntries, ( x, y ) => x.Subject.CompareTo( y.Subject ) );
 
 			AssertAclEntriesAreEqual( new AclEntry( "Res", "Action", "G.Group", Value.Deny ), allEntries[ 0 ] );
 			AssertAclEntriesAreEqual( new AclEntry( "Res", "Action", "U.User", Value.Grant ), allEntries[ 1 ] );

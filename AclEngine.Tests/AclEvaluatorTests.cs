@@ -1,10 +1,9 @@
-﻿
-using System;
-using System.Collections.Generic;
-using NUnit.Framework;
-
-namespace ScrewTurn.Wiki.AclEngine.Tests
+﻿namespace AclEngine.Tests
 {
+	using System;
+	using System.Collections.Generic;
+	using NUnit.Framework;
+	using ScrewTurn.Wiki.AclEngine;
 
 	[TestFixture]
 	public class AclEvaluatorTests
@@ -98,7 +97,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res2", "Action", "G.Group", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User3", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -111,7 +110,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res2", "Action", "G.Group", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User3", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -124,7 +123,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res2", "Action", "G.Group", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User3", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -137,7 +136,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res2", "Action", "G.Group", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User3", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -147,7 +146,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -157,7 +156,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -167,7 +166,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "Action", "U.User", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -177,7 +176,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -187,7 +186,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -197,7 +196,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "Action", "U.User", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -207,7 +206,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -217,7 +216,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "Action", "U.User", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -227,7 +226,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "Action", "U.User", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -237,7 +236,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "Action", "U.User", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -247,7 +246,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -257,7 +256,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "Action", "U.User", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -267,7 +266,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "Action", "U.User", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -277,7 +276,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -287,7 +286,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "Action", "U.User", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -297,7 +296,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "*", "U.User", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -307,7 +306,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group1", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "Action", "G.Group2", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -317,7 +316,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group1", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "Action", "G.Group2", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -327,7 +326,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group1", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "Action", "G.Group2", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -337,7 +336,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group1", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "*", "G.Group2", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -347,7 +346,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group1", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "*", "G.Group2", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -357,7 +356,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group1", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "*", "G.Group2", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -367,7 +366,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "Action", "G.Group1", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "*", "G.Group2", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -377,7 +376,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group1", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "Action", "G.Group2", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -387,7 +386,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group1", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "Action", "G.Group2", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -397,7 +396,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group1", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "Action", "G.Group2", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group1", "G.Group2" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -417,7 +416,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group", Value.Grant ) );
 			entries.Add( new AclEntry( "Res", "Action", "G.Group", Value.Deny ) );
 
-			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Denied, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[Test]
@@ -437,7 +436,7 @@ namespace ScrewTurn.Wiki.AclEngine.Tests
 			entries.Add( new AclEntry( "Res", "*", "G.Group", Value.Deny ) );
 			entries.Add( new AclEntry( "Res", "Action", "G.Group", Value.Grant ) );
 
-			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new string[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
+			Assert.AreEqual( Authorization.Granted, AclEvaluator.AuthorizeAction( "Res", "Action", "U.User", new[ ] { "G.Group" }, entries.ToArray( ) ), "Wrong auth result" );
 		}
 
 		[TestCase( null, ExpectedException = typeof( ArgumentNullException ) )]
