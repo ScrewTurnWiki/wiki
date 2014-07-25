@@ -150,23 +150,22 @@ namespace ScrewTurn.Wiki {
 		public void PrintSystemStatus() {
 			StringBuilder sb = new StringBuilder(500);
 			sb.Append(Properties.Messages.OnlineUsers + ": <b>" + 
-				ScrewTurn.Wiki.Cache.OnlineUsers + "</b><br />" + "\n");
+				Wiki.Cache.OnlineUsers + "</b><br />" + "\n");
 			int inactive = 0;
 
 			List<UserInfo> users = Users.GetUsers();
 			for(int i = 0; i < users.Count; i++) {
 				if(!users[i].Active) inactive++;
 			}
-			sb.Append(Properties.Messages.UserCount + ": <b>" + users.Count + "</b> (" + inactive + " " + Properties.Messages.InactiveUsers + ")<br />" + "\n");
-			sb.Append(Properties.Messages.CachedPages + ": <b>" + ScrewTurn.Wiki.Cache.PageCacheUsage + "/" + Pages.GetGlobalPageCount() + "</b> (" + ScrewTurn.Wiki.Cache.FormattedPageCacheUsage + " " + Properties.Messages.Formatted + ")<br />" + "\n");
-			sb.Append(Properties.Messages.WikiVersion + ": <b>" + Settings.WikiVersion + "</b>" + "\n");
+			sb.AppendFormat("{0}: <b>{1}</b> ({2} {3})<br />" + "\n", Properties.Messages.UserCount, users.Count, inactive, Properties.Messages.InactiveUsers );
+			sb.AppendFormat("{0}: <b>{1}/{2}</b> ({3} {4})<br />" + "\n", Properties.Messages.CachedPages, Wiki.Cache.PageCacheUsage, Pages.GetGlobalPageCount(), Wiki.Cache.FormattedPageCacheUsage, Properties.Messages.Formatted );
+			sb.AppendFormat("{0}: <b>{1}</b>" + "\n", Properties.Messages.WikiVersion, Settings.WikiVersion );
 			//TODO: Re-enable version checking once a more permanent auto-update solution can be devised.
 			if(!Page.IsPostBack) {
 				//sb.Append(CheckVersion());
 			}
 			sb.Append("<br />");
-			sb.Append(Properties.Messages.ServerUptime + ": <b>" + Tools.TimeSpanToString(Tools.SystemUptime) + "</b> (" +
-				Properties.Messages.MayBeInaccurate + ")");
+			sb.AppendFormat("{0}: <b>{1:%d\\d\\ hh\\:mm\\:ss}</b> ({2})", Properties.Messages.ServerUptime, Tools.SystemUptime, Properties.Messages.MayBeInaccurate );
 
 			lblSystemStatusContent.Text = sb.ToString();
 		}

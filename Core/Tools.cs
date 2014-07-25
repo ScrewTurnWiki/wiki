@@ -367,20 +367,6 @@ namespace ScrewTurn.Wiki
 			}
 		}
 
-		/// <summary>
-		/// Converts a Time Span to string.
-		/// </summary>
-		/// <param name="span">The Time Span.</param>
-		/// <returns>The string.</returns>
-		public static string TimeSpanToString( TimeSpan span )
-		{
-			string result = span.Days + "d ";
-			result += span.Hours + "h ";
-			result += span.Minutes + "m ";
-			result += span.Seconds + "s";
-			return result;
-		}
-
 		private static string CleanupPort( string url, string host )
 		{
 			if ( !url.Contains( host ) )
@@ -433,7 +419,8 @@ namespace ScrewTurn.Wiki
 		/// <returns>The encoded string.</returns>
 		public static string UrlEncode( string input )
 		{
-			if ( HttpContext.Current != null && HttpContext.Current.Server != null ) return HttpContext.Current.Server.UrlEncode( input ).Replace( "+", "%20" );
+			if ( HttpContext.Current != null )
+				return HttpContext.Current.Server.UrlEncode( input ).Replace( "+", "%20" );
 			Log.LogEntry( "HttpContext.Current or HttpContext.Current.Server were null (Tools.UrlEncode)", EntryType.Warning, Log.SystemUsername );
 			return input;
 		}
@@ -511,8 +498,8 @@ namespace ScrewTurn.Wiki
 		/// <returns>The full name of the page, regardless of the existence of the page.</returns>
 		public static string DetectCurrentFullName( )
 		{
-			string nspace = HttpContext.Current.Request[ "NS" ] != null ? HttpContext.Current.Request[ "NS" ] : "";
-			string page = HttpContext.Current.Request[ "Page" ] != null ? HttpContext.Current.Request[ "Page" ] : "";
+			string nspace = HttpContext.Current.Request[ "NS" ] ?? string.Empty;
+			string page = HttpContext.Current.Request[ "Page" ] ?? string.Empty;
 
 			string fullName = null;
 			if ( !page.StartsWith( nspace + "." ) ) fullName = nspace + "." + page;
@@ -538,7 +525,7 @@ namespace ScrewTurn.Wiki
 		/// <returns>The name of the namespace, or an empty string.</returns>
 		public static string DetectCurrentNamespace( )
 		{
-			return HttpContext.Current.Request[ "NS" ] != null ? HttpContext.Current.Request[ "NS" ] : "";
+			return HttpContext.Current.Request[ "NS" ] ?? string.Empty;
 		}
 
 		/// <summary>
@@ -704,7 +691,7 @@ namespace ScrewTurn.Wiki
 
 			foreach ( char c in input )
 			{
-				buffer.Append( "&#" + ( (int)c ).ToString( "D2" ) + ";" );
+				buffer.AppendFormat( "&#{0};", ( (int)c ).ToString( "D2" ) );
 			}
 
 			return buffer.ToString( );
