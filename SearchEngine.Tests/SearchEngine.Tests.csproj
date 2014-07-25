@@ -6,7 +6,7 @@
     <ProjectGuid>{5B21D4E2-59DB-4943-974F-19CDEF914F58}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SearchEngine.Tests</RootNamespace>
+    <RootNamespace>ScrewTurn.Wiki.SearchEngine.Tests</RootNamespace>
     <AssemblyName>SearchEngine.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

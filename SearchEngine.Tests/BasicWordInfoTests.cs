@@ -1,6 +1,6 @@
-using NUnit.Framework;
-
 namespace ScrewTurn.Wiki.SearchEngine.Tests {
+	using NUnit.Framework;
+	using ScrewTurn.Wiki.SearchEngine;
 
 	[TestFixture]
 	public class BasicWordInfoTests {
