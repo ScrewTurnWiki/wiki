@@ -14,7 +14,7 @@ namespace ScrewTurn.Wiki.Plugins.SqlServer
 	public class SqlServerPagesStorageProvider : SqlPagesStorageProviderBase
 	{
 
-		private readonly ComponentInformation _info = new ComponentInformation( "SQL Server Pages Storage Provider", "Screwturn Wiki Project", "3.0.4.566", "", "" );
+		private readonly ComponentInformation _info = new ComponentInformation( "SQL Server Pages Storage Provider", "Screwturn Wiki Project", "3.0.6.630", "", "" );
 
 		private readonly SqlServerCommandBuilder _commandBuilder = new SqlServerCommandBuilder( );
 
@@ -75,29 +75,22 @@ namespace ScrewTurn.Wiki.Plugins.SqlServer
 		/// <returns><c>true</c> if the schema exists, <c>false</c> otherwise.</returns>
 		private bool SchemaExists( )
 		{
-			SqlCommand cmd = GetCommand( ConnString );
-			cmd.CommandText = "select [Version] from [Version] where [Component] = 'Pages'";
+			bool exists;
+			using ( SqlConnection con = new SqlConnection( ConnString ) )
+			using ( SqlCommand cmd = new SqlCommand( "select [Version] from [Version] where [Component] = 'Pages'", con ) )
+			{
+				con.Open( );
 
-			bool exists = false;
-
-			try
-			{
-				int version = ExecuteScalar<int>( cmd, -1 );
-				if ( version > CurrentSchemaVersion ) throw new InvalidConfigurationException( "The version of the database schema is greater than the supported version" );
-				exists = version != -1;
-			}
-			catch ( SqlException )
-			{
-				exists = false;
-			}
-			finally
-			{
 				try
 				{
-					cmd.Connection.Close( );
+					int version = (int) cmd.ExecuteScalar( );
+					if ( version > CurrentSchemaVersion )
+						throw new InvalidConfigurationException( "The version of the database schema is greater than the supported version" );
+					exists = version != -1;
 				}
-				catch
+				catch ( SqlException )
 				{
+					exists = false;
 				}
 			}
 
@@ -253,7 +246,7 @@ exec sp_rename 'PagesProviderVersion', 'PagesProviderVersion_v2';";
 				{
 					insertCmd.Parameters.Clear( );
 					insertCmd.Parameters.Add( new SqlParameter( "@Name", reader[ "Name" ] as string ) );
-					insertCmd.Parameters.Add( new SqlParameter( "@CreationDateTime", (DateTime) reader[ "CreationDateTime" ] ) );
+					insertCmd.Parameters.Add( new SqlParameter( "@CreationDateTime", (DateTime)reader[ "CreationDateTime" ] ) );
 					pageStatus.Add( reader[ "Name" ] as string, ( reader[ "Status" ] as string ).ToUpperInvariant( )[ 0 ] );
 
 					insertCmd.ExecuteNonQuery( );
@@ -273,10 +266,10 @@ exec sp_rename 'PagesProviderVersion', 'PagesProviderVersion_v2';";
 				{
 					insertCmd.Parameters.Clear( );
 					insertCmd.Parameters.Add( new SqlParameter( "@Page", reader[ "Page" ] as string ) );
-					insertCmd.Parameters.Add( new SqlParameter( "@Revision", (short) (int) reader[ "Revision" ] ) );
+					insertCmd.Parameters.Add( new SqlParameter( "@Revision", (short)(int)reader[ "Revision" ] ) );
 					insertCmd.Parameters.Add( new SqlParameter( "@Title", reader[ "Title" ] as string ) );
 					insertCmd.Parameters.Add( new SqlParameter( "@User", reader[ "Username" ] as string ) );
-					insertCmd.Parameters.Add( new SqlParameter( "@LastModified", (DateTime) reader[ "DateTime" ] ) );
+					insertCmd.Parameters.Add( new SqlParameter( "@LastModified", (DateTime)reader[ "DateTime" ] ) );
 					insertCmd.Parameters.Add( new SqlParameter( "@Comment", reader[ "Comment" ] as string ) ); // Cannot be null in v2
 					insertCmd.Parameters.Add( new SqlParameter( "@Content", reader[ "Content" ] as string ) );
 
@@ -297,13 +290,13 @@ exec sp_rename 'PagesProviderVersion', 'PagesProviderVersion_v2';";
 				{
 					insertCmd.Parameters.Clear( );
 					insertCmd.Parameters.Add( new SqlParameter( "@Page", reader[ "Page" ] as string ) );
-					insertCmd.Parameters.Add( new SqlParameter( "@Id", (short) (int) reader[ "ID" ] ) );
-					int parent = (int) reader[ "Parent" ];
+					insertCmd.Parameters.Add( new SqlParameter( "@Id", (short)(int)reader[ "ID" ] ) );
+					int parent = (int)reader[ "Parent" ];
 					if ( parent == -1 ) insertCmd.Parameters.Add( new SqlParameter( "@Parent", DBNull.Value ) );
-					else insertCmd.Parameters.Add( new SqlParameter( "@Parent", (short) parent ) );
+					else insertCmd.Parameters.Add( new SqlParameter( "@Parent", (short)parent ) );
 					insertCmd.Parameters.Add( new SqlParameter( "@Username", reader[ "Username" ] as string ) );
 					insertCmd.Parameters.Add( new SqlParameter( "@Subject", reader[ "Subject" ] as string ) );
-					insertCmd.Parameters.Add( new SqlParameter( "@DateTime", (DateTime) reader[ "DateTime" ] ) );
+					insertCmd.Parameters.Add( new SqlParameter( "@DateTime", (DateTime)reader[ "DateTime" ] ) );
 					insertCmd.Parameters.Add( new SqlParameter( "@Body", reader[ "Body" ] as string ) );
 
 					insertCmd.ExecuteNonQuery( );
@@ -358,7 +351,7 @@ exec sp_rename 'PagesProviderVersion', 'PagesProviderVersion_v2';";
 					insertCmd.Parameters.Clear( );
 					insertCmd.Parameters.Add( new SqlParameter( "@Name", reader[ "NavigationPath" ] as string ) );
 					insertCmd.Parameters.Add( new SqlParameter( "@Page", reader[ "Page" ] as string ) );
-					insertCmd.Parameters.Add( new SqlParameter( "@Number", (short) (int) reader[ "Number" ] ) );
+					insertCmd.Parameters.Add( new SqlParameter( "@Number", (short)(int)reader[ "Number" ] ) );
 
 					insertCmd.ExecuteNonQuery( );
 				}
@@ -462,7 +455,7 @@ exec sp_rename 'PagesProviderVersion', 'PagesProviderVersion_v2';";
 		/// <returns>The configuration, or an empty string.</returns>
 		protected override string TryLoadSettingsStorageProviderConfiguration( )
 		{
-			return Host.GetProviderConfiguration( typeof ( SqlServerSettingsStorageProvider ).FullName );
+			return Host.GetProviderConfiguration( typeof( SqlServerSettingsStorageProvider ).FullName );
 		}
 
 		/// <summary>
