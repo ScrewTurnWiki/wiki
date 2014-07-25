@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace ScrewTurn.Wiki.AclEngine
 {
+	using System.Linq;
 
 	/// <summary>
 	/// Implements a base class for an ACL Manager.
@@ -12,14 +13,14 @@ namespace ScrewTurn.Wiki.AclEngine
 	public abstract class AclManagerBase : IAclManager
 	{
 
-		private List<AclEntry> entries;
+		private List<AclEntry> _entries;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="T:AclManagerBase" /> abstract class.
 		/// </summary>
-		public AclManagerBase( )
+		protected AclManagerBase( )
 		{
-			entries = new List<AclEntry>( 100 );
+			_entries = new List<AclEntry>( 100 );
 		}
 
 		/// <summary>
@@ -64,15 +65,15 @@ namespace ScrewTurn.Wiki.AclEngine
 
 			lock ( this )
 			{
-				int index = entries.FindIndex( delegate( AclEntry x ) { return AclEntry.Equals( x, result ); } );
+				int index = _entries.FindIndex( x => AclEntry.Equals( x, result ) );
 				if ( index >= 0 )
 				{
-					AclEntry removed = entries[ index ];
-					entries.RemoveAt( index );
-					OnAclChanged( new AclEntry[ ] { removed }, Change.EntryDeleted );
+					AclEntry removed = _entries[ index ];
+					_entries.RemoveAt( index );
+					OnAclChanged( new[ ] { removed }, Change.EntryDeleted );
 				}
-				entries.Add( result );
-				OnAclChanged( new AclEntry[ ] { result }, Change.EntryStored );
+				_entries.Add( result );
+				OnAclChanged( new[ ] { result }, Change.EntryStored );
 			}
 
 			return true;
@@ -106,12 +107,12 @@ namespace ScrewTurn.Wiki.AclEngine
 
 			lock ( this )
 			{
-				int index = entries.FindIndex( delegate( AclEntry x ) { return AclEntry.Equals( x, result ); } );
+				int index = _entries.FindIndex( x => AclEntry.Equals( x, result ) );
 				if ( index >= 0 )
 				{
-					AclEntry entry = entries[ index ];
-					entries.RemoveAt( index );
-					OnAclChanged( new AclEntry[ ] { entry }, Change.EntryDeleted );
+					AclEntry entry = _entries[ index ];
+					_entries.RemoveAt( index );
+					OnAclChanged( new[ ] { entry }, Change.EntryDeleted );
 					return true;
 				}
 				return false;
@@ -136,12 +137,12 @@ namespace ScrewTurn.Wiki.AclEngine
 			{
 				List<int> indexesToRemove = new List<int>( 30 );
 				List<AclEntry> entriesToRemove = new List<AclEntry>( 30 );
-				for ( int i = 0; i < entries.Count; i++ )
+				for ( int i = 0; i < _entries.Count; i++ )
 				{
-					if ( entries[ i ].Resource == resource )
+					if ( _entries[ i ].Resource == resource )
 					{
 						indexesToRemove.Add( i );
-						entriesToRemove.Add( entries[ i ] );
+						entriesToRemove.Add( _entries[ i ] );
 					}
 				}
 
@@ -150,7 +151,7 @@ namespace ScrewTurn.Wiki.AclEngine
 					// Work in opposite direction to preserve smaller indexes
 					for ( int i = indexesToRemove.Count - 1; i >= 0; i-- )
 					{
-						entries.RemoveAt( indexesToRemove[ i ] );
+						_entries.RemoveAt( indexesToRemove[ i ] );
 					}
 
 					OnAclChanged( entriesToRemove.ToArray( ), Change.EntryDeleted );
@@ -179,12 +180,12 @@ namespace ScrewTurn.Wiki.AclEngine
 			{
 				List<int> indexesToRemove = new List<int>( 30 );
 				List<AclEntry> entriesToRemove = new List<AclEntry>( 30 );
-				for ( int i = 0; i < entries.Count; i++ )
+				for ( int i = 0; i < _entries.Count; i++ )
 				{
-					if ( entries[ i ].Subject == subject )
+					if ( _entries[ i ].Subject == subject )
 					{
 						indexesToRemove.Add( i );
-						entriesToRemove.Add( entries[ i ] );
+						entriesToRemove.Add( _entries[ i ] );
 					}
 				}
 
@@ -193,7 +194,7 @@ namespace ScrewTurn.Wiki.AclEngine
 					// Work in opposite direction to preserve smaller indexes
 					for ( int i = indexesToRemove.Count - 1; i >= 0; i-- )
 					{
-						entries.RemoveAt( indexesToRemove[ i ] );
+						_entries.RemoveAt( indexesToRemove[ i ] );
 					}
 
 					OnAclChanged( entriesToRemove.ToArray( ), Change.EntryDeleted );
@@ -253,7 +254,7 @@ namespace ScrewTurn.Wiki.AclEngine
 		{
 			lock ( this )
 			{
-				return entries.ToArray( );
+				return _entries.ToArray( );
 			}
 		}
 
@@ -273,14 +274,7 @@ namespace ScrewTurn.Wiki.AclEngine
 
 			lock ( this )
 			{
-				List<AclEntry> result = new List<AclEntry>( 10 );
-
-				foreach ( AclEntry e in entries )
-				{
-					if ( e.Resource == resource ) result.Add( e );
-				}
-
-				return result.ToArray( );
+				return _entries.Where( e => e.Resource == resource ).ToArray( );
 			}
 		}
 
@@ -300,14 +294,7 @@ namespace ScrewTurn.Wiki.AclEngine
 
 			lock ( this )
 			{
-				List<AclEntry> result = new List<AclEntry>( 10 );
-
-				foreach ( AclEntry e in entries )
-				{
-					if ( e.Subject == subject ) result.Add( e );
-				}
-
-				return result.ToArray( );
+				return _entries.Where( e => e.Subject == subject ).ToArray( );
 			}
 		}
 
@@ -323,7 +310,7 @@ namespace ScrewTurn.Wiki.AclEngine
 
 			lock ( this )
 			{
-				this.entries = new List<AclEntry>( entries );
+				_entries = new List<AclEntry>( entries );
 			}
 		}
 
@@ -336,7 +323,7 @@ namespace ScrewTurn.Wiki.AclEngine
 			{
 				lock ( this )
 				{
-					return entries.Count;
+					return _entries.Count;
 				}
 			}
 		}
