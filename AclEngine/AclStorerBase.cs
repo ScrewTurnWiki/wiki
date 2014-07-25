@@ -23,22 +23,23 @@ namespace ScrewTurn.Wiki.AclEngine
 		/// <summary>
 		/// The event handler for the <see cref="IAclManager.AclChanged" /> event.
 		/// </summary>
-		protected EventHandler<AclChangedEventArgs> aclChangedHandler;
+		protected EventHandler<AclChangedEventArgs> AclChangedHandler;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="T:AclStorerBase" /> abstract class.
 		/// </summary>
 		/// <param name="aclManager">The instance of the ACL Manager to handle.</param>
 		/// <exception cref="ArgumentNullException">If <paramref name="aclManager"/> is <c>null</c>.</exception>
-		public AclStorerBase( IAclManager aclManager )
+		protected AclStorerBase( IAclManager aclManager )
 		{
-			if ( aclManager == null ) throw new ArgumentNullException( "aclManager" );
+			if ( aclManager == null )
+				throw new ArgumentNullException( "aclManager" );
 
 			this.aclManager = aclManager;
 
-			aclChangedHandler = new EventHandler<AclChangedEventArgs>( aclManager_AclChanged );
+			AclChangedHandler = aclManager_AclChanged;
 
-			this.aclManager.AclChanged += aclChangedHandler;
+			this.aclManager.AclChanged += AclChangedHandler;
 		}
 
 		/// <summary>
@@ -48,9 +49,18 @@ namespace ScrewTurn.Wiki.AclEngine
 		/// <param name="e">The event arguments.</param>
 		private void aclManager_AclChanged( object sender, AclChangedEventArgs e )
 		{
-			if ( e.Change == Change.EntryDeleted ) DeleteEntries( e.Entries );
-			else if ( e.Change == Change.EntryStored ) StoreEntries( e.Entries );
-			else throw new NotSupportedException( "Change type not supported" );
+			switch ( e.Change )
+			{
+				case Change.EntryDeleted:
+					DeleteEntries( e.Entries );
+					break;
+				case Change.EntryStored:
+					StoreEntries( e.Entries );
+					break;
+				default:
+					throw
+						new NotSupportedException( "Change type not supported" );
+			}
 		}
 
 		/// <summary>
@@ -107,7 +117,7 @@ namespace ScrewTurn.Wiki.AclEngine
 				if ( !disposed )
 				{
 					disposed = true;
-					aclManager.AclChanged -= aclChangedHandler;
+					aclManager.AclChanged -= AclChangedHandler;
 				}
 			}
 		}
