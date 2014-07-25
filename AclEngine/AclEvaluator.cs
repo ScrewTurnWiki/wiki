@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace ScrewTurn.Wiki.AclEngine
 {
+	using System.Linq;
 
 	/// <summary>
 	/// Implements tools for evaluating permissions.
@@ -51,10 +52,7 @@ namespace ScrewTurn.Wiki.AclEngine
 			AclEntry[ ] sortedEntries = new AclEntry[ entries.Length ];
 			Array.Copy( entries, sortedEntries, entries.Length );
 
-			Array.Sort( sortedEntries, delegate( AclEntry x, AclEntry y )
-			{
-				return x.Action.CompareTo( y.Action );
-			} );
+			Array.Sort( sortedEntries, ( x, y ) => x.Action.CompareTo( y.Action ) );
 			Array.Reverse( sortedEntries );
 
 			foreach ( AclEntry entry in sortedEntries )
@@ -76,43 +74,39 @@ namespace ScrewTurn.Wiki.AclEngine
 
 			foreach ( string group in groups )
 			{
-				foreach ( AclEntry entry in entries )
+				foreach ( AclEntry entry in entries.Where( entry => entry.Resource == resource && entry.Subject == @group ) )
 				{
-
-					if ( entry.Resource == resource && entry.Subject == group )
+					if ( !groupFullControlGrant.ContainsKey( @group ) )
 					{
-						if ( !groupFullControlGrant.ContainsKey( group ) )
-						{
-							groupFullControlGrant.Add( group, false );
-							groupExplicitGrant.Add( group, false );
-							groupFullControlDeny.Add( group, false );
-						}
+						groupFullControlGrant.Add( @group, false );
+						groupExplicitGrant.Add( @group, false );
+						groupFullControlDeny.Add( @group, false );
+					}
 
-						if ( entry.Action == action )
+					if ( entry.Action == action )
+					{
+						// Explicit action
+						if ( entry.Value == Value.Grant )
 						{
-							// Explicit action
-							if ( entry.Value == Value.Grant )
-							{
-								// An explicit grant only wins if there are no other explicit deny
-								groupExplicitGrant[ group ] = true;
-							}
-							else if ( entry.Value == Value.Deny )
-							{
-								// An explicit deny wins over all other entries
-								return Authorization.Denied;
-							}
+							// An explicit grant only wins if there are no other explicit deny
+							groupExplicitGrant[ @group ] = true;
 						}
-						else if ( entry.Action == AclEntry.FullControlAction )
+						else if ( entry.Value == Value.Deny )
 						{
-							// Full control, lower priority
-							if ( entry.Value == Value.Deny )
-							{
-								groupFullControlDeny[ group ] = true;
-							}
-							else if ( entry.Value == Value.Grant )
-							{
-								groupFullControlGrant[ group ] = true;
-							}
+							// An explicit deny wins over all other entries
+							return Authorization.Denied;
+						}
+					}
+					else if ( entry.Action == AclEntry.FullControlAction )
+					{
+						// Full control, lower priority
+						if ( entry.Value == Value.Deny )
+						{
+							groupFullControlDeny[ @group ] = true;
+						}
+						else if ( entry.Value == Value.Grant )
+						{
+							groupFullControlGrant[ @group ] = true;
 						}
 					}
 				}
