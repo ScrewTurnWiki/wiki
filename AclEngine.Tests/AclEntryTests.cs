@@ -3,7 +3,6 @@
 	using System;
 	using NUnit.Framework;
 	using ScrewTurn.Wiki.AclEngine;
-	using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 	[TestFixture]
 	public class AclEntryTests

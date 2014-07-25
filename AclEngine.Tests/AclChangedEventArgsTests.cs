@@ -4,7 +4,6 @@ namespace AclEngine.Tests
 {
 	using NUnit.Framework;
 	using ScrewTurn.Wiki.AclEngine;
-	using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 	[TestFixture]
 	public class AclChangedEventArgsTests
@@ -28,14 +27,14 @@ namespace AclEngine.Tests
 		}
 
 		[Test]
-		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException( typeof( ArgumentNullException ) )]
+		[ExpectedException( typeof( ArgumentNullException ) )]
 		public void Constructor_NullEntries( )
 		{
 			AclChangedEventArgs args = new AclChangedEventArgs( null, Change.EntryDeleted );
 		}
 
 		[Test]
-		[Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedException( typeof( ArgumentException ) )]
+		[ExpectedException( typeof( ArgumentException ) )]
 		public void Constructor_EmptyEntries( )
 		{
 			AclChangedEventArgs args = new AclChangedEventArgs( new AclEntry[ 0 ], Change.EntryDeleted );
