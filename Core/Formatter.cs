@@ -132,16 +132,13 @@ namespace ScrewTurn.Wiki
 		{
 			// Bare Bones: Advanced tags, such as tables, toc, special tags, etc. are not formatted - used for Visual editor display
 
-			linkedPages = new string[ 0 ];
 			List<string> tempLinkedPages = new List<string>( 10 );
 
 			StringBuilder sb = new StringBuilder( raw );
-			Match match;
-			string tmp, a, n, url, title, bigUrl;
+			string a, n, url, title, bigUrl;
 			StringBuilder dummy; // Used for temporary string manipulation inside formatting cycles
-			bool done = false;
 			List<int> noWikiBegin = new List<int>( ), noWikiEnd = new List<int>( );
-			int end = 0;
+			int end;
 			List<HPosition> hPos = new List<HPosition>( );
 
 			sb.Replace( "\r", "" );
@@ -154,7 +151,7 @@ namespace ScrewTurn.Wiki
 
 			// Remove all double- or single-LF in JavaScript tags
 			bool singleLine = Settings.ProcessSingleLineBreaks;
-			match = JavascriptRegex.Match( sb.ToString( ) );
+			Match match = JavascriptRegex.Match( sb.ToString( ) );
 			while ( match.Success )
 			{
 				sb.Remove( match.Index, match.Length );
@@ -397,10 +394,10 @@ namespace ScrewTurn.Wiki
 									sb.Insert( match.Index, cloud );
 									break;
 								case "PAGECOUNT":
-									sb.Insert( match.Index, Pages.GetPages( DetectNamespaceInfo( current ) ).Count.ToString( ) );
+									sb.Insert( match.Index, Pages.GetPages( DetectNamespaceInfo( current ) ).Count );
 									break;
 								case "PAGECOUNT(*)":
-									sb.Insert( match.Index, Pages.GetGlobalPageCount( ).ToString( ) );
+									sb.Insert( match.Index, Pages.GetGlobalPageCount( ) );
 									break;
 								case "ORPHANS":
 									sb.Insert( match.Index, BuildOrphanedPagesList( DetectNamespaceInfo( current ), context, current ) );
@@ -501,15 +498,8 @@ namespace ScrewTurn.Wiki
 					continue; // Prevents formatting emtpy links
 				}
 
-				done = false;
-				if ( match.Value.StartsWith( "[[" ) )
-				{
-					tmp = match.Value.Substring( 2, match.Length - 4 ).Trim( );
-				}
-				else
-				{
-					tmp = match.Value.Substring( 1, match.Length - 2 ).Trim( );
-				}
+				bool done = false;
+				string tmp = match.Value.StartsWith( "[[" ) ? match.Value.Substring( 2, match.Length - 4 ).Trim( ) : match.Value.Substring( 1, match.Length - 2 ).Trim( );
 				sb.Remove( match.Index, match.Length );
 				a = "";
 				n = "";
@@ -2069,14 +2059,7 @@ namespace ScrewTurn.Wiki
 					sb.Append( targetUrl.Substring( 1 ) );
 				}
 				sb.Append( @""">" );
-				if ( title.Length > 0 )
-				{
-					sb.Append( title );
-				}
-				else
-				{
-					sb.Append( targetUrl.Substring( 1 ) );
-				}
+				sb.Append( title.Length > 0 ? title : targetUrl.Substring( 1 ) );
 				sb.Append( "</a>" );
 			}
 			else if ( targetUrl.StartsWith( "http://" ) || targetUrl.StartsWith( "https://" ) || targetUrl.StartsWith( "ftp://" ) || targetUrl.StartsWith( "file://" ) )
@@ -2230,14 +2213,7 @@ namespace ScrewTurn.Wiki
 					sb.Append( targetUrl );
 				}
 				sb.Append( @""">" );
-				if ( title.Length > 0 )
-				{
-					sb.Append( title );
-				}
-				else
-				{
-					sb.Append( targetUrl );
-				}
+				sb.Append( title.Length > 0 ? title : targetUrl );
 				sb.Append( "</a>" );
 			}
 			else
@@ -2271,14 +2247,7 @@ namespace ScrewTurn.Wiki
 						sb.Append( targetUrl );
 					}
 					sb.Append( @""">" );
-					if ( title.Length > 0 )
-					{
-						sb.Append( title );
-					}
-					else
-					{
-						sb.Append( targetUrl );
-					}
+					sb.Append( title.Length > 0 ? title : targetUrl );
 					sb.Append( "</a>" );
 				}
 				else
@@ -2304,14 +2273,7 @@ namespace ScrewTurn.Wiki
 							sb.Append( targetUrl.Substring( 2 ) );
 						}
 						sb.Append( @""">" );
-						if ( title.Length > 0 )
-						{
-							sb.Append( title );
-						}
-						else
-						{
-							sb.Append( targetUrl.Substring( 2 ) );
-						}
+						sb.Append( title.Length > 0 ? title : targetUrl.Substring( 2 ) );
 						sb.Append( "</a>" );
 					}
 					else if ( targetUrl.Contains( ":" ) || targetUrl.ToLowerInvariant( ).Contains( "%3a" ) || targetUrl.Contains( "&" ) || targetUrl.Contains( "%26" ) )
@@ -2393,14 +2355,7 @@ namespace ScrewTurn.Wiki
 							else sb.Append(tempLink);*/
 							sb.Append( fullName );
 							sb.Append( @""">" );
-							if ( title.Length > 0 )
-							{
-								sb.Append( title );
-							}
-							else
-							{
-								sb.Append( tempLink );
-							}
+							sb.Append( title.Length > 0 ? title : tempLink );
 							sb.Append( "</a>" );
 						}
 						else
@@ -2455,14 +2410,7 @@ namespace ScrewTurn.Wiki
 							}
 
 							sb.Append( @""">" );
-							if ( title.Length > 0 )
-							{
-								sb.Append( title );
-							}
-							else
-							{
-								sb.Append( tempLink );
-							}
+							sb.Append( title.Length > 0 ? title : tempLink );
 							sb.Append( "</a>" );
 						}
 					}
@@ -2509,16 +2457,7 @@ namespace ScrewTurn.Wiki
 				if ( !IsNoWikied( match.Index, noWikiBegin, noWikiEnd, out end ) )
 				{
 					h = match.Value.Substring( 4, match.Value.Length - 8 - ( match.Value.EndsWith( "\n" ) ? 1 : 0 ) );
-					bool found = false;
-					for ( int i = 0; i < hPos.Count; i++ )
-					{
-						if ( match.Index == hPos[ i ].Index )
-						{
-							found = true;
-							break;
-						}
-					}
-					if ( !found )
+					if ( hPos.All( t => match.Index != t.Index ) )
 					{
 						hPos.Add( new HPosition( match.Index, h, 3, count ) );
 						count++;
@@ -2535,16 +2474,7 @@ namespace ScrewTurn.Wiki
 				if ( !IsNoWikied( match.Index, noWikiBegin, noWikiEnd, out end ) )
 				{
 					h = match.Value.Substring( 3, match.Value.Length - 6 - ( match.Value.EndsWith( "\n" ) ? 1 : 0 ) );
-					bool found = false;
-					for ( int i = 0; i < hPos.Count; i++ )
-					{
-						if ( match.Index == hPos[ i ].Index )
-						{
-							found = true;
-							break;
-						}
-					}
-					if ( !found )
+					if ( hPos.All( t => match.Index != t.Index ) )
 					{
 						hPos.Add( new HPosition( match.Index, h, 2, count ) );
 						count++;
