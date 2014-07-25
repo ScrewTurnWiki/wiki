@@ -2086,14 +2086,7 @@ namespace ScrewTurn.Wiki
 					sb.Append( targetUrl );
 				}
 				sb.Append( @""" target=""_blank"">" );
-				if ( title.Length > 0 )
-				{
-					sb.Append( title );
-				}
-				else
-				{
-					sb.Append( targetUrl );
-				}
+				sb.Append( title.Length > 0 ? title : targetUrl );
 				sb.Append( "</a>" );
 			}
 			else if ( targetUrl.StartsWith( @"\\" ) || targetUrl.StartsWith( "//" ) )
@@ -2120,14 +2113,7 @@ namespace ScrewTurn.Wiki
 					sb.Append( targetUrl );
 				}
 				sb.Append( @""" target=""_blank"">" );
-				if ( title.Length > 0 )
-				{
-					sb.Append( title );
-				}
-				else
-				{
-					sb.Append( targetUrl );
-				}
+				sb.Append( title.Length > 0 ? title : targetUrl );
 				sb.Append( "</a>" );
 			}
 			else if ( targetUrl.IndexOf( "@" ) != -1 && targetUrl.IndexOf( "." ) != -1 )
@@ -2165,14 +2151,7 @@ namespace ScrewTurn.Wiki
 					sb.Append( Tools.ObfuscateText( targetUrl ) );
 				}
 				sb.Append( @""">" );
-				if ( title.Length > 0 )
-				{
-					sb.Append( title );
-				}
-				else
-				{
-					sb.Append( Tools.ObfuscateText( targetUrl ) );
-				}
+				sb.Append( title.Length > 0 ? title : Tools.ObfuscateText( targetUrl ) );
 				sb.Append( "</a>" );
 			}
 			else if ( ( ( targetUrl.IndexOf( "." ) != -1 && !targetUrl.ToLowerInvariant( ).EndsWith( ".aspx" ) ) || targetUrl.EndsWith( "/" ) ) &&
@@ -2549,13 +2528,14 @@ namespace ScrewTurn.Wiki
 		private static string GenerateList( string[ ] lines, int line, int level, ref int currLine )
 		{
 			StringBuilder sb = new StringBuilder( 200 );
-			if ( lines[ currLine ][ level ] == '*' )
+			switch ( lines[ currLine ][ level ] )
 			{
-				sb.Append( "<ul>" );
-			}
-			else if ( lines[ currLine ][ level ] == '#' )
-			{
-				sb.Append( "<ol>" );
+				case '*':
+					sb.Append( "<ul>" );
+					break;
+				case '#':
+					sb.Append( "<ol>" );
+					break;
 			}
 			while ( currLine <= lines.Length - 1 && CountBullets( lines[ currLine ] ) >= level + 1 )
 			{
@@ -2573,13 +2553,14 @@ namespace ScrewTurn.Wiki
 					sb.Append( "</li>" );
 				}
 			}
-			if ( lines[ line ][ level ] == '*' )
+			switch ( lines[ line ][ level ] )
 			{
-				sb.Append( "</ul>" );
-			}
-			else if ( lines[ line ][ level ] == '#' )
-			{
-				sb.Append( "</ol>" );
+				case '*':
+					sb.Append( "</ul>" );
+					break;
+				case '#':
+					sb.Append( "</ol>" );
+					break;
 			}
 			return sb.ToString( );
 		}
@@ -2596,28 +2577,6 @@ namespace ScrewTurn.Wiki
 			{
 				res++;
 				count++;
-			}
-			return res;
-		}
-
-		/// <summary>
-		///     Extracts the bullets from a list line.
-		/// </summary>
-		/// <param name="value">The line.</param>
-		/// <returns>The bullets.</returns>
-		private static string ExtractBullets( string value )
-		{
-			string res = "";
-			for ( int i = 0; i < value.Length; i++ )
-			{
-				if ( value[ i ] == '*' || value[ i ] == '#' )
-				{
-					res += value[ i ];
-				}
-				else
-				{
-					break;
-				}
 			}
 			return res;
 		}
@@ -2981,7 +2940,8 @@ namespace ScrewTurn.Wiki
 			// - percentage = 0   -> size = minSize
 			// - percentage = 100 -> size = maxSize
 			// - intermediate values are calculated
-			float minSize = 8, maxSize = 26;
+			const float minSize = 8;
+			const float maxSize = 26;
 			//return (int)((maxSize - minSize) / 100F * (float)percentage + minSize); // Linear interpolation
 			return (int)( maxSize - ( maxSize - minSize ) * Math.Exp( -percentage / 25 ) ); // Exponential interpolation
 		}
@@ -2994,11 +2954,10 @@ namespace ScrewTurn.Wiki
 		/// <param name="noWikiEnd">The output list of end indexes of NOWIKI tags.</param>
 		private static void ComputeNoWiki( string text, ref List<int> noWikiBegin, ref List<int> noWikiEnd )
 		{
-			Match match;
 			noWikiBegin.Clear( );
 			noWikiEnd.Clear( );
 
-			match = NoWikiRegex.Match( text );
+			Match match = NoWikiRegex.Match( text );
 			while ( match.Success )
 			{
 				noWikiBegin.Add( match.Index );
