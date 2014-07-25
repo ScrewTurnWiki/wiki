@@ -149,8 +149,7 @@ namespace ScrewTurn.Wiki.AclEngine {
 			}
 			return string.Equals( Resource, other.Resource )
 				&& string.Equals( Action, other.Action )
-				&& string.Equals( Subject, other.Subject )
-				&& Value == other.Value;
+				&& string.Equals( Subject, other.Subject );
 		}
 
 		/// <summary>
