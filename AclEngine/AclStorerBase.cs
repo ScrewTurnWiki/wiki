@@ -1,12 +1,14 @@
 ﻿
 using System;
 
-namespace ScrewTurn.Wiki.AclEngine {
+namespace ScrewTurn.Wiki.AclEngine
+{
 
 	/// <summary>
 	/// Implements a base class for an ACL Storer.
 	/// </summary>
-	public abstract class AclStorerBase : IDisposable {
+	public abstract class AclStorerBase : IDisposable
+	{
 
 		/// <summary>
 		/// Indicates whether the object was disposed.
@@ -28,12 +30,13 @@ namespace ScrewTurn.Wiki.AclEngine {
 		/// </summary>
 		/// <param name="aclManager">The instance of the ACL Manager to handle.</param>
 		/// <exception cref="ArgumentNullException">If <paramref name="aclManager"/> is <c>null</c>.</exception>
-		public AclStorerBase(IAclManager aclManager) {
-			if(aclManager == null) throw new ArgumentNullException("aclManager");
+		public AclStorerBase( IAclManager aclManager )
+		{
+			if ( aclManager == null ) throw new ArgumentNullException( "aclManager" );
 
 			this.aclManager = aclManager;
 
-			aclChangedHandler = new EventHandler<AclChangedEventArgs>(aclManager_AclChanged);
+			aclChangedHandler = new EventHandler<AclChangedEventArgs>( aclManager_AclChanged );
 
 			this.aclManager.AclChanged += aclChangedHandler;
 		}
@@ -43,46 +46,52 @@ namespace ScrewTurn.Wiki.AclEngine {
 		/// </summary>
 		/// <param name="sender">The sender.</param>
 		/// <param name="e">The event arguments.</param>
-		private void aclManager_AclChanged(object sender, AclChangedEventArgs e) {
-			if(e.Change == Change.EntryDeleted) DeleteEntries(e.Entries);
-			else if(e.Change == Change.EntryStored) StoreEntries(e.Entries);
-			else throw new NotSupportedException("Change type not supported");
+		private void aclManager_AclChanged( object sender, AclChangedEventArgs e )
+		{
+			if ( e.Change == Change.EntryDeleted ) DeleteEntries( e.Entries );
+			else if ( e.Change == Change.EntryStored ) StoreEntries( e.Entries );
+			else throw new NotSupportedException( "Change type not supported" );
 		}
 
 		/// <summary>
 		/// Loads data from storage.
 		/// </summary>
 		/// <returns>The loaded ACL entries.</returns>
-		protected abstract AclEntry[] LoadDataInternal();
+		protected abstract AclEntry[ ] LoadDataInternal( );
 
 		/// <summary>
 		/// Deletes some entries.
 		/// </summary>
 		/// <param name="entries">The entries to delete.</param>
-		protected abstract void DeleteEntries(AclEntry[] entries);
+		protected abstract void DeleteEntries( AclEntry[ ] entries );
 
 		/// <summary>
 		/// Stores some entries.
 		/// </summary>
 		/// <param name="entries">The entries to store.</param>
-		protected abstract void StoreEntries(AclEntry[] entries);
+		protected abstract void StoreEntries( AclEntry[ ] entries );
 
 		/// <summary>
 		/// Loads the data and injects it in the instance of <see cref="T:IAclManager" />.
 		/// </summary>
-		public void LoadData() {
-			lock(this) {
-				AclEntry[] entries = LoadDataInternal();
-				aclManager.InitializeData(entries);
+		public void LoadData( )
+		{
+			lock ( this )
+			{
+				AclEntry[ ] entries = LoadDataInternal( );
+				aclManager.InitializeData( entries );
 			}
 		}
 
 		/// <summary>
 		/// Gets the instance of the ACL Manager.
 		/// </summary>
-		public IAclManager AclManager {
-			get {
-				lock(this) {
+		public IAclManager AclManager
+		{
+			get
+			{
+				lock ( this )
+				{
 					return aclManager;
 				}
 			}
@@ -91,9 +100,12 @@ namespace ScrewTurn.Wiki.AclEngine {
 		/// <summary>
 		/// Disposes the current object.
 		/// </summary>
-		public void Dispose() {
-			lock(this) {
-				if(!disposed) {
+		public void Dispose( )
+		{
+			lock ( this )
+			{
+				if ( !disposed )
+				{
 					disposed = true;
 					aclManager.AclChanged -= aclChangedHandler;
 				}
